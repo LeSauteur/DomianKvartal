@@ -1,231 +1,360 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Квартиры — Агентство недвижимости «Dомиан»</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>АН «Домиан Квартал» — Недвижимость в Аксае</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+<style>
+:root {
+  --bg-main: #0f0f0f;
+  --bg-card: #181818;
+  --bg-light: #1f1f1f;
+  --text-main: #ffffff;
+  --text-muted: #b5b5b5;
+  --accent: #e60a0f;
+  --accent-hover: #c00a0f;
+}
 
-        body {
-            background: #f4f5f7;
-            color: #222;
-        }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-        header {
-            background: #1c1c1c;
-            color: #fff;
-        }
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
 
-        .header-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 18px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-        .logo {
-            font-size: 20px;
-            font-weight: bold;
-        }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 24px;
-            font-size: 14px;
-            opacity: 0.85;
-        }
+/* ===== HEADER ===== */
+header {
+  background: #000;
+  border-bottom: 1px solid #222;
+}
 
-        nav a:hover {
-            opacity: 1;
-        }
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
 
-        main {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
 
-        h1 {
-            font-size: 28px;
-            margin-bottom: 24px;
-        }
+nav a {
+  margin-left: 30px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 24px;
-        }
+nav a:hover {
+  color: var(--text-main);
+}
 
-        .card {
-            background: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-        }
+.btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+}
 
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+.btn:hover {
+  background: var(--accent-hover);
+}
 
-        .card-content {
-            padding: 16px;
-        }
+/* ===== HERO ===== */
+.hero {
+  background:
+    linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
+    url("assets/hero.jpg") center/cover no-repeat;
+  padding: 140px 0;
+}
 
-        .card h2 {
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
+.hero h1 {
+  font-size: 48px;
+  max-width: 700px;
+  line-height: 1.1;
+}
 
-        .card p {
-            font-size: 14px;
-            color: #555;
-        }
+.hero h1 span {
+  color: var(--accent);
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 14px;
-            padding: 10px 16px;
-            background: #1c1c1c;
-            color: #fff;
-            text-decoration: none;
-            font-size: 14px;
-            border-radius: 6px;
-            cursor: pointer;
-        }
+.hero p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: var(--text-muted);
+  max-width: 600px;
+}
 
-        footer {
-            margin-top: 60px;
-            background: #1c1c1c;
-            color: #aaa;
-            text-align: center;
-            padding: 20px;
-            font-size: 13px;
-        }
+.hero-actions {
+  margin-top: 40px;
+}
 
-        /* ===== МОДАЛКА ===== */
-        .modal {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,.6);
-            align-items: center;
-            justify-content: center;
-        }
+.hero-actions .btn.secondary {
+  background: transparent;
+  border: 1px solid var(--text-muted);
+  margin-left: 15px;
+}
 
-        .modal-content {
-            background: #fff;
-            max-width: 800px;
-            width: 90%;
-            padding: 20px;
-            border-radius: 8px;
-            max-height: 90vh;
-            overflow-y: auto;
-        }
+/* ===== SECTIONS ===== */
+section {
+  padding: 100px 0;
+}
 
-        .modal img {
-            width: 100%;
-            margin-bottom: 10px;
-        }
+.section-title {
+  font-size: 32px;
+  margin-bottom: 50px;
+}
 
-        .close {
-            float: right;
-            cursor: pointer;
-            font-size: 18px;
-        }
-    </style>
+/* ===== BENEFITS ===== */
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.benefit {
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #222;
+}
+
+.benefit h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.benefit p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* ===== PROPERTY TYPES ===== */
+.types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.type-card {
+  background: var(--bg-card);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #222;
+}
+
+.type-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.type-card div {
+  padding: 20px;
+  font-weight: bold;
+}
+
+/* ===== ABOUT ===== */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about p {
+  color: var(--text-muted);
+  margin-bottom: 15px;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* ===== REVIEWS ===== */
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.review {
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #222;
+}
+
+.review p {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.review span {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  background: #000;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.contact p {
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.contact iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #000;
+  border-top: 1px solid #222;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .about,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <div class="header-inner">
-        <div class="logo">Dомиан · офис «Квартал»</div>
-        <nav>
-            <a href="#">Квартиры</a>
-            <a href="#">Дома</a>
-            <a href="#">Коммерция</a>
-            <a href="#">Контакты</a>
-        </nav>
-    </div>
+  <div class="container header-inner">
+    <div class="logo">Домиан · офис «Квартал»</div>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="apartments.html">Квартиры</a>
+      <a href="#about">О компании</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </div>
 </header>
 
-<main>
-    <h1>Квартиры в продаже</h1>
-    <div class="cards" id="cards"></div>
-</main>
+<section class="hero">
+  <div class="container">
+    <h1>ПОДБЕРЁМ И ОФОРМИМ<br><span>НЕДВИЖИМОСТЬ ЗА 2 ДНЯ</span></h1>
+    <p>Квартиры · Дома · Участки · Коммерция в Аксае и Ростовской области</p>
+    <div class="hero-actions">
+      <a href="apartments.html" class="btn">Смотреть квартиры</a>
+      <a href="#contact" class="btn secondary">Консультация</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 class="section-title">Почему выбирают нас</h2>
+    <div class="benefits">
+      <div class="benefit"><h3>Большая база объектов</h3><p>Квартиры, дома и участки от собственников и застройщиков.</p></div>
+      <div class="benefit"><h3>Юридическое сопровождение</h3><p>Проверка документов и безопасная сделка.</p></div>
+      <div class="benefit"><h3>Подбор за 1 день</h3><p>Экономим ваше время — работаем быстро.</p></div>
+      <div class="benefit"><h3>Ипотека под ключ</h3><p>Работаем с ведущими банками.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 class="section-title">Виды недвижимости</h2>
+    <div class="types">
+      <a href="apartments.html" class="type-card">
+        <img src="assets/types/apartments.jpg"><div>Квартиры</div>
+      </a>
+      <div class="type-card"><img src="assets/types/houses.jpg"><div>Дома</div></div>
+      <div class="type-card"><img src="assets/types/land.jpg"><div>Участки</div></div>
+      <div class="type-card"><img src="assets/types/commercial.jpg"><div>Коммерция</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about">
+    <div>
+      <h2 class="section-title">О компании</h2>
+      <p>Агентство недвижимости «Домиан Квартал» — работаем в Аксае и Ростовской области.</p>
+      <p>Наша цель — безопасные сделки и уверенность клиента на каждом этапе.</p>
+      <p>500+ успешных сделок · 15+ специалистов · 3+ года опыта</p>
+    </div>
+    <img src="assets/about/team.jpg" alt="">
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 class="section-title">Отзывы клиентов</h2>
+    <div class="reviews">
+      <div class="review"><p>“Подобрали квартиру быстро и без проблем.”</p><span>Марина С.</span></div>
+      <div class="review"><p>“Юридически всё чисто, рекомендую.”</p><span>Алексей К.</span></div>
+      <div class="review"><p>“Помогли с ипотекой, спасибо.”</p><span>Иван П.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div>
+      <h2 class="section-title">Контакты</h2>
+      <p>Аксай, ул. Толпинского 130</p>
+      <p>Зухра Алиева: +7 953 609-11-22</p>
+      <p>Администратор: +7 999 481-51-51</p>
+      <a href="#" class="btn">Оставить заявку</a>
+    </div>
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor"></iframe>
+  </div>
+</section>
 
 <footer>
-    © Агентство недвижимости «Dомиан», офис «Квартал»
+  © 2022–2025 АН «Домиан Квартал». Сайт сделан на заказ.
 </footer>
-
-<!-- ===== МОДАЛЬНОЕ ОКНО ===== -->
-<div class="modal" id="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">✖</span>
-        <h2 id="modalTitle"></h2>
-        <div id="modalImages"></div>
-        <p id="modalDesc"></p>
-    </div>
-</div>
-
-<script>
-const cards = document.getElementById("cards");
-
-// Загружаем индекс объектов
-fetch("objects/index.json")
-    .then(r => r.json())
-    .then(objects => {
-        objects.forEach(obj => {
-            fetch(`objects/${obj}/data.json`)
-                .then(r => r.json())
-                .then(data => {
-                    const card = document.createElement("div");
-                    card.className = "card";
-
-                    card.innerHTML = `
-                        <img src="objects/${obj}/${data.images[0]}">
-                        <div class="card-content">
-                            <h2>${data.title}</h2>
-                            <p>${data.description.substring(0, 140)}...</p>
-                            <div class="btn">Подробнее</div>
-                        </div>
-                    `;
-
-                    card.querySelector(".btn").onclick = () => openModal(obj, data);
-                    cards.appendChild(card);
-                });
-        });
-    });
-
-function openModal(obj, data) {
-    document.getElementById("modalTitle").innerText = data.title;
-    document.getElementById("modalDesc").innerText = data.description;
-
-    const images = document.getElementById("modalImages");
-    images.innerHTML = "";
-
-    data.images.forEach(img => {
-        images.innerHTML += `<img src="objects/${obj}/${img}">`;
-    });
-
-    document.getElementById("modal").style.display = "flex";
-}
-
-function closeModal() {
-    document.getElementById("modal").style.display = "none";
-}
-</script>
 
 </body>
 </html>
