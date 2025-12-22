@@ -20,13 +20,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
 body {
   background: var(--bg-main);
   color: var(--text-main);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
@@ -44,6 +45,11 @@ a {
 header {
   background: #000;
   border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.95);
 }
 
 .header-inner {
@@ -55,17 +61,35 @@ header {
 
 .logo {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 nav a {
   margin-left: 30px;
   font-size: 14px;
   color: var(--text-muted);
+  transition: color 0.2s ease;
+  position: relative;
 }
 
 nav a:hover {
   color: var(--text-main);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 .btn {
@@ -74,12 +98,17 @@ nav a:hover {
   padding: 12px 22px;
   border-radius: 6px;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 600;
   display: inline-block;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
 }
 
 .btn:hover {
   background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(230, 10, 15, 0.3);
 }
 
 /* ===== HERO ===== */
@@ -88,16 +117,37 @@ nav a:hover {
     linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
     url("assets/hero/hero.jpg") center/cover no-repeat;
   padding: 140px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(15,15,15,0), var(--bg-main));
+  z-index: 1;
+}
+
+.hero > .container {
+  position: relative;
+  z-index: 2;
 }
 
 .hero h1 {
   font-size: 48px;
   max-width: 700px;
   line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .hero h1 span {
   color: var(--accent);
+  display: inline-block;
 }
 
 .hero p {
@@ -109,22 +159,34 @@ nav a:hover {
 
 .hero-actions {
   margin-top: 40px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .hero-actions .btn.secondary {
   background: transparent;
   border: 1px solid var(--text-muted);
-  margin-left: 15px;
+  color: var(--text-main);
+}
+
+.hero-actions .btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent);
+  transform: translateY(-2px);
 }
 
 /* ===== SECTIONS ===== */
 section {
   padding: 100px 0;
+  position: relative;
 }
 
 .section-title {
   font-size: 32px;
   margin-bottom: 50px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 /* ===== BENEFITS ===== */
@@ -139,16 +201,83 @@ section {
   padding: 30px;
   border-radius: 10px;
   border: 1px solid #222;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.benefit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.benefit:hover {
+  transform: translateY(-5px);
+  border-color: #333;
+}
+
+.benefit:hover::before {
+  transform: scaleX(1);
 }
 
 .benefit h3 {
   margin-bottom: 15px;
   font-size: 18px;
+  font-weight: 600;
 }
 
 .benefit p {
   color: var(--text-muted);
   font-size: 14px;
+}
+
+/* Enhanced Stats Section */
+.stats {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.stats .benefit {
+  background: linear-gradient(180deg, #181818, #141414);
+  border-top: 3px solid var(--accent);
+}
+
+.stats .benefit::before {
+  display: none;
+}
+
+.stats .benefit h3 {
+  font-size: 32px;
+  color: var(--accent);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.stats .benefit p {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 13px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* ===== PARTNERS ===== */
+.partners-intro {
+  color: var(--text-muted);
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 16px;
 }
 
 /* ===== PROPERTY TYPES ===== */
@@ -163,17 +292,31 @@ section {
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid #222;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.type-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .type-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.type-card:hover img {
+  transform: scale(1.05);
 }
 
 .type-card div {
   padding: 20px;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 /* ===== ABOUT ===== */
@@ -187,11 +330,63 @@ section {
 .about p {
   color: var(--text-muted);
   margin-bottom: 15px;
+  font-size: 16px;
 }
 
 .about img {
   width: 100%;
   border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== LEADERSHIP ===== */
+.leadership {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.leadership h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.leadership p {
+  color: var(--text-muted);
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.leadership img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.leadership-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.leadership-quote {
+  color: var(--text-muted);
+  font-style: italic;
+  border-left: 3px solid var(--accent);
+  padding-left: 15px;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 /* ===== REVIEWS ===== */
@@ -206,22 +401,55 @@ section {
   padding: 30px;
   border-radius: 10px;
   border: 1px solid #222;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.review:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+.review::before {
+  content: "❝";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 40px;
+  color: var(--accent);
+  opacity: 0.2;
+  font-family: serif;
 }
 
 .review p {
   color: var(--text-muted);
   font-style: italic;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
 }
 
 .review span {
   display: block;
   margin-top: 15px;
-  font-weight: bold;
+  font-weight: 600;
+  color: var(--text-main);
 }
 
 /* ===== CONTACT ===== */
 .contact {
   background: #000;
+  position: relative;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
 }
 
 .contact-grid {
@@ -233,6 +461,19 @@ section {
 .contact p {
   color: var(--text-muted);
   margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.contact a[href^="tel:"] {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 500;
+}
+
+.contact a[href^="tel:"]:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
 }
 
 .contact iframe {
@@ -240,27 +481,218 @@ section {
   height: 350px;
   border: none;
   border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== FORM SECTION ===== */
+.form-section {
+  background: var(--bg-light);
+  padding: 80px 0;
+  position: relative;
+}
+
+.form-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form-container h2 {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 15px;
+  background: var(--bg-main);
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: var(--text-main);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(230, 10, 15, 0.2);
+}
+
+.submit-btn {
+  background: var(--accent);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(230, 10, 15, 0.3);
 }
 
 /* ===== FOOTER ===== */
 footer {
   background: #000;
   border-top: 1px solid #222;
-  padding: 30px 0;
+  padding: 40px 0;
   text-align: center;
   font-size: 13px;
   color: var(--text-muted);
+  position: relative;
 }
 
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+footer a {
+  color: var(--accent);
+  margin: 0 10px;
+  transition: color 0.2s ease;
+  font-weight: 500;
+}
+
+footer a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .about,
+  .leadership,
   .contact-grid {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
-
+  
   .hero h1 {
     font-size: 36px;
   }
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  nav a {
+    margin: 0;
+    font-size: 13px;
+  }
+  
+  .hero {
+    padding: 100px 0;
+  }
+  
+  .hero h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+  
+  .hero p {
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .hero-actions {
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .hero-actions .btn {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .hero-actions .btn.secondary {
+    margin-left: 0;
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .benefits,
+  .types,
+  .reviews {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .benefit,
+  .type-card,
+  .review {
+    padding: 20px;
+  }
+  
+  .contact iframe {
+    height: 250px;
+  }
+}
+
+/* Animation for scroll reveal */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.6s ease forwards;
 }
 </style>
 </head>
@@ -280,7 +712,7 @@ footer {
 </header>
 
 <section class="hero">
-  <div class="container">
+  <div class="container fade-in">
     <h1>ПОДБЕРЁМ И ОФОРМИМ<br><span>НЕДВИЖИМОСТЬ ЗА 2 ДНЯ</span></h1>
     <p>Квартиры · Дома · Участки · Коммерция в Аксае и Ростовской области</p>
     <div class="hero-actions">
@@ -290,28 +722,73 @@ footer {
   </div>
 </section>
 
-<section>
+<!-- Stats Section -->
+<section class="stats">
   <div class="container">
-    <h2 class="section-title">Почему выбирают нас</h2>
-    <div class="benefits">
-      <div class="benefit"><h3>Большая база объектов</h3><p>Квартиры, дома и участки от собственников и застройщиков.</p></div>
-      <div class="benefit"><h3>Юридическое сопровождение</h3><p>Проверка документов и безопасная сделка.</p></div>
-      <div class="benefit"><h3>Подбор за 1 день</h3><p>Экономим ваше время — работаем быстро.</p></div>
-      <div class="benefit"><h3>Ипотека под ключ</h3><p>Работаем с ведущими банками.</p></div>
+    <div class="benefits fade-in">
+      <div class="benefit">
+        <h3>500+</h3>
+        <p>успешных сделок</p>
+      </div>
+      <div class="benefit">
+        <h3>15+</h3>
+        <p>профессионалов в команде</p>
+      </div>
+      <div class="benefit">
+        <h3>3+</h3>
+        <p>года опыта в регионе</p>
+      </div>
+      <div class="benefit">
+        <h3>Ипотека</h3>
+        <p>Сбер · ВТБ · Альфа</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section>
   <div class="container">
-    <h2 class="section-title">Виды недвижимости</h2>
+    <h2 class="section-title fade-in">Почему выбирают нас</h2>
+    <div class="benefits">
+      <div class="benefit fade-in"><h3>Большая база объектов</h3><p>Квартиры, дома и участки от собственников и застройщиков.</p></div>
+      <div class="benefit fade-in"><h3>Юридическое сопровождение</h3><p>Проверка документов и безопасная сделка.</p></div>
+      <div class="benefit fade-in"><h3>Подбор за 1 день</h3><p>Экономим ваше время — работаем быстро.</p></div>
+      <div class="benefit fade-in"><h3>Ипотека под ключ</h3><p>Работаем с ведущими банками.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Partners Section -->
+<section>
+  <div class="container">
+    <h2 class="section-title fade-in">Наши партнёры</h2>
+    <p class="partners-intro fade-in">
+      Мы работаем с ведущими банками и застройщиками региона, чтобы предложить вам лучшие финансовые условия
+    </p>
     <div class="types">
-      <a href="apartments.html" class="type-card">
-        <img src="assets/types/apartments.jpg"><div>Квартиры</div>
+      <div class="type-card fade-in">
+        <img src="assets/partners/sber.png" loading="lazy" alt="Сбербанк">
+      </div>
+      <div class="type-card fade-in">
+        <img src="assets/partners/vtb.png" loading="lazy" alt="ВТБ">
+      </div>
+      <div class="type-card fade-in">
+        <img src="assets/partners/alfa.png" loading="lazy" alt="Альфа-Банк">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 class="section-title fade-in">Виды недвижимости</h2>
+    <div class="types">
+      <a href="apartments.html" class="type-card fade-in">
+        <img src="assets/types/apartments.jpg" loading="lazy" alt="Квартиры в Аксае"><div>Квартиры</div>
       </a>
-      <div class="type-card"><img src="assets/types/houses.jpg"><div>Дома</div></div>
-      <div class="type-card"><img src="assets/types/land.jpg"><div>Участки</div></div>
-      <div class="type-card"><img src="assets/types/commercial.jpg"><div>Коммерция</div></div>
+      <div class="type-card fade-in"><img src="assets/types/houses.jpg" loading="lazy" alt="Дома в Аксае"><div>Дома</div></div>
+      <div class="type-card fade-in"><img src="assets/types/land.jpg" loading="lazy" alt="Земельные участки"><div>Участки</div></div>
+      <div class="type-card fade-in"><img src="assets/types/commercial.jpg" loading="lazy" alt="Коммерческая недвижимость"><div>Коммерция</div></div>
     </div>
   </div>
 </section>
@@ -319,22 +796,47 @@ footer {
 <section id="about">
   <div class="container about">
     <div>
-      <h2 class="section-title">О компании</h2>
-      <p>Агентство недвижимости «Домиан Квартал» — работаем в Аксае и Ростовской области.</p>
-      <p>Наша цель — безопасные сделки и уверенность клиента на каждом этапе.</p>
-      <p>500+ успешных сделок · 15+ специалистов · 3+ года опыта</p>
+      <h2 class="section-title fade-in">О компании</h2>
+      <p class="fade-in">Агентство недвижимости «Домиан Квартал» — работаем в Аксае и Ростовской области.</p>
+      <p class="fade-in">Наша цель — безопасные сделки и уверенность клиента на каждом этапе.</p>
+      <p class="fade-in">500+ успешных сделок · 15+ специалистов · 3+ года опыта</p>
     </div>
-    <img src="assets/about/team.jpg" alt="">
+    <img src="assets/about/team.jpg" loading="lazy" alt="Команда АН Домиан Квартал" class="fade-in">
+  </div>
+</section>
+
+<!-- Leadership Section -->
+<section>
+  <div class="container leadership">
+    <img src="assets/about/zukhra.jpg" loading="lazy" alt="Зухра Алиева" class="fade-in">
+    <div>
+      <span class="leadership-badge fade-in">РУКОВОДИТЕЛЬ ОФИСА</span>
+      <h2 class="section-title fade-in">Личное участие в каждой сделке</h2>
+      <h3 class="fade-in">Зухра Алиева</h3>
+      <p class="fade-in">
+        Руководитель агентства недвижимости «Домиан Квартал».
+        Более 3 лет помогаю клиентам безопасно покупать и продавать недвижимость
+        в Аксае и Ростовской области.
+      </p>
+      <p class="fade-in">
+        За это время наша команда провела более <strong>500 успешных сделок</strong>,
+        работая с квартирами, домами, участками и коммерческой недвижимостью.
+      </p>
+      <p class="leadership-quote fade-in">
+        «Для меня важно не просто продать объект, а помочь человеку
+        уверенно сделать один из самых важных шагов в жизни».
+      </p>
+    </div>
   </div>
 </section>
 
 <section>
   <div class="container">
-    <h2 class="section-title">Отзывы клиентов</h2>
+    <h2 class="section-title fade-in">Отзывы клиентов</h2>
     <div class="reviews">
-      <div class="review"><p>“Подобрали квартиру быстро и без проблем.”</p><span>Марина С.</span></div>
-      <div class="review"><p>“Юридически всё чисто, рекомендую.”</p><span>Алексей К.</span></div>
-      <div class="review"><p>“Помогли с ипотекой, спасибо.”</p><span>Иван П.</span></div>
+      <div class="review fade-in"><p>“Подобрали квартиру быстро и без проблем.”</p><span>Марина С.</span></div>
+      <div class="review fade-in"><p>“Юридически всё чисто, рекомендую.”</p><span>Алексей К.</span></div>
+      <div class="review fade-in"><p>“Помогли с ипотекой, спасибо.”</p><span>Иван П.</span></div>
     </div>
   </div>
 </section>
@@ -342,19 +844,104 @@ footer {
 <section class="contact" id="contact">
   <div class="container contact-grid">
     <div>
-      <h2 class="section-title">Контакты</h2>
-      <p>Аксай, ул. Толпинского 130</p>
-      <p>Зухра Алиева: +7 953 609-11-22</p>
-      <p>Администратор: +7 999 481-51-51</p>
-      <a href="#" class="btn">Оставить заявку</a>
+      <h2 class="section-title fade-in">Контакты</h2>
+      <p class="fade-in">Ростовская обл., г Аксай, улица Толпинского 130</p>
+      <p class="fade-in">Зухра Алиева: <a href="tel:+79536091122">+7 953 609-11-22</a></p>
+      <p class="fade-in">Администратор: <a href="tel:+79994815151">+7 999 481-51-51</a></p>
+      <a href="mailto:zuhra_2010_aidan@mail.ru" class="btn fade-in">Написать Email</a>
     </div>
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor"></iframe>
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor&ll=39.92404%2C47.26495&size=500%2C400&z=15" title="Карта расположения офиса" loading="lazy" class="fade-in"></iframe>
+  </div>
+</section>
+
+<!-- Form Section -->
+<section class="form-section">
+  <div class="container form-container">
+    <h2 class="section-title fade-in">Оставьте заявку</h2>
+    <p style="color: var(--text-muted); margin-bottom: 30px;" class="fade-in">Наш специалист свяжется с вами в течение 15 минут</p>
+    
+    <form action="#" method="POST">
+      <div class="form-group fade-in">
+        <input type="text" name="name" placeholder="Ваше имя" class="form-control" required>
+      </div>
+      
+      <div class="form-group fade-in">
+        <input type="tel" name="phone" placeholder="Телефон" class="form-control" required>
+      </div>
+      
+      <div class="form-group fade-in">
+        <input type="email" name="email" placeholder="Email (по желанию)" class="form-control">
+      </div>
+      
+      <div class="form-group fade-in">
+        <select name="service" class="form-control" required>
+          <option value="" disabled selected>Выберите услугу</option>
+          <option value="buy">Покупка недвижимости</option>
+          <option value="sell">Продажа недвижимости</option>
+          <option value="rent">Аренда недвижимости</option>
+          <option value="mortgage">Оформление ипотеки</option>
+          <option value="consultation">Консультация</option>
+        </select>
+      </div>
+      
+      <button type="submit" class="submit-btn fade-in">Получить консультацию</button>
+    </form>
   </div>
 </section>
 
 <footer>
-  © 2022–2025 АН «Домиан Квартал». Сайт сделан на заказ.
+  <div class="container">
+    <p class="fade-in">© 2022–2025 АН «Домиан Квартал». Все права защищены.</p>
+    <p class="fade-in">Ростовская обл., г Аксай, улица Толпинского 130</p>
+    <p class="fade-in">Режим работы: Пн-Пт 8:00–20:00</p>
+    <p class="fade-in">
+      <a href="https://vk.com/domian_kvartal" target="_blank" rel="noopener noreferrer">ВКонтакте</a> |
+      <a href="https://t.me/domian_kvartal" target="_blank" rel="noopener noreferrer">Telegram</a>
+    </p>
+  </div>
 </footer>
+
+<script>
+// Простая анимация появления при скролле
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+    }
+  });
+}, observerOptions);
+
+// Наблюдаем за всеми элементами с классом fade-in
+document.addEventListener('DOMContentLoaded', () => {
+  const fadeElements = document.querySelectorAll('.fade-in');
+  fadeElements.forEach(el => {
+    el.style.opacity = '0';
+    observer.observe(el);
+  });
+  
+  // Плавный скролл для якорных ссылок
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});
+</script>
 
 </body>
 </html>
