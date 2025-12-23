@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>АН «Домиан Квартал» — Недвижимость в Аксае</title>
 
-<style>
 :root {
-  --bg-main: #0f0f0f;
-  --bg-card: #181818;
-  --bg-light: #1f1f1f;
-  --text-main: #ffffff;
-  --text-muted: #b5b5b5;
-  --accent: #e60a0f;
-  --accent-hover: #c00a0f;
+  --bg-main: #f6f1ea;        /* основной фон */
+  --bg-card: #ffffff;        /* карточки */
+  --bg-light: #f0e9df;       /* секции */
+  --text-main: #3b2a23;      /* основной текст */
+  --text-muted: #7a6a5f;     /* вторичный текст */
+  --accent: #b84a3a;         /* тёплый красно-коричневый */
+  --accent-hover: #9e3d30;
+  --border-soft: #e2d8cc;
 }
 
 * {
@@ -43,13 +43,13 @@ a {
 
 /* ===== HEADER ===== */
 header {
-  background: #000;
-  border-bottom: 1px solid #222;
+  background: #fff;
+  border-bottom: 1px solid var(--border-soft);
   position: sticky;
   top: 0;
   z-index: 100;
   backdrop-filter: blur(10px);
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .header-inner {
@@ -63,6 +63,7 @@ header {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: -0.5px;
+  color: var(--text-main);
 }
 
 nav a {
@@ -96,7 +97,7 @@ nav a:hover::after {
   background: var(--accent);
   color: #fff;
   padding: 12px 22px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 14px;
   font-weight: 600;
   display: inline-block;
@@ -108,13 +109,16 @@ nav a:hover::after {
 .btn:hover {
   background: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(230, 10, 15, 0.3);
+  box-shadow: 0 5px 15px rgba(184, 74, 58, 0.2);
 }
 
 /* ===== HERO ===== */
 .hero {
   background:
-    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.55)),
+    linear-gradient(
+      rgba(246, 241, 234, 0.15),
+      rgba(246, 241, 234, 0.35)
+    ),
     url("assets/hero/hero.jpg") center/cover no-repeat;
   padding: 140px 0;
   position: relative;
@@ -128,7 +132,7 @@ nav a:hover::after {
   left: 0;
   right: 0;
   height: 120px;
-  background: linear-gradient(to bottom, rgba(15,15,15,0), var(--bg-main));
+  background: linear-gradient(to bottom, rgba(246, 241, 234, 0), var(--bg-main));
   z-index: 1;
 }
 
@@ -143,6 +147,7 @@ nav a:hover::after {
   line-height: 1.1;
   font-weight: 700;
   letter-spacing: -0.5px;
+  color: var(--text-main);
 }
 
 .hero h1 span {
@@ -166,13 +171,13 @@ nav a:hover::after {
 
 .hero-actions .btn.secondary {
   background: transparent;
-  border: 1px solid var(--text-muted);
-  color: var(--text-main);
+  border: 2px solid var(--accent);
+  color: var(--accent);
 }
 
 .hero-actions .btn.secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: var(--accent);
+  background: rgba(184, 74, 58, 0.08);
+  border-color: var(--accent-hover);
   transform: translateY(-2px);
 }
 
@@ -187,6 +192,7 @@ section {
   margin-bottom: 50px;
   font-weight: 700;
   letter-spacing: -0.5px;
+  color: var(--text-main);
 }
 
 /* ===== BENEFITS ===== */
@@ -200,11 +206,12 @@ section {
   background: var(--bg-card);
   padding: 30px;
   border-radius: 10px;
-  border: 1px solid #222;
+  border: 1px solid var(--border-soft);
   text-align: center;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
 }
 
 .benefit::before {
@@ -221,7 +228,8 @@ section {
 
 .benefit:hover {
   transform: translateY(-5px);
-  border-color: #333;
+  border-color: var(--border-soft);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
 }
 
 .benefit:hover::before {
@@ -232,6 +240,7 @@ section {
   margin-bottom: 15px;
   font-size: 18px;
   font-weight: 600;
+  color: var(--text-main);
 }
 
 .benefit p {
@@ -246,8 +255,9 @@ section {
 }
 
 .stats .benefit {
-  background: linear-gradient(180deg, #181818, #141414);
-  border-top: 3px solid var(--accent);
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
 .stats .benefit::before {
@@ -267,6 +277,7 @@ section {
   font-size: 13px;
   opacity: 0.9;
   font-weight: 500;
+  color: var(--text-muted);
 }
 
 /* ===== PARTNERS ===== */
@@ -291,15 +302,16 @@ section {
   background: var(--bg-card);
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid #222;
+  border: 1px solid var(--border-soft);
   transition: all 0.3s ease;
   position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
 }
 
 .type-card:hover {
   transform: translateY(-5px);
   border-color: var(--accent);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 30px rgba(184, 74, 58, 0.1);
 }
 
 .type-card img {
@@ -317,6 +329,7 @@ section {
   padding: 20px;
   font-weight: 600;
   font-size: 16px;
+  color: var(--text-main);
 }
 
 /* ===== ABOUT ===== */
@@ -336,7 +349,7 @@ section {
 .about img {
   width: 100%;
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* ===== LEADERSHIP ===== */
@@ -364,7 +377,7 @@ section {
 .leadership img {
   width: 100%;
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .leadership-badge {
@@ -400,14 +413,16 @@ section {
   background: var(--bg-card);
   padding: 30px;
   border-radius: 10px;
-  border: 1px solid #222;
+  border: 1px solid var(--border-soft);
   transition: all 0.3s ease;
   position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
 }
 
 .review:hover {
   transform: translateY(-5px);
   border-color: var(--accent);
+  box-shadow: 0 12px 25px rgba(184, 74, 58, 0.08);
 }
 
 .review::before {
@@ -438,7 +453,7 @@ section {
 
 /* ===== CONTACT ===== */
 .contact {
-  background: #000;
+  background: var(--bg-light);
   position: relative;
 }
 
@@ -481,7 +496,8 @@ section {
   height: 350px;
   border: none;
   border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-soft);
 }
 
 /* ===== FORM SECTION ===== */
@@ -509,6 +525,7 @@ section {
 
 .form-container h2 {
   margin-bottom: 30px;
+  color: var(--text-main);
 }
 
 .form-group {
@@ -518,8 +535,8 @@ section {
 .form-control {
   width: 100%;
   padding: 15px;
-  background: var(--bg-main);
-  border: 1px solid #333;
+  background: #fff;
+  border: 1px solid var(--border-soft);
   border-radius: 6px;
   color: var(--text-main);
   font-size: 16px;
@@ -529,7 +546,7 @@ section {
 .form-control:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(230, 10, 15, 0.2);
+  box-shadow: 0 0 0 3px rgba(184, 74, 58, 0.15);
 }
 
 .submit-btn {
@@ -548,13 +565,13 @@ section {
 .submit-btn:hover {
   background: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(230, 10, 15, 0.3);
+  box-shadow: 0 5px 20px rgba(184, 74, 58, 0.2);
 }
 
 /* ===== FOOTER ===== */
 footer {
-  background: #000;
-  border-top: 1px solid #222;
+  background: #fff;
+  border-top: 1px solid var(--border-soft);
   padding: 40px 0;
   text-align: center;
   font-size: 13px;
