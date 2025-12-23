@@ -227,6 +227,15 @@ section {
   color: var(--text-main);
 }
 
+.section-subtitle {
+  max-width: 600px;
+  color: var(--text-muted);
+  margin: -30px auto 40px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
 /* ===== BENEFITS ===== */
 .benefits {
   display: grid;
@@ -278,6 +287,16 @@ section {
 .benefit p {
   color: var(--text-muted);
   font-size: 14px;
+}
+
+/* Highlighted benefit */
+.benefit.highlight {
+  border-color: var(--accent);
+  background: linear-gradient(
+    to bottom,
+    #fff,
+    rgba(184, 74, 58, 0.04)
+  );
 }
 
 /* Enhanced Stats Section */
@@ -763,6 +782,71 @@ footer .container {
 .fade-in {
   animation: fadeInUp 0.6s ease forwards;
 }
+/* ===== PHOTO STORY BLOCK ===== */
+.photo-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  margin: 60px 0;
+}
+
+.photo-block.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.photo-block img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.photo-block p {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.photo-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  letter-spacing: .4px;
+}
+
+@media (max-width: 900px) {
+  .photo-block,
+  .photo-block.reverse {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Emotional block */
+.emotional-block {
+  padding: 120px 0;
+  background: linear-gradient(to bottom, var(--bg-main), #f9f5f0);
+  text-align: center;
+}
+
+.emotional-block .section-title {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.emotional-block p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  color: var(--text-muted);
+  font-size: 18px;
+  line-height: 1.7;
+}
 </style>
 </head>
 
@@ -859,10 +943,31 @@ footer .container {
   </div>
 </section>
 
-<!-- Audience Section -->
+<section>
+  <div class="container photo-block fade-in">
+    <div>
+      <span class="photo-badge">НАШ ОФИС</span>
+      <h2 class="section-title">Мы — реальное агентство в Аксае</h2>
+      <p>
+        Мы работаем не онлайн «на потоке», а в живом офисе,
+        где каждый клиент получает личное внимание.
+      </p>
+      <p>
+        К нам приходят по рекомендации — потому что мы
+        честно объясняем риски, не навязываем решения
+        и сопровождаем сделку до результата.
+      </p>
+    </div>
+
+    <img src="assets/about/office.jpg" alt="Офис АН Домиан Квартал">
+  </div>
+</section>
+
+<!-- Audience Section - ИСПРАВЛЕННАЯ СТРУКТУРА -->
 <section>
   <div class="container">
     <h2 class="section-title fade-in">Кому мы подходим</h2>
+    <p class="section-subtitle fade-in">Мы работаем не по шаблону — а под реальную жизненную ситуацию клиента</p>
 
     <div class="benefits">
       <div class="benefit fade-in">
@@ -884,7 +989,28 @@ footer .container {
         <h3>Семьи с детьми</h3>
         <p>Подбираем жильё с удобной инфраструктурой и комфортной средой</p>
       </div>
+    </div>
 
+    <!-- Photo block between benefits -->
+    <div class="photo-block reverse fade-in">
+      <img src="assets/about/zukhra-work.jpg" alt="Зухра Алиева в работе">
+      <div>
+        <span class="photo-badge">ЛИЧНОЕ УЧАСТИЕ</span>
+        <h2 class="section-title">Вы не остаетесь один на один с решением</h2>
+        <p>
+          В сложных или нестандартных ситуациях
+          я лично подключаюсь к процессу —
+          от подбора объекта до выхода на сделку.
+        </p>
+        <p>
+          Для нас важно, чтобы клиент понимал
+          каждый шаг и чувствовал уверенность,
+          а не давление.
+        </p>
+      </div>
+    </div>
+
+    <div class="benefits">
       <div class="benefit fade-in">
         <div class="benefit-icon">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -915,7 +1041,7 @@ footer .container {
         <p>Подбираем объекты под аренду или дальнейшую продажу</p>
       </div>
 
-      <div class="benefit fade-in">
+      <div class="benefit fade-in highlight">
         <div class="benefit-icon">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -940,6 +1066,7 @@ footer .container {
 <section>
   <div class="container">
     <h2 class="section-title fade-in">Как мы работаем</h2>
+    <p class="section-subtitle fade-in">Чёткий процесс, в котором каждый этап помогает вам двигаться к цели без лишнего стресса</p>
 
     <div class="benefits">
       <div class="benefit fade-in">
@@ -1024,6 +1151,27 @@ footer .container {
       </div>
 
     </div>
+  </div>
+</section>
+
+<section>
+  <div class="container photo-block fade-in">
+    <div>
+      <span class="photo-badge">ПАРТНЁРСТВО</span>
+      <h2 class="section-title">Работаем напрямую — без посредников</h2>
+      <p>
+        Мы напрямую взаимодействуем с банками
+        и застройщиками региона, чтобы предлагать
+        клиентам реальные условия, а не рекламные обещания.
+      </p>
+      <p>
+        Это позволяет быстрее получать одобрения,
+        согласовывать условия и находить оптимальные решения
+        под конкретную задачу.
+      </p>
+    </div>
+
+    <img src="assets/about/meeting.jpg" alt="Рабочие встречи и партнёрство">
   </div>
 </section>
 
@@ -1146,6 +1294,21 @@ footer .container {
         уверенно сделать один из самых важных шагов в жизни».
       </p>
     </div>
+  </div>
+</section>
+
+<!-- Emotional block before footer -->
+<section class="emotional-block">
+  <div class="container">
+    <span class="photo-badge fade-in">НАША КОМАНДА</span>
+    <h2 class="section-title fade-in">Мы рядом на каждом этапе</h2>
+    <p class="fade-in">
+      Покупка недвижимости — это не просто сделка.
+      Это важное решение, и мы относимся к нему так же.
+      Вы можете задать любой вопрос, получить честный ответ
+      и быть уверенным в результате.
+    </p>
+    <a href="#contact" class="btn fade-in">Обсудить вашу ситуацию</a>
   </div>
 </section>
 
