@@ -95,7 +95,7 @@ nav a:hover::after {
 }
 
 .btn {
-  background: var(--accent);
+  background: linear-gradient(135deg, #b84a3a, #cf6a55);
   color: #fff;
   padding: 12px 22px;
   border-radius: 8px;
@@ -117,11 +117,13 @@ nav a:hover::after {
 .hero {
   background:
     linear-gradient(
-      rgba(246, 241, 234, 0.15),
-      rgba(246, 241, 234, 0.35)
+      to bottom,
+      rgba(255, 240, 220, 0.35) 0%,
+      rgba(245, 225, 200, 0.55) 55%,
+      rgba(200, 170, 140, 0.45) 100%
     ),
-    url("assets/hero/hero.jpg") center/cover no-repeat;
-  padding: 140px 0;
+    url("assets/hero/hero.jpg") center / cover no-repeat;
+  padding: 140px 0 180px;
   position: relative;
   overflow: hidden;
 }
@@ -132,23 +134,33 @@ nav a:hover::after {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 120px;
-  background: linear-gradient(to bottom, rgba(246, 241, 234, 0), var(--bg-main));
+  height: 200px;
+  background: linear-gradient(
+    to bottom,
+    rgba(246, 241, 234, 0),
+    rgba(246, 241, 234, 0.6),
+    var(--bg-main)
+  );
   z-index: 1;
 }
 
 .hero > .container {
   position: relative;
   z-index: 2;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px);
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 900px;
 }
 
 .hero h1 {
   font-size: 48px;
   max-width: 700px;
   line-height: 1.1;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: -0.5px;
-  color: var(--text-main);
+  color: #2b1d18;
 }
 
 .hero h1 span {
@@ -159,8 +171,9 @@ nav a:hover::after {
 .hero p {
   margin-top: 20px;
   font-size: 18px;
-  color: var(--text-muted);
+  color: #5a4a3f;
   max-width: 600px;
+  font-weight: 500;
 }
 
 .hero-actions {
@@ -171,8 +184,8 @@ nav a:hover::after {
 }
 
 .hero-actions .btn.secondary {
-  background: transparent;
-  border: 2px solid var(--accent);
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--accent);
   color: var(--accent);
 }
 
@@ -253,12 +266,17 @@ section {
 .stats {
   padding-top: 60px;
   padding-bottom: 60px;
+  margin-top: -80px;
+  position: relative;
+  z-index: 3;
 }
 
 .stats .benefit {
   background: var(--bg-card);
+  padding: 35px;
   border: 1px solid var(--border-soft);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+  border-radius: 14px;
 }
 
 .stats .benefit::before {
@@ -266,10 +284,11 @@ section {
 }
 
 .stats .benefit h3 {
-  font-size: 32px;
+  font-size: 34px;
   color: var(--accent);
   margin-bottom: 10px;
   font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .stats .benefit p {
@@ -620,6 +639,10 @@ footer .container {
   .hero h1 {
     font-size: 36px;
   }
+  
+  .hero > .container {
+    padding: 30px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -641,7 +664,7 @@ footer .container {
   }
   
   .hero {
-    padding: 100px 0;
+    padding: 100px 0 140px;
   }
   
   .hero h1 {
@@ -694,6 +717,16 @@ footer .container {
   
   .contact iframe {
     height: 250px;
+  }
+  
+  .stats {
+    margin-top: -60px;
+    padding-top: 40px;
+  }
+  
+  .hero > .container {
+    padding: 20px;
+    max-width: 95%;
   }
 }
 
@@ -868,7 +901,7 @@ footer .container {
       <p class="fade-in">Администратор: <a href="tel:+79994815151">+7 999 481-51-51</a></p>
       <a href="mailto:zuhra_2010_aidan@mail.ru" class="btn fade-in">Написать Email</a>
     </div>
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor&ll=39.92404%2C47.26495&size=500%2C400&z=15" title="Карта расположения офиса" loading="lazy" class="fade-in"></iframe>
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor&ll=39.92404%2C47.26495&size=500%2C400&z=15  " title="Карта расположения офиса" loading="lazy" class="fade-in"></iframe>
   </div>
 </section>
 
@@ -913,8 +946,8 @@ footer .container {
     <p class="fade-in">Ростовская обл., г Аксай, улица Толпинского 130</p>
     <p class="fade-in">Режим работы: Пн-Пт 8:00–20:00</p>
     <p class="fade-in">
-      <a href="https://vk.com/domian_kvartal" target="_blank" rel="noopener noreferrer">ВКонтакте</a> |
-      <a href="https://t.me/domian_kvartal" target="_blank" rel="noopener noreferrer">Telegram</a>
+      <a href="https://vk.com/domian_kvartal  " target="_blank" rel="noopener noreferrer">ВКонтакте</a> |
+      <a href="https://t.me/domian_kvartal  " target="_blank" rel="noopener noreferrer">Telegram</a>
     </p>
   </div>
 </footer>
