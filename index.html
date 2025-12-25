@@ -119,43 +119,20 @@ height: 22px;
 }
 /* ===== HERO ===== */
 .hero {
-background:
-linear-gradient(
-to bottom,
-rgba(255, 240, 220, 0.35) 0%,
-rgba(245, 225, 200, 0.55) 55%,
-rgba(200, 170, 140, 0.45) 100%
-),
-url("assets/hero/hero.jpg") center / cover no-repeat;
+background: url("assets/hero/hero.jpg") center / cover no-repeat;
 padding: 140px 0 180px;
 position: relative;
 overflow: hidden;
 }
-.hero::after {
-content: "";
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-height: 200px;
-background: linear-gradient(
-to bottom,
-rgba(246, 241, 234, 0),
-rgba(246, 241, 234, 0.6),
-var(--bg-main)
-);
-z-index: 1;
-}
 .hero > .container {
 margin: 0 auto;
-padding: 40px;
 max-width: 900px;
-
 position: relative;
 z-index: 2;
-background: rgba(255, 255, 255, 0.15);
+background: rgba(255, 255, 255, 0.72);
+padding: 40px;
+border-radius: 16px;
 backdrop-filter: blur(2px);
-border-radius: 12px;
 }
 .hero h1 {
 font-size: 48px;
@@ -164,6 +141,7 @@ line-height: 1.1;
 font-weight: 800;
 letter-spacing: -0.5px;
 color: #2b1d18;
+text-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 .hero h1 span {
 color: var(--accent);
@@ -752,14 +730,7 @@ line-height: 1.7;
 }
 /* ===== FOOTER CTA ===== */
 .footer-cta {
-background:
-  linear-gradient(
-    to bottom,
-    rgba(255, 240, 220, 0.35) 0%,
-    rgba(245, 225, 200, 0.55) 55%,
-    rgba(200, 170, 140, 0.45) 100%
-  ),
-  url("assets/hero/footer.jpg") center / cover no-repeat;
+background: url("assets/hero/footer.jpg") center / cover no-repeat;
 padding: 100px 0;
 margin-top: 100px;
 position: relative;
@@ -767,27 +738,27 @@ color: #fff;
 width: 100%;
 overflow: hidden;
 }
-.footer-cta::after {
-content: "";
-position: absolute;
-inset: 0;
-background: rgba(255,255,255,0.15);
-}
+
 .footer-cta-inner {
 max-width: 1200px;
 margin: 0 auto;
 padding: 0 20px;
 display: flex;
-justify-content: center;   /* 🔥 ВОТ ОНО */
-text-align: center;        /* 🔥 */
+justify-content: center;
+text-align: center;
 }
 .footer-cta-content {
 max-width: 600px;
 margin: 0 auto;
+background: rgba(255, 255, 255, 0.75);
+padding: 40px;
+border-radius: 16px;
+backdrop-filter: blur(2px);
 }
 .footer-cta-badge {
 display: inline-block;
-background: rgba(255,255,255,0.15);
+background: rgba(184, 74, 58, 0.15);
+color: var(--accent);
 padding: 6px 14px;
 border-radius: 20px;
 font-size: 12px;
@@ -796,17 +767,23 @@ letter-spacing: .4px;
 margin-bottom: 20px;
 }
 .footer-cta h2 {
-font-size: 36px;
+font-size: 48px;
+max-width: 700px;
+line-height: 1.1;
+font-weight: 800;
+letter-spacing: -0.5px;
+color: #2b1d18;
 margin-bottom: 20px;
-line-height: 1.2;
+text-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 .footer-cta p {
+margin-top: 20px;
 font-size: 18px;
-line-height: 1.6;
-opacity: 0.95;
+color: #5a4a3f;
+max-width: 600px;
+font-weight: 500;
 margin-bottom: 30px;
 }
-/* кнопка уже есть, просто подчёркиваем */
 .footer-cta .btn {
 background: #fff;
 color: var(--accent);
@@ -821,9 +798,10 @@ text-align: center;
 }
 .footer-cta-content {
 margin: 0 auto;
+padding: 30px;
 }
 .footer-cta h2 {
-font-size: 28px;
+font-size: 32px;
 }
 .footer-cta p {
 font-size: 16px;
@@ -1260,9 +1238,9 @@ d="M3 21h18M5 21V5a2 2 0 012-2h4v18M13 21V9a2 2 0 012-2h4v14" />
 <div class="container">
 <h2 class="section-title fade-in">Отзывы клиентов</h2>
 <div class="reviews">
-<div class="review fade-in"><p>“Подобрали квартиру быстро и без проблем.”</p><span>Марина С.</span></div>
-<div class="review fade-in"><p>“Юридически всё чисто, рекомендую.”</p><span>Алексей К.</span></div>
-<div class="review fade-in"><p>“Помогли с ипотекой, спасибо.”</p><span>Иван П.</span></div>
+<div class="review fade-in"><p>"Подобрали квартиру быстро и без проблем."</p><span>Марина С.</span></div>
+<div class="review fade-in"><p>"Юридически всё чисто, рекомендую."</p><span>Алексей К.</span></div>
+<div class="review fade-in"><p>"Помогли с ипотекой, спасибо."</p><span>Иван П.</span></div>
 </div>
 </div>
 </section>
@@ -1312,10 +1290,7 @@ d="M3 21h18M5 21V5a2 2 0 012-2h4v18M13 21V9a2 2 0 012-2h4v14" />
 <div class="footer-cta-content">
 <span class="footer-cta-badge">БЕСПЛАТНО</span>
 <h2>Нужна помощь с недвижимостью?</h2>
-<p>
-Расскажите о своей ситуации — мы подскажем оптимальное решение
-и возьмём на себя все сложные этапы.
-</p>
+<p>Расскажите о своей ситуации — мы подскажем оптимальное решение и возьмём на себя все сложные этапы.</p>
 <a href="#contact" class="btn">Получить консультацию</a>
 </div>
 </div>
