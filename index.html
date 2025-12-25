@@ -753,12 +753,13 @@ line-height: 1.7;
 /* ===== FOOTER CTA ===== */
 .footer-cta {
 background:
-linear-gradient(
-to right,
-rgba(184, 74, 58, 0.92),
-rgba(158, 61, 48, 0.92)
-),
-url("assets/hero/footer.jpg") center / cover no-repeat;
+  linear-gradient(
+    to bottom,
+    rgba(255, 240, 220, 0.35) 0%,
+    rgba(245, 225, 200, 0.55) 55%,
+    rgba(200, 170, 140, 0.45) 100%
+  ),
+  url("assets/hero/footer.jpg") center / cover no-repeat;
 padding: 100px 0;
 margin-top: 100px;
 position: relative;
@@ -770,17 +771,19 @@ overflow: hidden;
 content: "";
 position: absolute;
 inset: 0;
-background: rgba(0,0,0,0.25);
+background: rgba(255,255,255,0.15);
 }
 .footer-cta-inner {
 max-width: 1200px;
 margin: 0 auto;
 padding: 0 20px;
 display: flex;
-align-items: center;
+justify-content: center;   /* 🔥 ВОТ ОНО */
+text-align: center;        /* 🔥 */
 }
 .footer-cta-content {
 max-width: 600px;
+margin: 0 auto;
 }
 .footer-cta-badge {
 display: inline-block;
