@@ -47,10 +47,13 @@ backdrop-filter: blur(10px);
 background: rgba(255, 255, 255, 0.95);
 }
 .header-inner {
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
+
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 20px 0;
 }
 .logo {
 font-size: 20px;
@@ -144,13 +147,15 @@ var(--bg-main)
 z-index: 1;
 }
 .hero > .container {
+margin: 0 auto;
+padding: 40px;
+max-width: 900px;
+
 position: relative;
 z-index: 2;
 background: rgba(255, 255, 255, 0.15);
 backdrop-filter: blur(2px);
-padding: 40px;
 border-radius: 12px;
-max-width: 900px;
 }
 .hero h1 {
 font-size: 48px;
@@ -574,6 +579,17 @@ footer a:hover {
 color: var(--accent-hover);
 text-decoration: underline;
 }
+.footer-inner {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+gap: 10px;
+}
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
 .about,
@@ -677,11 +693,13 @@ animation: fadeInUp 0.6s ease forwards;
 }
 /* ===== PHOTO STORY BLOCK ===== */
 .photo-block {
+max-width: 1200px;
+margin: 60px auto;   /* 🔥 ВОТ ЭТО ГЛАВНОЕ */
+padding: 0 20px;
 display: grid;
 grid-template-columns: 1fr 1fr;
 gap: 50px;
 align-items: center;
-margin: 60px 0;
 }
 .photo-block.reverse {
 grid-template-columns: 1fr 1fr;
@@ -755,8 +773,11 @@ inset: 0;
 background: rgba(0,0,0,0.25);
 }
 .footer-cta-inner {
-position: relative;
-z-index: 2;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+display: flex;
+align-items: center;
 }
 .footer-cta-content {
 max-width: 600px;
@@ -809,7 +830,7 @@ font-size: 16px;
 </head>
 <body>
 <header>
-<div class="container header-inner">
+<div class="header-inner">
 <div class="logo">Домиан · офис «Квартал»</div>
 <nav>
 <a href="index.html">Главная</a>
@@ -896,7 +917,7 @@ font-size: 16px;
 </div>
 </section>
 <section>
-<div class="container photo-block fade-in">
+<div class="photo-block fade-in">
 <div>
 <span class="photo-badge">НАШ ОФИС</span>
 <h2 class="section-title">Мы — реальное агентство в Аксае</h2>
@@ -1088,7 +1109,7 @@ d="M3 21h18M5 21V5a2 2 0 012-2h4v18M13 21V9a2 2 0 012-2h4v14" />
 </div>
 </section>
 <section>
-<div class="container photo-block fade-in">
+<div class="photo-block fade-in">
 <div>
 <span class="photo-badge">ПАРТНЁРСТВО</span>
 <h2 class="section-title">Работаем напрямую — без посредников</h2>
@@ -1284,7 +1305,7 @@ d="M3 21h18M5 21V5a2 2 0 012-2h4v18M13 21V9a2 2 0 012-2h4v14" />
 </div>
 </section>
 <section class="footer-cta">
-<div class="container footer-cta-inner">
+<div class="footer-cta-inner">
 <div class="footer-cta-content">
 <span class="footer-cta-badge">БЕСПЛАТНО</span>
 <h2>Нужна помощь с недвижимостью?</h2>
@@ -1297,7 +1318,7 @@ d="M3 21h18M5 21V5a2 2 0 012-2h4v18M13 21V9a2 2 0 012-2h4v14" />
 </div>
 </section>
 <footer>
-<div class="container footer-inner">
+<div class="footer-inner">
 <p class="fade-in">© 2022–2025 АН «Домиан Квартал». Все права защищены.</p>
 <p class="fade-in">Ростовская обл., г Аксай, улица Толпинского 130</p>
 <p class="fade-in">Режим работы: Пн–Пт 8:00–20:00</p>
