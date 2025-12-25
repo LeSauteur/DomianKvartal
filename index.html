@@ -851,6 +851,88 @@ section > .container {
   margin-left: auto;
   margin-right: auto;
 }
+/* ===== FOOTER CTA ===== */
+.footer-cta {
+  background:
+    linear-gradient(
+      to right,
+      rgba(184, 74, 58, 0.92),
+      rgba(158, 61, 48, 0.92)
+    ),
+    url("assets/hero/hero.jpg") center / cover no-repeat;
+  padding: 100px 0;
+  margin-top: 100px;
+  position: relative;
+  color: #fff;
+}
+
+.footer-cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+}
+
+.footer-cta-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.footer-cta-content {
+  max-width: 600px;
+}
+
+.footer-cta-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .4px;
+  margin-bottom: 20px;
+}
+
+.footer-cta h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.footer-cta p {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.95;
+  margin-bottom: 30px;
+}
+
+/* кнопка уже есть, просто подчёркиваем */
+.footer-cta .btn {
+  background: #fff;
+  color: var(--accent);
+}
+
+.footer-cta .btn:hover {
+  background: #f5f5f5;
+}
+@media (max-width: 768px) {
+  .footer-cta {
+    padding: 70px 0;
+    text-align: center;
+  }
+
+  .footer-cta-content {
+    margin: 0 auto;
+  }
+
+  .footer-cta h2 {
+    font-size: 28px;
+  }
+
+  .footer-cta p {
+    font-size: 16px;
+  }
+}
 </style>
 </head>
 
@@ -1372,6 +1454,20 @@ section > .container {
       
       <button type="submit" class="submit-btn fade-in">Получить консультацию</button>
     </form>
+  </div>
+</section>
+
+<section class="footer-cta">
+  <div class="container footer-cta-inner">
+    <div class="footer-cta-content">
+      <span class="footer-cta-badge">БЕСПЛАТНО</span>
+      <h2>Нужна помощь с недвижимостью?</h2>
+      <p>
+        Расскажите о своей ситуации — мы подскажем оптимальное решение
+        и возьмём на себя все сложные этапы.
+      </p>
+      <a href="#contact" class="btn">Получить консультацию</a>
+    </div>
   </div>
 </section>
 
