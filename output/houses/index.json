@@ -1,439 +1,439 @@
 [
   {
     "id": "house_01",
-    "title": "Дом #1",
+    "title": "Дом · участок 5 сот.",
     "cover": "img_01.jpg",
     "path": "houses/house_01"
   },
   {
     "id": "house_02",
-    "title": "Дом #2",
+    "title": "Коттедж · 20 м²",
     "cover": "img_01.jpg",
     "path": "houses/house_02"
   },
   {
     "id": "house_03",
-    "title": "Дом #3",
+    "title": "Дом · участок 6. сот.",
     "cover": "img_01.jpg",
     "path": "houses/house_03"
   },
   {
     "id": "house_04",
-    "title": "Дом #4",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_04"
   },
   {
     "id": "house_05",
-    "title": "Дом #5",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_05"
   },
   {
     "id": "house_06",
-    "title": "Дом #6",
+    "title": "Коттедж",
     "cover": "img_01.jpg",
     "path": "houses/house_06"
   },
   {
     "id": "house_07",
-    "title": "Дом #7",
+    "title": "Коттедж",
     "cover": "img_01.jpg",
     "path": "houses/house_07"
   },
   {
     "id": "house_08",
-    "title": "Дом #8",
+    "title": "Дом · 78 м² · участок 5 сот.",
     "cover": "img_01.jpg",
     "path": "houses/house_08"
   },
   {
     "id": "house_09",
-    "title": "Дом #9",
+    "title": "Дом · участок 6 сот.",
     "cover": "img_01.jpg",
     "path": "houses/house_09"
   },
   {
     "id": "house_10",
-    "title": "Дом #10",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_10"
   },
   {
     "id": "house_11",
-    "title": "Дом #11",
+    "title": "Дом · участок 5 сот.",
     "cover": "img_01.jpg",
     "path": "houses/house_11"
   },
   {
     "id": "house_12",
-    "title": "Дом #12",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_12"
   },
   {
     "id": "house_13",
-    "title": "Дом #13",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_13"
   },
   {
     "id": "house_14",
-    "title": "Дом #14",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_14"
   },
   {
     "id": "house_15",
-    "title": "Дом #15",
+    "title": "Дом · 80 м²",
     "cover": "img_01.jpg",
     "path": "houses/house_15"
   },
   {
     "id": "house_16",
-    "title": "Дом #16",
+    "title": "Дом · 75 м² · участок 15 сот.",
     "cover": "img_01.jpg",
     "path": "houses/house_16"
   },
   {
     "id": "house_17",
-    "title": "Дом #17",
+    "title": "Дом · 160 м² · участок 6 сот.",
     "cover": "img_01.jpg",
     "path": "houses/house_17"
   },
   {
     "id": "house_18",
-    "title": "Дом #18",
+    "title": "Дом · 130 м² · участок 6 сот.",
     "cover": "img_01.jpg",
     "path": "houses/house_18"
   },
   {
     "id": "house_19",
-    "title": "Дом #19",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_19"
   },
   {
     "id": "house_20",
-    "title": "Дом #20",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_20"
   },
   {
     "id": "house_21",
-    "title": "Дом #21",
+    "title": "Дом · 100 м²",
     "cover": "img_01.jpg",
     "path": "houses/house_21"
   },
   {
     "id": "house_22",
-    "title": "Дом #22",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_22"
   },
   {
     "id": "house_23",
-    "title": "Дом #23",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_23"
   },
   {
     "id": "house_24",
-    "title": "Дом #24",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_24"
   },
   {
     "id": "house_25",
-    "title": "Дом #25",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_25"
   },
   {
     "id": "house_26",
-    "title": "Дом #26",
+    "title": "Дом · участок 6,5 сот.",
     "cover": "img_01.jpg",
     "path": "houses/house_26"
   },
   {
     "id": "house_27",
-    "title": "Дом #27",
+    "title": "Дом · участок 2 сот.",
     "cover": "img_01.jpg",
     "path": "houses/house_27"
   },
   {
     "id": "house_28",
-    "title": "Дом #28",
+    "title": "Дом · 115 м² · участок 6 сот.",
     "cover": "img_01.jpg",
     "path": "houses/house_28"
   },
   {
     "id": "house_29",
-    "title": "Дом #29",
+    "title": "Дом · участок 3212 сот.",
     "cover": "img_01.jpg",
     "path": "houses/house_29"
   },
   {
     "id": "house_30",
-    "title": "Дом #30",
+    "title": "Коттедж",
     "cover": "img_01.jpg",
     "path": "houses/house_30"
   },
   {
     "id": "house_31",
-    "title": "Дом #31",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_31"
   },
   {
     "id": "house_32",
-    "title": "Дом #32",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_32"
   },
   {
     "id": "house_33",
-    "title": "Дом #33",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_33"
   },
   {
     "id": "house_34",
-    "title": "Дом #34",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_34"
   },
   {
     "id": "house_35",
-    "title": "Дом #35",
+    "title": "Дом · участок 6 сот.",
     "cover": "img_01.jpg",
     "path": "houses/house_35"
   },
   {
     "id": "house_36",
-    "title": "Дом #36",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_36"
   },
   {
     "id": "house_37",
-    "title": "Дом #37",
+    "title": "Коттедж · 500 м² · участок 10 сот.",
     "cover": "img_01.jpg",
     "path": "houses/house_37"
   },
   {
     "id": "house_38",
-    "title": "Дом #38",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_38"
   },
   {
     "id": "house_39",
-    "title": "Дом #39",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_39"
   },
   {
     "id": "house_40",
-    "title": "Дом #40",
+    "title": "Дом · участок 9 сот.",
     "cover": "img_01.jpg",
     "path": "houses/house_40"
   },
   {
     "id": "house_41",
-    "title": "Дом #41",
+    "title": "Дом · 120 м²",
     "cover": "img_01.jpg",
     "path": "houses/house_41"
   },
   {
     "id": "house_42",
-    "title": "Дом #42",
+    "title": "Дом · 117 м² · участок 6 сот.",
     "cover": "img_01.jpg",
     "path": "houses/house_42"
   },
   {
     "id": "house_43",
-    "title": "Дом #43",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_43"
   },
   {
     "id": "house_44",
-    "title": "Дом #44",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_44"
   },
   {
     "id": "house_45",
-    "title": "Дом #45",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_45"
   },
   {
     "id": "house_46",
-    "title": "Дом #46",
+    "title": "Дом · 100 м² · участок 5 сот.",
     "cover": "img_01.jpg",
     "path": "houses/house_46"
   },
   {
     "id": "house_47",
-    "title": "Дом #47",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_47"
   },
   {
     "id": "house_48",
-    "title": "Дом #48",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_48"
   },
   {
     "id": "house_49",
-    "title": "Дом #49",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_49"
   },
   {
     "id": "house_50",
-    "title": "Дом #50",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_50"
   },
   {
     "id": "house_51",
-    "title": "Дом #51",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_51"
   },
   {
     "id": "house_52",
-    "title": "Дом #52",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_52"
   },
   {
     "id": "house_53",
-    "title": "Дом #53",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_53"
   },
   {
     "id": "house_54",
-    "title": "Дом #54",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_54"
   },
   {
     "id": "house_55",
-    "title": "Дом #55",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_55"
   },
   {
     "id": "house_56",
-    "title": "Дом #56",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_56"
   },
   {
     "id": "house_57",
-    "title": "Дом #57",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_57"
   },
   {
     "id": "house_58",
-    "title": "Дом #58",
+    "title": "Дом · 160 м² · участок 6 сот.",
     "cover": "img_01.jpg",
     "path": "houses/house_58"
   },
   {
     "id": "house_59",
-    "title": "Дом #59",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_59"
   },
   {
     "id": "house_60",
-    "title": "Дом #60",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_60"
   },
   {
     "id": "house_61",
-    "title": "Дом #61",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_61"
   },
   {
     "id": "house_62",
-    "title": "Дом #62",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_62"
   },
   {
     "id": "house_63",
-    "title": "Дом #63",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_63"
   },
   {
     "id": "house_64",
-    "title": "Дом #64",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_64"
   },
   {
     "id": "house_65",
-    "title": "Дом #65",
+    "title": "Дом · участок 6 сот.",
     "cover": "img_01.jpg",
     "path": "houses/house_65"
   },
   {
     "id": "house_66",
-    "title": "Дом #66",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_66"
   },
   {
     "id": "house_67",
-    "title": "Дом #67",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_67"
   },
   {
     "id": "house_68",
-    "title": "Дом #68",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_68"
   },
   {
     "id": "house_69",
-    "title": "Дом #69",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_69"
   },
   {
     "id": "house_70",
-    "title": "Дом #70",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_70"
   },
   {
     "id": "house_71",
-    "title": "Дом #71",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_71"
   },
   {
     "id": "house_72",
-    "title": "Дом #72",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_72"
   },
   {
     "id": "house_73",
-    "title": "Дом #73",
+    "title": "Дом",
     "cover": "img_01.jpg",
     "path": "houses/house_73"
   }
