@@ -161,7 +161,7 @@
 </header>
 
 <main>
-    <h1>Дома в продаже</h1>
+    <h1>Квартиры в продаже</h1>
     <div class="cards" id="cards"></div>
 </main>
 
@@ -182,31 +182,33 @@
 <script>
 const cards = document.getElementById("cards");
 
+/* === ЗАГРУЗКА СПИСКА ДОМОВ === */
 fetch("output/houses/index.json")
-  .then(r => r.json())
-  .then(objects => {
-    objects.forEach(obj => {
-      fetch(`output/${obj.path}/data.json`)
-        .then(r => r.json())
-        .then(data => {
-          const card = document.createElement("div");
-          card.className = "card";
+    .then(r => r.json())
+    .then(objects => {
+        objects.forEach(obj => {
+            fetch(`output/houses/${obj}/data.json`)
+                .then(r => r.json())
+                .then(data => {
+                    const card = document.createElement("div");
+                    card.className = "card";
 
-          card.innerHTML = `
-            <img src="output/${obj.path}/${data.images[0]}">
-            <div class="card-content">
-              <h2>${data.title}</h2>
-              <p>${data.description.substring(0, 140)}...</p>
-              <div class="btn">Подробнее</div>
-            </div>
-          `;
+                    card.innerHTML = `
+                        <img src="output/houses/${obj}/${data.images[0]}" loading="lazy">
+                        <div class="card-content">
+                            <h2>${data.title}</h2>
+                            <p>${data.description.substring(0, 140)}...</p>
+                            <div class="btn">Подробнее</div>
+                        </div>
+                    `;
 
-          card.querySelector(".btn").onclick = () => openModal(obj, data);
-          cards.appendChild(card);
+                    card.querySelector(".btn").onclick = () => openModal(obj, data);
+                    cards.appendChild(card);
+                });
         });
     });
-  });
 
+/* === ОТКРЫТИЕ МОДАЛКИ === */
 function openModal(obj, data) {
     document.getElementById("modalTitle").innerText = data.title;
     document.getElementById("modalDesc").innerText = data.description;
@@ -215,16 +217,20 @@ function openModal(obj, data) {
     images.innerHTML = "";
 
     data.images.forEach(img => {
-        images.innerHTML += `<img src="objects/${obj}/${img}">`;
+        images.innerHTML += `
+            <img src="output/houses/${obj}/${img}" loading="lazy">
+        `;
     });
 
     document.getElementById("modal").style.display = "flex";
 }
 
+/* === ЗАКРЫТИЕ МОДАЛКИ === */
 function closeModal() {
     document.getElementById("modal").style.display = "none";
 }
 </script>
+
 
 </body>
 </html>
