@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Участки — Агентство недвижимости «Домиан»</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f5f7;
+            color: #222;
+        }
+
+        header {
+            background: #1c1c1c;
+            color: #fff;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 14px;
+            opacity: 0.85;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 24px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 16px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card h2 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #555;
+            flex-grow: 1;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 14px;
+            padding: 10px 16px;
+            background: #1c1c1c;
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 60px;
+            background: #1c1c1c;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+        }
+
+        /* ===== МОДАЛКА ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,.6);
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+        }
+
+        .modal-content {
+            background: #fff;
+            max-width: 800px;
+            width: 90%;
+            padding: 20px;
+            border-radius: 8px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal img {
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+
+        .close {
+            float: right;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <div class="logo">Домиан · офис «Квартал»</div>
+        <nav>
+            <a href="apartments.html">Квартиры</a>
+            <a href="houses.html">Дома</a>
+            <a href="lands.html">Участки</a>
+            <a href="#">Контакты</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <h1>Участки в продаже</h1>
+    <div class="cards" id="cards"></div>
+</main>
+
+<footer>
+    © Агентство недвижимости «Домиан», офис «Квартал»
+</footer>
+
+<!-- ===== МОДАЛЬНОЕ ОКНО ===== -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">✖</span>
+        <h2 id="modalTitle"></h2>
+        <div id="modalImages"></div>
+        <p id="modalDesc"></p>
+    </div>
+</div>
+
+<script>
+const cards = document.getElementById("cards");
+
+/* === ЗАГРУЗКА СПИСКА УЧАСТКОВ === */
+fetch("lands/index.json")
+  .then(r => r.json())
+  .then(objects => {
+    objects.forEach(obj => {
+      fetch(`${obj.path}/data.json`)
+        .then(r => r.json())
+        .then(data => {
+          const card = document.createElement("div");
+          card.className = "card";
+
+          card.innerHTML = `
+            <img src="${obj.path}/${obj.cover}" loading="lazy">
+            <div class="card-content">
+              <h2>${obj.title}</h2>
+              <p>${data.description.substring(0, 140)}...</p>
+              <div class="btn">Подробнее</div>
+            </div>
+          `;
+
+          card.querySelector(".btn").onclick = () => openModal(obj, data);
+          cards.appendChild(card);
+        });
+    });
+  });
+
+/* === ОТКРЫТИЕ МОДАЛКИ === */
+function openModal(obj, data) {
+  document.getElementById("modalTitle").innerText = obj.title;
+  document.getElementById("modalDesc").innerText = data.description;
+
+  const images = document.getElementById("modalImages");
+  images.innerHTML = "";
+
+  data.images.forEach(img => {
+    images.innerHTML += `<img src="${obj.path}/${img}" loading="lazy">`;
+  });
+
+  document.getElementById("modal").style.display = "flex";
+}
+
+/* === ЗАКРЫТИЕ МОДАЛКИ === */
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
