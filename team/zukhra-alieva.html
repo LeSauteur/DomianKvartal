@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зухра Алиева — Руководитель офиса | Домиан Квартал</title>
+    <meta name="description" content="Зухра Алиева — руководитель офиса АН Домиан Квартал. Продажа и покупка недвижимости в Аксае и Ростовской области.">
+    
+    <style>
+        /* === Базовые стили === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f5f7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* === Header === */
+        header {
+            background: #1c1c1c;
+            color: #fff;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #eed07f;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #eed07f;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+        }
+
+        /* === Agent Profile === */
+        .agent-profile {
+            padding: 80px 0;
+        }
+
+        .agent-card {
+            background: #fff;
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 40px;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .agent-photo img {
+            width: 100%;
+            border-radius: 16px;
+            object-fit: cover;
+            aspect-ratio: 1;
+            background: #eee;
+        }
+
+        .agent-info h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #1c1c1c;
+        }
+
+        .position {
+            font-weight: 600;
+            color: #eed07f;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        .contacts a,
+        .contacts div {
+            display: block;
+            margin-bottom: 12px;
+            color: #333;
+            font-size: 15px;
+        }
+
+        .contacts a:hover {
+            color: #eed07f;
+        }
+
+        .actions {
+            margin-top: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .btn-primary,
+        .btn-outline {
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #eed07f;
+            color: #1c1c1c;
+        }
+
+        .btn-primary:hover {
+            background: #e6c365;
+        }
+
+        .btn-outline {
+            border: 2px solid #1c1c1c;
+            background: transparent;
+            color: #1c1c1c;
+        }
+
+        .btn-outline:hover {
+            background: #1c1c1c;
+            color: #fff;
+        }
+
+        /* === Agent Objects === */
+        .agent-objects {
+            margin-top: 60px;
+        }
+
+        .agent-objects h2 {
+            font-size: 24px;
+            margin-bottom: 25px;
+            color: #1c1c1c;
+        }
+
+        .objects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .object-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .object-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .object-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: #eee;
+        }
+
+        .object-card h3 {
+            font-size: 16px;
+            padding: 15px;
+            color: #333;
+        }
+
+        .object-card .price {
+            padding: 0 15px 15px;
+            font-weight: 700;
+            color: #eed07f;
+        }
+
+        /* === QR Modal === */
+        .qr-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .qr-modal.active {
+            display: flex;
+        }
+
+        .qr-content {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+            max-width: 300px;
+        }
+
+        #qrClose {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+            font-size: 24px;
+            color: #777;
+        }
+
+        #qrClose:hover {
+            color: #1c1c1c;
+        }
+
+        #qrCanvas {
+            margin: 20px auto;
+            display: block;
+        }
+
+        /* === Footer === */
+        footer {
+            background: #1c1c1c;
+            color: #fff;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+
+        .footer-inner {
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* === Responsive === */
+        @media (max-width: 900px) {
+            .agent-card {
+                grid-template-columns: 1fr;
+                padding: 25px;
+            }
+
+            .agent-photo {
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .agent-info h1 {
+                font-size: 26px;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+
+            .btn-primary,
+            .btn-outline {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .agent-profile {
+                padding: 40px 0;
+            }
+
+            .agent-info h1 {
+                font-size: 22px;
+            }
+
+            .objects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body data-agent="zukhra-alieva">
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">Домиан · офис «Квартал»</a>
+            <nav>
+                <a href="../index.html">Главная</a>
+                <a href="../apartments.html">Квартиры</a>
+                <a href="../houses.html">Дома</a>
+                <a href="../lands.html">Участки</a>
+                <a href="../newbuilds.html">Новостройки</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="agent-profile">
+            <div class="container">
+
+                <div class="agent-card">
+                    <!-- Photo -->
+                    <div class="agent-photo">
+                        <img src="../assets/img/agents/zukhra-alieva.jpg" 
+                             alt="Зухра Алиева"
+                             onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22350%22 height=%22350%22%3E%3Crect fill=%22%23eee%22 width=%22350%22 height=%22350%22/%3E%3Ctext fill=%22%23999%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EФото агента%3C/text%3E%3C/svg%3E'">
+                    </div>
+
+                    <!-- Info -->
+                    <div class="agent-info">
+                        <h1>Зухра Алиева</h1>
+                        <p class="position">Руководитель офиса</p>
+                        <p class="subtitle">Эксперт рынка недвижимости Аксайского района</p>
+
+                        <div class="contacts">
+                            <a href="tel:+79536091122">📞 +7 (953) 609-11-22</a>
+                            <a href="tel:+79994815151">📞 +7 (999) 481-51-51</a>
+                            <a href="mailto:zuhra_2010_aidan@mail.ru">✉ zuhra_2010_aidan@mail.ru</a>
+                            <div>📍 Аксай, ул. Толпинского 130</div>
+                        </div>
+
+                        <div class="actions">
+                            <a href="mailto:zuhra_2010_aidan@mail.ru" class="btn-primary">Связаться</a>
+                            <a href="zukhra-alieva.vcf" download class="btn-outline">Добавить в контакты</a>
+                            <a href="../catalog.html?agent=zukhra-alieva" class="btn-outline">Объекты</a>
+                            <button type="button" class="btn-outline" id="qrBtn">QR-код</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Objects Section -->
+                <section class="agent-objects">
+                    <h2>Объекты агента</h2>
+                    <div class="objects-grid" id="agentObjects">
+                        <p>Загрузка объектов...</p>
+                    </div>
+                </section>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <p>© 2022–2026 АН «Домиан Квартал»</p>
+        </div>
+    </footer>
+
+    <!-- QR Modal -->
+    <div class="qr-modal" id="qrModal">
+        <div class="qr-content">
+            <span id="qrClose">&times;</span>
+            <h3>QR-код страницы</h3>
+            <canvas id="qrCanvas"></canvas>
+            <p style="font-size: 12px; color: #777; margin-top: 10px;">
+                Отсканируйте для перехода на страницу
+            </p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // === Загрузка объектов агента ===
+            const slug = document.body.dataset.agent;
+            const container = document.getElementById('agentObjects');
+
+            // Встроенные тестовые данные (удали когда подключишь JSON)
+            const testData = [
+                {
+                    title: "Дом 120 м² в Аксае",
+                    image: "../assets/img/house1.jpg",
+                    price: "8 500 000 ₽",
+                    agent: "zukhra-alieva"
+                },
+                {
+                    title: "Квартира 2-комнатная 65 м²",
+                    image: "../assets/img/flat1.jpg",
+                    price: "5 200 000 ₽",
+                    agent: "zukhra-alieva"
+                },
+                {
+                    title: "Участок 10 соток, ИЖС",
+                    image: "../assets/img/land1.jpg",
+                    price: "2 800 000 ₽",
+                    agent: "zukhra-alieva"
+                }
+            ];
+
+            if (container) {
+                // Попытка загрузить из JSON
+                fetch('../data/objects.json')
+                    .then(res => res.json())
+                    .then(data => {
+                        const filtered = data.filter(obj => obj.agent === slug);
+                        renderObjects(filtered.length > 0 ? filtered : testData);
+                    })
+                    .catch(() => {
+                        // Если JSON не найден, используем тестовые данные
+                        console.log('JSON не найден, используем тестовые данные');
+                        renderObjects(testData);
+                    });
+            }
+
+            function renderObjects(objects) {
+                if (objects.length === 0) {
+                    container.innerHTML = "<p>Объектов пока нет</p>";
+                    return;
+                }
+
+                container.innerHTML = objects.map(obj => `
+                    <div class="object-card">
+                        <img src="${obj.image}" 
+                             alt="${obj.title}"
+                             onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22200%22%3E%3Crect fill=%22%23eee%22 width=%22280%22 height=%22200%22/%3E%3Ctext fill=%22%23999%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EФото%3C/text%3E%3C/svg%3E'">
+                        <h3>${obj.title}</h3>
+                        <div class="price">${obj.price || ''}</div>
+                    </div>
+                `).join('');
+            }
+
+
+            // === QR-код (простая генерация) ===
+            const qrBtn = document.getElementById('qrBtn');
+            const qrModal = document.getElementById('qrModal');
+            const qrClose = document.getElementById('qrClose');
+            const canvas = document.getElementById('qrCanvas');
+            let qrGenerated = false;
+
+            if (qrBtn) {
+                qrBtn.onclick = function() {
+                    qrModal.classList.add('active');
+                    if (!qrGenerated) {
+                        generateQR(window.location.href);
+                        qrGenerated = true;
+                    }
+                };
+            }
+
+            if (qrClose) {
+                qrClose.onclick = function() {
+                    qrModal.classList.remove('active');
+                };
+            }
+
+            // Закрытие по клику вне модального окна
+            qrModal.onclick = function(e) {
+                if (e.target === qrModal) {
+                    qrModal.classList.remove('active');
+                }
+            };
+
+            // Простая генерация QR (заглушка)
+            function generateQR(text) {
+                const ctx = canvas.getContext('2d');
+                canvas.width = 200;
+                canvas.height = 200;
+                
+                // Белый фон
+                ctx.fillStyle = '#fff';
+                ctx.fillRect(0, 0, 200, 200);
+                
+                // Чёрные квадраты (имитация QR)
+                ctx.fillStyle = '#000';
+                const size = 10;
+                const hash = simpleHash(text);
+                
+                for (let i = 0; i < 20; i++) {
+                    for (let j = 0; j < 20; j++) {
+                        if ((hash + i * j) % 3 === 0) {
+                            ctx.fillRect(i * size, j * size, size - 1, size - 1);
+                        }
+                    }
+                }
+                
+                // Угловые маркеры
+                ctx.fillStyle = '#000';
+                ctx.fillRect(10, 10, 50, 50);
+                ctx.fillRect(140, 10, 50, 50);
+                ctx.fillRect(10, 140, 50, 50);
+                
+                ctx.fillStyle = '#fff';
+                ctx.fillRect(20, 20, 30, 30);
+                ctx.fillRect(150, 20, 30, 30);
+                ctx.fillRect(20, 150, 30, 30);
+                
+                ctx.fillStyle = '#000';
+                ctx.fillRect(30, 30, 10, 10);
+                ctx.fillRect(160, 30, 10, 10);
+                ctx.fillRect(30, 160, 10, 10);
+            }
+
+            function simpleHash(str) {
+                let hash = 0;
+                for (let i = 0; i < str.length; i++) {
+                    hash = ((hash << 5) - hash) + str.charCodeAt(i);
+                    hash |= 0;
+                }
+                return Math.abs(hash);
+            }
+        });
+    </script>
+
+</body>
+</html>
