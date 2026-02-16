@@ -2,242 +2,76 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Новостройки — Агентство недвижимости «Домиан»</title>
+    <title>Новостройки — Агентство недвижимости «Домиан Квартал»</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background: #f4f5f7;
-            color: #222;
-        }
-
-        header {
-            background: #1c1c1c;
-            color: #fff;
-        }
-
-        .header-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 18px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: 24px;
-            font-size: 14px;
-            opacity: 0.85;
-        }
-
-        nav a:hover {
-            opacity: 1;
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        h1 {
-            font-size: 28px;
-            margin-bottom: 24px;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 24px;
-        }
-
-        .card {
-            background: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .card-content {
-            padding: 16px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card h2 {
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
-
-        .card p {
-            font-size: 14px;
-            color: #555;
-            flex-grow: 1;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 14px;
-            padding: 10px 16px;
-            background: #1c1c1c;
-            color: #fff;
-            text-decoration: none;
-            font-size: 14px;
-            border-radius: 6px;
-            cursor: pointer;
-            text-align: center;
-        }
-
-        footer {
-            margin-top: 60px;
-            background: #1c1c1c;
-            color: #aaa;
-            text-align: center;
-            padding: 20px;
-            font-size: 13px;
-        }
-
-        /* ===== МОДАЛКА ===== */
-        .modal {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,.6);
-            align-items: center;
-            justify-content: center;
-            z-index: 999;
-        }
-
-        .modal-content {
-            background: #fff;
-            max-width: 800px;
-            width: 90%;
-            padding: 20px;
-            border-radius: 8px;
-            max-height: 90vh;
-            overflow-y: auto;
-        }
-
-        .modal img {
-            width: 100%;
-            margin-bottom: 10px;
-            border-radius: 6px;
-        }
-
-        .close {
-            float: right;
-            cursor: pointer;
-            font-size: 18px;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body>
+<body class="catalog-page catalog-extended listing-page" data-listing="newbuilds">
 
 <header>
     <div class="header-inner">
         <div class="logo">Домиан · офис «Квартал»</div>
         <nav>
+            <a href="index.html">Главная</a>
             <a href="apartments.html">Квартиры</a>
             <a href="houses.html">Дома</a>
             <a href="lands.html">Участки</a>
             <a href="newbuilds.html">Новостройки</a>
-            <a href="#">Контакты</a>
         </nav>
+        <div class="header-contacts">
+            <a href="tel:+79536091122">+7 953 609-11-22</a>
+        </div>
     </div>
 </header>
 
 <main>
     <h1>Новостройки</h1>
+    <div class="listing-tools">
+        <div class="filters" id="filters"></div>
+        <div class="results-count" id="resultsCount"></div>
+    </div>
     <div class="cards" id="cards"></div>
 </main>
 
 <footer>
-    © Агентство недвижимости «Домиан», офис «Квартал»
+    <div class="footer-inner">
+        <p>© 2022–2026 АН «Домиан Квартал». Все права защищены.</p>
+        <p>Ростовская обл., г. Аксай, ул. Толпинского 130</p>
+        <p>
+            <a href="tel:+79536091122">+7 953 609-11-22</a> | 
+            <a href="mailto:zuhra_2010_aidan@mail.ru">zuhra_2010_aidan@mail.ru</a>
+        </p>
+        <p>
+            <a href="https://wa.me/79536091122" target="_blank">WhatsApp</a> | 
+            <a href="https://t.me/79536091122" target="_blank">Telegram</a> | 
+            <a href="https://vk.com/domian_kvartal" target="_blank">ВКонтакте</a>
+        </p>
+        <p class="footer-legal">Информация на сайте не является публичной офертой</p>
+    </div>
 </footer>
 
-<!-- ===== МОДАЛЬНОЕ ОКНО ===== -->
+<a href="https://wa.me/79536091122" target="_blank" class="fixed-wa" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" width="30" height="30">
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 2.09.58 4.13 1.68 5.91L2 22l4.3-1.75c1.7.95 3.62 1.47 5.74 1.47 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm.01 18.13c-1.74 0-3.45-.48-4.92-1.38l-.35-.21-2.56 1.04.8-2.45-.22-.36c-.98-1.54-1.51-3.35-1.51-5.21 0-5.01 4.08-9.09 9.09-9.09s9.09 4.08 9.09 9.09-4.08 9.09-9.09 9.09z"/>
+        <path fill="#fff" d="M16.29 13.36c-.26-.13-1.55-.76-1.79-.85-.24-.09-.41-.13-.58.13-.17.26-.67.85-.82 1.02-.15.17-.3.19-.56.07-.26-.13-1.09-.4-2.07-1.28-.77-.69-1.29-1.54-1.44-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.32.39-.48.13-.17.17-.28.26-.47.09-.19.04-.36-.02-.5-.07-.13-.58-1.4-.8-1.92-.21-.51-.42-.44-.58-.45h-.49c-.18 0-.47.07-.71.34-.24.26-.92.9-.92 2.19s.94 2.54 1.07 2.72c.13.17 1.84 2.86 4.46 3.87.62.24 1.11.38 1.49.49.62.17 1.19.15 1.64.09.5-.06 1.55-.63 1.77-1.24.22-.61.22-1.13.16-1.24-.07-.11-.24-.17-.5-.3z"/>
+    </svg>
+</a>
+
+<button class="go-top" aria-label="Наверх">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+        <path d="M7 14l5-5 5 5z"/>
+    </svg>
+</button>
+
 <div class="modal" id="modal">
     <div class="modal-content">
-        <span class="close" onclick="closeModal()">✖</span>
+        <button type="button" class="close close-modal" aria-label="Закрыть">✖</button>
         <h2 id="modalTitle"></h2>
         <div id="modalImages"></div>
         <p id="modalDesc"></p>
     </div>
 </div>
 
-<script>
-const cards = document.getElementById("cards");
-
-/* === ЗАГРУЗКА СПИСКА НОВОСТРОЕК === */
-fetch("newbuilds/index.json")
-  .then(r => r.json())
-  .then(objects => {
-    objects.forEach(obj => {
-      fetch(`${obj.path}/data.json`)
-        .then(r => r.json())
-        .then(data => {
-          const card = document.createElement("div");
-          card.className = "card";
-
-          card.innerHTML = `
-            <img src="${obj.path}/${obj.cover}" loading="lazy">
-            <div class="card-content">
-              <h2>${obj.title}</h2>
-              <p>${data.description.substring(0, 140)}...</p>
-              <div class="btn">Подробнее</div>
-            </div>
-          `;
-
-          card.querySelector(".btn").onclick = () => openModal(obj, data);
-          cards.appendChild(card);
-        });
-    });
-  });
-
-/* === ОТКРЫТИЕ МОДАЛКИ === */
-function openModal(obj, data) {
-  document.getElementById("modalTitle").innerText = obj.title;
-  document.getElementById("modalDesc").innerText = data.description;
-
-  const images = document.getElementById("modalImages");
-  images.innerHTML = "";
-
-  data.images.forEach(img => {
-    images.innerHTML += `<img src="${obj.path}/${img}" loading="lazy">`;
-  });
-
-  document.getElementById("modal").style.display = "flex";
-}
-
-/* === ЗАКРЫТИЕ МОДАЛКИ === */
-function closeModal() {
-  document.getElementById("modal").style.display = "none";
-}
-</script>
-
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
