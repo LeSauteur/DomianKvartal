@@ -261,12 +261,20 @@
     var safeCover = escapeHtml(item.cover || "assets/hero/hero.jpg");
     var safeTitle = escapeHtml(item.title || "Объект");
 
+    var mortgageHtml = "";
+    if (window.domianCatalogMortgage) {
+      var mortgageText = window.domianCatalogMortgage.format(item.meta.price);
+      if (mortgageText) {
+        mortgageHtml = ' <span class="card-mortgage">' + escapeHtml(mortgageText) + '</span>';
+      }
+    }
+
     card.innerHTML = [
       '<img src="' + safeCover + '" loading="lazy" alt="' + safeTitle + '">',
       '<div class="card-content">',
       '<h2>' + safeTitle + '</h2>',
       '<p>' + escapeHtml(truncate(item.description || "", 140)) + '</p>',
-      '<div class="card-meta">' + escapeHtml(formatPrice(item.meta.price)) + '</div>',
+      '<div class="card-meta">' + escapeHtml(formatPrice(item.meta.price)) + mortgageHtml + '</div>',
       '<button class="btn card-open" type="button">Подробнее</button>',
       '</div>'
     ].join("");

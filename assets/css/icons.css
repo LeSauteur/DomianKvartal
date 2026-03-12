@@ -1,0 +1,40 @@
+/* Icons Styles */
+.benefit-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(184, 74, 58, 0.08);
+    color: var(--accent);
+    flex-shrink: 0;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.benefit-icon svg {
+    width: 26px;
+    height: 26px;
+    fill: currentColor;
+}
+
+/* Hover animation */
+.benefit:hover .benefit-icon {
+    transform: scale(1.15);
+    background: rgba(184, 74, 58, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+    .benefit-icon {
+        width: 40px;
+        height: 40px;
+        margin: 0 auto 12px;
+    }
+
+    .benefit-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+}
