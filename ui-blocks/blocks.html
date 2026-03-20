@@ -1,0 +1,410 @@
+<!--
+  UI Blocks - HTML блоки
+  Версия: 1.0.0
+  
+  Использование:
+  1. Скопировать HTML из этого файла
+  2. Подключить css/blocks.css
+  3. Подключить js/blocks.js (для интерактивности)
+  4. Обернуть в <div class="ui-blocks-wrapper">
+-->
+
+<!-- ============================================
+     БЛОК 1: Горизонтальный скроллер с иконками
+     (Stories / Quick Links)
+     ============================================ -->
+<section class="ub-section" aria-label="Подборки и акции">
+  <div class="ub-container">
+    <div class="ub-scroller" data-ub-scroller>
+      <button class="ub-scroller__btn" type="button" data-dir="left" aria-label="Влево">◀</button>
+      <div class="ub-scroller__track" data-ub-track>
+
+        <!-- Story 1: Семейная ипотека -->
+        <article class="ub-story" tabindex="0" role="link">
+          <div class="ub-story__img">
+            <img class="ub-storyimg" src="/ui-blocks/assets/images/quick-1.png" alt="" decoding="async" loading="lazy" />
+            <div class="ub-story__icon ub-story__icon--percent" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 17a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm10-4a3 3 0 1 1 0-6 3 3 0 0 1 0 6ZM7 21H5l12-18h2L7 21Z"/></svg>
+            </div>
+          </div>
+          <div class="ub-story__cap">Семейная ипотека 6%</div>
+        </article>
+
+        <!-- Story 2: Сельская ипотека -->
+        <article class="ub-story" tabindex="0" role="link">
+          <div class="ub-story__img">
+            <img class="ub-storyimg" src="/ui-blocks/assets/images/quick-2.png" alt="" decoding="async" loading="lazy" />
+            <div class="ub-story__icon ub-story__icon--home" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3 3 10v10h6v-6h6v6h6V10l-9-7Zm-2 9h4v2h-4v-2Z"/></svg>
+            </div>
+          </div>
+          <div class="ub-story__cap">Сельская ипотека вернулась: 3%</div>
+        </article>
+
+        <!-- Story 3: Рефинансирование -->
+        <article class="ub-story" tabindex="0" role="link">
+          <div class="ub-story__img">
+            <img class="ub-storyimg" src="/ui-blocks/assets/images/quick-3.png" alt="" decoding="async" loading="lazy" />
+            <div class="ub-story__icon ub-story__icon--refi" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 7h6V5l4 3-4 3V9H8a3 3 0 0 0-3 3v1H3v-1a5 5 0 0 1 4-4Zm10 10h-6v2l-4-3 4-3v2h5a3 3 0 0 0 3-3v-1h2v1a5 5 0 0 1-4 4Z"/></svg>
+            </div>
+          </div>
+          <div class="ub-story__cap">Рефинансирование: шанс платить меньше</div>
+        </article>
+
+        <!-- Story 4: Страхование рисков -->
+        <article class="ub-story" tabindex="0" role="link">
+          <div class="ub-story__img">
+            <img class="ub-storyimg" src="/ui-blocks/assets/images/quick-4.png" alt="" decoding="async" loading="lazy" />
+            <div class="ub-story__icon ub-story__icon--shield" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2 20 6v7c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V6l8-4Zm-1 12 6-6 1.4 1.4L11 16.8 6.6 12.4 8 11l3 3Z"/></svg>
+            </div>
+          </div>
+          <div class="ub-story__cap">Страхование рисков при сделке</div>
+        </article>
+
+        <!-- Story 5: Гарантия выбора -->
+        <article class="ub-story" tabindex="0" role="link">
+          <div class="ub-story__img">
+            <img class="ub-storyimg" src="/ui-blocks/assets/images/offer-1.png" alt="" decoding="async" loading="lazy" />
+            <div class="ub-story__icon ub-story__icon--check" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M10 16.2 6.5 12.7 5.1 14.1 10 19l9-9-1.4-1.4-7.6 7.6Z"/></svg>
+            </div>
+          </div>
+          <div class="ub-story__cap">Гарантия правильного выбора</div>
+        </article>
+
+        <!-- Story 6: Гарантия продажи -->
+        <article class="ub-story" tabindex="0" role="link">
+          <div class="ub-story__img">
+            <img class="ub-storyimg" src="/ui-blocks/assets/images/offer-2.png" alt="" decoding="async" loading="lazy" />
+            <div class="ub-story__icon ub-story__icon--keys" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M14 8a4 4 0 1 0-1.2 2.8L14 12h2v2h2v2h2v-4h-5.2L13.5 10A3.9 3.9 0 0 0 14 8ZM8 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"/></svg>
+            </div>
+          </div>
+          <div class="ub-story__cap">Гарантия продажи</div>
+        </article>
+
+        <!-- Story 7: Новый сценарий -->
+        <article class="ub-story" tabindex="0" role="link">
+          <div class="ub-story__img">
+            <img class="ub-storyimg" src="/ui-blocks/assets/images/offer-3.png" alt="" decoding="async" loading="lazy" />
+            <div class="ub-story__icon ub-story__icon--spark" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2l1.2 6.2L20 9.4l-6.1 1.2L12.6 20l-1.2-9.4L5.3 9.4l6.5-1.2L12 2Zm8.2 9.2.6 2.8 2.7.6-2.7.6-.6 2.8-.6-2.8-2.7-.6 2.7-.6.6-2.8Z"/></svg>
+            </div>
+          </div>
+          <div class="ub-story__cap">Новая квартира, новый сценарий</div>
+        </article>
+
+      </div>
+      <button class="ub-scroller__btn" type="button" data-dir="right" aria-label="Вправо">▶</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     БЛОК 2: Специальные предложения (карточки)
+     ============================================ -->
+<section class="ub-section" aria-label="Специальные предложения">
+  <div class="ub-container">
+    <div class="ub-section__head">
+      <div>
+        <h2 class="ub-h2">Специальные предложения</h2>
+        <p class="ub-sub">Подборки самых привлекательных вариантов</p>
+      </div>
+    </div>
+
+    <!-- Фильтры (chips) -->
+    <div class="ub-pills" role="tablist" aria-label="Подборки">
+      <button class="ub-chip is-active" type="button" data-chip="secondary">Квартиры на вторичном рынке</button>
+      <button class="ub-chip" type="button" data-chip="houses">Дома и участки</button>
+      <button class="ub-chip" type="button" data-chip="mortgage">Ипотека 6%</button>
+      <button class="ub-chip" type="button" data-chip="commercial">Коммерческая недвижимость</button>
+    </div>
+
+    <!-- Горизонтальный скроллер карточек -->
+    <div class="ub-scroller ub-scroller--offers" data-ub-scroller aria-label="Карточки объектов">
+      <button class="ub-scroller__btn" type="button" data-dir="left" aria-label="Влево">◀</button>
+      <div class="ub-cards ub-cards--offers" data-ub-track>
+        
+        <!-- Card 1: Дом -->
+        <article class="ub-card" tabindex="0" role="link" data-id="1" data-cat="houses">
+          <div class="ub-card__media">
+            <img class="ub-mediaimg" src="/ui-blocks/assets/images/quick-1.jpg" alt="Объект недвижимости" decoding="async" loading="lazy" />
+            <span class="ub-counter">1/33</span>
+            <span class="ub-badge ub-badge--soft">Своя ставка от 13.99%</span>
+            <button class="ub-fav" type="button" aria-label="В избранное" aria-pressed="false">
+              <svg class="ub-ico" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C1 8.7 2.9 6 6 6c1.8 0 3.2.9 4 2 0.8-1.1 2.2-2 4-2 3.1 0 5 2.7 3.6 5.9C19.5 16.4 12 21 12 21Zm0-2.2c2-1.3 6.2-4.5 7.4-7.6.8-2-0.4-3.9-2.4-3.9-1.6 0-2.7 1-3.3 2.1a1 1 0 0 1-1.7 0C11.4 8.3 10.3 7.3 8.7 7.3c-2 0-3.2 1.9-2.4 3.9 1.2 3.1 5.4 6.3 7.7 7.6Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="ub-card__body">
+            <div class="ub-price">
+              <strong>25 000 000 ₽</strong>
+              <span class="ub-pm">от 207 214 ₽/мес.</span>
+            </div>
+            <div class="ub-meta">
+              <span>4-комн.</span>
+              <span>250 м²</span>
+              <span>3/3 эт.</span>
+            </div>
+            <div class="ub-addr">Батайск, ул. Рабочая, д. 100</div>
+          </div>
+        </article>
+
+        <!-- Card 2: Квартира вторичка -->
+        <article class="ub-card" tabindex="0" role="link" data-id="2" data-cat="secondary">
+          <div class="ub-card__media">
+            <img class="ub-mediaimg" src="/ui-blocks/assets/images/quick-2.jpg" alt="Объект недвижимости" decoding="async" loading="lazy" />
+            <span class="ub-counter">1/5</span>
+            <span class="ub-badge ub-badge--soft">Своя ставка от 13.99%</span>
+            <button class="ub-fav" type="button" aria-label="В избранное" aria-pressed="false">
+              <svg class="ub-ico" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C1 8.7 2.9 6 6 6c1.8 0 3.2.9 4 2 0.8-1.1 2.2-2 4-2 3.1 0 5 2.7 3.6 5.9C19.5 16.4 12 21 12 21Zm0-2.2c2-1.3 6.2-4.5 7.4-7.6.8-2-0.4-3.9-2.4-3.9-1.6 0-2.7 1-3.3 2.1a1 1 0 0 1-1.7 0C11.4 8.3 10.3 7.3 8.7 7.3c-2 0-3.2 1.9-2.4 3.9 1.2 3.1 5.4 6.3 7.7 7.6Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="ub-card__body">
+            <div class="ub-price">
+              <strong>10 315 000 ₽</strong>
+              <span class="ub-pm">от 85 497 ₽/мес.</span>
+            </div>
+            <div class="ub-meta">
+              <span>1-комн.</span>
+              <span>67.8 м²</span>
+              <span>7/19 эт.</span>
+            </div>
+            <div class="ub-addr">Ростов-на-Дону, район Центр</div>
+          </div>
+        </article>
+
+        <!-- Card 3: Ипотека -->
+        <article class="ub-card" tabindex="0" role="link" data-id="3" data-cat="mortgage">
+          <div class="ub-card__media">
+            <img class="ub-mediaimg" src="/ui-blocks/assets/images/quick-3.jpg" alt="Объект недвижимости" decoding="async" loading="lazy" />
+            <span class="ub-counter">1/8</span>
+            <span class="ub-badge ub-badge--ok">Рассрочка</span>
+            <button class="ub-fav" type="button" aria-label="В избранное" aria-pressed="false">
+              <svg class="ub-ico" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C1 8.7 2.9 6 6 6c1.8 0 3.2.9 4 2 0.8-1.1 2.2-2 4-2 3.1 0 5 2.7 3.6 5.9C19.5 16.4 12 21 12 21Zm0-2.2c2-1.3 6.2-4.5 7.4-7.6.8-2-0.4-3.9-2.4-3.9-1.6 0-2.7 1-3.3 2.1a1 1 0 0 1-1.7 0C11.4 8.3 10.3 7.3 8.7 7.3c-2 0-3.2 1.9-2.4 3.9 1.2 3.1 5.4 6.3 7.7 7.6Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="ub-card__body">
+            <div class="ub-price">
+              <strong>10 500 000 ₽</strong>
+              <span class="ub-pm">от 87 030 ₽/мес.</span>
+            </div>
+            <div class="ub-meta">
+              <span>3-комн.</span>
+              <span>77 м²</span>
+              <span>16/25 эт.</span>
+            </div>
+            <div class="ub-addr">Ростов-на-Дону, пр-т Ленина</div>
+          </div>
+        </article>
+
+        <!-- Card 4: Квартира -->
+        <article class="ub-card" tabindex="0" role="link" data-id="4" data-cat="secondary">
+          <div class="ub-card__media">
+            <img class="ub-mediaimg" src="/ui-blocks/assets/images/listing-5.jpg" alt="Объект недвижимости" decoding="async" loading="lazy" />
+            <span class="ub-counter">1/32</span>
+            <span class="ub-badge ub-badge--soft">Своя ставка</span>
+            <button class="ub-fav" type="button" aria-label="В избранное" aria-pressed="false">
+              <svg class="ub-ico" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C1 8.7 2.9 6 6 6c1.8 0 3.2.9 4 2 0.8-1.1 2.2-2 4-2 3.1 0 5 2.7 3.6 5.9C19.5 16.4 12 21 12 21Zm0-2.2c2-1.3 6.2-4.5 7.4-7.6.8-2-0.4-3.9-2.4-3.9-1.6 0-2.7 1-3.3 2.1a1 1 0 0 1-1.7 0C11.4 8.3 10.3 7.3 8.7 7.3c-2 0-3.2 1.9-2.4 3.9 1.2 3.1 5.4 6.3 7.7 7.6Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="ub-card__body">
+            <div class="ub-price">
+              <strong>9 700 000 ₽</strong>
+              <span class="ub-pm">от 80 000 ₽/мес.</span>
+            </div>
+            <div class="ub-meta">
+              <span>2-комн.</span>
+              <span>62 м²</span>
+              <span>8/17 эт.</span>
+            </div>
+            <div class="ub-addr">Батайск, ул. Садовая</div>
+          </div>
+        </article>
+
+        <!-- Card 5: Квартира с безопасной сделкой -->
+        <article class="ub-card" tabindex="0" role="link" data-id="5" data-cat="secondary">
+          <div class="ub-card__media">
+            <img class="ub-mediaimg" src="/ui-blocks/assets/images/listing-6.jpg" alt="Объект недвижимости" decoding="async" loading="lazy" />
+            <span class="ub-counter">1/12</span>
+            <span class="ub-badge ub-badge--ok">Безопасная сделка</span>
+            <button class="ub-fav" type="button" aria-label="В избранное" aria-pressed="false">
+              <svg class="ub-ico" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C1 8.7 2.9 6 6 6c1.8 0 3.2.9 4 2 0.8-1.1 2.2-2 4-2 3.1 0 5 2.7 3.6 5.9C19.5 16.4 12 21 12 21Zm0-2.2c2-1.3 6.2-4.5 7.4-7.6.8-2-0.4-3.9-2.4-3.9-1.6 0-2.7 1-3.3 2.1a1 1 0 0 1-1.7 0C11.4 8.3 10.3 7.3 8.7 7.3c-2 0-3.2 1.9-2.4 3.9 1.2 3.1 5.4 6.3 7.7 7.6Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="ub-card__body">
+            <div class="ub-price">
+              <strong>12 900 000 ₽</strong>
+              <span class="ub-pm">от 98 120 ₽/мес.</span>
+            </div>
+            <div class="ub-meta">
+              <span>2-комн.</span>
+              <span>61 м²</span>
+              <span>10/17 эт.</span>
+            </div>
+            <div class="ub-addr">Ростов-на-Дону, ЖК "Центральный"</div>
+          </div>
+        </article>
+
+        <!-- Card 6: Коммерческая -->
+        <article class="ub-card" tabindex="0" role="link" data-id="6" data-cat="commercial">
+          <div class="ub-card__media">
+            <img class="ub-mediaimg" src="/ui-blocks/assets/images/listing-7.jpg" alt="Объект недвижимости" decoding="async" loading="lazy" />
+            <span class="ub-counter">1/9</span>
+            <span class="ub-badge ub-badge--soft">Своя ставка</span>
+            <button class="ub-fav" type="button" aria-label="В избранное" aria-pressed="false">
+              <svg class="ub-ico" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C1 8.7 2.9 6 6 6c1.8 0 3.2.9 4 2 0.8-1.1 2.2-2 4-2 3.1 0 5 2.7 3.6 5.9C19.5 16.4 12 21 12 21Zm0-2.2c2-1.3 6.2-4.5 7.4-7.6.8-2-0.4-3.9-2.4-3.9-1.6 0-2.7 1-3.3 2.1a1 1 0 0 1-1.7 0C11.4 8.3 10.3 7.3 8.7 7.3c-2 0-3.2 1.9-2.4 3.9 1.2 3.1 5.4 6.3 7.7 7.6Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="ub-card__body">
+            <div class="ub-price">
+              <strong>7 450 000 ₽</strong>
+              <span class="ub-pm">от 61 300 ₽/мес.</span>
+            </div>
+            <div class="ub-meta">
+              <span>Офис</span>
+              <span>45 м²</span>
+              <span>1/10 эт.</span>
+            </div>
+            <div class="ub-addr">Ростов-на-Дону, ул. Большая Садовая</div>
+          </div>
+        </article>
+
+        <!-- Card 7: Ипотека -->
+        <article class="ub-card" tabindex="0" role="link" data-id="7" data-cat="mortgage">
+          <div class="ub-card__media">
+            <img class="ub-mediaimg" src="/ui-blocks/assets/images/quick-4-real.jpg" alt="Объект недвижимости" decoding="async" loading="lazy" />
+            <span class="ub-counter">1/18</span>
+            <span class="ub-badge ub-badge--ok">Рассрочка</span>
+            <button class="ub-fav" type="button" aria-label="В избранное" aria-pressed="false">
+              <svg class="ub-ico" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M12 21s-7.5-4.6-9.6-9.1C1 8.7 2.9 6 6 6c1.8 0 3.2.9 4 2 0.8-1.1 2.2-2 4-2 3.1 0 5 2.7 3.6 5.9C19.5 16.4 12 21 12 21Zm0-2.2c2-1.3 6.2-4.5 7.4-7.6.8-2-0.4-3.9-2.4-3.9-1.6 0-2.7 1-3.3 2.1a1 1 0 0 1-1.7 0C11.4 8.3 10.3 7.3 8.7 7.3c-2 0-3.2 1.9-2.4 3.9 1.2 3.1 5.4 6.3 7.7 7.6Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="ub-card__body">
+            <div class="ub-price">
+              <strong>9 990 000 ₽</strong>
+              <span class="ub-pm">от 83 700 ₽/мес.</span>
+            </div>
+            <div class="ub-meta">
+              <span>3-комн.</span>
+              <span>78 м²</span>
+              <span>4/10 эт.</span>
+            </div>
+            <div class="ub-addr">Ростов-на-Дону, Западный район</div>
+          </div>
+        </article>
+
+      </div>
+      <button class="ub-scroller__btn" type="button" data-dir="right" aria-label="Вправо">▶</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     БЛОК 3: Сервисы и услуги (Tiles)
+     ============================================ -->
+<section class="ub-section" aria-label="Сервисы и услуги">
+  <div class="ub-container">
+    <div class="ub-section__head">
+      <div>
+        <h2 class="ub-h2">Сервисы и услуги</h2>
+      </div>
+      <a class="ub-link" href="#">Все сервисы</a>
+    </div>
+
+    <div class="ub-tiles">
+      
+      <!-- Tile 1: Семейная ипотека -->
+      <article class="ub-tile" tabindex="0" role="link">
+        <span class="ub-tile__new">Новое</span>
+        <h3>Успейте оформить семейную ипотеку за 5 минут</h3>
+        <p>Заполните короткую анкету и получите предварительное одобрение.</p>
+        <img class="ub-tileimg" src="/ui-blocks/assets/images/listing-5.jpg" alt="" decoding="async" loading="lazy" />
+        <div class="ub-tile__art" aria-hidden="true"></div>
+      </article>
+
+      <!-- Tile 2: Страхование рисков -->
+      <article class="ub-tile" tabindex="0" role="link">
+        <span class="ub-tile__new">Новое</span>
+        <h3>Страхование рисков при сделке с квартирой</h3>
+        <p>Защита от просрочек, ущерба и юридических споров.</p>
+        <img class="ub-tileimg" src="/ui-blocks/assets/images/listing-6.jpg" alt="" decoding="async" loading="lazy" />
+        <div class="ub-tile__art" aria-hidden="true"></div>
+      </article>
+
+      <!-- Tile 3: Рассрочка -->
+      <article class="ub-tile" tabindex="0" role="link">
+        <span class="ub-tile__new">Новое</span>
+        <h3>Рассрочка на вторичное жилье</h3>
+        <p>Подбор программы и сопровождение сделки до регистрации.</p>
+        <img class="ub-tileimg" src="/ui-blocks/assets/images/listing-7.jpg" alt="" decoding="async" loading="lazy" />
+        <div class="ub-tile__art" aria-hidden="true"></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     БЛОК 4: Быстрый поиск (Quick Search Grid)
+     ============================================ -->
+<section class="ub-section" aria-label="Быстрый поиск">
+  <div class="ub-container">
+    <div class="ub-section__head">
+      <div>
+        <h2 class="ub-h2">Быстрый поиск</h2>
+      </div>
+    </div>
+
+    <div class="ub-qgrid">
+      
+      <!-- QCard 1 -->
+      <a class="ub-qcard" href="#">
+        <div class="ub-qcard__img">
+          <img class="ub-qimg" src="/ui-blocks/assets/images/quick-1.jpg" alt="" decoding="async" loading="lazy" />
+        </div>
+        <div class="ub-qcard__cap">Коммерческая с доходом</div>
+      </a>
+
+      <!-- QCard 2 -->
+      <a class="ub-qcard" href="#">
+        <div class="ub-qcard__img">
+          <img class="ub-qimg" src="/ui-blocks/assets/images/quick-2.jpg" alt="" decoding="async" loading="lazy" />
+        </div>
+        <div class="ub-qcard__cap">Квартиры в рассрочку</div>
+      </a>
+
+      <!-- QCard 3 -->
+      <a class="ub-qcard" href="#">
+        <div class="ub-qcard__img">
+          <img class="ub-qimg" src="/ui-blocks/assets/images/quick-3.jpg" alt="" decoding="async" loading="lazy" />
+        </div>
+        <div class="ub-qcard__cap">Дом не старше 10 лет</div>
+      </a>
+
+      <!-- QCard 4 -->
+      <a class="ub-qcard" href="#">
+        <div class="ub-qcard__img">
+          <img class="ub-qimg" src="/ui-blocks/assets/images/quick-4-real.jpg" alt="" decoding="async" loading="lazy" />
+        </div>
+        <div class="ub-qcard__cap">С большой кухней</div>
+      </a>
+
+    </div>
+  </div>
+</section>

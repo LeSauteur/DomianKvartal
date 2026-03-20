@@ -221,6 +221,19 @@
     }
   }
 
+  function initActiveNav() {
+    var currentPath = (window.location.pathname || "").split("/").pop() || "index.html";
+    qsa("header nav a").forEach(function (link) {
+      var href = link.getAttribute("href");
+      if (!href || href.charAt(0) === "#") return;
+      var linkPath = href.split("?")[0].split("#")[0].split("/").pop();
+      if (linkPath === currentPath) {
+        link.classList.add("is-active");
+        link.setAttribute("aria-current", "page");
+      }
+    });
+  }
+
   function bindModal() {
     var modal = qs("#modal");
     if (!modal) return null;
@@ -582,6 +595,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     initGlobalInteractions();
+    initActiveNav();
 
     var listingType = document.body && document.body.dataset ? document.body.dataset.listing : null;
     if (CATALOG_TYPES.indexOf(listingType) !== -1) {

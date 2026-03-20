@@ -1,0 +1,813 @@
+/**
+ * UI Blocks - Изолированный модуль блоков недвижимости
+ * Версия: 1.0.0
+ * 
+ * Включает:
+ * - Горизонтальный скроллер с иконками (Stories)
+ * - Карточки объектов (Special Offers)
+ * - Сервисы и услуги (Tiles)
+ * - Быстрый поиск (Quick Search)
+ */
+
+/* ============================================
+   CSS VARIABLES & RESET
+   ============================================ */
+
+:root {
+  --ub-bg: var(--bg-main, #f4efe8);
+  --ub-surface: var(--bg-surface, #ffffff);
+  --ub-surface-2: var(--bg-soft, #f8f5f1);
+  --ub-text: var(--text-main, #1f2937);
+  --ub-muted: var(--text-muted, #6b7280);
+  --ub-muted-2: #9aa2ad;
+  --ub-border: rgba(17, 24, 39, 0.12);
+  --ub-shadow: 0 18px 45px rgba(17, 24, 39, 0.10);
+
+  --ub-accent: var(--accent, #b84a3a);
+  --ub-accent-2: var(--accent-soft, #e7c1b5);
+  --ub-ok: #16a34a;
+  --ub-warn: #f59e0b;
+  --ub-blue: var(--accent, #b84a3a);
+
+  --ub-r-8: 8px;
+  --ub-r-12: 12px;
+  --ub-r-16: 16px;
+  --ub-r-18: 18px;
+  --ub-r-22: 22px;
+
+  --ub-container: 1200px;
+  --ub-gap: 16px;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+.ui-blocks-wrapper {
+  font-family: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: var(--ub-text);
+  line-height: 1.5;
+}
+
+.ui-blocks-wrapper *,
+.ui-blocks-wrapper *::before,
+.ui-blocks-wrapper *::after {
+  box-sizing: border-box;
+}
+
+.ui-blocks-wrapper a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ui-blocks-wrapper img {
+  max-width: 100%;
+  display: block;
+}
+
+.ui-blocks-wrapper .ub-container {
+  max-width: var(--ub-container);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ============================================
+   SECTION BASE
+   ============================================ */
+
+.ui-blocks-wrapper .ub-section {
+  margin-top: 22px;
+  padding: 0;
+}
+
+.ui-blocks-wrapper .ub-section__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 4px;
+  margin-bottom: 14px;
+}
+
+.ui-blocks-wrapper .ub-h2 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: -0.3px;
+  font-weight: 800;
+}
+
+.ui-blocks-wrapper .ub-sub {
+  margin: 6px 0 0;
+  color: var(--ub-muted);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.ui-blocks-wrapper .ub-link {
+  color: var(--ub-blue);
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.ui-blocks-wrapper .ub-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ============================================
+   STORIES SCROLLER (Горизонтальный блок с иконками)
+   ============================================ */
+
+.ui-blocks-wrapper .ub-scroller {
+  position: relative;
+  margin-top: 12px;
+}
+
+.ui-blocks-wrapper .ub-scroller__track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(220px, 1fr);
+  gap: 12px;
+  overflow: auto;
+  padding: 10px 6px 14px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.ui-blocks-wrapper .ub-scroller__track::-webkit-scrollbar {
+  height: 10px;
+}
+
+.ui-blocks-wrapper .ub-scroller__track::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.18);
+  border-radius: 999px;
+}
+
+.ui-blocks-wrapper .ub-story {
+  border-radius: 16px;
+  border: 2px solid rgba(255, 59, 48, 0.55);
+  background: var(--ub-surface);
+  overflow: hidden;
+  scroll-snap-align: start;
+  min-height: 140px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  cursor: pointer;
+  transition: transform 140ms ease, box-shadow 180ms ease;
+}
+
+.ui-blocks-wrapper .ub-story:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 45px rgba(17, 24, 39, 0.14);
+}
+
+.ui-blocks-wrapper .ub-story:active {
+  transform: translateY(0) scale(0.99);
+}
+
+.ui-blocks-wrapper .ub-story__img {
+  position: relative;
+  background: var(--bg-soft, var(--ub-surface-2));
+}
+
+.ui-blocks-wrapper .ub-storyimg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  padding: 10px;
+}
+
+.ui-blocks-wrapper .ub-story__icon {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.12) 60%, rgba(0, 0, 0, 0.18)),
+    linear-gradient(135deg, rgba(227, 6, 19, 0.95), rgba(255, 42, 42, 0.85));
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(2px);
+}
+
+.ui-blocks-wrapper .ub-story__icon svg {
+  width: 22px;
+  height: 22px;
+  fill: #ffffff;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.25));
+}
+
+.ui-blocks-wrapper .ub-story__cap {
+  padding: 10px 12px;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.ui-blocks-wrapper .ub-scroller__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.10);
+  cursor: pointer;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: background-color 180ms ease, transform 140ms ease;
+}
+
+.ui-blocks-wrapper .ub-scroller__btn:hover {
+  background: #f8fafc;
+}
+
+.ui-blocks-wrapper .ub-scroller__btn:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.ui-blocks-wrapper .ub-scroller__btn:focus-visible {
+  outline: 3px solid rgba(227, 6, 19, 0.35);
+  outline-offset: 3px;
+}
+
+.ui-blocks-wrapper .ub-scroller__btn[data-dir="left"] {
+  left: -8px;
+}
+
+.ui-blocks-wrapper .ub-scroller__btn[data-dir="right"] {
+  right: -8px;
+}
+
+/* Keyboard focus for track */
+.ui-blocks-wrapper .ub-scroller__track:focus-visible {
+  outline: 3px solid rgba(29, 78, 216, 0.35);
+  outline-offset: 3px;
+}
+
+/* ============================================
+   CARDS (Карточки объектов)
+   ============================================ */
+
+.ui-blocks-wrapper .ub-cards {
+  display: grid;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.ui-blocks-wrapper .ub-cards--offers {
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(260px, 1fr);
+  overflow: auto;
+  padding: 10px 6px 14px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.ui-blocks-wrapper .ub-cards--offers::-webkit-scrollbar {
+  height: 10px;
+}
+
+.ui-blocks-wrapper .ub-cards--offers::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.18);
+  border-radius: 999px;
+}
+
+.ui-blocks-wrapper .ub-cards--offers .ub-card {
+  scroll-snap-align: start;
+}
+
+.ui-blocks-wrapper .ub-scroller--offers {
+  margin-top: 14px;
+}
+
+.ui-blocks-wrapper .ub-scroller--offers .ub-scroller__btn[data-dir="left"] {
+  left: 8px;
+}
+
+.ui-blocks-wrapper .ub-scroller--offers .ub-scroller__btn[data-dir="right"] {
+  right: 8px;
+}
+
+.ui-blocks-wrapper .ub-scroller--offers .ub-scroller__btn {
+  top: 95px;
+  transform: translateY(-50%);
+  border-color: rgba(15, 23, 42, 0.18);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
+}
+
+.ui-blocks-wrapper .ub-scroller--offers .ub-cards--offers {
+  padding-left: 56px;
+  padding-right: 56px;
+}
+
+.ui-blocks-wrapper .ub-card {
+  background: var(--ub-surface);
+  border: 1px solid var(--ub-border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.06);
+  cursor: pointer;
+  transition: transform 140ms ease, box-shadow 180ms ease;
+}
+
+.ui-blocks-wrapper .ub-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 45px rgba(17, 24, 39, 0.14);
+}
+
+.ui-blocks-wrapper .ub-card:active {
+  transform: translateY(0) scale(0.99);
+}
+
+.ui-blocks-wrapper .ub-card__media {
+  position: relative;
+  height: 170px;
+  background:
+    linear-gradient(135deg, rgba(2, 132, 199, 0.18), rgba(255, 59, 48, 0.10)),
+    radial-gradient(circle at 70% 20%, rgba(34, 197, 94, 0.20), transparent 60%);
+}
+
+.ui-blocks-wrapper .ub-mediaimg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  z-index: 0;
+}
+
+.ui-blocks-wrapper .ub-card__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.00) 50%, rgba(0, 0, 0, 0.18));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ui-blocks-wrapper .ub-badge {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--ub-border);
+  font-weight: 900;
+  font-size: 12px;
+  z-index: 2;
+}
+
+.ui-blocks-wrapper .ub-badge--soft {
+  background: #fff7ed;
+  border-color: rgba(245, 158, 11, 0.30);
+  color: #92400e;
+}
+
+.ui-blocks-wrapper .ub-badge--ok {
+  background: #ecfdf5;
+  border-color: rgba(22, 163, 74, 0.30);
+  color: #166534;
+}
+
+.ui-blocks-wrapper .ub-fav {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--ub-border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #111827;
+  z-index: 2;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.ui-blocks-wrapper .ub-fav:hover {
+  background: #f8fafc;
+}
+
+.ui-blocks-wrapper .ub-fav.is-on {
+  background: rgba(227, 6, 19, 0.10);
+  border-color: rgba(227, 6, 19, 0.28);
+  color: var(--ub-accent);
+}
+
+.ui-blocks-wrapper .ub-counter {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: rgba(17, 24, 39, 0.75);
+  color: #fff;
+  font-weight: 800;
+  font-size: 12px;
+  z-index: 2;
+}
+
+.ui-blocks-wrapper .ub-card__body {
+  padding: 12px 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 132px;
+}
+
+.ui-blocks-wrapper .ub-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.ui-blocks-wrapper .ub-price strong {
+  font-size: 22px;
+  letter-spacing: -0.2px;
+  font-weight: 800;
+}
+
+.ui-blocks-wrapper .ub-price .ub-pm {
+  color: var(--ub-blue);
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.ui-blocks-wrapper .ub-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: var(--ub-muted);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.ui-blocks-wrapper .ub-addr {
+  margin-top: auto;
+  color: #111827;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* ============================================
+   PILLS / CHIPS (Фильтры)
+   ============================================ */
+
+.ui-blocks-wrapper .ub-pills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+.ui-blocks-wrapper .ub-chip {
+  border: 1px solid var(--ub-border);
+  background: var(--ub-surface);
+  color: #111827;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-weight: 800;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+.ui-blocks-wrapper .ub-chip:hover {
+  background: #f8fafc;
+}
+
+.ui-blocks-wrapper .ub-chip.is-active {
+  background: #111827;
+  color: #fff;
+  border-color: #111827;
+}
+
+/* ============================================
+   TILES (Сервисы и услуги)
+   ============================================ */
+
+.ui-blocks-wrapper .ub-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+/* 4 карточки в ряд (для блока "Почему выбирают нас") */
+.ui-blocks-wrapper .ub-tiles--four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.ui-blocks-wrapper .ub-tile {
+  background: var(--ub-surface);
+  border: 1px solid var(--ub-border);
+  border-radius: 18px;
+  padding: 18px;
+  min-height: 140px;
+  position: relative;
+  overflow: hidden;
+  padding-right: 200px;
+  cursor: pointer;
+  transition: transform 140ms ease, box-shadow 180ms ease;
+}
+
+.ui-blocks-wrapper .ub-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 45px rgba(17, 24, 39, 0.14);
+}
+
+.ui-blocks-wrapper .ub-tile:active {
+  transform: translateY(0) scale(0.99);
+}
+
+.ui-blocks-wrapper .ub-tile__new {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  background: var(--ub-accent);
+  color: #fff;
+  font-weight: 900;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.ui-blocks-wrapper .ub-tile h3 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: -0.2px;
+  font-weight: 800;
+}
+
+.ui-blocks-wrapper .ub-tile p {
+  margin: 8px 0 0;
+  color: var(--ub-muted);
+  font-weight: 600;
+  max-width: 34ch;
+  font-size: 14px;
+}
+
+.ui-blocks-wrapper .ub-tile__art {
+  position: absolute;
+  right: -16px;
+  bottom: -22px;
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 40% 35%, rgba(184, 74, 58, 0.24), transparent 60%),
+    radial-gradient(circle at 70% 70%, rgba(231, 193, 181, 0.28), transparent 60%),
+    linear-gradient(135deg, rgba(184, 74, 58, 0.08), rgba(184, 74, 58, 0.00));
+  border: 1px solid var(--ub-border);
+}
+
+.ui-blocks-wrapper .ub-tileimg {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 170px;
+  height: 94px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 1px solid var(--ub-border);
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.12);
+  background: var(--ub-surface);
+}
+
+/* ============================================
+   QGRID (Быстрый поиск)
+   ============================================ */
+
+.ui-blocks-wrapper .ub-qgrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.ui-blocks-wrapper .ub-qcard {
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--ub-surface);
+  border: 1px solid var(--ub-border);
+  cursor: pointer;
+  transition: transform 140ms ease, box-shadow 180ms ease;
+}
+
+.ui-blocks-wrapper .ub-qcard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 45px rgba(17, 24, 39, 0.14);
+}
+
+.ui-blocks-wrapper .ub-qcard:active {
+  transform: translateY(0) scale(0.99);
+}
+
+.ui-blocks-wrapper .ub-qcard__img {
+  height: 140px;
+  background:
+    linear-gradient(135deg, rgba(255, 59, 48, 0.10), rgba(2, 132, 199, 0.18)),
+    radial-gradient(circle at 70% 25%, rgba(245, 158, 11, 0.20), transparent 55%);
+}
+
+.ui-blocks-wrapper .ub-qimg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ui-blocks-wrapper .ub-qcard__cap {
+  padding: 12px;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+/* ============================================
+   BUTTONS & ICONS
+   ============================================ */
+
+.ui-blocks-wrapper .ub-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid var(--ub-border);
+  background: var(--ub-surface);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: filter 180ms ease, transform 140ms ease;
+}
+
+.ui-blocks-wrapper .ub-btn:hover {
+  filter: brightness(0.98);
+}
+
+.ui-blocks-wrapper .ub-btn:active {
+  transform: scale(0.98);
+}
+
+.ui-blocks-wrapper .ub-btn--primary {
+  background: var(--ub-accent);
+  border-color: transparent;
+  color: #fff;
+}
+
+.ui-blocks-wrapper .ub-btn--primary:hover {
+  filter: brightness(0.96);
+}
+
+.ui-blocks-wrapper .ub-btn--soft {
+  background: #f1f5f9;
+}
+
+.ui-blocks-wrapper .ub-iconbtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--ub-border);
+  background: var(--ub-surface);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 180ms ease;
+}
+
+.ui-blocks-wrapper .ub-iconbtn:hover {
+  background: #f8fafc;
+}
+
+.ui-blocks-wrapper .ub-ico {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+}
+
+.ui-blocks-wrapper .ub-iconbtn .ub-ico {
+  width: 20px;
+  height: 20px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1100px) {
+  .ui-blocks-wrapper .ub-tiles,
+  .ui-blocks-wrapper .ub-tiles--four {
+    grid-template-columns: 1fr;
+  }
+
+  .ui-blocks-wrapper .ub-qgrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ui-blocks-wrapper .ub-tile {
+    padding-right: 18px;
+  }
+
+  .ui-blocks-wrapper .ub-tileimg {
+    position: static;
+    width: 100%;
+    height: 160px;
+    border-radius: 16px;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 820px) {
+  .ui-blocks-wrapper .ub-scroller__track {
+    grid-auto-columns: minmax(180px, 1fr);
+  }
+
+  .ui-blocks-wrapper .ub-cards--offers {
+    grid-auto-columns: minmax(240px, 1fr);
+  }
+
+  .ui-blocks-wrapper .ub-section__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 520px) {
+  .ui-blocks-wrapper .ub-scroller__track {
+    grid-auto-columns: minmax(160px, 1fr);
+  }
+
+  .ui-blocks-wrapper .ub-cards--offers {
+    grid-auto-columns: minmax(220px, 1fr);
+  }
+
+  .ui-blocks-wrapper .ub-qgrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ui-blocks-wrapper .ub-scroller__btn {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+  }
+
+  .ui-blocks-wrapper .ub-scroller__btn[data-dir="left"] {
+    left: 4px;
+  }
+
+  .ui-blocks-wrapper .ub-scroller__btn[data-dir="right"] {
+    right: 4px;
+  }
+
+  .ui-blocks-wrapper .ub-scroller--offers .ub-scroller__btn {
+    top: 80px;
+  }
+
+  .ui-blocks-wrapper .ub-scroller--offers .ub-cards--offers {
+    padding-left: 44px;
+    padding-right: 44px;
+  }
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .ui-blocks-wrapper .ub-story,
+  .ui-blocks-wrapper .ub-card,
+  .ui-blocks-wrapper .ub-tile,
+  .ui-blocks-wrapper .ub-qcard {
+    transition: none !important;
+  }
+
+  .ui-blocks-wrapper .ub-scroller__track,
+  .ui-blocks-wrapper .ub-cards--offers {
+    scroll-behavior: auto;
+  }
+}
