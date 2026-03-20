@@ -644,6 +644,24 @@
 }
 
 /* ============================================
+   LINK STYLES (для a.ub-card, a.ub-tile, a.ub-story)
+   ============================================ */
+a.ub-card,
+a.ub-tile,
+a.ub-story {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+a.ub-card:hover,
+a.ub-tile:hover,
+a.ub-story:hover {
+  text-decoration: none;
+}
+
+/* ============================================
    BUTTONS & ICONS
    ============================================ */
 

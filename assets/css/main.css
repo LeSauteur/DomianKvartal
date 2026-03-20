@@ -965,18 +965,56 @@
             .header-inner {
                 flex-direction: column;
                 gap: 15px;
+                position: relative;
             }
 
             nav {
                 display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
+                flex-wrap: nowrap;
+                overflow-x: auto;
                 gap: 15px;
+                padding: 5px 0 5px 5px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                position: relative;
+            }
+
+            nav::-webkit-scrollbar {
+                display: none;
             }
 
             nav a {
                 margin: 0;
                 font-size: 13px;
+                white-space: nowrap;
+                padding: 12px 8px;
+                min-height: 44px;
+                display: inline-flex;
+                align-items: center;
+            }
+
+            /* Визуальный хинт — градиент справа */
+            nav::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 30px;
+                height: 100%;
+                background: linear-gradient(to left, rgba(245, 239, 230, 0.95), transparent);
+                pointer-events: none;
+            }
+
+            /* Увеличение тап-зон footer */
+            footer a {
+                padding: 8px 12px;
+                min-height: 44px;
+                display: inline-flex;
+                align-items: center;
+            }
+
+            footer p {
+                margin: 5px 0;
             }
 
             .hero {
