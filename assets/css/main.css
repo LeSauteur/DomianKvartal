@@ -961,142 +961,341 @@
             }
         }
 
-        @media (max-width: 768px) {
-            .header-inner {
-                flex-direction: column;
-                gap: 15px;
-                position: relative;
-            }
+/* ============================================
+   MOBILE UX REBUILD (@max-width: 768px)
+   ============================================ */
+@media (max-width: 768px) {
+    /* === HEADER: 2-Row Layout === */
+    .header-inner {
+        flex-direction: column;
+        gap: 0;
+        padding: 12px 0;
+        position: relative;
+    }
 
-            nav {
-                display: flex;
-                flex-wrap: nowrap;
-                overflow-x: auto;
-                gap: 15px;
-                padding: 5px 0 5px 5px;
-                -webkit-overflow-scrolling: touch;
-                scrollbar-width: none;
-                position: relative;
-            }
+    .header-inner > .logo {
+        order: 1;
+        margin-bottom: 10px;
+    }
 
-            nav::-webkit-scrollbar {
-                display: none;
-            }
+    .header-inner > .header-contacts {
+        order: 2;
+        margin-bottom: 12px;
+    }
 
-            nav a {
-                margin: 0;
-                font-size: 13px;
-                white-space: nowrap;
-                padding: 12px 8px;
-                min-height: 44px;
-                display: inline-flex;
-                align-items: center;
-            }
+    .header-inner > nav {
+        order: 3;
+        width: 100%;
+    }
 
-            /* Визуальный хинт — градиент справа */
-            nav::after {
-                content: "";
-                position: absolute;
-                right: 0;
-                top: 0;
-                width: 30px;
-                height: 100%;
-                background: linear-gradient(to left, rgba(245, 239, 230, 0.95), transparent);
-                pointer-events: none;
-            }
+    .header-contacts a {
+        display: block;
+        text-align: center;
+        padding: 10px 20px;
+        background: var(--accent);
+        color: #fff;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 15px;
+    }
 
-            /* Увеличение тап-зон footer */
-            footer a {
-                padding: 8px 12px;
-                min-height: 44px;
-                display: inline-flex;
-                align-items: center;
-            }
+    nav {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 8px;
+        padding: 8px 5px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
 
-            footer p {
-                margin: 5px 0;
-            }
+    nav::-webkit-scrollbar {
+        display: none;
+    }
 
-            .hero {
-                padding: 100px 0 140px;
-            }
+    nav a {
+        flex-shrink: 0;
+        padding: 10px 14px;
+        font-size: 13px;
+        white-space: nowrap;
+        background: rgba(184, 74, 58, 0.08);
+        border-radius: 8px;
+        color: var(--text-main);
+        transition: background 0.2s;
+    }
 
-            .hero h1 {
-                font-size: 32px;
-                text-align: center;
-            }
+    nav a.is-active,
+    nav a:hover {
+        background: var(--accent);
+        color: #fff;
+    }
 
-            .hero p {
-                text-align: center;
-                font-size: 16px;
-            }
+    /* === HERO: Compact & Centered === */
+    .hero {
+        padding: 40px 0 50px;
+        background-position: center 30%;
+    }
 
-            .hero-actions {
-                text-align: center;
-                justify-content: center;
-            }
+    .hero > .container {
+        padding: 25px 20px;
+        max-width: 100%;
+    }
 
-            .hero-actions .btn {
-                display: block;
-                width: 100%;
-                max-width: 250px;
-            }
+    .hero h1 {
+        font-size: 24px;
+        line-height: 1.25;
+        text-align: center;
+        margin-bottom: 12px;
+    }
 
-            .hero-actions .btn.secondary {
-                margin-left: 0;
-            }
+    .hero p {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 20px;
+        opacity: 0.9;
+    }
 
-            section {
-                padding: 60px 0;
-            }
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 0;
+    }
 
-            .section-title {
-                font-size: 28px;
-                text-align: center;
-                margin-bottom: 30px;
-            }
+    .hero-actions .btn {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 15px;
+        text-align: center;
+    }
 
-            .benefits,
-            .types,
-            .reviews {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
+    .hero-actions .btn.secondary {
+        margin-left: 0;
+        background: rgba(255, 255, 255, 0.5);
+    }
 
-            .benefit,
-            .type-card,
-            .review {
-                padding: 20px;
-            }
+    /* === STATS: Clean Grid === */
+    .stats {
+        margin-top: -30px;
+        padding: 0;
+    }
 
-            .contact iframe {
-                height: 250px;
-            }
+    .stats .benefits {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 15px;
+    }
 
-            .stats {
-                margin-top: -60px;
-                padding-top: 40px;
-            }
+    .stats .benefit {
+        padding: 18px 12px;
+        border-radius: 10px;
+    }
 
-            .hero > .container {
-                padding: 20px;
-                max-width: 95%;
-            }
+    .stats .benefit h3 {
+        font-size: 26px;
+        margin-bottom: 4px;
+    }
 
-            .fixed-wa {
-                bottom: 20px;
-                right: 20px;
-                width: 50px;
-                height: 50px;
-            }
+    .stats .benefit p {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+    }
 
-            .go-top {
-                bottom: 20px;
-                left: 20px;
-                width: 45px;
-                height: 45px;
-            }
-        }
+    /* === SECTIONS: Rhythm Spacing === */
+    section {
+        padding: 35px 0;
+    }
+
+    section:first-of-type {
+        padding-top: 0;
+    }
+
+    .section-title {
+        font-size: 22px;
+        text-align: center;
+        margin-bottom: 15px;
+        padding: 0 15px;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
+        text-align: center;
+        margin-top: -10px;
+        margin-bottom: 25px;
+        padding: 0 15px;
+        line-height: 1.5;
+    }
+
+    /* === CARDS & GRIDS: Single Column === */
+    .benefits,
+    .types,
+    .reviews,
+    .guarantee-list,
+    .faq-grid,
+    .partners-grid,
+    .hot-offers-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .benefit,
+    .type-card,
+    .review,
+    .guarantee-item,
+    .faq-item,
+    .partners-card,
+    .hot-offer-card {
+        padding: 20px;
+    }
+
+    /* === LAYOUT BLOCKS: Stack Vertically === */
+    .contact-grid,
+    .about,
+    .leadership,
+    .photo-block {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0 15px;
+    }
+
+    .photo-block {
+        padding: 20px;
+        border-radius: 12px;
+        background: var(--bg-light);
+    }
+
+    .photo-block img {
+        min-height: 180px;
+        border-radius: 10px;
+    }
+
+    .photo-badge {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+
+    /* === MORTGAGE CALC: Stacked === */
+    #mortgage {
+        padding: 35px 0;
+    }
+
+    .calc {
+        padding: 20px 15px;
+        margin: 0 15px;
+    }
+
+    .calc__grid,
+    .calc__summary {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .calc__field input {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .calc__result-value--main {
+        font-size: 24px;
+    }
+
+    /* === CERTIFICATES: Single Column === */
+    #certificates .certificates-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    #certificates .certificate-card img {
+        height: 200px;
+    }
+
+    /* === FORM: Comfortable Inputs === */
+    .form-section {
+        padding: 35px 0;
+    }
+
+    .form-container {
+        padding: 0 15px;
+    }
+
+    .form-control {
+        padding: 14px;
+        font-size: 15px;
+        border-radius: 8px;
+    }
+
+    .submit-btn {
+        padding: 14px 20px;
+        font-size: 15px;
+        border-radius: 8px;
+    }
+
+    /* === FOOTER-CTA: Reduced === */
+    .footer-cta {
+        padding: 40px 0;
+        margin-top: 40px;
+    }
+
+    .footer-cta-content {
+        padding: 25px 20px;
+    }
+
+    .footer-cta h2 {
+        font-size: 24px;
+    }
+
+    .footer-cta p {
+        font-size: 14px;
+    }
+
+    /* === FOOTER: Compact === */
+    footer {
+        padding: 30px 0;
+    }
+
+    footer a {
+        padding: 6px 10px;
+        min-height: 40px;
+        font-size: 13px;
+    }
+
+    /* === FIXED BUTTONS: Thumb Zone === */
+    .fixed-wa {
+        bottom: 15px;
+        right: 15px;
+        width: 52px;
+        height: 52px;
+    }
+
+    .go-top {
+        bottom: 15px;
+        left: 15px;
+        width: 46px;
+        height: 46px;
+    }
+
+    /* === CONTACT: Map Height === */
+    .contact iframe {
+        height: 220px;
+        border-radius: 10px;
+    }
+
+    .contact-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .contact-actions .btn {
+        width: 100%;
+    }
+}
 
         /* ===== ANIMATION ===== */
         @keyframes fadeInUp {
@@ -1220,6 +1419,115 @@ body.catalog-page .filter-reset {
 body.catalog-page .results-count {
     font-size: 14px;
     color: var(--text-muted);
+}
+
+/* Catalog Mobile Styles */
+@media (max-width: 768px) {
+    body.catalog-page {
+        background: var(--bg-main);
+    }
+
+    body.catalog-page .hero {
+        padding: 35px 0 45px;
+    }
+
+    body.catalog-page .hero h2 {
+        font-size: 22px;
+    }
+
+    body.catalog-page .hero p {
+        font-size: 13px;
+    }
+
+    body.catalog-page main {
+        margin: 0;
+        padding: 0;
+    }
+
+    body.catalog-page h1 {
+        font-size: 22px;
+        padding: 20px 15px 15px;
+        margin: 0;
+        text-align: center;
+    }
+
+    body.catalog-page .listing-tools {
+        padding: 0 15px 20px;
+        margin: 0;
+    }
+
+    body.catalog-page .filters {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    body.catalog-page .filters label {
+        font-size: 12px;
+    }
+
+    body.catalog-page .filters input {
+        padding: 12px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    body.catalog-page .results-count {
+        font-size: 13px;
+        padding: 0 15px;
+    }
+
+    body.catalog-page .cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 15px 30px;
+    }
+
+    body.catalog-page .card {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    body.catalog-page .card img {
+        height: 180px;
+    }
+
+    body.catalog-page .card-content {
+        padding: 16px;
+    }
+
+    body.catalog-page .card h2 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    body.catalog-page .card p {
+        font-size: 13px;
+    }
+
+    body.catalog-page .card .btn {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    body.catalog-page .footer-cta {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    body.catalog-page .hero h2 {
+        font-size: 20px;
+    }
+
+    body.catalog-page h1 {
+        font-size: 20px;
+    }
+
+    body.catalog-page .card img {
+        height: 160px;
+    }
 }
 
 .card-meta {

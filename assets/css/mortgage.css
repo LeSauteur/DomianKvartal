@@ -117,8 +117,58 @@
 }
 
 @media (max-width: 520px) {
-    .calc { padding: 20px; }
-    .calc__grid { grid-template-columns: 1fr; }
-    .calc__summary { grid-template-columns: 1fr; }
-    .calc__result-value { font-size: 20px; }
+    #mortgage {
+        padding: 40px 0;
+    }
+
+    #mortgage .section-title {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    #mortgage .section-subtitle {
+        font-size: 13px;
+        margin-bottom: 25px;
+    }
+
+    .calc {
+        padding: 20px 15px;
+    }
+
+    .calc__grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .calc__field label {
+        font-size: 13px;
+    }
+
+    .calc__field input {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .calc__summary {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding-top: 20px;
+    }
+
+    .calc__result {
+        padding: 15px 12px;
+    }
+
+    .calc__result-label {
+        font-size: 11px;
+    }
+
+    .calc__result-value {
+        font-size: 20px;
+    }
+
+    .calc__result-value--main {
+        font-size: 24px;
+    }
 }

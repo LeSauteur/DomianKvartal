@@ -125,13 +125,31 @@
         padding: 40px 0;
     }
 
+    #certificates .section-title {
+        font-size: 22px;
+    }
+
+    #certificates .section-subtitle {
+        font-size: 13px;
+        margin-bottom: 25px;
+    }
+
     .certificates-grid {
         grid-template-columns: 1fr;
         gap: 16px;
     }
 
+    .certificate-card {
+        border-radius: 10px;
+    }
+
     .certificate-card img {
         height: 220px;
+    }
+
+    .certificate-card-caption {
+        padding: 12px;
+        font-size: 13px;
     }
 
     .certificate-modal-content {
