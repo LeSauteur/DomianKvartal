@@ -965,11 +965,16 @@
    MOBILE UX REBUILD (@max-width: 768px)
    ============================================ */
 @media (max-width: 768px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
     /* === HEADER: 2-Row Layout === */
     .header-inner {
         flex-direction: column;
         gap: 0;
-        padding: 12px 0;
+        padding: 12px 15px;
         position: relative;
     }
 
@@ -1003,8 +1008,8 @@
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
-        gap: 8px;
-        padding: 8px 5px;
+        gap: 12px;
+        padding: 8px 0;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
     }
@@ -1022,6 +1027,10 @@
         border-radius: 8px;
         color: var(--text-main);
         transition: background 0.2s;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
 
     nav a.is-active,
@@ -1083,14 +1092,14 @@
 
     .stats .benefits {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        padding: 0 15px;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 0;
     }
 
     .stats .benefit {
         padding: 18px 12px;
-        border-radius: 10px;
+        border-radius: 16px;
     }
 
     .stats .benefit h3 {
@@ -1139,17 +1148,23 @@
     .hot-offers-grid {
         grid-template-columns: 1fr;
         gap: 15px;
-        padding: 0 15px;
+        padding: 0;
     }
 
     .benefit,
-    .type-card,
     .review,
     .guarantee-item,
     .faq-item,
-    .partners-card,
-    .hot-offer-card {
+    .partners-card {
         padding: 20px;
+        border-radius: 16px;
+    }
+
+    .type-card,
+    .hot-offer-card {
+        padding: 0;
+        border-radius: 16px;
+        overflow: hidden;
     }
 
     /* === LAYOUT BLOCKS: Stack Vertically === */
@@ -1159,18 +1174,30 @@
     .photo-block {
         grid-template-columns: 1fr;
         gap: 25px;
-        padding: 0 15px;
+        padding: 0;
     }
 
     .photo-block {
         padding: 20px;
-        border-radius: 12px;
+        border-radius: 16px;
         background: var(--bg-light);
     }
 
     .photo-block img {
-        min-height: 180px;
-        border-radius: 10px;
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 16px;
+    }
+
+    .about img,
+    .leadership img {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 16px;
     }
 
     .photo-badge {
@@ -1185,7 +1212,8 @@
 
     .calc {
         padding: 20px 15px;
-        margin: 0 15px;
+        margin: 0;
+        border-radius: 16px;
     }
 
     .calc__grid,
@@ -1207,11 +1235,12 @@
     #certificates .certificates-grid {
         grid-template-columns: 1fr;
         gap: 15px;
-        padding: 0 15px;
+        padding: 0;
     }
 
     #certificates .certificate-card img {
         height: 200px;
+        object-fit: cover;
     }
 
     /* === FORM: Comfortable Inputs === */
@@ -1220,19 +1249,21 @@
     }
 
     .form-container {
-        padding: 0 15px;
+        padding: 0;
     }
 
     .form-control {
         padding: 14px;
         font-size: 15px;
         border-radius: 8px;
+        min-height: 44px;
     }
 
     .submit-btn {
         padding: 14px 20px;
         font-size: 15px;
         border-radius: 8px;
+        min-height: 44px;
     }
 
     /* === FOOTER-CTA: Reduced === */
@@ -1260,8 +1291,10 @@
 
     footer a {
         padding: 6px 10px;
-        min-height: 40px;
+        min-height: 44px;
         font-size: 13px;
+        display: inline-flex;
+        align-items: center;
     }
 
     /* === FIXED BUTTONS: Thumb Zone === */
@@ -1274,9 +1307,15 @@
 
     .go-top {
         bottom: 15px;
-        left: 15px;
-        width: 46px;
-        height: 46px;
+        right: 15px;
+        left: auto;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+    }
+
+    .fixed-wa + .go-top.show {
+        bottom: 79px;
     }
 
     /* === CONTACT: Map Height === */
@@ -1294,6 +1333,16 @@
 
     .contact-actions .btn {
         width: 100%;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn,
+    .contact a[href^="tel:"],
+    .contact a[href^="mailto:"] {
+        min-height: 44px;
     }
 }
 
