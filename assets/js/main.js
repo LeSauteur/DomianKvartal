@@ -603,5 +603,100 @@
     }
 
     initHotOffers();
+
+    // Footer accordions for mobile
+    initFooterAccordions();
   });
+
+  function initFooterAccordions() {
+    var footerColumns = qsa(".footer-column");
+    if (!footerColumns.length) return;
+
+    // Check if mobile
+    var isMobile = window.innerWidth <= 768;
+
+    footerColumns.forEach(function (column, index) {
+      var header = qs("h3", column);
+      if (!header) return;
+
+      // Make header clickable
+      header.setAttribute("role", "button");
+      header.setAttribute("tabindex", "0");
+      header.setAttribute("aria-expanded", index === 0 ? "true" : "false");
+
+      // Click handler
+      function toggleAccordion() {
+        if (!isMobile && window.innerWidth > 768) {
+          // Desktop - keep all open
+          footerColumns.forEach(function (col) {
+            col.classList.add("active");
+            var h = qs("h3", col);
+            if (h) h.setAttribute("aria-expanded", "true");
+          });
+          return;
+        }
+
+        var isActive = column.classList.contains("active");
+
+        // Close all
+        footerColumns.forEach(function (col) {
+          col.classList.remove("active");
+          var h = qs("h3", col);
+          if (h) h.setAttribute("aria-expanded", "false");
+        });
+
+        // Open clicked if it was closed
+        if (!isActive) {
+          column.classList.add("active");
+          header.setAttribute("aria-expanded", "true");
+        }
+      }
+
+      header.addEventListener("click", toggleAccordion);
+
+      // Keyboard support
+      header.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggleAccordion();
+        }
+      });
+
+      // Open first column by default on mobile
+      if (isMobile && index === 0) {
+        column.classList.add("active");
+        header.setAttribute("aria-expanded", "true");
+      }
+    });
+
+    // Handle resize
+    var resizeTimer;
+    window.addEventListener("resize", function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        isMobile = window.innerWidth <= 768;
+        if (!isMobile) {
+          // Desktop - open all
+          footerColumns.forEach(function (col) {
+            col.classList.add("active");
+            var h = qs("h3", col);
+            if (h) h.setAttribute("aria-expanded", "true");
+          });
+        } else {
+          // Mobile - close all except first
+          footerColumns.forEach(function (col, idx) {
+            if (idx === 0) {
+              col.classList.add("active");
+              var h = qs("h3", col);
+              if (h) h.setAttribute("aria-expanded", "true");
+            } else {
+              col.classList.remove("active");
+              var h2 = qs("h3", col);
+              if (h2) h2.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+      }, 250);
+    });
+  }
 })();
