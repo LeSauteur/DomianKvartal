@@ -1,0 +1,46 @@
+ENCODING_CORRUPTED_FILES_REPORT
+
+DATE:
+2026-03-27
+
+---
+
+STATUS:
+IRRECOVERABLE
+
+The following files contain text that has been permanently corrupted.
+Cyrillic characters were replaced with '?' characters.
+Original text cannot be recovered through encoding conversion.
+
+---
+
+FILES_MOVED_TO_QUARANTINE:
+
+FROM: seo/doma-bolshoy-log.html
+TO:   _quarantine\encoding_corrupted\seo\doma-bolshoy-log.html
+
+FROM: seo/doma-v-aksay-kom.html
+TO:   _quarantine\encoding_corrupted\seo\doma-v-aksay-kom.html
+
+FROM: seo/kvartiry-muhina-balka.html
+TO:   _quarantine\encoding_corrupted\seo\kvartiry-muhina-balka.html
+
+FROM: seo/kvartiry-v-centre-aksaya.html
+TO:   _quarantine\encoding_corrupted\seo\kvartiry-v-centre-aksaya.html
+
+
+---
+
+TOTAL_FILES_MOVED:
+4
+
+---
+
+RECOMMENDATION:
+
+These files need to be recreated with proper content.
+The original text data is permanently lost.
+
+---
+
+END OF REPORT

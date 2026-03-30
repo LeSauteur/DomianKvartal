@@ -1,0 +1,394 @@
+================================================================================
+ОТЧЕТ ПО СРАВНЕНИЮ OLD vs CURRENT (JSON)
+================================================================================
+
+СТАТИСТИКА
+----------------------------------------
+OLD objects: 162
+CURRENT objects: 222
+matched_objects: 126
+missing_objects: 36
+new_objects: 96
+changed_objects: 22
+
+================================================================================
+1) MATCHED_OBJECTS (найдены в обоих наборах)
+================================================================================
+1. [квартиры] OLD: Продается 3 комн.кв 74 м² Ростовская обл.,Аксайски
+            CURRENT: object_11 - Квартира · Ростовская область · 75 м²
+   Score: 35, Area diff: 1.0 м²
+   OLD: area=74.0, rooms=3, settlement=city
+   CUR: area=75.0, rooms=3, settlement=city
+
+2. [квартиры] OLD: Продается 2 комн.кв 54 м² Ростовская обл.,г. Росто
+            CURRENT: object_31 - 2-комнатная квартира · Ростовская область · 54 м²
+   Score: 30, Area diff: 0.0 м²
+   OLD: area=54.0, rooms=2, settlement=city
+   CUR: area=54.0, rooms=2, settlement=rostov
+
+3. [квартиры] OLD: Продаётся уютная трёхкомнатная квартира в пос. Рас
+            CURRENT: object_32 - Квартира · Ростовская область
+   Score: 25, Area diff: 0.0 м²
+   OLD: area=62.0, rooms=None, settlement=rassvet
+   CUR: area=62.0, rooms=None, settlement=rostov
+
+4. [квартиры] OLD: Продается 2 комн.кв 68.4 м² ЖК "Сокол Градъ" СЗ "Г
+            CURRENT: object_33 - 2-комнатная квартира · Ростовская область · 40 м²
+   Score: 30, Area diff: 0.0 м²
+   OLD: area=68.4, rooms=2, settlement=city
+   CUR: area=68.4, rooms=2, settlement=rostov
+
+5. [квартиры] OLD: Продается 2 комн.кв 52 м² Ростовская обл.,г. Росто
+            CURRENT: object_34 - 2-комнатная квартира · Ростовская область · 52 м²
+   Score: 30, Area diff: 0.0 м²
+   OLD: area=52.0, rooms=2, settlement=city
+   CUR: area=52.0, rooms=2, settlement=rostov
+
+6. [квартиры] OLD: Продается 1 комн.кв 40 м² Ростовская обл.,г. Росто
+            CURRENT: object_47 - 1-комнатная квартира · Ростовская область · 40 м²
+   Score: 40, Area diff: 0.0 м²
+   OLD: area=40.0, rooms=1, settlement=city
+   CUR: area=40.0, rooms=1, settlement=city
+
+7. [квартиры] OLD: Продается 2 комн.кв 48.1 м²  Ростовская обл.,г. Ро
+            CURRENT: object_18 - 2-комнатная квартира · Ростовская область
+   Score: 30, Area diff: 0.4 м²
+   OLD: area=48.1, rooms=2, settlement=city
+   CUR: area=48.5, rooms=2, settlement=rostov
+
+8. [квартиры] OLD: Продается 2 комн.кв 51 м² Ростовская обл.,г. Росто
+            CURRENT: object_37 - 2-комнатная квартира · Ростовская область · 51 м²
+   Score: 30, Area diff: 0.0 м²
+   OLD: area=51.0, rooms=2, settlement=city
+   CUR: area=51.0, rooms=2, settlement=rostov
+
+9. [квартиры] OLD: Продается 2 комн.кв 35 м² Ростовская обл.,г. Росто
+            CURRENT: object_09 - 2-комнатная квартира · Ростовская область · 35 м²
+   Score: 30, Area diff: 0.0 м²
+   OLD: area=35.0, rooms=2, settlement=city
+   CUR: area=35.0, rooms=2, settlement=rostov
+
+10. [квартиры] OLD: Продается 1 комн.кв 32 м² ЖК "Вересаево" ЮгСтройИн
+            CURRENT: object_39 - 1-комнатная квартира · Ростовская область · 32 м²
+   Score: 30, Area diff: 0.0 м²
+   OLD: area=32.0, rooms=1, settlement=city
+   CUR: area=32.0, rooms=1, settlement=veresaev
+
+11. [квартиры] OLD: 1к квартира 30м2 Г.Аксай ул Садовая 31а
+            CURRENT: object_24 - Квартира · Ростовская область
+   Score: 20, Area diff: 0.0 м²
+   OLD: area=30.0, rooms=1, settlement=city
+   CUR: area=30.0, rooms=None, settlement=rostov
+
+12. [квартиры] OLD: Продается 1 комн.кв 40.7 м² ЖК "Александрийский" С
+            CURRENT: object_02 - Квартира · Ростовская область
+   Score: 30, Area diff: 0.2 м²
+   OLD: area=40.7, rooms=1, settlement=city
+   CUR: area=40.9, rooms=None, settlement=city
+
+13. [квартиры] OLD: Продается 1 комн.кв 37.9 м² Ростовская обл.,г. Рос
+            CURRENT: object_43 - 1-комнатная квартира · Ростовская область · 18 м²
+   Score: 30, Area diff: 0.0 м²
+   OLD: area=37.9, rooms=1, settlement=city
+   CUR: area=37.9, rooms=1, settlement=rostov
+
+14. [квартиры] OLD: Продается 2 комн.кв 67 м² ЖК "Сокол Градъ" СЗ "Гал
+            CURRENT: object_44 - 2-комнатная квартира · Ростовская область · 67 м²
+   Score: 30, Area diff: 0.0 м²
+   OLD: area=67.0, rooms=2, settlement=city
+   CUR: area=67.0, rooms=2, settlement=rostov
+
+15. [квартиры] OLD: 1-к. квартира, 40 м², 15/15 эт.  жилая: 20 кухня: 
+            CURRENT: object_35 - 1-комнатная квартира · Ростовская область · 40 м²
+   Score: 30, Area diff: 0.0 м²
+   OLD: area=40.0, rooms=1, settlement=aksay
+   CUR: area=40.0, rooms=1, settlement=rostov
+
+16. [квартиры] OLD: Продается 2 комн.кв 59.9 м² ЖК "Вересаево" ЮгСтрой
+            CURRENT: object_46 - 2-комнатная квартира · Ростовская область · 14 м²
+   Score: 30, Area diff: 0.0 м²
+   OLD: area=59.9, rooms=2, settlement=city
+   CUR: area=59.9, rooms=2, settlement=rostov
+
+17. [квартиры] OLD: Продается 1 комн.кв 40 м²  ЖК "Вересаево" ЮгСтройИ
+            CURRENT: object_74 - 1-комнатная квартира · Ростовская область · 40 м²
+   Score: 30, Area diff: 0.0 м²
+   OLD: area=40.0, rooms=1, settlement=city
+   CUR: area=40.0, rooms=1, settlement=aleksandrovka
+
+18. [квартиры] OLD: Продается 2 комн.кв 70 м² ЖК "Сокол Градъ" СЗ "Гал
+            CURRENT: object_48 - 2-комнатная квартира · Ростовская область · 70 м²
+   Score: 30, Area diff: 0.0 м²
+   OLD: area=70.0, rooms=2, settlement=city
+   CUR: area=70.0, rooms=2, settlement=rostov
+
+19. [квартиры] OLD: Продается 1 комн.кв 36.7 м² ЖК "Вересаево" ЮгСтрой
+            CURRENT: object_102 - 1-комнатная квартира · Ростовская область · 37 м²
+   Score: 30, Area diff: 0.3 м²
+   OLD: area=36.7, rooms=1, settlement=city
+   CUR: area=37.0, rooms=1, settlement=rostov
+
+20. [квартиры] OLD: Квартира-студия, 26,7 м² Ростовская обл., Аксайски
+            CURRENT: object_50 - Студия · Ростовская область
+   Score: 25, Area diff: 0.0 м²
+   OLD: area=26.7, rooms=None, settlement=aksay
+   CUR: area=26.7, rooms=None, settlement=rostov
+
+... и ещё 106 объектов
+
+================================================================================
+2) MISSING_OBJECTS (были в OLD, нет в CURRENT)
+================================================================================
+1. [квартиры] Продается 2 комн.кв 46 м Ростовская обл.,г. Ростов-на-Дону,П
+   area=None, rooms=2, settlement=city
+   address: Ростовская обл.,г
+
+2. [квартиры] 🏠  Продаётся уютная 1-комнатная квартира в Аксае, ул. Платов
+   area=None, rooms=1, settlement=city
+   address: г. Мебель и техника обсуждаются
+
+3. [квартиры] Продается 2 комн.кв 588 м² этаж 4/9 Ростовская обл.,г. Росто
+   area=588.0, rooms=2, settlement=city
+   address: Ростовская обл.,г
+
+4. [квартиры] 2-к квартира 60,8м"2 2/3 эт.  Ростовская обл., Аксайский р-н
+   area=None, rooms=2, settlement=aksay
+   address: Ростовская обл., Аксайский р-н, Аксайское городское поселение, Аксай, Объездная
+
+5. [квартиры] 2-к квартира  г.Аксай ул. Платова
+   area=None, rooms=2, settlement=city
+   address: г.Аксай ул
+
+6. [квартиры] ✨  ШИКАРНАЯ 3-К КВАРТИРА В ЖК «ЛЕВОБЕРЕЖНЫЙ» — СУПЕР ВАУ!  ✨
+   area=93.0, rooms=3, settlement=
+   address: 
+
+7. [квартиры] 🏢 Продается 1-комнатная квартира в новостройке — с готовым р
+   area=None, rooms=1, settlement=rostov
+   address: ул. Гор советская в Ростове 🔥УHИКAЛЬHOЕ ПРЕДЛОЖЕНИЕ! CРOЧНАЯ ПРOДАЖA! 🔥  ✨ Живите в элитном дoмe — c
+
+8. [квартиры] 🔥УHИКAЛЬНOE ПPЕДЛОЖЕНИЕ! CРOЧНАЯ ПРОДAЖА! 🔥  2-к квартира. 7
+   area=None, rooms=2, settlement=aksay
+   address: 
+
+9. [квартиры] 🔥СPОЧНAЯ ПPОДАЖА! ВЫГОДНOЕ ПPЕДЛOЖЕНИE! 🔥    1-к. квартира, 
+   area=31.0, rooms=1, settlement=aksay
+   address: ул. Речников
+
+10. [квартиры] Продается 2 комн.кв 50.4 м² этаж 3/10   г.Аксай ул.Коминтерн
+   area=50.4, rooms=2, settlement=city
+   address: г.Аксай ул
+
+11. [квартиры] Продается 1 комн.кв 35 м² этаж 5/5  г.Аксай ул.Платова
+   area=35.0, rooms=1, settlement=city
+   address: г.Аксай ул
+
+12. [квартиры] 1-ка, S=34 м² 3/9 этаж Кирпичный дом, закрытый двор г.Аксай,
+   area=34.0, rooms=None, settlement=city
+   address: г.Аксай
+
+13. [квартиры] Продается 1 комн.кв 38 м² этаж 3/4  г.Аксай ул.Речников
+   area=38.0, rooms=1, settlement=city
+   address: г.Аксай ул
+
+14. [дома] Дом 190 м² на участке 5,5 сот.
+   area=190.0, rooms=None, settlement=
+   address: 
+
+15. [дома] 🌟 Продаются современные дома в закрытом коттеджном поселке в
+   area=None, rooms=None, settlement=novocherkassk
+   address: 
+
+16. [дома] 🌟 Продаются современные дома в закрытом коттеджном поселке в
+   area=None, rooms=None, settlement=novocherkassk
+   address: 
+
+17. [дома] 🔥СРОЧНАЯ ПРОДАЖА! НЕ УПУСТИТЕ ВЫГОДНЫЙ ВАРИАНТ! 🔥 5 сот.110м
+   area=110.0, rooms=None, settlement=aksay
+   address: 
+
+18. [дома] 🏡 Продаётся капитальный кирпичный дом с видом на Дон — г. Ак
+   area=None, rooms=None, settlement=city
+   address: г. Аксай
+
+19. [дома] В продаже ШИКАРНЫЙ ДОМ С ОГРОМНОЙ ТЕРРИТОРИЕЙ!!!!!
+   area=None, rooms=None, settlement=
+   address: 
+
+20. [дома] Продается дом 140 м² 5 соток Ростовская обл.,Аксайский р-н,г
+   area=140.0, rooms=None, settlement=city
+   address: Ростовская обл.,Аксайский р-н,г
+
+... и ещё 16 объектов
+
+================================================================================
+3) NEW_OBJECTS (есть в CURRENT, не было в OLD)
+================================================================================
+1. [квартиры] object_01 - Квартира · Ростовская область · 57 м²
+   area=57.0, rooms=None, settlement=rostov
+   price: None
+
+2. [квартиры] object_10 - Квартира · Ростовская область
+   area=90.0, rooms=None, settlement=city
+   price: 15
+
+3. [квартиры] object_100 - Квартира · Ростовская область
+   area=None, rooms=None, settlement=rostov
+   price: None
+
+4. [квартиры] object_101 - Квартира · Ростовская область
+   area=None, rooms=None, settlement=rostov
+   price: None
+
+5. [квартиры] object_103 - Квартира · Ростовская область
+   area=None, rooms=None, settlement=rostov
+   price: None
+
+6. [квартиры] object_104 - Квартира · Ростовская область
+   area=None, rooms=None, settlement=rostov
+   price: None
+
+7. [квартиры] object_105 - Квартира · Ростовская область
+   area=None, rooms=None, settlement=rostov
+   price: None
+
+8. [квартиры] object_106 - Квартира · Ростовская область
+   area=17.4, rooms=2, settlement=rostov
+   price: None
+
+9. [квартиры] object_107 - 1-комнатная квартира · Ростовская область
+   area=None, rooms=1, settlement=rostov
+   price: None
+
+10. [квартиры] object_108 - Квартира · Ростовская область
+   area=None, rooms=None, settlement=rostov
+   price: None
+
+11. [квартиры] object_112 - Квартира · Ростовская область · 10 м²
+   area=10.0, rooms=None, settlement=rostov
+   price: None
+
+12. [квартиры] object_12 - 3-комнатная квартира · Ростовская область · 85 м²
+   area=85.0, rooms=3, settlement=rostov
+   price: None
+
+13. [квартиры] object_20 - Квартира · Ростовская область
+   area=None, rooms=None, settlement=rostov
+   price: None
+
+14. [квартиры] object_21 - 1-комнатная квартира · Ростовская область
+   area=45.2, rooms=1, settlement=rostov
+   price: None
+
+15. [квартиры] object_25 - Квартира · Ростовская область
+   area=None, rooms=None, settlement=aksay
+   price: None
+
+16. [квартиры] object_26 - Квартира · Ростовская область · 105 м²
+   area=105.0, rooms=None, settlement=rostov
+   price: None
+
+17. [квартиры] object_28 - Квартира · Ростовская область · 90 м²
+   area=90.0, rooms=None, settlement=rostov
+   price: None
+
+18. [квартиры] object_29 - Квартира · Ростовская область
+   area=None, rooms=None, settlement=rostov
+   price: None
+
+19. [квартиры] object_30 - Квартира · Ростовская область
+   area=74.0, rooms=None, settlement=rostov
+   price: None
+
+20. [квартиры] object_40 - Квартира · Ростовская область
+   area=47.1, rooms=None, settlement=rostov
+   price: 6820000
+
+... и ещё 76 объектов
+
+================================================================================
+4) CHANGED_OBJECTS (изменились параметры)
+================================================================================
+1. [квартиры] Продается 3 комн.кв 74 м² Ростовская обл.,Аксайски
+   Match score: 35
+   area: 74.0 → 75.0
+
+2. [квартиры] 1к квартира 30м2 Г.Аксай ул Садовая 31а
+   Match score: 20
+   price: 6820000 → 5
+
+3. [квартиры] Продается 2 комн.кв 42 м² Ростовская обл.,г. Росто
+   Match score: 20
+   area: 42.0 → 44.0
+
+4. [квартиры] 2-к. квартира, 51 м² Ростовская обл., Аксайский р-
+   Match score: 15
+   area: 51.0 → 50.0
+
+5. [квартиры] Продается 2 комн.кв 54 м² Ростовская обл.,г. Росто
+   Match score: 20
+   rooms: 2 → 3
+
+6. [квартиры] Продается 1 комн.кв 32 м² Ростовская обл.,г. Росто
+   Match score: 25
+   price: 9000000 → 3300000
+   area: 32.0 → 33.0
+
+7. [квартиры] Продается 1 комн.кв 40 м²  Ростовская обл.,г. Рост
+   Match score: 25
+   area: 40.0 → 40.7
+
+8. [квартиры] Продается 3 комн.кв 63 м² Ростовская обл.,г. Росто
+   Match score: 25
+   area: 63.0 → 64.0
+
+9. [квартиры] Продается 3 комн.кв 72 м² Ростовская обл.,г. Росто
+   Match score: 20
+   rooms: 3 → 2
+
+10. [квартиры] Продается 3 комн.кв 80.2 м²  Ростовская обл.,г. Ро
+   Match score: 20
+   rooms: 3 → 2
+
+11. [квартиры] Продается 2 комн.кв 50 м² Ростовская обл.,г. Росто
+   Match score: 20
+   area: 50.0 → 48.0
+
+12. [квартиры] Продается 2 комн.кв 48 м² Ростовская обл.,г. Росто
+   Match score: 20
+   area: 48.0 → 46.0
+
+13. [квартиры] ✨  ШИКАРНАЯ 2-К КВАРТИРА В ЖК «ЛЕВОБЕРЕЖНЫЙ» — НЕВ
+   Match score: 20
+   area: 61.6 → 60.0
+
+14. [квартиры] 3-к. квартира, 70 м², 11/22 эт.   Общая площадь: 7
+   Match score: 20
+   area: 70.0 → 72.0
+
+15. [квартиры] Продается cтильнaя 2-комнатная квартиpа в ЖK "Нoвы
+   Match score: 25
+   area: 55.1 → 56.0
+
+16. [квартиры] 1-к. квартира, 34 м², 1/4 эт.    Общая площадь: 34
+   Match score: 25
+   area: 34.0 → 33.0
+
+17. [квартиры] Продается 1 комн.кв 37 м²  Аксай.ул Платова
+   Match score: 10
+   area: 37.0 → 35.0
+   rooms: 1 → 2
+
+18. [квартиры] Продается 2 комн.кв 60 м² этаж 3/9
+   Match score: 10
+   area: 60.0 → 58.0
+
+19. [дома] Таунхаус 108 м² на участке 2,5 сот. Ростовская обл
+   Match score: 15
+   area: 108.0 → 106.0
+
+20. [дома] 🔥СРОЧНАЯ ПРОДАЖА! НЕ УПУСТИТЕ ВЫГОДНЫЙ ВАРИАНТ! 🔥 
+   Match score: 35
+   price: 2000000 → 8000000
+
+... и ещё 2 объектов

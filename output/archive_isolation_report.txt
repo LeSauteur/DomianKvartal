@@ -1,0 +1,118 @@
+ARCHIVE_ISOLATION_REPORT
+
+DATE:
+2026-03-27 18:10:08
+
+---
+
+FOLDERS_MOVED:
+
+- __pycache__
+- company-rebuild
+- _quarantine
+- tools
+- staging-build
+- source
+- ui-rebuild
+
+---
+
+FOLDERS_SKIPPED:
+
+- OLD (access denied - file permissions)
+- Old2 (access denied - file permissions)
+
+---
+
+FOLDERS_NOT_FOUND:
+
+- encoding_corrupted (already moved to _quarantine previously)
+- backup (already moved to _quarantine previously)
+
+---
+
+PRODUCTION_FOLDERS_VERIFIED:
+
+- assets: INTACT
+- objects: INTACT
+- output: INTACT
+- lands: INTACT
+- newbuilds: INTACT
+- images: INTACT
+- seo: INTACT
+- team: INTACT
+- ui-blocks: INTACT
+
+---
+
+FILES_MOVED_COUNT:
+7 folders moved (file count: see individual folder sizes)
+
+---
+
+BROKEN_REFERENCES_FOUND:
+NO
+
+VERIFICATION DETAILS:
+
+The following "references" were detected but are FALSE POSITIVES:
+
+1. "tools" in apartments.html, houses.html, lands.html, newbuilds.html
+   - This is CSS class "listing-tools", NOT a folder reference
+
+2. "tools" in assets/css/main.css
+   - This is CSS comment or class name, NOT a folder reference
+
+3. "source" in assets/js/main.js
+   - This is JavaScript variable name "source", NOT a folder reference
+
+ALL PRODUCTION CODE REFERENCES INTACT.
+
+---
+
+SYSTEM_STABLE:
+YES
+
+SAFE_TO_PUBLISH:
+YES
+
+---
+
+ARCHIVE STRUCTURE:
+
+_archive/
+├── __pycache__/
+├── company-rebuild/
+├── _quarantine/
+├── tools/
+├── staging-build/
+├── source/
+└── ui-rebuild/
+
+---
+
+PRODUCTION STRUCTURE (UNCHANGED):
+
+/
+├── assets/
+├── objects/
+├── output/
+├── lands/
+├── newbuilds/
+├── images/
+├── seo/
+├── team/
+├── ui-blocks/
+├── index.html
+├── apartments.html
+├── houses.html
+├── lands.html
+├── newbuilds.html
+├── details.html
+├── privacy.html
+├── offer.html
+└── thanks.html
+
+---
+
+END OF REPORT

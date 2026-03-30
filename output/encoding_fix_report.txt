@@ -1,0 +1,78 @@
+ENCODING_FIX_REPORT
+
+DATE:
+2026-03-27
+
+---
+
+FILES_FIXED:
+
+apartments.html (Fixed (was utf-8, meta added: False))
+details.html (Fixed (was utf-8, meta added: False))
+houses.html (Fixed (was utf-8, meta added: False))
+index.html (Fixed (was utf-8, meta added: False))
+lands.html (Fixed (was utf-8, meta added: False))
+newbuilds.html (Fixed (was utf-8, meta added: False))
+offer.html (Fixed (was utf-8, meta added: False))
+privacy.html (Fixed (was utf-8, meta added: False))
+thanks.html (Fixed (was utf-8, meta added: False))
+company-rebuild\index.html (Fixed (was utf-8, meta added: False))
+company-rebuild\main-no-company.html (Fixed (was utf-8, meta added: False))
+seo\doma-loc-aksay.html (Fixed (was utf-8, meta added: False))
+seo\doma-loc-rossiyskiy.html (Fixed (was utf-8, meta added: False))
+seo\doma-raion-aksayskiy-rayon.html (Fixed (was utf-8, meta added: False))
+seo\kvartiry-loc-aksay.html (Fixed (was utf-8, meta added: False))
+seo\kvartiry-loc-rostov-na-donu.html (Fixed (was utf-8, meta added: False))
+seo\kvartiry-raion-roletarskiy-rayon.html (Fixed (was utf-8, meta added: False))
+seo\kvartiry-ul-40-let-pobedy.html (Fixed (was utf-8, meta added: False))
+seo\kvartiry-zhk-aleksandrovskiy.html (Fixed (was utf-8, meta added: False))
+seo\kvartiry-zhk-ersona.html (Fixed (was utf-8, meta added: False))
+seo\kvartiry-zhk-levoberezhnyy.html (Fixed (was utf-8, meta added: False))
+seo\kvartiry-zhk-mechty.html (Fixed (was utf-8, meta added: False))
+seo\kvartiry-zhk-olet.html (Fixed (was utf-8, meta added: False))
+seo\kvartiry-zhk-orod-u-reki.html (Fixed (was utf-8, meta added: False))
+seo\kvartiry-zhk-sokol-grad-2.html (Fixed (was utf-8, meta added: False))
+seo\kvartiry-zhk-sokol-grad.html (Fixed (was utf-8, meta added: False))
+seo\kvartiry-zhk-veresaeva.html (Fixed (was utf-8, meta added: False))
+seo\kvartiry-zhk-veresaevo.html (Fixed (was utf-8, meta added: False))
+seo\kvartiry-zhk-vishnevyy-sad.html (Fixed (was utf-8, meta added: False))
+seo\kvartiry-zhk-zapadnye-allei.html (Fixed (was utf-8, meta added: False))
+seo\uchastki-loc-aksay.html (Fixed (was utf-8, meta added: False))
+seo\uchastki-raion-aksayskiy-rayon.html (Fixed (was utf-8, meta added: False))
+seo\zhk-flora-aksay.html (Fixed (was windows-1251, meta added: False))
+source\apartments.html (Fixed (was utf-8, meta added: False))
+team\zukhra-alieva.html (Fixed (was utf-8, meta added: False))
+ui-blocks\blocks.html (Fixed (was utf-8, meta added: False))
+ui-blocks\index.html (Fixed (was utf-8, meta added: False))
+ui-rebuild\index.html (Fixed (was utf-8, meta added: False))
+
+---
+
+FILES_ALREADY_OK:
+
+None
+
+---
+
+TOTAL_FILES_FIXED:
+38
+
+---
+
+STATUS
+
+ALL_FILES_UTF8:
+NO
+
+---
+
+FILES_WITH_ERRORS:
+
+seo\doma-bolshoy-log.html: Could not decode file
+seo\doma-v-aksay-kom.html: Could not decode file
+seo\kvartiry-muhina-balka.html: Could not decode file
+seo\kvartiry-v-centre-aksaya.html: Could not decode file
+
+---
+
+END OF REPORT

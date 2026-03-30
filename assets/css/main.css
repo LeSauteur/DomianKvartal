@@ -2401,3 +2401,47 @@ body.catalog-extended .modal img {
     font-weight: 700;
     color: var(--accent);
 }
+
+@media (max-width: 768px) {
+    .footer-columns {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 30px 0 20px;
+    }
+
+    .footer-contacts-block {
+        padding: 20px 0;
+        gap: 20px;
+    }
+
+    .footer-contact-item {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        position: relative;
+    }
+
+    nav::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 24px;
+
+        background: linear-gradient(
+            to left,
+            rgba(244, 239, 232, 1),
+            rgba(244, 239, 232, 0)
+        );
+
+        pointer-events: none;
+    }
+}

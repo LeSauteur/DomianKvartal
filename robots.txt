@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://domian-161.ru/sitemap.xml

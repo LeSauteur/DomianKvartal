@@ -1,0 +1,235 @@
+================================================================================
+ОТЧЕТ ПО СРАВНЕНИЮ HTML (description.txt) И DATA (data.json)
+================================================================================
+
+1) ОБЩАЯ СТАТИСТИКА
+----------------------------------------
+Всего объектов в source — 222
+Всего объектов на сайте — 222
+Потеряно данных — 132
+Искажено данных — 0
+Потеряно объектов — 0
+Лишних объектов — 0
+Потеряно изображений — 0
+
+2) ПОТЕРЯННЫЕ ДАННЫЕ
+----------------------------------------
+ID: object_01 (objects)
+  Поле: area
+  Source (HTML): 57.0
+  Data (сайт): None
+
+ID: object_02 (objects)
+  Поле: area
+  Source (HTML): 40.9
+  Data (сайт): None
+
+ID: object_03 (objects)
+  Поле: area
+  Source (HTML): 44.0
+  Data (сайт): None
+
+ID: object_04 (objects)
+  Поле: price
+  Source (HTML): 400000
+  Data (сайт): None
+
+ID: object_04 (objects)
+  Поле: area
+  Source (HTML): 40.9
+  Data (сайт): None
+
+ID: object_05 (objects)
+  Поле: area
+  Source (HTML): 40.0
+  Data (сайт): None
+
+ID: object_06 (objects)
+  Поле: area
+  Source (HTML): 39.0
+  Data (сайт): None
+
+ID: object_07 (objects)
+  Поле: area
+  Source (HTML): 60.0
+  Data (сайт): None
+
+ID: object_08 (objects)
+  Поле: area
+  Source (HTML): 47.0
+  Data (сайт): None
+
+ID: object_09 (objects)
+  Поле: area
+  Source (HTML): 35.0
+  Data (сайт): None
+
+ID: object_10 (objects)
+  Поле: area
+  Source (HTML): 90.0
+  Data (сайт): None
+
+ID: object_102 (objects)
+  Поле: area
+  Source (HTML): 37.0
+  Data (сайт): None
+
+ID: object_106 (objects)
+  Поле: area
+  Source (HTML): 17.4
+  Data (сайт): None
+
+ID: object_109 (objects)
+  Поле: area
+  Source (HTML): 35.0
+  Data (сайт): None
+
+ID: object_11 (objects)
+  Поле: area
+  Source (HTML): 75.0
+  Data (сайт): None
+
+ID: object_110 (objects)
+  Поле: area
+  Source (HTML): 60.0
+  Data (сайт): None
+
+ID: object_111 (objects)
+  Поле: area
+  Source (HTML): 33.0
+  Data (сайт): None
+
+ID: object_12 (objects)
+  Поле: area
+  Source (HTML): 85.0
+  Data (сайт): None
+
+ID: object_13 (objects)
+  Поле: area
+  Source (HTML): 64.0
+  Data (сайт): None
+
+ID: object_14 (objects)
+  Поле: area
+  Source (HTML): 80.0
+  Data (сайт): None
+
+ID: object_15 (objects)
+  Поле: area
+  Source (HTML): 55.0
+  Data (сайт): None
+
+ID: object_16 (objects)
+  Поле: area
+  Source (HTML): 76.0
+  Data (сайт): None
+
+ID: object_17 (objects)
+  Поле: area
+  Source (HTML): 37.1
+  Data (сайт): None
+
+ID: object_18 (objects)
+  Поле: area
+  Source (HTML): 48.5
+  Data (сайт): None
+
+ID: object_19 (objects)
+  Поле: area
+  Source (HTML): 53.8
+  Data (сайт): None
+
+ID: object_21 (objects)
+  Поле: area
+  Source (HTML): 45.2
+  Data (сайт): None
+
+ID: object_22 (objects)
+  Поле: area
+  Source (HTML): 33.0
+  Data (сайт): None
+
+ID: object_23 (objects)
+  Поле: price
+  Source (HTML): 5000000
+  Data (сайт): None
+
+ID: object_23 (objects)
+  Поле: area
+  Source (HTML): 53.0
+  Data (сайт): None
+
+ID: object_24 (objects)
+  Поле: price
+  Source (HTML): 1000000
+  Data (сайт): None
+
+3) ИСКАЖЁННЫЕ ДАННЫЕ
+----------------------------------------
+Нет искажённых данных
+
+4) ПОТЕРЯННЫЕ ОБЪЕКТЫ
+----------------------------------------
+Нет потерянных объектов
+
+5) ЛИШНИЕ ОБЪЕКТЫ
+----------------------------------------
+Нет лишних объектов
+
+6) ПОТЕРЯННЫЕ ИЗОБРАЖЕНИЯ
+----------------------------------------
+Нет потерянных изображений
+
+7) САМЫЕ ЧАСТЫЕ ОШИБКИ
+----------------------------------------
+Потеря area (objects): 91
+Потеря area (houses): 22
+Потеря area (lands): 11
+Потеря price (objects): 8
+
+8) ПРОБЛЕМНЫЕ ОБЪЕКТЫ (наибольшее кол-во ошибок)
+----------------------------------------
+ID: object_04
+  Ошибки: Потеря price, Потеря area
+
+ID: object_23
+  Ошибки: Потеря price, Потеря area
+
+ID: object_24
+  Ошибки: Потеря price, Потеря area
+
+ID: object_40
+  Ошибки: Потеря price, Потеря area
+
+ID: object_55
+  Ошибки: Потеря price, Потеря area
+
+ID: object_60
+  Ошибки: Потеря price, Потеря area
+
+ID: object_72
+  Ошибки: Потеря price, Потеря area
+
+ID: object_74
+  Ошибки: Потеря price, Потеря area
+
+ID: object_01
+  Ошибки: Потеря area
+
+ID: object_02
+  Ошибки: Потеря area
+
+ID: object_03
+  Ошибки: Потеря area
+
+ID: object_05
+  Ошибки: Потеря area
+
+ID: object_06
+  Ошибки: Потеря area
+
+ID: object_07
+  Ошибки: Потеря area
+
+ID: object_08
+  Ошибки: Потеря area

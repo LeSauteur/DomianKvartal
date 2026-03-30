@@ -1,0 +1,679 @@
+SEO_CONTENT_DISCOVERY_REPORT
+
+DATE:
+2026-03-27
+
+---
+
+1. ALL HTML FILES
+
+apartments.html
+details.html
+houses.html
+index.html
+lands.html
+newbuilds.html
+offer.html
+privacy.html
+thanks.html
+company-rebuild\index.html
+company-rebuild\main-no-company.html
+seo\doma-bolshoy-log.html
+seo\doma-loc-aksay.html
+seo\doma-loc-rossiyskiy.html
+seo\doma-raion-aksayskiy-rayon.html
+seo\doma-v-aksay-kom.html
+seo\kvartiry-loc-aksay.html
+seo\kvartiry-loc-rostov-na-donu.html
+seo\kvartiry-muhina-balka.html
+seo\kvartiry-raion-roletarskiy-rayon.html
+seo\kvartiry-ul-40-let-pobedy.html
+seo\kvartiry-v-centre-aksaya.html
+seo\kvartiry-zhk-aleksandrovskiy.html
+seo\kvartiry-zhk-ersona.html
+seo\kvartiry-zhk-levoberezhnyy.html
+seo\kvartiry-zhk-mechty.html
+seo\kvartiry-zhk-olet.html
+seo\kvartiry-zhk-orod-u-reki.html
+seo\kvartiry-zhk-sokol-grad-2.html
+seo\kvartiry-zhk-sokol-grad.html
+seo\kvartiry-zhk-veresaeva.html
+seo\kvartiry-zhk-veresaevo.html
+seo\kvartiry-zhk-vishnevyy-sad.html
+seo\kvartiry-zhk-zapadnye-allei.html
+seo\uchastki-loc-aksay.html
+seo\uchastki-raion-aksayskiy-rayon.html
+seo\zhk-flora-aksay.html
+source\apartments.html
+team\zukhra-alieva.html
+ui-blocks\blocks.html
+ui-blocks\index.html
+ui-rebuild\index.html
+_quarantine\html\house.html
+_quarantine\html\house_1.html
+_quarantine\html\land.html
+_quarantine\html\Квартиры.html
+_quarantine\html\Новостройки в Аксае и Ростовской области.html
+_quarantine\html\Участки в Аксае и Ростовской области.html
+
+---
+
+TOTAL_HTML_FILES:
+48
+
+---
+
+2. SEO PAGES DETECTED
+
+company-rebuild\main-no-company.html
+seo\doma-bolshoy-log.html
+seo\doma-loc-aksay.html
+seo\doma-loc-rossiyskiy.html
+seo\doma-raion-aksayskiy-rayon.html
+seo\doma-v-aksay-kom.html
+seo\kvartiry-loc-aksay.html
+seo\kvartiry-loc-rostov-na-donu.html
+seo\kvartiry-muhina-balka.html
+seo\kvartiry-raion-roletarskiy-rayon.html
+seo\kvartiry-ul-40-let-pobedy.html
+seo\kvartiry-v-centre-aksaya.html
+seo\kvartiry-zhk-aleksandrovskiy.html
+seo\kvartiry-zhk-ersona.html
+seo\kvartiry-zhk-levoberezhnyy.html
+seo\kvartiry-zhk-mechty.html
+seo\kvartiry-zhk-olet.html
+seo\kvartiry-zhk-orod-u-reki.html
+seo\kvartiry-zhk-sokol-grad-2.html
+seo\kvartiry-zhk-sokol-grad.html
+seo\kvartiry-zhk-veresaeva.html
+seo\kvartiry-zhk-veresaevo.html
+seo\kvartiry-zhk-vishnevyy-sad.html
+seo\kvartiry-zhk-zapadnye-allei.html
+seo\uchastki-loc-aksay.html
+seo\uchastki-raion-aksayskiy-rayon.html
+seo\zhk-flora-aksay.html
+team\zukhra-alieva.html
+ui-blocks\blocks.html
+_quarantine\html\house.html
+_quarantine\html\house_1.html
+_quarantine\html\land.html
+_quarantine\html\Квартиры.html
+_quarantine\html\Новостройки в Аксае и Ростовской области.html
+_quarantine\html\Участки в Аксае и Ростовской области.html
+
+---
+
+TOTAL_SEO_PAGES:
+35
+
+---
+
+3. SEO PAGES LOCATION
+
+company-rebuild:
+  - company-rebuild\main-no-company.html
+
+seo:
+  - seo\doma-bolshoy-log.html
+  - seo\doma-loc-aksay.html
+  - seo\doma-loc-rossiyskiy.html
+  - seo\doma-raion-aksayskiy-rayon.html
+  - seo\doma-v-aksay-kom.html
+  - seo\kvartiry-loc-aksay.html
+  - seo\kvartiry-loc-rostov-na-donu.html
+  - seo\kvartiry-muhina-balka.html
+  - seo\kvartiry-raion-roletarskiy-rayon.html
+  - seo\kvartiry-ul-40-let-pobedy.html
+  - seo\kvartiry-v-centre-aksaya.html
+  - seo\kvartiry-zhk-aleksandrovskiy.html
+  - seo\kvartiry-zhk-ersona.html
+  - seo\kvartiry-zhk-levoberezhnyy.html
+  - seo\kvartiry-zhk-mechty.html
+  - seo\kvartiry-zhk-olet.html
+  - seo\kvartiry-zhk-orod-u-reki.html
+  - seo\kvartiry-zhk-sokol-grad-2.html
+  - seo\kvartiry-zhk-sokol-grad.html
+  - seo\kvartiry-zhk-veresaeva.html
+  - seo\kvartiry-zhk-veresaevo.html
+  - seo\kvartiry-zhk-vishnevyy-sad.html
+  - seo\kvartiry-zhk-zapadnye-allei.html
+  - seo\uchastki-loc-aksay.html
+  - seo\uchastki-raion-aksayskiy-rayon.html
+  - seo\zhk-flora-aksay.html
+
+team:
+  - team\zukhra-alieva.html
+
+ui-blocks:
+  - ui-blocks\blocks.html
+
+_quarantine\html:
+  - _quarantine\html\house.html
+  - _quarantine\html\house_1.html
+  - _quarantine\html\land.html
+  - _quarantine\html\Квартиры.html
+  - _quarantine\html\Новостройки в Аксае и Ростовской области.html
+  - _quarantine\html\Участки в Аксае и Ростовской области.html
+
+
+---
+
+4. HIDDEN OR UNLINKED PAGES
+
+company-rebuild\main-no-company.html
+seo\doma-bolshoy-log.html
+seo\doma-loc-aksay.html
+seo\doma-loc-rossiyskiy.html
+seo\doma-raion-aksayskiy-rayon.html
+seo\doma-v-aksay-kom.html
+seo\kvartiry-loc-aksay.html
+seo\kvartiry-loc-rostov-na-donu.html
+seo\kvartiry-muhina-balka.html
+seo\kvartiry-raion-roletarskiy-rayon.html
+seo\kvartiry-ul-40-let-pobedy.html
+seo\kvartiry-v-centre-aksaya.html
+seo\kvartiry-zhk-aleksandrovskiy.html
+seo\kvartiry-zhk-ersona.html
+seo\kvartiry-zhk-levoberezhnyy.html
+seo\kvartiry-zhk-mechty.html
+seo\kvartiry-zhk-olet.html
+seo\kvartiry-zhk-orod-u-reki.html
+seo\kvartiry-zhk-sokol-grad-2.html
+seo\kvartiry-zhk-sokol-grad.html
+seo\kvartiry-zhk-veresaeva.html
+seo\kvartiry-zhk-veresaevo.html
+seo\kvartiry-zhk-vishnevyy-sad.html
+seo\kvartiry-zhk-zapadnye-allei.html
+seo\uchastki-loc-aksay.html
+seo\uchastki-raion-aksayskiy-rayon.html
+seo\zhk-flora-aksay.html
+_quarantine\html\house.html
+_quarantine\html\house_1.html
+_quarantine\html\land.html
+_quarantine\html\Квартиры.html
+_quarantine\html\Новостройки в Аксае и Ростовской области.html
+_quarantine\html\Участки в Аксае и Ростовской области.html
+
+---
+
+TOTAL_UNLINKED_PAGES:
+33
+
+---
+
+5. PAGES IN QUARANTINE
+
+_quarantine\html\house.html
+_quarantine\html\house_1.html
+_quarantine\html\land.html
+_quarantine\html\Квартиры.html
+_quarantine\html\Новостройки в Аксае и Ростовской области.html
+_quarantine\html\Участки в Аксае и Ростовской области.html
+
+---
+
+TOTAL_SEO_PAGES_IN_QUARANTINE:
+6
+
+---
+
+6. PAGES WITHOUT MENU LINK
+
+company-rebuild\main-no-company.html
+seo\doma-bolshoy-log.html
+seo\doma-loc-aksay.html
+seo\doma-loc-rossiyskiy.html
+seo\doma-raion-aksayskiy-rayon.html
+seo\doma-v-aksay-kom.html
+seo\kvartiry-loc-aksay.html
+seo\kvartiry-loc-rostov-na-donu.html
+seo\kvartiry-muhina-balka.html
+seo\kvartiry-raion-roletarskiy-rayon.html
+seo\kvartiry-ul-40-let-pobedy.html
+seo\kvartiry-v-centre-aksaya.html
+seo\kvartiry-zhk-aleksandrovskiy.html
+seo\kvartiry-zhk-ersona.html
+seo\kvartiry-zhk-levoberezhnyy.html
+seo\kvartiry-zhk-mechty.html
+seo\kvartiry-zhk-olet.html
+seo\kvartiry-zhk-orod-u-reki.html
+seo\kvartiry-zhk-sokol-grad-2.html
+seo\kvartiry-zhk-sokol-grad.html
+seo\kvartiry-zhk-veresaeva.html
+seo\kvartiry-zhk-veresaevo.html
+seo\kvartiry-zhk-vishnevyy-sad.html
+seo\kvartiry-zhk-zapadnye-allei.html
+seo\uchastki-loc-aksay.html
+seo\uchastki-raion-aksayskiy-rayon.html
+seo\zhk-flora-aksay.html
+ui-blocks\blocks.html
+_quarantine\html\house.html
+_quarantine\html\house_1.html
+_quarantine\html\land.html
+_quarantine\html\Квартиры.html
+_quarantine\html\Новостройки в Аксае и Ростовской области.html
+_quarantine\html\Участки в Аксае и Ростовской области.html
+
+---
+
+7. DUPLICATE SEO PAGES
+
+
+---
+
+8. SEO CONTENT BLOCKS
+
+company-rebuild\main-no-company.html - 737 words
+seo\doma-bolshoy-log.html - 287 words
+seo\doma-loc-aksay.html - 224 words
+seo\doma-loc-rossiyskiy.html - 156 words
+seo\doma-raion-aksayskiy-rayon.html - 156 words
+seo\doma-v-aksay-kom.html - 298 words
+seo\kvartiry-loc-aksay.html - 231 words
+seo\kvartiry-loc-rostov-na-donu.html - 719 words
+seo\kvartiry-muhina-balka.html - 266 words
+seo\kvartiry-raion-roletarskiy-rayon.html - 146 words
+seo\kvartiry-ul-40-let-pobedy.html - 162 words
+seo\kvartiry-v-centre-aksaya.html - 350 words
+seo\kvartiry-zhk-aleksandrovskiy.html - 157 words
+seo\kvartiry-zhk-ersona.html - 149 words
+seo\kvartiry-zhk-levoberezhnyy.html - 149 words
+seo\kvartiry-zhk-mechty.html - 147 words
+seo\kvartiry-zhk-olet.html - 279 words
+seo\kvartiry-zhk-orod-u-reki.html - 157 words
+seo\kvartiry-zhk-sokol-grad-2.html - 155 words
+seo\kvartiry-zhk-sokol-grad.html - 198 words
+... and 15 more
+
+---
+
+9. META TAG ANALYSIS
+
+company-rebuild\main-no-company.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\doma-bolshoy-log.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\doma-loc-aksay.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\doma-loc-rossiyskiy.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\doma-raion-aksayskiy-rayon.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\doma-v-aksay-kom.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\kvartiry-loc-aksay.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\kvartiry-loc-rostov-na-donu.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\kvartiry-muhina-balka.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\kvartiry-raion-roletarskiy-rayon.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\kvartiry-ul-40-let-pobedy.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\kvartiry-v-centre-aksaya.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\kvartiry-zhk-aleksandrovskiy.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\kvartiry-zhk-ersona.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\kvartiry-zhk-levoberezhnyy.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\kvartiry-zhk-mechty.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\kvartiry-zhk-olet.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\kvartiry-zhk-orod-u-reki.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\kvartiry-zhk-sokol-grad-2.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\kvartiry-zhk-sokol-grad.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\kvartiry-zhk-veresaeva.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\kvartiry-zhk-veresaevo.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\kvartiry-zhk-vishnevyy-sad.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\kvartiry-zhk-zapadnye-allei.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\uchastki-loc-aksay.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\uchastki-raion-aksayskiy-rayon.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+seo\zhk-flora-aksay.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+team\zukhra-alieva.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: YES
+  CANONICAL_PRESENT: NO
+  VIEWPORT_PRESENT: YES
+ui-blocks\blocks.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: NO
+  CANONICAL_PRESENT: NO
+  VIEWPORT_PRESENT: YES
+_quarantine\html\house.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: NO
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+_quarantine\html\house_1.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: NO
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+_quarantine\html\land.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: NO
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+_quarantine\html\Квартиры.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: NO
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+_quarantine\html\Новостройки в Аксае и Ростовской области.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: NO
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+_quarantine\html\Участки в Аксае и Ростовской области.html:
+  META_TITLE_PRESENT: YES
+  META_DESCRIPTION_PRESENT: YES
+  H1_PRESENT: NO
+  CANONICAL_PRESENT: YES
+  VIEWPORT_PRESENT: YES
+
+---
+
+10. IMAGE ANALYSIS
+
+company-rebuild\main-no-company.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 17
+  ALT_TAGS_PRESENT: YES
+seo\doma-bolshoy-log.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 4
+  ALT_TAGS_PRESENT: YES
+seo\doma-loc-aksay.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 1
+  ALT_TAGS_PRESENT: YES
+seo\doma-loc-rossiyskiy.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 1
+  ALT_TAGS_PRESENT: YES
+seo\doma-raion-aksayskiy-rayon.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 1
+  ALT_TAGS_PRESENT: YES
+seo\doma-v-aksay-kom.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 4
+  ALT_TAGS_PRESENT: YES
+seo\kvartiry-loc-aksay.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 1
+  ALT_TAGS_PRESENT: YES
+seo\kvartiry-loc-rostov-na-donu.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 1
+  ALT_TAGS_PRESENT: YES
+seo\kvartiry-muhina-balka.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 4
+  ALT_TAGS_PRESENT: YES
+seo\kvartiry-raion-roletarskiy-rayon.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 1
+  ALT_TAGS_PRESENT: YES
+seo\kvartiry-ul-40-let-pobedy.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 1
+  ALT_TAGS_PRESENT: YES
+seo\kvartiry-v-centre-aksaya.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 4
+  ALT_TAGS_PRESENT: YES
+seo\kvartiry-zhk-aleksandrovskiy.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 1
+  ALT_TAGS_PRESENT: YES
+seo\kvartiry-zhk-ersona.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 1
+  ALT_TAGS_PRESENT: YES
+seo\kvartiry-zhk-levoberezhnyy.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 1
+  ALT_TAGS_PRESENT: YES
+seo\kvartiry-zhk-mechty.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 1
+  ALT_TAGS_PRESENT: YES
+seo\kvartiry-zhk-olet.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 1
+  ALT_TAGS_PRESENT: YES
+seo\kvartiry-zhk-orod-u-reki.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 1
+  ALT_TAGS_PRESENT: YES
+seo\kvartiry-zhk-sokol-grad-2.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 1
+  ALT_TAGS_PRESENT: YES
+seo\kvartiry-zhk-sokol-grad.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 1
+  ALT_TAGS_PRESENT: YES
+seo\kvartiry-zhk-veresaeva.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 1
+  ALT_TAGS_PRESENT: YES
+seo\kvartiry-zhk-veresaevo.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 1
+  ALT_TAGS_PRESENT: YES
+seo\kvartiry-zhk-vishnevyy-sad.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 1
+  ALT_TAGS_PRESENT: YES
+seo\kvartiry-zhk-zapadnye-allei.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 1
+  ALT_TAGS_PRESENT: YES
+seo\uchastki-loc-aksay.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 1
+  ALT_TAGS_PRESENT: YES
+seo\uchastki-raion-aksayskiy-rayon.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 1
+  ALT_TAGS_PRESENT: YES
+seo\zhk-flora-aksay.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 4
+  ALT_TAGS_PRESENT: YES
+team\zukhra-alieva.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 2
+  ALT_TAGS_PRESENT: YES
+ui-blocks\blocks.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 21
+  ALT_TAGS_PRESENT: YES
+_quarantine\html\house.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 3
+  ALT_TAGS_PRESENT: YES
+_quarantine\html\house_1.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 3
+  ALT_TAGS_PRESENT: YES
+_quarantine\html\land.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 3
+  ALT_TAGS_PRESENT: YES
+_quarantine\html\Квартиры.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 3
+  ALT_TAGS_PRESENT: YES
+_quarantine\html\Новостройки в Аксае и Ростовской области.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 3
+  ALT_TAGS_PRESENT: YES
+_quarantine\html\Участки в Аксае и Ростовской области.html:
+  IMAGES_PRESENT: YES
+  TOTAL_IMAGES: 3
+  ALT_TAGS_PRESENT: YES
+
+---
+
+11. SITEMAP VERIFICATION
+
+SEO_PAGES_IN_SITEMAP:
+0
+
+SEO_PAGES_NOT_IN_SITEMAP:
+35
+
+---
+
+12. FINAL SUMMARY
+
+TOTAL_HTML_FILES:
+48
+
+TOTAL_SEO_PAGES:
+35
+
+TOTAL_UNLINKED_PAGES:
+33
+
+TOTAL_SEO_PAGES_IN_QUARANTINE:
+6
+
+TOTAL_SEO_PAGES_NOT_IN_SITEMAP:
+35
+
+---
+
+END OF REPORT

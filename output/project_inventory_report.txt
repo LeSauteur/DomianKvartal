@@ -1,0 +1,4352 @@
+PROJECT_INVENTORY_REPORT
+
+DATE:
+2026-03-27
+
+---
+
+TOTAL_FOLDERS:
+444
+
+TOTAL_FILES:
+12298
+
+---
+
+FILE_TYPES
+
+HTML:
+112
+
+CSS:
+149
+
+JS:
+27
+
+JSON:
+904
+
+IMAGES:
+10176
+
+---
+
+FOLDER_STRUCTURE
+
+Folder: OLD
+  Path: OLD
+  Size: 0.26 MB
+  Last Modified: 2026-01-26
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=21, JS=0, JSON=11, Images=3
+
+Folder: output
+  Path: OLD\output
+  Size: 0.01 MB
+  Last Modified: 2026-01-26
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=11, Images=0
+
+Folder: lands
+  Path: OLD\output\lands
+  Size: 0.01 MB
+  Last Modified: 2026-01-26
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=11, Images=0
+
+Folder: land_01
+  Path: OLD\output\lands\land_01
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=0
+
+Folder: land_02
+  Path: OLD\output\lands\land_02
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=0
+
+Folder: land_03
+  Path: OLD\output\lands\land_03
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=0
+
+Folder: land_04
+  Path: OLD\output\lands\land_04
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=0
+
+Folder: land_05
+  Path: OLD\output\lands\land_05
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=0
+
+Folder: land_06
+  Path: OLD\output\lands\land_06
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=0
+
+Folder: land_07
+  Path: OLD\output\lands\land_07
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=0
+
+Folder: land_08
+  Path: OLD\output\lands\land_08
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=0
+
+Folder: land_09
+  Path: OLD\output\lands\land_09
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=0
+
+Folder: land_10
+  Path: OLD\output\lands\land_10
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=0
+
+Folder: land_11
+  Path: OLD\output\lands\land_11
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=0
+
+Folder: Новостройки в Аксае и Ростовской области_files
+  Path: OLD\Новостройки в Аксае и Ростовской области_files
+  Size: 0.08 MB
+  Last Modified: 2025-12-30
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=7, JS=0, JSON=0, Images=1
+
+Folder: Участки в Аксае и Ростовской области_files
+  Path: OLD\Участки в Аксае и Ростовской области_files
+  Size: 0.08 MB
+  Last Modified: 2025-12-30
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=7, JS=0, JSON=0, Images=1
+
+Folder: Частные Дома в Аксае и Ростовской области_files
+  Path: OLD\Частные Дома в Аксае и Ростовской области_files
+  Size: 0.08 MB
+  Last Modified: 2025-12-30
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=7, JS=0, JSON=0, Images=1
+
+Folder: Old2
+  Path: Old2
+  Size: 2.34 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=24, JS=0, JSON=0, Images=3
+
+Folder: Квартиры_files
+  Path: Old2\Квартиры_files
+  Size: 1.13 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=9, JS=0, JSON=0, Images=1
+
+Folder: Участки в Аксае и Ростовской области_files
+  Path: Old2\Участки в Аксае и Ростовской области_files
+  Size: 1.13 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=8, JS=0, JSON=0, Images=1
+
+Folder: Частные Дома в Аксае и Ростовской области_files
+  Path: Old2\Частные Дома в Аксае и Ростовской области_files
+  Size: 0.08 MB
+  Last Modified: 2025-12-30
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=7, JS=0, JSON=0, Images=1
+
+Folder: __pycache__
+  Path: __pycache__
+  Size: 0.00 MB
+  Last Modified: UNKNOWN
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=0
+
+Folder: _quarantine
+  Path: _quarantine
+  Size: 27.53 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=10, CSS=1, JS=0, JSON=0, Images=63
+
+Folder: backup
+  Path: _quarantine\backup
+  Size: 7.88 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=0
+
+Folder: encoding_corrupted
+  Path: _quarantine\encoding_corrupted
+  Size: 0.02 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=4, CSS=0, JS=0, JSON=0, Images=0
+
+Folder: seo
+  Path: _quarantine\encoding_corrupted\seo
+  Size: 0.02 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=4, CSS=0, JS=0, JSON=0, Images=0
+
+Folder: html
+  Path: _quarantine\html
+  Size: 5.50 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=6, CSS=0, JS=0, JSON=0, Images=0
+
+Folder: images
+  Path: _quarantine\images
+  Size: 13.98 MB
+  Last Modified: 2026-03-19
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=63
+
+Folder: json
+  Path: _quarantine\json
+  Size: 0.00 MB
+  Last Modified: UNKNOWN
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=0
+
+Folder: scripts
+  Path: _quarantine\scripts
+  Size: 0.15 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=0
+
+Folder: styles
+  Path: _quarantine\styles
+  Size: 0.00 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=1, JS=0, JSON=0, Images=0
+
+Folder: assets
+  Path: assets
+  Size: 3.55 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=6, JS=4, JSON=0, Images=20
+
+Folder: about
+  Path: assets\about
+  Size: 0.82 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=5
+
+Folder: certificates
+  Path: assets\certificates
+  Size: 0.38 MB
+  Last Modified: 2026-03-12
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=3
+
+Folder: css
+  Path: assets\css
+  Size: 0.07 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=6, JS=0, JSON=0, Images=0
+
+Folder: events
+  Path: assets\events
+  Size: 0.26 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=1
+
+Folder: hero
+  Path: assets\hero
+  Size: 0.95 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=2
+
+Folder: img
+  Path: assets\img
+  Size: 0.10 MB
+  Last Modified: 2026-03-12
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=1
+
+Folder: agents
+  Path: assets\img\agents
+  Size: 0.10 MB
+  Last Modified: 2026-03-12
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=1
+
+Folder: js
+  Path: assets\js
+  Size: 0.03 MB
+  Last Modified: 2026-03-26
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=4, JSON=0, Images=0
+
+Folder: office
+  Path: assets\office
+  Size: 0.16 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=1
+
+Folder: team
+  Path: assets\team
+  Size: 0.43 MB
+  Last Modified: 2026-03-12
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=3
+
+Folder: types
+  Path: assets\types
+  Size: 0.35 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=4
+
+Folder: company-rebuild
+  Path: company-rebuild
+  Size: 1.18 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=2, CSS=2, JS=0, JSON=0, Images=7
+
+Folder: assets
+  Path: company-rebuild\assets
+  Size: 1.09 MB
+  Last Modified: 2026-03-12
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=7
+
+Folder: certificates
+  Path: company-rebuild\assets\certificates
+  Size: 0.38 MB
+  Last Modified: 2026-03-12
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=3
+
+Folder: events
+  Path: company-rebuild\assets\events
+  Size: 0.26 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=1
+
+Folder: office
+  Path: company-rebuild\assets\office
+  Size: 0.16 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=1
+
+Folder: team
+  Path: company-rebuild\assets\team
+  Size: 0.29 MB
+  Last Modified: 2026-03-12
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=2
+
+Folder: css
+  Path: company-rebuild\css
+  Size: 0.04 MB
+  Last Modified: 2026-03-20
+  Usage: REFERENCED
+  Files: HTML=0, CSS=2, JS=0, JSON=0, Images=0
+
+Folder: js
+  Path: company-rebuild\js
+  Size: 0.00 MB
+  Last Modified: UNKNOWN
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=0
+
+Folder: images
+  Path: images
+  Size: 0.15 MB
+  Last Modified: 2026-03-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=1
+
+Folder: default
+  Path: images\default
+  Size: 0.15 MB
+  Last Modified: 2026-03-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=1
+
+Folder: lands
+  Path: lands
+  Size: 13.86 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=12, Images=55
+
+Folder: land_01
+  Path: lands\land_01
+  Size: 3.05 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: land_02
+  Path: lands\land_02
+  Size: 1.02 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=6
+
+Folder: land_03
+  Path: lands\land_03
+  Size: 2.11 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=4
+
+Folder: land_04
+  Path: lands\land_04
+  Size: 2.41 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=6
+
+Folder: land_05
+  Path: lands\land_05
+  Size: 1.51 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: land_06
+  Path: lands\land_06
+  Size: 0.16 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=1
+
+Folder: land_07
+  Path: lands\land_07
+  Size: 0.84 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=3
+
+Folder: land_08
+  Path: lands\land_08
+  Size: 0.74 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=4
+
+Folder: land_09
+  Path: lands\land_09
+  Size: 0.55 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=2
+
+Folder: land_10
+  Path: lands\land_10
+  Size: 1.23 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=4
+
+Folder: land_11
+  Path: lands\land_11
+  Size: 0.23 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=4
+
+Folder: newbuilds
+  Path: newbuilds
+  Size: 16.47 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=27, Images=137
+
+Folder: nb_01
+  Path: newbuilds\nb_01
+  Size: 2.46 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: nb_02
+  Path: newbuilds\nb_02
+  Size: 1.50 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=17
+
+Folder: nb_03
+  Path: newbuilds\nb_03
+  Size: 0.65 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: nb_04
+  Path: newbuilds\nb_04
+  Size: 0.58 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=10
+
+Folder: nb_05
+  Path: newbuilds\nb_05
+  Size: 0.40 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=4
+
+Folder: nb_06
+  Path: newbuilds\nb_06
+  Size: 0.41 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=5
+
+Folder: nb_07
+  Path: newbuilds\nb_07
+  Size: 0.83 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=10
+
+Folder: nb_08
+  Path: newbuilds\nb_08
+  Size: 0.00 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=0
+
+Folder: nb_09
+  Path: newbuilds\nb_09
+  Size: 0.23 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=1
+
+Folder: nb_10
+  Path: newbuilds\nb_10
+  Size: 0.17 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=1
+
+Folder: nb_11
+  Path: newbuilds\nb_11
+  Size: 0.01 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=1
+
+Folder: nb_12
+  Path: newbuilds\nb_12
+  Size: 0.14 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=1
+
+Folder: nb_13
+  Path: newbuilds\nb_13
+  Size: 0.49 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: nb_14
+  Path: newbuilds\nb_14
+  Size: 0.63 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=5
+
+Folder: nb_15
+  Path: newbuilds\nb_15
+  Size: 0.79 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: nb_16
+  Path: newbuilds\nb_16
+  Size: 0.93 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: nb_17
+  Path: newbuilds\nb_17
+  Size: 0.29 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=2
+
+Folder: nb_18
+  Path: newbuilds\nb_18
+  Size: 0.40 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=3
+
+Folder: nb_19
+  Path: newbuilds\nb_19
+  Size: 0.85 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=6
+
+Folder: nb_20
+  Path: newbuilds\nb_20
+  Size: 0.91 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=6
+
+Folder: nb_21
+  Path: newbuilds\nb_21
+  Size: 0.86 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: nb_22
+  Path: newbuilds\nb_22
+  Size: 0.70 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=4
+
+Folder: nb_23
+  Path: newbuilds\nb_23
+  Size: 0.79 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=4
+
+Folder: nb_24
+  Path: newbuilds\nb_24
+  Size: 0.37 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=3
+
+Folder: nb_25
+  Path: newbuilds\nb_25
+  Size: 0.37 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=3
+
+Folder: nb_26
+  Path: newbuilds\nb_26
+  Size: 0.73 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=2
+
+Folder: objects
+  Path: objects
+  Size: 165.18 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=113, Images=1211
+
+Folder: object_01
+  Path: objects\object_01
+  Size: 1.22 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: object_02
+  Path: objects\object_02
+  Size: 1.05 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=5
+
+Folder: object_03
+  Path: objects\object_03
+  Size: 0.73 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_04
+  Path: objects\object_04
+  Size: 0.48 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=6
+
+Folder: object_05
+  Path: objects\object_05
+  Size: 1.00 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_06
+  Path: objects\object_06
+  Size: 0.81 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_07
+  Path: objects\object_07
+  Size: 0.75 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_08
+  Path: objects\object_08
+  Size: 0.38 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=6
+
+Folder: object_09
+  Path: objects\object_09
+  Size: 1.10 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=14
+
+Folder: object_10
+  Path: objects\object_10
+  Size: 2.46 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=19
+
+Folder: object_100
+  Path: objects\object_100
+  Size: 2.37 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=14
+
+Folder: object_101
+  Path: objects\object_101
+  Size: 2.88 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=22
+
+Folder: object_102
+  Path: objects\object_102
+  Size: 0.95 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_103
+  Path: objects\object_103
+  Size: 0.88 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_104
+  Path: objects\object_104
+  Size: 2.72 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=17
+
+Folder: object_105
+  Path: objects\object_105
+  Size: 3.51 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=13
+
+Folder: object_106
+  Path: objects\object_106
+  Size: 3.49 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=13
+
+Folder: object_107
+  Path: objects\object_107
+  Size: 3.47 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=20
+
+Folder: object_108
+  Path: objects\object_108
+  Size: 10.66 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=23
+
+Folder: object_109
+  Path: objects\object_109
+  Size: 0.52 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_11
+  Path: objects\object_11
+  Size: 1.98 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=18
+
+Folder: object_110
+  Path: objects\object_110
+  Size: 6.61 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=16
+
+Folder: object_111
+  Path: objects\object_111
+  Size: 1.09 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=10
+
+Folder: object_112
+  Path: objects\object_112
+  Size: 1.63 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_12
+  Path: objects\object_12
+  Size: 0.70 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_13
+  Path: objects\object_13
+  Size: 0.48 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_14
+  Path: objects\object_14
+  Size: 0.93 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_15
+  Path: objects\object_15
+  Size: 0.53 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_16
+  Path: objects\object_16
+  Size: 0.41 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_17
+  Path: objects\object_17
+  Size: 0.08 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=1
+
+Folder: object_18
+  Path: objects\object_18
+  Size: 1.22 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=17
+
+Folder: object_19
+  Path: objects\object_19
+  Size: 1.60 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_20
+  Path: objects\object_20
+  Size: 1.67 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=19
+
+Folder: object_21
+  Path: objects\object_21
+  Size: 1.68 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=17
+
+Folder: object_22
+  Path: objects\object_22
+  Size: 1.68 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=19
+
+Folder: object_23
+  Path: objects\object_23
+  Size: 1.12 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_24
+  Path: objects\object_24
+  Size: 0.79 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_25
+  Path: objects\object_25
+  Size: 1.27 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=6
+
+Folder: object_26
+  Path: objects\object_26
+  Size: 5.32 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=17
+
+Folder: object_27
+  Path: objects\object_27
+  Size: 1.27 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_28
+  Path: objects\object_28
+  Size: 0.53 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=5
+
+Folder: object_29
+  Path: objects\object_29
+  Size: 1.30 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=15
+
+Folder: object_30
+  Path: objects\object_30
+  Size: 2.11 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: object_31
+  Path: objects\object_31
+  Size: 1.51 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_32
+  Path: objects\object_32
+  Size: 1.61 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_33
+  Path: objects\object_33
+  Size: 0.38 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=5
+
+Folder: object_34
+  Path: objects\object_34
+  Size: 1.56 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=13
+
+Folder: object_35
+  Path: objects\object_35
+  Size: 0.95 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: object_36
+  Path: objects\object_36
+  Size: 0.89 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_37
+  Path: objects\object_37
+  Size: 1.86 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=16
+
+Folder: object_38
+  Path: objects\object_38
+  Size: 1.20 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=14
+
+Folder: object_39
+  Path: objects\object_39
+  Size: 0.49 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: object_40
+  Path: objects\object_40
+  Size: 1.35 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: object_41
+  Path: objects\object_41
+  Size: 1.60 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: object_42
+  Path: objects\object_42
+  Size: 1.41 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=13
+
+Folder: object_43
+  Path: objects\object_43
+  Size: 0.29 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: object_44
+  Path: objects\object_44
+  Size: 1.42 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=18
+
+Folder: object_45
+  Path: objects\object_45
+  Size: 4.10 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=21
+
+Folder: object_46
+  Path: objects\object_46
+  Size: 2.34 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=15
+
+Folder: object_47
+  Path: objects\object_47
+  Size: 0.46 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=6
+
+Folder: object_48
+  Path: objects\object_48
+  Size: 0.76 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_49
+  Path: objects\object_49
+  Size: 1.16 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=10
+
+Folder: object_50
+  Path: objects\object_50
+  Size: 1.85 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_51
+  Path: objects\object_51
+  Size: 0.99 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_52
+  Path: objects\object_52
+  Size: 0.63 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_53
+  Path: objects\object_53
+  Size: 0.95 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: object_54
+  Path: objects\object_54
+  Size: 2.71 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=17
+
+Folder: object_55
+  Path: objects\object_55
+  Size: 0.21 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=1
+
+Folder: object_56
+  Path: objects\object_56
+  Size: 0.75 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_57
+  Path: objects\object_57
+  Size: 0.68 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_58
+  Path: objects\object_58
+  Size: 0.92 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_59
+  Path: objects\object_59
+  Size: 1.88 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=18
+
+Folder: object_60
+  Path: objects\object_60
+  Size: 1.22 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: object_61
+  Path: objects\object_61
+  Size: 0.81 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: object_62
+  Path: objects\object_62
+  Size: 1.69 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_63
+  Path: objects\object_63
+  Size: 2.05 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=13
+
+Folder: object_64
+  Path: objects\object_64
+  Size: 1.36 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_65
+  Path: objects\object_65
+  Size: 2.12 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: object_66
+  Path: objects\object_66
+  Size: 0.83 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: object_67
+  Path: objects\object_67
+  Size: 0.74 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_68
+  Path: objects\object_68
+  Size: 2.04 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=10
+
+Folder: object_69
+  Path: objects\object_69
+  Size: 1.55 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=15
+
+Folder: object_70
+  Path: objects\object_70
+  Size: 1.76 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=15
+
+Folder: object_71
+  Path: objects\object_71
+  Size: 1.48 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=15
+
+Folder: object_72
+  Path: objects\object_72
+  Size: 0.18 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=1
+
+Folder: object_73
+  Path: objects\object_73
+  Size: 0.24 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=1
+
+Folder: object_74
+  Path: objects\object_74
+  Size: 0.24 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=1
+
+Folder: object_75
+  Path: objects\object_75
+  Size: 0.06 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=1
+
+Folder: object_76
+  Path: objects\object_76
+  Size: 0.64 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=5
+
+Folder: object_77
+  Path: objects\object_77
+  Size: 1.50 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_78
+  Path: objects\object_78
+  Size: 1.55 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_79
+  Path: objects\object_79
+  Size: 4.82 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: object_80
+  Path: objects\object_80
+  Size: 1.83 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=20
+
+Folder: object_81
+  Path: objects\object_81
+  Size: 1.11 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_82
+  Path: objects\object_82
+  Size: 1.58 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=16
+
+Folder: object_83
+  Path: objects\object_83
+  Size: 0.93 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=13
+
+Folder: object_84
+  Path: objects\object_84
+  Size: 1.51 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: object_85
+  Path: objects\object_85
+  Size: 0.14 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=1
+
+Folder: object_86
+  Path: objects\object_86
+  Size: 1.23 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: object_87
+  Path: objects\object_87
+  Size: 0.77 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_88
+  Path: objects\object_88
+  Size: 0.79 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_89
+  Path: objects\object_89
+  Size: 1.04 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_90
+  Path: objects\object_90
+  Size: 0.88 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=10
+
+Folder: object_91
+  Path: objects\object_91
+  Size: 1.55 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_92
+  Path: objects\object_92
+  Size: 1.39 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: object_93
+  Path: objects\object_93
+  Size: 2.37 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=14
+
+Folder: object_94
+  Path: objects\object_94
+  Size: 1.67 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=10
+
+Folder: object_95
+  Path: objects\object_95
+  Size: 1.49 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=10
+
+Folder: object_96
+  Path: objects\object_96
+  Size: 0.59 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_97
+  Path: objects\object_97
+  Size: 1.04 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: object_98
+  Path: objects\object_98
+  Size: 0.51 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=10
+
+Folder: object_99
+  Path: objects\object_99
+  Size: 1.50 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: output
+  Path: output
+  Size: 219.02 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=74, Images=1077
+
+Folder: houses
+  Path: output\houses
+  Size: 218.91 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=74, Images=1077
+
+Folder: house_01
+  Path: output\houses\house_01
+  Size: 1.28 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=10
+
+Folder: house_02
+  Path: output\houses\house_02
+  Size: 4.66 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=18
+
+Folder: house_03
+  Path: output\houses\house_03
+  Size: 2.88 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=15
+
+Folder: house_04
+  Path: output\houses\house_04
+  Size: 3.83 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=19
+
+Folder: house_05
+  Path: output\houses\house_05
+  Size: 3.72 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=24
+
+Folder: house_06
+  Path: output\houses\house_06
+  Size: 4.53 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=19
+
+Folder: house_07
+  Path: output\houses\house_07
+  Size: 4.71 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=15
+
+Folder: house_08
+  Path: output\houses\house_08
+  Size: 1.98 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=19
+
+Folder: house_09
+  Path: output\houses\house_09
+  Size: 1.56 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=5
+
+Folder: house_10
+  Path: output\houses\house_10
+  Size: 2.21 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=13
+
+Folder: house_11
+  Path: output\houses\house_11
+  Size: 1.61 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=5
+
+Folder: house_12
+  Path: output\houses\house_12
+  Size: 2.76 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=14
+
+Folder: house_13
+  Path: output\houses\house_13
+  Size: 3.14 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=15
+
+Folder: house_14
+  Path: output\houses\house_14
+  Size: 2.80 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: house_15
+  Path: output\houses\house_15
+  Size: 5.47 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=19
+
+Folder: house_16
+  Path: output\houses\house_16
+  Size: 6.07 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=27
+
+Folder: house_17
+  Path: output\houses\house_17
+  Size: 4.57 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=21
+
+Folder: house_18
+  Path: output\houses\house_18
+  Size: 4.81 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=16
+
+Folder: house_19
+  Path: output\houses\house_19
+  Size: 2.99 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=17
+
+Folder: house_20
+  Path: output\houses\house_20
+  Size: 3.16 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: house_21
+  Path: output\houses\house_21
+  Size: 2.31 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=21
+
+Folder: house_22
+  Path: output\houses\house_22
+  Size: 2.80 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: house_23
+  Path: output\houses\house_23
+  Size: 2.72 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: house_24
+  Path: output\houses\house_24
+  Size: 1.12 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: house_25
+  Path: output\houses\house_25
+  Size: 0.94 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: house_26
+  Path: output\houses\house_26
+  Size: 1.54 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=14
+
+Folder: house_27
+  Path: output\houses\house_27
+  Size: 4.44 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=27
+
+Folder: house_28
+  Path: output\houses\house_28
+  Size: 1.14 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: house_29
+  Path: output\houses\house_29
+  Size: 8.95 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=24
+
+Folder: house_30
+  Path: output\houses\house_30
+  Size: 3.69 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=14
+
+Folder: house_31
+  Path: output\houses\house_31
+  Size: 4.95 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=31
+
+Folder: house_32
+  Path: output\houses\house_32
+  Size: 2.29 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: house_33
+  Path: output\houses\house_33
+  Size: 2.06 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=14
+
+Folder: house_34
+  Path: output\houses\house_34
+  Size: 3.13 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=25
+
+Folder: house_35
+  Path: output\houses\house_35
+  Size: 4.00 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=15
+
+Folder: house_36
+  Path: output\houses\house_36
+  Size: 3.91 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=25
+
+Folder: house_37
+  Path: output\houses\house_37
+  Size: 5.84 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=32
+
+Folder: house_38
+  Path: output\houses\house_38
+  Size: 1.69 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=16
+
+Folder: house_39
+  Path: output\houses\house_39
+  Size: 1.97 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=15
+
+Folder: house_40
+  Path: output\houses\house_40
+  Size: 1.84 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: house_41
+  Path: output\houses\house_41
+  Size: 1.51 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=6
+
+Folder: house_42
+  Path: output\houses\house_42
+  Size: 4.35 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=15
+
+Folder: house_43
+  Path: output\houses\house_43
+  Size: 0.80 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=6
+
+Folder: house_44
+  Path: output\houses\house_44
+  Size: 1.66 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=17
+
+Folder: house_45
+  Path: output\houses\house_45
+  Size: 2.36 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: house_46
+  Path: output\houses\house_46
+  Size: 5.13 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=16
+
+Folder: house_47
+  Path: output\houses\house_47
+  Size: 3.96 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=13
+
+Folder: house_48
+  Path: output\houses\house_48
+  Size: 2.02 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=6
+
+Folder: house_49
+  Path: output\houses\house_49
+  Size: 2.49 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: house_50
+  Path: output\houses\house_50
+  Size: 1.06 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=5
+
+Folder: house_51
+  Path: output\houses\house_51
+  Size: 1.71 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: house_52
+  Path: output\houses\house_52
+  Size: 2.69 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: house_53
+  Path: output\houses\house_53
+  Size: 1.52 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: house_54
+  Path: output\houses\house_54
+  Size: 2.33 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: house_55
+  Path: output\houses\house_55
+  Size: 5.77 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=35
+
+Folder: house_56
+  Path: output\houses\house_56
+  Size: 1.68 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: house_57
+  Path: output\houses\house_57
+  Size: 3.62 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=15
+
+Folder: house_58
+  Path: output\houses\house_58
+  Size: 6.94 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=23
+
+Folder: house_59
+  Path: output\houses\house_59
+  Size: 9.89 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=15
+
+Folder: house_60
+  Path: output\houses\house_60
+  Size: 0.61 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=4
+
+Folder: house_61
+  Path: output\houses\house_61
+  Size: 1.80 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: house_62
+  Path: output\houses\house_62
+  Size: 1.98 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: house_63
+  Path: output\houses\house_63
+  Size: 1.03 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: house_64
+  Path: output\houses\house_64
+  Size: 2.19 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=17
+
+Folder: house_65
+  Path: output\houses\house_65
+  Size: 2.91 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=33
+
+Folder: house_66
+  Path: output\houses\house_66
+  Size: 2.10 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=17
+
+Folder: house_67
+  Path: output\houses\house_67
+  Size: 1.94 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=14
+
+Folder: house_68
+  Path: output\houses\house_68
+  Size: 1.02 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: house_69
+  Path: output\houses\house_69
+  Size: 3.02 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=13
+
+Folder: house_70
+  Path: output\houses\house_70
+  Size: 2.65 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=14
+
+Folder: house_71
+  Path: output\houses\house_71
+  Size: 1.81 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: house_72
+  Path: output\houses\house_72
+  Size: 1.51 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: house_73
+  Path: output\houses\house_73
+  Size: 2.74 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=21
+
+Folder: seo
+  Path: seo
+  Size: 3.10 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=22, CSS=0, JS=0, JSON=0, Images=20
+
+Folder: images
+  Path: seo\images
+  Size: 2.98 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=20
+
+Folder: aksay-centre
+  Path: seo\images\aksay-centre
+  Size: 0.41 MB
+  Last Modified: 2026-02-11
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=4
+
+Folder: aksay-kom
+  Path: seo\images\aksay-kom
+  Size: 0.56 MB
+  Last Modified: 2026-02-11
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=4
+
+Folder: muhina-balka
+  Path: seo\images\muhina-balka
+  Size: 0.24 MB
+  Last Modified: 2026-02-11
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=4
+
+Folder: samocvety
+  Path: seo\images\samocvety
+  Size: 1.29 MB
+  Last Modified: 2026-02-11
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=4
+
+Folder: zhk-flora
+  Path: seo\images\zhk-flora
+  Size: 0.49 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=4
+
+Folder: source
+  Path: source
+  Size: 2.33 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=1, CSS=8, JS=0, JSON=0, Images=1
+
+Folder: apartments_files
+  Path: source\apartments_files
+  Size: 0.10 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=8, JS=0, JSON=0, Images=1
+
+Folder: staging-build
+  Path: staging-build
+  Size: 183.53 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=34, CSS=7, JS=5, JSON=113, Images=1266
+
+Folder: assets
+  Path: staging-build\assets
+  Size: 3.55 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=6, JS=4, JSON=0, Images=20
+
+Folder: about
+  Path: staging-build\assets\about
+  Size: 0.82 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=5
+
+Folder: certificates
+  Path: staging-build\assets\certificates
+  Size: 0.38 MB
+  Last Modified: 2026-03-12
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=3
+
+Folder: css
+  Path: staging-build\assets\css
+  Size: 0.07 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=6, JS=0, JSON=0, Images=0
+
+Folder: events
+  Path: staging-build\assets\events
+  Size: 0.26 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=1
+
+Folder: hero
+  Path: staging-build\assets\hero
+  Size: 0.95 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=2
+
+Folder: img
+  Path: staging-build\assets\img
+  Size: 0.10 MB
+  Last Modified: 2026-03-12
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=1
+
+Folder: agents
+  Path: staging-build\assets\img\agents
+  Size: 0.10 MB
+  Last Modified: 2026-03-12
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=1
+
+Folder: js
+  Path: staging-build\assets\js
+  Size: 0.03 MB
+  Last Modified: 2026-03-26
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=4, JSON=0, Images=0
+
+Folder: office
+  Path: staging-build\assets\office
+  Size: 0.16 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=1
+
+Folder: team
+  Path: staging-build\assets\team
+  Size: 0.43 MB
+  Last Modified: 2026-03-12
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=3
+
+Folder: types
+  Path: staging-build\assets\types
+  Size: 0.35 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=4
+
+Folder: images
+  Path: staging-build\images
+  Size: 0.15 MB
+  Last Modified: 2026-03-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=1
+
+Folder: default
+  Path: staging-build\images\default
+  Size: 0.15 MB
+  Last Modified: 2026-03-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=1
+
+Folder: objects
+  Path: staging-build\objects
+  Size: 165.18 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=113, Images=1211
+
+Folder: object_01
+  Path: staging-build\objects\object_01
+  Size: 1.22 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: object_02
+  Path: staging-build\objects\object_02
+  Size: 1.05 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=5
+
+Folder: object_03
+  Path: staging-build\objects\object_03
+  Size: 0.73 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_04
+  Path: staging-build\objects\object_04
+  Size: 0.48 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=6
+
+Folder: object_05
+  Path: staging-build\objects\object_05
+  Size: 1.00 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_06
+  Path: staging-build\objects\object_06
+  Size: 0.81 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_07
+  Path: staging-build\objects\object_07
+  Size: 0.75 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_08
+  Path: staging-build\objects\object_08
+  Size: 0.38 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=6
+
+Folder: object_09
+  Path: staging-build\objects\object_09
+  Size: 1.10 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=14
+
+Folder: object_10
+  Path: staging-build\objects\object_10
+  Size: 2.46 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=19
+
+Folder: object_100
+  Path: staging-build\objects\object_100
+  Size: 2.37 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=14
+
+Folder: object_101
+  Path: staging-build\objects\object_101
+  Size: 2.88 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=22
+
+Folder: object_102
+  Path: staging-build\objects\object_102
+  Size: 0.95 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_103
+  Path: staging-build\objects\object_103
+  Size: 0.88 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_104
+  Path: staging-build\objects\object_104
+  Size: 2.72 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=17
+
+Folder: object_105
+  Path: staging-build\objects\object_105
+  Size: 3.51 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=13
+
+Folder: object_106
+  Path: staging-build\objects\object_106
+  Size: 3.49 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=13
+
+Folder: object_107
+  Path: staging-build\objects\object_107
+  Size: 3.47 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=20
+
+Folder: object_108
+  Path: staging-build\objects\object_108
+  Size: 10.66 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=23
+
+Folder: object_109
+  Path: staging-build\objects\object_109
+  Size: 0.52 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_11
+  Path: staging-build\objects\object_11
+  Size: 1.98 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=18
+
+Folder: object_110
+  Path: staging-build\objects\object_110
+  Size: 6.61 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=16
+
+Folder: object_111
+  Path: staging-build\objects\object_111
+  Size: 1.09 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=10
+
+Folder: object_112
+  Path: staging-build\objects\object_112
+  Size: 1.63 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_12
+  Path: staging-build\objects\object_12
+  Size: 0.70 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_13
+  Path: staging-build\objects\object_13
+  Size: 0.48 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_14
+  Path: staging-build\objects\object_14
+  Size: 0.93 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_15
+  Path: staging-build\objects\object_15
+  Size: 0.53 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_16
+  Path: staging-build\objects\object_16
+  Size: 0.41 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_17
+  Path: staging-build\objects\object_17
+  Size: 0.08 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=1
+
+Folder: object_18
+  Path: staging-build\objects\object_18
+  Size: 1.22 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=17
+
+Folder: object_19
+  Path: staging-build\objects\object_19
+  Size: 1.60 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_20
+  Path: staging-build\objects\object_20
+  Size: 1.67 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=19
+
+Folder: object_21
+  Path: staging-build\objects\object_21
+  Size: 1.68 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=17
+
+Folder: object_22
+  Path: staging-build\objects\object_22
+  Size: 1.68 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=19
+
+Folder: object_23
+  Path: staging-build\objects\object_23
+  Size: 1.12 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_24
+  Path: staging-build\objects\object_24
+  Size: 0.79 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_25
+  Path: staging-build\objects\object_25
+  Size: 1.27 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=6
+
+Folder: object_26
+  Path: staging-build\objects\object_26
+  Size: 5.32 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=17
+
+Folder: object_27
+  Path: staging-build\objects\object_27
+  Size: 1.27 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_28
+  Path: staging-build\objects\object_28
+  Size: 0.53 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=5
+
+Folder: object_29
+  Path: staging-build\objects\object_29
+  Size: 1.30 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=15
+
+Folder: object_30
+  Path: staging-build\objects\object_30
+  Size: 2.11 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: object_31
+  Path: staging-build\objects\object_31
+  Size: 1.51 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_32
+  Path: staging-build\objects\object_32
+  Size: 1.61 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_33
+  Path: staging-build\objects\object_33
+  Size: 0.38 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=5
+
+Folder: object_34
+  Path: staging-build\objects\object_34
+  Size: 1.56 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=13
+
+Folder: object_35
+  Path: staging-build\objects\object_35
+  Size: 0.95 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: object_36
+  Path: staging-build\objects\object_36
+  Size: 0.89 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_37
+  Path: staging-build\objects\object_37
+  Size: 1.86 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=16
+
+Folder: object_38
+  Path: staging-build\objects\object_38
+  Size: 1.20 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=14
+
+Folder: object_39
+  Path: staging-build\objects\object_39
+  Size: 0.49 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: object_40
+  Path: staging-build\objects\object_40
+  Size: 1.35 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: object_41
+  Path: staging-build\objects\object_41
+  Size: 1.60 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: object_42
+  Path: staging-build\objects\object_42
+  Size: 1.41 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=13
+
+Folder: object_43
+  Path: staging-build\objects\object_43
+  Size: 0.29 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: object_44
+  Path: staging-build\objects\object_44
+  Size: 1.42 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=18
+
+Folder: object_45
+  Path: staging-build\objects\object_45
+  Size: 4.10 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=21
+
+Folder: object_46
+  Path: staging-build\objects\object_46
+  Size: 2.34 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=15
+
+Folder: object_47
+  Path: staging-build\objects\object_47
+  Size: 0.46 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=6
+
+Folder: object_48
+  Path: staging-build\objects\object_48
+  Size: 0.76 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_49
+  Path: staging-build\objects\object_49
+  Size: 1.16 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=10
+
+Folder: object_50
+  Path: staging-build\objects\object_50
+  Size: 1.85 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_51
+  Path: staging-build\objects\object_51
+  Size: 0.99 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_52
+  Path: staging-build\objects\object_52
+  Size: 0.63 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_53
+  Path: staging-build\objects\object_53
+  Size: 0.95 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: object_54
+  Path: staging-build\objects\object_54
+  Size: 2.71 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=17
+
+Folder: object_55
+  Path: staging-build\objects\object_55
+  Size: 0.21 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=1
+
+Folder: object_56
+  Path: staging-build\objects\object_56
+  Size: 0.75 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_57
+  Path: staging-build\objects\object_57
+  Size: 0.68 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_58
+  Path: staging-build\objects\object_58
+  Size: 0.92 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_59
+  Path: staging-build\objects\object_59
+  Size: 1.88 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=18
+
+Folder: object_60
+  Path: staging-build\objects\object_60
+  Size: 1.22 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: object_61
+  Path: staging-build\objects\object_61
+  Size: 0.81 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: object_62
+  Path: staging-build\objects\object_62
+  Size: 1.69 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_63
+  Path: staging-build\objects\object_63
+  Size: 2.05 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=13
+
+Folder: object_64
+  Path: staging-build\objects\object_64
+  Size: 1.36 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_65
+  Path: staging-build\objects\object_65
+  Size: 2.12 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: object_66
+  Path: staging-build\objects\object_66
+  Size: 0.83 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: object_67
+  Path: staging-build\objects\object_67
+  Size: 0.74 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_68
+  Path: staging-build\objects\object_68
+  Size: 2.04 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=10
+
+Folder: object_69
+  Path: staging-build\objects\object_69
+  Size: 1.55 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=15
+
+Folder: object_70
+  Path: staging-build\objects\object_70
+  Size: 1.76 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=15
+
+Folder: object_71
+  Path: staging-build\objects\object_71
+  Size: 1.48 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=15
+
+Folder: object_72
+  Path: staging-build\objects\object_72
+  Size: 0.18 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=1
+
+Folder: object_73
+  Path: staging-build\objects\object_73
+  Size: 0.24 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=1
+
+Folder: object_74
+  Path: staging-build\objects\object_74
+  Size: 0.24 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=1
+
+Folder: object_75
+  Path: staging-build\objects\object_75
+  Size: 0.06 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=1
+
+Folder: object_76
+  Path: staging-build\objects\object_76
+  Size: 0.64 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=5
+
+Folder: object_77
+  Path: staging-build\objects\object_77
+  Size: 1.50 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_78
+  Path: staging-build\objects\object_78
+  Size: 1.55 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_79
+  Path: staging-build\objects\object_79
+  Size: 4.82 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: object_80
+  Path: staging-build\objects\object_80
+  Size: 1.83 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=20
+
+Folder: object_81
+  Path: staging-build\objects\object_81
+  Size: 1.11 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_82
+  Path: staging-build\objects\object_82
+  Size: 1.58 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=16
+
+Folder: object_83
+  Path: staging-build\objects\object_83
+  Size: 0.93 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=13
+
+Folder: object_84
+  Path: staging-build\objects\object_84
+  Size: 1.51 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: object_85
+  Path: staging-build\objects\object_85
+  Size: 0.14 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=1
+
+Folder: object_86
+  Path: staging-build\objects\object_86
+  Size: 1.23 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: object_87
+  Path: staging-build\objects\object_87
+  Size: 0.77 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_88
+  Path: staging-build\objects\object_88
+  Size: 0.79 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_89
+  Path: staging-build\objects\object_89
+  Size: 1.04 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=9
+
+Folder: object_90
+  Path: staging-build\objects\object_90
+  Size: 0.88 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=10
+
+Folder: object_91
+  Path: staging-build\objects\object_91
+  Size: 1.55 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: object_92
+  Path: staging-build\objects\object_92
+  Size: 1.39 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=7
+
+Folder: object_93
+  Path: staging-build\objects\object_93
+  Size: 2.37 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=14
+
+Folder: object_94
+  Path: staging-build\objects\object_94
+  Size: 1.67 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=10
+
+Folder: object_95
+  Path: staging-build\objects\object_95
+  Size: 1.49 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=10
+
+Folder: object_96
+  Path: staging-build\objects\object_96
+  Size: 0.59 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=8
+
+Folder: object_97
+  Path: staging-build\objects\object_97
+  Size: 1.04 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=12
+
+Folder: object_98
+  Path: staging-build\objects\object_98
+  Size: 0.51 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=10
+
+Folder: object_99
+  Path: staging-build\objects\object_99
+  Size: 1.50 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=1, Images=11
+
+Folder: seo
+  Path: staging-build\seo
+  Size: 3.10 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=22, CSS=0, JS=0, JSON=0, Images=20
+
+Folder: images
+  Path: staging-build\seo\images
+  Size: 2.98 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=20
+
+Folder: aksay-centre
+  Path: staging-build\seo\images\aksay-centre
+  Size: 0.41 MB
+  Last Modified: 2026-02-11
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=4
+
+Folder: aksay-kom
+  Path: staging-build\seo\images\aksay-kom
+  Size: 0.56 MB
+  Last Modified: 2026-02-11
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=4
+
+Folder: muhina-balka
+  Path: staging-build\seo\images\muhina-balka
+  Size: 0.24 MB
+  Last Modified: 2026-02-11
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=4
+
+Folder: samocvety
+  Path: staging-build\seo\images\samocvety
+  Size: 1.29 MB
+  Last Modified: 2026-02-11
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=4
+
+Folder: zhk-flora
+  Path: staging-build\seo\images\zhk-flora
+  Size: 0.49 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=4
+
+Folder: team
+  Path: staging-build\team
+  Size: 0.02 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=1, CSS=0, JS=0, JSON=0, Images=0
+
+Folder: ui-blocks
+  Path: staging-build\ui-blocks
+  Size: 11.40 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=2, CSS=1, JS=1, JSON=0, Images=14
+
+Folder: assets
+  Path: staging-build\ui-blocks\assets
+  Size: 11.32 MB
+  Last Modified: 2026-03-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=14
+
+Folder: icons
+  Path: staging-build\ui-blocks\assets\icons
+  Size: 0.00 MB
+  Last Modified: UNKNOWN
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=0
+
+Folder: images
+  Path: staging-build\ui-blocks\assets\images
+  Size: 11.32 MB
+  Last Modified: 2026-03-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=14
+
+Folder: placeholders
+  Path: staging-build\ui-blocks\assets\placeholders
+  Size: 0.00 MB
+  Last Modified: UNKNOWN
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=0
+
+Folder: css
+  Path: staging-build\ui-blocks\css
+  Size: 0.02 MB
+  Last Modified: 2026-03-23
+  Usage: REFERENCED
+  Files: HTML=0, CSS=1, JS=0, JSON=0, Images=0
+
+Folder: js
+  Path: staging-build\ui-blocks\js
+  Size: 0.01 MB
+  Last Modified: 2026-03-19
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=1, JSON=0, Images=0
+
+Folder: team
+  Path: team
+  Size: 0.02 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=1, CSS=0, JS=0, JSON=0, Images=0
+
+Folder: tools
+  Path: tools
+  Size: 0.00 MB
+  Last Modified: UNKNOWN
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=0
+
+Folder: ui-blocks
+  Path: ui-blocks
+  Size: 11.40 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Files: HTML=2, CSS=1, JS=1, JSON=0, Images=14
+
+Folder: assets
+  Path: ui-blocks\assets
+  Size: 11.32 MB
+  Last Modified: 2026-03-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=14
+
+Folder: icons
+  Path: ui-blocks\assets\icons
+  Size: 0.00 MB
+  Last Modified: UNKNOWN
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=0
+
+Folder: images
+  Path: ui-blocks\assets\images
+  Size: 11.32 MB
+  Last Modified: 2026-03-11
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=14
+
+Folder: placeholders
+  Path: ui-blocks\assets\placeholders
+  Size: 0.00 MB
+  Last Modified: UNKNOWN
+  Usage: NOT_REFERENCED
+  Files: HTML=0, CSS=0, JS=0, JSON=0, Images=0
+
+Folder: css
+  Path: ui-blocks\css
+  Size: 0.02 MB
+  Last Modified: 2026-03-23
+  Usage: REFERENCED
+  Files: HTML=0, CSS=1, JS=0, JSON=0, Images=0
+
+Folder: js
+  Path: ui-blocks\js
+  Size: 0.01 MB
+  Last Modified: 2026-03-19
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=1, JSON=0, Images=0
+
+Folder: ui-rebuild
+  Path: ui-rebuild
+  Size: 0.02 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Files: HTML=1, CSS=1, JS=1, JSON=0, Images=0
+
+Folder: css
+  Path: ui-rebuild\css
+  Size: 0.00 MB
+  Last Modified: 2026-03-20
+  Usage: REFERENCED
+  Files: HTML=0, CSS=1, JS=0, JSON=0, Images=0
+
+Folder: js
+  Path: ui-rebuild\js
+  Size: 0.00 MB
+  Last Modified: 2026-03-20
+  Usage: REFERENCED
+  Files: HTML=0, CSS=0, JS=1, JSON=0, Images=0
+
+
+---
+
+CANDIDATE_UNUSED_FOLDERS
+
+Folder: OLD
+  Size: 0.26 MB
+  Last Modified: 2026-01-26
+  Usage: NOT_REFERENCED
+  Reason: unused folder name, not referenced by code, older than 30 days (60 days)
+
+Folder: OLD\output
+  Size: 0.01 MB
+  Last Modified: 2026-01-26
+  Usage: REFERENCED
+  Reason: older than 30 days (60 days)
+
+Folder: OLD\output\lands
+  Size: 0.01 MB
+  Last Modified: 2026-01-26
+  Usage: REFERENCED
+  Reason: older than 30 days (60 days)
+
+Folder: OLD\output\lands\land_01
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code, older than 30 days (60 days)
+
+Folder: OLD\output\lands\land_02
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: REFERENCED
+  Reason: older than 30 days (60 days)
+
+Folder: OLD\output\lands\land_03
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: REFERENCED
+  Reason: older than 30 days (60 days)
+
+Folder: OLD\output\lands\land_04
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code, older than 30 days (60 days)
+
+Folder: OLD\output\lands\land_05
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: REFERENCED
+  Reason: older than 30 days (60 days)
+
+Folder: OLD\output\lands\land_06
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code, older than 30 days (60 days)
+
+Folder: OLD\output\lands\land_07
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: REFERENCED
+  Reason: older than 30 days (60 days)
+
+Folder: OLD\output\lands\land_08
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: REFERENCED
+  Reason: older than 30 days (60 days)
+
+Folder: OLD\output\lands\land_09
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: REFERENCED
+  Reason: older than 30 days (60 days)
+
+Folder: OLD\output\lands\land_10
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code, older than 30 days (60 days)
+
+Folder: OLD\output\lands\land_11
+  Size: 0.00 MB
+  Last Modified: 2026-01-26
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code, older than 30 days (60 days)
+
+Folder: OLD\Новостройки в Аксае и Ростовской области_files
+  Size: 0.08 MB
+  Last Modified: 2025-12-30
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code, older than 30 days (87 days)
+
+Folder: OLD\Участки в Аксае и Ростовской области_files
+  Size: 0.08 MB
+  Last Modified: 2025-12-30
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code, older than 30 days (87 days)
+
+Folder: OLD\Частные Дома в Аксае и Ростовской области_files
+  Size: 0.08 MB
+  Last Modified: 2025-12-30
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code, older than 30 days (87 days)
+
+Folder: Old2
+  Size: 2.34 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: unused folder name, not referenced by code
+
+Folder: Old2\Квартиры_files
+  Size: 1.13 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: Old2\Участки в Аксае и Ростовской области_files
+  Size: 1.13 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: Old2\Частные Дома в Аксае и Ростовской области_files
+  Size: 0.08 MB
+  Last Modified: 2025-12-30
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code, older than 30 days (87 days)
+
+Folder: __pycache__
+  Size: 0.00 MB
+  Last Modified: UNKNOWN
+  Usage: NOT_REFERENCED
+  Reason: unused folder name, not referenced by code
+
+Folder: _quarantine
+  Size: 27.53 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: unused folder name, not referenced by code
+
+Folder: _quarantine\backup
+  Size: 7.88 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: unused folder name, not referenced by code
+
+Folder: _quarantine\encoding_corrupted
+  Size: 0.02 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: _quarantine\encoding_corrupted\seo
+  Size: 0.02 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: _quarantine\html
+  Size: 5.50 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: _quarantine\images
+  Size: 13.98 MB
+  Last Modified: 2026-03-19
+  Usage: REFERENCED
+  Reason: 
+
+Folder: _quarantine\json
+  Size: 0.00 MB
+  Last Modified: UNKNOWN
+  Usage: REFERENCED
+  Reason: 
+
+Folder: _quarantine\scripts
+  Size: 0.15 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: _quarantine\styles
+  Size: 0.00 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: assets\about
+  Size: 0.82 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Reason: older than 30 days (44 days)
+
+Folder: assets\events
+  Size: 0.26 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Reason: older than 30 days (44 days)
+
+Folder: assets\hero
+  Size: 0.95 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Reason: older than 30 days (44 days)
+
+Folder: assets\office
+  Size: 0.16 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Reason: older than 30 days (44 days)
+
+Folder: assets\types
+  Size: 0.35 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Reason: older than 30 days (44 days)
+
+Folder: company-rebuild
+  Size: 1.18 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: unused folder name, not referenced by code
+
+Folder: company-rebuild\assets
+  Size: 1.09 MB
+  Last Modified: 2026-03-12
+  Usage: REFERENCED
+  Reason: 
+
+Folder: company-rebuild\assets\certificates
+  Size: 0.38 MB
+  Last Modified: 2026-03-12
+  Usage: REFERENCED
+  Reason: 
+
+Folder: company-rebuild\assets\events
+  Size: 0.26 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Reason: older than 30 days (44 days)
+
+Folder: company-rebuild\assets\office
+  Size: 0.16 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Reason: older than 30 days (44 days)
+
+Folder: company-rebuild\assets\team
+  Size: 0.29 MB
+  Last Modified: 2026-03-12
+  Usage: REFERENCED
+  Reason: 
+
+Folder: company-rebuild\css
+  Size: 0.04 MB
+  Last Modified: 2026-03-20
+  Usage: REFERENCED
+  Reason: 
+
+Folder: company-rebuild\js
+  Size: 0.00 MB
+  Last Modified: UNKNOWN
+  Usage: REFERENCED
+  Reason: 
+
+Folder: seo\images
+  Size: 2.98 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Reason: older than 30 days (44 days)
+
+Folder: seo\images\aksay-centre
+  Size: 0.41 MB
+  Last Modified: 2026-02-11
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code, older than 30 days (44 days)
+
+Folder: seo\images\aksay-kom
+  Size: 0.56 MB
+  Last Modified: 2026-02-11
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code, older than 30 days (44 days)
+
+Folder: seo\images\muhina-balka
+  Size: 0.24 MB
+  Last Modified: 2026-02-11
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code, older than 30 days (44 days)
+
+Folder: seo\images\samocvety
+  Size: 1.29 MB
+  Last Modified: 2026-02-11
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code, older than 30 days (44 days)
+
+Folder: seo\images\zhk-flora
+  Size: 0.49 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Reason: older than 30 days (44 days)
+
+Folder: source
+  Size: 2.33 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: unused folder name
+
+Folder: source\apartments_files
+  Size: 0.10 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Reason: older than 30 days (44 days)
+
+Folder: staging-build
+  Size: 183.53 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\assets
+  Size: 3.55 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\assets\about
+  Size: 0.82 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Reason: older than 30 days (44 days)
+
+Folder: staging-build\assets\certificates
+  Size: 0.38 MB
+  Last Modified: 2026-03-12
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\assets\css
+  Size: 0.07 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\assets\events
+  Size: 0.26 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Reason: older than 30 days (44 days)
+
+Folder: staging-build\assets\hero
+  Size: 0.95 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Reason: older than 30 days (44 days)
+
+Folder: staging-build\assets\img
+  Size: 0.10 MB
+  Last Modified: 2026-03-12
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\assets\img\agents
+  Size: 0.10 MB
+  Last Modified: 2026-03-12
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\assets\js
+  Size: 0.03 MB
+  Last Modified: 2026-03-26
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\assets\office
+  Size: 0.16 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Reason: older than 30 days (44 days)
+
+Folder: staging-build\assets\team
+  Size: 0.43 MB
+  Last Modified: 2026-03-12
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\assets\types
+  Size: 0.35 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Reason: older than 30 days (44 days)
+
+Folder: staging-build\images
+  Size: 0.15 MB
+  Last Modified: 2026-03-11
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\images\default
+  Size: 0.15 MB
+  Last Modified: 2026-03-11
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects
+  Size: 165.18 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_01
+  Size: 1.22 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_02
+  Size: 1.05 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_03
+  Size: 0.73 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_04
+  Size: 0.48 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_05
+  Size: 1.00 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_06
+  Size: 0.81 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_07
+  Size: 0.75 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_08
+  Size: 0.38 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_09
+  Size: 1.10 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_10
+  Size: 2.46 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_100
+  Size: 2.37 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_101
+  Size: 2.88 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_102
+  Size: 0.95 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_103
+  Size: 0.88 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_104
+  Size: 2.72 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_105
+  Size: 3.51 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_106
+  Size: 3.49 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_107
+  Size: 3.47 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_108
+  Size: 10.66 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_109
+  Size: 0.52 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_11
+  Size: 1.98 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_110
+  Size: 6.61 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_111
+  Size: 1.09 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_112
+  Size: 1.63 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_12
+  Size: 0.70 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_13
+  Size: 0.48 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_14
+  Size: 0.93 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_15
+  Size: 0.53 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_16
+  Size: 0.41 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_17
+  Size: 0.08 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_18
+  Size: 1.22 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_19
+  Size: 1.60 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_20
+  Size: 1.67 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_21
+  Size: 1.68 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_22
+  Size: 1.68 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_23
+  Size: 1.12 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_24
+  Size: 0.79 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_25
+  Size: 1.27 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_26
+  Size: 5.32 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_27
+  Size: 1.27 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_28
+  Size: 0.53 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_29
+  Size: 1.30 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_30
+  Size: 2.11 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_31
+  Size: 1.51 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_32
+  Size: 1.61 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_33
+  Size: 0.38 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_34
+  Size: 1.56 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_35
+  Size: 0.95 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_36
+  Size: 0.89 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_37
+  Size: 1.86 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_38
+  Size: 1.20 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_39
+  Size: 0.49 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_40
+  Size: 1.35 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_41
+  Size: 1.60 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_42
+  Size: 1.41 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_43
+  Size: 0.29 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_44
+  Size: 1.42 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_45
+  Size: 4.10 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_46
+  Size: 2.34 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_47
+  Size: 0.46 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_48
+  Size: 0.76 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_49
+  Size: 1.16 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_50
+  Size: 1.85 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_51
+  Size: 0.99 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_52
+  Size: 0.63 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_53
+  Size: 0.95 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_54
+  Size: 2.71 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_55
+  Size: 0.21 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_56
+  Size: 0.75 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_57
+  Size: 0.68 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_58
+  Size: 0.92 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_59
+  Size: 1.88 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_60
+  Size: 1.22 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_61
+  Size: 0.81 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_62
+  Size: 1.69 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_63
+  Size: 2.05 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_64
+  Size: 1.36 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_65
+  Size: 2.12 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_66
+  Size: 0.83 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_67
+  Size: 0.74 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_68
+  Size: 2.04 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_69
+  Size: 1.55 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_70
+  Size: 1.76 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_71
+  Size: 1.48 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_72
+  Size: 0.18 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_73
+  Size: 0.24 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_74
+  Size: 0.24 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_75
+  Size: 0.06 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_76
+  Size: 0.64 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_77
+  Size: 1.50 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_78
+  Size: 1.55 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_79
+  Size: 4.82 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_80
+  Size: 1.83 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_81
+  Size: 1.11 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_82
+  Size: 1.58 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_83
+  Size: 0.93 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_84
+  Size: 1.51 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_85
+  Size: 0.14 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_86
+  Size: 1.23 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_87
+  Size: 0.77 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_88
+  Size: 0.79 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_89
+  Size: 1.04 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_90
+  Size: 0.88 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_91
+  Size: 1.55 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_92
+  Size: 1.39 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_93
+  Size: 2.37 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_94
+  Size: 1.67 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_95
+  Size: 1.49 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\objects\object_96
+  Size: 0.59 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_97
+  Size: 1.04 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_98
+  Size: 0.51 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\objects\object_99
+  Size: 1.50 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code
+
+Folder: staging-build\seo
+  Size: 3.10 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\seo\images
+  Size: 2.98 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Reason: older than 30 days (44 days)
+
+Folder: staging-build\seo\images\aksay-centre
+  Size: 0.41 MB
+  Last Modified: 2026-02-11
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code, older than 30 days (44 days)
+
+Folder: staging-build\seo\images\aksay-kom
+  Size: 0.56 MB
+  Last Modified: 2026-02-11
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code, older than 30 days (44 days)
+
+Folder: staging-build\seo\images\muhina-balka
+  Size: 0.24 MB
+  Last Modified: 2026-02-11
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code, older than 30 days (44 days)
+
+Folder: staging-build\seo\images\samocvety
+  Size: 1.29 MB
+  Last Modified: 2026-02-11
+  Usage: NOT_REFERENCED
+  Reason: not referenced by code, older than 30 days (44 days)
+
+Folder: staging-build\seo\images\zhk-flora
+  Size: 0.49 MB
+  Last Modified: 2026-02-11
+  Usage: REFERENCED
+  Reason: older than 30 days (44 days)
+
+Folder: staging-build\team
+  Size: 0.02 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\ui-blocks
+  Size: 11.40 MB
+  Last Modified: 2026-03-27
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\ui-blocks\assets
+  Size: 11.32 MB
+  Last Modified: 2026-03-11
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\ui-blocks\assets\icons
+  Size: 0.00 MB
+  Last Modified: UNKNOWN
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\ui-blocks\assets\images
+  Size: 11.32 MB
+  Last Modified: 2026-03-11
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\ui-blocks\assets\placeholders
+  Size: 0.00 MB
+  Last Modified: UNKNOWN
+  Usage: NOT_REFERENCED
+  Reason: unused folder name, not referenced by code
+
+Folder: staging-build\ui-blocks\css
+  Size: 0.02 MB
+  Last Modified: 2026-03-23
+  Usage: REFERENCED
+  Reason: 
+
+Folder: staging-build\ui-blocks\js
+  Size: 0.01 MB
+  Last Modified: 2026-03-19
+  Usage: REFERENCED
+  Reason: 
+
+Folder: ui-blocks\assets\placeholders
+  Size: 0.00 MB
+  Last Modified: UNKNOWN
+  Usage: NOT_REFERENCED
+  Reason: unused folder name, not referenced by code
+
+Folder: ui-rebuild
+  Size: 0.02 MB
+  Last Modified: 2026-03-27
+  Usage: NOT_REFERENCED
+  Reason: unused folder name, not referenced by code
+
+Folder: ui-rebuild\css
+  Size: 0.00 MB
+  Last Modified: 2026-03-20
+  Usage: REFERENCED
+  Reason: 
+
+Folder: ui-rebuild\js
+  Size: 0.00 MB
+  Last Modified: 2026-03-20
+  Usage: REFERENCED
+  Reason: 
+
+
+---
+
+PROJECT_READY_FOR_CLEANUP:
+YES
+
+---
+
+END OF REPORT
