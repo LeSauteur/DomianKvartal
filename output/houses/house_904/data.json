@@ -1,0 +1,12 @@
+﻿{
+    "id":  "house_904",
+    "title":  "Новый дом 904",
+    "description":  "Описание объекта",
+    "price":  "Цена договорная",
+    "images":  [
+
+               ],
+    "created_at":  "2026-03-30",
+    "status":  "active",
+    "is_placeholder":  true
+}

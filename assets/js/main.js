@@ -593,12 +593,105 @@
     });
   }
 
+  function fetchJsonWithFallback(primaryPath, fallbackPath) {
+    return fetchJson(primaryPath).catch(function () {
+      if (!fallbackPath || fallbackPath === primaryPath) {
+        throw new Error("Failed to load " + primaryPath);
+      }
+      return fetchJson(fallbackPath);
+    });
+  }
+
+  function getTypeLabel(type) {
+    return {
+      apartment: "Квартира",
+      house: "Дом",
+      land: "Участок",
+      newbuild: "Новостройка"
+    }[type] || "Объект";
+  }
+
+  function renderNewObjectCard(item) {
+    var title = escapeHtml(item.title || "Объект");
+    var image = escapeHtml(item.image || "assets/hero/hero.jpg");
+    var price = escapeHtml(item.price || "Цена по запросу");
+    var url = escapeHtml(item.url || "#");
+    var typeLabel = escapeHtml(getTypeLabel(item.type));
+
+    return [
+      '<article class="new-object-card">',
+      '<img src="' + image + '" loading="lazy" alt="' + title + '">',
+      '<div class="new-object-card__content">',
+      '<span class="new-object-card__type">' + typeLabel + '</span>',
+      '<h3>' + title + '</h3>',
+      '<div class="new-object-card__price">' + price + '</div>',
+      '<a class="btn new-object-card__btn" href="' + url + '">Подробнее</a>',
+      '</div>',
+      '</article>'
+    ].join("");
+  }
+
+  function initNewObjects() {
+    var container = qs("#new-objects-cards");
+    if (!container) return;
+
+    container.innerHTML = '<p class="loading-state">Загрузка новых объектов...</p>';
+
+    fetchJsonWithFallback("/output/home/new-objects.json", "output/home/new-objects.json")
+      .then(function (items) {
+        if (!Array.isArray(items) || !items.length) {
+          container.innerHTML = '<p class="loading-state">Новые объекты пока не добавлены.</p>';
+          return;
+        }
+        container.innerHTML = items.slice(0, 8).map(renderNewObjectCard).join("");
+      })
+      .catch(function (error) {
+        container.innerHTML = '<p class="loading-state">Не удалось загрузить новые объекты.</p>';
+        console.error(error);
+      });
+  }
+
+  function getListingNewObjectsPath(listingType) {
+    return {
+      apartments: "apartments",
+      houses: "houses",
+      lands: "lands",
+      newbuilds: "newbuilds"
+    }[listingType] || null;
+  }
+
+  function initListingNewObjects(listingType) {
+    var container = qs("#listing-new-objects-cards");
+    var outputDir = getListingNewObjectsPath(listingType);
+    if (!container || !outputDir) return;
+
+    container.innerHTML = '<p class="loading-state">Загрузка новых объектов...</p>';
+
+    var primaryPath = "/output/" + outputDir + "/new-objects.json";
+    var fallbackPath = "output/" + outputDir + "/new-objects.json";
+
+    fetchJsonWithFallback(primaryPath, fallbackPath)
+      .then(function (items) {
+        if (!Array.isArray(items) || !items.length) {
+          container.innerHTML = '<p class="loading-state">Новые объекты пока не добавлены.</p>';
+          return;
+        }
+        container.innerHTML = items.slice(0, 10).map(renderNewObjectCard).join("");
+      })
+      .catch(function (error) {
+        container.innerHTML = '<p class="loading-state">Не удалось загрузить новые объекты.</p>';
+        console.error(error);
+      });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initGlobalInteractions();
     initActiveNav();
+    initNewObjects();
 
     var listingType = document.body && document.body.dataset ? document.body.dataset.listing : null;
     if (CATALOG_TYPES.indexOf(listingType) !== -1) {
+      initListingNewObjects(listingType);
       initCatalogPage(listingType);
     }
 

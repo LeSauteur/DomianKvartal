@@ -1,0 +1,74 @@
+﻿[
+    {
+        "id":  "object_910",
+        "title":  "Новая квартира 910",
+        "price":  "Цена договорная",
+        "image":  "assets/hero/hero.jpg",
+        "type":  "apartment",
+        "created_at":  "2026-03-30",
+        "url":  "/details.html?id=object_910"
+    },
+    {
+        "id":  "object_909",
+        "title":  "Новая квартира 909",
+        "price":  "Цена договорная",
+        "image":  "assets/hero/hero.jpg",
+        "type":  "apartment",
+        "created_at":  "2026-03-30",
+        "url":  "/details.html?id=object_909"
+    },
+    {
+        "id":  "house_910",
+        "title":  "Новый дом 910",
+        "price":  "Цена договорная",
+        "image":  "assets/hero/hero.jpg",
+        "type":  "house",
+        "created_at":  "2026-03-30",
+        "url":  "/details.html?id=house_910"
+    },
+    {
+        "id":  "house_909",
+        "title":  "Новый дом 909",
+        "price":  "Цена договорная",
+        "image":  "assets/hero/hero.jpg",
+        "type":  "house",
+        "created_at":  "2026-03-30",
+        "url":  "/details.html?id=house_909"
+    },
+    {
+        "id":  "land_910",
+        "title":  "Новый участок 910",
+        "price":  "Цена договорная",
+        "image":  "assets/hero/hero.jpg",
+        "type":  "land",
+        "created_at":  "2026-03-30",
+        "url":  "/details.html?id=land_910"
+    },
+    {
+        "id":  "land_909",
+        "title":  "Новый участок 909",
+        "price":  "Цена договорная",
+        "image":  "assets/hero/hero.jpg",
+        "type":  "land",
+        "created_at":  "2026-03-30",
+        "url":  "/details.html?id=land_909"
+    },
+    {
+        "id":  "newbuild_910",
+        "title":  "Новая новостройка 910",
+        "price":  "Цена договорная",
+        "image":  "assets/hero/hero.jpg",
+        "type":  "newbuild",
+        "created_at":  "2026-03-30",
+        "url":  "/details.html?id=newbuild_910"
+    },
+    {
+        "id":  "newbuild_909",
+        "title":  "Новая новостройка 909",
+        "price":  "Цена договорная",
+        "image":  "assets/hero/hero.jpg",
+        "type":  "newbuild",
+        "created_at":  "2026-03-30",
+        "url":  "/details.html?id=newbuild_909"
+    }
+]
