@@ -1,0 +1,25 @@
+{
+  "_comment": "Файл для документации структуры данных. Фактическое хранение в localStorage.",
+  "_storage_info": "Данные заявок хранятся в localStorage браузера под ключом 'domian_leads'",
+  "_warning": "Запись в этот файл через JavaScript невозможна на статическом сайте",
+  "structure": [
+    {
+      "id": "1743429600000",
+      "date": "2026-03-31 14:20",
+      "name": "Иван",
+      "phone": "+79000000000",
+      "email": "ivan@mail.ru",
+      "service": "buy",
+      "source": "website"
+    }
+  ],
+  "fields": {
+    "id": "Уникальный идентификатор (timestamp)",
+    "date": "Дата и время создания (YYYY-MM-DD HH:mm)",
+    "name": "Имя клиента",
+    "phone": "Телефон клиента",
+    "email": "Email клиента (необязательно)",
+    "service": "Код услуги: buy/sell/rent/mortgage/consultation",
+    "source": "Источник: website"
+  }
+}

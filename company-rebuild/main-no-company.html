@@ -438,9 +438,10 @@
     <div class="container form-container">
         <h2 class="section-title fade-in">Оставьте заявку</h2>
         <p class="fade-in form-note">Наш специалист свяжется с вами в течение 15 минут</p>
-        <form action="https://formsubmit.co/zuhra_2010_aidan@mail.ru" method="POST" target="_blank">
-            <input type="hidden" name="_subject" value="Заявка с сайта Домиан Квартал">
-            <input type="hidden" name="_captcha" value="false">
+        <form id="lead-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="ff9427fc-65c9-4fb8-b4b7-cc5c28f092f0">
+            <input type="hidden" name="source" value="website">
+            <input type="checkbox" name="botcheck" style="display:none" aria-hidden="true">
             <div class="form-group fade-in"><input type="text" name="name" placeholder="Ваше имя" class="form-control" required></div>
             <div class="form-group fade-in"><input type="tel" name="phone" placeholder="Телефон" class="form-control" required></div>
             <div class="form-group fade-in"><input type="email" name="email" placeholder="Email (по желанию)" class="form-control"></div>
@@ -520,5 +521,6 @@ document.addEventListener('DOMContentLoaded', function() {
     `).join('');
 });
 </script>
+<script src="../assets/js/form-handler.js"></script>
 </body>
 </html>
