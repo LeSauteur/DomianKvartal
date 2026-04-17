@@ -1,92 +1,92 @@
 ﻿[
     {
-        "id":  "object_910",
-        "title":  "Новая квартира 910",
-        "price":  "Цена договорная",
-        "image":  "assets/hero/hero.jpg",
-        "type":  "apartment",
-        "created_at":  "2026-03-30",
-        "url":  "/details.html?id=object_910"
+        "id": "object_910",
+        "title": "Новая квартира 910",
+        "price": "Цена договорная",
+        "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/main.jpg",
+        "type": "apartment",
+        "created_at": "2026-03-30",
+        "url": "/details.html?id=object_910"
     },
     {
-        "id":  "object_909",
-        "title":  "Новая квартира 909",
-        "price":  "Цена договорная",
-        "image":  "assets/hero/hero.jpg",
-        "type":  "apartment",
-        "created_at":  "2026-03-30",
-        "url":  "/details.html?id=object_909"
+        "id": "object_909",
+        "title": "Новая квартира 909",
+        "price": "Цена договорная",
+        "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/main.jpg",
+        "type": "apartment",
+        "created_at": "2026-03-30",
+        "url": "/details.html?id=object_909"
     },
     {
-        "id":  "object_908",
-        "title":  "Новая квартира 908",
-        "price":  "Цена договорная",
-        "image":  "assets/hero/hero.jpg",
-        "type":  "apartment",
-        "created_at":  "2026-03-30",
-        "url":  "/details.html?id=object_908"
+        "id": "object_908",
+        "title": "Новая квартира 908",
+        "price": "Цена договорная",
+        "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/main.jpg",
+        "type": "apartment",
+        "created_at": "2026-03-30",
+        "url": "/details.html?id=object_908"
     },
     {
-        "id":  "object_907",
-        "title":  "Новая квартира 907",
-        "price":  "Цена договорная",
-        "image":  "assets/hero/hero.jpg",
-        "type":  "apartment",
-        "created_at":  "2026-03-30",
-        "url":  "/details.html?id=object_907"
+        "id": "object_907",
+        "title": "Новая квартира 907",
+        "price": "Цена договорная",
+        "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/main.jpg",
+        "type": "apartment",
+        "created_at": "2026-03-30",
+        "url": "/details.html?id=object_907"
     },
     {
-        "id":  "object_906",
-        "title":  "Новая квартира 906",
-        "price":  "Цена договорная",
-        "image":  "assets/hero/hero.jpg",
-        "type":  "apartment",
-        "created_at":  "2026-03-30",
-        "url":  "/details.html?id=object_906"
+        "id": "object_906",
+        "title": "Новая квартира 906",
+        "price": "Цена договорная",
+        "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/main.jpg",
+        "type": "apartment",
+        "created_at": "2026-03-30",
+        "url": "/details.html?id=object_906"
     },
     {
-        "id":  "object_905",
-        "title":  "Новая квартира 905",
-        "price":  "Цена договорная",
-        "image":  "assets/hero/hero.jpg",
-        "type":  "apartment",
-        "created_at":  "2026-03-30",
-        "url":  "/details.html?id=object_905"
+        "id": "object_905",
+        "title": "Новая квартира 905",
+        "price": "Цена договорная",
+        "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1005/main.jpg",
+        "type": "apartment",
+        "created_at": "2026-03-30",
+        "url": "/details.html?id=object_905"
     },
     {
-        "id":  "object_904",
-        "title":  "Новая квартира 904",
-        "price":  "Цена договорная",
-        "image":  "assets/hero/hero.jpg",
-        "type":  "apartment",
-        "created_at":  "2026-03-30",
-        "url":  "/details.html?id=object_904"
+        "id": "object_904",
+        "title": "Новая квартира 904",
+        "price": "Цена договорная",
+        "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/main.jpg",
+        "type": "apartment",
+        "created_at": "2026-03-30",
+        "url": "/details.html?id=object_904"
     },
     {
-        "id":  "object_903",
-        "title":  "Новая квартира 903",
-        "price":  "Цена договорная",
-        "image":  "assets/hero/hero.jpg",
-        "type":  "apartment",
-        "created_at":  "2026-03-30",
-        "url":  "/details.html?id=object_903"
+        "id": "object_903",
+        "title": "Новая квартира 903",
+        "price": "Цена договорная",
+        "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1003/main.jpg",
+        "type": "apartment",
+        "created_at": "2026-03-30",
+        "url": "/details.html?id=object_903"
     },
     {
-        "id":  "object_902",
-        "title":  "Новая квартира 902",
-        "price":  "Цена договорная",
-        "image":  "assets/hero/hero.jpg",
-        "type":  "apartment",
-        "created_at":  "2026-03-30",
-        "url":  "/details.html?id=object_902"
+        "id": "object_902",
+        "title": "Новая квартира 902",
+        "price": "Цена договорная",
+        "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/main.jpg",
+        "type": "apartment",
+        "created_at": "2026-03-30",
+        "url": "/details.html?id=object_902"
     },
     {
-        "id":  "object_901",
-        "title":  "Новая квартира 901",
-        "price":  "Цена договорная",
-        "image":  "assets/hero/hero.jpg",
-        "type":  "apartment",
-        "created_at":  "2026-03-30",
-        "url":  "/details.html?id=object_901"
+        "id": "object_901",
+        "title": "Новая квартира 901",
+        "price": "Цена договорная",
+        "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/main.jpg",
+        "type": "apartment",
+        "created_at": "2026-03-30",
+        "url": "/details.html?id=object_901"
     }
 ]
