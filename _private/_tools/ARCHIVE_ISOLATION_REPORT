@@ -1,0 +1,71 @@
+================================================================================
+                      ARCHIVE ISOLATION REPORT
+================================================================================
+
+DATE: 2026-03-27
+
+--------------------------------------------------------------------------------
+FOLDERS_MOVED:
+--------------------------------------------------------------------------------
+  - OLD          (65 files)
+  - Old2         (72 files)
+
+--------------------------------------------------------------------------------
+FOLDERS_SKIPPED:
+--------------------------------------------------------------------------------
+  - __pycache__      (already in _archive)
+  - company-rebuild  (already in _archive)
+  - _quarantine      (already in _archive)
+  - tools            (already in _archive)
+  - encoding_corrupted (did not exist)
+  - backup           (did not exist)
+  - staging-build    (already in _archive)
+  - source           (already in _archive)
+  - ui-rebuild       (already in _archive)
+
+--------------------------------------------------------------------------------
+FILES_MOVED_COUNT:
+--------------------------------------------------------------------------------
+  137
+
+--------------------------------------------------------------------------------
+BROKEN_REFERENCES_FOUND:
+--------------------------------------------------------------------------------
+  NO
+
+  Verified references in HTML/JS/CSS files:
+  - assets/css/main.css          OK
+  - assets/css/mortgage.css      OK
+  - assets/css/certificates.css  OK
+  - assets/css/toast.css         OK
+  - assets/css/icons.css         OK
+  - assets/js/main.js            OK
+  - assets/js/mortgage.js        OK
+  - assets/js/toast.js           OK
+  - assets/js/catalog-mortgage.js OK
+  - ui-blocks/css/blocks.css     OK
+  - ui-blocks/js/blocks.js       OK
+  - team/zukhra-alieva.html      OK
+  - privacy.html                 OK
+  - offer.html                   OK
+  - details.html                 OK
+  - images/                      OK
+  - assets/hero/hero.jpg         OK
+  - assets/certificates/*.jpg    OK
+  - assets/team/zukhra.jpg       OK
+
+  No references to moved folders (OLD/, Old2/) found in production files.
+
+--------------------------------------------------------------------------------
+SYSTEM_STABLE:
+--------------------------------------------------------------------------------
+  YES
+
+--------------------------------------------------------------------------------
+SAFE_TO_PUBLISH:
+--------------------------------------------------------------------------------
+  YES
+
+================================================================================
+                         END OF REPORT
+================================================================================

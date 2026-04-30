@@ -1,0 +1,204 @@
+CNAME
+OLD/house.html
+OLD/land.html
+OLD/output/lands/land_01/img_01.jpg
+OLD/output/lands/land_01/img_02.jpg
+OLD/output/lands/land_01/img_03.jpg
+OLD/output/lands/land_01/img_04.jpg
+OLD/output/lands/land_01/img_05.jpg
+OLD/output/lands/land_01/img_06.jpg
+OLD/output/lands/land_01/img_07.jpg
+OLD/output/lands/land_01/img_08.jpg
+OLD/output/lands/land_01/img_09.jpg
+OLD/output/lands/land_02/img_01.jpg
+OLD/output/lands/land_02/img_02.jpg
+OLD/output/lands/land_02/img_03.jpg
+OLD/output/lands/land_02/img_04.jpg
+OLD/output/lands/land_02/img_05.jpg
+OLD/output/lands/land_02/img_06.jpg
+OLD/output/lands/land_03/img_01.jpg
+OLD/output/lands/land_03/img_02.jpg
+OLD/output/lands/land_03/img_03.jpg
+OLD/output/lands/land_03/img_04.jpg
+OLD/output/lands/land_04/img_01.jpg
+OLD/output/lands/land_04/img_02.jpg
+OLD/output/lands/land_04/img_03.jpg
+OLD/output/lands/land_04/img_04.jpg
+OLD/output/lands/land_04/img_05.jpg
+OLD/output/lands/land_04/img_06.jpg
+OLD/output/lands/land_05/img_01.jpg
+OLD/output/lands/land_05/img_02.jpg
+OLD/output/lands/land_05/img_03.jpg
+OLD/output/lands/land_05/img_04.jpg
+OLD/output/lands/land_05/img_05.jpg
+OLD/output/lands/land_05/img_06.jpg
+OLD/output/lands/land_05/img_07.jpg
+OLD/output/lands/land_05/img_08.jpg
+OLD/output/lands/land_05/img_09.jpg
+OLD/output/lands/land_05/img_10.jpg
+OLD/output/lands/land_05/img_11.jpg
+OLD/output/lands/land_05/img_12.jpg
+OLD/output/lands/land_06/img_01.jpg
+OLD/output/lands/land_07/img_01.jpg
+OLD/output/lands/land_07/img_02.jpg
+OLD/output/lands/land_07/img_03.jpg
+OLD/output/lands/land_08/img_01.jpg
+OLD/output/lands/land_08/img_02.jpg
+OLD/output/lands/land_08/img_03.jpg
+OLD/output/lands/land_08/img_04.jpg
+OLD/output/lands/land_09/img_01.jpg
+OLD/output/lands/land_09/img_02.jpg
+OLD/output/lands/land_10/img_01.jpg
+OLD/output/lands/land_10/img_02.jpg
+OLD/output/lands/land_10/img_03.jpg
+OLD/output/lands/land_10/img_04.jpg
+OLD/output/lands/land_11/img_01.jpg
+OLD/output/lands/land_11/img_02.jpg
+OLD/output/lands/land_11/img_03.jpg
+OLD/output/lands/land_11/img_04.jpg
+OLD/parse_house.py
+OLD/parse_land.py
+OLD/python generate_lands_index.py
+OLD/Новостройки в Аксае и Ростовской области.html
+OLD/Новостройки в Аксае и Ростовской области_files/hammer.min.js.Без названия
+OLD/Новостройки в Аксае и Ростовской области_files/tag.js.Без названия
+OLD/Новостройки в Аксае и Ростовской области_files/tag_phono.js.Без названия
+OLD/Новостройки в Аксае и Ростовской области_files/tilda-animation-2.0.min.js.Без названия
+OLD/Новостройки в Аксае и Ростовской области_files/tilda-cover-1.0.min.js.Без названия
+OLD/Новостройки в Аксае и Ростовской области_files/tilda-errors-1.0.min.js.Без названия
+OLD/Новостройки в Аксае и Ростовской области_files/tilda-events-1.0.min.js.Без названия
+OLD/Новостройки в Аксае и Ростовской области_files/tilda-fallback-1.0.min.js.Без названия
+OLD/Новостройки в Аксае и Ростовской области_files/tilda-forms-1.0.min.js.Без названия
+OLD/Новостройки в Аксае и Ростовской области_files/tilda-lazyload-1.0.min.js.Без названия
+OLD/Новостройки в Аксае и Ростовской области_files/tilda-polyfill-1.0.min.js.Без названия
+OLD/Новостройки в Аксае и Ростовской области_files/tilda-popup-1.0.min.js.Без названия
+OLD/Новостройки в Аксае и Ростовской области_files/tilda-scripts-3.0.min.js.Без названия
+OLD/Новостройки в Аксае и Ростовской области_files/tilda-slds-1.4.min.js.Без названия
+OLD/Новостройки в Аксае и Ростовской области_files/tilda-stat-1.0.min.js.Без названия
+OLD/Новостройки в Аксае и Ростовской области_files/tilda-zero-1.1.min.js.Без названия
+OLD/Новостройки в Аксае и Ростовской области_files/tilda-zero-fixed-1.0.min.js.Без названия
+OLD/Новостройки в Аксае и Ростовской области_files/tilda-zero-scale-1.0.min.js.Без названия
+OLD/Новостройки в Аксае и Ростовской области_files/tilda-zoom-2.0.min.js.Без названия
+OLD/Новостройки в Аксае и Ростовской области_files/watch.js.Без названия
+OLD/Участки в Аксае и Ростовской области_files/hammer.min.js.Без названия
+OLD/Участки в Аксае и Ростовской области_files/tag.js.Без названия
+OLD/Участки в Аксае и Ростовской области_files/tag_phono.js.Без названия
+OLD/Участки в Аксае и Ростовской области_files/tilda-animation-2.0.min.js.Без названия
+OLD/Участки в Аксае и Ростовской области_files/tilda-cover-1.0.min.js.Без названия
+OLD/Участки в Аксае и Ростовской области_files/tilda-errors-1.0.min.js.Без названия
+OLD/Участки в Аксае и Ростовской области_files/tilda-events-1.0.min.js.Без названия
+OLD/Участки в Аксае и Ростовской области_files/tilda-fallback-1.0.min.js.Без названия
+OLD/Участки в Аксае и Ростовской области_files/tilda-forms-1.0.min.js.Без названия
+OLD/Участки в Аксае и Ростовской области_files/tilda-lazyload-1.0.min.js.Без названия
+OLD/Участки в Аксае и Ростовской области_files/tilda-polyfill-1.0.min.js.Без названия
+OLD/Участки в Аксае и Ростовской области_files/tilda-popup-1.0.min.js.Без названия
+OLD/Участки в Аксае и Ростовской области_files/tilda-scripts-3.0.min.js.Без названия
+OLD/Участки в Аксае и Ростовской области_files/tilda-slds-1.4.min.js.Без названия
+OLD/Участки в Аксае и Ростовской области_files/tilda-stat-1.0.min.js.Без названия
+OLD/Участки в Аксае и Ростовской области_files/tilda-zero-1.1.min.js.Без названия
+OLD/Участки в Аксае и Ростовской области_files/tilda-zero-fixed-1.0.min.js.Без названия
+OLD/Участки в Аксае и Ростовской области_files/tilda-zero-scale-1.0.min.js.Без названия
+OLD/Участки в Аксае и Ростовской области_files/tilda-zoom-2.0.min.js.Без названия
+OLD/Участки в Аксае и Ростовской области_files/watch.js.Без названия
+OLD/Частные Дома в Аксае и Ростовской области_files/hammer.min.js.Без названия
+OLD/Частные Дома в Аксае и Ростовской области_files/tag.js.Без названия
+OLD/Частные Дома в Аксае и Ростовской области_files/tag_phono.js.Без названия
+OLD/Частные Дома в Аксае и Ростовской области_files/tilda-animation-2.0.min.js.Без названия
+OLD/Частные Дома в Аксае и Ростовской области_files/tilda-cover-1.0.min.js.Без названия
+OLD/Частные Дома в Аксае и Ростовской области_files/tilda-errors-1.0.min.js.Без названия
+OLD/Частные Дома в Аксае и Ростовской области_files/tilda-events-1.0.min.js.Без названия
+OLD/Частные Дома в Аксае и Ростовской области_files/tilda-fallback-1.0.min.js.Без названия
+OLD/Частные Дома в Аксае и Ростовской области_files/tilda-forms-1.0.min.js.Без названия
+OLD/Частные Дома в Аксае и Ростовской области_files/tilda-lazyload-1.0.min.js.Без названия
+OLD/Частные Дома в Аксае и Ростовской области_files/tilda-polyfill-1.0.min.js.Без названия
+OLD/Частные Дома в Аксае и Ростовской области_files/tilda-popup-1.0.min.js.Без названия
+OLD/Частные Дома в Аксае и Ростовской области_files/tilda-scripts-3.0.min.js.Без названия
+OLD/Частные Дома в Аксае и Ростовской области_files/tilda-slds-1.4.min.js.Без названия
+OLD/Частные Дома в Аксае и Ростовской области_files/tilda-stat-1.0.min.js.Без названия
+OLD/Частные Дома в Аксае и Ростовской области_files/tilda-zero-1.1.min.js.Без названия
+OLD/Частные Дома в Аксае и Ростовской области_files/tilda-zero-fixed-1.0.min.js.Без названия
+OLD/Частные Дома в Аксае и Ростовской области_files/tilda-zero-scale-1.0.min.js.Без названия
+OLD/Частные Дома в Аксае и Ростовской области_files/tilda-zoom-2.0.min.js.Без названия
+OLD/Частные Дома в Аксае и Ростовской области_files/watch.js.Без названия
+Old2/house.html
+Old2/Квартиры.html
+Old2/Участки в Аксае и Ростовской области.html
+Old2/Участки в Аксае и Ростовской области_files/tilda-blocks-page72538289(1).min.css
+Old2/Участки в Аксае и Ростовской области_files/tilda-blocks-page72538289.min(1).js.загрузка
+Old2/Участки в Аксае и Ростовской области_files/tilda-blocks-page72538289.min.js.загрузка
+Old2/Частные Дома в Аксае и Ростовской области_files/hammer.min.js.Без названия
+Old2/Частные Дома в Аксае и Ростовской области_files/tag.js.Без названия
+Old2/Частные Дома в Аксае и Ростовской области_files/tag_phono.js.Без названия
+Old2/Частные Дома в Аксае и Ростовской области_files/tilda-animation-2.0.min.js.Без названия
+Old2/Частные Дома в Аксае и Ростовской области_files/tilda-cover-1.0.min.js.Без названия
+Old2/Частные Дома в Аксае и Ростовской области_files/tilda-errors-1.0.min.js.Без названия
+Old2/Частные Дома в Аксае и Ростовской области_files/tilda-events-1.0.min.js.Без названия
+Old2/Частные Дома в Аксае и Ростовской области_files/tilda-fallback-1.0.min.js.Без названия
+Old2/Частные Дома в Аксае и Ростовской области_files/tilda-forms-1.0.min.js.Без названия
+Old2/Частные Дома в Аксае и Ростовской области_files/tilda-lazyload-1.0.min.js.Без названия
+Old2/Частные Дома в Аксае и Ростовской области_files/tilda-polyfill-1.0.min.js.Без названия
+Old2/Частные Дома в Аксае и Ростовской области_files/tilda-popup-1.0.min.js.Без названия
+Old2/Частные Дома в Аксае и Ростовской области_files/tilda-scripts-3.0.min.js.Без названия
+Old2/Частные Дома в Аксае и Ростовской области_files/tilda-slds-1.4.min.js.Без названия
+Old2/Частные Дома в Аксае и Ростовской области_files/tilda-stat-1.0.min.js.Без названия
+Old2/Частные Дома в Аксае и Ростовской области_files/tilda-zero-1.1.min.js.Без названия
+Old2/Частные Дома в Аксае и Ростовской области_files/tilda-zero-fixed-1.0.min.js.Без названия
+Old2/Частные Дома в Аксае и Ростовской области_files/tilda-zero-scale-1.0.min.js.Без названия
+Old2/Частные Дома в Аксае и Ростовской области_files/tilda-zoom-2.0.min.js.Без названия
+Old2/Частные Дома в Аксае и Ростовской области_files/watch.js.Без названия
+__pycache__/generate_seo_pages.cpython-314.pyc
+__pycache__/normalize_object_prices_from_source.cpython-314.pyc
+__pycache__/reconcile_data.cpython-314.pyc
+all_objects_addresses.xlsx
+assets/about/zukhra-work.jpg
+assets/team/zukhra-work.jpg
+audit_html_vs_data.py
+audit_objects.py
+audit_report.txt
+audit_website.py
+company-rebuild/assets/team/zukhra-work.jpg
+compare_json.py
+compare_old_current.py
+file_cleanup_report.txt
+generate_seo_pages.py
+generate_titles.py
+normalize_object_prices_from_source.py
+ob.py
+price_gap_report.txt
+price_normalization_report.txt
+reconcile_data.py
+reconciliation_report.txt
+scan_old2.py
+seo_generation_report.txt
+source/apartments.txt
+source/apartments_files/hammer.min.js.Без названия
+source/apartments_files/tag.js.Без названия
+source/apartments_files/tilda-animation-2.0.min.js.Без названия
+source/apartments_files/tilda-blocks-page72502647.min.js.Без названия
+source/apartments_files/tilda-cover-1.0.min.js.Без названия
+source/apartments_files/tilda-events-1.0.min.js.Без названия
+source/apartments_files/tilda-fallback-1.0.min.js.Без названия
+source/apartments_files/tilda-forms-1.0.min.js.Без названия
+source/apartments_files/tilda-lazyload-1.0.min.js.Без названия
+source/apartments_files/tilda-polyfill-1.0.min.js.Без названия
+source/apartments_files/tilda-popup-1.0.min.js.Без названия
+source/apartments_files/tilda-scripts-3.0.min.js.Без названия
+source/apartments_files/tilda-slds-1.4.min.js.Без названия
+source/apartments_files/tilda-stat-1.0.min.js.Без названия
+source/apartments_files/tilda-zero-1.1.min.js.Без названия
+source/apartments_files/tilda-zero-fixed-1.0.min.js.Без названия
+source/apartments_files/tilda-zero-scale-1.0.min.js.Без названия
+source/apartments_files/tilda-zoom-2.0.min.js.Без названия
+source/apartments_files/watch.js.Без названия
+team/teamzukhra-alieva.vcf
+tools/download_images.py
+tools/make_data_json.py
+tools/make_objects_index.py
+ui-blocks/README.md
+ui-blocks/assets/icons/check.svg
+ui-blocks/assets/icons/home.svg
+ui-blocks/assets/icons/keys.svg
+ui-blocks/assets/icons/percent.svg
+ui-blocks/assets/icons/refi.svg
+ui-blocks/assets/icons/shield.svg
+ui-blocks/assets/icons/spark.svg
