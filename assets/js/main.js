@@ -425,6 +425,131 @@
     };
   }
 
+
+  function hasValue(value) {
+    if (value === null || value === undefined) return false;
+    if (typeof value === "string") return normalizeText(value) !== "";
+    return true;
+  }
+
+  function normalizeNewbuildTitle(value) {
+    var normalized = normalizeText(value).toLowerCase();
+
+    normalized = normalized
+      .replace(/\u0451/g, "\u0435")
+      .replace(/["'\u00ab\u00bb\u201e\u201c\u201d]/g, " ")
+      .replace(/^\s*\u0436\u043a\s+/i, " ")
+      .replace(/[()\[\]{}]/g, " ")
+      .replace(/[-\u2013\u2014]+/g, " ")
+      .replace(/[.,:;!?/\\|]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+
+    return normalized;
+  }
+
+  function getV2QualityScore(item) {
+    var score = 0;
+    var description = normalizeText(item && item.description);
+
+    if (description.length >= 120) score += 4;
+    if (hasValue(item && item.developer)) score += 2;
+    if (hasValue(item && item.class)) score += 1;
+    if (hasValue(item && item.deadline)) score += 1;
+    if (hasValue(item && item.address)) score += 1;
+
+    return score;
+  }
+
+  function adaptMergedV2ToCatalogItem(item, idx) {
+    var title = normalizeText(item && item.title);
+    var cover = normalizeText(item && item.image);
+    var rawPrice = item ? item.price : null;
+    var numericPrice = null;
+
+    if (typeof rawPrice === "number" && Number.isFinite(rawPrice)) {
+      numericPrice = Math.round(rawPrice);
+    } else if (hasValue(rawPrice)) {
+      numericPrice = extractPrice(String(rawPrice));
+      if (numericPrice === null) {
+        var plainPrice = String(rawPrice).replace(/[^\d.,\s]/g, "");
+        numericPrice = toNumber(plainPrice);
+      }
+      if (numericPrice !== null) {
+        numericPrice = Math.round(numericPrice);
+      }
+    }
+
+    if (!hasValue(title) || !hasValue(cover) || numericPrice === null) {
+      return null;
+    }
+
+    return {
+      id: hasValue(item && item.id) ? String(item.id) : ("newbuilds_v2_" + idx),
+      title: title,
+      description: normalizeText(item && item.description),
+      cover: cover,
+      images: [cover],
+      sectionLink: "newbuilds.html",
+      meta: {
+        price: numericPrice,
+        rooms: null,
+        area: null,
+        houseArea: null,
+        landArea: null,
+        floor: null
+      }
+    };
+  }
+
+  function loadNewbuildsMergedJson() {
+    return fetchJson("output/newbuilds/newbuilds-v2-merged.json")
+      .then(function (items) {
+        return Array.isArray(items) ? items : [];
+      })
+      .catch(function (error) {
+        console.warn("Failed to load newbuilds-v2-merged.json", error);
+        return [];
+      });
+  }
+
+  function mergeMainAndV2Newbuilds(mainItems, mergedItems) {
+    var existingTitles = new Set();
+    var v2SeenTitles = new Set();
+
+    mainItems.forEach(function (item) {
+      var key = normalizeNewbuildTitle(item && item.title);
+      if (key) existingTitles.add(key);
+    });
+
+    var scoredTail = (Array.isArray(mergedItems) ? mergedItems : [])
+      .map(function (sourceItem, idx) {
+        var adapted = adaptMergedV2ToCatalogItem(sourceItem, idx);
+        if (!adapted) return null;
+
+        var key = normalizeNewbuildTitle(adapted.title);
+        if (!key || existingTitles.has(key) || v2SeenTitles.has(key)) {
+          return null;
+        }
+
+        v2SeenTitles.add(key);
+        return {
+          item: adapted,
+          score: getV2QualityScore(sourceItem)
+        };
+      })
+      .filter(function (entry) { return entry !== null; })
+      .sort(function (a, b) {
+        if (b.score !== a.score) return b.score - a.score;
+        return a.item.title.localeCompare(b.item.title, "ru");
+      })
+      .map(function (entry) {
+        return entry.item;
+      });
+
+    return mainItems.concat(scoredTail);
+  }
+
   function loadCategoryData(type) {
     if (type === "apartments") {
       return fetchJson("objects/index.json").then(function (ids) {
@@ -459,13 +584,23 @@
       });
     }
 
-    return fetchJson("newbuilds/index.json").then(function (items) {
-      return Promise.all(items.map(function (item, idx) {
-        return fetchJson(item.path + "/data.json").then(function (data) {
-          return normalizeItem(type, item, data, idx);
+    if (type === "newbuilds") {
+      return fetchJson("newbuilds/index.json")
+        .then(function (items) {
+          return Promise.all(items.map(function (item, idx) {
+            return fetchJson(item.path + "/data.json").then(function (data) {
+              return normalizeItem(type, item, data, idx);
+            });
+          }));
+        })
+        .then(function (mainItems) {
+          return loadNewbuildsMergedJson().then(function (mergedItems) {
+            return mergeMainAndV2Newbuilds(mainItems, mergedItems);
+          });
         });
-      }));
-    });
+    }
+
+    return Promise.resolve([]);
   }
 
   function initCatalogPage(type) {

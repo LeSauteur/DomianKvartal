@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Rebuild - Native Integration</title>
+    <link rel="stylesheet" href="../ui-blocks/css/blocks.css">
+    <link rel="stylesheet" href="css/rebuild.css">
+</head>
+<body>
+
+<div class="ui-blocks-wrapper">
+    <header class="rebuild-header">
+        <div class="ub-container">
+            <h1 class="ub-h2">UI Rebuild Sandbox</h1>
+            <p class="ub-sub">Блоки как часть UI-BLOCKS, без отдельной дизайн-системы</p>
+        </div>
+    </header>
+
+    <section class="ub-section">
+        <div class="ub-container">
+            <div class="ub-section__head">
+                <div>
+                    <h2 class="ub-h2">Преимущества работы</h2>
+                    <p class="ub-sub">Почему клиенты выбирают нас</p>
+                </div>
+            </div>
+
+            <div class="ub-tiles">
+                <article class="ub-tile">
+                    <h3>Большая база объектов</h3>
+                    <p>Квартиры, дома и участки от собственников и застройщиков в Аксае и Ростовской области.</p>
+                    <img class="ub-tileimg" src="../ui-blocks/assets/images/listing-5.jpg" alt="" decoding="async" loading="lazy">
+                    <div class="ub-tile__art" aria-hidden="true"></div>
+                </article>
+
+                <article class="ub-tile">
+                    <h3>Юридическое сопровождение</h3>
+                    <p>Проверка документов, выписки из Росреестра и безопасная сделка под ключ.</p>
+                    <img class="ub-tileimg" src="../ui-blocks/assets/images/listing-6.jpg" alt="" decoding="async" loading="lazy">
+                    <div class="ub-tile__art" aria-hidden="true"></div>
+                </article>
+
+                <article class="ub-tile">
+                    <h3>Подбор за 1 день</h3>
+                    <p>Экономим ваше время: меньше лишних показов, больше релевантных вариантов.</p>
+                    <img class="ub-tileimg" src="../ui-blocks/assets/images/listing-7.jpg" alt="" decoding="async" loading="lazy">
+                    <div class="ub-tile__art" aria-hidden="true"></div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="ub-section">
+        <div class="ub-container">
+            <div class="ub-section__head">
+                <div>
+                    <h2 class="ub-h2">Наши гарантии</h2>
+                    <p class="ub-sub">Фиксируем обязательства письменно</p>
+                </div>
+                <a class="ub-link" href="#">Скачать образец договора</a>
+            </div>
+
+            <div class="ub-scroller" data-ub-scroller>
+                <button class="ub-scroller__btn" type="button" data-dir="left" aria-label="Влево">◀</button>
+                <div class="ub-cards ub-cards--offers" data-ub-track>
+                    <article class="ub-card">
+                        <div class="ub-card__body">
+                            <div class="ub-price"><strong>Работа по договору</strong></div>
+                            <p>Все обязательства фиксируем письменно. Стоимость не меняется в процессе.</p>
+                            <div class="ub-meta"><span>Включено</span></div>
+                        </div>
+                    </article>
+
+                    <article class="ub-card">
+                        <div class="ub-card__body">
+                            <div class="ub-price"><strong>Проверка Росреестра</strong></div>
+                            <p>Проверяем историю переходов прав и наличие обременений до сделки.</p>
+                            <div class="ub-meta"><span>Включено</span></div>
+                        </div>
+                    </article>
+
+                    <article class="ub-card">
+                        <div class="ub-card__body">
+                            <div class="ub-price"><strong>Без скрытых комиссий</strong></div>
+                            <p>Вы заранее знаете точную стоимость услуг без доплат в процессе.</p>
+                            <div class="ub-meta"><span>Включено</span></div>
+                        </div>
+                    </article>
+
+                    <article class="ub-card">
+                        <div class="ub-card__body">
+                            <div class="ub-price"><strong>Страхование сделки</strong></div>
+                            <p>Предлагаем титульное страхование для дополнительной защиты клиента.</p>
+                            <div class="ub-meta"><span>Включено</span></div>
+                        </div>
+                    </article>
+                </div>
+                <button class="ub-scroller__btn" type="button" data-dir="right" aria-label="Вправо">▶</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="ub-section">
+        <div class="ub-container">
+            <div class="ub-section__head">
+                <div>
+                    <h2 class="ub-h2">Каталог недвижимости</h2>
+                    <p class="ub-sub">Выберите категорию объектов</p>
+                </div>
+            </div>
+
+            <div class="ub-qgrid">
+                <a class="ub-qcard" href="../apartments.html">
+                    <div class="ub-qcard__img">
+                        <img class="ub-qimg" src="../assets/types/apartments.jpg" alt="" decoding="async" loading="lazy">
+                    </div>
+                    <div class="ub-qcard__cap">Квартиры · 120+ объектов</div>
+                </a>
+
+                <a class="ub-qcard" href="../houses.html">
+                    <div class="ub-qcard__img">
+                        <img class="ub-qimg" src="../assets/types/houses.jpg" alt="" decoding="async" loading="lazy">
+                    </div>
+                    <div class="ub-qcard__cap">Дома · 85+ объектов</div>
+                </a>
+
+                <a class="ub-qcard" href="../lands.html">
+                    <div class="ub-qcard__img">
+                        <img class="ub-qimg" src="../assets/types/land.jpg" alt="" decoding="async" loading="lazy">
+                    </div>
+                    <div class="ub-qcard__cap">Участки · 200+ объектов</div>
+                </a>
+
+                <a class="ub-qcard" href="../newbuilds.html">
+                    <div class="ub-qcard__img">
+                        <img class="ub-qimg" src="../assets/types/commercial.jpg" alt="" decoding="async" loading="lazy">
+                    </div>
+                    <div class="ub-qcard__cap">Коммерция · 45+ объектов</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="ub-section">
+        <div class="ub-container">
+            <div class="ub-section__head">
+                <div>
+                    <h2 class="ub-h2">Отзывы клиентов</h2>
+                    <p class="ub-sub">Реальные истории сделок</p>
+                </div>
+                <a class="ub-link" href="#">Все отзывы</a>
+            </div>
+
+            <div class="ub-scroller" data-ub-scroller>
+                <button class="ub-scroller__btn" type="button" data-dir="left" aria-label="Влево">◀</button>
+                <div class="ub-cards ub-cards--offers" data-ub-track>
+                    <article class="ub-card">
+                        <div class="ub-card__body">
+                            <div class="ub-price"><strong>Марина С.</strong><span class="ub-pm">Аксай</span></div>
+                            <p>«Обратилась для покупки трешки в Аксае. Подобрали 5 вариантов за день, сделку провели за неделю.»</p>
+                            <div class="ub-meta"><span>Покупка квартиры</span></div>
+                        </div>
+                    </article>
+
+                    <article class="ub-card">
+                        <div class="ub-card__body">
+                            <div class="ub-price"><strong>Алексей К.</strong><span class="ub-pm">Ростов-на-Дону</span></div>
+                            <p>«Продавал дом с участком. Проверили документы до мелочей, вовремя исправили риски. Продажа за 45 дней.»</p>
+                            <div class="ub-meta"><span>Продажа дома</span></div>
+                        </div>
+                    </article>
+
+                    <article class="ub-card">
+                        <div class="ub-card__body">
+                            <div class="ub-price"><strong>Иван П.</strong><span class="ub-pm">Батайск</span></div>
+                            <p>«Помогли с ипотекой после отказа в двух банках. Одобрили в Альфе, ставка 5,8%.»</p>
+                            <div class="ub-meta"><span>Ипотека</span></div>
+                        </div>
+                    </article>
+                </div>
+                <button class="ub-scroller__btn" type="button" data-dir="right" aria-label="Вправо">▶</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="ub-section">
+        <div class="ub-container">
+            <div class="ub-section__head">
+                <div>
+                    <h2 class="ub-h2">Частые вопросы</h2>
+                    <p class="ub-sub">Ответы на популярные вопросы</p>
+                </div>
+            </div>
+
+            <div class="ub-accordion">
+                <div class="ub-accordion__item">
+                    <button class="ub-accordion__trigger" type="button" aria-expanded="false">
+                        <span class="ub-accordion__title">Сколько стоят ваши услуги?</span>
+                        <span class="ub-accordion__icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="ub-accordion__content">
+                        <p>Комиссия обсуждается индивидуально и фиксируется в договоре. Обычно от 2% до 4% в зависимости от задачи.</p>
+                    </div>
+                </div>
+
+                <div class="ub-accordion__item">
+                    <button class="ub-accordion__trigger" type="button" aria-expanded="false">
+                        <span class="ub-accordion__title">Работаете ли с материнским капиталом?</span>
+                        <span class="ub-accordion__icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="ub-accordion__content">
+                        <p>Да, сопровождаем сделки с материнским капиталом и готовим пакет документов для подачи.</p>
+                    </div>
+                </div>
+
+                <div class="ub-accordion__item">
+                    <button class="ub-accordion__trigger" type="button" aria-expanded="false">
+                        <span class="ub-accordion__title">Сколько длится сделка?</span>
+                        <span class="ub-accordion__icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="ub-accordion__content">
+                        <p>В среднем 7-14 дней с момента согласования условий до регистрации перехода права.</p>
+                    </div>
+                </div>
+
+                <div class="ub-accordion__item">
+                    <button class="ub-accordion__trigger" type="button" aria-expanded="false">
+                        <span class="ub-accordion__title">Работаете с загородной недвижимостью?</span>
+                        <span class="ub-accordion__icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="ub-accordion__content">
+                        <p>Да, ведем отдельный каталог домов и участков в радиусе 30 км от Аксая.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="../ui-blocks/js/blocks.js" defer></script>
+<script src="js/rebuild.js" defer></script>
+
+</body>
+</html>
