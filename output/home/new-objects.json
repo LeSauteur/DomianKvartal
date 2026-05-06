@@ -1,74 +1,114 @@
-﻿[
+[
     {
         "id": "object_910",
-        "title": "Новая квартира 910",
+        "title": "1-комнатная квартира, 36 м²",
         "price": "Цена договорная",
         "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/main.jpg",
         "type": "apartment",
         "created_at": "2026-03-30",
-        "url": "/details.html?id=object_910"
+        "url": "/details.html?id=object_910",
+        "sourceFolder": "object_1010",
+        "images": [
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/main.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/01.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/02.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/03.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/04.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/05.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/06.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/07.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/08.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/09.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/10.jpg"
+        ],
+        "fullDescription": "Продаётся уютная 1-комнатная квартира с новым дизайнерским ремонтом в современном ЖК \"61 Квартал\" — готова к вашему комфортному проживанию! Общая площадь — 36 м² Кухня — 10 м² Жилая комната — 26 м² Этаж 5 из 6, с панорамными окнами и светлыми просторными комнатами Лоджия — отличное место для отдыха с видом на улицу Дом монолитно-кирпичный, построен в 2024 году — новый и надёжный Ремонт завершён в августе 2025 года, выполнен по дизайн-проекту с использованием качественных материалов В квартире уже есть вся необходимая мебель: кухня, удобные места для хранения одежды и комфортабельная спальня Техника высокого класса: кондиционер, холодильник, стиральная и посудомоечная машины, водонагреватель — заходи и живи! ЖК \"61 Квартал\" — это закрытая охраняемая территория с видеонаблюдением, подземной парковкой за шлагбаумом, детской и спортивной площадками Рядом школа, детский сад, магазины, рестораны и спортивные клубы Удобные пункты выдачи маркетплейсов для вашего комфорта Свободная продажа, быстрый выход на сделку! Не упустите уникальную возможность стать владельцем современного жилья в престижном районе Ростова-на-Дону! Ваш новый уютный дом уже ждёт вас!",
+        "shortDescription": "1-комнатная квартира, 36 м². Общая площадь 36 м², кухня 10 м², этаж 5 из 6.",
+        "features": {
+            "rooms": "1",
+            "floor": "5",
+            "totalFloors": "6",
+            "balcony": "Лоджия",
+            "renovation": "ремонтом в современном ЖК \"61 Квартал\" — готова к вашему комфортному проживанию!",
+            "buildingType": "монолитно-кирпичн",
+            "buildingYear": "2024",
+            "residentialComplex": "ЖК 61 Квартал",
+            "communications": "газ",
+            "legal": "Свободная продажа"
+        }
     },
     {
         "id": "object_909",
-        "title": "Новая квартира 909",
+        "title": "Евро 2-комнатная квартира, 47 м²",
         "price": "Цена договорная",
         "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/main.jpg",
         "type": "apartment",
         "created_at": "2026-03-30",
-        "url": "/details.html?id=object_909"
+        "url": "/details.html?id=object_909",
+        "sourceFolder": "object_1009",
+        "images": [
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/main.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/01.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/02.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/03.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/04.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/05.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/06.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/07.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/08.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/09.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/10.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/11.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/12.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/13.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/14.jpg"
+        ],
+        "fullDescription": "Продаётся уютная евро 2х-комнатная квартира в престижном ЖК 61 Квартал! Общая площадь — 47 м² Жилая площадь — 17 м² Просторная кухня — 20 м², идеальна для семейных ужинов и кулинарных экспериментов Этаж — 3 из 8 в кирпично-монолитном доме Особенности квартиры: ⦁ Современный евро-ремонт — заходи и живи! ⦁ Изолированная планировка для вашего комфорта и уюта ⦁ Совмещённый санузел ⦁ Централизованное отопление — тепло и уют в любое время года ⦁ Окна во двор и на улицу — светло и просторно ⦁ Есть газ для удобства приготовления пищи Дом расположен в районе с развитой инфраструктурой: рядом магазины, транспорт, школы и парки для прогулок и отдыха Это идеальный вариант для комфортной жизни или инвестиций в недвижимость!",
+        "shortDescription": "Евро 2-комнатная квартира, 47 м². Общая площадь 47 м², кухня 20 м², этаж 3 из 8.",
+        "features": {
+            "bathroom": "⦁ Централизованное отопление — тепло и уют в любое время года",
+            "renovation": "ремонт — заходи и живи!",
+            "buildingType": "кирпичн",
+            "residentialComplex": "ЖК 61 Квартал!",
+            "communications": "газ"
+        }
     },
     {
         "id": "house_910",
-        "title": "Новый дом 910",
+        "title": "Новый дом в продаже",
         "price": "Цена договорная",
-        "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/10.jpg",
+        "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/main.jpg",
         "type": "house",
         "created_at": "2026-03-30",
-        "url": "/details.html?id=house_910"
-    },
-    {
-        "id": "house_909",
-        "title": "Новый дом 909",
-        "price": "Цена договорная",
-        "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/09.jpg",
-        "type": "house",
-        "created_at": "2026-03-30",
-        "url": "/details.html?id=house_909"
-    },
-    {
-        "id": "land_910",
-        "title": "Новый участок 910",
-        "price": "Цена договорная",
-        "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/main.jpg",
-        "type": "land",
-        "created_at": "2026-03-30",
-        "url": "/details.html?id=land_910"
-    },
-    {
-        "id": "land_909",
-        "title": "Новый участок 909",
-        "price": "Цена договорная",
-        "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/main.jpg",
-        "type": "land",
-        "created_at": "2026-03-30",
-        "url": "/details.html?id=land_909"
-    },
-    {
-        "id": "newbuild_910",
-        "title": "Новая новостройка 910",
-        "price": "Цена договорная",
-        "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/main.jpg",
-        "type": "newbuild",
-        "created_at": "2026-03-30",
-        "url": "/details.html?id=newbuild_910"
-    },
-    {
-        "id": "newbuild_909",
-        "title": "Новая новостройка 909",
-        "price": "Цена договорная",
-        "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/main.jpg",
-        "type": "newbuild",
-        "created_at": "2026-03-30",
-        "url": "/details.html?id=newbuild_909"
+        "url": "/details.html?id=house_910",
+        "sourceFolder": "house_2001",
+        "images": [
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/main.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/01.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/02.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/03.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/04.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/05.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/06.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/07.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/08.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/09.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/10.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/11.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/12.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/13.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/14.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/15.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/16.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/17.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/18.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/19.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/20.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/21.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/22.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/23.jpg",
+            "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2001/24.jpg"
+        ],
+        "shortDescription": "Продается дом 227 м² на участке 4 сот.  в Шахтах Адрес: г.",
+        "fullDescription": "Продается дом 227 м² на участке 4 сот. в Шахтах\n\nАдрес: г. Шахты\nЦена: уточняется\n\nОсновные параметры:\nТип объекта: Дом\nОбщая площадь дома: 227 м²\nПлощадь участка: 4 сот.\n\nРасположение:\nГород: Шахты\nРайон: уточняется\n\nУсловия сделки:\nСвободная продажа\nДокументы готовы\nВозможен показ в удобное время\n\nДля записи на просмотр и уточнения деталей обращайтесь по телефону."
     }
 ]

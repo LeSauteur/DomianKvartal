@@ -1,12 +1,17 @@
-﻿{
-    "id":  "object_902",
-    "title":  "Новая квартира 902",
-    "description":  "Описание объекта",
-    "price":  "Цена договорная",
-    "images":  [
-
-               ],
-    "created_at":  "2026-03-30",
-    "status":  "active",
-    "is_placeholder":  true
+{
+  "title": "2-комнатная квартира, 63 м²",
+  "description": "Продается 2-комнатная квартира 63 м² в Аксае Адрес: г. Аксай, ул. Строителей, 9к4 Цена: 9 600 000 ₽ Основные параметры: Тип объекта: Квартира Количество комнат: 2 Общая площадь: 63 м² Этаж: 2 Расположение: Район: Аксай Инфраструктура: развитая, магазины и остановки рядом Условия сделки: Свободная продажа Документы готовы Возможен показ в удобное время Для записи на просмотр и уточнения деталей обращайтесь по телефону.",
+  "images": [
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/main.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/01.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/02.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/03.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/04.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/05.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/06.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/07.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/08.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/09.jpg"
+  ],
+  "price": "9 600 000 ₽"
 }

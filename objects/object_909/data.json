@@ -1,12 +1,22 @@
-﻿{
-    "id":  "object_909",
-    "title":  "Новая квартира 909",
-    "description":  "Описание объекта",
-    "price":  "Цена договорная",
-    "images":  [
-
-               ],
-    "created_at":  "2026-03-30",
-    "status":  "active",
-    "is_placeholder":  true
+{
+  "title": "Евро 2-комнатная квартира, 47 м²",
+  "description": "Продаётся уютная евро 2х-комнатная квартира в престижном ЖК 61 Квартал! Общая площадь — 47 м² Жилая площадь — 17 м² Просторная кухня — 20 м², идеальна для семейных ужинов и кулинарных экспериментов Этаж — 3 из 8 в кирпично-монолитном доме Особенности квартиры: ⦁ Современный евро-ремонт — заходи и живи! ⦁ Изолированная планировка для вашего комфорта и уюта ⦁ Совмещённый санузел ⦁ Централизованное отопление — тепло и уют в любое время года ⦁ Окна во двор и на улицу — светло и просторно ⦁ Есть газ для удобства приготовления пищи Дом расположен в районе с развитой инфраструктурой: рядом магазины, транспорт, школы и парки для прогулок и отдыха Это идеальный вариант для комфортной жизни или инвестиций в недвижимость!",
+  "images": [
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/main.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/01.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/02.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/03.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/04.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/05.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/06.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/07.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/08.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/09.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/10.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/11.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/12.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/13.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/14.jpg"
+  ],
+  "price": "Цена договорная"
 }

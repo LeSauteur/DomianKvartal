@@ -397,8 +397,14 @@
       title = buildNewbuildTitle(item, data, idx);
     }
 
-    var cover = item.cover ? (basePath + item.cover) : (images[0] ? basePath + images[0] : "assets/hero/hero.jpg");
-    var fullImages = images.map(function (img) { return basePath + img; });
+    function resolveMediaPath(mediaPath) {
+      if (!mediaPath) return "";
+      if (/^(https?:)?\/\//i.test(mediaPath)) return mediaPath;
+      return basePath + mediaPath;
+    }
+
+    var cover = item.cover ? resolveMediaPath(item.cover) : (images[0] ? resolveMediaPath(images[0]) : "assets/hero/hero.jpg");
+    var fullImages = images.map(resolveMediaPath);
 
     var sourceText = [item.title, title, description].join(" ");
     var area = extractAreaM2(sourceText);
@@ -746,12 +752,41 @@
     }[type] || "Объект";
   }
 
-  function renderNewObjectCard(item) {
+  function sortNewObjectsByDate(items) {
+    if (!Array.isArray(items)) return [];
+
+    return items
+      .map(function (item, index) {
+        var parsedTime = Date.parse(item && item.created_at ? item.created_at : "");
+        return {
+          item: item,
+          index: index,
+          time: Number.isNaN(parsedTime) ? null : parsedTime
+        };
+      })
+      .sort(function (a, b) {
+        var aInvalid = a.time === null;
+        var bInvalid = b.time === null;
+
+        if (aInvalid && bInvalid) return a.index - b.index;
+        if (aInvalid) return 1;
+        if (bInvalid) return -1;
+
+        if (b.time !== a.time) return b.time - a.time;
+        return a.index - b.index;
+      })
+      .map(function (entry) {
+        return entry.item;
+      });
+  }
+  function renderNewObjectCard(item, idx) {
     var title = escapeHtml(item.title || "Объект");
     var image = escapeHtml(item.image || "assets/hero/hero.jpg");
     var price = escapeHtml(item.price || "Цена по запросу");
-    var url = escapeHtml(item.url || "#");
     var typeLabel = escapeHtml(getTypeLabel(item.type));
+    var shortDescription = hasValue(item.shortDescription)
+      ? '<p class="new-object-card__desc">' + escapeHtml(truncate(String(item.shortDescription), 180)) + '</p>'
+      : '';
 
     return [
       '<article class="new-object-card">',
@@ -759,11 +794,38 @@
       '<div class="new-object-card__content">',
       '<span class="new-object-card__type">' + typeLabel + '</span>',
       '<h3>' + title + '</h3>',
+      shortDescription,
       '<div class="new-object-card__price">' + price + '</div>',
-      '<a class="btn new-object-card__btn" href="' + url + '">Подробнее</a>',
+      '<button class="btn new-object-card__btn" type="button" data-new-object-index="' + idx + '">Подробнее</button>',
       '</div>',
       '</article>'
     ].join("");
+  }
+
+  function adaptNewObjectForModal(item) {
+    var gallery = Array.isArray(item && item.images) && item.images.length
+      ? item.images.slice()
+      : (hasValue(item && item.image) ? [item.image] : []);
+
+    return {
+      title: item && item.title ? item.title : "Объект",
+      description: normalizeText(item && (item.fullDescription || item.shortDescription || item.description || "")),
+      images: gallery
+    };
+  }
+
+  function bindNewObjectModal(container, items) {
+    var openModal = bindModal();
+    if (!container || !openModal || !Array.isArray(items)) return;
+
+    qsa(".new-object-card__btn", container).forEach(function (button) {
+      button.addEventListener("click", function () {
+        var index = Number(button.getAttribute("data-new-object-index"));
+        var source = Number.isInteger(index) ? items[index] : null;
+        if (!source) return;
+        openModal(adaptNewObjectForModal(source));
+      });
+    });
   }
 
   function initNewObjects() {
@@ -778,7 +840,11 @@
           container.innerHTML = '<p class="loading-state">Новые объекты пока не добавлены.</p>';
           return;
         }
-        container.innerHTML = items.slice(0, 8).map(renderNewObjectCard).join("");
+        var visibleItems = sortNewObjectsByDate(items).slice(0, 6);
+        container.innerHTML = visibleItems.map(function (item, idx) {
+          return renderNewObjectCard(item, idx);
+        }).join("");
+        bindNewObjectModal(container, visibleItems);
       })
       .catch(function (error) {
         container.innerHTML = '<p class="loading-state">Не удалось загрузить новые объекты.</p>';
@@ -811,7 +877,11 @@
           container.innerHTML = '<p class="loading-state">Новые объекты пока не добавлены.</p>';
           return;
         }
-        container.innerHTML = items.slice(0, 10).map(renderNewObjectCard).join("");
+        var visibleItems = sortNewObjectsByDate(items).slice(0, 6);
+        container.innerHTML = visibleItems.map(function (item, idx) {
+          return renderNewObjectCard(item, idx);
+        }).join("");
+        bindNewObjectModal(container, visibleItems);
       })
       .catch(function (error) {
         container.innerHTML = '<p class="loading-state">Не удалось загрузить новые объекты.</p>';

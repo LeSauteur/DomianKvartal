@@ -1,12 +1,27 @@
-﻿{
-    "id":  "object_907",
-    "title":  "Новая квартира 907",
-    "description":  "Описание объекта",
-    "price":  "Цена договорная",
-    "images":  [
-
-               ],
-    "created_at":  "2026-03-30",
-    "status":  "active",
-    "is_placeholder":  true
+{
+  "title": "1-комнатная квартира, 36 м²",
+  "description": "Отличное предложение в Ростове-на-Дону! Продаётся стильная и уютная 1-комнатная квартира, идеально подходящая для комфортной жизни или выгодной инвестиции! Общая площадь — 36 м² Жилая площадь — 14 м² Кухня — 9 м² Дом кирпично-монолитный, построен в 2020 году — новый современный дом! Этаж 15 из 21 — отличные виды во двор, тишина и спокойствие Изолированная планировка — максимум уюта и приватности Евроремонт — заходи и живи без вложений Лоджия — дополнительное пространство для отдыха или хранения Совмещённый санузел Индивидуальное отопление — тепло и экономично Газ проведён В доме 2 лифта — никаких очередей и проблем с подъемом Вид из окон во двор — комфорт и свежий воздух без шумной улицы Это идеальный вариант для тех, кто ценит качество и удобство в новом доме! Свободная продажа, оперативный показ —",
+  "images": [
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/main.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/01.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/02.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/03.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/04.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/05.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/06.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/07.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/08.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/09.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/10.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/11.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/12.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/13.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/14.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/15.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/16.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/17.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/18.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/19.jpg"
+  ],
+  "price": "Цена договорная"
 }

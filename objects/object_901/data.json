@@ -1,12 +1,23 @@
-﻿{
-    "id":  "object_901",
-    "title":  "Новая квартира 901",
-    "description":  "Описание объекта",
-    "price":  "Цена договорная",
-    "images":  [
-
-               ],
-    "created_at":  "2026-03-30",
-    "status":  "active",
-    "is_placeholder":  true
+{
+  "title": "Квартира, 44 м²",
+  "description": "Описание объекта Продается 2‑комнатная квартира 44 м² - заезжай и живи! Тёплая, светлая и уютная квартира на 3‑м этаже (из 5) - не угловая, комфортный этаж! Основные параметры: Общая площадь: 44 м2 Жилая площадь: 29 м2 Площадь кухни: 6 м2 Высота потолков: 2,6 м Балкон: есть Санузел: раздельный Вид из окон: во двор - тихо и спокойно Что уже сделано: Косметический ремонт: новые окна ПВХ, заменены стояки, заменены отопительные батареи. Обои и линолеум - всё свежее и аккуратное Преимущества: Школы и детские сады рядом (Школа №94, Спортивная Школа №1, Спортивная школа №11, Детский сад №75, Прогимназия №280 Кораблик) - идеально для семьи ‍‍ Рядом с домом находятся МФЦ, Южный окружной медицинский центр, рынок, сетевые магазины. Наземная парковка возле дома Очень тёплая квартира - комфортно зимой Светлая, не угловая, планировка \"бабочка\" - много естественного света Условия сделки: ‍‍ Один взрослый собственник, никто не прописан Документы готовы - быстрый выход на сделку ⏱ Чистая продажа - без обременений и сложностей Почему стоит выбрать именно эту квартиру? Готова к заселению - не нужно вкладываться в ремонт сразу! Развитая инфраструктура - всё необходимое рядом. Комфортный этаж (3‑й) - без проблем с лифтом, но уже не первый. Тихое место с удобным расположением. ⏰ Об объекте Тип объекта Квартира Количество комнат 2 ком. Этажей в квартире 1 этаж Этаж 3 из 5 Площадь общая 44 м² Площадь комнат 29 м² Площадь жилая 29 м² Площадь кухни 6 м² Балкон/лоджия Балкон Санузел 1 раздельный Отопление Центральное Планировка Изолированная Вид из окон Во двор Ремонт Косметический ремонт Газ Есть",
+  "images": [
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/main.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/01.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/02.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/03.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/04.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/05.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/06.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/07.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/08.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/09.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/10.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/11.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/12.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/13.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/14.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/15.jpg"
+  ],
+  "price": "Цена договорная"
 }

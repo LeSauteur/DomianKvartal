@@ -1,12 +1,18 @@
-﻿{
-    "id":  "object_904",
-    "title":  "Новая квартира 904",
-    "description":  "Описание объекта",
-    "price":  "Цена договорная",
-    "images":  [
-
-               ],
-    "created_at":  "2026-03-30",
-    "status":  "active",
-    "is_placeholder":  true
+{
+  "title": "1-комнатная квартира, 40 м²",
+  "description": "Продается 1 комн.кв 40 м² этаж 9/10 Ростовская обл.,г. Ростов-на-Дону,Пролетарский р-н,пр-кт 40-летия Победы,д. 75,лит. ж Печать 10 ФОТО АХ Хаяла Агамалиева онлайн Специалист Телефон: +7 902 ...показать Почта: mechta1804@gmail.com О себе: Работаю на рынке недвижимости с Августа 2025 года. 4 700 000 ₽ 117 500 ₽/м² 40 м² общая площадь 8.8 м² площадь кухни 9 из 10 этаж Условия Тип продажи Свободная (прямая) Продается впервые Да Ипотека да Возможен онлайн показ объекта Да Описание объекта Продаётся уютная однокомнатная квартира в Ростове-на-Дону на проспекте 40-летия Победы! Общая площадь — 39,8 м², жилая — 19 м², кухня — 8,8 м². Квартира находится на 9 этаже 10-этажного монолитного дома 2005 года постройки. Высокие потолки 2,7 м создают ощущение простора и лёгкости . Совмещённый санузел , есть просторная лоджия — идеальное место для отдыха или зелёных растений . Хороший ремонт и продаётся с мебелью — заезжай и живи! Окна выходят на улицу — много света и отличный вид . Для комфорта — пассажирский лифт и наземная парковка . Расположение в районе с развитой инфраструктурой — всё необходимое рядом: магазины, транспорт, школы и детские сады . Быстрая продажа без обременений! Об объекте Тип объекта Квартира Количество комнат 1 ком. Этажей в квартире 1 этаж Этаж 9 из 10 Площадь общая 40 м² Площадь комнат 20 м² Площадь жилая 20 м² Площадь кухни 8.8 м² Балкон/лоджия Лоджия Санузел 1 совмещенный Отопление Центральное Планировка Изолированная Вид из окон На улицу Ремонт Косметический ремонт Газ Есть О здании Тип дома Кирпично-монолитный Лифт 1 лифт Мусоропровод нет Новый дом да",
+  "images": [
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/main.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/01.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/02.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/03.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/04.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/05.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/06.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/07.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/08.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/09.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/10.jpg"
+  ],
+  "price": "4 700 000 ₽"
 }

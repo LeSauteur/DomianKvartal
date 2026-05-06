@@ -1,12 +1,25 @@
-﻿{
-    "id":  "object_908",
-    "title":  "Новая квартира 908",
-    "description":  "Описание объекта",
-    "price":  "Цена договорная",
-    "images":  [
-
-               ],
-    "created_at":  "2026-03-30",
-    "status":  "active",
-    "is_placeholder":  true
+{
+  "title": "Евродвушка 41,6 м²",
+  "description": "Продаётся уютная евродвушка 41,6 м² в ЖК «Сокол Град» - новый дом 2023 года! Хотите жить в современном комфортном доме с развитой инфраструктурой? Ваш идеальный вариант уже ждёт вас! Светлая евродвушка на 6‑м этаже монолитно‑кирпичного дома - отличное решение для молодой семьи, студента или инвестора. Что вы получаете: Общая площадь: 41,6 м2 Площадь кухни‑гостиной: 10,5 м2 Этаж: 6 из 20 (идеальный баланс приватности и удобства!) Планировка: евродвушка (просторная кухня‑гостиная + отдельная жилая комната) Санузел: совмещённый Балкон: есть - место для утреннего кофе с видом во двор! Состояние: готова к отделке (всё готово для вашего идеального ремонта!) Уже выполнено (экономия на черновых работах!): машинная штукатурка по всей квартире выполнена проводка заложены трассы под кондиционер в жилой комнате и на кухне Преимущества жилого комплекса: Закрытая территория - безопасность для вас и ваших близких ‍ Консьерж в доме - дополнительный контроль доступа ‍ Спортивная площадка во дворе - поддерживайте форму, не покидая дома! ‍ Детская площадка - дети всегда под присмотром и весело проводят время Наземная многоуровневая парковка за шлагбаумом - всегда найдётся место для авто 2 лифта (пассажирский и грузовой) - удобно при переезде и в быту Рядом - Александровская роща - идеальное место для прогулок и отдыха на природе! Инфраструктура в шаговой доступности: магазины и аптеки ‍ школы и детские сады остановки общественного транспорта МФЦ прямо под окнами Почему стоит купить именно эту квартиру? Новый дом (2023 г. п.) - минимум затрат на обслуживание в ближайшие годы Оптимальный этаж (6‑й) - достаточно высоко для вида и тишины, но без зависимости от лифта Перспектива реализовать свой дизайн‑проект с нуля - создайте интерьер мечты! Высокая инвестиционная привлекательность - квартира в новом ЖК с развитой инфраструктурой быстро растёт в цене! ⏰",
+  "images": [
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/main.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/01.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/02.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/03.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/04.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/05.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/06.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/07.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/08.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/09.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/10.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/11.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/12.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/13.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/14.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/15.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/16.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/17.jpg"
+  ],
+  "price": "Цена договорная"
 }
