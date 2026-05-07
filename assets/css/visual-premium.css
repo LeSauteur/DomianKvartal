@@ -1,4 +1,4 @@
-﻿/* DomianKvartal premium visual layer: safe CSS overrides */
+/* DomianKvartal premium visual layer: safe CSS overrides */
 :root {
   --bg-main: #f5f1ea;
   --bg-soft: #fbf8f3;
@@ -334,6 +334,9 @@ body.catalog-page .card .btn {
 /* ========= Footer / CTA ========= */
 .footer-cta {
   margin-top: 76px;
+  background:
+    linear-gradient(180deg, rgba(246, 240, 232, 0.4) 0%, rgba(241, 233, 223, 0.5) 100%),
+    url("../hero/footer.jpg") center / cover no-repeat;
 }
 
 .footer-cta-content {
@@ -368,11 +371,38 @@ footer {
 /* ========= Modal ========= */
 body.catalog-page .modal {
   backdrop-filter: blur(2px);
+  padding: 20px 14px;
+  align-items: flex-start;
+  overflow-y: auto;
 }
 
 body.catalog-page .modal-content {
+  width: min(880px, 100%);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  margin: 0 auto;
   border-radius: var(--radius-md);
   border: 1px solid rgba(120, 96, 78, 0.24);
+}
+
+body.catalog-page .close-modal {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  float: right;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: rgba(246, 240, 232, 0.96);
+  border: 1px solid #d6c8b7;
+  line-height: 1;
+}
+
+body.catalog-page #modalImages img,
+body.catalog-page .modal img {
+  border-radius: 10px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
 
 /* ========= Responsive ========= */
@@ -454,6 +484,15 @@ body.catalog-page .modal-content {
   body.catalog-page .listing-tools {
     margin: 0 15px 16px;
     padding: 12px;
+  }
+
+  body.catalog-page .modal {
+    padding: 12px 8px;
+  }
+
+  body.catalog-page .modal-content {
+    max-height: calc(100vh - 20px);
+    border-radius: 12px;
   }
 
   body.catalog-page .cards {
@@ -1453,4 +1492,73 @@ body.catalog-page .filters input:focus {
 .seo-hub--newbuilds .seo-content__checklist li::before {
   background: radial-gradient(circle at 35% 35%, #5b83b8, #3f5f8e);
   box-shadow: 0 0 0 3px rgba(63, 95, 142, 0.16);
+}
+
+/* =====================================================
+   Curated prepublish polish: safe low-risk overrides
+   ===================================================== */
+.footer-cta {
+  background:
+    linear-gradient(180deg, rgba(246, 240, 232, 0.4) 0%, rgba(241, 233, 223, 0.5) 100%),
+    url("../hero/footer.jpg") center / cover no-repeat;
+}
+
+.footer-cta-content p {
+  color: #5a4d43;
+}
+
+body.catalog-page .listing-tools {
+  border-color: rgba(161, 138, 118, 0.28);
+  box-shadow: 0 10px 22px rgba(28, 20, 14, 0.08);
+}
+
+body.catalog-page .filters label {
+  color: #5f5348;
+  font-weight: 600;
+}
+
+body.catalog-page .filters input {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+body.catalog-page .filters input::placeholder {
+  color: #8a7a6b;
+}
+
+body.catalog-page .card .btn,
+.new-object-card .btn {
+  font-weight: 700;
+}
+
+body.catalog-page .card .btn:focus-visible,
+.new-object-card .btn:focus-visible,
+header nav a:focus-visible {
+  outline: 2px solid rgba(168, 74, 60, 0.45);
+  outline-offset: 2px;
+}
+
+.new-object-card__type {
+  color: #6a5849;
+}
+
+.new-object-card__price {
+  letter-spacing: 0.01em;
+}
+
+.seo-content__inner {
+  box-shadow: 0 14px 34px rgba(31, 22, 17, 0.1);
+}
+
+.seo-content p {
+  color: #4f433a;
+}
+
+@media (max-width: 768px) {
+  body.catalog-page .listing-tools {
+    margin-bottom: 18px;
+  }
+
+  .seo-content--apartments .seo-content__inner {
+    padding-top: 16px;
+  }
 }
