@@ -177,6 +177,10 @@
     object-position: center center;
 }
 
+.agent-photo--bryndikov img {
+    object-position: center center;
+}
+
 .team-agent-objects-placeholder {
     margin-top: 20px;
     padding-top: 14px;
