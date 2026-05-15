@@ -46,16 +46,16 @@
     if (!source) return null;
 
     var best = null;
-    var unitRegex = /(\d+[\d\s]*(?:[.,]\d+)?)\s*(млн|миллион|тыс|т\.?р|тр|руб|р\.|₽|РјР»РЅ|С‚С‹СЃ|СЂСѓР±)/gi;
+    var unitRegex = /(\d+[\d\s]*(?:[.,]\d+)?)\s*(млн|миллион|тыс|т\.?р|тр|руб|р\.|₽)/gi;
     var unitMatch;
     while ((unitMatch = unitRegex.exec(source)) !== null) {
       var base = toNumber(unitMatch[1]);
       if (base === null) continue;
       var unit = unitMatch[2];
       var candidate = base;
-      if (/млн|миллион|рјр»рн/.test(unit)) {
+      if (/млн|миллион/.test(unit)) {
         candidate = base * 1000000;
-      } else if (/тыс|т\.?р|тр|с‚с‹с/.test(unit)) {
+      } else if (/тыс|т\.?р|тр/.test(unit)) {
         candidate = base * 1000;
       }
       if (!best || candidate > best) best = candidate;
@@ -121,12 +121,12 @@
 
   function buildNewbuildTitle(item, data, index) {
     var currentTitle = normalizeText(item.title || "");
-    if (/^(ЖК|Р–Рљ)/i.test(currentTitle)) {
+    if (/^ЖК/i.test(currentTitle)) {
       return currentTitle;
     }
 
     var text = normalizeText([item.title, data.title, data.description].join(" "));
-    var match = text.match(/(?:ЖК|Р–Рљ)\s*[«\"“]?([^»\"”\n,.!]{2,50})/i);
+    var match = text.match(/ЖК\s*[«\"“]?([^»\"”\n,.!]{2,50})/i);
     if (match) {
       return "ЖК " + normalizeText(match[1]);
     }
@@ -230,6 +230,105 @@
       if (linkPath === currentPath) {
         link.classList.add("is-active");
         link.setAttribute("aria-current", "page");
+      }
+    });
+  }
+
+  function initMobileDrawer() {
+    var header = qs("header");
+    var nav = header ? qs("nav", header) : null;
+    if (!header || !nav || qs(".mobile-menu-toggle", header)) return;
+
+    var toggle = document.createElement("button");
+    toggle.className = "mobile-menu-toggle";
+    toggle.type = "button";
+    toggle.setAttribute("aria-label", "Open menu");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.innerHTML = "<span></span><span></span><span></span>";
+
+    var drawer = document.createElement("div");
+    drawer.className = "mobile-drawer";
+    drawer.setAttribute("aria-hidden", "true");
+
+    var panel = document.createElement("div");
+    panel.className = "mobile-drawer__panel";
+
+    var close = document.createElement("button");
+    close.className = "mobile-drawer__close";
+    close.type = "button";
+    close.setAttribute("aria-label", "Close menu");
+    close.innerHTML = "&times;";
+
+    var title = document.createElement("div");
+    title.className = "mobile-drawer__title";
+    title.textContent = qs(".logo", header) ? qs(".logo", header).textContent : "Domian Kvartal";
+
+    var links = document.createElement("nav");
+    links.className = "mobile-drawer__nav";
+    qsa("a", nav).forEach(function (link) {
+      links.appendChild(link.cloneNode(true));
+    });
+
+    var actions = document.createElement("div");
+    actions.className = "mobile-drawer__actions";
+
+    var phone = qs(".header-contacts a", header);
+    if (phone) {
+      var call = phone.cloneNode(true);
+      call.className = "mobile-drawer__call";
+      actions.appendChild(call);
+    }
+
+    var whatsapp = document.createElement("a");
+    whatsapp.href = "https://wa.me/79536091122";
+    whatsapp.className = "mobile-drawer__messenger";
+    whatsapp.target = "_blank";
+    whatsapp.rel = "noopener noreferrer";
+    whatsapp.textContent = "WhatsApp";
+    actions.appendChild(whatsapp);
+
+    var telegram = document.createElement("a");
+    telegram.href = "https://t.me/httpsmealieva_rieltor";
+    telegram.className = "mobile-drawer__messenger";
+    telegram.target = "_blank";
+    telegram.rel = "noopener noreferrer";
+    telegram.textContent = "Telegram";
+    actions.appendChild(telegram);
+
+    panel.appendChild(close);
+    panel.appendChild(title);
+    panel.appendChild(links);
+    panel.appendChild(actions);
+    drawer.appendChild(panel);
+
+    header.querySelector(".header-inner").appendChild(toggle);
+    document.body.appendChild(drawer);
+
+    function openDrawer() {
+      drawer.classList.add("is-open");
+      drawer.setAttribute("aria-hidden", "false");
+      toggle.setAttribute("aria-expanded", "true");
+      document.body.classList.add("drawer-open");
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove("is-open");
+      drawer.setAttribute("aria-hidden", "true");
+      toggle.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("drawer-open");
+    }
+
+    toggle.addEventListener("click", openDrawer);
+    close.addEventListener("click", closeDrawer);
+    drawer.addEventListener("click", function (event) {
+      if (event.target === drawer) closeDrawer();
+    });
+    qsa("a", drawer).forEach(function (link) {
+      link.addEventListener("click", closeDrawer);
+    });
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && drawer.classList.contains("is-open")) {
+        closeDrawer();
       }
     });
   }
@@ -892,6 +991,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     initGlobalInteractions();
     initActiveNav();
+    initMobileDrawer();
     initNewObjects();
 
     var listingType = document.body && document.body.dataset ? document.body.dataset.listing : null;

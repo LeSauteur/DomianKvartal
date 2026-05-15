@@ -1411,6 +1411,37 @@ body.catalog-page .filters input:focus {
   min-height: 170px;
 }
 
+.seo-content--apartments .seo-image {
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(120, 84, 60, 0.16);
+  box-shadow: 0 10px 30px rgba(30, 20, 14, 0.06);
+}
+
+.seo-content--apartments .seo-image img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.seo-content--apartments .seo-image figcaption {
+  padding: 12px 14px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #6f625b;
+}
+
+.seo-content--apartments .seo-image--wide {
+  margin-top: 16px;
+}
+
+.seo-content--apartments .seo-image--wide img {
+  height: 260px;
+}
+
 @media (max-width: 1024px) {
   .seo-content--apartments .seo-content__grid--market {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1561,4 +1592,689 @@ header nav a:focus-visible {
   .seo-content--apartments .seo-content__inner {
     padding-top: 16px;
   }
+}
+
+/* =====================================================
+   2026 Premium redesign layer
+   Warm local real-estate brand system
+   ===================================================== */
+:root {
+  --color-page: #f7f1e8;
+  --color-section: #fbf7f1;
+  --color-card: #ffffff;
+  --color-text: #2f2723;
+  --color-muted: #746760;
+  --color-accent: #b44d42;
+  --color-accent-dark: #8f392f;
+  --color-accent-soft: #ead1c8;
+  --color-border: rgba(120, 84, 60, 0.16);
+  --shadow-soft: 0 18px 50px rgba(47, 39, 35, 0.08);
+  --shadow-card: 0 12px 32px rgba(47, 39, 35, 0.1);
+  --radius-card: 24px;
+  --radius-pill: 999px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at 14% 2%, rgba(255, 255, 255, 0.92) 0 22%, transparent 38%),
+    linear-gradient(180deg, #f7f1e8 0%, #fbf7f1 42%, #f2eadf 100%);
+  color: var(--color-text);
+}
+
+::selection {
+  background: rgba(180, 77, 66, 0.22);
+}
+
+.container {
+  width: min(1200px, calc(100% - 40px));
+}
+
+header {
+  background: rgba(247, 241, 232, 0.82) !important;
+  border-bottom: 1px solid rgba(120, 84, 60, 0.14) !important;
+  box-shadow: 0 10px 34px rgba(47, 39, 35, 0.06);
+  backdrop-filter: blur(18px);
+}
+
+.header-inner {
+  min-height: 76px;
+  gap: 18px;
+}
+
+.logo {
+  max-width: 260px;
+  font-size: clamp(17px, 1.4vw, 21px);
+  line-height: 1.18;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px 8px;
+  flex: 1;
+}
+
+header nav a {
+  margin-left: 0 !important;
+  padding: 9px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+header nav a::after {
+  display: none;
+}
+
+header nav a:hover,
+header nav a.is-active,
+header nav a[aria-current="page"] {
+  background: rgba(180, 77, 66, 0.1);
+  color: var(--color-accent-dark);
+}
+
+.header-contacts {
+  flex-shrink: 0;
+}
+
+.header-contacts a {
+  margin-left: 0 !important;
+  border-color: rgba(180, 77, 66, 0.35) !important;
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: 0 8px 22px rgba(180, 77, 66, 0.08);
+}
+
+.btn,
+.btn-primary,
+.agent-info .btn-primary,
+.contact-actions .btn,
+.hero-actions .btn {
+  border-radius: var(--radius-pill) !important;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark)) !important;
+  color: #fff !important;
+  box-shadow: 0 14px 32px rgba(180, 77, 66, 0.22);
+  font-weight: 750 !important;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.agent-info .btn-primary:hover,
+.hero-actions .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(180, 77, 66, 0.28);
+}
+
+.btn.secondary,
+.btn-outline,
+.agent-info .btn-outline,
+.hero-actions .btn.secondary {
+  background: rgba(255, 255, 255, 0.72) !important;
+  color: var(--color-accent-dark) !important;
+  border: 1px solid rgba(180, 77, 66, 0.32) !important;
+  box-shadow: none;
+}
+
+.hero {
+  position: relative;
+  min-height: min(720px, calc(100vh - 74px));
+  padding: clamp(72px, 9vw, 118px) 0 clamp(54px, 8vw, 92px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(47, 39, 35, 0.82) 0%, rgba(47, 39, 35, 0.62) 42%, rgba(47, 39, 35, 0.15) 100%),
+    url("../hero/hero.jpg") center center / cover no-repeat !important;
+}
+
+body.catalog-page .hero {
+  min-height: 420px;
+  padding: 82px 0 64px;
+}
+
+body[data-listing="apartments"] .hero {
+  background:
+    linear-gradient(90deg, rgba(47, 39, 35, 0.78), rgba(47, 39, 35, 0.2)),
+    url("../types/apartments.jpg") right center / cover no-repeat !important;
+}
+
+body[data-listing="houses"] .hero {
+  background:
+    linear-gradient(90deg, rgba(47, 39, 35, 0.78), rgba(47, 39, 35, 0.2)),
+    url("../types/houses.jpg") right center / cover no-repeat !important;
+}
+
+body[data-listing="lands"] .hero {
+  background:
+    linear-gradient(90deg, rgba(47, 39, 35, 0.78), rgba(47, 39, 35, 0.24)),
+    url("../types/land.jpg") right center / cover no-repeat !important;
+}
+
+body[data-listing="newbuilds"] .hero {
+  background:
+    linear-gradient(90deg, rgba(47, 39, 35, 0.78), rgba(47, 39, 35, 0.2)),
+    url("../types/apartments.jpg") right center / cover no-repeat !important;
+}
+
+.hero > .container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0 20px !important;
+  color: #fff;
+}
+
+.hero h1,
+.hero h2 {
+  max-width: 780px;
+  color: #fff !important;
+  font-size: clamp(42px, 6vw, 78px) !important;
+  line-height: 0.96 !important;
+  letter-spacing: -0.055em !important;
+  text-transform: none !important;
+  text-shadow: 0 18px 44px rgba(0, 0, 0, 0.25);
+}
+
+body.catalog-page .hero h1,
+body.catalog-page .hero h2 {
+  font-size: clamp(36px, 4.6vw, 58px) !important;
+}
+
+.hero h1 span,
+.hero h2 span {
+  color: #f2c7bb !important;
+}
+
+.hero p {
+  max-width: 620px;
+  margin-top: 24px;
+  color: rgba(255, 255, 255, 0.86) !important;
+  font-size: clamp(17px, 1.7vw, 22px) !important;
+}
+
+.hero-actions {
+  margin-top: 30px;
+  gap: 12px;
+}
+
+.hero-quick-links {
+  display: none;
+}
+
+.stats {
+  margin-top: -44px;
+  padding: 0 0 56px !important;
+  position: relative;
+  z-index: 3;
+  background: transparent !important;
+}
+
+.stats .benefits,
+.legacy-refresh .benefits,
+.legacy-refresh .guarantee-list,
+.legacy-refresh .reviews,
+.legacy-refresh .faq-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.stats .benefit,
+.legacy-refresh .benefit,
+.legacy-refresh .guarantee-item,
+.legacy-refresh .review,
+.legacy-refresh .faq-item,
+.partners-card,
+.new-object-card,
+.hot-offer-card,
+body.catalog-page .card,
+.seo-content__card,
+.seo-content__faq-item,
+.seo-content__link-card,
+.team-profile-card,
+.agent-card {
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--radius-card) !important;
+  background: rgba(255, 255, 255, 0.84) !important;
+  box-shadow: var(--shadow-card) !important;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.stats .benefit:hover,
+.legacy-refresh .benefit:hover,
+.legacy-refresh .guarantee-item:hover,
+.legacy-refresh .review:hover,
+.legacy-refresh .faq-item:hover,
+.partners-card:hover,
+.new-object-card:hover,
+.hot-offer-card:hover,
+body.catalog-page .card:hover,
+.seo-content__card:hover,
+.team-profile-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(180, 77, 66, 0.28) !important;
+  box-shadow: 0 22px 54px rgba(47, 39, 35, 0.14) !important;
+}
+
+.legacy-refresh,
+.ub-section,
+.partners,
+.hot-offers,
+.new-objects,
+#mortgage,
+.contact,
+.form-section {
+  background: transparent !important;
+  padding-top: clamp(56px, 7vw, 96px);
+  padding-bottom: clamp(56px, 7vw, 96px);
+}
+
+.section-title,
+.ub-title,
+.legacy-refresh .section-title {
+  color: var(--color-text);
+  font-size: clamp(30px, 4vw, 52px) !important;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.section-subtitle,
+.ub-sub,
+.legacy-refresh .section-subtitle {
+  color: var(--color-muted) !important;
+  font-size: clamp(16px, 1.5vw, 19px);
+}
+
+body.catalog-page main,
+body.static-page main {
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+body.catalog-page .listing-tools {
+  position: relative;
+  margin-top: -28px;
+  z-index: 4;
+  border-radius: var(--radius-card) !important;
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(12px);
+}
+
+body.catalog-page .cards {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+  gap: 24px !important;
+}
+
+body.catalog-page .card {
+  overflow: hidden;
+}
+
+body.catalog-page .card img,
+.new-object-card img,
+.hot-offer-card img,
+.ub-card__media img {
+  height: 230px !important;
+  object-fit: cover;
+  transition: transform 350ms ease;
+}
+
+body.catalog-page .card:hover img,
+.new-object-card:hover img,
+.hot-offer-card:hover img,
+.ub-card:hover .ub-card__media img {
+  transform: scale(1.045);
+}
+
+body.catalog-page .card-content {
+  padding: 20px !important;
+}
+
+body.catalog-page .card h2,
+.new-object-card h3,
+.hot-offer-content h3 {
+  font-size: 1.1rem !important;
+  letter-spacing: -0.02em;
+}
+
+.card-meta,
+.card-mortgage,
+.seo-content__tag,
+.seo-content__link-badge,
+.new-object-card__type {
+  border-radius: var(--radius-pill) !important;
+  background: rgba(180, 77, 66, 0.09) !important;
+  color: var(--color-accent-dark) !important;
+}
+
+.seo-content {
+  background: transparent !important;
+  padding: clamp(54px, 7vw, 94px) 0 !important;
+}
+
+.seo-content__inner {
+  border-radius: 30px !important;
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-soft) !important;
+}
+
+.seo-image {
+  border-radius: 22px !important;
+  overflow: hidden;
+}
+
+.seo-image img {
+  min-height: 230px;
+}
+
+.footer-cta {
+  background:
+    linear-gradient(90deg, rgba(47, 39, 35, 0.84), rgba(47, 39, 35, 0.42)),
+    url("../hero/footer.jpg") center / cover no-repeat !important;
+  margin-top: 0 !important;
+}
+
+.footer-cta-content {
+  background: rgba(255, 255, 255, 0.82) !important;
+  border-radius: 28px !important;
+  box-shadow: var(--shadow-soft);
+}
+
+#certificates {
+  background:
+    linear-gradient(180deg, rgba(251, 247, 241, 0.88), rgba(242, 234, 223, 0.9)) !important;
+}
+
+#certificates .certificates-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(240px, 320px)) !important;
+  justify-content: center !important;
+  gap: 28px !important;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+#certificates .certificate-card {
+  border-radius: 24px !important;
+  overflow: hidden;
+  background: #fff !important;
+  box-shadow: var(--shadow-card);
+}
+
+#team .leadership {
+  border-radius: 30px !important;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(250, 241, 234, 0.9)) !important;
+  box-shadow: var(--shadow-soft);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.72);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--color-text);
+}
+
+.mobile-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 1002;
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(25, 18, 14, 0);
+  pointer-events: none;
+  transition: background 220ms ease;
+}
+
+.mobile-drawer.is-open {
+  background: rgba(25, 18, 14, 0.52);
+  pointer-events: auto;
+}
+
+.mobile-drawer__panel {
+  width: min(420px, 88vw);
+  height: 100%;
+  padding: 24px;
+  background: rgba(251, 247, 241, 0.96);
+  box-shadow: -18px 0 60px rgba(47, 39, 35, 0.22);
+  transform: translateX(100%);
+  transition: transform 240ms ease;
+  overflow-y: auto;
+}
+
+.mobile-drawer.is-open .mobile-drawer__panel {
+  transform: translateX(0);
+}
+
+.mobile-drawer__close {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--color-text);
+  font-size: 30px;
+  float: right;
+  cursor: pointer;
+}
+
+.mobile-drawer__title {
+  clear: both;
+  padding: 24px 0 18px;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.mobile-drawer__nav {
+  display: grid;
+  gap: 10px;
+}
+
+.mobile-drawer__nav a {
+  display: block;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(120, 84, 60, 0.12);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.mobile-drawer__actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.mobile-drawer__actions a {
+  display: block;
+  padding: 14px 16px;
+  border-radius: var(--radius-pill);
+  text-align: center;
+  font-weight: 800;
+}
+
+.mobile-drawer__call {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+  color: #fff !important;
+}
+
+.mobile-drawer__messenger {
+  background: #fff;
+  border: 1px solid var(--color-border);
+}
+
+body.drawer-open {
+  overflow: hidden;
+}
+
+@media (max-width: 1180px) {
+  header nav a {
+    font-size: 12px;
+    padding: 8px 7px;
+  }
+}
+
+@media (max-width: 980px) {
+  .header-inner {
+    min-height: 66px;
+  }
+
+  header .header-inner > nav,
+  header .header-contacts {
+    display: none !important;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 84px 0 70px;
+  }
+
+  .stats {
+    margin-top: 0;
+    padding-top: 26px !important;
+  }
+
+  .stats .benefits,
+  .legacy-refresh .benefits,
+  .legacy-refresh .guarantee-list,
+  .legacy-refresh .reviews,
+  .legacy-refresh .faq-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #certificates .certificates-grid {
+    grid-template-columns: repeat(2, minmax(240px, 320px)) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .container,
+  body.catalog-page main,
+  body.static-page main {
+    width: min(100% - 28px, 1200px);
+  }
+
+  .logo {
+    max-width: 230px;
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 64px 0 52px;
+    background-position: center !important;
+  }
+
+  .hero h1,
+  .hero h2 {
+    font-size: clamp(34px, 13vw, 48px) !important;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-quick-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .hero-quick-links__item {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 14px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid rgba(120, 84, 60, 0.16);
+    color: var(--color-text);
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 10px 24px rgba(47, 39, 35, 0.08);
+  }
+
+  .hero-quick-links__item:active,
+  .hero-quick-links__item:hover {
+    background: rgba(255, 255, 255, 0.94);
+    color: var(--color-accent-dark);
+  }
+
+  .stats .benefits,
+  .legacy-refresh .benefits,
+  .legacy-refresh .guarantee-list,
+  .legacy-refresh .reviews,
+  .legacy-refresh .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.catalog-page .cards {
+    grid-template-columns: 1fr !important;
+  }
+
+  #certificates .certificates-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .footer-cta h2 {
+    font-size: 32px !important;
+  }
+}
+
+body.static-page main > section {
+  border-radius: 26px !important;
+  border: 1px solid var(--color-border) !important;
+  background: rgba(255, 255, 255, 0.82) !important;
+  box-shadow: var(--shadow-card) !important;
+}
+
+body.static-page main h2,
+body.static-page main h3 {
+  letter-spacing: -0.03em;
+}
+
+body.static-page main ul {
+  padding-left: 20px;
+}
+
+body.static-page main li {
+  margin-bottom: 8px;
+  color: var(--color-muted);
 }
