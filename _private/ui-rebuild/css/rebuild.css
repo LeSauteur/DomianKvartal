@@ -1,0 +1,127 @@
+/**
+ * UI Rebuild - thin layer over base UI-BLOCKS
+ * Keep only sandbox-specific pieces.
+ */
+
+.ui-blocks-wrapper .rebuild-header {
+  background: var(--ub-surface);
+  border-bottom: 1px solid var(--ub-border);
+  padding: 24px 0;
+  margin-bottom: 22px;
+}
+
+.ui-blocks-wrapper .ub-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.ui-blocks-wrapper .ub-accordion__item {
+  background: var(--ub-surface);
+  border: 1px solid var(--ub-border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.06);
+}
+
+.ui-blocks-wrapper .ub-accordion__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: var(--ub-text);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.ui-blocks-wrapper .ub-accordion__trigger:focus-visible {
+  outline: 3px solid rgba(29, 78, 216, 0.35);
+  outline-offset: -3px;
+}
+
+.ui-blocks-wrapper .ub-accordion__title {
+  flex: 1;
+}
+
+.ui-blocks-wrapper .ub-accordion__icon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.ui-blocks-wrapper .ub-accordion__icon::before,
+.ui-blocks-wrapper .ub-accordion__icon::after {
+  content: "";
+  position: absolute;
+  background: var(--ub-text);
+  border-radius: 2px;
+  transition: transform 200ms ease;
+}
+
+.ui-blocks-wrapper .ub-accordion__icon::before {
+  width: 14px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ui-blocks-wrapper .ub-accordion__icon::after {
+  width: 2px;
+  height: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ui-blocks-wrapper .ub-accordion__item.is-open .ub-accordion__icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.ui-blocks-wrapper .ub-accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 240ms ease, padding 200ms ease;
+}
+
+.ui-blocks-wrapper .ub-accordion__item.is-open .ub-accordion__content {
+  max-height: 220px;
+  padding: 0 18px 18px;
+}
+
+.ui-blocks-wrapper .ub-accordion__content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ub-muted);
+  font-weight: 600;
+}
+
+@media (max-width: 820px) {
+  .ui-blocks-wrapper .ub-accordion__trigger {
+    font-size: 15px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  .ui-blocks-wrapper .ub-accordion__trigger {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .ui-blocks-wrapper .ub-accordion__icon {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -6,6 +6,7 @@
     <title>Зухра Алиева — Руководитель офиса | Домиан Квартал</title>
     <meta name="description" content="Зухра Алиева — руководитель офиса АН Домиан Квартал. Продажа и покупка недвижимости в Аксае и Ростовской области.">
     <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/visual-premium.css">
     <link rel="stylesheet" href="../assets/css/agent.css">
 </head>
 
@@ -21,13 +22,23 @@
                 <a href="../houses.html">Дома</a>
                 <a href="../lands.html">Участки</a>
                 <a href="../newbuilds.html">Новостройки</a>
-                <a href="../team/zukhra-alieva.html">Команда</a>
+                <a href="../construction.html">Строительство домов</a>
+                <a href="../commercial.html">Коммерческая недвижимость</a>
+                <a href="zukhra-alieva.html">Команда</a>
             </nav>
             <div class="header-contacts">
                 <a href="tel:+79536091122">+7 953 609-11-22</a>
             </div>
         </div>
     </header>
+
+    <section class="team-intro">
+        <div class="container">
+            <span class="team-intro__label">Команда</span>
+            <h1>Команда офиса «Квартал»</h1>
+            <p>Специалисты по недвижимости в Аксае, Ростовской области и Ростове-на-Дону помогают подобрать квартиру, дом, участок, новостройку или коммерческий объект.</p>
+        </div>
+    </section>
 
     <!-- Main Content -->
     <main>
@@ -44,7 +55,7 @@
 
                     <!-- Info -->
                     <div class="agent-info">
-                        <h1>Зухра Алиева</h1>
+                        <h2>Зухра Алиева</h2>
                         <p class="position">Руководитель офиса</p>
                         <p class="subtitle">Эксперт рынка недвижимости Аксайского района</p>
 
@@ -57,7 +68,7 @@
 
                         <div class="actions">
                             <a href="mailto:zuhra_2010_aidan@mail.ru" class="btn-primary">Связаться</a>
-                            <a href="#" download class="btn-outline">Добавить в контакты</a>
+                            <button type="button" class="btn-outline is-disabled" disabled>Контакты скоро</button>
                             <a href="../apartments.html" class="btn-outline">Объекты</a>
                             <button type="button" class="btn-outline" id="qrBtn">QR-код</button>
                         </div>
@@ -65,16 +76,122 @@
                 </div>
 
                 <!-- Objects Section -->
+                <!-- Objects Section temporarily hidden until real objects are available -->
+                <!--
                 <section class="agent-objects">
                     <h2>Объекты агента</h2>
                     <div class="objects-grid" id="agentObjects">
                         <p>Загрузка объектов...</p>
                     </div>
                 </section>
+                -->
+
+                <section class="office-team" id="office-team">
+                    <h2>Команда офиса</h2>
+                    <div class="office-team-list">
+                        <article class="agent-card team-profile-card">
+                            <div class="agent-photo agent-photo--kashtanova">
+                                <img src="../assets/img/agents/kashtanova-olga.webp" alt="Каштанова Ольга Викторовна">
+                            </div>
+                            <div class="agent-info">
+                                <h3>Каштанова Ольга Викторовна</h3>
+                                <p class="position">Специалист по недвижимости г. Аксай, Ростовской области</p>
+                                <div class="contacts">
+                                    <a href="tel:+79524106880">+7 952 410 68 80</a>
+                                    <a href="tel:+79281488787">+7 928 148 87 87</a>
+                                </div>
+                                <div class="actions">
+                                    <a href="tel:+79524106880" class="btn-primary">Связаться</a>
+                                    <button type="button" class="btn-outline is-disabled" disabled>Контакты скоро</button>
+                                    <button type="button" class="btn-outline is-disabled" disabled>Объекты скоро</button>
+                                    <button type="button" class="btn-outline is-disabled" disabled title="QR-код будет добавлен позже">QR-код скоро</button>
+                                </div>
+                                <div class="team-agent-objects-placeholder">Объекты специалиста скоро появятся</div>
+                            </div>
+                        </article>
+
+                        <article class="agent-card team-profile-card">
+                            <div class="agent-photo agent-photo--agamalieva">
+                                <img src="../assets/img/agents/agamalieva-hayala.webp" alt="Агамалиева Хаяла">
+                            </div>
+                            <div class="agent-info">
+                                <h3>Агамалиева Хаяла</h3>
+                                <p class="position">Специалист по недвижимости: г. Аксай, Ростовская область; г. Ростов-на-Дону (р-н Александровка)</p>
+                                <div class="contacts">
+                                    <a href="tel:+79024485875">+7 902 448 58 75</a>
+                                    <a href="tel:+79282148866">+7 928 214 88 66</a>
+                                    <a href="https://t.me/khayala18" target="_blank" rel="noopener noreferrer">@khayala18</a>
+                                    <a href="mailto:79024485875@ya.ru">79024485875@ya.ru</a>
+                                </div>
+                                <div class="actions">
+                                    <a href="tel:+79024485875" class="btn-primary">Связаться</a>
+                                    <button type="button" class="btn-outline is-disabled" disabled>Контакты скоро</button>
+                                    <button type="button" class="btn-outline is-disabled" disabled>Объекты скоро</button>
+                                    <button type="button" class="btn-outline is-disabled" disabled title="QR-код будет добавлен позже">QR-код скоро</button>
+                                </div>
+                                <div class="team-agent-objects-placeholder">Объекты специалиста скоро появятся</div>
+                            </div>
+                        </article>
+
+                        <article class="agent-card team-profile-card">
+                            <div class="agent-photo agent-photo--rusova">
+                                <img src="../assets/img/agents/rusova-elena.webp" alt="Русова Елена">
+                            </div>
+                            <div class="agent-info">
+                                <h3>Русова Елена</h3>
+                                <p class="position">Специалист по недвижимости г. Ростов-на-Дону (Северный, Ленина, Первомайский)</p>
+                                <div class="contacts">
+                                    <a href="tel:+79044491510">+7 904 449 15 10</a>
+                                    <a href="https://t.me/elena_rusova86" target="_blank" rel="noopener noreferrer">@elena_rusova86</a>
+                                    <a href="mailto:elena_rusova@bk.ru">elena_rusova@bk.ru</a>
+                                </div>
+                                <div class="actions">
+                                    <a href="tel:+79044491510" class="btn-primary">Связаться</a>
+                                    <button type="button" class="btn-outline is-disabled" disabled>Контакты скоро</button>
+                                    <button type="button" class="btn-outline is-disabled" disabled>Объекты скоро</button>
+                                    <button type="button" class="btn-outline is-disabled" disabled title="QR-код будет добавлен позже">QR-код скоро</button>
+                                </div>
+                                <div class="team-agent-objects-placeholder">Объекты специалиста скоро появятся</div>
+                            </div>
+                        </article>
+
+                        <article class="agent-card team-profile-card">
+                            <div class="agent-photo agent-photo--bryndikov">
+                                <img src="../assets/img/agents/bryndikov-ruslan.webp" alt="Брындиков Руслан">
+                            </div>
+                            <div class="agent-info">
+                                <h3>Брындиков Руслан</h3>
+                                <p class="position">Специалист по недвижимости г. Ростов-на-Дону: квартиры, дома, земельные участки, коммерция</p>
+                                <div class="contacts">
+                                    <a href="tel:+79381118808">+7 938 111 88 08</a>
+                                    <a href="mailto:rus.bryndickoff@gmail.com">rus.bryndickoff@gmail.com</a>
+                                </div>
+                                <div class="actions">
+                                    <a href="tel:+79381118808" class="btn-primary">Связаться</a>
+                                    <button type="button" class="btn-outline is-disabled" disabled>Контакты скоро</button>
+                                    <button type="button" class="btn-outline is-disabled" disabled>Объекты скоро</button>
+                                    <button type="button" class="btn-outline is-disabled" disabled title="QR-код будет добавлен позже">QR-код скоро</button>
+                                </div>
+                                <div class="team-agent-objects-placeholder">Объекты специалиста скоро появятся</div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
 
             </div>
         </section>
     </main>
+
+    <section class="footer-cta">
+        <div class="footer-cta-inner">
+            <div class="footer-cta-content">
+                <span class="footer-cta-badge">БЕСПЛАТНО</span>
+                <h2>Нужна помощь с недвижимостью?</h2>
+                <p>Расскажите о своей задаче, и специалист офиса «Квартал» предложит оптимальный вариант покупки, продажи или подбора объекта.</p>
+                <a class="btn-primary" href="tel:+79536091122">Получить консультацию</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -90,7 +207,7 @@
                             <li><a href="../houses.html">Дома</a></li>
                             <li><a href="../lands.html">Участки</a></li>
                             <li><a href="../newbuilds.html">Новостройки</a></li>
-                            <li><a href="../apartments.html">Коммерческая</a></li>
+                            <li><a href="../commercial.html">Коммерческая</a></li>
                         </ul>
                     </div>
                     <!-- Колонка 2: Услуги -->

@@ -1,12 +1,28 @@
-﻿{
-    "id":  "object_906",
-    "title":  "Новая квартира 906",
-    "description":  "Описание объекта",
-    "price":  "Цена договорная",
-    "images":  [
-
-               ],
-    "created_at":  "2026-03-30",
-    "status":  "active",
-    "is_placeholder":  true
+{
+  "title": "2-комнатная квартира",
+  "description": "Уютная 2‑комнатная квартира с дизайнерским ремонтом | Кирпичный дом 2012 г. | Закрытая территория Продаётся светлая и просторная двухкомнатная квартира для комфортной жизни семьи. Идеальный вариант для тех, кто ценит качество, безопасность и продуманные детали. Основные характеристики: Тип жилья: 2‑комнатная квартира. Год постройки: 2012. Материал дома: кирпич. Высота потолков: 3 м — ощущение простора и свободы. Кухня: 14 м², оборудована современной техникой (холодильник, посудомоечная машина). Планировка: изолированные комнаты — приватность и комфорт для каждого члена семьи. Дополнительно: балкон для отдыха, вид на тихий двор. Преимущества локации и инфраструктуры: Закрытая территория двора — безопасность и спокойствие. Собственная парковка во дворе — всегда найдётся место для автомобиля. Спортивная площадка прямо у дома — активный образ жизни без долгих поездок. Тихий двор — нет лишнего шума, свежий воздух. Удобства в доме: грузовой лифт — удобно перевозить мебель и крупногабаритные вещи; газоснабжение — экономия на коммунальных платежах; надёжная кирпичная конструкция — отличная звуко- и теплоизоляция. Почему стоит посмотреть именно эту квартиру? свежий дизайнерский ремонт — не нужно тратить время и деньги на отделку; продуманная планировка — всё на своих местах; инфраструктура рядом: магазины, школы, детские сады в пешей доступности (уточните при просмотре); дом в отличном состоянии — никаких скрытых проблем. Идеально для: семьи с детьми (безопасность, спортплощадка, тишина); тех, кто хочет сразу заехать и жить без ремонта; ценителей комфорта и качества. Звоните или пишите прямо сейчас! Организую оперативный показ в удобное для вас время. Покажу все преимущества квартиры лично — вы сразу почувствуете, насколько здесь уютно и комфортно.",
+  "images": [
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/main.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/01.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/02.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/03.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/04.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/05.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/06.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/07.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/08.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/09.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/10.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/11.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/12.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/13.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/14.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/15.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/16.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/17.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/18.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/19.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/20.jpg"
+  ],
+  "price": "9 000 000 ₽"
 }

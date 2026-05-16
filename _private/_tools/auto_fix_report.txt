@@ -1,0 +1,48 @@
+AUTO_FIX_REPORT
+
+DATE:
+2026-03-27
+
+---
+
+FIXES APPLIED
+
+Header added to pages: 7
+Footer added to pages: 13
+CSS linked to pages: 11
+JS linked to pages: 15
+Broken links fixed: 80
+Viewport meta added: 0
+Duplicate meta titles corrected: 4
+Duplicate meta descriptions corrected: 4
+SEO placeholder images added: 21
+Invalid area values set to null: 0
+Unused files moved to quarantine: 198
+
+---
+
+QUARANTINE SUMMARY
+
+FILES_MOVED: 198
+
+FOLDERS_CREATED:
+_quarantine/scripts
+_quarantine/styles
+_quarantine/images
+_quarantine/html
+_quarantine/json
+_quarantine/backup
+
+---
+
+FINAL SYSTEM STATUS
+
+SYSTEM_STABLE: NO
+
+CRITICAL_ERRORS_PRESENT: YES
+
+SAFE_TO_PUBLISH: NO
+
+---
+
+END OF REPORT

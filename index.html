@@ -38,6 +38,7 @@
     </script>
 
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/visual-premium.css">
     <link rel="stylesheet" href="assets/css/mortgage.css">
     <link rel="stylesheet" href="assets/css/certificates.css">
     <link rel="stylesheet" href="assets/css/toast.css">
@@ -77,6 +78,8 @@
             <a href="houses.html">Дома</a>
             <a href="lands.html">Участки</a>
             <a href="newbuilds.html">Новостройки</a>
+            <a href="construction.html">Строительство домов</a>
+            <a href="commercial.html">Коммерческая недвижимость</a>
             <a href="team/zukhra-alieva.html">Команда</a>
         </nav>
         <div class="header-contacts">
@@ -92,6 +95,14 @@
         <div class="hero-actions">
             <a href="apartments.html" class="btn">Смотреть квартиры</a>
             <a href="#contact" class="btn secondary">Консультация</a>
+        </div>
+        <div class="hero-quick-links" aria-label="Быстрые разделы каталога">
+            <a href="apartments.html" class="hero-quick-links__item">Квартиры</a>
+            <a href="houses.html" class="hero-quick-links__item">Дома</a>
+            <a href="lands.html" class="hero-quick-links__item">Участки</a>
+            <a href="newbuilds.html" class="hero-quick-links__item">Новостройки</a>
+            <a href="commercial.html" class="hero-quick-links__item">Коммерция</a>
+            <a href="construction.html" class="hero-quick-links__item">Строительство</a>
         </div>
     </div>
 </section>
@@ -501,15 +512,15 @@
         <h2 class="section-title fade-in">Сертификаты и дипломы</h2>
         <p class="section-subtitle fade-in">Наши достижения и профессиональное признание</p>
         <div class="certificates-grid">
-            <a href="assets/certificates/sert.jpg" target="_blank" rel="noopener noreferrer" class="certificate-card fade-in">
+            <a href="assets/certificates/sert.jpg" class="certificate-card fade-in" data-certificate-modal="assets/certificates/sert.jpg">
                 <img src="assets/certificates/sert.jpg" loading="lazy" alt="Сертификат 1">
                 <div class="certificate-card-caption">Сертификат о повышении квалификации</div>
             </a>
-            <a href="assets/certificates/sert2.jpg" target="_blank" rel="noopener noreferrer" class="certificate-card fade-in">
+            <a href="assets/certificates/sert2.jpg" class="certificate-card fade-in" data-certificate-modal="assets/certificates/sert2.jpg">
                 <img src="assets/certificates/sert2.jpg" loading="lazy" alt="Сертификат 2">
                 <div class="certificate-card-caption">Диплом о профессиональной переподготовке</div>
             </a>
-            <a href="assets/certificates/sert3.jpg" target="_blank" rel="noopener noreferrer" class="certificate-card fade-in">
+            <a href="assets/certificates/sert3.jpg" class="certificate-card fade-in" data-certificate-modal="assets/certificates/sert3.jpg">
                 <img src="assets/certificates/sert3.jpg" loading="lazy" alt="Сертификат 3">
                 <div class="certificate-card-caption">Сертификат участника конференции</div>
             </a>
@@ -725,6 +736,22 @@
     <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M7 14l5-5 5 5z"/></svg>
 </button>
 
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <button type="button" class="close close-modal" aria-label="Close">&times;</button>
+        <h2 id="modalTitle"></h2>
+        <div id="modalImages"></div>
+        <p id="modalDesc"></p>
+    </div>
+</div>
+
+<div class="certificate-modal" id="certificateModal" hidden>
+    <button class="certificate-modal__close" type="button" aria-label="Закрыть сертификат">&times;</button>
+    <div class="certificate-modal__dialog">
+        <img class="certificate-modal__image" src="" alt="">
+    </div>
+</div>
+
 <script src="assets/js/main.js" defer></script>
 <script src="assets/js/mortgage.js" defer></script>
 <script src="assets/js/toast.js" defer></script>
@@ -754,6 +781,53 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </a>
     `).join('');
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('certificateModal');
+    if (!modal) return;
+
+    const image = modal.querySelector('.certificate-modal__image');
+    const closeButton = modal.querySelector('.certificate-modal__close');
+    const triggers = document.querySelectorAll('[data-certificate-modal]');
+
+    function openModal(src, alt) {
+        image.src = src;
+        image.alt = alt || 'Сертификат АН Домиан Квартал';
+        modal.hidden = false;
+        document.body.classList.add('modal-open');
+    }
+
+    function closeModal() {
+        modal.hidden = true;
+        image.src = '';
+        image.alt = '';
+        document.body.classList.remove('modal-open');
+    }
+
+    triggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function (event) {
+            event.preventDefault();
+            const src = trigger.getAttribute('data-certificate-modal') || trigger.getAttribute('href');
+            const img = trigger.querySelector('img');
+            openModal(src, img ? img.alt : trigger.textContent.trim());
+        });
+    });
+
+    closeButton.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && !modal.hidden) {
+            closeModal();
+        }
+    });
 });
 </script>
 </body>

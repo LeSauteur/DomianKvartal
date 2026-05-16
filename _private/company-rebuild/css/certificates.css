@@ -1,0 +1,147 @@
+/* Certificates Section */
+#certificates {
+    padding: 60px 0;
+    background: var(--bg-card);
+}
+
+#certificates .section-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#certificates .section-subtitle {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    color: var(--text-muted);
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.certificate-card {
+    background: var(--bg-light);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid var(--border-soft);
+}
+
+.certificate-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.certificate-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.certificate-card-caption {
+    padding: 16px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* Certificate Modal */
+.certificate-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.certificate-modal.is-open {
+    display: flex;
+}
+
+.certificate-modal-content {
+    background: #fff;
+    border-radius: 12px;
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.certificate-modal-img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+    display: block;
+}
+
+.certificate-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+    z-index: 10;
+}
+
+.certificate-modal-close:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.certificate-modal-close svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+}
+
+/* Responsive: Tablet */
+@media (max-width: 900px) {
+    .certificates-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Responsive: Mobile */
+@media (max-width: 520px) {
+    #certificates {
+        padding: 40px 0;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .certificate-card img {
+        height: 220px;
+    }
+
+    .certificate-modal-content {
+        max-width: 100%;
+    }
+
+    .certificate-modal-close {
+        top: 12px;
+        right: 12px;
+        width: 36px;
+        height: 36px;
+    }
+}

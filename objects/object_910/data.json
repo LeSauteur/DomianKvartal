@@ -1,12 +1,18 @@
-﻿{
-    "id":  "object_910",
-    "title":  "Новая квартира 910",
-    "description":  "Описание объекта",
-    "price":  "Цена договорная",
-    "images":  [
-
-               ],
-    "created_at":  "2026-03-30",
-    "status":  "active",
-    "is_placeholder":  true
+{
+  "title": "1-комнатная квартира, 36 м²",
+  "description": "Продаётся уютная 1-комнатная квартира с новым дизайнерским ремонтом в современном ЖК \"61 Квартал\" — готова к вашему комфортному проживанию! Общая площадь — 36 м² Кухня — 10 м² Жилая комната — 26 м² Этаж 5 из 6, с панорамными окнами и светлыми просторными комнатами Лоджия — отличное место для отдыха с видом на улицу Дом монолитно-кирпичный, построен в 2024 году — новый и надёжный Ремонт завершён в августе 2025 года, выполнен по дизайн-проекту с использованием качественных материалов В квартире уже есть вся необходимая мебель: кухня, удобные места для хранения одежды и комфортабельная спальня Техника высокого класса: кондиционер, холодильник, стиральная и посудомоечная машины, водонагреватель — заходи и живи! ЖК \"61 Квартал\" — это закрытая охраняемая территория с видеонаблюдением, подземной парковкой за шлагбаумом, детской и спортивной площадками Рядом школа, детский сад, магазины, рестораны и спортивные клубы Удобные пункты выдачи маркетплейсов для вашего комфорта Свободная продажа, быстрый выход на сделку! Не упустите уникальную возможность стать владельцем современного жилья в престижном районе Ростова-на-Дону! Ваш новый уютный дом уже ждёт вас!",
+  "images": [
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/main.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/01.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/02.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/03.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/04.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/05.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/06.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/07.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/08.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/09.jpg",
+    "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/10.jpg"
+  ],
+  "price": "5 950 000 ₽"
 }

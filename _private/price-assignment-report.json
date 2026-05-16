@@ -1,0 +1,315 @@
+{
+  "generatedAt": "2026-05-16T09:34:07.797Z",
+  "fallbackUsed": {
+    "apartmentPpsm": 195500,
+    "newbuildPpsm": 195500,
+    "housePpsm": 74000,
+    "landPerSot": 260000,
+    "commercialPpsm": 120000,
+    "constructionPpsm": 80000
+  },
+  "pricedComparablesCount": 36,
+  "changedCount": 188,
+  "sample": [
+    {
+      "file": "objects/object_01/data.json",
+      "id": "",
+      "title": "Продается cтильнaя 2-комнатная квартиpа в ЖK \"Нoвый Aксай\" \nПлoщадь: 55,1 м² + 6 м² лоджия\nОбъездная улица, 7к5, Аксай, Ростовская область",
+      "price": "7 150 000 ₽"
+    },
+    {
+      "file": "objects/object_02/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область",
+      "price": "6 250 000 ₽"
+    },
+    {
+      "file": "objects/object_03/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область · 44 м²",
+      "price": "6 700 000 ₽"
+    },
+    {
+      "file": "objects/object_04/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область",
+      "price": "6 250 000 ₽"
+    },
+    {
+      "file": "objects/object_05/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область · 40 м²",
+      "price": "6 100 000 ₽"
+    },
+    {
+      "file": "objects/object_06/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область · 39 м²",
+      "price": "5 950 000 ₽"
+    },
+    {
+      "file": "objects/object_07/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область · 60 м²",
+      "price": "9 150 000 ₽"
+    },
+    {
+      "file": "objects/object_09/data.json",
+      "id": "",
+      "title": "2-комнатная квартира · Ростовская область · 35 м²",
+      "price": "4 550 000 ₽"
+    },
+    {
+      "file": "objects/object_10/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область",
+      "price": "7 000 000 ₽"
+    },
+    {
+      "file": "objects/object_100/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область",
+      "price": "7 000 000 ₽"
+    },
+    {
+      "file": "objects/object_101/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область",
+      "price": "7 000 000 ₽"
+    },
+    {
+      "file": "objects/object_102/data.json",
+      "id": "",
+      "title": "1-к. квартира, 35 м².\nОбщая площадь: 35 м² Площадь кухни: 12.4 м² Жилая площадь: 12.6 м² Ростовская обл., Ростов-на-Дону, Берберовская ул.,\nр-н Первомайский",
+      "price": "5 800 000 ₽"
+    },
+    {
+      "file": "objects/object_103/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область",
+      "price": "7 000 000 ₽"
+    },
+    {
+      "file": "objects/object_104/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область",
+      "price": "7 000 000 ₽"
+    },
+    {
+      "file": "objects/object_105/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область",
+      "price": "4 900 000 ₽"
+    },
+    {
+      "file": "objects/object_106/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область",
+      "price": "7 550 000 ₽"
+    },
+    {
+      "file": "objects/object_107/data.json",
+      "id": "",
+      "title": "1-комнатная квартира · Ростовская область",
+      "price": "6 700 000 ₽"
+    },
+    {
+      "file": "objects/object_108/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область",
+      "price": "4 900 000 ₽"
+    },
+    {
+      "file": "objects/object_109/data.json",
+      "id": "",
+      "title": "1-комнатная квартира · Ростовская область",
+      "price": "4 800 000 ₽"
+    },
+    {
+      "file": "objects/object_11/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область · 75 м²",
+      "price": "11 450 000 ₽"
+    },
+    {
+      "file": "objects/object_110/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область",
+      "price": "7 000 000 ₽"
+    },
+    {
+      "file": "objects/object_111/data.json",
+      "id": "",
+      "title": "1-комнатная квартира · Ростовская область · 33 м²",
+      "price": "5 450 000 ₽"
+    },
+    {
+      "file": "objects/object_112/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область · 10 м²",
+      "price": "2 500 000 ₽"
+    },
+    {
+      "file": "objects/object_12/data.json",
+      "id": "",
+      "title": "3-комнатная квартира · Ростовская область · 85 м²",
+      "price": "12 950 000 ₽"
+    },
+    {
+      "file": "objects/object_13/data.json",
+      "id": "",
+      "title": "3-комнатная квартира · Ростовская область · 64 м²",
+      "price": "9 750 000 ₽"
+    },
+    {
+      "file": "objects/object_14/data.json",
+      "id": "",
+      "title": "2-комнатная квартира · Ростовская область · 80 м²",
+      "price": "10 400 000 ₽"
+    },
+    {
+      "file": "objects/object_16/data.json",
+      "id": "",
+      "title": "2-комнатная квартира · Ростовская область · 76 м²",
+      "price": "9 000 000 ₽"
+    },
+    {
+      "file": "objects/object_17/data.json",
+      "id": "",
+      "title": "1-комнатная квартира · Ростовская область",
+      "price": "9 000 000 ₽"
+    },
+    {
+      "file": "objects/object_19/data.json",
+      "id": "",
+      "title": "3-комнатная квартира · Ростовская область",
+      "price": "8 200 000 ₽"
+    },
+    {
+      "file": "objects/object_20/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область",
+      "price": "4 900 000 ₽"
+    },
+    {
+      "file": "objects/object_22/data.json",
+      "id": "",
+      "title": "Студия · Ростовская область · 33 м²",
+      "price": "9 000 000 ₽"
+    },
+    {
+      "file": "objects/object_25/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область",
+      "price": "4 900 000 ₽"
+    },
+    {
+      "file": "objects/object_26/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область · 105 м²",
+      "price": "12 550 000 ₽"
+    },
+    {
+      "file": "objects/object_27/data.json",
+      "id": "",
+      "title": "2-комнатная квартира · Ростовская область · 72 м²",
+      "price": "9 350 000 ₽"
+    },
+    {
+      "file": "objects/object_28/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область · 90 м²",
+      "price": "13 700 000 ₽"
+    },
+    {
+      "file": "objects/object_29/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область",
+      "price": "4 900 000 ₽"
+    },
+    {
+      "file": "objects/object_30/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область",
+      "price": "7 000 000 ₽"
+    },
+    {
+      "file": "objects/object_31/data.json",
+      "id": "",
+      "title": "2-комнатная квартира · Ростовская область · 54 м²",
+      "price": "7 000 000 ₽"
+    },
+    {
+      "file": "objects/object_32/data.json",
+      "id": "",
+      "title": "Квартира · Ростовская область",
+      "price": "7 000 000 ₽"
+    },
+    {
+      "file": "objects/object_33/data.json",
+      "id": "",
+      "title": "2-комнатная квартира · Ростовская область · 40 м²",
+      "price": "5 200 000 ₽"
+    },
+    {
+      "file": "objects/object_34/data.json",
+      "id": "",
+      "title": "2-комнатная квартира · Ростовская область · 52 м²",
+      "price": "6 750 000 ₽"
+    },
+    {
+      "file": "objects/object_35/data.json",
+      "id": "",
+      "title": "1-комнатная квартира · Ростовская область · 40 м²",
+      "price": "6 600 000 ₽"
+    },
+    {
+      "file": "objects/object_36/data.json",
+      "id": "",
+      "title": "2-комнатная квартира · Ростовская область",
+      "price": "9 000 000 ₽"
+    },
+    {
+      "file": "objects/object_37/data.json",
+      "id": "",
+      "title": "2-комнатная квартира · Ростовская область · 51 м²",
+      "price": "6 650 000 ₽"
+    },
+    {
+      "file": "objects/object_38/data.json",
+      "id": "",
+      "title": "2-комнатная квартира · Ростовская область · 35 м²",
+      "price": "9 000 000 ₽"
+    },
+    {
+      "file": "objects/object_40/data.json",
+      "id": "",
+      "title": "Продается 2 комн.кв 76 м² \nРостовская обл.,г. Ростов-на-Дону,Пролетарский р-н,пр-кт 40-летия Победы,",
+      "price": "9 900 000 ₽"
+    },
+    {
+      "file": "objects/object_41/data.json",
+      "id": "",
+      "title": "1-комнатная квартира · Ростовская область",
+      "price": "6 700 000 ₽"
+    },
+    {
+      "file": "objects/object_42/data.json",
+      "id": "",
+      "title": "1-комнатная квартира · Ростовская область · 13 м²",
+      "price": "2 500 000 ₽"
+    },
+    {
+      "file": "objects/object_43/data.json",
+      "id": "",
+      "title": "1-комнатная квартира · Ростовская область · 18 м²",
+      "price": "2 950 000 ₽"
+    },
+    {
+      "file": "objects/object_44/data.json",
+      "id": "",
+      "title": "2-комнатная квартира · Ростовская область · 67 м²",
+      "price": "9 000 000 ₽"
+    }
+  ]
+}
