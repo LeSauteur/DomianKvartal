@@ -71,6 +71,7 @@
 
 <header>
     <div class="header-inner">
+        <span class="header-mobile-spacer" aria-hidden="true"></span>
         <a href="index.html" class="logo">Домиан · офис «Квартал»</a>
         <nav>
             <a href="index.html">Главная</a>
@@ -85,8 +86,34 @@
         <div class="header-contacts">
             <a href="tel:+79536091122">+7 953 609-11-22</a>
         </div>
+        <button class="mobile-menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-drawer">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
 </header>
+
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="Мобильное меню">
+        <button class="mobile-drawer__close" type="button" aria-label="Закрыть меню">×</button>
+        <div class="mobile-drawer__title">Навигация</div>
+        <nav class="mobile-drawer__nav">
+            <a href="index.html">Главная</a>
+            <a href="apartments.html">Квартиры</a>
+            <a href="houses.html">Дома</a>
+            <a href="lands.html">Участки</a>
+            <a href="newbuilds.html">Новостройки</a>
+            <a href="construction.html">Строительство домов</a>
+            <a href="commercial.html">Коммерческая недвижимость</a>
+            <a href="team/zukhra-alieva.html">Команда</a>
+        </nav>
+        <div class="mobile-drawer__actions">
+            <a class="mobile-drawer__call" href="tel:+79536091122">+7 953 609-11-22</a>
+            <a class="mobile-drawer__messenger" href="https://wa.me/79536091122">WhatsApp</a>
+        </div>
+    </div>
+</div>
 
 <section class="hero">
     <div class="container fade-in">
@@ -103,6 +130,30 @@
             <a href="newbuilds.html" class="hero-quick-links__item">Новостройки</a>
             <a href="commercial.html" class="hero-quick-links__item">Коммерция</a>
             <a href="construction.html" class="hero-quick-links__item">Строительство</a>
+        </div>
+    </div>
+</section>
+
+<section class="trust-yandex-place" aria-label="Хорошее место на Яндекс Картах">
+    <div class="container">
+        <div class="trust-yandex-place__card">
+            <div class="trust-yandex-place__content">
+                <h2>Хорошее место на Яндекс Картах</h2>
+                <p>Офис «Домиан Квартал» получил отметку «Хорошее место 2026» на Яндекс Картах. Это второй год подряд, когда клиенты отмечают нашу работу высокой оценкой.</p>
+                <ul class="trust-yandex-place__metrics">
+                    <li><strong>5,0</strong><span>рейтинг</span></li>
+                    <li><strong>35</strong><span>оценок</span></li>
+                    <li><strong>2026</strong><span>Хорошее место</span></li>
+                    <li><strong>Аксай</strong><span>ул. Толпинского, 130</span></li>
+                </ul>
+                <a class="trust-yandex-place__btn" href="https://yandex.ru/maps/org/domian/158078581361/?ll=39.858159%2C47.260186&amp;z=16" target="_blank" rel="noopener noreferrer">Смотреть на Яндекс Картах</a>
+            </div>
+            <div class="trust-yandex-place__badge" aria-hidden="true">
+                <span class="trust-yandex-place__pin"></span>
+                <span class="trust-yandex-place__badge-title">Яндекс Карты</span>
+                <strong>Хорошее место</strong>
+                <span class="trust-yandex-place__year">2026</span>
+            </div>
         </div>
     </div>
 </section>

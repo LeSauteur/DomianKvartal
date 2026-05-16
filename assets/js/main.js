@@ -323,6 +323,53 @@
     });
   }
 
+  function initMobileDrawer() {
+    var toggle = qs(".mobile-menu-toggle");
+    var drawer = qs("#mobile-drawer");
+    if (!toggle || !drawer) return;
+
+    var panel = qs(".mobile-drawer__panel", drawer);
+    var closeBtn = qs(".mobile-drawer__close", drawer);
+
+    function openDrawer() {
+      drawer.classList.add("is-open");
+      drawer.setAttribute("aria-hidden", "false");
+      toggle.setAttribute("aria-expanded", "true");
+      document.body.classList.add("drawer-open");
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove("is-open");
+      drawer.setAttribute("aria-hidden", "true");
+      toggle.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("drawer-open");
+    }
+
+    toggle.addEventListener("click", function () {
+      if (drawer.classList.contains("is-open")) closeDrawer();
+      else openDrawer();
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener("click", closeDrawer);
+    }
+
+    drawer.addEventListener("click", function (event) {
+      if (panel && panel.contains(event.target)) return;
+      closeDrawer();
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && drawer.classList.contains("is-open")) {
+        closeDrawer();
+      }
+    });
+
+    qsa("a", drawer).forEach(function (link) {
+      link.addEventListener("click", closeDrawer);
+    });
+  }
+
   function getCardImages(item) {
     var images = [];
     if (item && Array.isArray(item.images)) images = images.concat(item.images);
@@ -869,6 +916,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     initGlobalInteractions();
     initActiveNav();
+    initMobileDrawer();
     bindPropertyGalleryControls();
     initNewObjects();
 
