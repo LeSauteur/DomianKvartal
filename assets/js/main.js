@@ -2,6 +2,21 @@
   "use strict";
 
   var CATALOG_TYPES = ["apartments", "houses", "lands", "newbuilds"];
+  var METRIKA_ID = 109303205;
+
+  window.DOMIAN_METRIKA_ID = window.DOMIAN_METRIKA_ID || METRIKA_ID;
+
+  function safeReachGoal(goal) {
+    try {
+      if (typeof window.ym === "function") {
+        window.ym(window.DOMIAN_METRIKA_ID || METRIKA_ID, "reachGoal", goal);
+      }
+    } catch (error) {
+      // Ignore analytics errors.
+    }
+  }
+
+  window.domianReachGoal = window.domianReachGoal || safeReachGoal;
 
   function qs(selector, root) {
     return (root || document).querySelector(selector);
@@ -261,6 +276,30 @@
         }
       });
     }
+  }
+
+  function initMetrikaClickGoals() {
+    document.addEventListener("click", function (event) {
+      var link = event.target && event.target.closest ? event.target.closest("a[href]") : null;
+      if (!link) return;
+
+      var href = (link.getAttribute("href") || "").toLowerCase();
+      if (!href) return;
+
+      if (link.closest(".property-card") && link.matches(".property-card__cta, .property-card__phone")) {
+        safeReachGoal("card_cta_click");
+      }
+
+      if (href.indexOf("tel:") === 0) {
+        safeReachGoal("tel_click");
+      } else if (href.indexOf("mailto:") === 0) {
+        safeReachGoal("email_click");
+      } else if (href.indexOf("wa.me") !== -1 || href.indexOf("whatsapp") !== -1) {
+        safeReachGoal("whatsapp_click");
+      } else if (href.indexOf("t.me") !== -1) {
+        safeReachGoal("telegram_click");
+      }
+    });
   }
 
   function initActiveNav() {
@@ -915,6 +954,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     initGlobalInteractions();
+    initMetrikaClickGoals();
     initActiveNav();
     initMobileDrawer();
     bindPropertyGalleryControls();

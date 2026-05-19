@@ -8,8 +8,23 @@
 
   // Конфигурация Web3Forms
   var WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
-  var ACCESS_KEY = "ff9427fc-65c9-4fb8-b4b7-cc5c28f092f0";
+  var ACCESS_KEY = "111acf56-7c06-44ff-b693-b777e053bc47";
   var REDIRECT_URL = "/thanks.html";
+  var METRIKA_ID = 109303205;
+
+  window.DOMIAN_METRIKA_ID = window.DOMIAN_METRIKA_ID || METRIKA_ID;
+
+  function safeReachGoal(goal) {
+    try {
+      if (typeof window.domianReachGoal === "function") {
+        window.domianReachGoal(goal);
+      } else if (typeof window.ym === "function") {
+        window.ym(window.DOMIAN_METRIKA_ID || METRIKA_ID, "reachGoal", goal);
+      }
+    } catch (error) {
+      // Ignore analytics errors.
+    }
+  }
 
   /**
    * Показать toast уведомление
@@ -55,6 +70,8 @@
     })
     .then(function (data) {
       if (data.success) {
+        safeReachGoal("form_success");
+
         // Сохранение в localStorage для журнала заявок
         if (window.domianAdmin && typeof window.domianAdmin.saveLead === "function") {
           window.domianAdmin.saveLead({
@@ -73,6 +90,7 @@
     })
     .catch(function (error) {
       console.error("Form submission error:", error);
+      safeReachGoal("form_error");
       showToast("Не удалось отправить заявку. Попробуйте позже.", true);
       // Разблокировка кнопки
       if (submitBtn) {
@@ -146,6 +164,7 @@
         });
 
         if (!isValid) {
+          safeReachGoal("form_error");
           showToast("Заполните обязательные поля", true);
           return;
         }
