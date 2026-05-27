@@ -1007,6 +1007,13 @@ body.catalog-page .filters input:focus {
   .hero > .container::before {
     font-size: 0.67rem;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    max-width: calc(100% - 8px);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 
   .hero h1,
@@ -1841,6 +1848,9 @@ header nav a[aria-current="page"] {
 
 .header-contacts {
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .header-contacts a {
@@ -1848,6 +1858,11 @@ header nav a[aria-current="page"] {
   border-color: rgba(180, 77, 66, 0.35) !important;
   background: rgba(255, 255, 255, 0.58);
   box-shadow: 0 8px 22px rgba(180, 77, 66, 0.08);
+}
+
+.header-contacts__messenger {
+  padding-inline: 12px !important;
+  font-size: 0.88rem;
 }
 
 .btn,
@@ -1964,6 +1979,32 @@ body.catalog-page .hero h2 {
 .hero-actions {
   margin-top: 30px;
   gap: 12px;
+}
+
+.hero-scenarios {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-scenarios__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.hero-scenarios__item:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .hero-quick-links {
@@ -2358,6 +2399,11 @@ body.drawer-open {
     white-space: normal;
   }
 
+  .hero-scenarios__item {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
   .mobile-menu-toggle {
     flex: 0 0 auto;
   }
@@ -2395,6 +2441,15 @@ body.drawer-open {
   .hero-actions .btn {
     width: 100%;
     text-align: center;
+  }
+
+  .hero-scenarios {
+    margin-top: 12px;
+  }
+
+  .hero-scenarios__item {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 140px;
   }
 
   .hero-quick-links {
@@ -2696,6 +2751,10 @@ body.catalog-page .cards {
   gap: 10px;
 }
 
+.hot-offers .property-card__actions {
+  grid-template-columns: 1fr 1fr;
+}
+
 .property-card__cta,
 .property-card__phone {
   min-height: 44px;
@@ -2734,6 +2793,10 @@ body.catalog-page .cards {
   }
 
   .property-card__actions {
+    grid-template-columns: 1fr;
+  }
+
+  .hot-offers .property-card__actions {
     grid-template-columns: 1fr;
   }
 }

@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
   "use strict";
 
   var CATALOG_TYPES = ["apartments", "houses", "lands", "newbuilds"];
@@ -61,7 +61,7 @@
     if (!source) return null;
 
     var best = null;
-    var unitRegex = /(\d+[\d\s]*(?:[.,]\d+)?)\s*(млн|миллион|тыс|т\.?р|тр|руб|р\.|₽|РјР»РЅ|С‚С‹СЃ|СЂСѓР±)/gi;
+    var unitRegex = /(\d+[\d\s]*(?:[.,]\d+)?)\s*(млн|миллион|тыс|т\.?р|тр|руб|р\.|₽|\u0420\u0458\u0420\u00bb\u0420\u0405|\u0421\u201a\u0421\u2039\u0421\u0455|\u0421\u0402\u0421\u0453\u0420\u00b1)/gi;
     var unitMatch;
     while ((unitMatch = unitRegex.exec(source)) !== null) {
       var base = toNumber(unitMatch[1]);
@@ -178,12 +178,12 @@
 
   function buildNewbuildTitle(item, data, index) {
     var currentTitle = normalizeText(item.title || "");
-    if (/^(ЖК|Р–Рљ)/i.test(currentTitle)) {
+    if (/^(ЖК|\u0420\u2013\u0420\u0459)/i.test(currentTitle)) {
       return currentTitle;
     }
 
     var text = normalizeText([item.title, data.title, data.description].join(" "));
-    var match = text.match(/(?:ЖК|Р–Рљ)\s*[«\"“]?([^»\"”\n,.!]{2,50})/i);
+    var match = text.match(/(?:ЖК|\u0420\u2013\u0420\u0459)\s*[«\"“]?([^»\"”\n,.!]{2,50})/i);
     if (match) {
       return "ЖК " + normalizeText(match[1]);
     }
@@ -485,6 +485,23 @@
     });
   }
 
+  function buildObjectWhatsAppText(item, priceText) {
+    var parts = [];
+    var title = item && item.title ? String(item.title).trim() : "";
+    var price = priceText || "";
+
+    if (title) parts.push(title);
+    if (item && item.city) parts.push(String(item.city).trim());
+    if (item && item.district) parts.push(String(item.district).trim());
+    if (price) parts.push(price);
+
+    if (parts.length) {
+      return encodeURIComponent("Здравствуйте. Интересует объект: " + parts.join(", ") + ". Хочу уточнить детали.");
+    }
+
+    return encodeURIComponent("Здравствуйте. Интересует объект на сайте Домиан Квартал. Хочу уточнить детали.");
+  }
+
   function buildCard(item, onOpen) {
     var card = document.createElement("article");
     card.className = "card property-card";
@@ -492,6 +509,7 @@
     var safeTitle = escapeHtml(item.title || "Объект");
     var galleryImages = getCardImages(item);
     var meta = item.meta || {};
+    var priceText = formatPrice(meta.price) || "Цена по запросу";
 
     var mortgageHtml = "";
     if (window.domianCatalogMortgage) {
@@ -513,11 +531,11 @@
       renderPropertyGallery(galleryImages, safeTitle),
       '<div class="card-content property-card__body">',
       '<h2 class="property-card__title">' + safeTitle + '</h2>',
-      '<div class="card-meta property-card__price">' + escapeHtml(formatPrice(meta.price)) + mortgageHtml + '</div>',
+      '<div class="card-meta property-card__price">' + escapeHtml(priceText) + mortgageHtml + '</div>',
       charsHtml,
       '<div class="property-card__actions">',
-      '<a class="btn property-card__cta" href="tel:+79536091122">Записаться на просмотр</a>',
-      '<a class="btn property-card__phone" href="tel:+79536091122">+7 953 609-11-22</a>',
+      '<a class="btn property-card__cta" href="' + (item.sectionLink || "index.html#contact") + '">Подробнее</a>',
+      '<a class="btn property-card__phone" href="tel:+79536091122">Позвонить</a>',
       "</div>",
       '</div>'
     ].join("");
@@ -778,6 +796,13 @@
   function renderHotCard(item) {
     var safeTitle = escapeHtml(item.title || "Объект");
     var galleryImages = getCardImages(item);
+    var categoryHref = {
+      apartments: "apartments.html",
+      houses: "houses.html",
+      lands: "lands.html",
+      newbuilds: "newbuilds.html"
+    }[item && item.categoryName ? String(item.categoryName).toLowerCase() : ""] || "index.html#contact";
+    var priceText = formatPrice(item && item.meta ? item.meta.price : null) || "Цена по запросу";
     var charsHtml = renderCardChars([
       item && item.meta && hasCardValue(item.meta.rooms) ? String(item.meta.rooms) + " комн." : "",
       item && item.meta && hasCardValue(item.meta.area) ? String(item.meta.area) + " м²" : "",
@@ -792,8 +817,8 @@
       '<div class="hot-offer-price property-card__price">' + escapeHtml(formatPrice(item.meta.price)) + '</div>',
       charsHtml,
       '<div class="property-card__actions">',
-      '<a class="btn property-card__cta" href="tel:+79536091122">Записаться на просмотр</a>',
-      '<a class="btn property-card__phone" href="tel:+79536091122">+7 953 609-11-22</a>',
+      '<a class="btn property-card__cta" href="' + categoryHref + '">Подробнее</a>',
+      '<a class="btn property-card__phone" href="tel:+79536091122">Позвонить</a>',
       '</div>',
       '</div>',
       '</article>'
@@ -865,7 +890,8 @@
   function renderNewObjectCard(item) {
     var title = escapeHtml(item.title || "Объект");
     var galleryImages = getCardImages(item);
-    var price = escapeHtml(item.price || "Цена по запросу");
+    var priceText = item.price || "Цена по запросу";
+    var price = escapeHtml(priceText);
     var typeLabel = escapeHtml(getTypeLabel(item.type));
     var features = item && item.features && typeof item.features === "object" ? item.features : {};
     var sourceText = [item && item.title, item && item.shortDescription, item && item.description].filter(Boolean).join(" ");
@@ -879,6 +905,12 @@
       hasCardValue(item && item.city) ? String(item.city) : "",
       hasCardValue(item && item.district) ? String(item.district) : ""
     ]);
+    var detailsHref = {
+      apartment: "apartments.html",
+      house: "houses.html",
+      land: "lands.html",
+      newbuild: "newbuilds.html"
+    }[String(item && item.type || "").toLowerCase()] || "index.html#contact";
 
     return [
       '<article class="new-object-card property-card">',
@@ -889,8 +921,8 @@
       '<div class="new-object-card__price property-card__price">' + price + '</div>',
       charsHtml,
       '<div class="property-card__actions">',
-      '<a class="btn property-card__cta" href="tel:+79536091122">Записаться на просмотр</a>',
-      '<a class="btn property-card__phone" href="tel:+79536091122">+7 953 609-11-22</a>',
+      '<a class="btn property-card__cta" href="' + detailsHref + '">Подробнее</a>',
+      '<a class="btn property-card__phone" href="tel:+79536091122">Позвонить</a>',
       '</div>',
       '</div>',
       '</article>'
