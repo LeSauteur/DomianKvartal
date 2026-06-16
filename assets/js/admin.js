@@ -35,7 +35,27 @@
       phone: lead.phone || "",
       email: lead.email || "",
       service: lead.service || "",
-      source: lead.source || "website"
+      source: lead.source || "website",
+      page_url: lead.page_url || "",
+      page_title: lead.page_title || "",
+      referrer: lead.referrer || "",
+      utm_source: lead.utm_source || "",
+      utm_medium: lead.utm_medium || "",
+      utm_campaign: lead.utm_campaign || "",
+      utm_content: lead.utm_content || "",
+      utm_term: lead.utm_term || "",
+      lead_type: lead.lead_type || "",
+      source_cta: lead.source_cta || "",
+      object_id: lead.object_id || "",
+      object_type: lead.object_type || "",
+      object_title: lead.object_title || "",
+      object_price: lead.object_price || "",
+      object_url: lead.object_url || "",
+      mortgage_price: lead.mortgage_price || "",
+      mortgage_down_payment: lead.mortgage_down_payment || "",
+      mortgage_rate: lead.mortgage_rate || "",
+      mortgage_term: lead.mortgage_term || "",
+      mortgage_monthly_payment: lead.mortgage_monthly_payment || ""
     };
     
     leads.unshift(newLead); // Добавляем в начало (новые сверху)
