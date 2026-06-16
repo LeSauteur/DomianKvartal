@@ -1,3 +1,0 @@
-SHA256: 7f3c2a91b6e4d0b8c5f8f9d1a1e2c4f7b9aa31d6ef92c0e8d44f6c13ab77de42
-timestamp: 2026-06-14
-purpose: repository ownership verification
