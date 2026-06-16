@@ -2887,3 +2887,98 @@ body.catalog-page .cards {
     font-size: 22px;
   }
 }
+
+/* Scoped SEO/AEO content blocks */
+.seo-content .seo-answer {
+  margin: 0;
+  padding: 20px 22px;
+  border-left: 4px solid var(--accent, #b58b5b);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.74);
+  color: #2c241f;
+  font-size: 1.04rem;
+  line-height: 1.72;
+}
+
+.seo-content .seo-faq {
+  margin-top: 30px;
+}
+
+.seo-content .seo-cta {
+  margin-top: 32px;
+  padding: 24px;
+  border-radius: 8px;
+  background: rgba(181, 139, 91, 0.12);
+}
+
+.seo-content .seo-cta .btn {
+  margin-top: 10px;
+}
+
+.seo-content .seo-table {
+  width: 100%;
+  margin: 18px 0 30px;
+  overflow-x: auto;
+  border: 1px solid rgba(44, 36, 31, 0.12);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.seo-content .seo-table table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+.seo-content .seo-table th,
+.seo-content .seo-table td {
+  padding: 16px;
+  border-bottom: 1px solid rgba(44, 36, 31, 0.1);
+  text-align: left;
+  vertical-align: top;
+}
+
+.seo-content .seo-table thead th {
+  background: rgba(181, 139, 91, 0.12);
+  color: #2c241f;
+  font-weight: 700;
+}
+
+.seo-content .seo-table tbody tr:last-child th,
+.seo-content .seo-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.seo-content .seo-table a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.seo-content__wide-card {
+  margin-top: 28px;
+}
+
+.seo-residential-page .seo-complex-page {
+  padding-top: 34px;
+}
+
+.seo-residential-page .seo-content h1 {
+  margin: 8px 0 18px;
+  color: #2c241f;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.08;
+}
+
+@media (max-width: 720px) {
+  .seo-content .seo-answer,
+  .seo-content .seo-cta {
+    padding: 18px;
+  }
+
+  .seo-content .seo-table th,
+  .seo-content .seo-table td {
+    padding: 13px;
+  }
+}
