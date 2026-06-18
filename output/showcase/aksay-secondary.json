@@ -117,7 +117,7 @@
       "assets/images/showcase/aksay-secondary/apartment-01/hero.webp"
     ],
     "disclaimer": "Лучшие объекты в Аксае. Актуальность, детали и условия уточняйте у специалиста.",
-    "fallbackImage": "assets/images/showcase/aksay-secondary/apartment-01/placeholder.svg",
+    "fallbackImage": "assets/images/showcase/aksay-secondary/apartment-01/hero.webp",
     "showcaseMarker": "Лучшие объекты в Аксае",
     "imageNote": "Фото объекта"
   },
@@ -143,12 +143,14 @@
       "формат первой покупки",
       "подходит для жизни или аренды"
     ],
-    "image": "assets/images/showcase/aksay-secondary/apartment-02/placeholder.svg",
+    "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/main.jpg",
     "gallery": [
-      "assets/images/showcase/aksay-secondary/apartment-02/placeholder.svg"
+      "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/main.jpg",
+      "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/01.jpg",
+      "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/02.jpg"
     ],
     "disclaimer": "Лучшие объекты в Аксае. Актуальность, детали и условия уточняйте у специалиста.",
-    "fallbackImage": "assets/images/showcase/aksay-secondary/apartment-02/placeholder.svg",
+    "fallbackImage": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/main.jpg",
     "showcaseMarker": "Лучшие объекты в Аксае",
     "imageNote": "Фото объекта"
   },
@@ -174,12 +176,14 @@
       "можно искать варианты с ремонтом",
       "подходит для пары или одного покупателя"
     ],
-    "image": "assets/images/showcase/aksay-secondary/apartment-03/placeholder.svg",
+    "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/main.jpg",
     "gallery": [
-      "assets/images/showcase/aksay-secondary/apartment-03/placeholder.svg"
+      "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/main.jpg",
+      "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/01.jpg",
+      "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/02.jpg"
     ],
     "disclaimer": "Лучшие объекты в Аксае. Актуальность, детали и условия уточняйте у специалиста.",
-    "fallbackImage": "assets/images/showcase/aksay-secondary/apartment-03/placeholder.svg",
+    "fallbackImage": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/main.jpg",
     "showcaseMarker": "Лучшие объекты в Аксае",
     "imageNote": "Фото объекта"
   },
@@ -205,12 +209,14 @@
       "подходит для первой покупки",
       "интересна для аренды"
     ],
-    "image": "assets/images/showcase/aksay-secondary/apartment-04/placeholder.svg",
+    "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/main.jpg",
     "gallery": [
-      "assets/images/showcase/aksay-secondary/apartment-04/placeholder.svg"
+      "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/main.jpg",
+      "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/01.jpg",
+      "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/02.jpg"
     ],
     "disclaimer": "Лучшие объекты в Аксае. Актуальность, детали и условия уточняйте у специалиста.",
-    "fallbackImage": "assets/images/showcase/aksay-secondary/apartment-04/placeholder.svg",
+    "fallbackImage": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/main.jpg",
     "showcaseMarker": "Лучшие объекты в Аксае",
     "imageNote": "Фото объекта"
   },
@@ -236,12 +242,14 @@
       "развитая бытовая инфраструктура",
       "разумный бюджет"
     ],
-    "image": "assets/images/showcase/aksay-secondary/apartment-05/placeholder.svg",
+    "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/main.jpg",
     "gallery": [
-      "assets/images/showcase/aksay-secondary/apartment-05/placeholder.svg"
+      "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/main.jpg",
+      "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/01.jpg",
+      "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/02.jpg"
     ],
     "disclaimer": "Лучшие объекты в Аксае. Актуальность, детали и условия уточняйте у специалиста.",
-    "fallbackImage": "assets/images/showcase/aksay-secondary/apartment-05/placeholder.svg",
+    "fallbackImage": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/main.jpg",
     "showcaseMarker": "Лучшие объекты в Аксае",
     "imageNote": "Фото объекта"
   },
@@ -266,12 +274,14 @@
       "семейная планировка",
       "городская локация"
     ],
-    "image": "assets/images/showcase/aksay-secondary/house-01/placeholder.svg",
+    "image": "output/houses/house_41/img_01.jpg",
     "gallery": [
-      "assets/images/showcase/aksay-secondary/house-01/placeholder.svg"
+      "output/houses/house_41/img_01.jpg",
+      "output/houses/house_41/img_02.jpg",
+      "output/houses/house_41/img_03.jpg"
     ],
     "disclaimer": "Лучшие объекты в Аксае. Актуальность, детали и условия уточняйте у специалиста.",
-    "fallbackImage": "assets/images/showcase/aksay-secondary/house-01/placeholder.svg",
+    "fallbackImage": "output/houses/house_41/img_01.jpg",
     "showcaseMarker": "Лучшие объекты в Аксае",
     "imageNote": "Фото объекта"
   },
@@ -296,12 +306,14 @@
       "двор и парковка",
       "формат постоянного проживания"
     ],
-    "image": "assets/images/showcase/aksay-secondary/house-02/placeholder.svg",
+    "image": "output/houses/house_42/img_01.jpg",
     "gallery": [
-      "assets/images/showcase/aksay-secondary/house-02/placeholder.svg"
+      "output/houses/house_42/img_01.jpg",
+      "output/houses/house_42/img_02.jpg",
+      "output/houses/house_42/img_03.jpg"
     ],
     "disclaimer": "Лучшие объекты в Аксае. Актуальность, детали и условия уточняйте у специалиста.",
-    "fallbackImage": "assets/images/showcase/aksay-secondary/house-02/placeholder.svg",
+    "fallbackImage": "output/houses/house_42/img_01.jpg",
     "showcaseMarker": "Лучшие объекты в Аксае",
     "imageNote": "Фото объекта"
   },
@@ -326,12 +338,14 @@
       "спокойная жилая среда",
       "подходит для переезда из квартиры"
     ],
-    "image": "assets/images/showcase/aksay-secondary/house-03/placeholder.svg",
+    "image": "output/houses/house_46/img_01.jpg",
     "gallery": [
-      "assets/images/showcase/aksay-secondary/house-03/placeholder.svg"
+      "output/houses/house_46/img_01.jpg",
+      "output/houses/house_46/img_02.jpg",
+      "output/houses/house_46/img_03.jpg"
     ],
     "disclaimer": "Лучшие объекты в Аксае. Актуальность, детали и условия уточняйте у специалиста.",
-    "fallbackImage": "assets/images/showcase/aksay-secondary/house-03/placeholder.svg",
+    "fallbackImage": "output/houses/house_46/img_01.jpg",
     "showcaseMarker": "Лучшие объекты в Аксае",
     "imageNote": "Фото объекта"
   },
@@ -356,12 +370,14 @@
       "городская локация",
       "меньше обслуживания участка"
     ],
-    "image": "assets/images/showcase/aksay-secondary/house-04/placeholder.svg",
+    "image": "output/houses/house_27/img_01.jpg",
     "gallery": [
-      "assets/images/showcase/aksay-secondary/house-04/placeholder.svg"
+      "output/houses/house_27/img_01.jpg",
+      "output/houses/house_27/img_02.jpg",
+      "output/houses/house_27/img_03.jpg"
     ],
     "disclaimer": "Лучшие объекты в Аксае. Актуальность, детали и условия уточняйте у специалиста.",
-    "fallbackImage": "assets/images/showcase/aksay-secondary/house-04/placeholder.svg",
+    "fallbackImage": "output/houses/house_27/img_01.jpg",
     "showcaseMarker": "Лучшие объекты в Аксае",
     "imageNote": "Фото объекта"
   },
@@ -386,12 +402,14 @@
       "семейная планировка",
       "формат заехать и жить"
     ],
-    "image": "assets/images/showcase/aksay-secondary/house-05/placeholder.svg",
+    "image": "output/houses/house_28/img_01.jpg",
     "gallery": [
-      "assets/images/showcase/aksay-secondary/house-05/placeholder.svg"
+      "output/houses/house_28/img_01.jpg",
+      "output/houses/house_28/img_02.jpg",
+      "output/houses/house_28/img_03.jpg"
     ],
     "disclaimer": "Лучшие объекты в Аксае. Актуальность, детали и условия уточняйте у специалиста.",
-    "fallbackImage": "assets/images/showcase/aksay-secondary/house-05/placeholder.svg",
+    "fallbackImage": "output/houses/house_28/img_01.jpg",
     "showcaseMarker": "Лучшие объекты в Аксае",
     "imageNote": "Фото объекта"
   }

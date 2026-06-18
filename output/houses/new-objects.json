@@ -42,15 +42,15 @@
     "id": "house_911",
     "title": "Дом 297 кв. м в Аксае, участок 20 соток — премиум‑класс с бассейном и выходом на две улицы! Рос",
     "price": "7 000 000 ₽",
-    "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2002/main.jpg",
+    "image": "output/houses/house_37/img_01.jpg",
     "type": "house",
     "created_at": "2026-05-06",
     "url": "/details.html?id=house_911",
-    "sourceFolder": "house_2002",
+    "sourceFolder": "house_37",
     "images": [
-      "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2002/main.jpg",
-      "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2002/01.jpg",
-      "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2002/02.jpg"
+      "output/houses/house_37/img_01.jpg",
+      "output/houses/house_37/img_02.jpg",
+      "output/houses/house_37/img_03.jpg"
     ],
     "shortDescription": "Дом 297 кв.",
     "fullDescription": "Дом 297 кв. м в Аксае, участок 20 соток — премиум‑класс с бассейном и выходом на две улицы! Роскошный меблированный дом — заезжайте и живите! Всё остаётся: мебель премиум‑класса и техника высокого качества. Интерьер в классическом стиле с элементами восточной утончённости. Что внутри: 1‑й этаж (150 кв. м): холл, гостиная, кухня‑столовая, санузел, гараж, зимний сад; 2‑й этаж (150 кв. м): 5 спален, 2 санузла; мансарда (100 кв. м) — утеплена, готова под жильё; подвал (32 кв. м) с инженерными системами (резервуар 1 000 л, бойлер 200 л, генератор, стабилизатор напряжения). На участке: бассейн 4×11 м с подогревом; навес на 8 машин; мангальная зона и беседка; фруктовый сад; видеонаблюдение, охрана, домофон; асфальтированная дорога. Ваши выгоды: не нужно тратиться на мебель и ремонт — всё готово к жизни; автономность за счёт резервных систем; безопасность и приватность охраняемой территории; зона отдыха с бассейном — идеально для встреч с друзьями. Юридическая чистота: один собственник, без обременений, полная сумма в ДКП. Не упустите шанс стать владельцем роскошного семейного гнезда в живописном районе! Звоните — организую показ в удобное время!",
@@ -60,15 +60,15 @@
     "id": "house_912",
     "title": "Дом 67 кв. м в Ростов-на-Дону, участок 3 сотки — кирпичный, коммуникации центральные. Зезжайте",
     "price": "7 000 000 ₽",
-    "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2003/main.jpg",
+    "image": "output/houses/house_08/img_01.jpg",
     "type": "house",
     "created_at": "2026-05-06",
     "url": "/details.html?id=house_912",
-    "sourceFolder": "house_2003",
+    "sourceFolder": "house_08",
     "images": [
-      "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2003/main.jpg",
-      "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2003/01.jpg",
-      "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2003/02.jpg"
+      "output/houses/house_08/img_01.jpg",
+      "output/houses/house_08/img_02.jpg",
+      "output/houses/house_08/img_03.jpg"
     ],
     "shortDescription": "Дом 67 кв.",
     "fullDescription": "Дом 67 кв. м в Ростов-на-Дону, участок 3 сотки — кирпичный, коммуникации центральные. Зезжайте и живите! Что внутри: 1‑й этаж: просторная прихожая, куня-гостиная, 3 спальни, санузел совмещённый На участке: Въезд на 2 авто мангальная зона и беседка; асфальтированная дорога Ваши выгоды: всё готово к вашей комфортной жизни; Пешая доступность до транспорта, магазинов Низкие коммунальные платежи зона отдыха с бассейном — идеально для встреч с друзьями. Юридическая чистота: один собственник, без обременений, полная сумма в ДКП. Не упустите шанс стать владельцем уютного города в черте города! Звоните — организую показ в удобное время!",
@@ -78,15 +78,15 @@
     "id": "house_913",
     "title": "Загородный дом мечты в станице Старочеркасская: гармония природы и комфорта! Просторный двухэта",
     "price": "16 000 000 ₽",
-    "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2004/main.jpg",
+    "image": "output/houses/house_18/img_01.jpg",
     "type": "house",
     "created_at": "2026-05-06",
     "url": "/details.html?id=house_913",
-    "sourceFolder": "house_2004",
+    "sourceFolder": "house_18",
     "images": [
-      "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2004/main.jpg",
-      "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2004/01.jpg",
-      "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NEWHouse/house_2004/02.jpg"
+      "output/houses/house_18/img_01.jpg",
+      "output/houses/house_18/img_02.jpg",
+      "output/houses/house_18/img_03.jpg"
     ],
     "shortDescription": "Загородный дом мечты в станице Старочеркасская: гармония природы и комфорта!",
     "fullDescription": "Загородный дом мечты в станице Старочеркасская: гармония природы и комфорта! Просторный двухэтажный дом (125 кв. м) на ухоженном участке 9 соток — идеальное место для жизни вдали от городской суеты, но с удобной транспортной доступностью. Внутри вас ждёт: три уютные комнаты; два санузла; светлая и просторная кухня‑гостиная (27 кв. м); полностью укомплектован мебелью и техникой — можно сразу заселяться. Территория участка продумана до мелочей: стильная беседка для семейных ужинов; летняя кухня — готовьте на свежем воздухе; парник для свежих овощей и зелени; гараж с навесом — надёжная защита авто. Удобный подъезд по асфальтированной дороге. Всего 20 минут до Аксая и 35 минут до Ростова — вы всегда на связи с городом! Один взрослый собственник, полная стоимость в ДКП! Для записи на просмотр звоните и сохрание объявление, чтобы не потерять! 15:24 Цена 16 млн",
