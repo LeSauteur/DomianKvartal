@@ -5832,3 +5832,28 @@ body:not(.catalog-page):not(.static-page) .stage12-workspace + .ui-blocks-wrappe
     max-width: min(232px, calc(100vw - 72px));
   }
 }
+/* Homepage quick offers: desktop without horizontal scroll */
+@media (min-width: 901px) {
+  body:not(.catalog-page):not(.static-page) .stage12-workspace + .ui-blocks-wrapper > .ub-section:first-child .ub-scroller {
+    overflow: visible;
+  }
+
+  body:not(.catalog-page):not(.static-page) .stage12-workspace + .ui-blocks-wrapper > .ub-section:first-child .ub-scroller__track {
+    display: grid;
+    grid-auto-flow: initial;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: visible;
+    gap: 12px;
+    padding: 4px 0 10px;
+  }
+
+  body:not(.catalog-page):not(.static-page) .stage12-workspace + .ui-blocks-wrapper > .ub-section:first-child .ub-scroller__btn {
+    display: none;
+  }
+}
+
+@media (min-width: 1180px) {
+  body:not(.catalog-page):not(.static-page) .stage12-workspace + .ui-blocks-wrapper > .ub-section:first-child .ub-scroller__track {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
