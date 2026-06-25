@@ -124,6 +124,36 @@
     color: #fff;
 }
 
+.agent-info .agent-contact-channels,
+.agent-info .agent-profile-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex: 1 1 100%;
+}
+
+.agent-info .agent-contact-channels {
+    align-items: stretch;
+}
+
+.agent-info .agent-contact-max {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    line-height: 1.2;
+}
+
+.agent-info .agent-contact-max small {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.agent-info .agent-contact-max:hover small {
+    color: rgba(255, 255, 255, 0.82);
+}
+
 .agent-info .btn-outline.is-disabled,
 .agent-info .btn-outline:disabled {
     opacity: 0.62;
@@ -318,6 +348,15 @@
     .agent-info .btn-outline {
         width: 100%;
         text-align: center;
+    }
+
+    .agent-info .agent-contact-channels,
+    .agent-info .agent-profile-tools {
+        width: 100%;
+    }
+
+    .agent-info .agent-contact-max {
+        align-items: center;
     }
 }
 

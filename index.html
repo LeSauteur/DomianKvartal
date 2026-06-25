@@ -135,29 +135,189 @@
     </div>
 </div>
 
-<section class="hero">
-    <div class="container fade-in">
-        <h1>ПОДБЕРЕМ И ОФОРМИМ<br><span>НЕДВИЖИМОСТЬ ЗА 2 ДНЯ</span></h1>
-        <p>Квартиры · Дома · Участки · Коммерция в Аксае и Ростовской области</p>
-        <div class="hero-actions">
-            <a href="apartments.html" class="btn">Подобрать квартиру</a>
-            <a href="guides/index.html" class="btn secondary">Проверить объект</a>
+<section class="hero hero-stage12" aria-label="Подбор недвижимости">
+    <div class="container stage12-hero">
+        <div class="stage12-hero__left fade-in">
+            <div class="stage12-hero__copy">
+                <h1>Подберем и оформим<br><span>недвижимость за 2 дня</span></h1>
+                <p>Квартиры · Дома · Участки · Коммерция<br>в Аксае и Ростовской области</p>
+                <a class="stage12-search" href="#home-stage12-catalog" aria-label="Перейти к мини-витрине предложений">
+                    <span class="stage12-search__icon" aria-hidden="true"></span>
+                    <span class="stage12-search__text">Поиск по городу, району или адресу</span>
+                    <span class="stage12-search__button">Найти</span>
+                </a>
+                <div class="stage12-actions">
+                    <a href="#home-stage12-catalog" class="btn">Открыть каталог</a>
+                    <a href="#home-stage12-owner" class="btn secondary stage12-actions__add"><span aria-hidden="true">+</span> Добавить объект</a>
+                    <a href="#contact" class="btn secondary">Оценить недвижимость</a>
+                </div>
+            </div>
         </div>
-        <div class="hero-scenarios" aria-label="Быстрые сценарии">
-            <a href="apartments.html" class="hero-scenarios__item">Купить</a>
-            <a href="#contact" class="hero-scenarios__item">Продать</a>
-            <a href="#mortgage" class="hero-scenarios__item">Ипотека</a>
-            <a href="#contact" class="hero-scenarios__item">Оценить</a>
-            <a href="#contact" class="hero-scenarios__item">Подобрать объект</a>
+
+        <article class="stage12-featured fade-in" aria-label="Витринная карточка объекта">
+            <a class="stage12-featured__image" href="houses.html">
+                <img src="assets/images/home-stage12/premium-house.png" alt="Современный дом в черте города" loading="eager">
+                <span class="stage12-featured__badge">Премиум</span>
+                <span class="stage12-featured__heart" aria-hidden="true"></span>
+                <span class="stage12-featured__photos"><span aria-hidden="true"></span>1 / 18</span>
+            </a>
+            <div class="stage12-featured__body">
+                <div class="stage12-featured__head">
+                    <div>
+                        <h2>Современный дом в черте города</h2>
+                        <p>Ростов-на-Дону, Октябрьский район</p>
+                    </div>
+                    <div class="stage12-featured__price">
+                        <strong>24 900 000 ₽</strong>
+                        <span>166 000 ₽/м²</span>
+                    </div>
+                </div>
+                <div class="stage12-featured__stats" aria-label="Характеристики объекта">
+                    <span><b>150 м²</b><em>Площадь</em></span>
+                    <span><b>5 сот.</b><em>Участок</em></span>
+                    <span><b>4</b><em>Комнаты</em></span>
+                    <span><b>2</b><em>Этажи</em></span>
+                </div>
+                <a class="btn secondary" href="houses.html">Подробнее</a>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="stage12-categories" id="home-stage12-categories" aria-label="Категории недвижимости">
+    <div class="container stage12-categories__grid">
+        <a class="stage12-category stage12-category--rose" href="apartments.html">
+            <span class="stage12-icon stage12-icon--building" aria-hidden="true"></span>
+            <strong>Квартиры</strong>
+            <em>Подбор квартир</em>
+            <img src="assets/types/apartments.jpg" alt="" loading="lazy">
+        </a>
+        <a class="stage12-category stage12-category--green" href="houses.html">
+            <span class="stage12-icon stage12-icon--home" aria-hidden="true"></span>
+            <strong>Дома</strong>
+            <em>Город и загород</em>
+            <img src="assets/types/houses.jpg" alt="" loading="lazy">
+        </a>
+        <a class="stage12-category stage12-category--olive" href="lands.html">
+            <span class="stage12-icon stage12-icon--tree" aria-hidden="true"></span>
+            <strong>Участки</strong>
+            <em>ИЖС и дачи</em>
+            <img src="assets/types/land.jpg" alt="" loading="lazy">
+        </a>
+        <a class="stage12-category stage12-category--blue" href="commercial.html">
+            <span class="stage12-icon stage12-icon--shop" aria-hidden="true"></span>
+            <strong>Коммерция</strong>
+            <em>Для бизнеса</em>
+            <img src="assets/types/commercial.jpg" alt="" loading="lazy">
+        </a>
+        <a class="stage12-category stage12-category--gold" href="newbuilds.html">
+            <span class="stage12-icon stage12-icon--crane" aria-hidden="true"></span>
+            <strong>Новостройки</strong>
+            <em>ЖК и комплексы</em>
+            <img src="assets/images/home-stage12/category-newbuilding.jpg" alt="" loading="lazy">
+        </a>
+    </div>
+</section>
+
+<section class="stage12-workspace" id="home-stage12-catalog" aria-label="Мини-витрина и заявка собственника">
+    <div class="container stage12-workspace__grid">
+        <div class="stage12-catalog-preview">
+            <nav class="stage12-tabs" aria-label="Быстрые разделы каталога">
+                <a class="is-active" href="apartments.html">Все предложения</a>
+                <a href="apartments.html">Квартиры</a>
+                <a href="houses.html">Дома</a>
+                <a href="lands.html">Участки</a>
+                <a href="commercial.html">Коммерция</a>
+                <a href="newbuilds.html">Новостройки</a>
+                <a href="rent.html">Аренда</a>
+            </nav>
+
+            <div class="stage12-filter-row" aria-label="Визуальные фильтры каталога">
+                <span class="stage12-field"><small>Город</small><b>Ростов-на-Дону</b></span>
+                <span class="stage12-field"><small>Район</small><b>Любой район</b></span>
+                <span class="stage12-field"><small>Тип</small><b>Любой</b></span>
+                <span class="stage12-field"><small>Цена, ₽</small><b>от&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;до</b></span>
+                <span class="stage12-field"><small>Площадь, м²</small><b>от&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;до</b></span>
+                <a class="btn secondary stage12-filter-button" href="apartments.html">Фильтры</a>
+            </div>
+
+            <div class="stage12-mini-grid">
+                <article class="stage12-mini-card">
+                    <a class="stage12-mini-card__image" href="apartments.html">
+                        <img src="assets/images/home-stage12/mini-apartment.jpg" alt="Квартира в Ростове-на-Дону" loading="lazy">
+                        <span class="stage12-mini-badge stage12-mini-badge--green">Снижение цены</span>
+                        <span class="stage12-mini-heart" aria-hidden="true"></span>
+                    </a>
+                    <div class="stage12-mini-card__body">
+                        <h3><a href="apartments.html">2-к квартира, 56 м²</a></h3>
+                        <p>Ростов-на-Дону, Левенцовка</p>
+                        <strong>6 250 000 ₽</strong>
+                    </div>
+                </article>
+                <article class="stage12-mini-card">
+                    <a class="stage12-mini-card__image" href="houses.html">
+                        <img src="assets/images/home-stage12/mini-house.jpg" alt="Дом на участке" loading="lazy">
+                        <span class="stage12-mini-badge">Премиум</span>
+                        <span class="stage12-mini-heart" aria-hidden="true"></span>
+                    </a>
+                    <div class="stage12-mini-card__body">
+                        <h3><a href="houses.html">Дом 180 м² на участке 6 сот.</a></h3>
+                        <p>Аксайский район, п. Янтарный</p>
+                        <strong>18 900 000 ₽</strong>
+                    </div>
+                </article>
+                <article class="stage12-mini-card">
+                    <a class="stage12-mini-card__image" href="newbuilds.html">
+                        <img src="assets/images/home-stage12/mini-studio.jpg" alt="Квартира-студия" loading="lazy">
+                        <span class="stage12-mini-badge stage12-mini-badge--red">Рассрочка</span>
+                        <span class="stage12-mini-heart" aria-hidden="true"></span>
+                    </a>
+                    <div class="stage12-mini-card__body">
+                        <h3><a href="newbuilds.html">Квартира-студия, 34 м²</a></h3>
+                        <p>Ростов-на-Дону, Центр</p>
+                        <strong>5 450 000 ₽</strong>
+                    </div>
+                </article>
+                <article class="stage12-mini-card">
+                    <a class="stage12-mini-card__image" href="lands.html">
+                        <img src="assets/images/home-stage12/mini-land.jpg" alt="Участок в Аксае" loading="lazy">
+                        <span class="stage12-mini-heart" aria-hidden="true"></span>
+                    </a>
+                    <div class="stage12-mini-card__body">
+                        <h3><a href="lands.html">Участок 8 сот.</a></h3>
+                        <p>Аксай, ул. Садовая</p>
+                        <strong>3 200 000 ₽</strong>
+                    </div>
+                </article>
+            </div>
+
+            <a class="stage12-show-more" href="apartments.html">Смотреть больше предложений</a>
         </div>
-        <div class="hero-quick-links" aria-label="Быстрые разделы каталога">
-            <a href="apartments.html" class="hero-quick-links__item">Квартиры</a>
-            <a href="houses.html" class="hero-quick-links__item">Дома</a>
-            <a href="lands.html" class="hero-quick-links__item">Участки</a>
-            <a href="newbuilds.html" class="hero-quick-links__item">Новостройки</a>
-            <a href="commercial.html" class="hero-quick-links__item">Коммерция</a>
-            <a href="construction.html" class="hero-quick-links__item">Строительство</a>
-        </div>
+
+        <aside class="stage12-owner-card" id="home-stage12-owner">
+            <div class="stage12-owner-card__top">
+                <div>
+                    <h2>Добавить объект</h2>
+                    <p>Предложите объект агентству — специалист свяжется с вами и подскажет следующий шаг</p>
+                </div>
+                <span class="stage12-paper-plane" aria-hidden="true"></span>
+            </div>
+            <div class="stage12-owner-switch" aria-label="Тип заявителя">
+                <span class="is-active">Вы</span>
+                <span>Агентство</span>
+            </div>
+            <a class="stage12-post-row" href="#contact">
+                <span>Вы</span>
+                <strong>Расскажите о вашем объекте...</strong>
+                <i aria-hidden="true"></i>
+            </a>
+            <a class="stage12-safe-row" href="#contact">
+                <span class="stage12-safe-icon" aria-hidden="true"></span>
+                <strong>Заявка собственника</strong>
+                <em>Специалист свяжется и согласует детали с вами</em>
+            </a>
+            <a class="btn stage12-owner-submit" href="#contact">Оставить заявку</a>
+        </aside>
     </div>
 </section>
 

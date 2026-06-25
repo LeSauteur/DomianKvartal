@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Добавить объект — прототип</title>
+  <meta name="description" content="Простая демо-форма добавления объекта недвижимости в localStorage.">
+  <link rel="stylesheet" href="assets/css/prototype.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand__mark">D</span>
+      <span>Каталог недвижимости</span>
+    </a>
+    <nav class="site-nav" aria-label="Главная навигация">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="admin.html" aria-current="page">Добавить объект</a>
+    </nav>
+    <span class="prototype-note">локальный прототип</span>
+  </header>
+
+  <main class="admin-page">
+    <section class="admin-intro">
+      <div>
+        <p class="section-label">Форма добавления</p>
+        <h1>Заполните объект как пост, только про недвижимость</h1>
+        <p>Цена без пробелов тоже подойдет. Фото можно добавить позже. Описание можно написать простыми словами.</p>
+      </div>
+      <a class="btn btn-soft" href="catalog.html">Вернуться в каталог</a>
+    </section>
+
+    <div class="admin-layout">
+      <form class="admin-form" data-admin-form>
+        <section class="form-section">
+          <h2>1. Основное</h2>
+          <div class="form-grid">
+            <label>
+              <span>Тип объекта</span>
+              <select name="type" required>
+                <option value="apartment">Квартира</option>
+                <option value="house">Дом</option>
+                <option value="land">Участок</option>
+                <option value="commercial">Коммерция</option>
+                <option value="newbuilding">Новостройка</option>
+              </select>
+            </label>
+            <label>
+              <span>Статус</span>
+              <select name="status">
+                <option value="published">Актуально</option>
+                <option value="reserved">Бронь</option>
+                <option value="sold">Продано</option>
+              </select>
+            </label>
+            <label class="field-wide">
+              <span>Заголовок</span>
+              <input name="title" type="text" placeholder="2-комнатная квартира в Аксае" required>
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2>2. Цена и параметры</h2>
+          <p class="microcopy">Цена без пробелов тоже подойдет: например, 5200000.</p>
+          <div class="form-grid">
+            <label>
+              <span>Цена</span>
+              <input name="price" type="number" min="0" inputmode="numeric" placeholder="5200000" required>
+            </label>
+            <label>
+              <span>Площадь, м²</span>
+              <input name="area" type="number" min="0" inputmode="decimal" placeholder="54">
+            </label>
+            <label data-room-fields>
+              <span>Комнаты</span>
+              <input name="rooms" type="number" min="0" inputmode="numeric" placeholder="2">
+            </label>
+            <label data-room-fields>
+              <span>Этаж</span>
+              <input name="floor" type="number" min="0" inputmode="numeric" placeholder="4">
+            </label>
+            <label data-room-fields>
+              <span>Этажность</span>
+              <input name="floorsTotal" type="number" min="0" inputmode="numeric" placeholder="9">
+            </label>
+            <label data-land-fields hidden>
+              <span>Участок, сот.</span>
+              <input name="landArea" type="number" min="0" inputmode="decimal" placeholder="6">
+            </label>
+            <label class="field-wide">
+              <span>Ремонт / состояние</span>
+              <input name="condition" type="text" placeholder="Евроремонт, ИЖС, свободная планировка">
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2>3. Адрес и локация</h2>
+          <div class="form-grid">
+            <label>
+              <span>Город</span>
+              <input name="city" type="text" placeholder="Аксай" required>
+            </label>
+            <label>
+              <span>Район</span>
+              <input name="district" type="text" placeholder="Центр">
+            </label>
+            <label class="field-wide">
+              <span>Адрес</span>
+              <input name="address" type="text" placeholder="ул. Ленина, 10">
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2>4. Фото</h2>
+          <p class="microcopy">Фото можно добавить позже. Для демо можно загрузить файлы, вставить URL или взять готовое фото.</p>
+          <div class="photo-uploader">
+            <label class="file-box">
+              <span>Выбрать фото</span>
+              <input name="photos" type="file" accept="image/*" multiple>
+            </label>
+            <div class="photo-url-row">
+              <input name="photoUrl" type="url" placeholder="URL фото">
+              <button class="btn btn-soft btn-small" type="button" data-add-photo-url>Добавить URL</button>
+            </div>
+            <div class="demo-photo-row">
+              <button type="button" data-demo-photo="assets/images/objects/apt-001-1.jpg">Квартира</button>
+              <button type="button" data-demo-photo="assets/images/objects/house-001-1.jpg">Дом</button>
+              <button type="button" data-demo-photo="assets/images/objects/land-001-1.jpg">Участок</button>
+              <button type="button" data-demo-photo="assets/images/objects/commercial-001-1.jpg">Коммерция</button>
+            </div>
+            <div class="photo-preview" data-photo-preview></div>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2>5. Описание</h2>
+          <p class="microcopy">Описание можно написать простыми словами: ремонт, инфраструктура, документы, преимущества, кому подойдет.</p>
+          <label>
+            <span>Описание объекта</span>
+            <textarea name="description" rows="7" placeholder="Светлая квартира с удобной планировкой, рядом школа, магазины и остановки. Документы готовы, показ по договоренности."></textarea>
+          </label>
+        </section>
+
+        <section class="form-section">
+          <h2>6. Контакт агента</h2>
+          <div class="form-grid">
+            <label>
+              <span>Имя агента</span>
+              <input name="agentName" type="text" placeholder="Павел Орлов">
+            </label>
+            <label>
+              <span>Телефон</span>
+              <input name="agentPhone" type="tel" placeholder="+7 999 000-00-00">
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section form-section--actions">
+          <h2>7. Предпросмотр и публикация</h2>
+          <p class="microcopy">Черновик не виден в каталоге, публикация видна сразу.</p>
+          <div class="admin-actions">
+            <button class="btn btn-soft" type="button" data-save-draft>Сохранить черновик</button>
+            <button class="btn btn-primary" type="button" data-publish>Опубликовать</button>
+            <button class="btn btn-ghost" type="button" data-clear-form>Очистить форму</button>
+            <a class="btn btn-secondary" href="catalog.html">Вернуться в каталог</a>
+          </div>
+          <div class="admin-notice" data-admin-notice hidden></div>
+        </section>
+      </form>
+
+      <aside class="admin-preview-panel" aria-label="Предпросмотр карточки">
+        <div class="admin-preview-panel__sticky">
+          <p class="section-label">Live-preview</p>
+          <h2>Так объект будет выглядеть в каталоге</h2>
+          <div data-admin-preview></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>Прототип каталога объектов недвижимости</span>
+    <span>HTML/CSS/JS</span>
+    <span>Демо без backend</span>
+  </footer>
+
+  <script src="assets/js/seed-data.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>
