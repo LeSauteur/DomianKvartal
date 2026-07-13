@@ -129,9 +129,13 @@
     return null;
   }
 
-  function formatPrice(price) {
-    if (!price) return "Цена по запросу";
-    return new Intl.NumberFormat("ru-RU").format(price) + " ₽";
+  function formatPrice(price, priceType) {
+    var numeric = Number(price);
+    if (!Number.isFinite(numeric) || numeric < 100000) return "Цена по запросу";
+    var formatted = new Intl.NumberFormat("ru-RU").format(Math.round(numeric));
+    if (priceType === "price_per_m2") return formatted + "\u00a0₽/м²";
+    if (priceType === "minimum_total" || priceType === "advertising_from") return "от " + formatted + "\u00a0₽";
+    return formatted + "\u00a0₽";
   }
   function parsePriceValue(value) {
     if (value === null || value === undefined) return null;
@@ -141,7 +145,7 @@
     var match = normalized.match(/\d+(?:\.\d+)?/);
     if (!match) return null;
     var num = Number(match[0]);
-    if (!isFinite(num) || num <= 0) return null;
+    if (!isFinite(num) || num < 100000) return null;
     return Math.round(num);
   }
 
@@ -349,7 +353,19 @@
   }
 
   function hasCardValue(value) {
-    return value !== undefined && value !== null && String(value).trim() !== "";
+    if (value === undefined || value === null) return false;
+    var normalized = String(value).trim().toLowerCase();
+    return normalized !== "" && normalized !== "null" && normalized !== "undefined" && normalized !== "nan";
+  }
+
+  function isSafeHttpUrl(value) {
+    if (!hasCardValue(value)) return false;
+    try {
+      var parsed = new URL(String(value), window.location.href);
+      return parsed.protocol === "http:" || parsed.protocol === "https:";
+    } catch (_error) {
+      return false;
+    }
   }
 
   function uniqueImages(list) {
@@ -509,7 +525,10 @@
     var safeTitle = escapeHtml(item.title || "Объект");
     var galleryImages = getCardImages(item);
     var meta = item.meta || {};
-    var priceText = formatPrice(meta.price) || "Цена по запросу";
+    var priceText = formatPrice(meta.price, meta.priceType) || "Цена по запросу";
+    var sectionLink = isSafeHttpUrl(item.sectionLink) ? item.sectionLink : "index.html#contact";
+    var isExternalLink = /^https?:\/\//i.test(sectionLink);
+    var linkAttrs = isExternalLink ? ' target="_blank" rel="noopener noreferrer"' : "";
 
     var mortgageHtml = "";
     if (window.domianCatalogMortgage) {
@@ -526,15 +545,17 @@
       hasCardValue(meta.landArea) ? "участок " + String(meta.landArea) + " сот." : "",
       hasCardValue(meta.floor) ? String(meta.floor) + " эт." : ""
     ]);
+    var detailsHtml = renderCardChars(item.cardDetails || []);
 
     card.innerHTML = [
       renderPropertyGallery(galleryImages, safeTitle),
       '<div class="card-content property-card__body">',
       '<h2 class="property-card__title">' + safeTitle + '</h2>',
-      '<div class="card-meta property-card__price">' + escapeHtml(priceText) + mortgageHtml + '</div>',
+      '<div class="card-meta property-card__price"><span class="property-card__price-value">' + escapeHtml(priceText) + '</span>' + mortgageHtml + '</div>',
       charsHtml,
+      detailsHtml,
       '<div class="property-card__actions">',
-      '<a class="btn property-card__cta" href="' + (item.sectionLink || "index.html#contact") + '">Подробнее</a>',
+      '<a class="btn property-card__cta" href="' + escapeHtml(sectionLink) + '"' + linkAttrs + '>' + escapeHtml(item.ctaLabel || "Подробнее") + '</a>',
       '<a class="btn property-card__phone" href="tel:+79536091122">Позвонить</a>',
       "</div>",
       '</div>'
@@ -568,10 +589,10 @@
         '<label>Площадь до<input type="number" step="0.1" data-filter="landAreaMax" placeholder="сот."></label>'
       ],
       newbuilds: [
+        '<label>Поиск<input type="search" data-filter="query" placeholder="Название, город, застройщик"></label>',
         '<label>Цена от<input type="number" data-filter="priceMin" placeholder="₽"></label>',
         '<label>Цена до<input type="number" data-filter="priceMax" placeholder="₽"></label>',
-        '<label>Комнат<input type="number" data-filter="rooms" placeholder="1"></label>',
-        '<label>Этаж<input type="number" data-filter="floor" placeholder="7"></label>'
+        '<label>Сортировка<select data-filter="sort"><option value="">По умолчанию</option><option value="priceAsc">Сначала дешевле</option><option value="priceDesc">Сначала дороже</option><option value="titleAsc">По названию</option></select></label>'
       ]
     };
 
@@ -582,13 +603,13 @@
     var values = {};
     qsa("[data-filter]", container).forEach(function (input) {
       var key = input.getAttribute("data-filter");
-      values[key] = toNumber(input.value);
+      values[key] = key === "query" || key === "sort" ? normalizeText(input.value) : toNumber(input.value);
     });
     return values;
   }
 
   function applyFilters(items, filters, type) {
-    return items.filter(function (item) {
+    var filtered = items.filter(function (item) {
       var meta = item.meta;
 
       if (filters.priceMin !== null && (meta.price === null || meta.price < filters.priceMin)) return false;
@@ -613,12 +634,24 @@
       }
 
       if (type === "newbuilds") {
-        if (filters.rooms !== null && (meta.rooms === null || meta.rooms !== filters.rooms)) return false;
-        if (filters.floor !== null && (meta.floor === null || meta.floor !== filters.floor)) return false;
+        var query = normalizeText(filters.query).toLowerCase();
+        if (query && normalizeText(item.searchText || item.title).toLowerCase().indexOf(query) === -1) return false;
       }
 
       return true;
     });
+
+    if (filters.sort === "priceAsc") {
+      filtered.sort(function (a, b) {
+        return (a.meta.price === null ? Number.POSITIVE_INFINITY : a.meta.price) - (b.meta.price === null ? Number.POSITIVE_INFINITY : b.meta.price);
+      });
+    } else if (filters.sort === "priceDesc") {
+      filtered.sort(function (a, b) { return (b.meta.price || 0) - (a.meta.price || 0); });
+    } else if (filters.sort === "titleAsc") {
+      filtered.sort(function (a, b) { return String(a.title).localeCompare(String(b.title), "ru"); });
+    }
+
+    return filtered;
   }
 
   function resolveAssetPath(basePath, rawPath) {
@@ -683,6 +716,62 @@
     };
   }
 
+  function normalizeMergedNewbuild(item, idx) {
+    var title = normalizeText(item.title) || "ЖК " + String(idx + 1);
+    var description = normalizeText(item.description);
+    var image = resolveAssetPath("", item.image);
+    var priceType = normalizeText(item.price_type);
+    var price = priceType === "on_request" || priceType === "requires_verification" ? null : parsePriceValue(item.price);
+    var areaMin = toNumber(item.area_min);
+    var areaMax = toNumber(item.area_max);
+    var areaText = "";
+    if (areaMin !== null && areaMax !== null) {
+      areaText = "Площадь: " + String(areaMin).replace(".", ",") + "–" + String(areaMax).replace(".", ",") + " м²";
+    } else if (areaMin !== null) {
+      areaText = "Площадь: от " + String(areaMin).replace(".", ",") + " м²";
+    }
+    var officialUrl = isSafeHttpUrl(item.official_url) ? String(item.official_url) : "";
+
+    return {
+      id: "newbuild-v2-" + String(idx + 1),
+      title: title,
+      description: description,
+      cover: image || "assets/hero/hero.jpg",
+      images: image ? [image] : [],
+      sectionLink: officialUrl || "newbuilds.html",
+      ctaLabel: officialUrl ? "Официальный сайт" : "Подробнее",
+      searchText: [title, item.city, item.address, item.developer, item.status].filter(hasCardValue).join(" "),
+      cardDetails: [
+        normalizeText(item.city),
+        normalizeText(item.address),
+        normalizeText(item.status) ? "Статус: " + normalizeText(item.status) : "",
+        normalizeText(item.deadline) ? "Срок: " + normalizeText(item.deadline) : "",
+        areaText,
+        normalizeText(item.developer) ? "Застройщик: " + normalizeText(item.developer) : "",
+        normalizeText(item.class) ? "Класс: " + normalizeText(item.class) : ""
+      ],
+      meta: {
+        price: price,
+        priceType: priceType,
+        rooms: null,
+        area: null,
+        houseArea: null,
+        landArea: null,
+        floor: null
+      }
+    };
+  }
+
+  function loadLegacyNewbuildsData() {
+    return fetchJson("newbuilds/index.json").then(function (items) {
+      return Promise.all(items.map(function (item, idx) {
+        return fetchJson(item.path + "/data.json").then(function (data) {
+          return normalizeItem("newbuilds", item, data, idx);
+        });
+      }));
+    });
+  }
+
   function loadCategoryData(type) {
     if (type === "apartments") {
       return fetchJson("objects/index.json").then(function (ids) {
@@ -717,13 +806,16 @@
       });
     }
 
-    return fetchJson("newbuilds/index.json").then(function (items) {
-      return Promise.all(items.map(function (item, idx) {
-        return fetchJson(item.path + "/data.json").then(function (data) {
-          return normalizeItem(type, item, data, idx);
-        });
-      }));
-    });
+    return fetchJson("output/newbuilds/newbuilds-v2-merged.json")
+      .then(function (items) {
+        if (!Array.isArray(items) || !items.length) {
+          return loadLegacyNewbuildsData();
+        }
+        return items.map(normalizeMergedNewbuild);
+      })
+      .catch(function () {
+        return loadLegacyNewbuildsData();
+      });
   }
 
   function initCatalogPage(type) {
@@ -772,14 +864,15 @@
         render(items);
 
         if (filtersContainer) {
-          qsa("input[data-filter]", filtersContainer).forEach(function (input) {
+          qsa("[data-filter]", filtersContainer).forEach(function (input) {
             input.addEventListener("input", runFilter);
+            if (input.tagName === "SELECT") input.addEventListener("change", runFilter);
           });
 
           var resetButton = qs("#resetFilters", filtersContainer);
           if (resetButton) {
             resetButton.addEventListener("click", function () {
-              qsa("input[data-filter]", filtersContainer).forEach(function (input) {
+              qsa("[data-filter]", filtersContainer).forEach(function (input) {
                 input.value = "";
               });
               runFilter();
@@ -802,7 +895,7 @@
       lands: "lands.html",
       newbuilds: "newbuilds.html"
     }[item && item.categoryName ? String(item.categoryName).toLowerCase() : ""] || "index.html#contact";
-    var priceText = formatPrice(item && item.meta ? item.meta.price : null) || "Цена по запросу";
+    var priceText = formatPrice(item && item.meta ? item.meta.price : null, item && item.meta ? item.meta.priceType : "") || "Цена по запросу";
     var charsHtml = renderCardChars([
       item && item.meta && hasCardValue(item.meta.rooms) ? String(item.meta.rooms) + " комн." : "",
       item && item.meta && hasCardValue(item.meta.area) ? String(item.meta.area) + " м²" : "",
@@ -814,7 +907,7 @@
       '<div class="hot-offer-content property-card__body">',
       '<span class="hot-offer-tag property-card__meta">' + escapeHtml(item.categoryName) + '</span>',
       '<h3 class="property-card__title">' + safeTitle + '</h3>',
-      '<div class="hot-offer-price property-card__price">' + escapeHtml(formatPrice(item.meta.price)) + '</div>',
+      '<div class="hot-offer-price property-card__price">' + escapeHtml(formatPrice(item.meta.price, item.meta.priceType)) + '</div>',
       charsHtml,
       '<div class="property-card__actions">',
       '<a class="btn property-card__cta" href="' + categoryHref + '">Подробнее</a>',

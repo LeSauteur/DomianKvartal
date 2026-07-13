@@ -3258,6 +3258,12 @@ body.catalog-page .cards {
   font-weight: 790;
 }
 
+.property-card__price-value {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 0.9em;
+}
+
 .property-card__chars {
   display: flex;
   flex-wrap: wrap;
