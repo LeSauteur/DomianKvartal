@@ -13,6 +13,7 @@
     <meta property="og:image" content="https://domian-161.ru/assets/hero/hero.jpg">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/visual-premium.css">
+    <link rel="stylesheet" href="assets/css/newbuilds-catalog.css">
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         window.DOMIAN_METRIKA_ID = 109303205;
@@ -28,7 +29,7 @@
     <noscript><div><img src="https://mc.yandex.ru/watch/109303205" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
 </head>
-<body class="catalog-page catalog-extended listing-page" data-listing="newbuilds">
+<body class="catalog-page listing-page newbuilds-v3" data-listing="newbuilds" data-catalog-version="3">
 
 <header>
     <div class="header-inner">
@@ -79,25 +80,84 @@
     </div>
 </div>
 
-<section class="hero has-eyebrow">
-    <div class="container fade-in">
-        <span class="hero-eyebrow">Новостройки</span>
-        <h1>Новостройки Ростова-на-Дону и Ростовской области</h1>
-        <p>Жилые комплексы, квартиры от застройщиков и актуальные предложения.</p>
-        <div class="hero-actions">
-            <a href="newbuilds.html" class="btn">Смотреть новостройки</a>
-            <a href="index.html#contact" class="btn secondary">Консультация</a>
+<section class="nb-hero">
+    <div class="container nb-hero__grid">
+        <div class="nb-hero__content">
+            <span class="nb-eyebrow">Каталог новостроек</span>
+            <h1>Жилые комплексы Ростова-на-Дону и области</h1>
+            <p>Собрали проекты в одном каталоге, отделили проверенные данные от сведений, которые ещё требуют актуализации, и добавили внутренние страницы с официальными галереями.</p>
+            <div class="nb-hero__actions">
+                <a href="#catalog" class="btn">Перейти к каталогу</a>
+                <a href="index.html#contact" class="btn secondary">Подобрать квартиру</a>
+            </div>
+        </div>
+        <div class="nb-hero__facts" aria-label="Состояние каталога">
+            <div><strong id="nbTotalStat">78</strong><span>жилых комплексов</span></div>
+            <div><strong id="nbVerifiedStat">10</strong><span>подробных страниц</span></div>
+            <div><strong>13.07.2026</strong><span>дата проверки пилота</span></div>
         </div>
     </div>
 </section>
 
-<main>
-    <h2>Каталог новостроек</h2>
-<div class="listing-tools">
-        <div class="filters" id="filters"></div>
-        <div class="results-count" id="resultsCount"></div>
+<main class="nb-catalog" id="catalog">
+    <div class="container">
+        <div class="nb-catalog__heading">
+            <div>
+                <span class="nb-eyebrow">Подбор проекта</span>
+                <h2>Каталог жилых комплексов</h2>
+            </div>
+            <p>Цена показывается только при подтверждении первичным источником. Иначе карточка честно сообщает: «По запросу».</p>
+        </div>
+
+        <form class="nb-filters" id="newbuildFilters" role="search">
+            <label class="nb-field nb-field--search">
+                <span>Название, адрес или застройщик</span>
+                <input id="nbSearch" type="search" placeholder="Например, Грей или Левенцовка" autocomplete="off">
+            </label>
+            <label class="nb-field">
+                <span>Город</span>
+                <select id="nbCity"><option value="">Все города</option></select>
+            </label>
+            <label class="nb-field">
+                <span>Статус</span>
+                <select id="nbStatus">
+                    <option value="">Любой статус</option>
+                    <option value="ready">Сдан</option>
+                    <option value="building">Строится</option>
+                    <option value="unknown">Уточняется</option>
+                </select>
+            </label>
+            <label class="nb-field">
+                <span>Полнота</span>
+                <select id="nbCompleteness">
+                    <option value="">Все карточки</option>
+                    <option value="complete">Подробные страницы</option>
+                    <option value="partial">Частично проверено</option>
+                    <option value="needs_review">Требует проверки</option>
+                </select>
+            </label>
+            <label class="nb-field">
+                <span>Сортировка</span>
+                <select id="nbSort">
+                    <option value="priority">Сначала проверенные</option>
+                    <option value="name">По названию</option>
+                    <option value="price-asc">Цена: сначала ниже</option>
+                    <option value="price-desc">Цена: сначала выше</option>
+                </select>
+            </label>
+            <button class="nb-reset" id="nbReset" type="reset">Сбросить</button>
+        </form>
+
+        <div class="nb-results-bar">
+            <p id="resultsCount" aria-live="polite">Загрузка каталога…</p>
+            <div class="nb-legend" aria-label="Обозначения">
+                <span><i class="is-complete"></i> официальный источник и галерея</span>
+                <span><i class="is-review"></i> данные уточняются</span>
+            </div>
+        </div>
+        <div class="nb-cards" id="cards" aria-live="polite"></div>
+        <p class="nb-empty" id="nbEmpty" hidden>По выбранным условиям комплексы не найдены. Сбросьте фильтры или оставьте заявку на индивидуальный подбор.</p>
     </div>
-    <div class="cards" id="cards"></div>
 </main>
 
 <section class="seo-content newbuilds-seo" aria-labelledby="newbuilds-seo-title">
@@ -306,6 +366,6 @@
 </div>
 
 <script src="assets/js/main.js" defer></script>
-<script src="assets/js/catalog-mortgage.js" defer></script>
+<script src="assets/js/newbuilds-catalog.js" defer></script>
 </body>
 </html>

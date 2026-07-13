@@ -1087,8 +1087,10 @@
 
     var listingType = document.body && document.body.dataset ? document.body.dataset.listing : null;
     if (CATALOG_TYPES.indexOf(listingType) !== -1) {
-      initListingNewObjects(listingType);
-      initCatalogPage(listingType);
+      if (document.body.dataset.catalogVersion !== "3") {
+        initListingNewObjects(listingType);
+        initCatalogPage(listingType);
+      }
     }
 
     initHotOffers();

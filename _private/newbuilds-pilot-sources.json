@@ -1,0 +1,13 @@
+[
+  { "slug": "gray", "title": "Грей (GRAY)", "page_url": "https://grayhome.ru/" },
+  { "slug": "grinside", "title": "Гринсайд", "page_url": "https://sk10greenside.ru/" },
+  { "slug": "zapadnye-allei", "title": "Западные Аллеи", "page_url": "https://xn--d1acaqraferjjcw.xn--p1ai/projects/zapadnye-allei" },
+    { "slug": "suvorovskiy", "title": "Суворовский", "page_url": "https://suvorovskii.com/" },
+  { "slug": "leventsovka-park", "title": "Концепт-проект «Левенцовка Парк»", "page_url": "https://rostov.ten-stroy.ru/proekty/koncept-zhk-leventsovka-park/" },
+  { "slug": "5-element-aske", "title": "5 элемент Аске", "page_url": "https://rostov.ten-stroy.ru/proekty/zhk-5-element-kvartal-aske/" },
+  { "slug": "gorod-u-reki", "title": "Город у реки", "page_url": "https://msk-development.ru/projects/flats/gorod-u-reki" },
+  { "slug": "green-park", "title": "Грин Парк", "page_url": "https://msk-development.ru/projects/flats/green-park" },
+  { "slug": "dvizhenie-61", "title": "Движение 61", "page_url": "https://dvizhenie61.ru/" },
+  { "slug": "levoberezhe", "title": "Левобережье", "page_url": "https://levoberezhe.ru/" },
+  { "slug": "siyanie", "title": "Сияние", "page_url": "https://kvartal-siyanie.ru/" }
+]

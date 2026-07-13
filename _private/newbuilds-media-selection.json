@@ -1,0 +1,120 @@
+[
+  {
+    "slug": "gray",
+    "title": "Грей (GRAY)",
+    "official_url": "https://grayhome.ru/",
+    "images": [
+      { "name": "cover.webp", "type": "exterior", "url": "https://static.tildacdn.com/tild3532-6335-4536-b431-393964316235/___17.png", "alt": "Фасад жилого комплекса Грей" },
+      { "name": "courtyard-01.webp", "type": "courtyard", "url": "https://static.tildacdn.com/tild3461-3833-4837-b164-333036623362/1_81_-_.jpg", "alt": "Двор жилого комплекса Грей" },
+      { "name": "courtyard-02.webp", "type": "courtyard", "url": "https://static.tildacdn.com/tild3261-6364-4637-b134-636130636165/CoronaCamera0110000_.jpeg", "alt": "Спортивная зона во дворе жилого комплекса Грей" }
+    ],
+    "floorplans": [
+      { "name": "floorplan-01.webp", "type": "floorplan", "url": "https://static.tildacdn.com/tild3331-6162-4132-b136-393430653764/__page-0001.jpg", "alt": "План этажа жилого комплекса Грей" },
+      { "name": "floorplan-02.webp", "type": "floorplan", "url": "https://static.tildacdn.com/tild3439-3637-4536-b664-353739653861/1.png", "alt": "Вариант планировки квартиры в жилом комплексе Грей" }
+    ]
+  },
+  {
+    "slug": "grinside",
+    "title": "Гринсайд",
+    "official_url": "https://sk10greenside.ru/",
+    "images": [
+      { "name": "cover.webp", "type": "exterior", "url": "https://cdn.idalite.ru/i/insecure/q:100/rs:fill:500:0/g:ce/bl:0/c:0/plain/s3://idalite-media/media/sites/context/gallery/f6bd332e3f8f4350a971b69c56b722af.jpg@webp", "alt": "Вид жилого комплекса Гринсайд" },
+      { "name": "lobby-01.webp", "type": "lobby", "url": "https://cdn.idalite.ru/i/insecure/q:85/rs:fill:2560:1248/g:ce/bl:0/c:0/plain/s3://idalite-media/media/sites/context/gallery/6dfdf3af-dcbd-4d53-afaf-ceae92e65351/fb773ec126b3489fb9f80efb09689e3e.jpg@webp", "alt": "Входная группа жилого комплекса Гринсайд" },
+      { "name": "courtyard-01.webp", "type": "courtyard", "url": "https://cdn.idalite.ru/i/insecure/q:85/rs:fill:2560:1248/g:ce/bl:0/c:0/plain/s3://idalite-media/media/sites/context/gallery/6dfdf3af-dcbd-4d53-afaf-ceae92e65351/3260758bd20c493d83eed8109272d7bb.jpg@webp", "alt": "Детская площадка жилого комплекса Гринсайд" }
+    ]
+  },
+  {
+    "slug": "zapadnye-allei",
+    "title": "Западные Аллеи",
+    "official_url": "https://xn--d1acaqraferjjcw.xn--p1ai/projects/zapadnye-allei",
+    "images": [
+      { "name": "cover.webp", "type": "aerial", "url": "https://img.xn--d1acaqraferjjcw.xn--p1ai/rs:fit:1920:0:0/plain/production/672b701f5ac871739af39adfc57bbf461e10f.jpg", "alt": "Мастер-план жилого района Западные Аллеи" },
+      { "name": "interior-01.webp", "type": "interior", "url": "https://img.xn--d1acaqraferjjcw.xn--p1ai/rs:fill:1980:0:0/plain/production/38c7d982579cb44ebf7f8ec00beed0f47a5a5.jpg", "alt": "Вариант отделки квартиры в Западных Аллеях" },
+      { "name": "interior-02.webp", "type": "interior", "url": "https://img.xn--d1acaqraferjjcw.xn--p1ai/rs:fill:1980:0:0/plain/production/55ecaf7016da4d450d8f396a665baf2e73ac3.jpg", "alt": "Интерьер квартиры в Западных Аллеях" }
+    ]
+  },
+  {
+    "slug": "suvorovskiy",
+    "title": "Суворовский",
+    "official_url": "https://suvorovskii.com/",
+    "images": [
+      { "name": "cover.webp", "type": "construction", "url": "https://suvorovskii.com/img/full-construction/02.jpg", "alt": "Строительство домов жилого района Суворовский" },
+      { "name": "district-01.webp", "type": "construction", "url": "https://suvorovskii.com/img/full-construction/03.jpg", "alt": "Дома жилого района Суворовский" },
+      { "name": "district-02.webp", "type": "construction", "url": "https://suvorovskii.com/img/full-construction/01.jpg", "alt": "Новые дома жилого района Суворовский" }
+    ]
+  },
+  {
+    "slug": "leventsovka-park",
+    "title": "Концепт-проект «Левенцовка Парк»",
+    "official_url": "https://rostov.ten-stroy.ru/proekty/koncept-zhk-leventsovka-park/",
+    "images": [
+      { "name": "cover.webp", "type": "exterior", "url": "https://rostov.ten-stroy.ru/upload/resize_cache/resized/w2760/1d589b3879fa10cff567906006816f20.jpg", "alt": "Фасад жилого комплекса Левенцовка Парк" },
+      { "name": "courtyard-01.webp", "type": "courtyard", "url": "https://rostov.ten-stroy.ru/upload/kelnik.adminpage/471/imfp7wxuef273kn1hn49wwbj0hlmn9n3/LC_08.jpg", "alt": "Двор жилого комплекса Левенцовка Парк" },
+      { "name": "exterior-01.webp", "type": "exterior", "url": "https://rostov.ten-stroy.ru/upload/kelnik.adminpage/7da/ukjvs0t7ghes5oo1k484rlxipszah2a9/LC_02.jpg", "alt": "Дома жилого комплекса Левенцовка Парк" }
+    ]
+  },
+  {
+    "slug": "5-element-aske",
+    "title": "5 элемент Аске",
+    "official_url": "https://rostov.ten-stroy.ru/proekty/zhk-5-element-kvartal-aske/",
+    "images": [
+      { "name": "cover.webp", "type": "courtyard", "url": "https://rostov.ten-stroy.ru/upload/resize_cache/resized/w2760/d45cd83dd7bbf43a74d03e3073a68a40.jpg", "alt": "Двор квартала 5 элемент Аске" },
+      { "name": "courtyard-01.webp", "type": "courtyard", "url": "https://rostov.ten-stroy.ru/upload/resize_cache/resized/w2760/9818e924c17600aadff1c820f1032dfb.jpg", "alt": "Детская площадка квартала 5 элемент Аске" },
+      { "name": "boulevard-01.webp", "type": "infrastructure", "url": "https://rostov.ten-stroy.ru/upload/kelnik.adminpage/7ec/wi1mgxpd01jhtqnlu1tiem3boiwasdgd/bulvar.jpg", "alt": "Пешеходный бульвар квартала 5 элемент Аске" }
+    ]
+  },
+  {
+    "slug": "gorod-u-reki",
+    "title": "Город у реки",
+    "official_url": "https://msk-development.ru/projects/flats/gorod-u-reki",
+    "images": [
+      { "name": "cover.webp", "type": "render", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/6a234ac845d7a516e8f7ebdef8ed046c01dc32f2.jpg@webp", "alt": "Жилой комплекс Город у реки со стороны Дона" },
+      { "name": "exterior-01.webp", "type": "exterior", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/8ac279f43d37ba513e733b88a9f5d8a3a27eddba.jpg@webp", "alt": "Фасады жилого комплекса Город у реки" },
+      { "name": "courtyard-01.webp", "type": "courtyard", "url": "https://msk-development.ru/proxy/insecure/w:1439/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/ac848732f73524353aecc5cd18ed3c7be24f74c5.jpg@webp", "alt": "Двор жилого комплекса Город у реки" }
+    ]
+  },
+  {
+    "slug": "green-park",
+    "title": "Грин Парк",
+    "official_url": "https://msk-development.ru/projects/flats/green-park",
+    "images": [
+      { "name": "cover.webp", "type": "courtyard", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/47104288a25314ee9e1cd0f76c3f31eb532b3450.jpg@webp", "alt": "Двор жилого комплекса Грин Парк" },
+      { "name": "exterior-01.webp", "type": "exterior", "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/5c83ca43a2b4005d1a3bdc01159579431eabd562.jpg@webp", "alt": "Жилой комплекс Грин Парк в окружении зелени" },
+      { "name": "exterior-02.webp", "type": "exterior", "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/d9f6127abb569e7d7a1a5ed01e5b226744c1335d.jpg@webp", "alt": "Фасад жилого комплекса Грин Парк" }
+    ]
+  },
+  {
+    "slug": "dvizhenie-61",
+    "title": "Движение 61",
+    "official_url": "https://dvizhenie61.ru/",
+    "images": [
+      { "name": "cover.webp", "type": "aerial", "url": "https://dvizhenie61.ru/assets/templates/pervyj/img/dv-genplan.jpg?v=1761720733", "alt": "Общий вид квартала Движение 61" },
+      { "name": "exterior-01.webp", "type": "exterior", "url": "https://dvizhenie61.ru/assets/templates/pervyj/img/dv-hi-3.jpg?v=1763372352", "alt": "Фасады и коммерческие помещения квартала Движение 61" },
+      { "name": "courtyard-01.webp", "type": "courtyard", "url": "https://dvizhenie61.ru/assets/templates/pervyj/img/dv-hi-4.jpg?v=1775136960", "alt": "Двор квартала Движение 61" }
+    ]
+  },
+  {
+    "slug": "levoberezhe",
+    "title": "Левобережье",
+    "official_url": "https://levoberezhe.ru/",
+    "images": [
+      { "name": "cover.webp", "type": "aerial", "url": "https://levoberezhe.ru/assets/templates/vrs/img/plan-new.jpg?v=1759153739", "alt": "Мастер-план квартала Левобережье" },
+      { "name": "exterior-01.webp", "type": "exterior", "url": "https://levoberezhe.ru/assets/images/slider/01.jpg", "alt": "Фасад дома квартала Левобережье" }
+    ],
+    "floorplans": [
+      { "name": "floorplan-01.webp", "type": "floorplan", "url": "https://levoberezhe.ru/assets/templates/vrs/img/lb-modal//lb-1k-41,4.png?v=1739426223", "alt": "Планировка однокомнатной квартиры в Левобережье" },
+      { "name": "floorplan-02.webp", "type": "floorplan", "url": "https://levoberezhe.ru/assets/templates/vrs/img/lb-modal//lb-2k-68,7.png?v=1739426242", "alt": "Планировка двухкомнатной квартиры в Левобережье" },
+      { "name": "floorplan-03.webp", "type": "floorplan", "url": "https://levoberezhe.ru/assets/templates/vrs/img/lb-modal//lb-3k-78,4.png?v=1739426270", "alt": "Планировка трёхкомнатной квартиры в Левобережье" }
+    ]
+  },
+  {
+    "slug": "siyanie",
+    "title": "Сияние (Ростов-на-Дону)",
+    "official_url": "https://kvartal-siyanie.ru/",
+    "images": [
+      { "name": "cover.webp", "type": "aerial", "url": "https://kvartal-siyanie.ru/assets/templates/siyanie/img/genplan-siyanie.jpg?v=1782714227", "alt": "Общий вид квартала Сияние" },
+      { "name": "exterior-01.webp", "type": "exterior", "url": "https://kvartal-siyanie.ru/assets/templates/siyanie/img/arch-5.png?v=1710270933", "alt": "Дома квартала Сияние у парка" },
+      { "name": "courtyard-01.webp", "type": "courtyard", "url": "https://kvartal-siyanie.ru/assets/templates/siyanie/img/ab-p-1.jpg?v=1778158417", "alt": "Двор квартала Сияние" }
+    ]
+  }
+]
