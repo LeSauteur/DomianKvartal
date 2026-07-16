@@ -116,5 +116,115 @@
       { "name": "exterior-01.webp", "type": "exterior", "url": "https://kvartal-siyanie.ru/assets/templates/siyanie/img/arch-5.png?v=1710270933", "alt": "Дома квартала Сияние у парка" },
       { "name": "courtyard-01.webp", "type": "courtyard", "url": "https://kvartal-siyanie.ru/assets/templates/siyanie/img/ab-p-1.jpg?v=1778158417", "alt": "Двор квартала Сияние" }
     ]
+  },
+  {
+    "slug": "smartpolet",
+    "title": "Умный квартал smartpolet (смартполет)",
+    "official_url": "https://poletsmart.ru/",
+    "images": [
+      { "name": "cover.webp", "type": "exterior", "url": "https://poletsmart.ru/assets/cache/images/assets/galleries/800/_dsc8918-panorama_ok-1920x1080-2ca.jpg?v=1771333756", "alt": "Дома умного квартала Смартполет" },
+      { "name": "exterior-01.webp", "type": "exterior", "url": "https://poletsmart.ru/assets/cache/images/assets/galleries/800/_dsc8956-panorama_ok-1920x1080-2ca.jpg?v=1771333756", "alt": "Фасады квартала Смартполет" },
+      { "name": "exterior-02.webp", "type": "exterior", "url": "https://poletsmart.ru/assets/cache/images/assets/galleries/800/_dsc8988_ok-1920x1080-3f0.jpg?v=1771333757", "alt": "Благоустроенная территория квартала Смартполет" }
+    ]
+  },
+  {
+    "slug": "oktyabr-park",
+    "title": "Октябрь Парк",
+    "official_url": "https://www.ssk-oktyabr-park.ru/",
+    "images": [
+      { "name": "cover.webp", "type": "exterior", "url": "https://static.tildacdn.com/tild3630-6235-4331-a662-613735666330/Screenshot_1_1_2.png", "alt": "Жилой комплекс Октябрь Парк и прогулочная аллея" },
+      { "name": "courtyard-01.webp", "type": "courtyard", "url": "https://static.tildacdn.com/tild3833-3839-4961-a236-353330356338/Ur_93iV3oWMoAN4RLFkw.jpg", "alt": "Детская площадка в Октябрь Парке" },
+      { "name": "exterior-01.webp", "type": "exterior", "url": "https://static.tildacdn.com/tild3738-3462-4934-b233-366266386162/onDR_eN0huvhRXyx3TUX.jpg", "alt": "Дома и благоустройство Октябрь Парка" }
+    ],
+    "floorplans": [
+      { "name": "floorplan-studio.webp", "type": "floorplan", "url": "https://static.tildacdn.com/tild3462-3237-4663-a130-303132663534/photo.png", "alt": "Планировка студии в Октябрь Парке" },
+      { "name": "floorplan-1-room.webp", "type": "floorplan", "url": "https://static.tildacdn.com/tild3730-3865-4939-b233-346336653265/1.png", "alt": "Планировка однокомнатной квартиры в Октябрь Парке" },
+      { "name": "floorplan-2-room.webp", "type": "floorplan", "url": "https://static.tildacdn.com/tild3637-6265-4264-b133-333263363665/2.png", "alt": "Планировка двухкомнатной квартиры в Октябрь Парке" }
+    ]
+  },
+  {
+    "slug": "royal-towers",
+    "title": "Royal Towers (Роял Тауэрс)",
+    "official_url": "https://msk-development.ru/projects/flats/zhk-royal-towers",
+    "images": [
+      { "name": "cover.webp", "type": "exterior", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/5d16f2cab0c7c9780fd5c65890904dde438daf4a.jpg@webp", "alt": "Общий вид жилого комплекса РОЯЛ ТАУЭРС" },
+      { "name": "aerial-01.webp", "type": "aerial", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/c2175c98265ad8dfd1702f895ab143edee2327fb.jpg@webp", "alt": "Жилой комплекс РОЯЛ ТАУЭРС с высоты" },
+      { "name": "view-01.webp", "type": "view", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/af8f1ce535a72365aa8d166f9109526d37504f32.jpg@webp", "alt": "Вид из окон жилого комплекса РОЯЛ ТАУЭРС" }
+    ]
+  },
+  {
+    "slug": "four-premiers",
+    "title": "FOUR PREMIERS ( Четыре Премьеры)",
+    "official_url": "https://msk-development.ru/projects/flats/four-premiers",
+    "images": [
+      { "name": "cover.webp", "type": "exterior", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/8c228d98bd407413fa88dec7e3b013467501b248.jpg@webp", "alt": "Фасады жилого комплекса ФОР ПРЕМЬЕРС" },
+      { "name": "aerial-01.webp", "type": "aerial", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/203ea9d8bea0b29d242d27f1bfff17f0c0a081d4.jpeg@webp", "alt": "Жилой комплекс ФОР ПРЕМЬЕРС с высоты" },
+      { "name": "courtyard-01.webp", "type": "courtyard", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/5718444df9b755d9a689c0110a04d4c67bbc8358.jpg@webp", "alt": "Благоустройство двора ФОР ПРЕМЬЕРС" }
+    ]
+  },
+  {
+    "slug": "akvatoriya",
+    "title": "Акватория",
+    "official_url": "https://msk-development.ru/projects/flats/aquatoria",
+    "images": [
+      { "name": "cover.webp", "type": "exterior", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/c4cc76d06698e6e17d84f05ad7ce8554c512bdae.jpg@webp", "alt": "Сданные дома жилого комплекса Акватория" },
+      { "name": "courtyard-01.webp", "type": "courtyard", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/5656dfbee492ca0b36cf3ef87263d39a86b351fb.jpg@webp", "alt": "Детская и спортивная площадки Акватории" },
+      { "name": "waterside-01.webp", "type": "exterior", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/0016ed3b811fef60b90b7196763539b1f0a7db61.jpg@webp", "alt": "Жилой комплекс Акватория у Северного водохранилища" }
+    ]
+  },
+  {
+    "slug": "donskoy-arbat",
+    "title": "Донской Арбат",
+    "official_url": "https://msk-development.ru/projects/flats/donskoi-arbat",
+    "images": [
+      { "name": "cover.webp", "type": "exterior", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/82b3f77f281a82f7c4234bf197391ace6719b55e.jpg@webp", "alt": "Общий вид жилого комплекса ДОНСКОЙ АРБАТ" },
+      { "name": "courtyard-01.webp", "type": "courtyard", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/2a7d316e3a5a29623657593ed6fc821e0fe06d8d.jpg@webp", "alt": "Детская площадка жилого комплекса ДОНСКОЙ АРБАТ" },
+      { "name": "exterior-01.webp", "type": "exterior", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/0f46672141b1dbc35cebdcd3688d40b4eeb3bbe0.jpg@webp", "alt": "Дома и благоустройство жилого комплекса ДОНСКОЙ АРБАТ" }
+    ]
+  },
+  {
+    "slug": "donskoy-arbat-2",
+    "title": "Донской Арбат 2",
+    "official_url": "https://msk-development.ru/projects/flats/donskoi-arbat2",
+    "images": [
+      { "name": "cover.webp", "type": "exterior", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/d430ecae1751225349509984cb9910b07e8b3a6c.jpg@webp", "alt": "Общий вид жилого комплекса ДОНСКОЙ АРБАТ 2" },
+      { "name": "aerial-01.webp", "type": "aerial", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/e3beb65a37ac17b17bec34214e08fd932452d949.jpg@webp", "alt": "Жилой комплекс ДОНСКОЙ АРБАТ 2 с высоты" },
+      { "name": "parking-01.webp", "type": "parking", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/5fc5d15c070081b0c58cdf7f2c00e61cff9282d4.jpg@webp", "alt": "Въезд в паркинг жилого комплекса ДОНСКОЙ АРБАТ 2" }
+    ]
+  },
+  {
+    "slug": "kristall-2",
+    "title": "Кристалл-2",
+    "official_url": "https://msk-development.ru/projects/flats/kristall2",
+    "images": [
+      { "name": "cover.webp", "type": "exterior", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/1807c1842f5f72acd887cc76bc2e9b3c0c7535a0.jpg@webp", "alt": "Общий вид жилого комплекса КРИСТАЛЛ-2" },
+      { "name": "aerial-01.webp", "type": "aerial", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/1369749d1080fdca02c507c650fd1a6862f2be2b.jpg@webp", "alt": "Жилой комплекс КРИСТАЛЛ-2 с высоты" },
+      { "name": "exterior-01.webp", "type": "exterior", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/6733ce3defb86832b3cf4e53a1d89d02fa42291c.jpg@webp", "alt": "Фасад и стилобат жилого комплекса КРИСТАЛЛ-2" }
+    ]
+  },
+  {
+    "slug": "legenda-rostova",
+    "title": "Легенда Ростова",
+    "official_url": "https://msk-development.ru/projects/flats/legenda-rostova",
+    "images": [
+      { "name": "cover.webp", "type": "courtyard", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/4b60d5ae8cc99fedef242a54ce608998f6768ec1.jpg@webp", "alt": "Двор и дома жилого комплекса ЛЕГЕНДА РОСТОВА" },
+      { "name": "aerial-01.webp", "type": "aerial", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/c6fc5e564b46d3ba8ceabd1fa6fecc11d2597863.jpg@webp", "alt": "Жилой комплекс ЛЕГЕНДА РОСТОВА с высоты" },
+      { "name": "exterior-01.webp", "type": "exterior", "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/d860be212d9b7c53b669b5e6dffe4f1dd739bb0e.jpg@webp", "alt": "Фасады жилого комплекса ЛЕГЕНДА РОСТОВА" }
+    ]
+  },
+  {
+    "slug": "academia",
+    "title": "ACADEMIA (АКАДЕМИЯ)",
+    "official_url": "https://alfastroyinvest.com/zhk-academia/",
+    "images": [
+      { "name": "cover.webp", "type": "courtyard", "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/img_2594-1.jpg", "alt": "Благоустроенный двор жилого комплекса ACADEMIA" },
+      { "name": "exterior-01.webp", "type": "exterior", "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/img_2596.jpg", "alt": "Фасад жилого комплекса ACADEMIA" },
+      { "name": "aerial-01.webp", "type": "aerial", "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/img_2531.jpg", "alt": "Общий вид жилого комплекса ACADEMIA" }
+    ],
+    "floorplans": [
+      { "name": "floorplan-3-room.webp", "type": "floorplan", "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/1-1.png", "alt": "Планировка трёхкомнатной квартиры в ACADEMIA" },
+      { "name": "floorplan-2-room.webp", "type": "floorplan", "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/4-1.png", "alt": "Планировка двухкомнатной квартиры в ACADEMIA" },
+      { "name": "floorplan-1-room.webp", "type": "floorplan", "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/6-1.png", "alt": "Планировка однокомнатной квартиры в ACADEMIA" }
+    ]
   }
 ]

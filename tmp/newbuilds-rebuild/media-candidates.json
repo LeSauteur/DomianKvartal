@@ -1,0 +1,1412 @@
+[
+  {
+    "slug": "donskoy-arbat",
+    "title": "Донской Арбат",
+    "page_url": "https://msk-development.ru/projects/flats/donskoi-arbat",
+    "resolved_page_url": "https://msk-development.ru/projects/flats/donskoi-arbat",
+    "candidate_count": 72,
+    "images": [
+      {
+        "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/071454835a58724c6bfe57e2bff6edcc7f337a81.jpg@webp",
+        "width": 2362,
+        "height": 2362,
+        "format": "webp",
+        "bytes": 545502
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/7d516ac20f7b7416b8c9e965ae9e9062cda51c5a.jpeg@webp",
+        "width": 2048,
+        "height": 2048,
+        "format": "webp",
+        "bytes": 269514
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/189ab19d0a09c8c6db02701f213e6750ba791929.jpeg@webp",
+        "width": 2048,
+        "height": 2048,
+        "format": "webp",
+        "bytes": 457658
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:0/h:0/q:80/plain/https://msk-development.ru/images/form/formBase.jpg@webp",
+        "width": 1962,
+        "height": 1558,
+        "format": "webp",
+        "bytes": 95640
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/f86f1a0fb8b6ad10ac1bf75a9b38f01f926d58c4.jpeg@webp",
+        "width": 1600,
+        "height": 1600,
+        "format": "webp",
+        "bytes": 18234
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/82b3f77f281a82f7c4234bf197391ace6719b55e.jpg@webp",
+        "width": 1920,
+        "height": 1080,
+        "format": "webp",
+        "bytes": 313692
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/2a7d316e3a5a29623657593ed6fc821e0fe06d8d.jpg@webp",
+        "width": 1920,
+        "height": 1080,
+        "format": "webp",
+        "bytes": 613712
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/9cbf3a4c8101c34a1bf325dfd722c7b19167f752.jpg@webp",
+        "width": 1920,
+        "height": 1080,
+        "format": "webp",
+        "bytes": 635830
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/607d8df9f759ad3668340c39fb5ef746068fc4ce.jpg@webp",
+        "width": 1920,
+        "height": 1080,
+        "format": "webp",
+        "bytes": 468404
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/0f46672141b1dbc35cebdcd3688d40b4eeb3bbe0.jpg@webp",
+        "width": 1920,
+        "height": 1080,
+        "format": "webp",
+        "bytes": 605854
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/d885c43870e3c008ca0a0592b0704d16b3594a76.jpg@webp",
+        "width": 1920,
+        "height": 1080,
+        "format": "webp",
+        "bytes": 533028
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/d8f8e96d1f48f9d034e19688d7a50e5da9e85a9f.jpg@webp",
+        "width": 1920,
+        "height": 1080,
+        "format": "webp",
+        "bytes": 526492
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/268a881f94c9b22209ef5923ef9781abf1341f7d.jpg@webp",
+        "width": 1280,
+        "height": 1280,
+        "format": "webp",
+        "bytes": 159012
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/dfbe6b1b9f9fcb53b42bfbe27a0936a3bcc4cc36.jpg@webp",
+        "width": 1920,
+        "height": 640,
+        "format": "webp",
+        "bytes": 220696
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/6d563caa9a1e56d9e2a992694084467fcf628810.jpg@webp",
+        "width": 1920,
+        "height": 640,
+        "format": "webp",
+        "bytes": 253886
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1439/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/82b3f77f281a82f7c4234bf197391ace6719b55e.jpg@webp",
+        "width": 1439,
+        "height": 809,
+        "format": "webp",
+        "bytes": 225568
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1439/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/2a7d316e3a5a29623657593ed6fc821e0fe06d8d.jpg@webp",
+        "width": 1439,
+        "height": 809,
+        "format": "webp",
+        "bytes": 323368
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1439/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/9cbf3a4c8101c34a1bf325dfd722c7b19167f752.jpg@webp",
+        "width": 1439,
+        "height": 809,
+        "format": "webp",
+        "bytes": 323582
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/82b3f77f281a82f7c4234bf197391ace6719b55e.jpg@webp",
+        "width": 1279,
+        "height": 719,
+        "format": "webp",
+        "bytes": 185252
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/2a7d316e3a5a29623657593ed6fc821e0fe06d8d.jpg@webp",
+        "width": 1279,
+        "height": 719,
+        "format": "webp",
+        "bytes": 256816
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/9cbf3a4c8101c34a1bf325dfd722c7b19167f752.jpg@webp",
+        "width": 1279,
+        "height": 719,
+        "format": "webp",
+        "bytes": 245460
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/607d8df9f759ad3668340c39fb5ef746068fc4ce.jpg@webp",
+        "width": 1279,
+        "height": 719,
+        "format": "webp",
+        "bytes": 211722
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/0f46672141b1dbc35cebdcd3688d40b4eeb3bbe0.jpg@webp",
+        "width": 1279,
+        "height": 719,
+        "format": "webp",
+        "bytes": 254634
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/d885c43870e3c008ca0a0592b0704d16b3594a76.jpg@webp",
+        "width": 1279,
+        "height": 719,
+        "format": "webp",
+        "bytes": 243048
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/d8f8e96d1f48f9d034e19688d7a50e5da9e85a9f.jpg@webp",
+        "width": 1279,
+        "height": 719,
+        "format": "webp",
+        "bytes": 244112
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1439/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/dfbe6b1b9f9fcb53b42bfbe27a0936a3bcc4cc36.jpg@webp",
+        "width": 1439,
+        "height": 480,
+        "format": "webp",
+        "bytes": 127962
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1439/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/6d563caa9a1e56d9e2a992694084467fcf628810.jpg@webp",
+        "width": 1439,
+        "height": 480,
+        "format": "webp",
+        "bytes": 148574
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/268a881f94c9b22209ef5923ef9781abf1341f7d.jpg@webp",
+        "width": 767,
+        "height": 767,
+        "format": "webp",
+        "bytes": 66646
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/dfbe6b1b9f9fcb53b42bfbe27a0936a3bcc4cc36.jpg@webp",
+        "width": 1279,
+        "height": 426,
+        "format": "webp",
+        "bytes": 104472
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/6d563caa9a1e56d9e2a992694084467fcf628810.jpg@webp",
+        "width": 1279,
+        "height": 426,
+        "format": "webp",
+        "bytes": 120802
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:720/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/268a881f94c9b22209ef5923ef9781abf1341f7d.jpg@webp",
+        "width": 720,
+        "height": 720,
+        "format": "webp",
+        "bytes": 60588
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:640/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/268a881f94c9b22209ef5923ef9781abf1341f7d.jpg@webp",
+        "width": 640,
+        "height": 640,
+        "format": "webp",
+        "bytes": 51878
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/82b3f77f281a82f7c4234bf197391ace6719b55e.jpg@webp",
+        "width": 767,
+        "height": 431,
+        "format": "webp",
+        "bytes": 72594
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/2a7d316e3a5a29623657593ed6fc821e0fe06d8d.jpg@webp",
+        "width": 767,
+        "height": 431,
+        "format": "webp",
+        "bytes": 97478
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/9cbf3a4c8101c34a1bf325dfd722c7b19167f752.jpg@webp",
+        "width": 767,
+        "height": 431,
+        "format": "webp",
+        "bytes": 88438
+      }
+    ]
+  },
+  {
+    "slug": "donskoy-arbat-2",
+    "title": "Донской Арбат 2",
+    "page_url": "https://msk-development.ru/projects/flats/donskoi-arbat2",
+    "resolved_page_url": "https://msk-development.ru/projects/flats/donskoi-arbat2",
+    "candidate_count": 72,
+    "images": [
+      {
+        "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/adc0487d623e301dba05858aa3f04363a263f838.jpeg@webp",
+        "width": 3961,
+        "height": 3961,
+        "format": "webp",
+        "bytes": 1328876
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/324e01b048ec1d93af1c300817f6c45faa9d3498.jpeg@webp",
+        "width": 3275,
+        "height": 3275,
+        "format": "webp",
+        "bytes": 1056146
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:0/h:0/q:80/plain/https://msk-development.ru/images/form/formBase.jpg@webp",
+        "width": 1962,
+        "height": 1558,
+        "format": "webp",
+        "bytes": 95640
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/f86f1a0fb8b6ad10ac1bf75a9b38f01f926d58c4.jpeg@webp",
+        "width": 1600,
+        "height": 1600,
+        "format": "webp",
+        "bytes": 18234
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/d430ecae1751225349509984cb9910b07e8b3a6c.jpg@webp",
+        "width": 1920,
+        "height": 1080,
+        "format": "webp",
+        "bytes": 450620
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/8d475cf49b2d4ae12160ef90f8a78e8b2fbbefe0.jpg@webp",
+        "width": 1920,
+        "height": 1080,
+        "format": "webp",
+        "bytes": 573874
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/8d475cf49b2d4ae12160ef90f8a78e8b2fbbefe0.jpg@webp",
+        "width": 1920,
+        "height": 1080,
+        "format": "webp",
+        "bytes": 573874
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/e3beb65a37ac17b17bec34214e08fd932452d949.jpg@webp",
+        "width": 1920,
+        "height": 1080,
+        "format": "webp",
+        "bytes": 801370
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/75f1e2255deefa4b70ebdbaeaa6e141998a422ff.jpg@webp",
+        "width": 1920,
+        "height": 1080,
+        "format": "webp",
+        "bytes": 422230
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1439/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/d430ecae1751225349509984cb9910b07e8b3a6c.jpg@webp",
+        "width": 1439,
+        "height": 809,
+        "format": "webp",
+        "bytes": 261208
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1439/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/8d475cf49b2d4ae12160ef90f8a78e8b2fbbefe0.jpg@webp",
+        "width": 1439,
+        "height": 809,
+        "format": "webp",
+        "bytes": 331790
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1439/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/8d475cf49b2d4ae12160ef90f8a78e8b2fbbefe0.jpg@webp",
+        "width": 1439,
+        "height": 809,
+        "format": "webp",
+        "bytes": 331790
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1439/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/e3beb65a37ac17b17bec34214e08fd932452d949.jpg@webp",
+        "width": 1439,
+        "height": 809,
+        "format": "webp",
+        "bytes": 468844
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/5fc5d15c070081b0c58cdf7f2c00e61cff9282d4.jpg@webp",
+        "width": 1280,
+        "height": 720,
+        "format": "webp",
+        "bytes": 236368
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/fddf596b654e932b0bbe2169fe143e104a447354.jpg@webp",
+        "width": 1280,
+        "height": 720,
+        "format": "webp",
+        "bytes": 289800
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/d430ecae1751225349509984cb9910b07e8b3a6c.jpg@webp",
+        "width": 1279,
+        "height": 719,
+        "format": "webp",
+        "bytes": 208510
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/8d475cf49b2d4ae12160ef90f8a78e8b2fbbefe0.jpg@webp",
+        "width": 1279,
+        "height": 719,
+        "format": "webp",
+        "bytes": 263074
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/5fc5d15c070081b0c58cdf7f2c00e61cff9282d4.jpg@webp",
+        "width": 1279,
+        "height": 719,
+        "format": "webp",
+        "bytes": 194380
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/fddf596b654e932b0bbe2169fe143e104a447354.jpg@webp",
+        "width": 1279,
+        "height": 719,
+        "format": "webp",
+        "bytes": 230652
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/8d475cf49b2d4ae12160ef90f8a78e8b2fbbefe0.jpg@webp",
+        "width": 1279,
+        "height": 719,
+        "format": "webp",
+        "bytes": 263074
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/e3beb65a37ac17b17bec34214e08fd932452d949.jpg@webp",
+        "width": 1279,
+        "height": 719,
+        "format": "webp",
+        "bytes": 370576
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/75f1e2255deefa4b70ebdbaeaa6e141998a422ff.jpg@webp",
+        "width": 1279,
+        "height": 719,
+        "format": "webp",
+        "bytes": 191028
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/1ffa6e1744acd4584f15b658d1f0186746bb8849.jfif@webp",
+        "width": 780,
+        "height": 780,
+        "format": "webp",
+        "bytes": 129474
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/2a8d0373842dc8e927bc42bcea242ef5248c2a95.jpeg@webp",
+        "width": 780,
+        "height": 780,
+        "format": "webp",
+        "bytes": 127118
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/1ffa6e1744acd4584f15b658d1f0186746bb8849.jfif@webp",
+        "width": 767,
+        "height": 767,
+        "format": "webp",
+        "bytes": 120384
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/adc0487d623e301dba05858aa3f04363a263f838.jpeg@webp",
+        "width": 767,
+        "height": 767,
+        "format": "webp",
+        "bytes": 97460
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/2a8d0373842dc8e927bc42bcea242ef5248c2a95.jpeg@webp",
+        "width": 767,
+        "height": 767,
+        "format": "webp",
+        "bytes": 119036
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/324e01b048ec1d93af1c300817f6c45faa9d3498.jpeg@webp",
+        "width": 767,
+        "height": 767,
+        "format": "webp",
+        "bytes": 107338
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:750/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/1ffa6e1744acd4584f15b658d1f0186746bb8849.jfif@webp",
+        "width": 750,
+        "height": 750,
+        "format": "webp",
+        "bytes": 115644
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:750/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/adc0487d623e301dba05858aa3f04363a263f838.jpeg@webp",
+        "width": 750,
+        "height": 750,
+        "format": "webp",
+        "bytes": 93852
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:750/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/2a8d0373842dc8e927bc42bcea242ef5248c2a95.jpeg@webp",
+        "width": 750,
+        "height": 750,
+        "format": "webp",
+        "bytes": 115160
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:720/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/1ffa6e1744acd4584f15b658d1f0186746bb8849.jfif@webp",
+        "width": 720,
+        "height": 720,
+        "format": "webp",
+        "bytes": 106858
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:720/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/adc0487d623e301dba05858aa3f04363a263f838.jpeg@webp",
+        "width": 720,
+        "height": 720,
+        "format": "webp",
+        "bytes": 87372
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:720/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/2a8d0373842dc8e927bc42bcea242ef5248c2a95.jpeg@webp",
+        "width": 720,
+        "height": 720,
+        "format": "webp",
+        "bytes": 106786
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:640/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/1ffa6e1744acd4584f15b658d1f0186746bb8849.jfif@webp",
+        "width": 640,
+        "height": 640,
+        "format": "webp",
+        "bytes": 86086
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:640/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/adc0487d623e301dba05858aa3f04363a263f838.jpeg@webp",
+        "width": 640,
+        "height": 640,
+        "format": "webp",
+        "bytes": 71598
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:640/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/2a8d0373842dc8e927bc42bcea242ef5248c2a95.jpeg@webp",
+        "width": 640,
+        "height": 640,
+        "format": "webp",
+        "bytes": 88168
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/d430ecae1751225349509984cb9910b07e8b3a6c.jpg@webp",
+        "width": 767,
+        "height": 431,
+        "format": "webp",
+        "bytes": 79176
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/8d475cf49b2d4ae12160ef90f8a78e8b2fbbefe0.jpg@webp",
+        "width": 767,
+        "height": 431,
+        "format": "webp",
+        "bytes": 94602
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/5fc5d15c070081b0c58cdf7f2c00e61cff9282d4.jpg@webp",
+        "width": 767,
+        "height": 431,
+        "format": "webp",
+        "bytes": 78746
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/fddf596b654e932b0bbe2169fe143e104a447354.jpg@webp",
+        "width": 767,
+        "height": 431,
+        "format": "webp",
+        "bytes": 98612
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/8d475cf49b2d4ae12160ef90f8a78e8b2fbbefe0.jpg@webp",
+        "width": 767,
+        "height": 431,
+        "format": "webp",
+        "bytes": 94602
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/e3beb65a37ac17b17bec34214e08fd932452d949.jpg@webp",
+        "width": 767,
+        "height": 431,
+        "format": "webp",
+        "bytes": 132180
+      }
+    ]
+  },
+  {
+    "slug": "kristall-2",
+    "title": "Кристалл-2",
+    "page_url": "https://msk-development.ru/projects/flats/kristall2",
+    "resolved_page_url": "https://msk-development.ru/projects/flats/kristall2",
+    "candidate_count": 72,
+    "images": [
+      {
+        "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/d59069069cd6c5600e0aa6d02f23b8adb8c1ec42.jpg@webp",
+        "width": 2362,
+        "height": 2362,
+        "format": "webp",
+        "bytes": 996880
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/d53e22deaae5467d852eb07d901cdb0a52355c81.jpg@webp",
+        "width": 2362,
+        "height": 2362,
+        "format": "webp",
+        "bytes": 856768
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/343a326287d481a4d4d433f658b1fb296452285c.jpg@webp",
+        "width": 2362,
+        "height": 2362,
+        "format": "webp",
+        "bytes": 873384
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/8c9f2cf60115b7b657c610efd8133a7d222170bb.jpg@webp",
+        "width": 2362,
+        "height": 2362,
+        "format": "webp",
+        "bytes": 838338
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:0/h:0/q:80/plain/https://msk-development.ru/images/form/formBase.jpg@webp",
+        "width": 1962,
+        "height": 1558,
+        "format": "webp",
+        "bytes": 95640
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/f86f1a0fb8b6ad10ac1bf75a9b38f01f926d58c4.jpeg@webp",
+        "width": 1600,
+        "height": 1600,
+        "format": "webp",
+        "bytes": 18234
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/1807c1842f5f72acd887cc76bc2e9b3c0c7535a0.jpg@webp",
+        "width": 1920,
+        "height": 1080,
+        "format": "webp",
+        "bytes": 338008
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/1369749d1080fdca02c507c650fd1a6862f2be2b.jpg@webp",
+        "width": 1920,
+        "height": 1080,
+        "format": "webp",
+        "bytes": 446318
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/ae1b5d7e005c7046b3bd2b2a1f960a67b22dcdb7.jpg@webp",
+        "width": 1920,
+        "height": 1080,
+        "format": "webp",
+        "bytes": 288732
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/eaf073465396c566146af178f6b279b809e31a65.jpg@webp",
+        "width": 1422,
+        "height": 800,
+        "format": "webp",
+        "bytes": 171806
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1439/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/eaf073465396c566146af178f6b279b809e31a65.jpg@webp",
+        "width": 1422,
+        "height": 800,
+        "format": "webp",
+        "bytes": 171806
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1439/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/fc39d0fdb2d3ce391f0f2079f54ebaa5bb11e47f.jpg@webp",
+        "width": 1422,
+        "height": 800,
+        "format": "webp",
+        "bytes": 226722
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/fc39d0fdb2d3ce391f0f2079f54ebaa5bb11e47f.jpg@webp",
+        "width": 1422,
+        "height": 800,
+        "format": "webp",
+        "bytes": 226722
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/3181ddd4063998ae314c53972ee8188ac71fd55e.jpg@webp",
+        "width": 1422,
+        "height": 800,
+        "format": "webp",
+        "bytes": 148078
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/6733ce3defb86832b3cf4e53a1d89d02fa42291c.jpg@webp",
+        "width": 1422,
+        "height": 800,
+        "format": "webp",
+        "bytes": 254020
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/eaf073465396c566146af178f6b279b809e31a65.jpg@webp",
+        "width": 1279,
+        "height": 720,
+        "format": "webp",
+        "bytes": 140506
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/fc39d0fdb2d3ce391f0f2079f54ebaa5bb11e47f.jpg@webp",
+        "width": 1279,
+        "height": 720,
+        "format": "webp",
+        "bytes": 183836
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/3181ddd4063998ae314c53972ee8188ac71fd55e.jpg@webp",
+        "width": 1279,
+        "height": 720,
+        "format": "webp",
+        "bytes": 121088
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/6733ce3defb86832b3cf4e53a1d89d02fa42291c.jpg@webp",
+        "width": 1279,
+        "height": 720,
+        "format": "webp",
+        "bytes": 202858
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/1807c1842f5f72acd887cc76bc2e9b3c0c7535a0.jpg@webp",
+        "width": 1279,
+        "height": 719,
+        "format": "webp",
+        "bytes": 162402
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/1369749d1080fdca02c507c650fd1a6862f2be2b.jpg@webp",
+        "width": 1279,
+        "height": 719,
+        "format": "webp",
+        "bytes": 219096
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/ae1b5d7e005c7046b3bd2b2a1f960a67b22dcdb7.jpg@webp",
+        "width": 1279,
+        "height": 719,
+        "format": "webp",
+        "bytes": 138578
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/8033d391e107e739efee5c157b692516cf4a30f5.jpg@webp",
+        "width": 1279,
+        "height": 719,
+        "format": "webp",
+        "bytes": 237732
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/6ec6d9f8cfc158721e8a53aee24c04761d51f0d4.jpg@webp",
+        "width": 1279,
+        "height": 719,
+        "format": "webp",
+        "bytes": 229544
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/eaf073465396c566146af178f6b279b809e31a65.jpg@webp",
+        "width": 767,
+        "height": 432,
+        "format": "webp",
+        "bytes": 58376
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/fc39d0fdb2d3ce391f0f2079f54ebaa5bb11e47f.jpg@webp",
+        "width": 767,
+        "height": 432,
+        "format": "webp",
+        "bytes": 77996
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/3181ddd4063998ae314c53972ee8188ac71fd55e.jpg@webp",
+        "width": 767,
+        "height": 432,
+        "format": "webp",
+        "bytes": 50322
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/6733ce3defb86832b3cf4e53a1d89d02fa42291c.jpg@webp",
+        "width": 767,
+        "height": 432,
+        "format": "webp",
+        "bytes": 75592
+      }
+    ]
+  },
+  {
+    "slug": "legenda-rostova",
+    "title": "Легенда Ростова",
+    "page_url": "https://msk-development.ru/projects/flats/legenda-rostova",
+    "resolved_page_url": "https://msk-development.ru/projects/flats/legenda-rostova",
+    "candidate_count": 72,
+    "images": [
+      {
+        "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/ed634e54dd1a082b28482372237e9c42ad5f4747.jpeg@webp",
+        "width": 3429,
+        "height": 3429,
+        "format": "webp",
+        "bytes": 898454
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:0/h:0/q:80/plain/https://msk-development.ru/images/form/formBase.jpg@webp",
+        "width": 1962,
+        "height": 1558,
+        "format": "webp",
+        "bytes": 95640
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/f86f1a0fb8b6ad10ac1bf75a9b38f01f926d58c4.jpeg@webp",
+        "width": 1600,
+        "height": 1600,
+        "format": "webp",
+        "bytes": 18234
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/4b60d5ae8cc99fedef242a54ce608998f6768ec1.jpg@webp",
+        "width": 1920,
+        "height": 1080,
+        "format": "webp",
+        "bytes": 488616
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/820743ae3a25624ec43680d5c1047789109adfae.jpg@webp",
+        "width": 1920,
+        "height": 960,
+        "format": "webp",
+        "bytes": 325554
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/f63fe1084883be723b883bc114cb7ca126c5b3ac.jpg@webp",
+        "width": 1920,
+        "height": 960,
+        "format": "webp",
+        "bytes": 455092
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/c6fc5e564b46d3ba8ceabd1fa6fecc11d2597863.jpg@webp",
+        "width": 1920,
+        "height": 960,
+        "format": "webp",
+        "bytes": 618644
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/b24898932938ba4cf96db69945b2862c664ab8b9.jpg@webp",
+        "width": 1920,
+        "height": 960,
+        "format": "webp",
+        "bytes": 341538
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/b4b1da842f72578627e455718ce4656740a0717e.jpg@webp",
+        "width": 1920,
+        "height": 960,
+        "format": "webp",
+        "bytes": 480052
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/aeeb55c82d47f881f8c731b829ab56def69d9579.jpg@webp",
+        "width": 1920,
+        "height": 960,
+        "format": "webp",
+        "bytes": 660166
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/d860be212d9b7c53b669b5e6dffe4f1dd739bb0e.jpg@webp",
+        "width": 1920,
+        "height": 960,
+        "format": "webp",
+        "bytes": 573864
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/97a6b449ca3165155006b5769a4ea711b53bd111.jpg@webp",
+        "width": 1920,
+        "height": 960,
+        "format": "webp",
+        "bytes": 598556
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/22060b89a5e8c2a712fd0ddf31736a580f0414b1.jpg@webp",
+        "width": 1920,
+        "height": 960,
+        "format": "webp",
+        "bytes": 487976
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1439/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/820743ae3a25624ec43680d5c1047789109adfae.jpg@webp",
+        "width": 1439,
+        "height": 720,
+        "format": "webp",
+        "bytes": 185186
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1439/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/f63fe1084883be723b883bc114cb7ca126c5b3ac.jpg@webp",
+        "width": 1439,
+        "height": 720,
+        "format": "webp",
+        "bytes": 257252
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1439/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/b4b1da842f72578627e455718ce4656740a0717e.jpg@webp",
+        "width": 1439,
+        "height": 720,
+        "format": "webp",
+        "bytes": 280566
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1439/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/aeeb55c82d47f881f8c731b829ab56def69d9579.jpg@webp",
+        "width": 1439,
+        "height": 720,
+        "format": "webp",
+        "bytes": 386892
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/4b60d5ae8cc99fedef242a54ce608998f6768ec1.jpg@webp",
+        "width": 1279,
+        "height": 719,
+        "format": "webp",
+        "bytes": 219778
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/820743ae3a25624ec43680d5c1047789109adfae.jpg@webp",
+        "width": 1279,
+        "height": 640,
+        "format": "webp",
+        "bytes": 148986
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/f63fe1084883be723b883bc114cb7ca126c5b3ac.jpg@webp",
+        "width": 1279,
+        "height": 640,
+        "format": "webp",
+        "bytes": 206340
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/c6fc5e564b46d3ba8ceabd1fa6fecc11d2597863.jpg@webp",
+        "width": 1279,
+        "height": 640,
+        "format": "webp",
+        "bytes": 274774
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/b24898932938ba4cf96db69945b2862c664ab8b9.jpg@webp",
+        "width": 1279,
+        "height": 640,
+        "format": "webp",
+        "bytes": 157644
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/b4b1da842f72578627e455718ce4656740a0717e.jpg@webp",
+        "width": 1279,
+        "height": 640,
+        "format": "webp",
+        "bytes": 224512
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/aeeb55c82d47f881f8c731b829ab56def69d9579.jpg@webp",
+        "width": 1279,
+        "height": 640,
+        "format": "webp",
+        "bytes": 307112
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/d860be212d9b7c53b669b5e6dffe4f1dd739bb0e.jpg@webp",
+        "width": 1279,
+        "height": 640,
+        "format": "webp",
+        "bytes": 260894
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/97a6b449ca3165155006b5769a4ea711b53bd111.jpg@webp",
+        "width": 1279,
+        "height": 640,
+        "format": "webp",
+        "bytes": 289070
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:1279/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/22060b89a5e8c2a712fd0ddf31736a580f0414b1.jpg@webp",
+        "width": 1279,
+        "height": 640,
+        "format": "webp",
+        "bytes": 219566
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/6a7e418d5a10e79b9db3259ad482ac4b2f64a141.jpeg@webp",
+        "width": 892,
+        "height": 892,
+        "format": "webp",
+        "bytes": 128630
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/52d66fe5a3b515cbd394aaffaacdc9525249da0e.jfif@webp",
+        "width": 780,
+        "height": 780,
+        "format": "webp",
+        "bytes": 136376
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/p/ci/0332e0af7f9c4802fd3c39096b4d06d28bdb7f5e.jpeg@webp",
+        "width": 780,
+        "height": 780,
+        "format": "webp",
+        "bytes": 104688
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/4b60d5ae8cc99fedef242a54ce608998f6768ec1.jpg@webp",
+        "width": 767,
+        "height": 431,
+        "format": "webp",
+        "bytes": 78612
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/820743ae3a25624ec43680d5c1047789109adfae.jpg@webp",
+        "width": 767,
+        "height": 384,
+        "format": "webp",
+        "bytes": 58094
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/f63fe1084883be723b883bc114cb7ca126c5b3ac.jpg@webp",
+        "width": 767,
+        "height": 384,
+        "format": "webp",
+        "bytes": 80592
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/c6fc5e564b46d3ba8ceabd1fa6fecc11d2597863.jpg@webp",
+        "width": 767,
+        "height": 384,
+        "format": "webp",
+        "bytes": 101928
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/b24898932938ba4cf96db69945b2862c664ab8b9.jpg@webp",
+        "width": 767,
+        "height": 384,
+        "format": "webp",
+        "bytes": 64326
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/b4b1da842f72578627e455718ce4656740a0717e.jpg@webp",
+        "width": 767,
+        "height": 384,
+        "format": "webp",
+        "bytes": 83278
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/aeeb55c82d47f881f8c731b829ab56def69d9579.jpg@webp",
+        "width": 767,
+        "height": 384,
+        "format": "webp",
+        "bytes": 105564
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/d860be212d9b7c53b669b5e6dffe4f1dd739bb0e.jpg@webp",
+        "width": 767,
+        "height": 384,
+        "format": "webp",
+        "bytes": 91548
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/97a6b449ca3165155006b5769a4ea711b53bd111.jpg@webp",
+        "width": 767,
+        "height": 384,
+        "format": "webp",
+        "bytes": 103304
+      },
+      {
+        "url": "https://msk-development.ru/proxy/insecure/w:767/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/22060b89a5e8c2a712fd0ddf31736a580f0414b1.jpg@webp",
+        "width": 767,
+        "height": 384,
+        "format": "webp",
+        "bytes": 78876
+      }
+    ]
+  },
+  {
+    "slug": "academia",
+    "title": "ACADEMIA (АКАДЕМИЯ)",
+    "page_url": "https://alfastroyinvest.com/zhk-academia/",
+    "resolved_page_url": "https://alfastroyinvest.com/zhk-academia/",
+    "candidate_count": 72,
+    "images": [
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/1-etap-1-sekcziya-plan-6-etazha_-1.png",
+        "width": 3308,
+        "height": 2339,
+        "format": "png",
+        "bytes": 467238
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/1-1.png",
+        "width": 3308,
+        "height": 2339,
+        "format": "png",
+        "bytes": 371688
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/2-1.png",
+        "width": 3308,
+        "height": 2339,
+        "format": "png",
+        "bytes": 451812
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/3-1.png",
+        "width": 3308,
+        "height": 2339,
+        "format": "png",
+        "bytes": 336190
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/4-1.png",
+        "width": 3308,
+        "height": 2339,
+        "format": "png",
+        "bytes": 313989
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/5-1.png",
+        "width": 3308,
+        "height": 2339,
+        "format": "png",
+        "bytes": 476885
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/6-1.png",
+        "width": 3308,
+        "height": 2339,
+        "format": "png",
+        "bytes": 350235
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/7-1.png",
+        "width": 3308,
+        "height": 2339,
+        "format": "png",
+        "bytes": 245173
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/8-1.png",
+        "width": 3308,
+        "height": 2339,
+        "format": "png",
+        "bytes": 412524
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/09/pngegg-2.png",
+        "width": 3504,
+        "height": 816,
+        "format": "png",
+        "bytes": 131067
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/img_2594-1.jpg",
+        "width": 1920,
+        "height": 1080,
+        "format": "jpeg",
+        "bytes": 613958
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/webp-express/webp-images/themes/hello-elementor/img/tradein.jpg.webp",
+        "width": 2578,
+        "height": 600,
+        "format": "webp",
+        "bytes": 40492
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/img_2594-1-1536x864.jpg",
+        "width": 1536,
+        "height": 864,
+        "format": "jpeg",
+        "bytes": 470323
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/img_2596.jpg",
+        "width": 1080,
+        "height": 1080,
+        "format": "jpeg",
+        "bytes": 127412
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/img_2533.jpg",
+        "width": 1080,
+        "height": 1080,
+        "format": "jpeg",
+        "bytes": 193314
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/img_2531.jpg",
+        "width": 1080,
+        "height": 1080,
+        "format": "jpeg",
+        "bytes": 237888
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/img_2534.jpg",
+        "width": 1077,
+        "height": 1077,
+        "format": "jpeg",
+        "bytes": 154137
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2024/09/frejm-sentyabr-1.jpg",
+        "width": 1210,
+        "height": 908,
+        "format": "jpeg",
+        "bytes": 1221204
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2024/09/frejm-maj-2024-1.jpg",
+        "width": 1210,
+        "height": 908,
+        "format": "jpeg",
+        "bytes": 1470091
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2024/09/frejm-mart-2024-1.jpg",
+        "width": 1209,
+        "height": 907,
+        "format": "jpeg",
+        "bytes": 1518366
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2024/09/frejm-oktyabr-2023-1.jpg",
+        "width": 1203,
+        "height": 902,
+        "format": "jpeg",
+        "bytes": 1043548
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2024/09/frejm-aprel-2024-1.jpg",
+        "width": 1199,
+        "height": 899,
+        "format": "jpeg",
+        "bytes": 1174483
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2024/11/10-2024_frame-1_photo_small-1.jpg",
+        "width": 1190,
+        "height": 893,
+        "format": "jpeg",
+        "bytes": 1423077
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/img_2533-1024x1024.jpg",
+        "width": 1024,
+        "height": 1024,
+        "format": "jpeg",
+        "bytes": 246775
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2024/09/frejm-avgust-2024-1.jpg",
+        "width": 1180,
+        "height": 885,
+        "format": "jpeg",
+        "bytes": 1332242
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/img_2597.jpg",
+        "width": 1000,
+        "height": 1000,
+        "format": "jpeg",
+        "bytes": 123439
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/03/obustrojstvo-parka-asi.pdf-image-007.jpg",
+        "width": 1202,
+        "height": 801,
+        "format": "jpeg",
+        "bytes": 452170
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2026/07/photo_1_2026-07-01_16-10-21.jpg",
+        "width": 1181,
+        "height": 787,
+        "format": "jpeg",
+        "bytes": 263470
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2026/06/photo_1_2026-06-10_12-01-33.jpg",
+        "width": 1181,
+        "height": 787,
+        "format": "jpeg",
+        "bytes": 195488
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2026/05/04-2026_academia_photo_small-4.jpg",
+        "width": 1181,
+        "height": 787,
+        "format": "jpeg",
+        "bytes": 425932
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/03/obustrojstvo-parka-asi.pdf-image-007-1024x682.jpg",
+        "width": 1024,
+        "height": 682,
+        "format": "jpeg",
+        "bytes": 194625
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/webp-express/webp-images/themes/hello-elementor/img/tradein_mob.jpg.webp",
+        "width": 750,
+        "height": 870,
+        "format": "webp",
+        "bytes": 19660
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/img_2594-1-1024x576.jpg",
+        "width": 1024,
+        "height": 576,
+        "format": "jpeg",
+        "bytes": 226456
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/img_2533-768x768.jpg",
+        "width": 768,
+        "height": 768,
+        "format": "jpeg",
+        "bytes": 152974
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/webp-express/webp-images/themes/hello-elementor/img/call_now.jpg.webp",
+        "width": 820,
+        "height": 690,
+        "format": "webp",
+        "bytes": 24620
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/elementor/thumbs/alkiviad._summer_park_-sref_httpss.mj_.runjpzs2_hom6g_-v_6.1_80b71217-9ce8-4f31-9ba6-1e50fe320b56_1-r1q4au1dglggi6ovf57su4ixg9ffavyrb021yxvsvc.png",
+        "width": 640,
+        "height": 740,
+        "format": "png",
+        "bytes": 881731
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/elementor/thumbs/img_2534-1-r1q452b1i7k38d2m45f912y263vb1s22ufvqwsft2g.png",
+        "width": 640,
+        "height": 740,
+        "format": "png",
+        "bytes": 810427
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/elementor/thumbs/2025-02-19-13.52.33-1-r1q0zwiiq8ndidg0w8i5umybm5midktemchczk825k.jpg",
+        "width": 640,
+        "height": 740,
+        "format": "jpeg",
+        "bytes": 75022
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/elementor/thumbs/2025-02-19-13.55.24-1-r1q1017poett4f974sjap3rml2zcg2c2azqsdy13ag.jpg",
+        "width": 640,
+        "height": 740,
+        "format": "jpeg",
+        "bytes": 125319
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/elementor/thumbs/img_2594-1-r1h8smrmkjt5iqa479698nzjqmbg090r8dycvsb9ig.jpg",
+        "width": 640,
+        "height": 740,
+        "format": "jpeg",
+        "bytes": 128851
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/elementor/thumbs/2025-02-19-14.05.27-1-r1q1bs733uwu8y6sivdev511wh2inuz9x5bacglxig.jpg",
+        "width": 640,
+        "height": 740,
+        "format": "jpeg",
+        "bytes": 94169
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/03/obustrojstvo-parka-asi.pdf-image-007-768x512.jpg",
+        "width": 768,
+        "height": 512,
+        "format": "jpeg",
+        "bytes": 112405
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/elementor/thumbs/img_2534-r1h9q5oebto6ouwfrlib3zrdpo6bzu5qncm515jti0.jpg",
+        "width": 640,
+        "height": 540,
+        "format": "jpeg",
+        "bytes": 76702
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/elementor/thumbs/img_2596-r1h9q8hwwbs1noscb4q6th1rhtsfmxgxnqklgzfmzc.jpg",
+        "width": 640,
+        "height": 540,
+        "format": "jpeg",
+        "bytes": 62837
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/elementor/thumbs/img_2533-r1h9q3spy5lm1mz62kp1z08giwflkfy9z3b62lmlug.jpg",
+        "width": 640,
+        "height": 540,
+        "format": "jpeg",
+        "bytes": 91272
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/elementor/thumbs/img_2597-r1h9qadl9zumawpm05jfygkoolj62boebzvkfjcumw.jpg",
+        "width": 640,
+        "height": 540,
+        "format": "jpeg",
+        "bytes": 65529
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/elementor/thumbs/img_2531-r1h9q01d6tggr74moj2jp16m5cy4pnjcmkp85hs6jc.jpg",
+        "width": 640,
+        "height": 540,
+        "format": "jpeg",
+        "bytes": 108122
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/img_2594-1-768x432.jpg",
+        "width": 768,
+        "height": 432,
+        "format": "jpeg",
+        "bytes": 131272
+      },
+      {
+        "url": "https://alfastroyinvest.com/wp-content/webp-express/webp-images/themes/hello-elementor/img/ipoteka.jpg.webp",
+        "width": 600,
+        "height": 426,
+        "format": "webp",
+        "bytes": 12418
+      }
+    ]
+  }
+]

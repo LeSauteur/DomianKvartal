@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
-  "generated_at": "2026-07-13T00:00:00+03:00",
+  "generated_at": "2026-07-16T00:00:00+03:00",
   "item_count": 78,
   "completeness_counts": {
-    "complete": 10,
+    "complete": 20,
     "partial": 5,
-    "needs_review": 63
+    "needs_review": 53
   },
   "items": [
     {
@@ -281,15 +281,15 @@
     },
     {
       "id": "newbuild-004",
-      "slug": "umnyy-kvartal-smartpolet-smartpolet",
-      "title": "Умный квартал smartpolet (смартполет)",
+      "slug": "smartpolet",
+      "title": "Умный квартал «Смартполет»",
       "city": "Ростов-на-Дону",
-      "district": "Ростов-на-Дону, Первомайский район",
-      "address": "Ростов-на-Дону, Первомайский район",
-      "developer": "ЮгСтройИнвест",
+      "district": "Первомайский район",
+      "address": "Ростов-на-Дону, ул. Берберовская",
+      "developer": "ГК «ЮгСтройИнвест»",
       "class": "комфорт+",
-      "status": null,
-      "deadline": "3 кв. 2029",
+      "status": "Строится; продажи открыты",
+      "deadline": "Уточняется по литеру",
       "price": {
         "value": null,
         "currency": "RUB",
@@ -298,26 +298,56 @@
         "note": "Актуальная минимальная цена не подтверждена на первичном источнике."
       },
       "areas": {
-        "min": null,
-        "max": null,
+        "min": 31.3,
+        "max": 84.9,
         "unit": "m2"
       },
-      "description": "Жилой квартал расположен на территории бывшего аэропорта. Часть объектов инфраструктуры уже введена в эксплуатацию.",
-      "features": [],
-      "official_url": null,
-      "checked_at": null,
-      "source_type": "aggregator",
+      "description": "Умный квартал на территории бывшего ростовского аэропорта. Проект объединяет жилые дома разной этажности, закрытые дворы, детский сад, сквер и цифровые сервисы для жителей.",
+      "features": [
+        "закрытые дворы",
+        "детский сад",
+        "сквер",
+        "умные технологии"
+      ],
+      "official_url": "https://poletsmart.ru/",
+      "checked_at": "2026-07-16",
+      "source_type": "official",
       "cover": {
-        "src": "assets/images/newbuilds-v2/ff8eed463b3772f343eb725d9e93a7f6782869d6.jpeg",
-        "alt": "Жилой комплекс Умный квартал smartpolet (смартполет)",
-        "type": "legacy_cover",
-        "source_url": "https://rostov-na-donu.etagi.com/zastr/jk/polet-14057/",
-        "source_domain": "rostov-na-donu.etagi.com",
-        "source_type": "legacy"
+        "src": "assets/images/newbuilds/smartpolet/cover.webp",
+        "alt": "Дома умного квартала Смартполет",
+        "type": "exterior",
+        "source_url": "https://poletsmart.ru/assets/cache/images/assets/galleries/800/_dsc8918-panorama_ok-1920x1080-2ca.jpg?v=1771333756",
+        "source_domain": "poletsmart.ru",
+        "source_type": "official"
       },
-      "images": [],
+      "images": [
+        {
+          "src": "assets/images/newbuilds/smartpolet/cover.webp",
+          "alt": "Дома умного квартала Смартполет",
+          "type": "exterior",
+          "source_url": "https://poletsmart.ru/assets/cache/images/assets/galleries/800/_dsc8918-panorama_ok-1920x1080-2ca.jpg?v=1771333756",
+          "source_domain": "poletsmart.ru",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/smartpolet/exterior-01.webp",
+          "alt": "Фасады квартала Смартполет",
+          "type": "exterior",
+          "source_url": "https://poletsmart.ru/assets/cache/images/assets/galleries/800/_dsc8956-panorama_ok-1920x1080-2ca.jpg?v=1771333756",
+          "source_domain": "poletsmart.ru",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/smartpolet/exterior-02.webp",
+          "alt": "Благоустроенная территория квартала Смартполет",
+          "type": "exterior",
+          "source_url": "https://poletsmart.ru/assets/cache/images/assets/galleries/800/_dsc8988_ok-1920x1080-3f0.jpg?v=1771333757",
+          "source_domain": "poletsmart.ru",
+          "source_type": "official"
+        }
+      ],
       "floorplans": [],
-      "detail_url": null,
+      "detail_url": "newbuilds/smartpolet/",
       "legacy": {
         "source_url": "https://rostov-na-donu.etagi.com/zastr/jk/polet-14057/",
         "source_domain": "rostov-na-donu.etagi.com",
@@ -326,22 +356,28 @@
       },
       "sources": [
         {
-          "url": "https://rostov-na-donu.etagi.com/zastr/jk/polet-14057/",
-          "domain": "rostov-na-donu.etagi.com",
-          "type": "aggregator",
-          "checked_at": null
+          "url": "https://poletsmart.ru/",
+          "domain": "poletsmart.ru",
+          "type": "official",
+          "checked_at": "2026-07-16"
+        },
+        {
+          "url": "https://poletsmart.ru/stroyashhiesya-obekty/klaster-1/",
+          "domain": "poletsmart.ru",
+          "type": "official",
+          "checked_at": "2026-07-16"
+        },
+        {
+          "url": "https://poletsmart.ru/stroyashhiesya-obekty/klaster-3/",
+          "domain": "poletsmart.ru",
+          "type": "official",
+          "checked_at": "2026-07-16"
         }
       ],
       "completeness": {
-        "state": "needs_review",
-        "score": 50,
-        "missing": [
-          "status",
-          "official_url",
-          "checked_at",
-          "gallery_3",
-          "detail_page"
-        ]
+        "state": "complete",
+        "score": 100,
+        "missing": []
       }
     },
     {
@@ -350,39 +386,94 @@
       "title": "Октябрь Парк",
       "city": "Ростов-на-Дону",
       "district": null,
-      "address": "пер. Элеваторный",
-      "developer": "СпецСтройКубань",
+      "address": "Ростов-на-Дону, территория в границах пер. Элеваторного, пер. Нефтяного и ул. Таганрогской",
+      "developer": "СЗ «Ростовстрой-Дон» (ССК)",
       "class": "комфорт",
-      "status": null,
-      "deadline": "4 кв. 2026",
+      "status": "Строится; квартиры в продаже",
+      "deadline": "IV квартал 2026",
       "price": {
-        "value": null,
+        "value": 2900000,
         "currency": "RUB",
-        "type": "on_request",
-        "verified": false,
-        "note": "Актуальная минимальная цена не подтверждена на первичном источнике."
+        "type": "minimum_total",
+        "verified": true,
+        "note": "Минимальная стоимость студии на официальном сайте проекта на дату проверки."
       },
       "areas": {
-        "min": null,
+        "min": 18.57,
         "max": null,
         "unit": "m2"
       },
-      "description": "Жилой комплекс расположен в городской застройке. Строительство ведётся поэтапно.",
-      "features": [],
-      "official_url": null,
-      "checked_at": null,
-      "source_type": "aggregator",
+      "description": "Жилой комплекс комфорт-класса с закрытой территорией, детскими садами, школой, прогулочными зонами и спортивными площадками. Предусмотрены квартиры от студий до трёхкомнатных.",
+      "features": [
+        "закрытая территория",
+        "школа",
+        "детские сады",
+        "паркинг"
+      ],
+      "official_url": "https://www.ssk-oktyabr-park.ru/",
+      "checked_at": "2026-07-16",
+      "source_type": "official",
       "cover": {
-        "src": "assets/images/newbuilds-v2/a2fc4be5bdbae072cfbad3882c076f7f4e96af83.jpeg",
-        "alt": "Жилой комплекс Октябрь Парк",
-        "type": "legacy_cover",
-        "source_url": "https://rostov-na-donu.etagi.com/zastr/jk/oktyabr-park-16892/",
-        "source_domain": "rostov-na-donu.etagi.com",
-        "source_type": "legacy"
+        "src": "assets/images/newbuilds/oktyabr-park/cover.webp",
+        "alt": "Жилой комплекс Октябрь Парк и прогулочная аллея",
+        "type": "exterior",
+        "source_url": "https://static.tildacdn.com/tild3630-6235-4331-a662-613735666330/Screenshot_1_1_2.png",
+        "source_domain": "static.tildacdn.com",
+        "source_type": "official"
       },
-      "images": [],
-      "floorplans": [],
-      "detail_url": null,
+      "images": [
+        {
+          "src": "assets/images/newbuilds/oktyabr-park/cover.webp",
+          "alt": "Жилой комплекс Октябрь Парк и прогулочная аллея",
+          "type": "exterior",
+          "source_url": "https://static.tildacdn.com/tild3630-6235-4331-a662-613735666330/Screenshot_1_1_2.png",
+          "source_domain": "static.tildacdn.com",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/oktyabr-park/courtyard-01.webp",
+          "alt": "Детская площадка в Октябрь Парке",
+          "type": "courtyard",
+          "source_url": "https://static.tildacdn.com/tild3833-3839-4961-a236-353330356338/Ur_93iV3oWMoAN4RLFkw.jpg",
+          "source_domain": "static.tildacdn.com",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/oktyabr-park/exterior-01.webp",
+          "alt": "Дома и благоустройство Октябрь Парка",
+          "type": "exterior",
+          "source_url": "https://static.tildacdn.com/tild3738-3462-4934-b233-366266386162/onDR_eN0huvhRXyx3TUX.jpg",
+          "source_domain": "static.tildacdn.com",
+          "source_type": "official"
+        }
+      ],
+      "floorplans": [
+        {
+          "src": "assets/images/newbuilds/oktyabr-park/floorplan-studio.webp",
+          "alt": "Планировка студии в Октябрь Парке",
+          "type": "floorplan",
+          "source_url": "https://static.tildacdn.com/tild3462-3237-4663-a130-303132663534/photo.png",
+          "source_domain": "static.tildacdn.com",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/oktyabr-park/floorplan-1-room.webp",
+          "alt": "Планировка однокомнатной квартиры в Октябрь Парке",
+          "type": "floorplan",
+          "source_url": "https://static.tildacdn.com/tild3730-3865-4939-b233-346336653265/1.png",
+          "source_domain": "static.tildacdn.com",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/oktyabr-park/floorplan-2-room.webp",
+          "alt": "Планировка двухкомнатной квартиры в Октябрь Парке",
+          "type": "floorplan",
+          "source_url": "https://static.tildacdn.com/tild3637-6265-4264-b133-333263363665/2.png",
+          "source_domain": "static.tildacdn.com",
+          "source_type": "official"
+        }
+      ],
+      "detail_url": "newbuilds/oktyabr-park/",
       "legacy": {
         "source_url": "https://rostov-na-donu.etagi.com/zastr/jk/oktyabr-park-16892/",
         "source_domain": "rostov-na-donu.etagi.com",
@@ -391,63 +482,93 @@
       },
       "sources": [
         {
-          "url": "https://rostov-na-donu.etagi.com/zastr/jk/oktyabr-park-16892/",
-          "domain": "rostov-na-donu.etagi.com",
-          "type": "aggregator",
-          "checked_at": null
+          "url": "https://www.ssk-oktyabr-park.ru/",
+          "domain": "ssk-oktyabr-park.ru",
+          "type": "official",
+          "checked_at": "2026-07-16"
+        },
+        {
+          "url": "https://apiv2.sskuban.ru/storage/4372/%D0%A2%D0%B0%D0%B3%D0%B0%D0%BD%D1%80%D0%BE%D0%B3%D1%81%D0%BA%D0%B0%D1%8F-%D0%BF%D0%BE%D0%B7.-1.1%2C-%D0%BF%D0%BE%D0%B7.-1.2.pdf",
+          "domain": "apiv2.sskuban.ru",
+          "type": "official_document",
+          "checked_at": "2026-07-16"
         }
       ],
       "completeness": {
-        "state": "needs_review",
-        "score": 50,
-        "missing": [
-          "status",
-          "official_url",
-          "checked_at",
-          "gallery_3",
-          "detail_page"
-        ]
+        "state": "complete",
+        "score": 100,
+        "missing": []
       }
     },
     {
       "id": "newbuild-006",
-      "slug": "royal-towers-royal-tauers",
-      "title": "Royal Towers (Роял Тауэрс)",
+      "slug": "royal-towers",
+      "title": "РОЯЛ ТАУЭРС",
       "city": "Ростов-на-Дону",
-      "district": null,
-      "address": "ул. Привокзальная, 9",
-      "developer": "МСК",
+      "district": "Железнодорожный район",
+      "address": "Ростов-на-Дону, ул. Привокзальная, 9",
+      "developer": "ГК «МСК»",
       "class": "бизнес",
-      "status": null,
-      "deadline": "1 кв. 2027",
+      "status": "Строится; квартиры в продаже",
+      "deadline": "I квартал 2027",
       "price": {
-        "value": null,
+        "value": 3789450,
         "currency": "RUB",
-        "type": "on_request",
-        "verified": false,
-        "note": "Актуальная минимальная цена не подтверждена на первичном источнике."
+        "type": "minimum_total",
+        "verified": true,
+        "note": "Минимальная полная стоимость доступной студии в официальном подборе квартир на дату проверки."
       },
       "areas": {
-        "min": null,
-        "max": null,
+        "min": 24,
+        "max": 72,
         "unit": "m2"
       },
-      "description": "Жилой комплекс состоит из нескольких высотных домов. В проекте предусмотрены коммерческие помещения и подземный паркинг.",
-      "features": [],
-      "official_url": null,
-      "checked_at": null,
-      "source_type": "aggregator",
+      "description": "Жилой комплекс бизнес-класса из четырёх высотных домов в Железнодорожном районе. Проект включает закрытый многоуровневый двор, спортивные и детские зоны, торговую инфраструктуру и подземный паркинг.",
+      "features": [
+        "закрытый двор",
+        "подземный паркинг",
+        "торговый центр",
+        "воркаут-зона"
+      ],
+      "official_url": "https://msk-development.ru/projects/flats/zhk-royal-towers",
+      "checked_at": "2026-07-16",
+      "source_type": "official",
       "cover": {
-        "src": "assets/images/newbuilds-v2/fdb0b73032468e4a54394c01c3adbc3cd92ed76c.jpeg",
-        "alt": "Жилой комплекс Royal Towers (Роял Тауэрс)",
-        "type": "legacy_cover",
-        "source_url": "https://rostov-na-donu.etagi.com/zastr/jk/royal-towers-royal-tauehrs-13577/",
-        "source_domain": "rostov-na-donu.etagi.com",
-        "source_type": "legacy"
+        "src": "assets/images/newbuilds/royal-towers/cover.webp",
+        "alt": "Общий вид жилого комплекса РОЯЛ ТАУЭРС",
+        "type": "exterior",
+        "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/5d16f2cab0c7c9780fd5c65890904dde438daf4a.jpg@webp",
+        "source_domain": "msk-development.ru",
+        "source_type": "official"
       },
-      "images": [],
+      "images": [
+        {
+          "src": "assets/images/newbuilds/royal-towers/cover.webp",
+          "alt": "Общий вид жилого комплекса РОЯЛ ТАУЭРС",
+          "type": "exterior",
+          "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/5d16f2cab0c7c9780fd5c65890904dde438daf4a.jpg@webp",
+          "source_domain": "msk-development.ru",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/royal-towers/aerial-01.webp",
+          "alt": "Жилой комплекс РОЯЛ ТАУЭРС с высоты",
+          "type": "aerial",
+          "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/c2175c98265ad8dfd1702f895ab143edee2327fb.jpg@webp",
+          "source_domain": "msk-development.ru",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/royal-towers/view-01.webp",
+          "alt": "Вид из окон жилого комплекса РОЯЛ ТАУЭРС",
+          "type": "view",
+          "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/af8f1ce535a72365aa8d166f9109526d37504f32.jpg@webp",
+          "source_domain": "msk-development.ru",
+          "source_type": "official"
+        }
+      ],
       "floorplans": [],
-      "detail_url": null,
+      "detail_url": "newbuilds/royal-towers/",
       "legacy": {
         "source_url": "https://rostov-na-donu.etagi.com/zastr/jk/royal-towers-royal-tauehrs-13577/",
         "source_domain": "rostov-na-donu.etagi.com",
@@ -456,63 +577,93 @@
       },
       "sources": [
         {
-          "url": "https://rostov-na-donu.etagi.com/zastr/jk/royal-towers-royal-tauehrs-13577/",
-          "domain": "rostov-na-donu.etagi.com",
-          "type": "aggregator",
-          "checked_at": null
+          "url": "https://msk-development.ru/projects/flats/zhk-royal-towers",
+          "domain": "msk-development.ru",
+          "type": "official",
+          "checked_at": "2026-07-16"
+        },
+        {
+          "url": "https://msk-development.ru/property/flats/zhk-royal-towers-studii",
+          "domain": "msk-development.ru",
+          "type": "official_inventory",
+          "checked_at": "2026-07-16"
         }
       ],
       "completeness": {
-        "state": "needs_review",
-        "score": 50,
-        "missing": [
-          "status",
-          "official_url",
-          "checked_at",
-          "gallery_3",
-          "detail_page"
-        ]
+        "state": "complete",
+        "score": 100,
+        "missing": []
       }
     },
     {
       "id": "newbuild-007",
-      "slug": "four-premiers-chetyre-premery",
-      "title": "FOUR PREMIERS ( Четыре Премьеры)",
+      "slug": "four-premiers",
+      "title": "ФОР ПРЕМЬЕРС",
       "city": "Ростов-на-Дону",
-      "district": null,
-      "address": "ул. Мечникова, 110Г",
-      "developer": "МСК",
+      "district": "Ленинский район",
+      "address": "Ростов-на-Дону, ул. Мечникова, 110Г",
+      "developer": "ГК «МСК»",
       "class": "бизнес",
-      "status": null,
-      "deadline": "3 кв. 2033",
+      "status": "Часть домов сдана; строительство и продажи продолжаются",
+      "deadline": "По литерам: сдан и IV квартал 2028",
       "price": {
-        "value": null,
+        "value": 5859240,
         "currency": "RUB",
-        "type": "on_request",
-        "verified": false,
-        "note": "Актуальная минимальная цена не подтверждена на первичном источнике."
+        "type": "minimum_total",
+        "verified": true,
+        "note": "Минимальная полная стоимость квартиры в официальном подборе по проекту на дату проверки."
       },
       "areas": {
-        "min": null,
-        "max": null,
+        "min": 35,
+        "max": 110,
         "unit": "m2"
       },
-      "description": "Жилой комплекс включает несколько многоквартирных домов. Строительство ведётся очередями в центральной части города.",
-      "features": [],
-      "official_url": null,
-      "checked_at": null,
-      "source_type": "aggregator",
+      "description": "Жилой комплекс бизнес-класса в Ленинском районе с четырьмя домами, закрытым двором, фитнес-залом, кафе, подземным паркингом и обзорной площадкой на крыше.",
+      "features": [
+        "фитнес-зал",
+        "кафе",
+        "подземный паркинг",
+        "обзорная площадка"
+      ],
+      "official_url": "https://msk-development.ru/projects/flats/four-premiers",
+      "checked_at": "2026-07-16",
+      "source_type": "official",
       "cover": {
-        "src": "assets/images/newbuilds-v2/4e21a0f6c7ef7ac4a0cdfd4008be74faa47846d7.jpeg",
-        "alt": "Жилой комплекс FOUR PREMIERS ( Четыре Премьеры)",
-        "type": "legacy_cover",
-        "source_url": "https://rostov-na-donu.etagi.com/zastr/jk/four-premiers-chetyre-premery-11103/",
-        "source_domain": "rostov-na-donu.etagi.com",
-        "source_type": "legacy"
+        "src": "assets/images/newbuilds/four-premiers/cover.webp",
+        "alt": "Фасады жилого комплекса ФОР ПРЕМЬЕРС",
+        "type": "exterior",
+        "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/8c228d98bd407413fa88dec7e3b013467501b248.jpg@webp",
+        "source_domain": "msk-development.ru",
+        "source_type": "official"
       },
-      "images": [],
+      "images": [
+        {
+          "src": "assets/images/newbuilds/four-premiers/cover.webp",
+          "alt": "Фасады жилого комплекса ФОР ПРЕМЬЕРС",
+          "type": "exterior",
+          "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/8c228d98bd407413fa88dec7e3b013467501b248.jpg@webp",
+          "source_domain": "msk-development.ru",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/four-premiers/aerial-01.webp",
+          "alt": "Жилой комплекс ФОР ПРЕМЬЕРС с высоты",
+          "type": "aerial",
+          "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/203ea9d8bea0b29d242d27f1bfff17f0c0a081d4.jpeg@webp",
+          "source_domain": "msk-development.ru",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/four-premiers/courtyard-01.webp",
+          "alt": "Благоустройство двора ФОР ПРЕМЬЕРС",
+          "type": "courtyard",
+          "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/5718444df9b755d9a689c0110a04d4c67bbc8358.jpg@webp",
+          "source_domain": "msk-development.ru",
+          "source_type": "official"
+        }
+      ],
       "floorplans": [],
-      "detail_url": null,
+      "detail_url": "newbuilds/four-premiers/",
       "legacy": {
         "source_url": "https://rostov-na-donu.etagi.com/zastr/jk/four-premiers-chetyre-premery-11103/",
         "source_domain": "rostov-na-donu.etagi.com",
@@ -521,22 +672,22 @@
       },
       "sources": [
         {
-          "url": "https://rostov-na-donu.etagi.com/zastr/jk/four-premiers-chetyre-premery-11103/",
-          "domain": "rostov-na-donu.etagi.com",
-          "type": "aggregator",
-          "checked_at": null
+          "url": "https://msk-development.ru/projects/flats/four-premiers",
+          "domain": "msk-development.ru",
+          "type": "official",
+          "checked_at": "2026-07-16"
+        },
+        {
+          "url": "https://msk-development.ru/property/flats?project=four-premiers",
+          "domain": "msk-development.ru",
+          "type": "official_inventory",
+          "checked_at": "2026-07-16"
         }
       ],
       "completeness": {
-        "state": "needs_review",
-        "score": 50,
-        "missing": [
-          "status",
-          "official_url",
-          "checked_at",
-          "gallery_3",
-          "detail_page"
-        ]
+        "state": "complete",
+        "score": 100,
+        "missing": []
       }
     },
     {
@@ -544,40 +695,70 @@
       "slug": "akvatoriya",
       "title": "Акватория",
       "city": "Ростов-на-Дону",
-      "district": null,
-      "address": "просп. Космонавтов",
-      "developer": "МСК",
+      "district": "Ворошиловский район",
+      "address": "Ростов-на-Дону, пр-т Космонавтов, 1В",
+      "developer": "ГК «МСК»",
       "class": "бизнес",
-      "status": null,
-      "deadline": "ЖК сдан",
+      "status": "Сдан; квартиры в продаже",
+      "deadline": "Сдан",
       "price": {
-        "value": null,
+        "value": 3356700,
         "currency": "RUB",
-        "type": "on_request",
-        "verified": false,
-        "note": "Актуальная минимальная цена не подтверждена на первичном источнике."
+        "type": "minimum_total",
+        "verified": true,
+        "note": "Минимальная полная стоимость студии в официальном подборе квартир на дату проверки."
       },
       "areas": {
-        "min": null,
-        "max": null,
+        "min": 16.6,
+        "max": 77,
         "unit": "m2"
       },
-      "description": "Жилой комплекс расположен рядом с водохранилищем. Состоит из нескольких высотных домов.",
-      "features": [],
-      "official_url": null,
-      "checked_at": null,
-      "source_type": "aggregator",
+      "description": "Сданный жилой комплекс бизнес-класса на берегу Темерника рядом с Северным водохранилищем. В двух домах предусмотрены закрытый двор, детская площадка, подземный паркинг и коммерческие помещения.",
+      "features": [
+        "закрытый двор",
+        "подземный паркинг",
+        "вид на водохранилище",
+        "магазины в доме"
+      ],
+      "official_url": "https://msk-development.ru/projects/flats/aquatoria",
+      "checked_at": "2026-07-16",
+      "source_type": "official",
       "cover": {
-        "src": "assets/images/newbuilds-v2/b503be89ae80a16f31de67be241162a78fff24f3.jpeg",
-        "alt": "Жилой комплекс Акватория",
-        "type": "legacy_cover",
-        "source_url": "https://rostov-na-donu.etagi.com/zastr/jk/akvatoriya-8961/",
-        "source_domain": "rostov-na-donu.etagi.com",
-        "source_type": "legacy"
+        "src": "assets/images/newbuilds/akvatoriya/cover.webp",
+        "alt": "Сданные дома жилого комплекса Акватория",
+        "type": "exterior",
+        "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/c4cc76d06698e6e17d84f05ad7ce8554c512bdae.jpg@webp",
+        "source_domain": "msk-development.ru",
+        "source_type": "official"
       },
-      "images": [],
+      "images": [
+        {
+          "src": "assets/images/newbuilds/akvatoriya/cover.webp",
+          "alt": "Сданные дома жилого комплекса Акватория",
+          "type": "exterior",
+          "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/c4cc76d06698e6e17d84f05ad7ce8554c512bdae.jpg@webp",
+          "source_domain": "msk-development.ru",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/akvatoriya/courtyard-01.webp",
+          "alt": "Детская и спортивная площадки Акватории",
+          "type": "courtyard",
+          "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/5656dfbee492ca0b36cf3ef87263d39a86b351fb.jpg@webp",
+          "source_domain": "msk-development.ru",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/akvatoriya/waterside-01.webp",
+          "alt": "Жилой комплекс Акватория у Северного водохранилища",
+          "type": "exterior",
+          "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/0016ed3b811fef60b90b7196763539b1f0a7db61.jpg@webp",
+          "source_domain": "msk-development.ru",
+          "source_type": "official"
+        }
+      ],
       "floorplans": [],
-      "detail_url": null,
+      "detail_url": "newbuilds/akvatoriya/",
       "legacy": {
         "source_url": "https://rostov-na-donu.etagi.com/zastr/jk/akvatoriya-8961/",
         "source_domain": "rostov-na-donu.etagi.com",
@@ -586,22 +767,22 @@
       },
       "sources": [
         {
-          "url": "https://rostov-na-donu.etagi.com/zastr/jk/akvatoriya-8961/",
-          "domain": "rostov-na-donu.etagi.com",
-          "type": "aggregator",
-          "checked_at": null
+          "url": "https://msk-development.ru/projects/flats/aquatoria",
+          "domain": "msk-development.ru",
+          "type": "official",
+          "checked_at": "2026-07-16"
+        },
+        {
+          "url": "https://msk-development.ru/property/flats/aquatoria",
+          "domain": "msk-development.ru",
+          "type": "official_inventory",
+          "checked_at": "2026-07-16"
         }
       ],
       "completeness": {
-        "state": "needs_review",
-        "score": 50,
-        "missing": [
-          "status",
-          "official_url",
-          "checked_at",
-          "gallery_3",
-          "detail_page"
-        ]
+        "state": "complete",
+        "score": 100,
+        "missing": []
       }
     },
     {
@@ -775,42 +956,72 @@
     {
       "id": "newbuild-011",
       "slug": "donskoy-arbat",
-      "title": "Донской Арбат",
+      "title": "ДОНСКОЙ АРБАТ",
       "city": "Ростов-на-Дону",
-      "district": null,
-      "address": "проспект Кировский, 89",
-      "developer": "МСК",
+      "district": "Кировский район",
+      "address": "Ростов-на-Дону, пр-т Кировский, 89",
+      "developer": "ГК «МСК»",
       "class": null,
-      "status": null,
-      "deadline": "2025",
+      "status": "Сдан; квартиры в продаже",
+      "deadline": "Сдан",
       "price": {
-        "value": null,
+        "value": 6006000,
         "currency": "RUB",
-        "type": "on_request",
-        "verified": false,
-        "note": "Актуальная минимальная цена не подтверждена на первичном источнике."
+        "type": "minimum_total",
+        "verified": true,
+        "note": "Минимальная полная стоимость квартиры в официальном подборе по проекту на дату проверки."
       },
       "areas": {
-        "min": null,
-        "max": null,
+        "min": 27,
+        "max": 77,
         "unit": "m2"
       },
-      "description": "Жилой комплекс расположен в центральной части города. Строительство ведётся очередями.",
-      "features": [],
-      "official_url": null,
-      "checked_at": null,
-      "source_type": "aggregator",
+      "description": "Сданный комплекс из пяти домов переменной этажности в центре Ростова-на-Дону. Для жителей предусмотрены благоустроенные дворы и три многоуровневых паркинга.",
+      "features": [
+        "центр города",
+        "благоустроенные дворы",
+        "многоуровневые паркинги",
+        "коммерческие помещения"
+      ],
+      "official_url": "https://msk-development.ru/projects/flats/donskoi-arbat",
+      "checked_at": "2026-07-16",
+      "source_type": "official",
       "cover": {
-        "src": "assets/images/newbuilds-v2/c127e8959f477c12164b1adca3e031521636c8c0.jpeg",
-        "alt": "Жилой комплекс Донской Арбат",
-        "type": "legacy_cover",
-        "source_url": "https://rostov-na-donu.etagi.com/zastr/jk/donskojj-arbat-11271/",
-        "source_domain": "rostov-na-donu.etagi.com",
-        "source_type": "legacy"
+        "src": "assets/images/newbuilds/donskoy-arbat/cover.webp",
+        "alt": "Общий вид жилого комплекса ДОНСКОЙ АРБАТ",
+        "type": "exterior",
+        "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/82b3f77f281a82f7c4234bf197391ace6719b55e.jpg@webp",
+        "source_domain": "msk-development.ru",
+        "source_type": "official"
       },
-      "images": [],
+      "images": [
+        {
+          "src": "assets/images/newbuilds/donskoy-arbat/cover.webp",
+          "alt": "Общий вид жилого комплекса ДОНСКОЙ АРБАТ",
+          "type": "exterior",
+          "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/82b3f77f281a82f7c4234bf197391ace6719b55e.jpg@webp",
+          "source_domain": "msk-development.ru",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/donskoy-arbat/courtyard-01.webp",
+          "alt": "Детская площадка жилого комплекса ДОНСКОЙ АРБАТ",
+          "type": "courtyard",
+          "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/2a7d316e3a5a29623657593ed6fc821e0fe06d8d.jpg@webp",
+          "source_domain": "msk-development.ru",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/donskoy-arbat/exterior-01.webp",
+          "alt": "Дома и благоустройство жилого комплекса ДОНСКОЙ АРБАТ",
+          "type": "exterior",
+          "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/0f46672141b1dbc35cebdcd3688d40b4eeb3bbe0.jpg@webp",
+          "source_domain": "msk-development.ru",
+          "source_type": "official"
+        }
+      ],
       "floorplans": [],
-      "detail_url": null,
+      "detail_url": "newbuilds/donskoy-arbat/",
       "legacy": {
         "source_url": "https://rostov-na-donu.etagi.com/zastr/jk/donskojj-arbat-11271/",
         "source_domain": "rostov-na-donu.etagi.com",
@@ -819,63 +1030,93 @@
       },
       "sources": [
         {
-          "url": "https://rostov-na-donu.etagi.com/zastr/jk/donskojj-arbat-11271/",
-          "domain": "rostov-na-donu.etagi.com",
-          "type": "aggregator",
-          "checked_at": null
+          "url": "https://msk-development.ru/projects/flats/donskoi-arbat",
+          "domain": "msk-development.ru",
+          "type": "official",
+          "checked_at": "2026-07-16"
+        },
+        {
+          "url": "https://msk-development.ru/property/flats?project=donskoi-arbat",
+          "domain": "msk-development.ru",
+          "type": "official_inventory",
+          "checked_at": "2026-07-16"
         }
       ],
       "completeness": {
-        "state": "needs_review",
-        "score": 50,
-        "missing": [
-          "status",
-          "official_url",
-          "checked_at",
-          "gallery_3",
-          "detail_page"
-        ]
+        "state": "complete",
+        "score": 100,
+        "missing": []
       }
     },
     {
       "id": "newbuild-012",
       "slug": "donskoy-arbat-2",
-      "title": "Донской Арбат 2",
+      "title": "ДОНСКОЙ АРБАТ 2",
       "city": "Ростов-на-Дону",
       "district": null,
-      "address": "ул. Текучева / пр. Кировский",
-      "developer": "МСК",
-      "class": "комфорт+",
-      "status": null,
-      "deadline": "3 кв. 2026",
+      "address": "Ростов-на-Дону, пр-т Кировский, 89А",
+      "developer": "ГК «МСК»",
+      "class": null,
+      "status": "Строится; квартиры в продаже",
+      "deadline": "III квартал 2026",
       "price": {
-        "value": null,
+        "value": 4160500,
         "currency": "RUB",
-        "type": "on_request",
-        "verified": false,
-        "note": "Актуальная минимальная цена не подтверждена на первичном источнике."
+        "type": "minimum_total",
+        "verified": true,
+        "note": "Минимальная полная стоимость квартиры в официальном подборе по проекту на дату проверки."
       },
       "areas": {
-        "min": null,
-        "max": null,
+        "min": 28,
+        "max": 77,
         "unit": "m2"
       },
-      "description": "Продолжение жилого комплекса в центральной части города. Состоит из нескольких многоквартирных домов.",
-      "features": [],
-      "official_url": null,
-      "checked_at": null,
-      "source_type": "aggregator",
+      "description": "Два 20-этажных дома в центре Ростова-на-Дону рядом с пересечением улицы Текучёва и Кировского проспекта. В проекте предусмотрены благоустроенная территория и коммерческие помещения.",
+      "features": [
+        "центр города",
+        "благоустроенная территория",
+        "коммерческие помещения",
+        "закрытая территория"
+      ],
+      "official_url": "https://msk-development.ru/projects/flats/donskoi-arbat2",
+      "checked_at": "2026-07-16",
+      "source_type": "official",
       "cover": {
-        "src": "assets/images/newbuilds-v2/5aa66d9e3de65550d0f0dca52dc4672c149d4d39.jpeg",
-        "alt": "Жилой комплекс Донской Арбат 2",
-        "type": "legacy_cover",
-        "source_url": "https://rostov-na-donu.etagi.com/zastr/jk/donskojj-arbat-2-14922/",
-        "source_domain": "rostov-na-donu.etagi.com",
-        "source_type": "legacy"
+        "src": "assets/images/newbuilds/donskoy-arbat-2/cover.webp",
+        "alt": "Общий вид жилого комплекса ДОНСКОЙ АРБАТ 2",
+        "type": "exterior",
+        "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/d430ecae1751225349509984cb9910b07e8b3a6c.jpg@webp",
+        "source_domain": "msk-development.ru",
+        "source_type": "official"
       },
-      "images": [],
+      "images": [
+        {
+          "src": "assets/images/newbuilds/donskoy-arbat-2/cover.webp",
+          "alt": "Общий вид жилого комплекса ДОНСКОЙ АРБАТ 2",
+          "type": "exterior",
+          "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/d430ecae1751225349509984cb9910b07e8b3a6c.jpg@webp",
+          "source_domain": "msk-development.ru",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/donskoy-arbat-2/aerial-01.webp",
+          "alt": "Жилой комплекс ДОНСКОЙ АРБАТ 2 с высоты",
+          "type": "aerial",
+          "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/e3beb65a37ac17b17bec34214e08fd932452d949.jpg@webp",
+          "source_domain": "msk-development.ru",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/donskoy-arbat-2/parking-01.webp",
+          "alt": "Въезд в паркинг жилого комплекса ДОНСКОЙ АРБАТ 2",
+          "type": "parking",
+          "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/5fc5d15c070081b0c58cdf7f2c00e61cff9282d4.jpg@webp",
+          "source_domain": "msk-development.ru",
+          "source_type": "official"
+        }
+      ],
       "floorplans": [],
-      "detail_url": null,
+      "detail_url": "newbuilds/donskoy-arbat-2/",
       "legacy": {
         "source_url": "https://rostov-na-donu.etagi.com/zastr/jk/donskojj-arbat-2-14922/",
         "source_domain": "rostov-na-donu.etagi.com",
@@ -884,35 +1125,35 @@
       },
       "sources": [
         {
-          "url": "https://rostov-na-donu.etagi.com/zastr/jk/donskojj-arbat-2-14922/",
-          "domain": "rostov-na-donu.etagi.com",
-          "type": "aggregator",
-          "checked_at": null
+          "url": "https://msk-development.ru/projects/flats/donskoi-arbat2",
+          "domain": "msk-development.ru",
+          "type": "official",
+          "checked_at": "2026-07-16"
+        },
+        {
+          "url": "https://msk-development.ru/property/flats?project=donskoi-arbat2",
+          "domain": "msk-development.ru",
+          "type": "official_inventory",
+          "checked_at": "2026-07-16"
         }
       ],
       "completeness": {
-        "state": "needs_review",
-        "score": 50,
-        "missing": [
-          "status",
-          "official_url",
-          "checked_at",
-          "gallery_3",
-          "detail_page"
-        ]
+        "state": "complete",
+        "score": 100,
+        "missing": []
       }
     },
     {
       "id": "newbuild-013",
       "slug": "kristall-2",
-      "title": "Кристалл-2",
+      "title": "КРИСТАЛЛ-2",
       "city": "Ростов-на-Дону",
-      "district": null,
-      "address": "проспект Ворошиловский, 82/4",
-      "developer": "МСК",
+      "district": "Кировский район",
+      "address": "Ростов-на-Дону, пр-т Ворошиловский, 82/4",
+      "developer": "ГК «МСК»",
       "class": "бизнес",
-      "status": null,
-      "deadline": "2024",
+      "status": "Сдан; наличие квартир уточняется",
+      "deadline": "Сдан",
       "price": {
         "value": null,
         "currency": "RUB",
@@ -921,26 +1162,56 @@
         "note": "Актуальная минимальная цена не подтверждена на первичном источнике."
       },
       "areas": {
-        "min": null,
-        "max": null,
+        "min": 58,
+        "max": 76,
         "unit": "m2"
       },
-      "description": "Жилой комплекс расположен в центральной части города. Дом введён в эксплуатацию.",
-      "features": [],
-      "official_url": null,
-      "checked_at": null,
-      "source_type": "aggregator",
+      "description": "Сданный дом бизнес-класса переменной этажности в Кировском районе. Проект включает двухуровневый подземный паркинг, террасу на стилобате и коммерческие помещения.",
+      "features": [
+        "подземный паркинг",
+        "терраса на стилобате",
+        "коммерческие помещения",
+        "центр города"
+      ],
+      "official_url": "https://msk-development.ru/projects/flats/kristall2",
+      "checked_at": "2026-07-16",
+      "source_type": "official",
       "cover": {
-        "src": "assets/images/newbuilds-v2/0848e7558380d03070fb1d01e21d51c0385e0d1a.png",
-        "alt": "Жилой комплекс Кристалл-2",
-        "type": "legacy_cover",
-        "source_url": "https://rostov-na-donu.etagi.com/zastr/jk/kristall-2-7759/",
-        "source_domain": "rostov-na-donu.etagi.com",
-        "source_type": "legacy"
+        "src": "assets/images/newbuilds/kristall-2/cover.webp",
+        "alt": "Общий вид жилого комплекса КРИСТАЛЛ-2",
+        "type": "exterior",
+        "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/1807c1842f5f72acd887cc76bc2e9b3c0c7535a0.jpg@webp",
+        "source_domain": "msk-development.ru",
+        "source_type": "official"
       },
-      "images": [],
+      "images": [
+        {
+          "src": "assets/images/newbuilds/kristall-2/cover.webp",
+          "alt": "Общий вид жилого комплекса КРИСТАЛЛ-2",
+          "type": "exterior",
+          "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/1807c1842f5f72acd887cc76bc2e9b3c0c7535a0.jpg@webp",
+          "source_domain": "msk-development.ru",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/kristall-2/aerial-01.webp",
+          "alt": "Жилой комплекс КРИСТАЛЛ-2 с высоты",
+          "type": "aerial",
+          "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/1369749d1080fdca02c507c650fd1a6862f2be2b.jpg@webp",
+          "source_domain": "msk-development.ru",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/kristall-2/exterior-01.webp",
+          "alt": "Фасад и стилобат жилого комплекса КРИСТАЛЛ-2",
+          "type": "exterior",
+          "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/6733ce3defb86832b3cf4e53a1d89d02fa42291c.jpg@webp",
+          "source_domain": "msk-development.ru",
+          "source_type": "official"
+        }
+      ],
       "floorplans": [],
-      "detail_url": null,
+      "detail_url": "newbuilds/kristall-2/",
       "legacy": {
         "source_url": "https://rostov-na-donu.etagi.com/zastr/jk/kristall-2-7759/",
         "source_domain": "rostov-na-donu.etagi.com",
@@ -949,63 +1220,93 @@
       },
       "sources": [
         {
-          "url": "https://rostov-na-donu.etagi.com/zastr/jk/kristall-2-7759/",
-          "domain": "rostov-na-donu.etagi.com",
-          "type": "aggregator",
-          "checked_at": null
+          "url": "https://msk-development.ru/projects/flats/kristall2",
+          "domain": "msk-development.ru",
+          "type": "official",
+          "checked_at": "2026-07-16"
+        },
+        {
+          "url": "https://msk-development.ru/property/flats/kristall2",
+          "domain": "msk-development.ru",
+          "type": "official_inventory",
+          "checked_at": "2026-07-16"
         }
       ],
       "completeness": {
-        "state": "needs_review",
-        "score": 50,
-        "missing": [
-          "status",
-          "official_url",
-          "checked_at",
-          "gallery_3",
-          "detail_page"
-        ]
+        "state": "complete",
+        "score": 100,
+        "missing": []
       }
     },
     {
       "id": "newbuild-014",
       "slug": "legenda-rostova",
-      "title": "Легенда Ростова",
+      "title": "ЛЕГЕНДА РОСТОВА",
       "city": "Ростов-на-Дону",
-      "district": null,
-      "address": "проспект Михаила Нагибина",
-      "developer": "МСК",
+      "district": "Ворошиловский район",
+      "address": "Ростов-на-Дону, пр-т Михаила Нагибина, 40",
+      "developer": "ГК «МСК»",
       "class": null,
-      "status": null,
-      "deadline": "2025",
+      "status": "Строится; квартиры в продаже",
+      "deadline": "III квартал 2026",
       "price": {
-        "value": null,
+        "value": 3463260,
         "currency": "RUB",
-        "type": "on_request",
-        "verified": false,
-        "note": "Актуальная минимальная цена не подтверждена на первичном источнике."
+        "type": "minimum_total",
+        "verified": true,
+        "note": "Минимальная полная стоимость квартиры в официальном подборе по проекту на дату проверки."
       },
       "areas": {
-        "min": null,
-        "max": null,
+        "min": 23,
+        "max": 87,
         "unit": "m2"
       },
-      "description": "Жилой комплекс строится на территории бывшей промышленной площадки. Проект включает несколько многоквартирных домов.",
-      "features": [],
-      "official_url": null,
-      "checked_at": null,
-      "source_type": "aggregator",
+      "description": "Крупный жилой комплекс из тринадцати домов в Ворошиловском районе. В составе проекта заявлены детский сад, двухуровневый подземный паркинг, спортивные и детские площадки.",
+      "features": [
+        "детский сад",
+        "подземный паркинг",
+        "футбольное поле",
+        "детские площадки"
+      ],
+      "official_url": "https://msk-development.ru/projects/flats/legenda-rostova",
+      "checked_at": "2026-07-16",
+      "source_type": "official",
       "cover": {
-        "src": "assets/images/newbuilds-v2/e60c229fb12880da126238e90084ca7e0c85ae08.jpeg",
-        "alt": "Жилой комплекс Легенда Ростова",
-        "type": "legacy_cover",
-        "source_url": "https://rostov-na-donu.etagi.com/zastr/jk/legenda-rostova-11101/",
-        "source_domain": "rostov-na-donu.etagi.com",
-        "source_type": "legacy"
+        "src": "assets/images/newbuilds/legenda-rostova/cover.webp",
+        "alt": "Двор и дома жилого комплекса ЛЕГЕНДА РОСТОВА",
+        "type": "courtyard",
+        "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/4b60d5ae8cc99fedef242a54ce608998f6768ec1.jpg@webp",
+        "source_domain": "msk-development.ru",
+        "source_type": "official"
       },
-      "images": [],
+      "images": [
+        {
+          "src": "assets/images/newbuilds/legenda-rostova/cover.webp",
+          "alt": "Двор и дома жилого комплекса ЛЕГЕНДА РОСТОВА",
+          "type": "courtyard",
+          "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/4b60d5ae8cc99fedef242a54ce608998f6768ec1.jpg@webp",
+          "source_domain": "msk-development.ru",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/legenda-rostova/aerial-01.webp",
+          "alt": "Жилой комплекс ЛЕГЕНДА РОСТОВА с высоты",
+          "type": "aerial",
+          "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/ps/i/c6fc5e564b46d3ba8ceabd1fa6fecc11d2597863.jpg@webp",
+          "source_domain": "msk-development.ru",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/legenda-rostova/exterior-01.webp",
+          "alt": "Фасады жилого комплекса ЛЕГЕНДА РОСТОВА",
+          "type": "exterior",
+          "source_url": "https://msk-development.ru/proxy/insecure/w:1920/q:80/plain/https://storage.yandexcloud.net/msk-dev/p/pgs/i/d860be212d9b7c53b669b5e6dffe4f1dd739bb0e.jpg@webp",
+          "source_domain": "msk-development.ru",
+          "source_type": "official"
+        }
+      ],
       "floorplans": [],
-      "detail_url": null,
+      "detail_url": "newbuilds/legenda-rostova/",
       "legacy": {
         "source_url": "https://rostov-na-donu.etagi.com/zastr/jk/legenda-rostova-11101/",
         "source_domain": "rostov-na-donu.etagi.com",
@@ -1014,63 +1315,118 @@
       },
       "sources": [
         {
-          "url": "https://rostov-na-donu.etagi.com/zastr/jk/legenda-rostova-11101/",
-          "domain": "rostov-na-donu.etagi.com",
-          "type": "aggregator",
-          "checked_at": null
+          "url": "https://msk-development.ru/projects/flats/legenda-rostova",
+          "domain": "msk-development.ru",
+          "type": "official",
+          "checked_at": "2026-07-16"
+        },
+        {
+          "url": "https://msk-development.ru/property/flats?project=legenda-rostova",
+          "domain": "msk-development.ru",
+          "type": "official_inventory",
+          "checked_at": "2026-07-16"
         }
       ],
       "completeness": {
-        "state": "needs_review",
-        "score": 50,
-        "missing": [
-          "status",
-          "official_url",
-          "checked_at",
-          "gallery_3",
-          "detail_page"
-        ]
+        "state": "complete",
+        "score": 100,
+        "missing": []
       }
     },
     {
       "id": "newbuild-015",
-      "slug": "academia-akademiya",
-      "title": "ACADEMIA (АКАДЕМИЯ)",
+      "slug": "academia",
+      "title": "ACADEMIA",
       "city": "Ростов-на-Дону",
       "district": null,
-      "address": "проспект Стачки, 196",
-      "developer": "АльфаСтройИнвест",
-      "class": "комфорт",
-      "status": null,
-      "deadline": "2028",
+      "address": "Ростов-на-Дону, пр-т Стачки, 196",
+      "developer": "ГК «АльфаСтройИнвест»",
+      "class": "комфорт+",
+      "status": "Строится; квартиры в продаже",
+      "deadline": "По этапам: II–IV кварталы 2028",
       "price": {
-        "value": null,
+        "value": 5800000,
         "currency": "RUB",
-        "type": "on_request",
-        "verified": false,
-        "note": "Актуальная минимальная цена не подтверждена на первичном источнике."
+        "type": "minimum_total",
+        "verified": true,
+        "note": "Минимальная стоимость квартиры «от 5,8 млн ₽» на официальной странице застройщика на дату проверки."
       },
       "areas": {
-        "min": null,
-        "max": null,
+        "min": 33,
+        "max": 144,
         "unit": "m2"
       },
-      "description": "Жилой комплекс расположен в западной части города. Строительство ведётся по этапам.",
-      "features": [],
-      "official_url": null,
-      "checked_at": null,
-      "source_type": "aggregator",
+      "description": "Жилой комплекс комфорт-класса на проспекте Стачки из семи секций, реализуемых в три этапа. Проект предусматривает закрытую территорию, дворы без машин, лобби, коворкинг и подземный паркинг.",
+      "features": [
+        "дворы без машин",
+        "подземный паркинг",
+        "коворкинг",
+        "закрытая территория"
+      ],
+      "official_url": "https://alfastroyinvest.com/zhk-academia/",
+      "checked_at": "2026-07-16",
+      "source_type": "official",
       "cover": {
-        "src": "assets/images/newbuilds-v2/5012022e7f72976fb5f7a8f2d94c4b96447fe774.jpeg",
-        "alt": "Жилой комплекс ACADEMIA (АКАДЕМИЯ)",
-        "type": "legacy_cover",
-        "source_url": "https://rostov-na-donu.etagi.com/zastr/jk/academia-akademiya-50648/",
-        "source_domain": "rostov-na-donu.etagi.com",
-        "source_type": "legacy"
+        "src": "assets/images/newbuilds/academia/cover.webp",
+        "alt": "Благоустроенный двор жилого комплекса ACADEMIA",
+        "type": "courtyard",
+        "source_url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/img_2594-1.jpg",
+        "source_domain": "alfastroyinvest.com",
+        "source_type": "official"
       },
-      "images": [],
-      "floorplans": [],
-      "detail_url": null,
+      "images": [
+        {
+          "src": "assets/images/newbuilds/academia/cover.webp",
+          "alt": "Благоустроенный двор жилого комплекса ACADEMIA",
+          "type": "courtyard",
+          "source_url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/img_2594-1.jpg",
+          "source_domain": "alfastroyinvest.com",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/academia/exterior-01.webp",
+          "alt": "Фасад жилого комплекса ACADEMIA",
+          "type": "exterior",
+          "source_url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/img_2596.jpg",
+          "source_domain": "alfastroyinvest.com",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/academia/aerial-01.webp",
+          "alt": "Общий вид жилого комплекса ACADEMIA",
+          "type": "aerial",
+          "source_url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/img_2531.jpg",
+          "source_domain": "alfastroyinvest.com",
+          "source_type": "official"
+        }
+      ],
+      "floorplans": [
+        {
+          "src": "assets/images/newbuilds/academia/floorplan-3-room.webp",
+          "alt": "Планировка трёхкомнатной квартиры в ACADEMIA",
+          "type": "floorplan",
+          "source_url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/1-1.png",
+          "source_domain": "alfastroyinvest.com",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/academia/floorplan-2-room.webp",
+          "alt": "Планировка двухкомнатной квартиры в ACADEMIA",
+          "type": "floorplan",
+          "source_url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/4-1.png",
+          "source_domain": "alfastroyinvest.com",
+          "source_type": "official"
+        },
+        {
+          "src": "assets/images/newbuilds/academia/floorplan-1-room.webp",
+          "alt": "Планировка однокомнатной квартиры в ACADEMIA",
+          "type": "floorplan",
+          "source_url": "https://alfastroyinvest.com/wp-content/uploads/2025/02/6-1.png",
+          "source_domain": "alfastroyinvest.com",
+          "source_type": "official"
+        }
+      ],
+      "detail_url": "newbuilds/academia/",
       "legacy": {
         "source_url": "https://rostov-na-donu.etagi.com/zastr/jk/academia-akademiya-50648/",
         "source_domain": "rostov-na-donu.etagi.com",
@@ -1079,22 +1435,22 @@
       },
       "sources": [
         {
-          "url": "https://rostov-na-donu.etagi.com/zastr/jk/academia-akademiya-50648/",
-          "domain": "rostov-na-donu.etagi.com",
-          "type": "aggregator",
-          "checked_at": null
+          "url": "https://alfastroyinvest.com/zhk-academia/",
+          "domain": "alfastroyinvest.com",
+          "type": "official_developer",
+          "checked_at": "2026-07-16"
+        },
+        {
+          "url": "https://academia-dom.ru/",
+          "domain": "academia-dom.ru",
+          "type": "official",
+          "checked_at": "2026-07-16"
         }
       ],
       "completeness": {
-        "state": "needs_review",
-        "score": 50,
-        "missing": [
-          "status",
-          "official_url",
-          "checked_at",
-          "gallery_3",
-          "detail_page"
-        ]
+        "state": "complete",
+        "score": 100,
+        "missing": []
       }
     },
     {

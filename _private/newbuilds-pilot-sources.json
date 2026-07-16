@@ -9,5 +9,15 @@
   { "slug": "green-park", "title": "Грин Парк", "page_url": "https://msk-development.ru/projects/flats/green-park" },
   { "slug": "dvizhenie-61", "title": "Движение 61", "page_url": "https://dvizhenie61.ru/" },
   { "slug": "levoberezhe", "title": "Левобережье", "page_url": "https://levoberezhe.ru/" },
-  { "slug": "siyanie", "title": "Сияние", "page_url": "https://kvartal-siyanie.ru/" }
+  { "slug": "siyanie", "title": "Сияние", "page_url": "https://kvartal-siyanie.ru/" },
+  { "slug": "smartpolet", "title": "Умный квартал smartpolet (смартполет)", "page_url": "https://poletsmart.ru/galereya-proekta/" },
+  { "slug": "oktyabr-park", "title": "Октябрь Парк", "page_url": "https://www.ssk-oktyabr-park.ru/" },
+  { "slug": "royal-towers", "title": "Royal Towers (Роял Тауэрс)", "page_url": "https://msk-development.ru/projects/flats/zhk-royal-towers" },
+  { "slug": "four-premiers", "title": "FOUR PREMIERS ( Четыре Премьеры)", "page_url": "https://msk-development.ru/projects/flats/four-premiers" },
+  { "slug": "akvatoriya", "title": "Акватория", "page_url": "https://msk-development.ru/projects/flats/aquatoria" },
+  { "slug": "donskoy-arbat", "title": "Донской Арбат", "page_url": "https://msk-development.ru/projects/flats/donskoi-arbat" },
+  { "slug": "donskoy-arbat-2", "title": "Донской Арбат 2", "page_url": "https://msk-development.ru/projects/flats/donskoi-arbat2" },
+  { "slug": "kristall-2", "title": "Кристалл-2", "page_url": "https://msk-development.ru/projects/flats/kristall2" },
+  { "slug": "legenda-rostova", "title": "Легенда Ростова", "page_url": "https://msk-development.ru/projects/flats/legenda-rostova" },
+  { "slug": "academia", "title": "ACADEMIA (АКАДЕМИЯ)", "page_url": "https://alfastroyinvest.com/zhk-academia/" }
 ]

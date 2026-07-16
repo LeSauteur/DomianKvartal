@@ -133,10 +133,34 @@ function render(item) {
 }
 
 let count = 0;
-for (const item of DATA.items.filter((entry) => entry.detail_url)) {
+const detailItems = DATA.items.filter((entry) => entry.detail_url);
+for (const item of detailItems) {
   const directory = path.join(ROOT, "newbuilds", item.slug);
   fs.mkdirSync(directory, { recursive: true });
   fs.writeFileSync(path.join(directory, "index.html"), render(item), "utf8");
   count += 1;
 }
+
+const sitemapPath = path.join(ROOT, "sitemap.xml");
+let sitemap = fs.readFileSync(sitemapPath, "utf8");
+const generatedDate = String(DATA.generated_at || "").slice(0, 10);
+if (generatedDate) {
+  sitemap = sitemap.replace(
+    /(<url><loc>https:\/\/domian-161\.ru\/newbuilds\.html<\/loc><lastmod>)[^<]+/,
+    `$1${generatedDate}`
+  );
+}
+
+const missingSitemapEntries = [];
+for (const item of detailItems) {
+  const loc = `https://domian-161.ru/newbuilds/${item.slug}/`;
+  if (sitemap.includes(`<loc>${loc}</loc>`)) continue;
+  missingSitemapEntries.push(`  <url><loc>${loc}</loc><lastmod>${item.checked_at || generatedDate}</lastmod></url>`);
+}
+if (missingSitemapEntries.length) {
+  sitemap = sitemap.replace("</urlset>", `${missingSitemapEntries.join("\n")}\n</urlset>`);
+}
+fs.writeFileSync(sitemapPath, sitemap, "utf8");
+
 console.log(`generated=${count}`);
+console.log(`sitemap_added=${missingSitemapEntries.length}`);
