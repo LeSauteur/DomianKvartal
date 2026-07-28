@@ -1,0 +1,1050 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Домиан · офис «Квартал»" [ref=e4] [cursor=pointer]:
+        - /url: index.html
+      - button "Включить тёмную тему" [ref=e19] [cursor=pointer]:
+        - generic [ref=e21]: Тёмная тема
+      - button "Открыть меню" [expanded] [active] [ref=e1042] [cursor=pointer]
+  - dialog "Мобильное меню" [ref=e1121]:
+    - button "Закрыть меню" [ref=e1122] [cursor=pointer]: ×
+    - generic [ref=e1123]: Навигация
+    - navigation [ref=e1124]:
+      - link "Главная" [ref=e1125] [cursor=pointer]:
+        - /url: index.html
+      - link "Квартиры" [ref=e1126] [cursor=pointer]:
+        - /url: apartments.html
+      - link "Дома" [ref=e1127] [cursor=pointer]:
+        - /url: houses.html
+      - link "Участки" [ref=e1128] [cursor=pointer]:
+        - /url: lands.html
+      - link "Новостройки" [ref=e1129] [cursor=pointer]:
+        - /url: newbuilds.html
+      - link "Аренда" [ref=e1130] [cursor=pointer]:
+        - /url: rent.html
+      - link "Строительство домов" [ref=e1131] [cursor=pointer]:
+        - /url: construction.html
+      - link "Коммерческая недвижимость" [ref=e1132] [cursor=pointer]:
+        - /url: commercial.html
+      - link "Команда" [ref=e1133] [cursor=pointer]:
+        - /url: team/zukhra-alieva.html
+    - generic [ref=e1134]:
+      - button "Включить тёмную тему" [ref=e1135] [cursor=pointer]:
+        - generic [ref=e1137]: Тёмная тема
+      - link "+7 953 609-11-22" [ref=e1138] [cursor=pointer]:
+        - /url: tel:+79536091122
+      - link "WhatsApp" [ref=e1139] [cursor=pointer]:
+        - /url: https://wa.me/79536091122
+      - link "Telegram" [ref=e1140] [cursor=pointer]:
+        - /url: https://t.me/httpsmealieva_rieltor
+  - region "Подбор недвижимости" [ref=e22]:
+    - generic [ref=e23]:
+      - generic [ref=e25]:
+        - heading "Подберем и оформим недвижимость за 2 дня" [level=1] [ref=e26]:
+          - text: Подберем и оформим
+          - generic [ref=e27]: недвижимость за 2 дня
+        - paragraph [ref=e28]: Квартиры · Дома · Участки · Коммерцияв Аксае и Ростовской области
+        - link "Перейти к мини-витрине предложений" [ref=e29] [cursor=pointer]:
+          - /url: "#home-stage12-catalog"
+          - generic [ref=e31]: Поиск по городу, району или адресу
+          - generic [ref=e32]: Найти
+        - generic [ref=e33]:
+          - link "Открыть каталог" [ref=e34] [cursor=pointer]:
+            - /url: "#home-stage12-catalog"
+          - link "Добавить объект" [ref=e35] [cursor=pointer]:
+            - /url: "#home-stage12-owner"
+          - link "Оценить недвижимость" [ref=e36] [cursor=pointer]:
+            - /url: "#contact"
+      - article "Витринная карточка объекта" [ref=e37]:
+        - link "Современный дом в черте города Премиум 1 / 18" [ref=e38] [cursor=pointer]:
+          - /url: houses.html
+          - img "Современный дом в черте города" [ref=e39]
+          - generic [ref=e40]: Премиум
+          - generic [ref=e42]: 1 / 18
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - generic [ref=e46]:
+              - heading "Современный дом в черте города" [level=2] [ref=e47]
+              - paragraph [ref=e48]: Ростов-на-Дону, Октябрьский район
+            - generic [ref=e49]:
+              - strong [ref=e50]: 24 900 000 ₽
+              - generic [ref=e51]: 166 000 ₽/м²
+          - generic "Характеристики объекта" [ref=e52]:
+            - generic [ref=e53]:
+              - generic [ref=e54]: 150 м²
+              - emphasis [ref=e55]: Площадь
+            - generic [ref=e56]:
+              - generic [ref=e57]: 5 сот.
+              - emphasis [ref=e58]: Участок
+            - generic [ref=e59]:
+              - generic [ref=e60]: "4"
+              - emphasis [ref=e61]: Комнаты
+            - generic [ref=e62]:
+              - generic [ref=e63]: "2"
+              - emphasis [ref=e64]: Этажи
+          - link "Подробнее" [ref=e65] [cursor=pointer]:
+            - /url: houses.html
+  - region "Категории недвижимости" [ref=e66]:
+    - generic [ref=e67]:
+      - link [ref=e68] [cursor=pointer]:
+        - /url: apartments.html
+        - generic [ref=e69]: ▥
+        - strong [ref=e70]: Квартиры
+        - emphasis [ref=e71]: Подбор квартир
+      - link [ref=e72] [cursor=pointer]:
+        - /url: houses.html
+        - generic [ref=e73]: ⌂
+        - strong [ref=e74]: Дома
+        - emphasis [ref=e75]: Город и загород
+      - link [ref=e76] [cursor=pointer]:
+        - /url: lands.html
+        - generic [ref=e77]: ♧
+        - strong [ref=e78]: Участки
+        - emphasis [ref=e79]: ИЖС и дачи
+      - link [ref=e80] [cursor=pointer]:
+        - /url: commercial.html
+        - generic [ref=e81]: ▤
+        - strong [ref=e82]: Коммерция
+        - emphasis [ref=e83]: Для бизнеса
+      - link [ref=e84] [cursor=pointer]:
+        - /url: newbuilds.html
+        - generic [ref=e85]: ┬
+        - strong [ref=e86]: Новостройки
+        - emphasis [ref=e87]: ЖК и комплексы
+  - region "Мини-витрина и заявка собственника" [ref=e88]:
+    - generic [ref=e89]:
+      - generic [ref=e90]:
+        - navigation "Быстрые разделы каталога" [ref=e91]:
+          - link "Все предложения" [ref=e92] [cursor=pointer]:
+            - /url: apartments.html
+          - link "Квартиры" [ref=e93] [cursor=pointer]:
+            - /url: apartments.html
+          - link "Дома" [ref=e94] [cursor=pointer]:
+            - /url: houses.html
+          - link "Участки" [ref=e95] [cursor=pointer]:
+            - /url: lands.html
+          - link "Коммерция" [ref=e96] [cursor=pointer]:
+            - /url: commercial.html
+          - link "Новостройки" [ref=e97] [cursor=pointer]:
+            - /url: newbuilds.html
+          - link "Аренда" [ref=e98] [cursor=pointer]:
+            - /url: rent.html
+        - generic "Визуальные фильтры каталога" [ref=e99]:
+          - generic [ref=e100]:
+            - generic [ref=e101]: Город
+            - generic [ref=e102]: Ростов-на-Дону
+          - generic [ref=e103]:
+            - generic [ref=e104]: Район
+            - generic [ref=e105]: Любой район
+          - generic [ref=e106]:
+            - generic [ref=e107]: Тип
+            - generic [ref=e108]: Любой
+          - generic [ref=e109]:
+            - generic [ref=e110]: Цена, ₽
+            - generic [ref=e111]: от до
+          - generic [ref=e112]:
+            - generic [ref=e113]: Площадь, м²
+            - generic [ref=e114]: от до
+          - link "Фильтры" [ref=e115] [cursor=pointer]:
+            - /url: apartments.html
+        - generic [ref=e116]:
+          - article [ref=e117]:
+            - link "Квартира в Ростове-на-Дону Снижение цены" [ref=e118] [cursor=pointer]:
+              - /url: apartments.html
+              - img "Квартира в Ростове-на-Дону" [ref=e119]
+              - generic [ref=e120]: Снижение цены
+            - generic [ref=e122]:
+              - heading [level=3] [ref=e123]:
+                - link "2-к квартира, 56 м²" [ref=e124] [cursor=pointer]:
+                  - /url: apartments.html
+              - paragraph [ref=e125]: Ростов-на-Дону, Левенцовка
+              - strong [ref=e126]: 6 250 000 ₽
+          - article [ref=e127]:
+            - link "Дом на участке Премиум" [ref=e128] [cursor=pointer]:
+              - /url: houses.html
+              - img "Дом на участке" [ref=e129]
+              - generic [ref=e130]: Премиум
+            - generic [ref=e132]:
+              - heading [level=3] [ref=e133]:
+                - link "Дом 180 м² на участке 6 сот." [ref=e134] [cursor=pointer]:
+                  - /url: houses.html
+              - paragraph [ref=e135]: Аксайский район, п. Янтарный
+              - strong [ref=e136]: 18 900 000 ₽
+          - article [ref=e137]:
+            - link "Квартира-студия Рассрочка" [ref=e138] [cursor=pointer]:
+              - /url: newbuilds.html
+              - img "Квартира-студия" [ref=e139]
+              - generic [ref=e140]: Рассрочка
+            - generic [ref=e142]:
+              - heading [level=3] [ref=e143]:
+                - link "Квартира-студия, 34 м²" [ref=e144] [cursor=pointer]:
+                  - /url: newbuilds.html
+              - paragraph [ref=e145]: Ростов-на-Дону, Центр
+              - strong [ref=e146]: 5 450 000 ₽
+          - article [ref=e147]:
+            - link [ref=e148] [cursor=pointer]:
+              - /url: lands.html
+              - img "Участок в Аксае" [ref=e149]
+            - generic [ref=e151]:
+              - heading [level=3] [ref=e152]:
+                - link "Участок 8 сот." [ref=e153] [cursor=pointer]:
+                  - /url: lands.html
+              - paragraph [ref=e154]: Аксай, ул. Садовая
+              - strong [ref=e155]: 3 200 000 ₽
+        - link "Смотреть больше предложений" [ref=e156] [cursor=pointer]:
+          - /url: apartments.html
+      - complementary [ref=e157]:
+        - generic [ref=e159]:
+          - heading "Добавить объект" [level=2] [ref=e160]
+          - paragraph [ref=e161]: Предложите объект агентству — специалист свяжется с вами и подскажет следующий шаг
+        - generic "Тип заявителя" [ref=e163]:
+          - generic [ref=e164]: Вы
+          - generic [ref=e165]: Агентство
+        - link "Вы Расскажите о вашем объекте..." [ref=e166] [cursor=pointer]:
+          - /url: "#contact"
+          - generic [ref=e167]: Вы
+          - strong [ref=e168]: Расскажите о вашем объекте...
+        - link [ref=e170] [cursor=pointer]:
+          - /url: "#contact"
+          - strong [ref=e172]: Заявка собственника
+          - emphasis [ref=e173]: Специалист свяжется и согласует детали с вами
+        - link "Оставить заявку" [ref=e174] [cursor=pointer]:
+          - /url: "#contact"
+  - generic [ref=e175]:
+    - region [ref=e176]:
+      - generic [ref=e177]:
+        - generic [ref=e179]:
+          - generic [ref=e180]: Понятный следующий шаг
+          - heading "С какой задачей вы пришли?" [level=2] [ref=e181]
+          - paragraph [ref=e182]: Помогаем выбрать квартиру, дом, участок или новостройку в Аксае и заранее обратить внимание на документы и условия аванса.
+        - generic [ref=e183]:
+          - article [ref=e184]:
+            - generic [ref=e185]: "01"
+            - generic [ref=e186]: Квартира
+            - heading "Купить квартиру в Аксае" [level=3] [ref=e187]
+            - paragraph [ref=e188]: Вторичка, свежий фонд, семейные варианты и понятный ипотечный сценарий.
+            - generic [ref=e189]:
+              - link "Подобрать квартиру" [ref=e190] [cursor=pointer]:
+                - /url: apartments.html
+                - text: Подобрать квартиру
+                - generic [ref=e191]: →
+              - link "Что проверить до аванса" [ref=e192] [cursor=pointer]:
+                - /url: guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html
+          - article [ref=e193]:
+            - generic [ref=e194]: "02"
+            - generic [ref=e195]: Дом
+            - heading "Подобрать дом рядом с Ростовом" [level=3] [ref=e196]
+            - paragraph [ref=e197]: "Дом в Аксае или ближайшем посёлке: земля, коммуникации, подъезд и ежедневный маршрут."
+            - generic [ref=e198]:
+              - link "Подобрать дом" [ref=e199] [cursor=pointer]:
+                - /url: houses.html
+                - text: Подобрать дом
+                - generic [ref=e200]: →
+              - link "Сравнить локации" [ref=e201] [cursor=pointer]:
+                - /url: guides/gde-kupit-dom-v-aksaye-ryadom-s-rostovom.html
+          - article [ref=e202]:
+            - generic [ref=e203]: "03"
+            - generic [ref=e204]: Участок
+            - heading "Выбрать участок под строительство" [level=3] [ref=e205]
+            - paragraph [ref=e206]: ИЖС, границы, подъезд и стоимость коммуникаций — до решения о покупке земли.
+            - generic [ref=e207]:
+              - link "Разобрать участки" [ref=e208] [cursor=pointer]:
+                - /url: lands.html
+                - text: Разобрать участки
+                - generic [ref=e209]: →
+              - link "Перейти к строительству" [ref=e210] [cursor=pointer]:
+                - /url: construction.html
+          - article [ref=e211]:
+            - generic [ref=e212]: "04"
+            - generic [ref=e213]: Сравнение
+            - heading "Новостройка или вторичка" [level=3] [ref=e214]
+            - paragraph [ref=e215]: Сравните сроки въезда, ремонт, ипотеку, бюджет и риски двух форматов.
+            - generic [ref=e216]:
+              - link "Сравнить форматы" [ref=e217] [cursor=pointer]:
+                - /url: guides/novostroyka-ili-vtorichka-v-aksaye.html
+                - text: Сравнить форматы
+                - generic [ref=e218]: →
+              - link "Смотреть новостройки" [ref=e219] [cursor=pointer]:
+                - /url: newbuilds.html
+          - article [ref=e220]:
+            - generic [ref=e221]: "05"
+            - generic [ref=e222]: До аванса
+            - heading "Проверить объект и документы" [level=3] [ref=e223]
+            - paragraph [ref=e224]: ЕГРН, собственники, обременения, перепланировки, земля и условия передачи денег.
+            - generic [ref=e225]:
+              - link "Открыть гид покупателя" [ref=e226] [cursor=pointer]:
+                - /url: guides/index.html
+                - text: Открыть гид покупателя
+                - generic [ref=e227]: →
+              - link "Получить консультацию" [ref=e228] [cursor=pointer]:
+                - /url: "#contact"
+    - generic [ref=e230]:
+      - generic [ref=e231]:
+        - generic [ref=e232]: Лучшие предложения
+        - heading "Лучшие предложения в г. Аксай" [level=2] [ref=e233]
+        - paragraph [ref=e234]: "Подобрали востребованные квартиры и дома в Аксае: удобные локации, понятный бюджет и форматы, которые чаще всего выбирают покупатели. Оставьте заявку — специалист проверит актуальность, расскажет детали и поможет организовать просмотр."
+      - generic [ref=e235]:
+        - article [ref=e236]:
+          - img "1-к квартира 44 м², ЖК «Сокол Град»" [ref=e238]
+          - generic [ref=e239]:
+            - generic [ref=e240]: Квартиры в Ростове-на-Дону
+            - heading "1-к квартира 44 м², ЖК «Сокол Град»" [level=3] [ref=e241]
+            - paragraph [ref=e242]: Ростов-на-Дону, Пролетарский район, проспект 40-летия Победы, 63/17с8
+            - generic [ref=e243]: 6 299 000 ₽
+            - generic [ref=e244]:
+              - generic [ref=e245]: 44 м²
+              - generic [ref=e246]: 1 комн.
+              - generic [ref=e247]: 15 этаж
+            - group [ref=e248]:
+              - generic "Показать детали +" [ref=e249] [cursor=pointer]
+            - generic [ref=e250]:
+              - link "Подробнее" [ref=e251] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=e252] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=e253]:
+          - img "1-к квартира 45 м², ЖК «Вересаево»" [ref=e255]
+          - generic [ref=e256]:
+            - generic [ref=e257]: Квартиры в Ростове-на-Дону
+            - heading "1-к квартира 45 м², ЖК «Вересаево»" [level=3] [ref=e258]
+            - paragraph [ref=e259]: Ростов-на-Дону, Пролетарский район, улица Берберовская, 28с1
+            - generic [ref=e260]: 7 500 000 ₽
+            - generic [ref=e261]:
+              - generic [ref=e262]: 45 м²
+              - generic [ref=e263]: 1 комн.
+              - generic [ref=e264]: 14 этаж
+            - group [ref=e265]:
+              - generic "Показать детали +" [ref=e266] [cursor=pointer]
+            - generic [ref=e267]:
+              - link "Подробнее" [ref=e268] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=e269] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=e270]:
+          - img "Одноэтажный дом для семьи в Аксае" [ref=e272]
+          - generic [ref=e273]:
+            - generic [ref=e274]: Вторичная недвижимость в Аксае
+            - heading "Одноэтажный дом для семьи в Аксае" [level=3] [ref=e275]
+            - paragraph [ref=e276]: Аксай, район ул. Речников
+            - generic [ref=e277]: 8 490 000 ₽
+            - generic [ref=e278]:
+              - generic [ref=e279]: 120-121 м²
+              - generic [ref=e280]: 4 комн.
+              - generic [ref=e281]: около 5 соток
+            - group [ref=e282]:
+              - generic "Показать детали +" [ref=e283] [cursor=pointer]
+            - generic [ref=e284]:
+              - link "Подробнее" [ref=e285] [cursor=pointer]:
+                - /url: houses.html
+              - link "Позвонить" [ref=e286] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=e287]:
+          - img "Семейный дом рядом с инфраструктурой Аксая" [ref=e289]
+          - generic [ref=e290]:
+            - generic [ref=e291]: Вторичная недвижимость в Аксае
+            - heading "Семейный дом рядом с инфраструктурой Аксая" [level=3] [ref=e292]
+            - paragraph [ref=e293]: Аксай, район Гвардейской и жилого кластера Тихий Дон
+            - generic [ref=e294]: 12 490 000 ₽
+            - generic [ref=e295]:
+              - generic [ref=e296]: около 125 м²
+              - generic [ref=e297]: 4 комн.
+              - generic [ref=e298]: около 4-5 соток
+            - group [ref=e299]:
+              - generic "Показать детали +" [ref=e300] [cursor=pointer]
+            - generic [ref=e301]:
+              - link "Подробнее" [ref=e302] [cursor=pointer]:
+                - /url: houses.html
+              - link "Позвонить" [ref=e303] [cursor=pointer]:
+                - /url: tel:+79536091122
+      - link "Смотреть все объекты" [ref=e305] [cursor=pointer]:
+        - /url: showcase-aksay-secondary.html
+    - generic [ref=e307]:
+      - heading "НОВЫЕ ОБЪЕКТЫ" [level=2] [ref=e308]
+      - paragraph [ref=e309]: Последние добавленные объекты по всем разделам
+      - generic [ref=e310]:
+        - article [ref=e311]:
+          - generic [ref=e312]:
+            - generic "1-комнатная квартира 44 м² в ЖК «Сокол Град»" [ref=e313]
+            - button "Предыдущее фото" [ref=e314] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=e315] [cursor=pointer]: ›
+            - generic [ref=e316]: 1/16
+          - generic [ref=e317]:
+            - generic [ref=e318]: Квартира
+            - heading "1-комнатная квартира 44 м² в ЖК «Сокол Град»" [level=3] [ref=e319]
+            - generic [ref=e320]: 6 299 000 ₽
+            - generic [ref=e321]:
+              - generic [ref=e322]: 1 комн.
+              - generic [ref=e323]: 15/17 эт.
+              - generic [ref=e324]: Ростов-на-Дону
+              - generic [ref=e325]: Пролетарский район
+            - generic [ref=e326]:
+              - link "Подробнее" [ref=e327] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=e328] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=e329]:
+          - generic [ref=e330]:
+            - generic "1-комнатная квартира 45 м² в ЖК «Вересаево»" [ref=e331]
+            - button "Предыдущее фото" [ref=e332] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=e333] [cursor=pointer]: ›
+            - generic [ref=e334]: 1/15
+          - generic [ref=e335]:
+            - generic [ref=e336]: Квартира
+            - heading "1-комнатная квартира 45 м² в ЖК «Вересаево»" [level=3] [ref=e337]
+            - generic [ref=e338]: 7 500 000 ₽
+            - generic [ref=e339]:
+              - generic [ref=e340]: 1 комн.
+              - generic [ref=e341]: 14/24 эт.
+              - generic [ref=e342]: Ростов-на-Дону
+              - generic [ref=e343]: Пролетарский район
+            - generic [ref=e344]:
+              - link "Подробнее" [ref=e345] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=e346] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=e347]:
+          - generic [ref=e348]:
+            - generic "1-комнатная квартира, 36 м²" [ref=e349]
+            - button "Предыдущее фото" [ref=e350] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=e351] [cursor=pointer]: ›
+            - generic [ref=e352]: 1/11
+          - generic [ref=e353]:
+            - generic [ref=e354]: Квартира
+            - heading "1-комнатная квартира, 36 м²" [level=3] [ref=e355]
+            - generic [ref=e356]: 5 050 000 ₽
+            - generic [ref=e357]:
+              - generic [ref=e358]: 1 комн.
+              - generic [ref=e359]: 5/6 эт.
+            - generic [ref=e360]:
+              - link "Подробнее" [ref=e361] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=e362] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=e363]:
+          - generic [ref=e364]:
+            - generic "Евро 2-комнатная квартира, 47 м²" [ref=e365]
+            - button "Предыдущее фото" [ref=e366] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=e367] [cursor=pointer]: ›
+            - generic [ref=e368]: 1/15
+          - generic [ref=e369]:
+            - generic [ref=e370]: Квартира
+            - heading "Евро 2-комнатная квартира, 47 м²" [level=3] [ref=e371]
+            - generic [ref=e372]: 6 100 000 ₽
+            - generic [ref=e373]:
+              - link "Подробнее" [ref=e374] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=e375] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=e376]:
+          - generic [ref=e377]:
+            - generic "Новый дом в продаже" [ref=e378]
+            - button "Предыдущее фото" [ref=e379] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=e380] [cursor=pointer]: ›
+            - generic [ref=e381]: 1/25
+          - generic [ref=e382]:
+            - generic [ref=e383]: Дом
+            - heading "Новый дом в продаже" [level=3] [ref=e384]
+            - generic [ref=e385]: 25 000 000 ₽
+            - generic [ref=e386]: 4 сот.
+            - generic [ref=e388]:
+              - link "Подробнее" [ref=e389] [cursor=pointer]:
+                - /url: houses.html
+              - link "Позвонить" [ref=e390] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=e391]:
+          - generic [ref=e392]:
+            - generic "Продаётся просторная 3х‑комнатная квартира 62 м² на 6 этаже из 9 — отличный вариант для комфорт" [ref=e393]
+            - button "Предыдущее фото" [ref=e394] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=e395] [cursor=pointer]: ›
+            - generic [ref=e396]: 1/3
+          - generic [ref=e397]:
+            - generic [ref=e398]: Квартира
+            - heading "Продаётся просторная 3х‑комнатная квартира 62 м² на 6 этаже из 9 — отличный вариант для комфорт" [level=3] [ref=e399]
+            - generic [ref=e400]: 6 500 000 ₽
+            - generic [ref=e401]:
+              - link "Подробнее" [ref=e402] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=e403] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=e404]:
+          - generic [ref=e405]:
+            - generic "Продаётся просторная 3х‑комнатная квартира 66 м² на 11 этаже из 16 — отличный вариант для комфо" [ref=e406]
+            - button "Предыдущее фото" [ref=e407] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=e408] [cursor=pointer]: ›
+            - generic [ref=e409]: 1/3
+          - generic [ref=e410]:
+            - generic [ref=e411]: Квартира
+            - heading "Продаётся просторная 3х‑комнатная квартира 66 м² на 11 этаже из 16 — отличный вариант для комфо" [level=3] [ref=e412]
+            - generic [ref=e413]: 7 200 000 ₽
+            - generic [ref=e414]:
+              - link "Подробнее" [ref=e415] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=e416] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=e417]:
+          - generic [ref=e418]:
+            - generic "Дом 297 кв. м в Аксае, участок 20 соток — премиум‑класс с бассейном и выходом на две улицы! Рос" [ref=e419]
+            - button "Предыдущее фото" [ref=e420] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=e421] [cursor=pointer]: ›
+            - generic [ref=e422]: 1/3
+          - generic [ref=e423]:
+            - generic [ref=e424]: Дом
+            - heading "Дом 297 кв. м в Аксае, участок 20 соток — премиум‑класс с бассейном и выходом на две улицы! Рос" [level=3] [ref=e425]
+            - generic [ref=e426]: 7 000 000 ₽
+            - generic [ref=e427]: 20 сот.
+            - generic [ref=e429]:
+              - link "Подробнее" [ref=e430] [cursor=pointer]:
+                - /url: houses.html
+              - link "Позвонить" [ref=e431] [cursor=pointer]:
+                - /url: tel:+79536091122
+    - region "Специальные предложения" [ref=e432]:
+      - generic [ref=e433]:
+        - generic [ref=e435]:
+          - heading "Специальные предложения" [level=2] [ref=e436]
+          - paragraph [ref=e437]: Подборки самых привлекательных вариантов
+        - tablist "Подборки" [ref=e438]:
+          - button "Квартиры на вторичном рынке" [ref=e439] [cursor=pointer]
+          - button "Дома и участки" [ref=e440] [cursor=pointer]
+          - button "Ипотека 6%" [ref=e441] [cursor=pointer]
+          - button "Коммерческая недвижимость" [ref=e442] [cursor=pointer]
+        - generic "Карточки объектов" [ref=e443]:
+          - region "Горизонтальная прокрутка" [ref=e445]:
+            - link "Объект недвижимости 1/33 Ставка от 13.99% В избранное 25 000 000 ₽ от 207 214 ₽/мес. 4-комн. 250 м² 3/3 эт. Батайск, ул. Рабочая, д. 100" [ref=e446] [cursor=pointer]:
+              - /url: houses.html
+              - generic [ref=e447]:
+                - img "Объект недвижимости" [ref=e448]
+                - generic [ref=e449]: 1/33
+                - generic [ref=e450]: Ставка от 13.99%
+                - button "В избранное" [ref=e451]
+              - generic [ref=e454]:
+                - generic [ref=e455]:
+                  - strong [ref=e456]: 25 000 000 ₽
+                  - generic [ref=e457]: от 207 214 ₽/мес.
+                - generic [ref=e458]:
+                  - generic [ref=e459]: 4-комн.
+                  - generic [ref=e460]: 250 м²
+                  - generic [ref=e461]: 3/3 эт.
+                - generic [ref=e462]: Батайск, ул. Рабочая, д. 100
+            - link "Объект недвижимости 1/5 Ставка от 13.99% В избранное 10 315 000 ₽ от 85 497 ₽/мес. 1-комн. 67.8 м² 7/19 эт. Ростов-на-Дону, район Центр" [ref=e463] [cursor=pointer]:
+              - /url: apartments.html
+              - generic [ref=e464]:
+                - img "Объект недвижимости" [ref=e465]
+                - generic [ref=e466]: 1/5
+                - generic [ref=e467]: Ставка от 13.99%
+                - button "В избранное" [ref=e468]
+              - generic [ref=e471]:
+                - generic [ref=e472]:
+                  - strong [ref=e473]: 10 315 000 ₽
+                  - generic [ref=e474]: от 85 497 ₽/мес.
+                - generic [ref=e475]:
+                  - generic [ref=e476]: 1-комн.
+                  - generic [ref=e477]: 67.8 м²
+                  - generic [ref=e478]: 7/19 эт.
+                - generic [ref=e479]: Ростов-на-Дону, район Центр
+            - link "Объект недвижимости 1/8 Рассрочка В избранное 10 500 000 ₽ от 87 030 ₽/мес. 3-комн. 77 м² 16/25 эт. Ростов-на-Дону, пр-т Ленина" [ref=e480] [cursor=pointer]:
+              - /url: apartments.html
+              - generic [ref=e481]:
+                - img "Объект недвижимости" [ref=e482]
+                - generic [ref=e483]: 1/8
+                - generic [ref=e484]: Рассрочка
+                - button "В избранное" [ref=e485]
+              - generic [ref=e488]:
+                - generic [ref=e489]:
+                  - strong [ref=e490]: 10 500 000 ₽
+                  - generic [ref=e491]: от 87 030 ₽/мес.
+                - generic [ref=e492]:
+                  - generic [ref=e493]: 3-комн.
+                  - generic [ref=e494]: 77 м²
+                  - generic [ref=e495]: 16/25 эт.
+                - generic [ref=e496]: Ростов-на-Дону, пр-т Ленина
+    - generic [ref=e499]:
+      - heading "Объекты, которые разбирают" [level=2] [ref=e500]
+      - paragraph [ref=e501]: Актуальные варианты из квартир, домов, участков и новостроек
+      - generic [ref=e502]:
+        - article [ref=e1046]:
+          - generic [ref=e1047]:
+            - generic "Квартира · Ростовская область · 18 м²" [ref=e1048]
+            - button "Предыдущее фото" [ref=e1049] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=e1050] [cursor=pointer]: ›
+            - generic [ref=e1051]: 1/5
+          - generic [ref=e1052]:
+            - generic [ref=e1053]: Квартиры
+            - heading "Квартира · Ростовская область · 18 м²" [level=3] [ref=e1054]
+            - generic [ref=e1055]: 2 750 000 ₽
+            - generic [ref=e1056]:
+              - generic [ref=e1057]: 76 комн.
+              - generic [ref=e1058]: 18 м²
+            - generic [ref=e1059]:
+              - link "Подробнее" [ref=e1060] [cursor=pointer]:
+                - /url: index.html#contact
+              - link "Позвонить" [ref=e1061] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=e1062]:
+          - generic "Иловайский" [ref=e1064]
+          - generic [ref=e1065]:
+            - generic [ref=e1066]: Новостройки
+            - heading "Иловайский" [level=3] [ref=e1067]
+            - generic [ref=e1068]: от 3 757 800 ₽
+            - generic [ref=e1069]:
+              - link "Подробнее" [ref=e1070] [cursor=pointer]:
+                - /url: index.html#contact
+              - link "Позвонить" [ref=e1071] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=e1072]:
+          - generic [ref=e1073]:
+            - generic "Квартира · Ростовская область · 75 м²" [ref=e1074]
+            - button "Предыдущее фото" [ref=e1075] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=e1076] [cursor=pointer]: ›
+            - generic [ref=e1077]: 1/18
+          - generic [ref=e1078]:
+            - generic [ref=e1079]: Квартиры
+            - heading "Квартира · Ростовская область · 75 м²" [level=3] [ref=e1080]
+            - generic [ref=e1081]: 11 450 000 ₽
+            - generic [ref=e1082]:
+              - generic [ref=e1083]: 11 комн.
+              - generic [ref=e1084]: 75 м²
+              - generic [ref=e1085]: 5 эт.
+            - generic [ref=e1086]:
+              - link "Подробнее" [ref=e1087] [cursor=pointer]:
+                - /url: index.html#contact
+              - link "Позвонить" [ref=e1088] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=e1089]:
+          - generic [ref=e1090]:
+            - generic "Дом · 80 м²" [ref=e1091]
+            - button "Предыдущее фото" [ref=e1092] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=e1093] [cursor=pointer]: ›
+            - generic [ref=e1094]: 1/19
+          - generic [ref=e1095]:
+            - generic [ref=e1096]: Дома
+            - heading "Дом · 80 м²" [level=3] [ref=e1097]
+            - generic [ref=e1098]: 9 000 000 ₽
+            - generic [ref=e1099]:
+              - generic [ref=e1100]: 2 комн.
+              - generic [ref=e1101]: 80 м²
+            - generic [ref=e1102]:
+              - link "Подробнее" [ref=e1103] [cursor=pointer]:
+                - /url: index.html#contact
+              - link "Позвонить" [ref=e1104] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=e1105]:
+          - generic [ref=e1106]:
+            - generic "🏡 Пpoдаeтся учаcтoк 6 соток в живопиcном мeсте! Участок 6 сот. (ИЖС)Ростовская обл., Аксайский р-н, Аксайское городское поселение, Аксай, Луговой пер" [ref=e1107]
+            - button "Предыдущее фото" [ref=e1108] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=e1109] [cursor=pointer]: ›
+            - generic [ref=e1110]: 1/2
+          - generic [ref=e1111]:
+            - generic [ref=e1112]: Участки
+            - heading "🏡 Пpoдаeтся учаcтoк 6 соток в живопиcном мeсте! Участок 6 сот. (ИЖС)Ростовская обл., Аксайский р-н, Аксайское городское поселение, Аксай, Луговой пер" [level=3] [ref=e1113]
+            - generic [ref=e1114]: 1 560 000 ₽
+            - generic [ref=e1115]:
+              - link "Подробнее" [ref=e1116] [cursor=pointer]:
+                - /url: index.html#contact
+              - link "Позвонить" [ref=e1117] [cursor=pointer]:
+                - /url: tel:+79536091122
+    - region "Быстрый поиск" [ref=e504]:
+      - generic [ref=e505]:
+        - heading "Быстрый поиск" [level=2] [ref=e508]
+        - generic [ref=e509]:
+          - link "Квартиры" [ref=e510] [cursor=pointer]:
+            - /url: apartments.html
+          - link "Дома" [ref=e513] [cursor=pointer]:
+            - /url: houses.html
+          - link "Участки" [ref=e516] [cursor=pointer]:
+            - /url: lands.html
+          - link "Новостройки" [ref=e519] [cursor=pointer]:
+            - /url: newbuilds.html
+    - region [ref=e522]:
+      - generic [ref=e523]:
+        - generic [ref=e525]:
+          - generic [ref=e526]: Помощь после выбора объекта
+          - heading "Сервисы для сделки" [level=2] [ref=e527]
+          - paragraph [ref=e528]: Ипотечные программы, страхование и гарантии собраны в одном понятном маршруте.
+        - region "Горизонтальная прокрутка" [ref=e530]:
+          - link "Семейная ипотека 6%" [ref=e531] [cursor=pointer]:
+            - /url: "#mortgage"
+          - link "Сельская ипотека 3%" [ref=e537] [cursor=pointer]:
+            - /url: "#mortgage"
+          - link "Рефинансирование" [ref=e543] [cursor=pointer]:
+            - /url: "#mortgage"
+          - link "Страхование рисков" [ref=e549] [cursor=pointer]:
+            - /url: "#contact"
+          - link "Гарантия выбора" [ref=e555] [cursor=pointer]:
+            - /url: "#contact"
+          - link "Гарантия продажи" [ref=e561] [cursor=pointer]:
+            - /url: "#contact"
+    - region "Дополнительные сервисы" [ref=e567]:
+      - generic [ref=e568]:
+        - heading "Дополнительные сервисы" [level=3] [ref=e571]
+        - generic [ref=e572]:
+          - link "Новое Семейная ипотека за 5 минут Заполните анкету и получите предварительное одобрение." [ref=e573] [cursor=pointer]:
+            - /url: "#contact"
+            - generic [ref=e574]: Новое
+            - heading "Семейная ипотека за 5 минут" [level=3] [ref=e575]
+            - paragraph [ref=e576]: Заполните анкету и получите предварительное одобрение.
+          - link "Новое Страхование сделки Защита от рисков и юридических споров." [ref=e578] [cursor=pointer]:
+            - /url: "#contact"
+            - generic [ref=e579]: Новое
+            - heading "Страхование сделки" [level=3] [ref=e580]
+            - paragraph [ref=e581]: Защита от рисков и юридических споров.
+          - link "Новое Рассрочка на жилье Подбор программы и сопровождение сделки до регистрации." [ref=e583] [cursor=pointer]:
+            - /url: "#contact"
+            - generic [ref=e584]: Новое
+            - heading "Рассрочка на жилье" [level=3] [ref=e585]
+            - paragraph [ref=e586]: Подбор программы и сопровождение сделки до регистрации.
+  - generic [ref=e589]:
+    - heading "Ипотечный калькулятор" [level=2] [ref=e590]
+    - paragraph [ref=e591]: Рассчитайте ежемесячный платеж и узнайте сумму переплаты
+    - generic [ref=e592]:
+      - generic [ref=e593]:
+        - generic [ref=e594]:
+          - generic [ref=e595]: Стоимость недвижимости
+          - textbox "5 000 000" [ref=e596]
+        - generic [ref=e597]:
+          - generic [ref=e598]: Первоначальный взнос
+          - textbox "1 000 000" [ref=e599]
+        - generic [ref=e600]:
+          - generic [ref=e601]: Срок кредита (лет)
+          - textbox "20" [ref=e602]
+        - generic [ref=e603]:
+          - generic [ref=e604]: Процентная ставка (%)
+          - textbox "16" [ref=e605]
+      - generic [ref=e606]:
+        - generic [ref=e607]:
+          - generic [ref=e608]: Ежемесячный платеж
+          - generic [ref=e609]: 55 650 ₽
+        - generic [ref=e610]:
+          - generic [ref=e611]: Сумма кредита
+          - generic [ref=e612]: 4 000 000 ₽
+        - generic [ref=e613]:
+          - generic [ref=e614]: Переплата
+          - generic [ref=e615]: 9 356 057 ₽
+        - generic [ref=e616]:
+          - generic [ref=e617]: Общая сумма
+          - generic [ref=e618]: 13 356 057 ₽
+    - link "Получить консультацию по ипотеке" [ref=e620] [cursor=pointer]:
+      - /url: "#contact"
+  - region [ref=e621]:
+    - generic [ref=e623]:
+      - generic [ref=e624]:
+        - generic [ref=e625]: Сценарий для собственника
+        - heading "Продаёте квартиру, дом или участок?" [level=2] [ref=e626]
+        - paragraph [ref=e627]: Поможем оценить, упаковать объект, разместить объявление и организовать показы до безопасной сделки.
+      - link "Обсудить продажу" [ref=e628] [cursor=pointer]:
+        - /url: "#contact"
+  - region [ref=e629]:
+    - generic [ref=e630]:
+      - generic [ref=e632]:
+        - generic [ref=e633]: Локальная команда рядом
+        - heading "Почему обращаются в Домиан Квартал" [level=2] [ref=e634]
+        - paragraph [ref=e635]: Помогаем пройти путь от первого запроса до сделки спокойно и последовательно.
+      - generic [ref=e636]:
+        - article [ref=e637] [cursor=pointer]:
+          - generic [ref=e638]: "01"
+          - heading "Реальный офис в Аксае" [level=3] [ref=e639]
+          - paragraph [ref=e640]: "Можно встретиться с командой по адресу: ул. Толпинского, 130."
+        - article [ref=e642] [cursor=pointer]:
+          - generic [ref=e643]: "02"
+          - heading "Локальная экспертиза" [level=3] [ref=e644]
+          - paragraph [ref=e645]: Работаем с квартирами, домами, участками и новостройками в Аксае и рядом с Ростовом.
+        - article [ref=e647] [cursor=pointer]:
+          - generic [ref=e648]: "03"
+          - heading "Проверка перед сделкой" [level=3] [ref=e649]
+          - paragraph [ref=e650]: Помогаем проверить документы, обременения, объект и условия аванса до передачи денег.
+        - article [ref=e652] [cursor=pointer]:
+          - generic [ref=e653]: "04"
+          - heading "Сопровождение до результата" [level=3] [ref=e654]
+          - paragraph [ref=e655]: Подбор, переговоры, ипотека или маткапитал при необходимости и сопровождение сделки.
+      - generic "Как проходит работа" [ref=e657]:
+        - list [ref=e659]:
+          - listitem [ref=e660]:
+            - strong [ref=e661]: Разбираем задачу
+            - generic [ref=e662]: и бюджет
+          - listitem [ref=e663]:
+            - strong [ref=e664]: Подбираем
+            - generic [ref=e665]: подходящие варианты
+          - listitem [ref=e666]:
+            - strong [ref=e667]: Проверяем
+            - generic [ref=e668]: объект и документы
+          - listitem [ref=e669]:
+            - strong [ref=e670]: Сопровождаем
+            - generic [ref=e671]: переговоры и сделку
+        - link "Обсудить покупку в Аксае" [ref=e672] [cursor=pointer]:
+          - /url: "#contact"
+  - generic [ref=e675]:
+    - generic [ref=e676]:
+      - heading "500+" [level=3] [ref=e677]
+      - paragraph [ref=e678]: успешных сделок
+    - generic [ref=e679]:
+      - heading "15+" [level=3] [ref=e680]
+      - paragraph [ref=e681]: профессионалов в команде
+    - generic [ref=e682]:
+      - heading "3+" [level=3] [ref=e683]
+      - paragraph [ref=e684]: года опыта в регионе
+    - generic [ref=e685]:
+      - heading "Ипотека" [level=3] [ref=e686]
+      - paragraph [ref=e687]: Сбер · ВТБ · Альфа
+  - region "Партнёры" [ref=e688]:
+    - generic [ref=e689]:
+      - heading "С кем мы работаем" [level=2] [ref=e690]
+      - generic [ref=e691]:
+        - generic [ref=e692]:
+          - heading "Банки" [level=3] [ref=e696]
+          - paragraph [ref=e697]: Сбер · ВТБ · Альфа · Совкомбанк · ДОМ.РФ
+        - generic [ref=e698]:
+          - heading "Застройщики" [level=3] [ref=e702]
+          - paragraph [ref=e703]: ЮСИ · Доннефтестрой · ССК · МСК
+  - generic [ref=e705]:
+    - generic [ref=e706]:
+      - generic [ref=e707]: ПАРТНЁРСТВО
+      - heading "Работаем напрямую — без посредников" [level=2] [ref=e708]
+      - paragraph [ref=e709]: Мы напрямую взаимодействуем с банками и застройщиками региона, чтобы предлагать клиентам реальные условия, а не рекламные обещания.
+      - paragraph [ref=e710]: Это позволяет быстрее получать одобрения, согласовывать условия и находить оптимальные решения.
+    - img "Рабочие встречи и партнёрство" [ref=e711]
+  - generic [ref=e713]:
+    - heading "Наши гарантии" [level=2] [ref=e714]
+    - generic [ref=e715]:
+      - generic [ref=e716]:
+        - heading "✔ Работа по договору" [level=4] [ref=e717]
+        - paragraph [ref=e718]: Все обязательства фиксируем письменно, условия прозрачны заранее.
+      - generic [ref=e719]:
+        - heading "✔ Проверка Росреестра" [level=4] [ref=e720]
+        - paragraph [ref=e721]: Проверяем историю прав и обременения по объекту до сделки.
+      - generic [ref=e722]:
+        - heading "✔ Без скрытых комиссий" [level=4] [ref=e723]
+        - paragraph [ref=e724]: Стоимость услуг фиксируется в договоре и не меняется в процессе.
+      - generic [ref=e725]:
+        - heading "✔ Страхование сделки" [level=4] [ref=e726]
+        - paragraph [ref=e727]: Предлагаем титульное страхование для дополнительной защиты.
+  - region [ref=e728]:
+    - generic [ref=e730]:
+      - generic [ref=e731]:
+        - generic [ref=e732]: Фирменный принцип
+        - heading "Квартал — это 4 стороны спокойной покупки" [level=2] [ref=e733]
+        - paragraph [ref=e734]: "Недвижимость важно оценивать целиком: не только сам объект, но и локацию, документы и условия будущей сделки."
+        - list "Четыре стороны проверки недвижимости" [ref=e735]:
+          - listitem [ref=e736]:
+            - generic [ref=e737]: "01"
+            - strong [ref=e738]: Локация
+          - listitem [ref=e739]:
+            - generic [ref=e740]: "02"
+            - strong [ref=e741]: Объект
+          - listitem [ref=e742]:
+            - generic [ref=e743]: "03"
+            - strong [ref=e744]: Документы
+          - listitem [ref=e745]:
+            - generic [ref=e746]: "04"
+            - strong [ref=e747]: Сделка
+      - img [ref=e749]:
+        - generic [ref=e750]:
+          - generic [ref=e751]: Домиан
+          - generic [ref=e752]: Квартал
+        - generic [ref=e762]:
+          - generic [ref=e763]: Локация
+          - generic [ref=e764]: Объект
+          - generic [ref=e765]: Документы
+          - generic [ref=e766]: Сделка
+        - generic [ref=e767]: 4 стороны спокойной покупки
+        - generic [ref=e768]: Домиан Квартал
+  - generic [ref=e770]:
+    - heading "Как мы работаем" [level=2] [ref=e771]
+    - paragraph [ref=e772]: Четкий процесс, где каждый этап ведет к результату
+    - generic [ref=e773]:
+      - generic [ref=e774]:
+        - heading "1. Консультация" [level=3] [ref=e778]
+        - paragraph [ref=e779]: Выясняем задачу и бюджет
+      - generic [ref=e780]:
+        - heading "2. Подбор" [level=3] [ref=e784]
+        - paragraph [ref=e785]: Предлагаем релевантные варианты
+      - generic [ref=e786]:
+        - heading "3. Проверка" [level=3] [ref=e790]
+        - paragraph [ref=e791]: Проводим юридический анализ
+      - generic [ref=e792]:
+        - heading "4. Сделка" [level=3] [ref=e796]
+        - paragraph [ref=e797]: Сопровождаем до регистрации
+  - region "Хорошее место на Яндекс Картах" [ref=e798]:
+    - generic [ref=e800]:
+      - generic [ref=e801]:
+        - heading "Хорошее место на Яндекс Картах" [level=2] [ref=e802]
+        - paragraph [ref=e803]: Офис «Домиан Квартал» получил отметку «Хорошее место 2026» на Яндекс Картах. Это второй год подряд, когда клиенты отмечают нашу работу высокой оценкой.
+        - list [ref=e804]:
+          - listitem [ref=e805]:
+            - strong [ref=e806]: 5,0
+            - generic [ref=e807]: рейтинг
+          - listitem [ref=e808]:
+            - strong [ref=e809]: "35"
+            - generic [ref=e810]: оценок
+          - listitem [ref=e811]:
+            - strong [ref=e812]: "2026"
+            - generic [ref=e813]: Хорошее место
+          - listitem [ref=e814]:
+            - strong [ref=e815]: Аксай
+            - generic [ref=e816]: ул. Толпинского, 130
+        - link "Смотреть на Яндекс Картах" [ref=e817] [cursor=pointer]:
+          - /url: https://yandex.ru/maps/org/domian/158078581361/?ll=39.858159%2C47.260186&z=16
+      - generic [ref=e818]:
+        - generic [ref=e820]: Яндекс Карты
+        - strong [ref=e821]: Хорошее место
+        - generic [ref=e822]: "2026"
+  - generic [ref=e824]:
+    - generic [ref=e825]:
+      - generic [ref=e826]: НАШ ОФИС
+      - heading "Мы - реальное агентство в Аксае" [level=2] [ref=e827]
+      - paragraph [ref=e828]: Мы работаем не онлайн "на потоке", а в живом офисе, где каждый клиент получает личное внимание.
+      - paragraph [ref=e829]: К нам приходят по рекомендации, потому что мы честно объясняем риски, не навязываем решения и сопровождаем сделку до результата.
+    - img "Офис АН Домиан Квартал" [ref=e830]
+  - generic [ref=e832]:
+    - generic [ref=e833]:
+      - heading "Команда и опыт" [level=2] [ref=e834]
+      - paragraph [ref=e835]: Агентство недвижимости "Домиан Квартал" работает в Аксае и Ростовской области.
+      - paragraph [ref=e836]: Наша цель - безопасные сделки и уверенность клиента на каждом этапе.
+      - paragraph [ref=e837]: 500+ успешных сделок · 15+ специалистов · 3+ года опыта
+    - img "Команда АН Домиан Квартал" [ref=e1118]
+  - generic [ref=e839]:
+    - generic [ref=e840]: НАША КОМАНДА
+    - heading "Мы рядом на каждом этапе" [level=2] [ref=e841]
+    - paragraph [ref=e842]: Покупка недвижимости - это важное решение, и мы берем на себя организацию процесса, чтобы вы чувствовали спокойствие и уверенность.
+    - link "Обсудить вашу ситуацию" [ref=e843] [cursor=pointer]:
+      - /url: "#contact"
+  - generic [ref=e845]:
+    - img "Зухра Алиева" [ref=e1119]
+    - generic [ref=e846]:
+      - generic [ref=e847]: РУКОВОДИТЕЛЬ ОФИСА
+      - heading "Личное участие в каждой сделке" [level=2] [ref=e848]
+      - heading "Зухра Алиева" [level=3] [ref=e849]
+      - paragraph [ref=e850]: Руководитель агентства недвижимости «Домиан Квартал». Более 3 лет помогаю клиентам безопасно покупать и продавать недвижимость в Аксае и Ростовской области.
+      - paragraph [ref=e851]:
+        - text: Наша команда провела более
+        - strong [ref=e852]: 500 успешных сделок
+        - text: с прозрачными условиями и полным сопровождением.
+      - paragraph [ref=e853]: «Важно не просто закрыть сделку, а помочь человеку уверенно пройти один из самых важных этапов в жизни».
+  - generic [ref=e855]:
+    - heading "Отзывы клиентов" [level=2] [ref=e856]
+    - generic [ref=e857]:
+      - generic [ref=e858]:
+        - paragraph [ref=e859]: «Обратилась для покупки трешки в Аксае. Зухра подобрала 5 вариантов за день, сделку провели за неделю. Спасибо за терпение и честность!»
+        - generic [ref=e860]: Марина С., Аксай
+      - generic [ref=e861]:
+        - paragraph [ref=e862]: «Продавал дом с участком. Проверили все до мелочей, нашли старую доверенность, вовремя переделали. Продажа за 45 дней.»
+        - generic [ref=e863]: Алексей К., Ростов-на-Дону
+      - generic [ref=e864]:
+        - paragraph [ref=e865]: «Помогли с ипотекой после отказа в двух банках. Одобрили в Альфе, ставка 5,8%. Огромное спасибо команде!»
+        - generic [ref=e866]: Иван П., Батайск
+  - generic [ref=e868]:
+    - heading "Сертификаты и дипломы" [level=2] [ref=e869]
+    - paragraph [ref=e870]: Наши достижения и профессиональное признание
+    - generic [ref=e871]:
+      - link "Сертификат 1 Сертификат о повышении квалификации" [ref=e872] [cursor=pointer]:
+        - /url: assets/certificates/sert.jpg
+        - img "Сертификат 1" [ref=e873]
+        - generic [ref=e874]: Сертификат о повышении квалификации
+      - link "Сертификат 2 Диплом о профессиональной переподготовке" [ref=e875] [cursor=pointer]:
+        - /url: assets/certificates/sert2.jpg
+        - img "Сертификат 2" [ref=e876]
+        - generic [ref=e877]: Диплом о профессиональной переподготовке
+      - link "Сертификат 3 Сертификат участника конференции" [ref=e878] [cursor=pointer]:
+        - /url: assets/certificates/sert3.jpg
+        - img "Сертификат 3" [ref=e879]
+        - generic [ref=e880]: Сертификат участника конференции
+  - generic [ref=e882]:
+    - heading "Частые вопросы" [level=2] [ref=e883]
+    - generic [ref=e884]:
+      - generic [ref=e885]:
+        - heading "Сколько стоят ваши услуги?" [level=4] [ref=e886]
+        - paragraph [ref=e887]: "Работаем прозрачно: комиссия обсуждается индивидуально и фиксируется в договоре. Обычно от 2% до 4%."
+      - generic [ref=e888]:
+        - heading "Работаете ли с материнским капиталом?" [level=4] [ref=e889]
+        - paragraph [ref=e890]: Да, сопровождаем сделки с маткапиталом и готовим полный пакет документов.
+      - generic [ref=e891]:
+        - heading "Сколько длится сделка?" [level=4] [ref=e892]
+        - paragraph [ref=e893]: В среднем 7-14 дней. Срочные сделки проводим за 2-3 дня.
+      - generic [ref=e894]:
+        - heading "Работаете с загородной недвижимостью?" [level=4] [ref=e895]
+        - paragraph [ref=e896]: Да, ведем отдельный каталог домов и участков в радиусе 30 км от Аксая.
+  - generic [ref=e898]:
+    - generic [ref=e899]:
+      - heading "Контакты" [level=2] [ref=e900]
+      - paragraph [ref=e901]:
+        - strong [ref=e902]: "Адрес:"
+        - text: Ростовская обл., г. Аксай, ул. Толпинского 130
+      - paragraph [ref=e903]:
+        - strong [ref=e904]: "Зухра Алиева:"
+        - link "+7 953 609-11-22" [ref=e905] [cursor=pointer]:
+          - /url: tel:+79536091122
+      - paragraph [ref=e906]:
+        - strong [ref=e907]: "Администратор:"
+        - link "+7 999 481-51-51" [ref=e908] [cursor=pointer]:
+          - /url: tel:+79994815151
+      - paragraph [ref=e909]:
+        - strong [ref=e910]: "Email:"
+        - link "zuhra_2010_aidan@mail.ru" [ref=e911] [cursor=pointer]:
+          - /url: mailto:zuhra_2010_aidan@mail.ru
+      - paragraph [ref=e912]:
+        - strong [ref=e913]: "Режим работы:"
+        - text: Пн-Пт 8:00-20:00
+      - generic [ref=e914]:
+        - link "WhatsApp" [ref=e915] [cursor=pointer]:
+          - /url: https://wa.me/79536091122
+        - link "Telegram" [ref=e916] [cursor=pointer]:
+          - /url: https://t.me/httpsmealieva_rieltor
+    - iframe [ref=e917]:
+      
+  - generic [ref=e919]:
+    - heading "Оставьте заявку" [level=2] [ref=e920]
+    - paragraph [ref=e921]: Наш специалист свяжется с вами в течение 15 минут
+    - generic [ref=e922]:
+      - textbox "Ваше имя" [ref=e924]
+      - textbox "Телефон" [ref=e926]
+      - textbox "Email (по желанию)" [ref=e928]
+      - combobox [ref=e930]:
+        - option "Выберите услугу" [disabled] [selected]
+        - option "Покупка недвижимости"
+        - option "Продажа недвижимости"
+        - option "Аренда недвижимости"
+        - option "Оформление ипотеки"
+        - option "Консультация"
+      - button "Получить консультацию" [ref=e931] [cursor=pointer]
+  - generic [ref=e934]:
+    - generic [ref=e935]: БЕСПЛАТНО
+    - heading "Нужна помощь с недвижимостью?" [level=2] [ref=e936]
+    - paragraph [ref=e937]: Расскажите о своей ситуации, и мы предложим оптимальное решение с понятным пошаговым планом.
+    - link "Получить консультацию" [ref=e938] [cursor=pointer]:
+      - /url: "#contact"
+  - contentinfo [ref=e939]:
+    - generic [ref=e940]:
+      - navigation [ref=e941]: − + + +
+      - generic [ref=e1001]:
+        - generic [ref=e1002]:
+          - heading "Контакты" [level=3] [ref=e1003]
+          - link "Ростовская обл., г. Аксай, ул. Толпинского 130" [ref=e1007] [cursor=pointer]:
+            - /url: https://yandex.ru/maps/org/domian/158078581361/?ll=39.858160%2C47.260186&z=17
+          - link "+7 953 609-11-22" [ref=e1012] [cursor=pointer]:
+            - /url: tel:+79536091122
+          - link "zuhra_2010_aidan@mail.ru" [ref=e1016] [cursor=pointer]:
+            - /url: mailto:zuhra_2010_aidan@mail.ru
+          - generic [ref=e1017]: Пн-Пт 8:00-20:00
+        - generic [ref=e1021]:
+          - link "WhatsApp" [ref=e1022] [cursor=pointer]:
+            - /url: https://wa.me/79536091122
+          - link "Telegram" [ref=e1023] [cursor=pointer]:
+            - /url: https://t.me/httpsmealieva_rieltor
+          - link "ВКонтакте" [ref=e1024] [cursor=pointer]:
+            - /url: https://vk.com/domian_kvartal
+      - generic [ref=e1025]:
+        - paragraph [ref=e1026]: © 2022-2026 АН «Домиан Квартал». Все права защищены.
+        - generic [ref=e1027]:
+          - link "Политика конфиденциальности" [ref=e1028] [cursor=pointer]:
+            - /url: privacy.html
+          - link "Пользовательское соглашение" [ref=e1029] [cursor=pointer]:
+            - /url: offer.html
+          - link "Реквизиты" [ref=e1030] [cursor=pointer]:
+            - /url: details.html
+        - paragraph [ref=e1031]: Информация на сайте не является публичной офертой
+        - paragraph [ref=e1032]:
+          - button "Администраторам" [ref=e1033] [cursor=pointer]
+  - link "WhatsApp" [ref=e1034] [cursor=pointer]:
+    - /url: https://wa.me/79536091122
+  - generic [ref=e1039]:
+    - button "Close" [ref=e1040]: ×
+    - heading [level=2]
+    - paragraph

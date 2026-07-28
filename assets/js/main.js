@@ -3,8 +3,37 @@
 
   var CATALOG_TYPES = ["apartments", "houses", "lands", "newbuilds"];
   var METRIKA_ID = 109303205;
+  var THEME_STORAGE_KEY = "domian-color-theme";
 
   window.DOMIAN_METRIKA_ID = window.DOMIAN_METRIKA_ID || METRIKA_ID;
+
+  function getStoredTheme() {
+    try {
+      return window.localStorage.getItem(THEME_STORAGE_KEY) === "dark" ? "dark" : "light";
+    } catch (_error) {
+      return "light";
+    }
+  }
+
+  function applyTheme(theme) {
+    var isDark = theme === "dark";
+    if (isDark) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      document.documentElement.removeAttribute("data-theme");
+    }
+
+    qsa(".theme-toggle").forEach(function (button) {
+      button.setAttribute("aria-pressed", isDark ? "true" : "false");
+      button.setAttribute("aria-label", isDark ? "Включить светлую тему" : "Включить тёмную тему");
+      button.setAttribute("title", isDark ? "Светлая тема" : "Тёмная тема");
+
+      var label = qs(".theme-toggle__label", button);
+      if (label) label.textContent = isDark ? "Светлая тема" : "Тёмная тема";
+    });
+  }
+
+  applyTheme(getStoredTheme());
 
   function safeReachGoal(goal) {
     try {
@@ -1077,7 +1106,45 @@
       });
   }
 
+  function createThemeButton(modifier) {
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "theme-toggle theme-toggle--" + modifier;
+    button.innerHTML = '<span class="theme-toggle__icon" aria-hidden="true"></span><span class="theme-toggle__label">Тёмная тема</span>';
+    button.addEventListener("click", function () {
+      var nextTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      try {
+        window.localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+      } catch (_error) {
+        // The theme still works for the current page if storage is unavailable.
+      }
+      applyTheme(nextTheme);
+    });
+    return button;
+  }
+
+  function initThemeToggle() {
+    var hasThemeStyles = qsa('link[rel="stylesheet"]').some(function (link) {
+      return /(?:^|\/)visual-premium\.css(?:\?|$)/.test(link.href);
+    });
+    if (!hasThemeStyles) return;
+
+    var headerInner = qs(".header-inner");
+    if (headerInner && !qs(".theme-toggle--header", headerInner)) {
+      var menuToggle = qs(".mobile-menu-toggle", headerInner);
+      headerInner.insertBefore(createThemeButton("header"), menuToggle || null);
+    }
+
+    var drawerActions = qs(".mobile-drawer__actions");
+    if (drawerActions && !qs(".theme-toggle--drawer", drawerActions)) {
+      drawerActions.insertBefore(createThemeButton("drawer"), drawerActions.firstChild);
+    }
+
+    applyTheme(getStoredTheme());
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
+    initThemeToggle();
     initGlobalInteractions();
     initMetrikaClickGoals();
     initActiveNav();
