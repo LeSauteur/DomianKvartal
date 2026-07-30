@@ -124,6 +124,18 @@
     color: #fff;
 }
 
+.agent-info .agent-contact-channels,
+.agent-info .agent-profile-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex: 1 1 100%;
+}
+
+.agent-info .agent-contact-channels {
+    align-items: stretch;
+}
+
 .agent-info .btn-outline.is-disabled,
 .agent-info .btn-outline:disabled {
     opacity: 0.62;
@@ -240,52 +252,6 @@
     color: var(--accent);
 }
 
-/* === QR Modal === */
-.qr-modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.7);
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-}
-
-.qr-modal.active {
-    display: flex;
-}
-
-.qr-content {
-    background: var(--bg-surface);
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    position: relative;
-    max-width: 300px;
-}
-
-.qr-modal-close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    cursor: pointer;
-    font-size: 24px;
-    color: var(--text-muted);
-    background: none;
-    border: none;
-    padding: 0;
-}
-
-.qr-modal-close:hover {
-    color: var(--text-main);
-}
-
-#qrCanvas {
-    margin: 20px auto;
-    display: block;
-    max-width: 100%;
-}
-
 /* === Responsive === */
 @media (max-width: 900px) {
     .agent-card {
@@ -319,6 +285,12 @@
         width: 100%;
         text-align: center;
     }
+
+    .agent-info .agent-contact-channels,
+    .agent-info .agent-profile-tools {
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 576px) {

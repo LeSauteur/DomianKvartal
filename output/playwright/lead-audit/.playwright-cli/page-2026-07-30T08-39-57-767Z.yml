@@ -1,0 +1,44 @@
+- generic [active] [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - link "Домиан · офис «Квартал»" [ref=f2e4] [cursor=pointer]:
+      - /url: index.html
+  - main [ref=f2e5]:
+    - generic [ref=f2e8]:
+      - generic [ref=f2e9]: ✓
+      - heading "Спасибо за заявку!" [level=1] [ref=f2e10]
+      - paragraph [ref=f2e11]: Сервис принял вашу заявку. Наш специалист свяжется с вами в течение 15 минут.
+      - generic [ref=f2e12]:
+        - link "Вернуться на главную" [ref=f2e13] [cursor=pointer]:
+          - /url: index.html
+        - link "Позвонить сейчас" [ref=f2e14] [cursor=pointer]:
+          - /url: tel:+79536091122
+  - contentinfo [ref=f2e15]:
+    - generic [ref=f2e16]:
+      - navigation [ref=f2e17]: − + + +
+      - generic [ref=f2e18]:
+        - generic [ref=f2e19]:
+          - heading "Контакты" [level=3] [ref=f2e20]
+          - link "Ростовская обл., г. Аксай, ул. Толпинского 130" [ref=f2e24] [cursor=pointer]:
+            - /url: https://yandex.ru/maps/org/domian/158078581361/?ll=39.858160%2C47.260186&z=17
+          - link "+7 953 609-11-22" [ref=f2e28] [cursor=pointer]:
+            - /url: tel:+79536091122
+          - link "zuhra_2010_aidan@mail.ru" [ref=f2e32] [cursor=pointer]:
+            - /url: mailto:zuhra_2010_aidan@mail.ru
+          - generic [ref=f2e33]: Пн-Пт 8:00-20:00
+        - generic [ref=f2e37]:
+          - link "WhatsApp" [ref=f2e38] [cursor=pointer]:
+            - /url: https://wa.me/79536091122
+          - link "Telegram" [ref=f2e39] [cursor=pointer]:
+            - /url: https://t.me/httpsmealieva_rieltor
+          - link "ВКонтакте" [ref=f2e40] [cursor=pointer]:
+            - /url: https://vk.com/domian_kvartal
+      - generic [ref=f2e41]:
+        - paragraph [ref=f2e42]: © 2022-2026 АН «Домиан Квартал». Все права защищены.
+        - generic [ref=f2e43]:
+          - link "Политика конфиденциальности" [ref=f2e44] [cursor=pointer]:
+            - /url: privacy.html
+          - link "Пользовательское соглашение" [ref=f2e45] [cursor=pointer]:
+            - /url: offer.html
+          - link "Реквизиты" [ref=f2e46] [cursor=pointer]:
+            - /url: details.html
+        - paragraph [ref=f2e47]: Информация на сайте не является публичной офертой

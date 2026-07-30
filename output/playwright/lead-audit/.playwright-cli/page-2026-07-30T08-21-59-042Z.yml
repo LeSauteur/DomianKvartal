@@ -1,0 +1,120 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "Домиан · офис «Квартал»" [ref=e4] [cursor=pointer]:
+      - /url: index.html
+  - main [ref=e5]:
+    - generic [ref=e8]:
+      - generic [ref=e9]: ✓
+      - heading "Спасибо за заявку!" [level=1] [ref=e10]
+      - paragraph [ref=e11]: Ваша заявка успешно отправлена. Наш специалист свяжется с вами в течение 15 минут.
+      - generic [ref=e12]:
+        - link "Вернуться на главную" [ref=e13] [cursor=pointer]:
+          - /url: index.html
+        - link "Позвонить сейчас" [ref=e14] [cursor=pointer]:
+          - /url: tel:+79536091122
+  - contentinfo [ref=e15]:
+    - generic [ref=e16]:
+      - navigation [ref=e17]:
+        - generic [ref=e18]:
+          - generic [ref=e19]:
+            - button "Недвижимость" [expanded] [ref=e20]
+            - list [ref=e21]:
+              - listitem [ref=e22]:
+                - link "Квартиры" [ref=e23] [cursor=pointer]:
+                  - /url: apartments.html
+              - listitem [ref=e24]:
+                - link "Дома" [ref=e25] [cursor=pointer]:
+                  - /url: houses.html
+              - listitem [ref=e26]:
+                - link "Участки" [ref=e27] [cursor=pointer]:
+                  - /url: lands.html
+              - listitem [ref=e28]:
+                - link "Новостройки" [ref=e29] [cursor=pointer]:
+                  - /url: newbuilds.html
+              - listitem [ref=e30]:
+                - link "Коммерческая" [ref=e31] [cursor=pointer]:
+                  - /url: commercial.html
+          - generic [ref=e32]:
+            - button "Услуги" [ref=e33]
+            - list [ref=e34]:
+              - listitem [ref=e35]:
+                - link "Покупка недвижимости" [ref=e36] [cursor=pointer]:
+                  - /url: index.html#contact
+              - listitem [ref=e37]:
+                - link "Продажа недвижимости" [ref=e38] [cursor=pointer]:
+                  - /url: index.html#contact
+              - listitem [ref=e39]:
+                - link "Ипотека" [ref=e40] [cursor=pointer]:
+                  - /url: index.html#mortgage
+              - listitem [ref=e41]:
+                - link "Юридическое сопровождение" [ref=e42] [cursor=pointer]:
+                  - /url: index.html#contact
+              - listitem [ref=e43]:
+                - link "Оценка недвижимости" [ref=e44] [cursor=pointer]:
+                  - /url: index.html#contact
+              - listitem [ref=e45]:
+                - link "Подбор недвижимости" [ref=e46] [cursor=pointer]:
+                  - /url: index.html#contact
+          - generic [ref=e47]:
+            - button "Компания" [ref=e48]
+            - list [ref=e49]:
+              - listitem [ref=e50]:
+                - link "О компании" [ref=e51] [cursor=pointer]:
+                  - /url: index.html
+              - listitem [ref=e52]:
+                - link "Сотрудники" [ref=e53] [cursor=pointer]:
+                  - /url: team/zukhra-alieva.html
+              - listitem [ref=e54]:
+                - link "Отзывы" [ref=e55] [cursor=pointer]:
+                  - /url: index.html#reviews
+              - listitem [ref=e56]:
+                - link "Вакансии" [ref=e57] [cursor=pointer]:
+                  - /url: index.html#contact
+              - listitem [ref=e58]:
+                - link "Контакты" [ref=e59] [cursor=pointer]:
+                  - /url: index.html#contact
+          - generic [ref=e60]:
+            - button "Клиентам" [ref=e61]
+            - list [ref=e62]:
+              - listitem [ref=e63]:
+                - link "Ипотечный калькулятор" [ref=e64] [cursor=pointer]:
+                  - /url: index.html#mortgage
+              - listitem [ref=e65]:
+                - link "Партнерские услуги" [ref=e66] [cursor=pointer]:
+                  - /url: index.html#contact
+              - listitem [ref=e67]:
+                - link "Строительство домов" [ref=e68] [cursor=pointer]:
+                  - /url: index.html#contact
+              - listitem [ref=e69]:
+                - link "Документы" [ref=e70] [cursor=pointer]:
+                  - /url: privacy.html
+              - listitem [ref=e71]:
+                - link "FAQ" [ref=e72] [cursor=pointer]:
+                  - /url: index.html#faq
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - heading "Контакты" [level=3] [ref=e75]
+          - link "Ростовская обл., г. Аксай, ул. Толпинского 130" [ref=e79] [cursor=pointer]:
+            - /url: https://yandex.ru/maps/org/domian/158078581361/?ll=39.858160%2C47.260186&z=17
+          - link "+7 953 609-11-22" [ref=e83] [cursor=pointer]:
+            - /url: tel:+79536091122
+          - link "zuhra_2010_aidan@mail.ru" [ref=e87] [cursor=pointer]:
+            - /url: mailto:zuhra_2010_aidan@mail.ru
+          - generic [ref=e88]: Пн-Пт 8:00-20:00
+        - generic [ref=e92]:
+          - link "WhatsApp" [ref=e93] [cursor=pointer]:
+            - /url: https://wa.me/79536091122
+          - link "Telegram" [ref=e94] [cursor=pointer]:
+            - /url: https://t.me/httpsmealieva_rieltor
+          - link "ВКонтакте" [ref=e95] [cursor=pointer]:
+            - /url: https://vk.com/domian_kvartal
+      - generic [ref=e96]:
+        - paragraph [ref=e97]: © 2022-2026 АН «Домиан Квартал». Все права защищены.
+        - generic [ref=e98]:
+          - link "Политика конфиденциальности" [ref=e99] [cursor=pointer]:
+            - /url: privacy.html
+          - link "Пользовательское соглашение" [ref=e100] [cursor=pointer]:
+            - /url: offer.html
+          - link "Реквизиты" [ref=e101] [cursor=pointer]:
+            - /url: details.html
+        - paragraph [ref=e102]: Информация на сайте не является публичной офертой

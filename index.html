@@ -39,6 +39,7 @@
 
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/visual-premium.css">
+    <link rel="stylesheet" href="assets/css/showcase.css">
     <link rel="stylesheet" href="assets/css/mortgage.css">
     <link rel="stylesheet" href="assets/css/certificates.css">
     <link rel="stylesheet" href="assets/css/toast.css">
@@ -65,6 +66,191 @@
         color: rgba(255,255,255,0.8);
         border-color: rgba(255,255,255,0.5);
     }
+
+    /* Смысловые зоны главной: фон объединяет группы без технических разделителей. */
+    .home-flow-object-zone,
+    .home-flow-services,
+    .home-flow-trust,
+    .home-flow-principle,
+    .home-flow-office,
+    .home-flow-team,
+    .home-flow-personal,
+    .home-flow-social,
+    .home-seller {
+        border-top: 0 !important;
+        border-bottom: 0 !important;
+    }
+
+    .home-flow-object-zone {
+        background: #f6f0e8 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 32px !important;
+        padding-bottom: 32px !important;
+    }
+
+    .home-flow-object-zone--start {
+        padding-top: 72px !important;
+    }
+
+    .home-flow-object-zone--end {
+        padding-bottom: 72px !important;
+    }
+
+    .home-flow-services,
+    .home-flow-trust,
+    .home-flow-office,
+    .home-flow-team,
+    .home-flow-personal {
+        background: #fff !important;
+    }
+
+    .home-flow-services {
+        padding-top: 32px !important;
+        padding-bottom: 32px !important;
+    }
+
+    .home-flow-services--start {
+        padding-top: 72px !important;
+    }
+
+    .home-flow-services--end {
+        padding-bottom: 72px !important;
+    }
+
+    @media (min-width: 901px) {
+        #home-services .ub-scroller__track {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 14px;
+            overflow: visible;
+        }
+
+        #home-services .ub-story {
+            min-width: 0;
+        }
+
+        #home-services .ub-scroller__btn {
+            display: none;
+        }
+    }
+
+    .home-seller {
+        background: #f6f0e8 !important;
+        padding: 72px 0 !important;
+    }
+
+    .home-seller__card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+        padding: 38px 42px;
+        border-radius: 24px;
+        background: #fff;
+        box-shadow: 0 18px 45px rgba(62, 44, 34, 0.1);
+    }
+
+    .home-seller__eyebrow {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--accent);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .home-seller h2 {
+        margin: 0 0 12px;
+    }
+
+    .home-seller p {
+        max-width: 720px;
+        margin: 0;
+    }
+
+    .home-seller .btn {
+        flex: 0 0 auto;
+    }
+
+    .home-flow-trust {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+
+    .home-flow-principle {
+        background: #f6f0e8 !important;
+        border: 0 !important;
+    }
+
+    .home-flow-office,
+    .home-flow-team,
+    .home-flow-personal {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+
+    .home-flow-office--start {
+        padding-top: 72px !important;
+    }
+
+    .home-flow-personal {
+        padding-bottom: 72px !important;
+    }
+
+    .home-flow-social {
+        background: #f8f3ed !important;
+        padding-top: 42px !important;
+        padding-bottom: 42px !important;
+    }
+
+    .home-flow-object-zone::before,
+    .home-flow-services::before,
+    .home-flow-trust::before,
+    .home-flow-principle::before,
+    .home-flow-office::before,
+    .home-flow-team::before,
+    .home-flow-personal::before,
+    .home-flow-social::before {
+        display: none !important;
+    }
+
+    @media (max-width: 760px) {
+        .home-flow-object-zone,
+        .home-flow-services,
+        .home-flow-trust,
+        .home-flow-principle,
+        .home-flow-office,
+        .home-flow-team,
+        .home-flow-personal,
+        .home-flow-social {
+            padding-top: 28px !important;
+            padding-bottom: 28px !important;
+        }
+
+        .home-flow-object-zone--start,
+        .home-flow-services--start,
+        .home-flow-office--start {
+            padding-top: 52px !important;
+        }
+
+        .home-flow-object-zone--end,
+        .home-flow-services--end,
+        .home-flow-personal {
+            padding-bottom: 52px !important;
+        }
+
+        .home-seller {
+            padding: 52px 0 !important;
+        }
+
+        .home-seller__card {
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 28px 24px;
+        }
+    }
     </style>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -88,17 +274,21 @@
         <span class="header-mobile-spacer" aria-hidden="true"></span>
         <a href="index.html" class="logo">Домиан · офис «Квартал»</a>
         <nav>
-            <a href="index.html">Главная</a>
+            <a href="index.html" aria-current="page">Главная</a>
             <a href="apartments.html">Квартиры</a>
             <a href="houses.html">Дома</a>
             <a href="lands.html">Участки</a>
             <a href="newbuilds.html">Новостройки</a>
+            <a href="rent.html">Аренда</a>
             <a href="construction.html">Строительство домов</a>
             <a href="commercial.html">Коммерческая недвижимость</a>
             <a href="team/zukhra-alieva.html">Команда</a>
         </nav>
         <div class="header-contacts">
-            <a href="tel:+79536091122">+7 953 609-11-22</a>
+            <a href="tel:+79536091122" class="header-contacts__phone">+7 953 609-11-22</a>
+            <a href="https://wa.me/79536091122" target="_blank" rel="noopener noreferrer" class="header-contacts__messenger" data-channel="whatsapp" aria-label="Написать Зухре в WhatsApp" title="WhatsApp">WhatsApp</a>
+            <a href="https://t.me/httpsmealieva_rieltor" target="_blank" rel="noopener noreferrer" class="header-contacts__messenger" data-channel="telegram" aria-label="Написать Зухре в Telegram" title="Telegram">Telegram</a>
+            <a href="https://max.ru/u/f9LHodD0cOKImT5sxxh2fLN4YFJ-paNFCiI79MwgO-LJJZ8oHXX5TN007y4" target="_blank" rel="noopener noreferrer" class="header-contacts__messenger" data-channel="max" data-max-trigger aria-label="Написать Зухре в MAX" title="MAX">MAX</a>
         </div>
         <button class="mobile-menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-drawer">
             <span></span>
@@ -113,188 +303,299 @@
         <button class="mobile-drawer__close" type="button" aria-label="Закрыть меню">×</button>
         <div class="mobile-drawer__title">Навигация</div>
         <nav class="mobile-drawer__nav">
-            <a href="index.html">Главная</a>
+            <a href="index.html" aria-current="page">Главная</a>
             <a href="apartments.html">Квартиры</a>
             <a href="houses.html">Дома</a>
             <a href="lands.html">Участки</a>
             <a href="newbuilds.html">Новостройки</a>
+            <a href="rent.html">Аренда</a>
             <a href="construction.html">Строительство домов</a>
             <a href="commercial.html">Коммерческая недвижимость</a>
             <a href="team/zukhra-alieva.html">Команда</a>
         </nav>
         <div class="mobile-drawer__actions">
             <a class="mobile-drawer__call" href="tel:+79536091122">+7 953 609-11-22</a>
-            <a class="mobile-drawer__messenger" href="https://wa.me/79536091122">WhatsApp</a>
+            <a class="mobile-drawer__messenger" href="https://wa.me/79536091122" target="_blank" rel="noopener noreferrer" data-channel="whatsapp" aria-label="Написать Зухре в WhatsApp" title="WhatsApp">WhatsApp</a>
+            <a class="mobile-drawer__messenger" href="https://t.me/httpsmealieva_rieltor" target="_blank" rel="noopener noreferrer" data-channel="telegram" aria-label="Написать Зухре в Telegram" title="Telegram">Telegram</a>
+            <a class="mobile-drawer__messenger" href="https://max.ru/u/f9LHodD0cOKImT5sxxh2fLN4YFJ-paNFCiI79MwgO-LJJZ8oHXX5TN007y4" target="_blank" rel="noopener noreferrer" data-channel="max" data-max-trigger aria-label="Написать Зухре в MAX" title="MAX">MAX</a>
         </div>
     </div>
 </div>
 
-<section class="hero">
-    <div class="container fade-in">
-        <h1>ПОДБЕРЕМ И ОФОРМИМ<br><span>НЕДВИЖИМОСТЬ ЗА 2 ДНЯ</span></h1>
-        <p>Квартиры · Дома · Участки · Коммерция в Аксае и Ростовской области</p>
-        <div class="hero-actions">
-            <a href="apartments.html" class="btn">Смотреть квартиры</a>
-            <a href="#contact" class="btn secondary">Консультация</a>
+<section class="hero hero-stage12" aria-label="Подбор недвижимости">
+    <div class="container stage12-hero">
+        <div class="stage12-hero__left fade-in">
+            <div class="stage12-hero__copy">
+                <h1>Подберем и оформим<br><span>недвижимость за 2 дня</span></h1>
+                <p>Квартиры · Дома · Участки · Коммерция<br>в Аксае и Ростовской области</p>
+                <a class="stage12-search" href="#home-stage12-catalog" aria-label="Перейти к мини-витрине предложений">
+                    <span class="stage12-search__icon" aria-hidden="true"></span>
+                    <span class="stage12-search__text">Поиск по городу, району или адресу</span>
+                    <span class="stage12-search__button">Найти</span>
+                </a>
+                <div class="stage12-actions">
+                    <a href="#home-stage12-catalog" class="btn">Открыть каталог</a>
+                    <a href="#home-stage12-owner" class="btn secondary stage12-actions__add"><span aria-hidden="true">+</span> Добавить объект</a>
+                    <a href="#lead-form-section" class="btn secondary">Оценить недвижимость</a>
+                </div>
+            </div>
         </div>
-        <div class="hero-quick-links" aria-label="Быстрые разделы каталога">
-            <a href="apartments.html" class="hero-quick-links__item">Квартиры</a>
-            <a href="houses.html" class="hero-quick-links__item">Дома</a>
-            <a href="lands.html" class="hero-quick-links__item">Участки</a>
-            <a href="newbuilds.html" class="hero-quick-links__item">Новостройки</a>
-            <a href="commercial.html" class="hero-quick-links__item">Коммерция</a>
-            <a href="construction.html" class="hero-quick-links__item">Строительство</a>
-        </div>
+
+        <article class="stage12-featured fade-in" aria-label="Витринная карточка объекта">
+            <a class="stage12-featured__image" href="houses.html">
+                <img src="assets/images/home-stage12/premium-house.png" alt="Современный дом в черте города" loading="eager">
+                <span class="stage12-featured__badge">Премиум</span>
+                <span class="stage12-featured__heart" aria-hidden="true"></span>
+                <span class="stage12-featured__photos"><span aria-hidden="true"></span>1 / 18</span>
+            </a>
+            <div class="stage12-featured__body">
+                <div class="stage12-featured__head">
+                    <div>
+                        <h2>Современный дом в черте города</h2>
+                        <p>Ростов-на-Дону, Октябрьский район</p>
+                    </div>
+                    <div class="stage12-featured__price">
+                        <strong>24 900 000 ₽</strong>
+                        <span>166 000 ₽/м²</span>
+                    </div>
+                </div>
+                <div class="stage12-featured__stats" aria-label="Характеристики объекта">
+                    <span><b>150 м²</b><em>Площадь</em></span>
+                    <span><b>5 сот.</b><em>Участок</em></span>
+                    <span><b>4</b><em>Комнаты</em></span>
+                    <span><b>2</b><em>Этажи</em></span>
+                </div>
+                <a class="btn secondary" href="houses.html">Подробнее</a>
+            </div>
+        </article>
     </div>
 </section>
 
-<section class="trust-yandex-place" aria-label="Хорошее место на Яндекс Картах">
-    <div class="container">
-        <div class="trust-yandex-place__card">
-            <div class="trust-yandex-place__content">
-                <h2>Хорошее место на Яндекс Картах</h2>
-                <p>Офис «Домиан Квартал» получил отметку «Хорошее место 2026» на Яндекс Картах. Это второй год подряд, когда клиенты отмечают нашу работу высокой оценкой.</p>
-                <ul class="trust-yandex-place__metrics">
-                    <li><strong>5,0</strong><span>рейтинг</span></li>
-                    <li><strong>35</strong><span>оценок</span></li>
-                    <li><strong>2026</strong><span>Хорошее место</span></li>
-                    <li><strong>Аксай</strong><span>ул. Толпинского, 130</span></li>
-                </ul>
-                <a class="trust-yandex-place__btn" href="https://yandex.ru/maps/org/domian/158078581361/?ll=39.858159%2C47.260186&amp;z=16" target="_blank" rel="noopener noreferrer">Смотреть на Яндекс Картах</a>
-            </div>
-            <div class="trust-yandex-place__badge" aria-hidden="true">
-                <span class="trust-yandex-place__pin"></span>
-                <span class="trust-yandex-place__badge-title">Яндекс Карты</span>
-                <strong>Хорошее место</strong>
-                <span class="trust-yandex-place__year">2026</span>
-            </div>
-        </div>
+<section class="stage12-categories" id="home-stage12-categories" aria-label="Категории недвижимости">
+    <div class="container stage12-categories__grid">
+        <a class="stage12-category stage12-category--rose" href="apartments.html">
+            <span class="stage12-icon stage12-icon--building" aria-hidden="true"></span>
+            <strong>Квартиры</strong>
+            <em>Подбор квартир</em>
+            <img src="assets/types/apartments.jpg" alt="" loading="lazy">
+        </a>
+        <a class="stage12-category stage12-category--green" href="houses.html">
+            <span class="stage12-icon stage12-icon--home" aria-hidden="true"></span>
+            <strong>Дома</strong>
+            <em>Город и загород</em>
+            <img src="assets/types/houses.jpg" alt="" loading="lazy">
+        </a>
+        <a class="stage12-category stage12-category--olive" href="lands.html">
+            <span class="stage12-icon stage12-icon--tree" aria-hidden="true"></span>
+            <strong>Участки</strong>
+            <em>ИЖС и дачи</em>
+            <img src="assets/types/land.jpg" alt="" loading="lazy">
+        </a>
+        <a class="stage12-category stage12-category--blue" href="commercial.html">
+            <span class="stage12-icon stage12-icon--shop" aria-hidden="true"></span>
+            <strong>Коммерция</strong>
+            <em>Для бизнеса</em>
+            <img src="assets/types/commercial.jpg" alt="" loading="lazy">
+        </a>
+        <a class="stage12-category stage12-category--gold" href="newbuilds.html">
+            <span class="stage12-icon stage12-icon--crane" aria-hidden="true"></span>
+            <strong>Новостройки</strong>
+            <em>ЖК и комплексы</em>
+            <img src="assets/images/home-stage12/category-newbuilding.jpg" alt="" loading="lazy">
+        </a>
     </div>
 </section>
 
-<section class="stats">
-    <div class="container">
-        <div class="benefits fade-in">
-            <div class="benefit">
-                <h3>500+</h3>
-                <p>успешных сделок</p>
-            </div>
-            <div class="benefit">
-                <h3>15+</h3>
-                <p>профессионалов в команде</p>
-            </div>
-            <div class="benefit">
-                <h3>3+</h3>
-                <p>года опыта в регионе</p>
-            </div>
-            <div class="benefit">
-                <h3>Ипотека</h3>
-                <p>Сбер · ВТБ · Альфа</p>
-            </div>
-        </div>
-    </div>
-</section>
+<section class="stage12-workspace" id="home-stage12-catalog" aria-label="Мини-витрина и заявка собственника">
+    <div class="container stage12-workspace__grid">
+        <div class="stage12-catalog-preview">
+            <nav class="stage12-tabs" aria-label="Быстрые разделы каталога">
+                <a class="is-active" href="apartments.html">Все предложения</a>
+                <a href="apartments.html">Квартиры</a>
+                <a href="houses.html">Дома</a>
+                <a href="lands.html">Участки</a>
+                <a href="commercial.html">Коммерция</a>
+                <a href="newbuilds.html">Новостройки</a>
+                <a href="rent.html">Аренда</a>
+            </nav>
 
-<section class="ub-section why-us" aria-label="Почему выбирают нас">
-    <div class="ub-container">
-        <div class="ub-section__head">
-            <div>
-                <h2 class="ub-h2">Почему выбирают нас</h2>
-                <p class="ub-sub">Четыре принципа безопасной сделки</p>
+            <div class="stage12-filter-row" aria-label="Визуальные фильтры каталога">
+                <span class="stage12-field"><small>Город</small><b>Ростов-на-Дону</b></span>
+                <span class="stage12-field"><small>Район</small><b>Любой район</b></span>
+                <span class="stage12-field"><small>Тип</small><b>Любой</b></span>
+                <span class="stage12-field"><small>Цена, ₽</small><b>от&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;до</b></span>
+                <span class="stage12-field"><small>Площадь, м²</small><b>от&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;до</b></span>
+                <a class="btn secondary stage12-filter-button" href="apartments.html">Фильтры</a>
             </div>
+
+            <div class="stage12-mini-grid">
+                <article class="stage12-mini-card">
+                    <a class="stage12-mini-card__image" href="apartments.html">
+                        <img src="assets/images/home-stage12/mini-apartment.jpg" alt="Квартира в Ростове-на-Дону" loading="lazy">
+                        <span class="stage12-mini-badge stage12-mini-badge--green">Снижение цены</span>
+                        <span class="stage12-mini-heart" aria-hidden="true"></span>
+                    </a>
+                    <div class="stage12-mini-card__body">
+                        <h3><a href="apartments.html">2-к квартира, 56 м²</a></h3>
+                        <p>Ростов-на-Дону, Левенцовка</p>
+                        <strong>6 250 000 ₽</strong>
+                    </div>
+                </article>
+                <article class="stage12-mini-card">
+                    <a class="stage12-mini-card__image" href="houses.html">
+                        <img src="assets/images/home-stage12/mini-house.jpg" alt="Дом на участке" loading="lazy">
+                        <span class="stage12-mini-badge">Премиум</span>
+                        <span class="stage12-mini-heart" aria-hidden="true"></span>
+                    </a>
+                    <div class="stage12-mini-card__body">
+                        <h3><a href="houses.html">Дом 180 м² на участке 6 сот.</a></h3>
+                        <p>Аксайский район, п. Янтарный</p>
+                        <strong>18 900 000 ₽</strong>
+                    </div>
+                </article>
+                <article class="stage12-mini-card">
+                    <a class="stage12-mini-card__image" href="newbuilds.html">
+                        <img src="assets/images/home-stage12/mini-studio.jpg" alt="Квартира-студия" loading="lazy">
+                        <span class="stage12-mini-badge stage12-mini-badge--red">Рассрочка</span>
+                        <span class="stage12-mini-heart" aria-hidden="true"></span>
+                    </a>
+                    <div class="stage12-mini-card__body">
+                        <h3><a href="newbuilds.html">Квартира-студия, 34 м²</a></h3>
+                        <p>Ростов-на-Дону, Центр</p>
+                        <strong>5 450 000 ₽</strong>
+                    </div>
+                </article>
+                <article class="stage12-mini-card">
+                    <a class="stage12-mini-card__image" href="lands.html">
+                        <img src="assets/images/home-stage12/mini-land.jpg" alt="Участок в Аксае" loading="lazy">
+                        <span class="stage12-mini-heart" aria-hidden="true"></span>
+                    </a>
+                    <div class="stage12-mini-card__body">
+                        <h3><a href="lands.html">Участок 8 сот.</a></h3>
+                        <p>Аксай, ул. Садовая</p>
+                        <strong>3 200 000 ₽</strong>
+                    </div>
+                </article>
+            </div>
+
+            <a class="stage12-show-more" href="apartments.html">Смотреть больше предложений</a>
         </div>
-        <div class="ub-tiles ub-tiles--four">
-            <article class="ub-tile" tabindex="0">
-                <h3>Работа по договору</h3>
-                <p>Все обязательства фиксируем письменно, условия прозрачны заранее</p>
-                <div class="ub-tile__art" aria-hidden="true"></div>
-            </article>
-            <article class="ub-tile" tabindex="0">
-                <h3>Проверка Росреестра</h3>
-                <p>Проверяем историю прав и обременения по объекту до сделки</p>
-                <div class="ub-tile__art" aria-hidden="true"></div>
-            </article>
-            <article class="ub-tile" tabindex="0">
-                <h3>Без скрытых комиссий</h3>
-                <p>Стоимость услуг фиксируется в договоре и не меняется в процессе</p>
-                <div class="ub-tile__art" aria-hidden="true"></div>
-            </article>
-            <article class="ub-tile" tabindex="0">
-                <h3>Страхование сделки</h3>
-                <p>Предлагаем титульное страхование для дополнительной защиты</p>
-                <div class="ub-tile__art" aria-hidden="true"></div>
-            </article>
-        </div>
+
+        <aside class="stage12-owner-card" id="home-stage12-owner">
+            <div class="stage12-owner-card__top">
+                <div>
+                    <h2>Добавить объект</h2>
+                    <p>Предложите объект агентству — специалист свяжется с вами и подскажет следующий шаг</p>
+                </div>
+                <span class="stage12-paper-plane" aria-hidden="true"></span>
+            </div>
+            <div class="stage12-owner-switch" aria-label="Тип заявителя">
+                <span class="is-active">Вы</span>
+                <span>Агентство</span>
+            </div>
+            <a class="stage12-post-row" href="#lead-form-section" data-lead-type="sell" data-source-cta="owner_quick_request">
+                <span>Вы</span>
+                <strong>Расскажите о вашем объекте...</strong>
+                <i aria-hidden="true"></i>
+            </a>
+            <a class="stage12-safe-row" href="#lead-form-section" data-lead-type="sell" data-source-cta="owner_application">
+                <span class="stage12-safe-icon" aria-hidden="true"></span>
+                <strong>Заявка собственника</strong>
+                <em>Специалист свяжется и согласует детали с вами</em>
+            </a>
+            <a class="btn stage12-owner-submit" href="#lead-form-section">Оставить заявку</a>
+        </aside>
     </div>
 </section>
 
 <div class="ui-blocks-wrapper">
-  <section class="ub-section" aria-label="Подборки и акции">
+  <section class="ub-section buyer-paths" aria-labelledby="buyer-paths-title">
     <div class="ub-container">
-      <div class="ub-scroller" data-ub-scroller>
-        <button class="ub-scroller__btn" type="button" data-dir="left" aria-label="Влево">◀</button>
-        <div class="ub-scroller__track" data-ub-track>
-          <a href="#mortgage" class="ub-story">
-            <div class="ub-story__img">
-              <img class="ub-storyimg" src="ui-blocks/assets/images/quick-1.png" alt="" decoding="async" loading="lazy">
-              <div class="ub-story__icon ub-story__icon--percent" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M7 17a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm10-4a3 3 0 1 1 0-6 3 3 0 0 1 0 6ZM7 21H5l12-18h2L7 21Z"/></svg>
-              </div>
-            </div>
-            <div class="ub-story__cap">Семейная ипотека 6%</div>
-          </a>
-          <a href="#mortgage" class="ub-story">
-            <div class="ub-story__img">
-              <img class="ub-storyimg" src="ui-blocks/assets/images/quick-2.png" alt="" decoding="async" loading="lazy">
-              <div class="ub-story__icon ub-story__icon--home" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 3 3 10v10h6v-6h6v6h6V10l-9-7Zm-2 9h4v2h-4v-2Z"/></svg>
-              </div>
-            </div>
-            <div class="ub-story__cap">Сельская ипотека 3%</div>
-          </a>
-          <a href="#mortgage" class="ub-story">
-            <div class="ub-story__img">
-              <img class="ub-storyimg" src="ui-blocks/assets/images/quick-3.png" alt="" decoding="async" loading="lazy">
-              <div class="ub-story__icon ub-story__icon--refi" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M7 7h6V5l4 3-4 3V9H8a3 3 0 0 0-3 3v1H3v-1a5 5 0 0 1 4-4Zm10 10h-6v2l-4-3 4-3v2h5a3 3 0 0 0 3-3v-1h2v1a5 5 0 0 1-4 4Z"/></svg>
-              </div>
-            </div>
-            <div class="ub-story__cap">Рефинансирование</div>
-          </a>
-          <a href="#contact" class="ub-story">
-            <div class="ub-story__img">
-              <img class="ub-storyimg" src="ui-blocks/assets/images/quick-4.png" alt="" decoding="async" loading="lazy">
-              <div class="ub-story__icon ub-story__icon--shield" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 2 20 6v7c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V6l8-4Zm-1 12 6-6 1.4 1.4L11 16.8 6.6 12.4 8 11l3 3Z"/></svg>
-              </div>
-            </div>
-            <div class="ub-story__cap">Страхование рисков</div>
-          </a>
-          <a href="#contact" class="ub-story">
-            <div class="ub-story__img">
-              <img class="ub-storyimg" src="ui-blocks/assets/images/offer-1.png" alt="" decoding="async" loading="lazy">
-              <div class="ub-story__icon ub-story__icon--check" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M10 16.2 6.5 12.7 5.1 14.1 10 19l9-9-1.4-1.4-7.6 7.6Z"/></svg>
-              </div>
-            </div>
-            <div class="ub-story__cap">Гарантия выбора</div>
-          </a>
-          <a href="#contact" class="ub-story">
-            <div class="ub-story__img">
-              <img class="ub-storyimg" src="ui-blocks/assets/images/offer-2.png" alt="" decoding="async" loading="lazy">
-              <div class="ub-story__icon ub-story__icon--keys" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M14 8a4 4 0 1 0-1.2 2.8L14 12h2v2h2v2h2v-4h-5.2L13.5 10A3.9 3.9 0 0 0 14 8ZM8 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"/></svg>
-              </div>
-            </div>
-            <div class="ub-story__cap">Гарантия продажи</div>
-          </a>
+      <div class="ub-section__head">
+        <div>
+          <span class="buyer-paths__eyebrow">Понятный следующий шаг</span>
+          <h2 class="ub-h2" id="buyer-paths-title">С какой задачей вы пришли?</h2>
+          <p class="ub-sub">Помогаем выбрать квартиру, дом, участок или новостройку в Аксае и заранее обратить внимание на документы и условия аванса.</p>
         </div>
-        <button class="ub-scroller__btn" type="button" data-dir="right" aria-label="Вправо">▶</button>
+      </div>
+      <div class="buyer-paths__grid">
+        <article class="buyer-path buyer-path--apartment">
+          <span class="buyer-path__number">01</span>
+          <span class="buyer-path__badge">Квартира</span>
+          <h3>Купить квартиру в Аксае</h3>
+          <p>Вторичка, свежий фонд, семейные варианты и понятный ипотечный сценарий.</p>
+          <div class="buyer-path__actions">
+            <a class="buyer-path__primary" href="apartments.html">Подобрать квартиру <span aria-hidden="true">→</span></a>
+            <a class="buyer-path__secondary" href="guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html">Что проверить до аванса</a>
+          </div>
+        </article>
+        <article class="buyer-path buyer-path--house">
+          <span class="buyer-path__number">02</span>
+          <span class="buyer-path__badge">Дом</span>
+          <h3>Подобрать дом рядом с Ростовом</h3>
+          <p>Дом в Аксае или ближайшем посёлке: земля, коммуникации, подъезд и ежедневный маршрут.</p>
+          <div class="buyer-path__actions">
+            <a class="buyer-path__primary" href="houses.html">Подобрать дом <span aria-hidden="true">→</span></a>
+            <a class="buyer-path__secondary" href="guides/gde-kupit-dom-v-aksaye-ryadom-s-rostovom.html">Сравнить локации</a>
+          </div>
+        </article>
+        <article class="buyer-path buyer-path--land">
+          <span class="buyer-path__number">03</span>
+          <span class="buyer-path__badge">Участок</span>
+          <h3>Выбрать участок под строительство</h3>
+          <p>ИЖС, границы, подъезд и стоимость коммуникаций — до решения о покупке земли.</p>
+          <div class="buyer-path__actions">
+            <a class="buyer-path__primary" href="lands.html">Разобрать участки <span aria-hidden="true">→</span></a>
+            <a class="buyer-path__secondary" href="construction.html">Перейти к строительству</a>
+          </div>
+        </article>
+        <article class="buyer-path buyer-path--compare">
+          <span class="buyer-path__number">04</span>
+          <span class="buyer-path__badge">Сравнение</span>
+          <h3>Новостройка или вторичка</h3>
+          <p>Сравните сроки въезда, ремонт, ипотеку, бюджет и риски двух форматов.</p>
+          <div class="buyer-path__actions">
+            <a class="buyer-path__primary" href="guides/novostroyka-ili-vtorichka-v-aksaye.html">Сравнить форматы <span aria-hidden="true">→</span></a>
+            <a class="buyer-path__secondary" href="newbuilds.html">Смотреть новостройки</a>
+          </div>
+        </article>
+        <article class="buyer-path buyer-path--check">
+          <span class="buyer-path__number">05</span>
+          <span class="buyer-path__badge">До аванса</span>
+          <h3>Проверить объект и документы</h3>
+          <p>ЕГРН, собственники, обременения, перепланировки, земля и условия передачи денег.</p>
+          <div class="buyer-path__actions">
+            <a class="buyer-path__primary" href="guides/index.html">Открыть гид покупателя <span aria-hidden="true">→</span></a>
+            <a class="buyer-path__secondary" href="#lead-form-section">Получить консультацию</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="ub-section" aria-label="Специальные предложения">
+<section class="showcase-section home-flow-object-zone home-flow-object-zone--start" id="aksay-secondary-showcase">
+    <div class="container">
+        <div class="showcase-section__head">
+            <span class="showcase-section__eyebrow">Лучшие предложения</span>
+            <h2>Лучшие предложения в г. Аксай</h2>
+            <p>Подобрали востребованные квартиры и дома в Аксае: удобные локации, понятный бюджет и форматы, которые чаще всего выбирают покупатели. Оставьте заявку — специалист проверит актуальность, расскажет детали и поможет организовать просмотр.</p>
+        </div>
+        <div class="showcase-grid" data-showcase="aksay-secondary" data-type="all" data-limit="4" data-mix="2-2" data-cta-label="Подробнее"></div>
+        <div class="showcase-section__actions">
+            <a href="showcase-aksay-secondary.html" class="btn secondary">Смотреть все объекты</a>
+        </div>
+    </div>
+</section>
+
+<section class="new-objects home-flow-object-zone" id="new-objects">
+    <div class="container">
+        <h2 class="section-title fade-in">НОВЫЕ ОБЪЕКТЫ</h2>
+        <p class="section-subtitle fade-in">Последние добавленные объекты по всем разделам</p>
+        <div class="new-objects-grid" id="new-objects-cards"></div>
+    </div>
+</section>
+
+  <section class="ub-section home-flow-object-zone home-flow-object-extra" aria-label="Специальные предложения">
     <div class="ub-container">
       <div class="ub-section__head">
         <div>
@@ -358,38 +659,15 @@
     </div>
   </section>
 
-  <section class="ub-section" aria-label="Сервисы и услуги">
-    <div class="ub-container">
-      <div class="ub-section__head">
-        <div><h2 class="ub-h2">Сервисы и услуги</h2></div>
-      </div>
-      <div class="ub-tiles">
-        <a href="#contact" class="ub-tile">
-          <span class="ub-tile__new">Новое</span>
-          <h3>Семейная ипотека за 5 минут</h3>
-          <p>Заполните анкету и получите предварительное одобрение.</p>
-          <img class="ub-tileimg" src="ui-blocks/assets/images/listing-5.jpg" alt="" decoding="async" loading="lazy">
-          <div class="ub-tile__art" aria-hidden="true"></div>
-        </a>
-        <a href="#contact" class="ub-tile">
-          <span class="ub-tile__new">Новое</span>
-          <h3>Страхование сделки</h3>
-          <p>Защита от рисков и юридических споров.</p>
-          <img class="ub-tileimg" src="ui-blocks/assets/images/listing-6.jpg" alt="" decoding="async" loading="lazy">
-          <div class="ub-tile__art" aria-hidden="true"></div>
-        </a>
-        <a href="#contact" class="ub-tile">
-          <span class="ub-tile__new">Новое</span>
-          <h3>Рассрочка на жилье</h3>
-          <p>Подбор программы и сопровождение сделки до регистрации.</p>
-          <img class="ub-tileimg" src="ui-blocks/assets/images/listing-7.jpg" alt="" decoding="async" loading="lazy">
-          <div class="ub-tile__art" aria-hidden="true"></div>
-        </a>
-      </div>
+<section class="hot-offers home-flow-object-zone" id="hot-offers">
+    <div class="container">
+        <h2 class="section-title fade-in">Объекты, которые разбирают</h2>
+        <p class="section-subtitle fade-in">Актуальные варианты из квартир, домов, участков и новостроек</p>
+        <div class="hot-offers-grid" id="hot-offers-cards"></div>
     </div>
-  </section>
+</section>
 
-  <section class="ub-section" aria-label="Быстрый поиск">
+  <section class="ub-section home-flow-object-zone home-flow-object-zone--end home-flow-quick-search" aria-label="Быстрый поиск">
     <div class="ub-container">
       <div class="ub-section__head">
         <div><h2 class="ub-h2">Быстрый поиск</h2></div>
@@ -402,6 +680,110 @@
       </div>
     </div>
   </section>
+
+  <section class="ub-section home-flow-services home-flow-services--start" id="home-services" aria-labelledby="home-services-title">
+    <div class="ub-container">
+      <div class="ub-section__head">
+        <div>
+          <span class="buyer-paths__eyebrow">Помощь после выбора объекта</span>
+          <h2 class="ub-h2" id="home-services-title">Сервисы для сделки</h2>
+          <p class="ub-sub">Ипотечные программы, страхование и гарантии собраны в одном понятном маршруте.</p>
+        </div>
+      </div>
+      <div class="ub-scroller" data-ub-scroller>
+        <button class="ub-scroller__btn" type="button" data-dir="left" aria-label="Влево">◀</button>
+        <div class="ub-scroller__track" data-ub-track>
+          <a href="#mortgage" class="ub-story">
+            <div class="ub-story__img">
+              <img class="ub-storyimg" src="ui-blocks/assets/images/quick-1.png" alt="" decoding="async" loading="lazy">
+              <div class="ub-story__icon ub-story__icon--percent" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 17a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm10-4a3 3 0 1 1 0-6 3 3 0 0 1 0 6ZM7 21H5l12-18h2L7 21Z"/></svg>
+              </div>
+            </div>
+            <div class="ub-story__cap">Семейная ипотека 6%</div>
+          </a>
+          <a href="#mortgage" class="ub-story">
+            <div class="ub-story__img">
+              <img class="ub-storyimg" src="ui-blocks/assets/images/quick-2.png" alt="" decoding="async" loading="lazy">
+              <div class="ub-story__icon ub-story__icon--home" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 3 3 10v10h6v-6h6v6h6V10l-9-7Zm-2 9h4v2h-4v-2Z"/></svg>
+              </div>
+            </div>
+            <div class="ub-story__cap">Сельская ипотека 3%</div>
+          </a>
+          <a href="#mortgage" class="ub-story">
+            <div class="ub-story__img">
+              <img class="ub-storyimg" src="ui-blocks/assets/images/quick-3.png" alt="" decoding="async" loading="lazy">
+              <div class="ub-story__icon ub-story__icon--refi" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 7h6V5l4 3-4 3V9H8a3 3 0 0 0-3 3v1H3v-1a5 5 0 0 1 4-4Zm10 10h-6v2l-4-3 4-3v2h5a3 3 0 0 0 3-3v-1h2v1a5 5 0 0 1-4 4Z"/></svg>
+              </div>
+            </div>
+            <div class="ub-story__cap">Рефинансирование</div>
+          </a>
+          <a href="#lead-form-section" class="ub-story" data-lead-type="contact" data-source-cta="risk_insurance">
+            <div class="ub-story__img">
+              <img class="ub-storyimg" src="ui-blocks/assets/images/quick-4.png" alt="" decoding="async" loading="lazy">
+              <div class="ub-story__icon ub-story__icon--shield" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2 20 6v7c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V6l8-4Zm-1 12 6-6 1.4 1.4L11 16.8 6.6 12.4 8 11l3 3Z"/></svg>
+              </div>
+            </div>
+            <div class="ub-story__cap">Страхование рисков</div>
+          </a>
+          <a href="#lead-form-section" class="ub-story" data-lead-type="buy" data-source-cta="selection_guarantee">
+            <div class="ub-story__img">
+              <img class="ub-storyimg" src="ui-blocks/assets/images/offer-1.png" alt="" decoding="async" loading="lazy">
+              <div class="ub-story__icon ub-story__icon--check" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M10 16.2 6.5 12.7 5.1 14.1 10 19l9-9-1.4-1.4-7.6 7.6Z"/></svg>
+              </div>
+            </div>
+            <div class="ub-story__cap">Гарантия выбора</div>
+          </a>
+          <a href="#lead-form-section" class="ub-story" data-lead-type="sell" data-source-cta="sale_guarantee">
+            <div class="ub-story__img">
+              <img class="ub-storyimg" src="ui-blocks/assets/images/offer-2.png" alt="" decoding="async" loading="lazy">
+              <div class="ub-story__icon ub-story__icon--keys" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M14 8a4 4 0 1 0-1.2 2.8L14 12h2v2h2v2h2v-4h-5.2L13.5 10A3.9 3.9 0 0 0 14 8ZM8 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"/></svg>
+              </div>
+            </div>
+            <div class="ub-story__cap">Гарантия продажи</div>
+          </a>
+        </div>
+        <button class="ub-scroller__btn" type="button" data-dir="right" aria-label="Вправо">▶</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="ub-section home-flow-services home-flow-services--end" aria-label="Дополнительные сервисы">
+    <div class="ub-container">
+      <div class="ub-section__head">
+        <div><h3 class="ub-h2">Дополнительные сервисы</h3></div>
+      </div>
+      <div class="ub-tiles">
+        <a href="#lead-form-section" class="ub-tile" data-lead-type="mortgage" data-source-cta="family_mortgage">
+          <span class="ub-tile__new">Новое</span>
+          <h3>Семейная ипотека за 5 минут</h3>
+          <p>Заполните анкету и получите предварительное одобрение.</p>
+          <img class="ub-tileimg" src="ui-blocks/assets/images/listing-5.jpg" alt="" decoding="async" loading="lazy">
+          <div class="ub-tile__art" aria-hidden="true"></div>
+        </a>
+        <a href="#lead-form-section" class="ub-tile" data-lead-type="contact" data-source-cta="deal_insurance">
+          <span class="ub-tile__new">Новое</span>
+          <h3>Страхование сделки</h3>
+          <p>Защита от рисков и юридических споров.</p>
+          <img class="ub-tileimg" src="ui-blocks/assets/images/listing-6.jpg" alt="" decoding="async" loading="lazy">
+          <div class="ub-tile__art" aria-hidden="true"></div>
+        </a>
+        <a href="#lead-form-section" class="ub-tile" data-lead-type="mortgage" data-source-cta="installment">
+          <span class="ub-tile__new">Новое</span>
+          <h3>Рассрочка на жилье</h3>
+          <p>Подбор программы и сопровождение сделки до регистрации.</p>
+          <img class="ub-tileimg" src="ui-blocks/assets/images/listing-7.jpg" alt="" decoding="async" loading="lazy">
+          <div class="ub-tile__art" aria-hidden="true"></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
 </div>
 
 <section id="mortgage">
@@ -446,10 +828,97 @@
                 </div>
             </div>
         </div>
+        <div class="fade-in" style="margin-top: 16px;">
+            <a href="#lead-form-section" class="btn secondary" data-lead-type="mortgage" data-source-cta="mortgage_calculator">Получить консультацию по ипотеке</a>
+        </div>
     </div>
 </section>
 
-<section class="partners" aria-label="Партнёры">
+<section class="home-seller" id="home-seller" aria-labelledby="home-seller-title">
+    <div class="container">
+        <div class="home-seller__card">
+            <div>
+                <span class="home-seller__eyebrow">Сценарий для собственника</span>
+                <h2 id="home-seller-title">Продаёте квартиру, дом или участок?</h2>
+                <p>Поможем оценить, упаковать объект, разместить объявление и организовать показы до безопасной сделки.</p>
+            </div>
+            <a href="#lead-form-section" class="btn" data-lead-type="sell" data-source-cta="home_seller">Обсудить продажу</a>
+        </div>
+    </div>
+</section>
+
+<section class="ub-section why-us home-trust" aria-labelledby="home-trust-title">
+    <div class="ub-container">
+        <div class="ub-section__head">
+            <div>
+                <span class="home-trust__eyebrow">Локальная команда рядом</span>
+                <h2 class="ub-h2" id="home-trust-title">Почему обращаются в Домиан Квартал</h2>
+                <p class="ub-sub">Помогаем пройти путь от первого запроса до сделки спокойно и последовательно.</p>
+            </div>
+        </div>
+        <div class="ub-tiles ub-tiles--four">
+            <article class="ub-tile" tabindex="0">
+                <span class="home-trust__number">01</span>
+                <h3>Реальный офис в Аксае</h3>
+                <p>Можно встретиться с командой по адресу: ул. Толпинского, 130.</p>
+                <div class="ub-tile__art" aria-hidden="true"></div>
+            </article>
+            <article class="ub-tile" tabindex="0">
+                <span class="home-trust__number">02</span>
+                <h3>Локальная экспертиза</h3>
+                <p>Работаем с квартирами, домами, участками и новостройками в Аксае и рядом с Ростовом.</p>
+                <div class="ub-tile__art" aria-hidden="true"></div>
+            </article>
+            <article class="ub-tile" tabindex="0">
+                <span class="home-trust__number">03</span>
+                <h3>Проверка перед сделкой</h3>
+                <p>Помогаем проверить документы, обременения, объект и условия аванса до передачи денег.</p>
+                <div class="ub-tile__art" aria-hidden="true"></div>
+            </article>
+            <article class="ub-tile" tabindex="0">
+                <span class="home-trust__number">04</span>
+                <h3>Сопровождение до результата</h3>
+                <p>Подбор, переговоры, ипотека или маткапитал при необходимости и сопровождение сделки.</p>
+                <div class="ub-tile__art" aria-hidden="true"></div>
+            </article>
+        </div>
+        <div class="home-trust__process" aria-label="Как проходит работа">
+            <span class="home-trust__process-title">Как проходит работа</span>
+            <ol>
+                <li><strong>Разбираем задачу</strong><span>и бюджет</span></li>
+                <li><strong>Подбираем</strong><span>подходящие варианты</span></li>
+                <li><strong>Проверяем</strong><span>объект и документы</span></li>
+                <li><strong>Сопровождаем</strong><span>переговоры и сделку</span></li>
+            </ol>
+            <a href="#lead-form-section" class="btn secondary">Обсудить покупку в Аксае</a>
+        </div>
+    </div>
+</section>
+
+<section class="stats home-flow-trust">
+    <div class="container">
+        <div class="benefits fade-in">
+            <div class="benefit">
+                <h3>500+</h3>
+                <p>успешных сделок</p>
+            </div>
+            <div class="benefit">
+                <h3>15+</h3>
+                <p>профессионалов в команде</p>
+            </div>
+            <div class="benefit">
+                <h3>3+</h3>
+                <p>года опыта в регионе</p>
+            </div>
+            <div class="benefit">
+                <h3>Ипотека</h3>
+                <p>Сбер · ВТБ · Альфа</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="partners home-flow-trust" aria-label="Партнёры">
     <div class="container">
         <h2 class="section-title fade-in">С кем мы работаем</h2>
         <div class="partners-grid fade-in">
@@ -475,7 +944,7 @@
     </div>
 </section>
 
-<section class="legacy-refresh">
+<section class="legacy-refresh home-flow-trust">
     <div class="photo-block fade-in">
         <div>
             <span class="photo-badge">ПАРТНЁРСТВО</span>
@@ -487,23 +956,7 @@
     </div>
 </section>
 
-<section class="new-objects" id="new-objects">
-    <div class="container">
-        <h2 class="section-title fade-in">НОВЫЕ ОБЪЕКТЫ</h2>
-        <p class="section-subtitle fade-in">Последние добавленные объекты по всем разделам</p>
-        <div class="new-objects-grid" id="new-objects-cards"></div>
-    </div>
-</section>
-
-<section class="hot-offers" id="hot-offers">
-    <div class="container">
-        <h2 class="section-title fade-in">Объекты, которые разбирают</h2>
-        <p class="section-subtitle fade-in">Актуальные варианты из квартир, домов, участков и новостроек</p>
-        <div class="hot-offers-grid" id="hot-offers-cards"></div>
-    </div>
-</section>
-
-<section class="legacy-refresh">
+<section class="legacy-refresh home-flow-trust" id="guarantees">
     <div class="container">
         <h2 class="section-title fade-in">Наши гарантии</h2>
         <div class="guarantee-list">
@@ -515,7 +968,59 @@
     </div>
 </section>
 
-<section class="legacy-refresh">
+<section class="brand-principle home-flow-principle" aria-labelledby="brand-principle-title">
+    <div class="container">
+        <div class="brand-principle__panel">
+            <div class="brand-principle__content">
+                <span class="brand-principle__eyebrow">Фирменный принцип</span>
+                <h2 id="brand-principle-title">Квартал — это <span>4 стороны</span> спокойной покупки</h2>
+                <p>Недвижимость важно оценивать целиком: не только сам объект, но и локацию, документы и условия будущей сделки.</p>
+                <ul class="brand-principle__sides" aria-label="Четыре стороны проверки недвижимости">
+                    <li><span>01</span><strong>Локация</strong></li>
+                    <li><span>02</span><strong>Объект</strong></li>
+                    <li><span>03</span><strong>Документы</strong></li>
+                    <li><span>04</span><strong>Сделка</strong></li>
+                </ul>
+            </div>
+
+            <div class="brand-principle__stage" aria-hidden="true">
+                <svg class="brand-principle__svg" viewBox="0 0 360 360" focusable="false">
+                    <g class="brand-principle__opening">
+                        <text class="brand-principle__word brand-principle__word--domian" x="118" y="78">Домиан</text>
+                        <text class="brand-principle__word brand-principle__word--kvartal" x="242" y="78">Квартал</text>
+                    </g>
+
+                    <g class="brand-principle__four">
+                        <line class="brand-principle__stroke brand-principle__stroke--a" x1="-50" y1="0" x2="50" y2="0" />
+                        <line class="brand-principle__stroke brand-principle__stroke--b" x1="-50" y1="0" x2="50" y2="0" />
+                        <line class="brand-principle__stroke brand-principle__stroke--c" x1="-50" y1="0" x2="50" y2="0" />
+                        <line class="brand-principle__stroke brand-principle__stroke--d" x1="-50" y1="0" x2="50" y2="0" />
+                    </g>
+
+                    <g class="brand-principle__home">
+                        <rect class="brand-principle__core" x="150" y="150" width="60" height="72" rx="18" />
+                        <circle class="brand-principle__window" cx="168" cy="171" r="5" />
+                        <circle class="brand-principle__window" cx="192" cy="171" r="5" />
+                        <circle class="brand-principle__window" cx="168" cy="195" r="5" />
+                        <circle class="brand-principle__window" cx="192" cy="195" r="5" />
+                    </g>
+
+                    <g class="brand-principle__labels">
+                        <text x="84" y="130">Локация</text>
+                        <text x="276" y="130">Объект</text>
+                        <text x="82" y="224">Документы</text>
+                        <text x="278" y="224">Сделка</text>
+                    </g>
+
+                    <text class="brand-principle__claim" x="180" y="286">4 стороны спокойной покупки</text>
+                    <text class="brand-principle__final" x="180" y="324"><tspan>Домиан </tspan><tspan>Квартал</tspan></text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="legacy-refresh home-flow-principle" id="home-process">
     <div class="container">
         <h2 class="section-title fade-in">Как мы работаем</h2>
         <p class="section-subtitle fade-in">Четкий процесс, где каждый этап ведет к результату</p>
@@ -528,7 +1033,78 @@
     </div>
 </section>
 
-<section class="legacy-refresh">
+<section class="trust-yandex-place home-flow-office home-flow-office--start" aria-label="Хорошее место на Яндекс Картах">
+    <div class="container">
+        <div class="trust-yandex-place__card">
+            <div class="trust-yandex-place__content">
+                <h2>Хорошее место на Яндекс Картах</h2>
+                <p>Офис «Домиан Квартал» получил отметку «Хорошее место 2026» на Яндекс Картах. Это второй год подряд, когда клиенты отмечают нашу работу высокой оценкой.</p>
+                <ul class="trust-yandex-place__metrics">
+                    <li><strong>5,0</strong><span>рейтинг</span></li>
+                    <li><strong>35</strong><span>оценок</span></li>
+                    <li><strong>2026</strong><span>Хорошее место</span></li>
+                    <li><strong>Аксай</strong><span>ул. Толпинского, 130</span></li>
+                </ul>
+                <a class="trust-yandex-place__btn" href="https://yandex.ru/maps/org/domian/158078581361/?ll=39.858159%2C47.260186&amp;z=16" target="_blank" rel="noopener noreferrer">Смотреть на Яндекс Картах</a>
+            </div>
+            <div class="trust-yandex-place__badge" aria-hidden="true">
+                <span class="trust-yandex-place__pin"></span>
+                <span class="trust-yandex-place__badge-title">Яндекс Карты</span>
+                <strong>Хорошее место</strong>
+                <span class="trust-yandex-place__year">2026</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="legacy-refresh home-flow-office home-flow-office--end" id="home-office">
+    <div class="photo-block fade-in">
+        <div>
+            <span class="photo-badge">НАШ ОФИС</span>
+            <h2 class="section-title">Мы - реальное агентство в Аксае</h2>
+            <p>Мы работаем не онлайн "на потоке", а в живом офисе, где каждый клиент получает личное внимание.</p>
+            <p>К нам приходят по рекомендации, потому что мы честно объясняем риски, не навязываем решения и сопровождаем сделку до результата.</p>
+        </div>
+        <img src="assets/office/office.jpg" loading="lazy" alt="Офис АН Домиан Квартал">
+    </div>
+</section>
+
+<section class="legacy-refresh home-flow-team" id="home-team">
+    <div class="container about">
+        <div>
+            <h2 class="section-title fade-in">Команда и опыт</h2>
+            <p class="fade-in">Агентство недвижимости "Домиан Квартал" работает в Аксае и Ростовской области.</p>
+            <p class="fade-in">Наша цель - безопасные сделки и уверенность клиента на каждом этапе.</p>
+            <p class="fade-in">500+ успешных сделок · 15+ специалистов · 3+ года опыта</p>
+        </div>
+        <img src="assets/team/team.jpg" loading="lazy" alt="Команда АН Домиан Квартал" class="fade-in">
+    </div>
+</section>
+
+<section class="legacy-refresh emotional-block home-flow-team">
+    <div class="container">
+        <span class="photo-badge fade-in">НАША КОМАНДА</span>
+        <h2 class="section-title fade-in">Мы рядом на каждом этапе</h2>
+        <p class="fade-in">Покупка недвижимости - это важное решение, и мы берем на себя организацию процесса, чтобы вы чувствовали спокойствие и уверенность.</p>
+        <a href="#lead-form-section" class="btn fade-in" data-lead-type="contact" data-source-cta="team_contact">Обсудить вашу ситуацию</a>
+    </div>
+</section>
+
+<section class="legacy-refresh home-flow-personal" id="team">
+    <div class="container leadership">
+        <img src="assets/team/zukhra.jpg" loading="lazy" alt="Зухра Алиева" class="fade-in">
+        <div>
+            <span class="leadership-badge fade-in">РУКОВОДИТЕЛЬ ОФИСА</span>
+            <h2 class="section-title fade-in">Личное участие в каждой сделке</h2>
+            <h3 class="fade-in">Зухра Алиева</h3>
+            <p class="fade-in">Руководитель агентства недвижимости «Домиан Квартал». Более 3 лет помогаю клиентам безопасно покупать и продавать недвижимость в Аксае и Ростовской области.</p>
+            <p class="fade-in">Наша команда провела более <strong>500 успешных сделок</strong> с прозрачными условиями и полным сопровождением.</p>
+            <p class="leadership-quote fade-in">«Важно не просто закрыть сделку, а помочь человеку уверенно пройти один из самых важных этапов в жизни».</p>
+        </div>
+    </div>
+</section>
+
+<section class="legacy-refresh home-flow-social" id="reviews">
     <div class="container">
         <h2 class="section-title fade-in">Отзывы клиентов</h2>
         <div class="reviews">
@@ -548,31 +1124,7 @@
     </div>
 </section>
 
-<section class="legacy-refresh">
-    <div class="photo-block fade-in">
-        <div>
-            <span class="photo-badge">НАШ ОФИС</span>
-            <h2 class="section-title">Мы - реальное агентство в Аксае</h2>
-            <p>Мы работаем не онлайн "на потоке", а в живом офисе, где каждый клиент получает личное внимание.</p>
-            <p>К нам приходят по рекомендации, потому что мы честно объясняем риски, не навязываем решения и сопровождаем сделку до результата.</p>
-        </div>
-        <img src="assets/office/office.jpg" loading="lazy" alt="Офис АН Домиан Квартал">
-    </div>
-</section>
-
-<section class="legacy-refresh">
-    <div class="container about">
-        <div>
-            <h2 class="section-title fade-in">Команда и опыт</h2>
-            <p class="fade-in">Агентство недвижимости "Домиан Квартал" работает в Аксае и Ростовской области.</p>
-            <p class="fade-in">Наша цель - безопасные сделки и уверенность клиента на каждом этапе.</p>
-            <p class="fade-in">500+ успешных сделок · 15+ специалистов · 3+ года опыта</p>
-        </div>
-        <img src="assets/team/team.jpg" loading="lazy" alt="Команда АН Домиан Квартал" class="fade-in">
-    </div>
-</section>
-
-<section class="legacy-refresh" id="certificates">
+<section class="legacy-refresh home-flow-social" id="certificates">
     <div class="container">
         <h2 class="section-title fade-in">Сертификаты и дипломы</h2>
         <p class="section-subtitle fade-in">Наши достижения и профессиональное признание</p>
@@ -593,30 +1145,7 @@
     </div>
 </section>
 
-<section class="legacy-refresh emotional-block">
-    <div class="container">
-        <span class="photo-badge fade-in">НАША КОМАНДА</span>
-        <h2 class="section-title fade-in">Мы рядом на каждом этапе</h2>
-        <p class="fade-in">Покупка недвижимости - это важное решение, и мы берем на себя организацию процесса, чтобы вы чувствовали спокойствие и уверенность.</p>
-        <a href="#contact" class="btn fade-in">Обсудить вашу ситуацию</a>
-    </div>
-</section>
-
-<section class="legacy-refresh" id="team">
-    <div class="container leadership">
-        <img src="assets/team/zukhra.jpg" loading="lazy" alt="Зухра Алиева" class="fade-in">
-        <div>
-            <span class="leadership-badge fade-in">РУКОВОДИТЕЛЬ ОФИСА</span>
-            <h2 class="section-title fade-in">Личное участие в каждой сделке</h2>
-            <h3 class="fade-in">Зухра Алиева</h3>
-            <p class="fade-in">Руководитель агентства недвижимости «Домиан Квартал». Более 3 лет помогаю клиентам безопасно покупать и продавать недвижимость в Аксае и Ростовской области.</p>
-            <p class="fade-in">Наша команда провела более <strong>500 успешных сделок</strong> с прозрачными условиями и полным сопровождением.</p>
-            <p class="leadership-quote fade-in">«Важно не просто закрыть сделку, а помочь человеку уверенно пройти один из самых важных этапов в жизни».</p>
-        </div>
-    </div>
-</section>
-
-<section class="legacy-refresh">
+<section class="legacy-refresh home-flow-social" id="faq">
     <div class="container">
         <h2 class="section-title fade-in">Частые вопросы</h2>
         <div class="faq-grid">
@@ -637,28 +1166,37 @@
             <p class="fade-in"><strong>Администратор:</strong> <a href="tel:+79994815151">+7 999 481-51-51</a></p>
             <p class="fade-in"><strong>Email:</strong> <a href="mailto:zuhra_2010_aidan@mail.ru">zuhra_2010_aidan@mail.ru</a></p>
             <p class="fade-in"><strong>Режим работы:</strong> Пн-Пт 8:00-20:00</p>
-            <div class="fade-in contact-actions">
-                <a href="https://wa.me/79536091122" target="_blank" rel="noopener noreferrer" class="btn whatsapp-btn">WhatsApp</a>
-                <a href="https://t.me/httpsmealieva_rieltor" target="_blank" rel="noopener noreferrer" class="btn secondary telegram-btn">Telegram</a>
+            <div class="fade-in contact-actions" aria-label="Мессенджеры Зухры Алиевой">
+                <a href="https://wa.me/79536091122" target="_blank" rel="noopener noreferrer" data-channel="whatsapp" aria-label="Написать Зухре в WhatsApp" title="WhatsApp">WhatsApp</a>
+                <a href="https://t.me/httpsmealieva_rieltor" target="_blank" rel="noopener noreferrer" data-channel="telegram" aria-label="Написать Зухре в Telegram" title="Telegram">Telegram</a>
+                <a href="https://max.ru/u/f9LHodD0cOKImT5sxxh2fLN4YFJ-paNFCiI79MwgO-LJJZ8oHXX5TN007y4" target="_blank" rel="noopener noreferrer" data-channel="max" data-max-trigger aria-label="Написать Зухре в MAX" title="MAX">MAX</a>
             </div>
         </div>
         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor&ll=39.92404%2C47.26495&z=15" loading="lazy" title="Карта офиса" class="fade-in"></iframe>
     </div>
 </section>
 
-<section class="form-section">
+<section class="form-section" id="lead-form-section" aria-labelledby="lead-form-title">
     <div class="container form-container">
-        <h2 class="section-title fade-in">Оставьте заявку</h2>
+        <h2 class="section-title fade-in" id="lead-form-title">Оставьте заявку</h2>
         <p class="fade-in form-note">Наш специалист свяжется с вами в течение 15 минут</p>
-        <form id="lead-form" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="111acf56-7c06-44ff-b693-b777e053bc47">
-            <input type="hidden" name="source" value="website">
+        <form id="lead-form" method="POST" data-lead-form data-source-cta="contact_form">
             <input type="checkbox" name="botcheck" style="display:none" aria-hidden="true">
-            <div class="form-group fade-in"><input type="text" name="name" placeholder="Ваше имя" class="form-control" required></div>
-            <div class="form-group fade-in"><input type="tel" name="phone" placeholder="Телефон" class="form-control" required></div>
-            <div class="form-group fade-in"><input type="email" name="email" placeholder="Email (по желанию)" class="form-control"></div>
             <div class="form-group fade-in">
-                <select name="service" class="form-control" required>
+                <label class="form-label" for="lead-name">Ваше имя</label>
+                <input id="lead-name" type="text" name="name" placeholder="Иван" class="form-control" autocomplete="name" minlength="2" maxlength="80" required>
+            </div>
+            <div class="form-group fade-in">
+                <label class="form-label" for="lead-phone">Телефон</label>
+                <input id="lead-phone" type="tel" name="phone" placeholder="+7 999 123-45-67" class="form-control" autocomplete="tel" inputmode="tel" maxlength="24" required>
+            </div>
+            <div class="form-group fade-in">
+                <label class="form-label" for="lead-email">Email <span>(по желанию)</span></label>
+                <input id="lead-email" type="email" name="email" placeholder="name@example.ru" class="form-control" autocomplete="email" maxlength="120">
+            </div>
+            <div class="form-group fade-in">
+                <label class="form-label" for="lead-service">Чем помочь</label>
+                <select id="lead-service" name="service" class="form-control" required>
                     <option value="" disabled selected>Выберите услугу</option>
                     <option value="buy">Покупка недвижимости</option>
                     <option value="sell">Продажа недвижимости</option>
@@ -667,6 +1205,11 @@
                     <option value="consultation">Консультация</option>
                 </select>
             </div>
+            <div class="form-consent fade-in">
+                <input id="lead-privacy-consent" type="checkbox" name="privacy_consent" value="accepted" required>
+                <label for="lead-privacy-consent">Я согласен(на) на обработку персональных данных и принимаю <a href="privacy.html" target="_blank" rel="noopener noreferrer">политику конфиденциальности</a>.</label>
+            </div>
+            <p class="form-status" data-form-status role="status" aria-live="polite" hidden></p>
             <button type="submit" class="submit-btn fade-in">Получить консультацию</button>
         </form>
     </div>
@@ -678,7 +1221,7 @@
             <span class="footer-cta-badge">БЕСПЛАТНО</span>
             <h2>Нужна помощь с недвижимостью?</h2>
             <p>Расскажите о своей ситуации, и мы предложим оптимальное решение с понятным пошаговым планом.</p>
-            <a href="#contact" class="btn">Получить консультацию</a>
+            <a href="#lead-form-section" class="btn" data-lead-type="contact" data-source-cta="footer_contact">Получить консультацию</a>
         </div>
     </div>
 </section>
@@ -696,7 +1239,8 @@
                         <li><a href="houses.html">Дома</a></li>
                         <li><a href="lands.html">Участки</a></li>
                         <li><a href="newbuilds.html">Новостройки</a></li>
-                        <li><a href="apartments.html">Коммерческая</a></li>
+                        <li><a href="rent.html">Аренда</a></li>
+                        <li><a href="commercial.html">Коммерческая</a></li>
                     </ul>
                 </div>
                 <!-- Колонка 2: Услуги -->
@@ -728,9 +1272,10 @@
                     <ul>
                         <li><a href="#mortgage">Ипотечный калькулятор</a></li>
                         <li><a href="#contact">Партнерские услуги</a></li>
-                        <li><a href="#contact">Строительство домов</a></li>
+                        <li><a href="construction.html">Строительство домов</a></li>
                         <li><a href="privacy.html">Документы</a></li>
                         <li><a href="#faq">FAQ</a></li>
+                        <li><a href="guides/index.html">Гид покупателя</a></li>
                     </ul>
                 </div>
             </div>
@@ -768,8 +1313,9 @@
                 </div>
             </address>
             <div class="footer-social">
-                <a href="https://wa.me/79536091122" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-                <a href="https://t.me/httpsmealieva_rieltor" target="_blank" rel="noopener noreferrer">Telegram</a>
+                <a href="https://wa.me/79536091122" target="_blank" rel="noopener noreferrer" data-channel="whatsapp" aria-label="Написать Зухре в WhatsApp" title="WhatsApp">WhatsApp</a>
+                <a href="https://t.me/httpsmealieva_rieltor" target="_blank" rel="noopener noreferrer" data-channel="telegram" aria-label="Написать Зухре в Telegram" title="Telegram">Telegram</a>
+                <a href="https://max.ru/u/f9LHodD0cOKImT5sxxh2fLN4YFJ-paNFCiI79MwgO-LJJZ8oHXX5TN007y4" target="_blank" rel="noopener noreferrer" data-channel="max" data-max-trigger aria-label="Написать Зухре в MAX" title="MAX">MAX</a>
                 <a href="https://vk.com/domian_kvartal" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
             </div>
         </div>
@@ -783,9 +1329,6 @@
                 <a href="details.html">Реквизиты</a>
             </div>
             <p class="footer-legal-note">Информация на сайте не является публичной офертой</p>
-            <p class="footer-admin-link">
-                <button type="button" id="admin-access-btn" class="admin-link-btn">Администраторам</button>
-            </p>
         </div>
     </div>
 </footer>
@@ -820,9 +1363,10 @@
 <script src="assets/js/main.js" defer></script>
 <script src="assets/js/mortgage.js" defer></script>
 <script src="assets/js/toast.js" defer></script>
-<script src="assets/js/admin.js" defer></script>
+<script src="assets/js/lead-config.js" defer></script>
 <script src="assets/js/form-handler.js" defer></script>
 <script src="ui-blocks/js/blocks.js" defer></script>
+<script src="assets/js/showcase-cards.js" defer></script>
 <script>
 // Горячие предложения
 document.addEventListener('DOMContentLoaded', function() {
@@ -837,14 +1381,18 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     container.innerHTML = offers.map(offer => `
-        <a href="${offer.link}" class="hot-offer-card">
+        <article class="hot-offer-card property-card">
             <img src="${offer.img}" alt="${offer.title}" loading="lazy">
-            <div class="hot-offer-content">
-                <h3>${offer.title}</h3>
+            <div class="hot-offer-content property-card__body">
+                <h3 class="property-card__title">${offer.title}</h3>
                 <p>${offer.location}</p>
-                <div class="hot-offer-price">${offer.price}</div>
+                <div class="hot-offer-price property-card__price">${offer.price}</div>
+                <div class="property-card__actions">
+                    <a href="${offer.link}" class="btn property-card__cta">Подробнее</a>
+                    <a href="tel:+79536091122" class="btn property-card__phone">Позвонить</a>
+                </div>
             </div>
-        </a>
+        </article>
     `).join('');
 });
 </script>

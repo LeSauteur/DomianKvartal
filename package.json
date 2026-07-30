@@ -1,0 +1,11 @@
+{
+  "name": "domian-kvartal-static-site",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/lead-static.test.mjs",
+    "test:browser": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.0"
+  }
+}

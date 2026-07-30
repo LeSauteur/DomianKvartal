@@ -1,15 +1,96 @@
-﻿(function () {
+(function () {
   "use strict";
 
   var CATALOG_TYPES = ["apartments", "houses", "lands", "newbuilds"];
   var METRIKA_ID = 109303205;
+  var THEME_STORAGE_KEY = "domian-color-theme";
+  var LEAD_CONTEXT_KEY = "domian_lead_context";
+  var UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+  var UTM_STORAGE_PREFIX = "domian_utm_";
+  var MAIN_SCRIPT_URL = document.currentScript && document.currentScript.src ? document.currentScript.src : "";
+  var leadConfigLoading = false;
+  var leadConfigCallbacks = [];
 
   window.DOMIAN_METRIKA_ID = window.DOMIAN_METRIKA_ID || METRIKA_ID;
 
-  function safeReachGoal(goal) {
+  function ensureMetrika() {
+    var script;
+
+    if (typeof window.ym === "function") return;
+
+    window.ym = function () {
+      (window.ym.a = window.ym.a || []).push(arguments);
+    };
+    window.ym.l = Date.now();
+
+    script = document.createElement("script");
+    script.async = true;
+    script.src = "https://mc.yandex.ru/metrika/tag.js?id=" + METRIKA_ID;
+    document.head.appendChild(script);
+
+    window.ym(METRIKA_ID, "init", {
+      ssr: true,
+      webvisor: true,
+      clickmap: true,
+      ecommerce: "dataLayer",
+      referrer: document.referrer,
+      url: window.location.href,
+      accurateTrackBounce: true,
+      trackLinks: true
+    });
+  }
+
+  ensureMetrika();
+
+  function persistUtmAttribution() {
+    var params = new URLSearchParams(window.location.search || "");
+
+    UTM_KEYS.forEach(function (key) {
+      var value = params.get(key);
+      if (!value) return;
+
+      try {
+        window.sessionStorage.setItem(UTM_STORAGE_PREFIX + key, value);
+      } catch (error) {
+        // UTM attribution must not block the page.
+      }
+    });
+  }
+
+  persistUtmAttribution();
+
+  function getStoredTheme() {
+    try {
+      return window.localStorage.getItem(THEME_STORAGE_KEY) === "dark" ? "dark" : "light";
+    } catch (_error) {
+      return "light";
+    }
+  }
+
+  function applyTheme(theme) {
+    var isDark = theme === "dark";
+    if (isDark) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      document.documentElement.removeAttribute("data-theme");
+    }
+
+    qsa(".theme-toggle").forEach(function (button) {
+      button.setAttribute("aria-pressed", isDark ? "true" : "false");
+      button.setAttribute("aria-label", isDark ? "Включить светлую тему" : "Включить тёмную тему");
+      button.setAttribute("title", isDark ? "Светлая тема" : "Тёмная тема");
+
+      var label = qs(".theme-toggle__label", button);
+      if (label) label.textContent = isDark ? "Светлая тема" : "Тёмная тема";
+    });
+  }
+
+  applyTheme(getStoredTheme());
+
+  function safeReachGoal(goal, params) {
     try {
       if (typeof window.ym === "function") {
-        window.ym(window.DOMIAN_METRIKA_ID || METRIKA_ID, "reachGoal", goal);
+        window.ym(window.DOMIAN_METRIKA_ID || METRIKA_ID, "reachGoal", goal, params || {});
       }
     } catch (error) {
       // Ignore analytics errors.
@@ -24,6 +105,374 @@
 
   function qsa(selector, root) {
     return Array.prototype.slice.call((root || document).querySelectorAll(selector));
+  }
+
+  function flushLeadConfigCallbacks(config) {
+    var callbacks = leadConfigCallbacks.slice();
+    leadConfigCallbacks = [];
+    callbacks.forEach(function (callback) {
+      callback(config || {});
+    });
+  }
+
+  function withLeadConfig(callback) {
+    var config = window.DOMIAN_LEAD_CONFIG;
+    var script;
+    var configUrl;
+
+    if (config) {
+      callback(config);
+      return;
+    }
+
+    leadConfigCallbacks.push(callback);
+    if (leadConfigLoading) return;
+    leadConfigLoading = true;
+
+    try {
+      configUrl = new URL("lead-config.js", MAIN_SCRIPT_URL || window.location.href).href;
+    } catch (_error) {
+      flushLeadConfigCallbacks({});
+      return;
+    }
+
+    script = document.createElement("script");
+    script.src = configUrl;
+    script.async = true;
+    script.setAttribute("data-domian-lead-config-loader", "");
+    script.addEventListener("load", function () {
+      flushLeadConfigCallbacks(window.DOMIAN_LEAD_CONFIG || {});
+    });
+    script.addEventListener("error", function () {
+      flushLeadConfigCallbacks({});
+    });
+    document.head.appendChild(script);
+  }
+
+  function channelForLink(link) {
+    var explicit = (link.getAttribute("data-channel") || "").toLowerCase();
+    var href = (link.getAttribute("href") || "").toLowerCase();
+
+    if (explicit === "whatsapp" || explicit === "telegram" || explicit === "max") return explicit;
+    if (href.indexOf("wa.me") !== -1 || href.indexOf("whatsapp") !== -1) return "whatsapp";
+    if (href.indexOf("t.me") !== -1) return "telegram";
+    if (href.indexOf("max.ru/") !== -1) return "max";
+    return "";
+  }
+
+  function channelLabel(channel) {
+    return {
+      whatsapp: "Написать Зухре в WhatsApp",
+      telegram: "Написать Зухре в Telegram",
+      max: "Написать Зухре в MAX"
+    }[channel] || "Открыть мессенджер";
+  }
+
+  function appendChannelGraphic(link, channel, config) {
+    var hiddenLabel = document.createElement("span");
+    var graphic;
+
+    link.textContent = "";
+    hiddenLabel.className = "visually-hidden";
+    hiddenLabel.textContent = channel === "max" ? "MAX" :
+      channel === "telegram" ? "Telegram" : "WhatsApp";
+
+    if (channel === "max") {
+      graphic = document.createElement("img");
+      graphic.src = config.maxLogoPath || "/assets/images/max-logo.png";
+      graphic.alt = "";
+      graphic.width = 26;
+      graphic.height = 26;
+      graphic.setAttribute("aria-hidden", "true");
+      graphic.className = "channel-icon__image";
+    } else {
+      graphic = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      graphic.setAttribute("viewBox", "0 0 24 24");
+      graphic.setAttribute("aria-hidden", "true");
+      graphic.setAttribute("focusable", "false");
+      graphic.classList.add("channel-icon__svg");
+
+      if (channel === "telegram") {
+        graphic.innerHTML = '<path fill="currentColor" d="M21.5 3.4 18.4 20c-.2 1.2-.9 1.5-1.9.9l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.8 8.8-8c.4-.3-.1-.5-.6-.2L6.1 14l-4.7-1.5c-1-.3-1-1 .2-1.5L20 3.9c.9-.3 1.7.2 1.5-.5Z"/>';
+      } else {
+        graphic.innerHTML = '<path fill="currentColor" d="M12 2a9.8 9.8 0 0 0-8.4 14.9L2 22l5.2-1.6A9.9 9.9 0 1 0 12 2Zm0 17.9a8 8 0 0 1-4.1-1.1l-.3-.2-3 .9 1-2.9-.2-.3A8 8 0 1 1 12 19.9Zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.1-.3.1-.5 0a6.5 6.5 0 0 1-3.2-2.8c-.2-.3 0-.4.1-.5l.4-.5.2-.5c.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1 0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.8 4.4 3.9.6.2 1.1.4 1.5.5.6.2 1.2.1 1.6.1.5-.1 1.4-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3Z"/>';
+      }
+    }
+
+    link.appendChild(graphic);
+    link.appendChild(hiddenLabel);
+  }
+
+  function enhanceChannelLink(link, channel, config) {
+    var label = channelLabel(channel);
+
+    if (!channel) return;
+
+    link.setAttribute("data-channel", channel);
+    link.setAttribute("aria-label", label);
+    link.setAttribute("title", label);
+    link.classList.add("channel-icon", "channel-icon--" + channel);
+
+    if (channel === "whatsapp" && config.whatsappBaseUrl) {
+      link.href = config.whatsappBaseUrl;
+    } else if (channel === "telegram" && config.telegramUrl) {
+      link.href = config.telegramUrl;
+    } else if (channel === "max" && config.maxDirectUrl) {
+      link.href = config.maxDirectUrl;
+      link.setAttribute("data-max-trigger", "");
+    }
+
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+
+    if (link.getAttribute("data-channel-enhanced") !== "1") {
+      appendChannelGraphic(link, channel, config);
+      link.setAttribute("data-channel-enhanced", "1");
+    }
+  }
+
+  function ensureMaxLink(group, config) {
+    var existingChannels = qsa("a[href], a[data-channel]", group);
+    var hasMessenger = existingChannels.some(function (link) {
+      var channel = channelForLink(link);
+      return channel === "whatsapp" || channel === "telegram";
+    });
+    var hasMax = existingChannels.some(function (link) {
+      return channelForLink(link) === "max";
+    });
+    var link;
+    var vkLink;
+
+    if (!hasMessenger || hasMax || !config.maxDirectUrl) return;
+
+    link = document.createElement("a");
+    link.href = config.maxDirectUrl;
+    link.setAttribute("data-channel", "max");
+    link.setAttribute("data-max-trigger", "");
+    link.textContent = "MAX";
+
+    vkLink = qsa("a[href]", group).find(function (candidate) {
+      return (candidate.getAttribute("href") || "").indexOf("vk.com") !== -1;
+    });
+    group.insertBefore(link, vkLink || null);
+  }
+
+  function enhanceContactChannels(root, config) {
+    var groups = qsa(
+      ".header-contacts, .mobile-drawer__actions, .contact-actions, " +
+      ".agent-contact-channels, .footer-social, .thanks-channels, .form-fallback__channels",
+      root || document
+    );
+
+    groups.forEach(function (group) {
+      group.classList.add("contact-channel-group");
+      ensureMaxLink(group, config);
+      qsa("a[href], a[data-channel]", group).forEach(function (link) {
+        enhanceChannelLink(link, channelForLink(link), config);
+      });
+    });
+  }
+
+  function isMaxDirectMode() {
+    return window.matchMedia &&
+      window.matchMedia("(max-width: 767px), (pointer: coarse)").matches;
+  }
+
+  function createMaxDialog(config) {
+    var dialog = document.createElement("dialog");
+    var panel = document.createElement("div");
+    var close = document.createElement("button");
+    var logo = document.createElement("img");
+    var title = document.createElement("h2");
+    var name = document.createElement("p");
+    var qr = document.createElement("img");
+    var instruction = document.createElement("p");
+    var direct = document.createElement("a");
+
+    dialog.className = "max-dialog";
+    dialog.setAttribute("aria-labelledby", "max-dialog-title");
+    dialog.setAttribute("aria-describedby", "max-dialog-instruction");
+    dialog.setAttribute("data-max-dialog", "");
+
+    panel.className = "max-dialog__panel";
+
+    close.type = "button";
+    close.className = "max-dialog__close";
+    close.setAttribute("aria-label", "Закрыть окно MAX");
+    close.setAttribute("data-max-dialog-close", "");
+    close.textContent = "×";
+
+    logo.className = "max-dialog__logo";
+    logo.src = config.maxLogoPath || "/assets/images/max-logo.png";
+    logo.alt = "MAX";
+    logo.width = 52;
+    logo.height = 52;
+
+    title.id = "max-dialog-title";
+    title.textContent = "Написать Зухре в MAX";
+
+    name.className = "max-dialog__name";
+    name.textContent = "Зухра Алиева";
+
+    qr.className = "max-dialog__qr";
+    qr.src = config.maxQrPath || "/assets/images/max-zukhra-qr.png";
+    qr.alt = "QR-код профиля Зухры Алиевой в MAX";
+    qr.width = 320;
+    qr.height = 320;
+
+    instruction.id = "max-dialog-instruction";
+    instruction.className = "max-dialog__instruction";
+    instruction.textContent = "Отсканируйте QR-код камерой телефона";
+
+    direct.className = "btn max-dialog__direct";
+    direct.href = config.maxDirectUrl;
+    direct.target = "_blank";
+    direct.rel = "noopener noreferrer";
+    direct.setAttribute("data-max-direct", "");
+    direct.textContent = "Открыть MAX";
+
+    panel.appendChild(close);
+    panel.appendChild(logo);
+    panel.appendChild(title);
+    panel.appendChild(name);
+    panel.appendChild(qr);
+    panel.appendChild(instruction);
+    panel.appendChild(direct);
+    dialog.appendChild(panel);
+    document.body.appendChild(dialog);
+    return dialog;
+  }
+
+  function initContactChannels(config) {
+    var dialog;
+    var lastMaxTrigger = null;
+
+    if (!config.maxDirectUrl || !config.telegramUrl || !config.whatsappBaseUrl) return;
+
+    enhanceContactChannels(document, config);
+    window.domianEnhanceContactChannels = function (root) {
+      enhanceContactChannels(root || document, config);
+    };
+
+    function restorePageAfterDialog() {
+      document.body.classList.remove("max-dialog-open");
+      if (lastMaxTrigger && document.contains(lastMaxTrigger)) {
+        lastMaxTrigger.focus();
+      }
+    }
+
+    function closeDialog() {
+      if (!dialog) return;
+      if (typeof dialog.close === "function" && dialog.open) {
+        dialog.close();
+      } else {
+        dialog.removeAttribute("open");
+        dialog.classList.remove("max-dialog--fallback-open");
+        restorePageAfterDialog();
+      }
+    }
+
+    function openDialog(trigger) {
+      var closeButton;
+
+      dialog = dialog || createMaxDialog(config);
+      lastMaxTrigger = trigger;
+      document.body.classList.add("max-dialog-open");
+
+      if (typeof dialog.showModal === "function") {
+        if (!dialog.open) dialog.showModal();
+      } else {
+        dialog.setAttribute("open", "");
+        dialog.classList.add("max-dialog--fallback-open");
+      }
+
+      closeButton = qs("[data-max-dialog-close]", dialog);
+      window.setTimeout(function () {
+        if (closeButton) closeButton.focus();
+      }, 0);
+    }
+
+    document.addEventListener("click", function (event) {
+      var direct = event.target && event.target.closest ? event.target.closest("[data-max-direct]") : null;
+      var trigger = event.target && event.target.closest ? event.target.closest("[data-max-trigger]") : null;
+
+      if (direct) {
+        safeReachGoal("max_direct_open");
+        return;
+      }
+
+      if (!trigger) return;
+
+      safeReachGoal("max_click");
+      if (isMaxDirectMode()) {
+        safeReachGoal("max_direct_open");
+        return;
+      }
+
+      event.preventDefault();
+      safeReachGoal("max_qr_open");
+      openDialog(trigger);
+    });
+
+    document.addEventListener("click", function (event) {
+      if (event.target && event.target.closest && event.target.closest("[data-max-dialog-close]")) {
+        closeDialog();
+        return;
+      }
+
+      if (dialog && event.target === dialog) {
+        closeDialog();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      var focusable;
+      var first;
+      var last;
+
+      if (!dialog || !dialog.open) return;
+
+      if (event.key === "Escape" && typeof dialog.close !== "function") {
+        event.preventDefault();
+        closeDialog();
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+      focusable = qsa('button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])', dialog)
+        .filter(function (element) {
+          return !element.hidden;
+        });
+      if (!focusable.length) return;
+
+      first = focusable[0];
+      last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+
+    document.addEventListener("cancel", function (event) {
+      if (dialog && event.target === dialog) {
+        event.preventDefault();
+        closeDialog();
+      }
+    }, true);
+
+    document.addEventListener("close", function (event) {
+      if (dialog && event.target === dialog) {
+        restorePageAfterDialog();
+      }
+    }, true);
+
+    window.domianMaxDialog = Object.freeze({
+      close: closeDialog,
+      isDirectMode: isMaxDirectMode
+    });
   }
 
   function escapeHtml(value) {
@@ -61,7 +510,7 @@
     if (!source) return null;
 
     var best = null;
-    var unitRegex = /(\d+[\d\s]*(?:[.,]\d+)?)\s*(млн|миллион|тыс|т\.?р|тр|руб|р\.|₽|РјР»РЅ|С‚С‹СЃ|СЂСѓР±)/gi;
+    var unitRegex = /(\d+[\d\s]*(?:[.,]\d+)?)\s*(млн|миллион|тыс|т\.?р|тр|руб|р\.|₽|\u0420\u0458\u0420\u00bb\u0420\u0405|\u0421\u201a\u0421\u2039\u0421\u0455|\u0421\u0402\u0421\u0453\u0420\u00b1)/gi;
     var unitMatch;
     while ((unitMatch = unitRegex.exec(source)) !== null) {
       var base = toNumber(unitMatch[1]);
@@ -129,9 +578,13 @@
     return null;
   }
 
-  function formatPrice(price) {
-    if (!price) return "Цена по запросу";
-    return new Intl.NumberFormat("ru-RU").format(price) + " ₽";
+  function formatPrice(price, priceType) {
+    var numeric = Number(price);
+    if (!Number.isFinite(numeric) || numeric < 100000) return "Цена по запросу";
+    var formatted = new Intl.NumberFormat("ru-RU").format(Math.round(numeric));
+    if (priceType === "price_per_m2") return formatted + "\u00a0₽/м²";
+    if (priceType === "minimum_total" || priceType === "advertising_from") return "от " + formatted + "\u00a0₽";
+    return formatted + "\u00a0₽";
   }
   function parsePriceValue(value) {
     if (value === null || value === undefined) return null;
@@ -141,7 +594,7 @@
     var match = normalized.match(/\d+(?:\.\d+)?/);
     if (!match) return null;
     var num = Number(match[0]);
-    if (!isFinite(num) || num <= 0) return null;
+    if (!isFinite(num) || num < 100000) return null;
     return Math.round(num);
   }
 
@@ -178,12 +631,12 @@
 
   function buildNewbuildTitle(item, data, index) {
     var currentTitle = normalizeText(item.title || "");
-    if (/^(ЖК|Р–Рљ)/i.test(currentTitle)) {
+    if (/^(ЖК|\u0420\u2013\u0420\u0459)/i.test(currentTitle)) {
       return currentTitle;
     }
 
     var text = normalizeText([item.title, data.title, data.description].join(" "));
-    var match = text.match(/(?:ЖК|Р–Рљ)\s*[«\"“]?([^»\"”\n,.!]{2,50})/i);
+    var match = text.match(/(?:ЖК|\u0420\u2013\u0420\u0459)\s*[«\"“]?([^»\"”\n,.!]{2,50})/i);
     if (match) {
       return "ЖК " + normalizeText(match[1]);
     }
@@ -291,7 +744,7 @@
       }
 
       if (href.indexOf("tel:") === 0) {
-        safeReachGoal("tel_click");
+        safeReachGoal("phone_click");
       } else if (href.indexOf("mailto:") === 0) {
         safeReachGoal("email_click");
       } else if (href.indexOf("wa.me") !== -1 || href.indexOf("whatsapp") !== -1) {
@@ -349,7 +802,19 @@
   }
 
   function hasCardValue(value) {
-    return value !== undefined && value !== null && String(value).trim() !== "";
+    if (value === undefined || value === null) return false;
+    var normalized = String(value).trim().toLowerCase();
+    return normalized !== "" && normalized !== "null" && normalized !== "undefined" && normalized !== "nan";
+  }
+
+  function isSafeHttpUrl(value) {
+    if (!hasCardValue(value)) return false;
+    try {
+      var parsed = new URL(String(value), window.location.href);
+      return parsed.protocol === "http:" || parsed.protocol === "https:";
+    } catch (_error) {
+      return false;
+    }
   }
 
   function uniqueImages(list) {
@@ -485,6 +950,23 @@
     });
   }
 
+  function buildObjectWhatsAppText(item, priceText) {
+    var parts = [];
+    var title = item && item.title ? String(item.title).trim() : "";
+    var price = priceText || "";
+
+    if (title) parts.push(title);
+    if (item && item.city) parts.push(String(item.city).trim());
+    if (item && item.district) parts.push(String(item.district).trim());
+    if (price) parts.push(price);
+
+    if (parts.length) {
+      return encodeURIComponent("Здравствуйте. Интересует объект: " + parts.join(", ") + ". Хочу уточнить детали.");
+    }
+
+    return encodeURIComponent("Здравствуйте. Интересует объект на сайте Домиан Квартал. Хочу уточнить детали.");
+  }
+
   function buildCard(item, onOpen) {
     var card = document.createElement("article");
     card.className = "card property-card";
@@ -492,6 +974,10 @@
     var safeTitle = escapeHtml(item.title || "Объект");
     var galleryImages = getCardImages(item);
     var meta = item.meta || {};
+    var priceText = formatPrice(meta.price, meta.priceType) || "Цена по запросу";
+    var sectionLink = isSafeHttpUrl(item.sectionLink) ? item.sectionLink : "index.html#contact";
+    var isExternalLink = /^https?:\/\//i.test(sectionLink);
+    var linkAttrs = isExternalLink ? ' target="_blank" rel="noopener noreferrer"' : "";
 
     var mortgageHtml = "";
     if (window.domianCatalogMortgage) {
@@ -508,16 +994,18 @@
       hasCardValue(meta.landArea) ? "участок " + String(meta.landArea) + " сот." : "",
       hasCardValue(meta.floor) ? String(meta.floor) + " эт." : ""
     ]);
+    var detailsHtml = renderCardChars(item.cardDetails || []);
 
     card.innerHTML = [
       renderPropertyGallery(galleryImages, safeTitle),
       '<div class="card-content property-card__body">',
       '<h2 class="property-card__title">' + safeTitle + '</h2>',
-      '<div class="card-meta property-card__price">' + escapeHtml(formatPrice(meta.price)) + mortgageHtml + '</div>',
+      '<div class="card-meta property-card__price"><span class="property-card__price-value">' + escapeHtml(priceText) + '</span>' + mortgageHtml + '</div>',
       charsHtml,
+      detailsHtml,
       '<div class="property-card__actions">',
-      '<a class="btn property-card__cta" href="tel:+79536091122">Записаться на просмотр</a>',
-      '<a class="btn property-card__phone" href="tel:+79536091122">+7 953 609-11-22</a>',
+      '<a class="btn property-card__cta" href="' + escapeHtml(sectionLink) + '"' + linkAttrs + '>' + escapeHtml(item.ctaLabel || "Подробнее") + '</a>',
+      '<a class="btn property-card__phone" href="tel:+79536091122">Позвонить</a>',
       "</div>",
       '</div>'
     ].join("");
@@ -550,10 +1038,10 @@
         '<label>Площадь до<input type="number" step="0.1" data-filter="landAreaMax" placeholder="сот."></label>'
       ],
       newbuilds: [
+        '<label>Поиск<input type="search" data-filter="query" placeholder="Название, город, застройщик"></label>',
         '<label>Цена от<input type="number" data-filter="priceMin" placeholder="₽"></label>',
         '<label>Цена до<input type="number" data-filter="priceMax" placeholder="₽"></label>',
-        '<label>Комнат<input type="number" data-filter="rooms" placeholder="1"></label>',
-        '<label>Этаж<input type="number" data-filter="floor" placeholder="7"></label>'
+        '<label>Сортировка<select data-filter="sort"><option value="">По умолчанию</option><option value="priceAsc">Сначала дешевле</option><option value="priceDesc">Сначала дороже</option><option value="titleAsc">По названию</option></select></label>'
       ]
     };
 
@@ -564,13 +1052,13 @@
     var values = {};
     qsa("[data-filter]", container).forEach(function (input) {
       var key = input.getAttribute("data-filter");
-      values[key] = toNumber(input.value);
+      values[key] = key === "query" || key === "sort" ? normalizeText(input.value) : toNumber(input.value);
     });
     return values;
   }
 
   function applyFilters(items, filters, type) {
-    return items.filter(function (item) {
+    var filtered = items.filter(function (item) {
       var meta = item.meta;
 
       if (filters.priceMin !== null && (meta.price === null || meta.price < filters.priceMin)) return false;
@@ -595,12 +1083,24 @@
       }
 
       if (type === "newbuilds") {
-        if (filters.rooms !== null && (meta.rooms === null || meta.rooms !== filters.rooms)) return false;
-        if (filters.floor !== null && (meta.floor === null || meta.floor !== filters.floor)) return false;
+        var query = normalizeText(filters.query).toLowerCase();
+        if (query && normalizeText(item.searchText || item.title).toLowerCase().indexOf(query) === -1) return false;
       }
 
       return true;
     });
+
+    if (filters.sort === "priceAsc") {
+      filtered.sort(function (a, b) {
+        return (a.meta.price === null ? Number.POSITIVE_INFINITY : a.meta.price) - (b.meta.price === null ? Number.POSITIVE_INFINITY : b.meta.price);
+      });
+    } else if (filters.sort === "priceDesc") {
+      filtered.sort(function (a, b) { return (b.meta.price || 0) - (a.meta.price || 0); });
+    } else if (filters.sort === "titleAsc") {
+      filtered.sort(function (a, b) { return String(a.title).localeCompare(String(b.title), "ru"); });
+    }
+
+    return filtered;
   }
 
   function resolveAssetPath(basePath, rawPath) {
@@ -665,6 +1165,201 @@
     };
   }
 
+  function normalizeMergedNewbuild(item, idx) {
+    var title = normalizeText(item.title) || "ЖК " + String(idx + 1);
+    var description = normalizeText(item.description);
+    var image = resolveAssetPath("", item.image);
+    var priceType = normalizeText(item.price_type);
+    var price = priceType === "on_request" || priceType === "requires_verification" ? null : parsePriceValue(item.price);
+    var areaMin = toNumber(item.area_min);
+    var areaMax = toNumber(item.area_max);
+    var areaText = "";
+    if (areaMin !== null && areaMax !== null) {
+      areaText = "Площадь: " + String(areaMin).replace(".", ",") + "–" + String(areaMax).replace(".", ",") + " м²";
+    } else if (areaMin !== null) {
+      areaText = "Площадь: от " + String(areaMin).replace(".", ",") + " м²";
+    }
+    var officialUrl = isSafeHttpUrl(item.official_url) ? String(item.official_url) : "";
+
+    return {
+      id: "newbuild-v2-" + String(idx + 1),
+      title: title,
+      description: description,
+      cover: image || "assets/hero/hero.jpg",
+      images: image ? [image] : [],
+      sectionLink: officialUrl || "newbuilds.html",
+      ctaLabel: officialUrl ? "Официальный сайт" : "Подробнее",
+      searchText: [title, item.city, item.address, item.developer, item.status].filter(hasCardValue).join(" "),
+      cardDetails: [
+        normalizeText(item.city),
+        normalizeText(item.address),
+        normalizeText(item.status) ? "Статус: " + normalizeText(item.status) : "",
+        normalizeText(item.deadline) ? "Срок: " + normalizeText(item.deadline) : "",
+        areaText,
+        normalizeText(item.developer) ? "Застройщик: " + normalizeText(item.developer) : "",
+        normalizeText(item.class) ? "Класс: " + normalizeText(item.class) : ""
+      ],
+      meta: {
+        price: price,
+        priceType: priceType,
+        rooms: null,
+        area: null,
+        houseArea: null,
+        landArea: null,
+        floor: null
+      }
+    };
+  }
+
+  function loadLegacyNewbuildsData() {
+    return fetchJson("newbuilds/index.json").then(function (items) {
+      return Promise.all(items.map(function (item, idx) {
+        return fetchJson(item.path + "/data.json").then(function (data) {
+          return normalizeItem("newbuilds", item, data, idx);
+        });
+      }));
+    });
+  }
+
+  function normalizeLeadText(value) {
+    return value == null ? "" : String(value).replace(/\s+/g, " ").trim();
+  }
+
+  function readLeadData(element, name) {
+    return element && element.getAttribute ? normalizeLeadText(element.getAttribute("data-" + name)) : "";
+  }
+
+  function inferLeadType(link) {
+    var explicit = readLeadData(link, "lead-type");
+    var text = normalizeLeadText(link.textContent).toLowerCase();
+    var path = (window.location.pathname || "").toLowerCase();
+
+    if (explicit) return explicit;
+    if (text.indexOf("ипотек") !== -1) return "mortgage";
+    if (text.indexOf("продаж") !== -1 || text.indexOf("оценить") !== -1) return "sell";
+    if (path.indexOf("construction") !== -1) return "construction";
+    if (path.indexOf("commercial") !== -1) return "commercial";
+    if (path.indexOf("rent") !== -1) return "rent";
+    if (path.indexOf("newbuild") !== -1 || path.indexOf("/zhk-") !== -1) return "newbuild";
+    if (/apartments|houses|lands|kvartiry|doma|uchastki/.test(path)) return "buy";
+    return "contact";
+  }
+
+  function inferSourceCta(link, objectId) {
+    var explicit = readLeadData(link, "source-cta");
+    var text = normalizeLeadText(link.textContent).toLowerCase();
+
+    if (explicit) return explicit;
+    if (objectId) return "object_card";
+    if (text.indexOf("ипотек") !== -1) return "mortgage_consultation";
+    if (text.indexOf("оценить") !== -1) return "property_valuation";
+    if (text.indexOf("продаж") !== -1) return "sell_consultation";
+    if (text.indexOf("налич") !== -1) return "availability_request";
+    if (text.indexOf("подбор") !== -1) return "selection_request";
+    if (text.indexOf("заяв") !== -1) return "leave_application";
+    return "consultation";
+  }
+
+  function findObjectContext(link) {
+    var ariaLabel = normalizeLeadText(link.getAttribute("aria-label"));
+    var idMatch = ariaLabel.match(/\b((?:object|house|land|nb)_\d+)\b/i);
+    var newbuildPathMatch = (window.location.pathname || "").match(/\/newbuilds\/([^/]+)\/(?:index\.html)?$/i);
+    var title = readLeadData(link, "object-title");
+    var price = readLeadData(link, "object-price");
+    var objectId = readLeadData(link, "object-id") || (idMatch ? idMatch[1] : "");
+    var objectType = readLeadData(link, "object-type");
+    var objectContainer = link.closest(".property-card, [data-object-id], [data-object-title]");
+    var container;
+    var titleNode;
+    var priceNode;
+
+    // Generic consultation cards must not inherit a nearby heading or price.
+    // Expand the search area only when the CTA carries an object signal.
+    if (!objectId && !objectType && !title && !price && !objectContainer && !newbuildPathMatch) {
+      return {
+        object_id: "",
+        object_type: "",
+        object_title: "",
+        object_price: "",
+        object_url: ""
+      };
+    }
+
+    container = objectContainer || (idMatch ? link.closest("article, .card") : null) || link;
+
+    if (!objectId && newbuildPathMatch) {
+      objectId = "newbuild_" + newbuildPathMatch[1];
+      objectType = objectType || "newbuild";
+    }
+
+    if (!title && container.querySelector) {
+      titleNode = container.querySelector("h1, h2, h3, .property-card__title, .card-title");
+      title = titleNode ? normalizeLeadText(titleNode.textContent) : "";
+    }
+
+    if (newbuildPathMatch) {
+      titleNode = document.querySelector(".nbd-hero h1");
+      title = titleNode ? normalizeLeadText(titleNode.textContent) : title;
+    }
+
+    if (!price && container.querySelector) {
+      priceNode = container.querySelector(".nbd-price, .property-card__price, .card-price, [class*='price']");
+      price = priceNode ? normalizeLeadText(priceNode.textContent) : "";
+    }
+
+    if (!price && newbuildPathMatch) {
+      priceNode = document.querySelector(".nbd-price");
+      price = priceNode ? normalizeLeadText(priceNode.textContent) : "";
+    }
+
+    if (!objectType && objectId) {
+      objectType = objectId.indexOf("house_") === 0 ? "house" :
+        objectId.indexOf("land_") === 0 ? "land" :
+        objectId.indexOf("nb_") === 0 ? "newbuild" :
+        "apartment";
+    }
+
+    return {
+      object_id: objectId,
+      object_type: objectType,
+      object_title: title,
+      object_price: price,
+      object_url: readLeadData(link, "object-url")
+    };
+  }
+
+  function initLeadCtaTracking() {
+    document.addEventListener("click", function (event) {
+      var link = event.target && event.target.closest ? event.target.closest("a[href]") : null;
+      var href;
+      var object;
+      var context;
+
+      if (!link) return;
+
+      href = link.getAttribute("href") || "";
+      if (href.indexOf("#lead-form-section") === -1) return;
+
+      object = findObjectContext(link);
+      context = {
+        lead_type: inferLeadType(link),
+        source_cta: inferSourceCta(link, object.object_id),
+        object_id: object.object_id,
+        object_type: object.object_type,
+        object_title: object.object_title,
+        object_price: object.object_price,
+        object_url: object.object_url || (object.object_id || object.object_title ? window.location.href : ""),
+        captured_at: Date.now()
+      };
+
+      try {
+        window.sessionStorage.setItem(LEAD_CONTEXT_KEY, JSON.stringify(context));
+      } catch (error) {
+        // Attribution is helpful but must not block navigation.
+      }
+    });
+  }
+
   function loadCategoryData(type) {
     if (type === "apartments") {
       return fetchJson("objects/index.json").then(function (ids) {
@@ -699,13 +1394,16 @@
       });
     }
 
-    return fetchJson("newbuilds/index.json").then(function (items) {
-      return Promise.all(items.map(function (item, idx) {
-        return fetchJson(item.path + "/data.json").then(function (data) {
-          return normalizeItem(type, item, data, idx);
-        });
-      }));
-    });
+    return fetchJson("output/newbuilds/newbuilds-v2-merged.json")
+      .then(function (items) {
+        if (!Array.isArray(items) || !items.length) {
+          return loadLegacyNewbuildsData();
+        }
+        return items.map(normalizeMergedNewbuild);
+      })
+      .catch(function () {
+        return loadLegacyNewbuildsData();
+      });
   }
 
   function initCatalogPage(type) {
@@ -754,14 +1452,15 @@
         render(items);
 
         if (filtersContainer) {
-          qsa("input[data-filter]", filtersContainer).forEach(function (input) {
+          qsa("[data-filter]", filtersContainer).forEach(function (input) {
             input.addEventListener("input", runFilter);
+            if (input.tagName === "SELECT") input.addEventListener("change", runFilter);
           });
 
           var resetButton = qs("#resetFilters", filtersContainer);
           if (resetButton) {
             resetButton.addEventListener("click", function () {
-              qsa("input[data-filter]", filtersContainer).forEach(function (input) {
+              qsa("[data-filter]", filtersContainer).forEach(function (input) {
                 input.value = "";
               });
               runFilter();
@@ -778,6 +1477,13 @@
   function renderHotCard(item) {
     var safeTitle = escapeHtml(item.title || "Объект");
     var galleryImages = getCardImages(item);
+    var categoryHref = {
+      apartments: "apartments.html",
+      houses: "houses.html",
+      lands: "lands.html",
+      newbuilds: "newbuilds.html"
+    }[item && item.categoryName ? String(item.categoryName).toLowerCase() : ""] || "index.html#contact";
+    var priceText = formatPrice(item && item.meta ? item.meta.price : null, item && item.meta ? item.meta.priceType : "") || "Цена по запросу";
     var charsHtml = renderCardChars([
       item && item.meta && hasCardValue(item.meta.rooms) ? String(item.meta.rooms) + " комн." : "",
       item && item.meta && hasCardValue(item.meta.area) ? String(item.meta.area) + " м²" : "",
@@ -789,11 +1495,11 @@
       '<div class="hot-offer-content property-card__body">',
       '<span class="hot-offer-tag property-card__meta">' + escapeHtml(item.categoryName) + '</span>',
       '<h3 class="property-card__title">' + safeTitle + '</h3>',
-      '<div class="hot-offer-price property-card__price">' + escapeHtml(formatPrice(item.meta.price)) + '</div>',
+      '<div class="hot-offer-price property-card__price">' + escapeHtml(formatPrice(item.meta.price, item.meta.priceType)) + '</div>',
       charsHtml,
       '<div class="property-card__actions">',
-      '<a class="btn property-card__cta" href="tel:+79536091122">Записаться на просмотр</a>',
-      '<a class="btn property-card__phone" href="tel:+79536091122">+7 953 609-11-22</a>',
+      '<a class="btn property-card__cta" href="' + categoryHref + '">Подробнее</a>',
+      '<a class="btn property-card__phone" href="tel:+79536091122">Позвонить</a>',
       '</div>',
       '</div>',
       '</article>'
@@ -865,7 +1571,8 @@
   function renderNewObjectCard(item) {
     var title = escapeHtml(item.title || "Объект");
     var galleryImages = getCardImages(item);
-    var price = escapeHtml(item.price || "Цена по запросу");
+    var priceText = item.price || "Цена по запросу";
+    var price = escapeHtml(priceText);
     var typeLabel = escapeHtml(getTypeLabel(item.type));
     var features = item && item.features && typeof item.features === "object" ? item.features : {};
     var sourceText = [item && item.title, item && item.shortDescription, item && item.description].filter(Boolean).join(" ");
@@ -879,6 +1586,12 @@
       hasCardValue(item && item.city) ? String(item.city) : "",
       hasCardValue(item && item.district) ? String(item.district) : ""
     ]);
+    var detailsHref = {
+      apartment: "apartments.html",
+      house: "houses.html",
+      land: "lands.html",
+      newbuild: "newbuilds.html"
+    }[String(item && item.type || "").toLowerCase()] || "index.html#contact";
 
     return [
       '<article class="new-object-card property-card">',
@@ -889,8 +1602,8 @@
       '<div class="new-object-card__price property-card__price">' + price + '</div>',
       charsHtml,
       '<div class="property-card__actions">',
-      '<a class="btn property-card__cta" href="tel:+79536091122">Записаться на просмотр</a>',
-      '<a class="btn property-card__phone" href="tel:+79536091122">+7 953 609-11-22</a>',
+      '<a class="btn property-card__cta" href="' + detailsHref + '">Подробнее</a>',
+      '<a class="btn property-card__phone" href="tel:+79536091122">Позвонить</a>',
       '</div>',
       '</div>',
       '</article>'
@@ -952,8 +1665,48 @@
       });
   }
 
+  function createThemeButton(modifier) {
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "theme-toggle theme-toggle--" + modifier;
+    button.innerHTML = '<span class="theme-toggle__icon" aria-hidden="true"></span><span class="theme-toggle__label">Тёмная тема</span>';
+    button.addEventListener("click", function () {
+      var nextTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      try {
+        window.localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+      } catch (_error) {
+        // The theme still works for the current page if storage is unavailable.
+      }
+      applyTheme(nextTheme);
+    });
+    return button;
+  }
+
+  function initThemeToggle() {
+    var hasThemeStyles = qsa('link[rel="stylesheet"]').some(function (link) {
+      return /(?:^|\/)visual-premium\.css(?:\?|$)/.test(link.href);
+    });
+    if (!hasThemeStyles) return;
+
+    var headerInner = qs(".header-inner");
+    if (headerInner && !qs(".theme-toggle--header", headerInner)) {
+      var menuToggle = qs(".mobile-menu-toggle", headerInner);
+      headerInner.insertBefore(createThemeButton("header"), menuToggle || null);
+    }
+
+    var drawerActions = qs(".mobile-drawer__actions");
+    if (drawerActions && !qs(".theme-toggle--drawer", drawerActions)) {
+      drawerActions.insertBefore(createThemeButton("drawer"), drawerActions.firstChild);
+    }
+
+    applyTheme(getStoredTheme());
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
+    withLeadConfig(initContactChannels);
+    initThemeToggle();
     initGlobalInteractions();
+    initLeadCtaTracking();
     initMetrikaClickGoals();
     initActiveNav();
     initMobileDrawer();
@@ -962,8 +1715,10 @@
 
     var listingType = document.body && document.body.dataset ? document.body.dataset.listing : null;
     if (CATALOG_TYPES.indexOf(listingType) !== -1) {
-      initListingNewObjects(listingType);
-      initCatalogPage(listingType);
+      if (document.body.dataset.catalogVersion !== "3") {
+        initListingNewObjects(listingType);
+        initCatalogPage(listingType);
+      }
     }
 
     initHotOffers();

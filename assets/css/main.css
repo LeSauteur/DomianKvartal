@@ -2761,3 +2761,425 @@ body.drawer-open {
         margin-left: auto;
     }
 }
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-main, #2f2926);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#lead-form-section {
+    scroll-margin-top: 24px;
+}
+
+.form-label span {
+    color: var(--text-muted, #6d625d);
+    font-weight: 500;
+}
+
+.form-control.error,
+.form-consent input.error {
+    border-color: #b42318;
+    box-shadow: 0 0 0 3px rgba(180, 35, 24, 0.14);
+}
+
+.form-field-error {
+    margin: 7px 0 0;
+    color: #9f1c13;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.form-consent {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    align-items: start;
+    margin: 4px 0 18px;
+    color: var(--text-muted, #5f5652);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.form-consent input {
+    width: 20px;
+    height: 20px;
+    margin: 1px 0 0;
+    accent-color: var(--primary, #8c3028);
+}
+
+.form-consent .form-field-error {
+    grid-column: 1 / -1;
+}
+
+.form-consent a {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.form-status {
+    margin: 0 0 16px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: #eef4ff;
+    color: #243b67;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.form-status--error {
+    border: 1px solid rgba(180, 35, 24, 0.22);
+    background: #fff1f0;
+    color: #861c15;
+}
+
+.form-status--success {
+    border: 1px solid rgba(22, 101, 52, 0.2);
+    background: #ecfdf3;
+    color: #166534;
+}
+
+.form-fallback {
+    margin-top: 18px;
+    padding: 18px;
+    border: 1px solid rgba(140, 48, 40, 0.22);
+    border-radius: 14px;
+    background: #fff8f4;
+    color: var(--text-main, #2f2926);
+}
+
+.form-fallback[hidden] {
+    display: none;
+}
+
+.form-fallback strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 17px;
+}
+
+.form-fallback p {
+    margin: 0;
+    color: var(--text-muted, #625752);
+    line-height: 1.5;
+}
+
+.form-fallback__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.form-fallback__actions .btn {
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media (max-width: 640px) {
+    .form-fallback__actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .form-fallback__actions .btn {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* ===== Compact contact channels and MAX dialog ===== */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+.contact-channel-group {
+    align-items: center;
+}
+
+.contact-channel-group .channel-icon {
+    box-sizing: border-box;
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    min-height: 44px;
+    padding: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 44px;
+    border: 1px solid rgba(140, 48, 40, 0.24);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.72);
+    color: var(--accent, #b84a3a);
+    box-shadow: 0 8px 20px rgba(75, 47, 39, 0.08);
+    line-height: 1;
+    text-decoration: none;
+    transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.contact-channel-group .channel-icon:hover {
+    transform: translateY(-1px);
+    border-color: rgba(140, 48, 40, 0.48);
+    background: #fff;
+    box-shadow: 0 10px 24px rgba(75, 47, 39, 0.13);
+}
+
+.contact-channel-group .channel-icon:focus-visible,
+.max-dialog button:focus-visible,
+.max-dialog a:focus-visible {
+    outline: 3px solid #2667e8;
+    outline-offset: 3px;
+}
+
+.channel-icon__svg,
+.channel-icon__image {
+    display: block;
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.channel-icon--whatsapp .channel-icon__svg {
+    color: #159b49;
+}
+
+.channel-icon--telegram .channel-icon__svg {
+    color: #168fd2;
+}
+
+.channel-icon--max .channel-icon__image {
+    border-radius: 8px;
+}
+
+body .header-contacts {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+body .header-contacts a.channel-icon {
+    width: 40px !important;
+    min-width: 40px !important;
+    height: 40px !important;
+    min-height: 40px !important;
+    margin-left: 0 !important;
+    padding: 7px !important;
+    border-radius: 13px !important;
+    font-size: 0 !important;
+}
+
+body .header-contacts a.channel-icon:hover {
+    color: inherit;
+    background: #fff;
+}
+
+.mobile-drawer__actions.contact-channel-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.mobile-drawer__actions.contact-channel-group .theme-toggle--drawer,
+.mobile-drawer__actions.contact-channel-group .mobile-drawer__call {
+    flex: 1 1 100%;
+}
+
+.mobile-drawer__actions.contact-channel-group a.channel-icon {
+    display: inline-flex;
+    padding: 8px;
+    border-radius: 14px;
+}
+
+.contact-actions.contact-channel-group,
+.thanks-channels.contact-channel-group,
+.agent-contact-channels.contact-channel-group,
+.form-fallback__channels.contact-channel-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.contact-actions.contact-channel-group {
+    margin-top: 18px;
+}
+
+.thanks-channels {
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.agent-info .agent-contact-channels .channel-icon {
+    width: 44px !important;
+    min-width: 44px !important;
+    height: 44px !important;
+    padding: 8px !important;
+}
+
+.footer-social.contact-channel-group .channel-icon {
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    padding: 8px;
+    justify-content: center;
+}
+
+.form-fallback__channels {
+    align-self: center;
+}
+
+body.max-dialog-open {
+    overflow: hidden;
+}
+
+.max-dialog {
+    width: min(430px, calc(100vw - 28px));
+    max-width: none;
+    margin: auto;
+    padding: 0;
+    overflow: visible;
+    border: 0;
+    border-radius: 24px;
+    background: transparent;
+    color: var(--text-main, #2f2926);
+    box-shadow: 0 30px 90px rgba(20, 15, 13, 0.3);
+}
+
+.max-dialog::backdrop {
+    background: rgba(25, 18, 14, 0.68);
+    backdrop-filter: blur(4px);
+}
+
+.max-dialog--fallback-open {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+}
+
+.max-dialog__panel {
+    position: relative;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(140, 48, 40, 0.16);
+    border-radius: 24px;
+    background: #fffaf5;
+    text-align: center;
+}
+
+.max-dialog__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(140, 48, 40, 0.18);
+    border-radius: 50%;
+    background: #fff;
+    color: var(--text-main, #2f2926);
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.max-dialog__logo {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 12px;
+    border-radius: 14px;
+    object-fit: contain;
+}
+
+.max-dialog h2 {
+    margin: 0;
+    font-size: clamp(24px, 4vw, 30px);
+    line-height: 1.15;
+}
+
+.max-dialog__name {
+    margin: 8px 0 18px;
+    color: var(--text-muted, #625752);
+    font-weight: 700;
+}
+
+.max-dialog__qr {
+    width: min(320px, 72vw);
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 18px;
+    background: #fff;
+    object-fit: contain;
+}
+
+.max-dialog__instruction {
+    margin: 16px 0;
+    color: var(--text-muted, #625752);
+    line-height: 1.45;
+}
+
+.max-dialog__direct {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html[data-theme="dark"] .contact-channel-group .channel-icon {
+    border-color: rgba(242, 177, 164, 0.3);
+    background: rgba(255, 255, 255, 0.07);
+}
+
+html[data-theme="dark"] .contact-channel-group .channel-icon:hover {
+    background: rgba(255, 255, 255, 0.13);
+}
+
+html[data-theme="dark"] .max-dialog__panel {
+    border-color: rgba(235, 214, 195, 0.16);
+    background: #171b1d;
+    color: #f6efe7;
+}
+
+html[data-theme="dark"] .max-dialog__close {
+    border-color: rgba(235, 214, 195, 0.18);
+    background: #242a2d;
+    color: #f6efe7;
+}
+
+html[data-theme="dark"] .max-dialog__name,
+html[data-theme="dark"] .max-dialog__instruction {
+    color: #c9bdb3;
+}
+
+@media (max-width: 640px) {
+    .contact-actions.contact-channel-group {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .contact-actions.contact-channel-group .channel-icon {
+        width: 44px !important;
+        min-width: 44px !important;
+    }
+
+    .form-fallback__channels {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .max-dialog__panel {
+        padding: 26px 20px 22px;
+    }
+}

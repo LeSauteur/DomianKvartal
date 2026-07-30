@@ -434,29 +434,11 @@
     </div>
 </section>
 
-<section class="form-section">
+<section class="form-section" aria-labelledby="archived-lead-title">
     <div class="container form-container">
-        <h2 class="section-title fade-in">Оставьте заявку</h2>
-        <p class="fade-in form-note">Наш специалист свяжется с вами в течение 15 минут</p>
-        <form id="lead-form" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="111acf56-7c06-44ff-b693-b777e053bc47">
-            <input type="hidden" name="source" value="website">
-            <input type="checkbox" name="botcheck" style="display:none" aria-hidden="true">
-            <div class="form-group fade-in"><input type="text" name="name" placeholder="Ваше имя" class="form-control" required></div>
-            <div class="form-group fade-in"><input type="tel" name="phone" placeholder="Телефон" class="form-control" required></div>
-            <div class="form-group fade-in"><input type="email" name="email" placeholder="Email (по желанию)" class="form-control"></div>
-            <div class="form-group fade-in">
-                <select name="service" class="form-control" required>
-                    <option value="" disabled selected>Выберите услугу</option>
-                    <option value="buy">Покупка недвижимости</option>
-                    <option value="sell">Продажа недвижимости</option>
-                    <option value="rent">Аренда недвижимости</option>
-                    <option value="mortgage">Оформление ипотеки</option>
-                    <option value="consultation">Консультация</option>
-                </select>
-            </div>
-            <button type="submit" class="submit-btn fade-in">Получить консультацию</button>
-        </form>
+        <h2 class="section-title fade-in" id="archived-lead-title">Архивный макет</h2>
+        <p class="fade-in form-note">Отправка из этой копии отключена. Используйте рабочую форму на главной странице.</p>
+        <a class="btn" href="../index.html#lead-form-section">Перейти к форме</a>
     </div>
 </section>
 
