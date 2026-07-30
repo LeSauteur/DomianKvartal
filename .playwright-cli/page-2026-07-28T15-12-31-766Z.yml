@@ -1,0 +1,550 @@
+- generic [active] [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - generic [ref=f2e3]:
+      - link "Домиан · офис «Квартал»" [ref=f2e4] [cursor=pointer]:
+        - /url: index.html
+      - button "Открыть меню" [ref=f2e5] [cursor=pointer]
+  - generic:
+    - dialog:
+      - button: ×
+      - generic: Навигация
+      - navigation:
+        - link:
+          - /url: index.html
+          - text: Главная
+        - link:
+          - /url: apartments.html
+          - text: Квартиры
+        - link:
+          - /url: houses.html
+          - text: Дома
+        - link:
+          - /url: lands.html
+          - text: Участки
+        - link:
+          - /url: newbuilds.html
+          - text: Новостройки
+        - link:
+          - /url: rent.html
+          - text: Аренда
+        - link:
+          - /url: construction.html
+          - text: Строительство домов
+        - link:
+          - /url: commercial.html
+          - text: Коммерческая недвижимость
+        - link:
+          - /url: team/zukhra-alieva.html
+          - text: Команда
+      - generic:
+        - button:
+          - generic: Тёмная тема
+        - link:
+          - /url: tel:+79536091122
+          - text: +7 953 609-11-22
+        - link:
+          - /url: https://wa.me/79536091122
+          - text: WhatsApp
+        - link:
+          - /url: https://t.me/httpsmealieva_rieltor
+          - text: Telegram
+  - generic [ref=f2e10]:
+    - generic [ref=f2e11]: Квартиры в продаже
+    - heading "Квартиры в продаже" [level=1] [ref=f2e12]
+    - paragraph [ref=f2e13]: Подбор квартир в Аксае, Ростове-на-Дону и Ростовской области.
+    - generic [ref=f2e14]:
+      - link "Смотреть квартиры" [ref=f2e15] [cursor=pointer]:
+        - /url: apartments.html
+      - link "Консультация" [ref=f2e16] [cursor=pointer]:
+        - /url: index.html#contact
+  - main [ref=f2e17]:
+    - heading "Каталог квартир" [level=2] [ref=f2e18]
+    - generic [ref=f2e20]:
+      - generic [ref=f2e21]:
+        - generic [ref=f2e22]: Лучшие объекты
+        - heading "Лучшие квартиры в Аксае" [level=2] [ref=f2e23]
+        - paragraph [ref=f2e24]: "Подобрали квартиры, которые чаще всего выбирают покупатели: удобные локации, актуальные цены и востребованные планировки."
+      - generic [ref=f2e25]:
+        - article [ref=f2e26]:
+          - img "1-к квартира 44 м², ЖК «Сокол Град»" [ref=f2e28]
+          - generic [ref=f2e29]:
+            - generic [ref=f2e30]: Квартиры в Ростове-на-Дону
+            - heading "1-к квартира 44 м², ЖК «Сокол Град»" [level=3] [ref=f2e31]
+            - paragraph [ref=f2e32]: Ростов-на-Дону, Пролетарский район, проспект 40-летия Победы, 63/17с8
+            - generic [ref=f2e33]: 6 299 000 ₽
+            - generic [ref=f2e34]:
+              - generic [ref=f2e35]: 44 м²
+              - generic [ref=f2e36]: 1 комн.
+              - generic [ref=f2e37]: 15 этаж
+            - group [ref=f2e38]:
+              - generic "Показать детали +" [ref=f2e39] [cursor=pointer]
+            - generic [ref=f2e40]:
+              - link "Подробнее" [ref=f2e41] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=f2e42] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=f2e43]:
+          - img "1-к квартира 45 м², ЖК «Вересаево»" [ref=f2e45]
+          - generic [ref=f2e46]:
+            - generic [ref=f2e47]: Квартиры в Ростове-на-Дону
+            - heading "1-к квартира 45 м², ЖК «Вересаево»" [level=3] [ref=f2e48]
+            - paragraph [ref=f2e49]: Ростов-на-Дону, Пролетарский район, улица Берберовская, 28с1
+            - generic [ref=f2e50]: 7 500 000 ₽
+            - generic [ref=f2e51]:
+              - generic [ref=f2e52]: 45 м²
+              - generic [ref=f2e53]: 1 комн.
+              - generic [ref=f2e54]: 14 этаж
+            - group [ref=f2e55]:
+              - generic "Показать детали +" [ref=f2e56] [cursor=pointer]
+            - generic [ref=f2e57]:
+              - link "Подробнее" [ref=f2e58] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=f2e59] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=f2e60]:
+          - img "1-комнатная квартира в районе центра Аксая" [ref=f2e62]
+          - generic [ref=f2e63]:
+            - generic [ref=f2e64]: Вторичная недвижимость в Аксае
+            - heading "1-комнатная квартира в районе центра Аксая" [level=3] [ref=f2e65]
+            - paragraph [ref=f2e66]: Аксай, район ул. Садовой
+            - generic [ref=f2e67]: 5 890 000 ₽
+            - generic [ref=f2e68]:
+              - generic [ref=f2e69]: 40-43 м²
+              - generic [ref=f2e70]: 1 комн.
+              - generic [ref=f2e71]: средний этаж
+            - group [ref=f2e72]:
+              - generic "Показать детали +" [ref=f2e73] [cursor=pointer]
+            - generic [ref=f2e74]:
+              - link "Подробнее" [ref=f2e75] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=f2e76] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=f2e77]:
+          - img "1-комнатная квартира в удобной части Аксая" [ref=f2e79]
+          - generic [ref=f2e80]:
+            - generic [ref=f2e81]: Вторичная недвижимость в Аксае
+            - heading "1-комнатная квартира в удобной части Аксая" [level=3] [ref=f2e82]
+            - paragraph [ref=f2e83]: Аксай, район ул. Платова
+            - generic [ref=f2e84]: 4 390 000 ₽
+            - generic [ref=f2e85]:
+              - generic [ref=f2e86]: 40-41 м²
+              - generic [ref=f2e87]: 1 комн.
+              - generic [ref=f2e88]: средний этаж
+            - group [ref=f2e89]:
+              - generic "Показать детали +" [ref=f2e90] [cursor=pointer]
+            - generic [ref=f2e91]:
+              - link "Подробнее" [ref=f2e92] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=f2e93] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=f2e94]:
+          - img "Просторная 1-комнатная квартира в Аксае" [ref=f2e96]
+          - generic [ref=f2e97]:
+            - generic [ref=f2e98]: Вторичная недвижимость в Аксае
+            - heading "Просторная 1-комнатная квартира в Аксае" [level=3] [ref=f2e99]
+            - paragraph [ref=f2e100]: Аксай, район ул. Мира
+            - generic [ref=f2e101]: 6 290 000 ₽
+            - generic [ref=f2e102]:
+              - generic [ref=f2e103]: 50-51 м²
+              - generic [ref=f2e104]: 1 комн.
+              - generic [ref=f2e105]: видовой этаж
+            - group [ref=f2e106]:
+              - generic "Показать детали +" [ref=f2e107] [cursor=pointer]
+            - generic [ref=f2e108]:
+              - link "Подробнее" [ref=f2e109] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=f2e110] [cursor=pointer]:
+                - /url: tel:+79536091122
+      - link "Смотреть все объекты" [ref=f2e112] [cursor=pointer]:
+        - /url: showcase-aksay-secondary.html
+    - generic [ref=f2e113]:
+      - heading "НОВЫЕ ОБЪЕКТЫ" [level=2] [ref=f2e114]
+      - generic [ref=f2e115]:
+        - article [ref=f2e116]:
+          - generic [ref=f2e117]:
+            - generic "1-комнатная квартира 44 м² в ЖК «Сокол Град»" [ref=f2e118]
+            - button "Предыдущее фото" [ref=f2e119] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=f2e120] [cursor=pointer]: ›
+            - generic [ref=f2e121]: 1/16
+          - generic [ref=f2e122]:
+            - generic [ref=f2e123]: Квартира
+            - heading "1-комнатная квартира 44 м² в ЖК «Сокол Град»" [level=3] [ref=f2e124]
+            - generic [ref=f2e125]: 6 299 000 ₽
+            - generic [ref=f2e126]:
+              - generic [ref=f2e127]: 1 комн.
+              - generic [ref=f2e128]: 15/17 эт.
+              - generic [ref=f2e129]: Ростов-на-Дону
+              - generic [ref=f2e130]: Пролетарский район
+            - generic [ref=f2e131]:
+              - link "Подробнее" [ref=f2e132] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=f2e133] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=f2e134]:
+          - generic [ref=f2e135]:
+            - generic "1-комнатная квартира 45 м² в ЖК «Вересаево»" [ref=f2e136]
+            - button "Предыдущее фото" [ref=f2e137] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=f2e138] [cursor=pointer]: ›
+            - generic [ref=f2e139]: 1/15
+          - generic [ref=f2e140]:
+            - generic [ref=f2e141]: Квартира
+            - heading "1-комнатная квартира 45 м² в ЖК «Вересаево»" [level=3] [ref=f2e142]
+            - generic [ref=f2e143]: 7 500 000 ₽
+            - generic [ref=f2e144]:
+              - generic [ref=f2e145]: 1 комн.
+              - generic [ref=f2e146]: 14/24 эт.
+              - generic [ref=f2e147]: Ростов-на-Дону
+              - generic [ref=f2e148]: Пролетарский район
+            - generic [ref=f2e149]:
+              - link "Подробнее" [ref=f2e150] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=f2e151] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=f2e152]:
+          - generic [ref=f2e153]:
+            - generic "1-комнатная квартира, 36 м²" [ref=f2e154]
+            - button "Предыдущее фото" [ref=f2e155] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=f2e156] [cursor=pointer]: ›
+            - generic [ref=f2e157]: 1/11
+          - generic [ref=f2e158]:
+            - generic [ref=f2e159]: Квартира
+            - heading "1-комнатная квартира, 36 м²" [level=3] [ref=f2e160]
+            - generic [ref=f2e161]: 5 050 000 ₽
+            - generic [ref=f2e162]:
+              - generic [ref=f2e163]: 1 комн.
+              - generic [ref=f2e164]: 5/6 эт.
+            - generic [ref=f2e165]:
+              - link "Подробнее" [ref=f2e166] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=f2e167] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=f2e168]:
+          - generic [ref=f2e169]:
+            - generic "Евро 2-комнатная квартира, 47 м²" [ref=f2e170]
+            - button "Предыдущее фото" [ref=f2e171] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=f2e172] [cursor=pointer]: ›
+            - generic [ref=f2e173]: 1/15
+          - generic [ref=f2e174]:
+            - generic [ref=f2e175]: Квартира
+            - heading "Евро 2-комнатная квартира, 47 м²" [level=3] [ref=f2e176]
+            - generic [ref=f2e177]: 6 100 000 ₽
+            - generic [ref=f2e178]:
+              - link "Подробнее" [ref=f2e179] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=f2e180] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=f2e181]:
+          - generic [ref=f2e182]:
+            - generic "Евродвушка 41,6 м²" [ref=f2e183]
+            - button "Предыдущее фото" [ref=f2e184] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=f2e185] [cursor=pointer]: ›
+            - generic [ref=f2e186]: 1/18
+          - generic [ref=f2e187]:
+            - generic [ref=f2e188]: Квартира
+            - heading "Евродвушка 41,6 м²" [level=3] [ref=f2e189]
+            - generic [ref=f2e190]: 5 000 000 ₽
+            - generic [ref=f2e191]:
+              - link "Подробнее" [ref=f2e192] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=f2e193] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=f2e194]:
+          - generic [ref=f2e195]:
+            - generic "1-комнатная квартира, 36 м²" [ref=f2e196]
+            - button "Предыдущее фото" [ref=f2e197] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=f2e198] [cursor=pointer]: ›
+            - generic [ref=f2e199]: 1/20
+          - generic [ref=f2e200]:
+            - generic [ref=f2e201]: Квартира
+            - heading "1-комнатная квартира, 36 м²" [level=3] [ref=f2e202]
+            - generic [ref=f2e203]: 5 050 000 ₽
+            - generic [ref=f2e204]:
+              - generic [ref=f2e205]: 1 комн.
+              - generic [ref=f2e206]: 15/21 эт.
+            - generic [ref=f2e207]:
+              - link "Подробнее" [ref=f2e208] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=f2e209] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=f2e210]:
+          - generic [ref=f2e211]:
+            - generic "2-комнатная квартира" [ref=f2e212]
+            - button "Предыдущее фото" [ref=f2e213] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=f2e214] [cursor=pointer]: ›
+            - generic [ref=f2e215]: 1/21
+          - generic [ref=f2e216]:
+            - generic [ref=f2e217]: Квартира
+            - heading "2-комнатная квартира" [level=3] [ref=f2e218]
+            - generic [ref=f2e219]: 9 000 000 ₽
+            - generic [ref=f2e220]:
+              - link "Подробнее" [ref=f2e221] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=f2e222] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=f2e223]:
+          - generic [ref=f2e224]:
+            - generic "Квартира" [ref=f2e225]
+            - button "Предыдущее фото" [ref=f2e226] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=f2e227] [cursor=pointer]: ›
+            - generic [ref=f2e228]: 1/12
+          - generic [ref=f2e229]:
+            - generic [ref=f2e230]: Квартира
+            - heading "Квартира" [level=3] [ref=f2e231]
+            - generic [ref=f2e232]: 4 900 000 ₽
+            - generic [ref=f2e233]:
+              - link "Подробнее" [ref=f2e234] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=f2e235] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=f2e236]:
+          - generic [ref=f2e237]:
+            - generic "1-комнатная квартира, 40 м²" [ref=f2e238]
+            - button "Предыдущее фото" [ref=f2e239] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=f2e240] [cursor=pointer]: ›
+            - generic [ref=f2e241]: 1/11
+          - generic [ref=f2e242]:
+            - generic [ref=f2e243]: Квартира
+            - heading "1-комнатная квартира, 40 м²" [level=3] [ref=f2e244]
+            - generic [ref=f2e245]: 4 700 000 ₽
+            - generic [ref=f2e246]: 9/10 эт.
+            - generic [ref=f2e248]:
+              - link "Подробнее" [ref=f2e249] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=f2e250] [cursor=pointer]:
+                - /url: tel:+79536091122
+        - article [ref=f2e251]:
+          - generic [ref=f2e252]:
+            - generic "2-комнатная квартира, 56,6 м²" [ref=f2e253]
+            - button "Предыдущее фото" [ref=f2e254] [cursor=pointer]: ‹
+            - button "Следующее фото" [ref=f2e255] [cursor=pointer]: ›
+            - generic [ref=f2e256]: 1/10
+          - generic [ref=f2e257]:
+            - generic [ref=f2e258]: Квартира
+            - heading "2-комнатная квартира, 56,6 м²" [level=3] [ref=f2e259]
+            - generic [ref=f2e260]: 6 100 000 ₽
+            - generic [ref=f2e261]: 2 комн.
+            - generic [ref=f2e263]:
+              - link "Подробнее" [ref=f2e264] [cursor=pointer]:
+                - /url: apartments.html
+              - link "Позвонить" [ref=f2e265] [cursor=pointer]:
+                - /url: tel:+79536091122
+    - paragraph [ref=f2e268]: Загрузка объектов...
+  - region [ref=f2e269]:
+    - generic [ref=f2e271]:
+      - generic [ref=f2e272]:
+        - generic [ref=f2e273]:
+          - generic [ref=f2e274]: Вторичный рынок Аксая
+          - 'heading "Квартиры в Аксае на вторичном рынке: где искать и как выбрать" [level=2] [ref=f2e275]'
+          - paragraph [ref=f2e276]: "На вторичном рынке Аксая одновременно представлены компактные квартиры, семейные форматы и свежая вторичка в сданных жилых комплексах. Выбирать стоит не только по площади и цене: важны конкретная улица, состояние дома, ежедневный маршрут и юридическая чистота объекта."
+          - paragraph [ref=f2e277]: "Отдельно выделяется свежая вторичка в уже сданных домах: покупатель получает более современную среду без ожидания завершения строительства."
+        - figure "Карта Аксая помогает заранее оценить расположение жилых районов, выездов и повседневных маршрутов." [ref=f2e278]:
+          - img "Карта жилых районов и центральных улиц Аксая для выбора квартиры" [ref=f2e279]
+      - heading "Коротко о рынке" [level=3] [ref=f2e281]
+      - generic [ref=f2e282]:
+        - article [ref=f2e283]:
+          - heading "1–2-комнатные квартиры" [level=4] [ref=f2e284]
+          - paragraph [ref=f2e285]: "Основной массовый формат: чаще всего именно эти объекты формируют базу для выбора первой квартиры, жилья для пары или небольшой семьи."
+        - article [ref=f2e286]:
+          - heading "3-комнатные квартиры" [level=4] [ref=f2e287]
+          - paragraph [ref=f2e288]: Семейный сегмент с устойчивым спросом и более ограниченным предложением по сравнению с компактными форматами.
+        - article [ref=f2e289]:
+          - heading "Студии" [level=4] [ref=f2e290]
+          - paragraph [ref=f2e291]: Компактный формат для первого жилья или аренды, который встречается на вторичке, но не доминирует в структуре предложения.
+        - article [ref=f2e292]:
+          - heading "Свежая вторичка" [level=4] [ref=f2e293]
+          - paragraph [ref=f2e294]: Квартиры в сданных ЖК и относительно новых домах для тех, кто хочет современный фонд без ожидания стройки.
+      - heading "Как читать локации Аксая" [level=3] [ref=f2e295]
+      - generic [ref=f2e296]:
+        - article [ref=f2e297]:
+          - heading "Ленина, Садовая, Мира, Платова" [level=4] [ref=f2e298]
+          - generic "Теги локации" [ref=f2e299]:
+            - generic [ref=f2e300]: Центр
+            - generic [ref=f2e301]: Для семьи
+            - generic [ref=f2e302]: Ликвидность
+          - paragraph [ref=f2e303]: Центральная городская ось с высокой концентрацией сервисов и повседневной инфраструктуры.
+          - paragraph [ref=f2e304]:
+            - strong [ref=f2e305]: "Подходит для:"
+            - text: семьи, первой квартиры и тех, кому важна ликвидность.
+          - paragraph [ref=f2e306]:
+            - strong [ref=f2e307]: "Проверить:"
+            - text: парковку, трафик и фактический шум у конкретного дома.
+        - article [ref=f2e308]:
+          - heading "Чапаева, Коминтерна, Гулаева, Вартанова" [level=4] [ref=f2e309]
+          - generic "Теги локации" [ref=f2e310]:
+            - generic [ref=f2e311]: Семейный формат
+            - generic [ref=f2e312]: Первое жильё
+            - generic [ref=f2e313]: Аренда
+          - paragraph [ref=f2e314]: Смешанный фонд и типовые семейные метражи с разным годом постройки и неоднородным состоянием дворов.
+          - paragraph [ref=f2e315]:
+            - strong [ref=f2e316]: "Подходит для:"
+            - text: семей с детьми, покупателей под аренду и стартового бюджета.
+          - paragraph [ref=f2e317]:
+            - strong [ref=f2e318]: "Проверить:"
+            - text: дом, подъезд и двор по каждому адресу отдельно.
+        - article [ref=f2e319]:
+          - heading "Речников, Строителей и сданные ЖК" [level=4] [ref=f2e320]
+          - generic "Теги локации" [ref=f2e321]:
+            - generic [ref=f2e322]: Свежий фонд
+            - generic [ref=f2e323]: Новый дом
+            - generic [ref=f2e324]: Без ожидания стройки
+          - paragraph [ref=f2e325]: Сегмент свежей вторички с современными планировками и средой, близкой к новому фонду.
+          - paragraph [ref=f2e326]:
+            - strong [ref=f2e327]: "Подходит для:"
+            - text: тех, кто хочет новый дом без ожидания стройки.
+          - paragraph [ref=f2e328]:
+            - strong [ref=f2e329]: "Проверить:"
+            - text: транспортный сценарий и ежедневную логистику.
+          - figure "Свежая вторичка позволяет оценить готовый двор и дом до сделки." [ref=f2e330]:
+            - img "Современный жилой двор и сданные дома для выбора квартиры в Аксае" [ref=f2e331]
+      - figure "При выборе квартиры важно оценивать не только дом, но и весь повседневный контур квартала." [ref=f2e333]:
+        - img "Современный городской квартал для выбора квартиры в Аксае" [ref=f2e334]
+      - generic "Сценарии выбора квартиры" [ref=f2e336]:
+        - heading "Какой сценарий выбрать" [level=3] [ref=f2e337]
+        - generic [ref=f2e338]:
+          - article [ref=f2e339]:
+            - heading "Семья с детьми" [level=4] [ref=f2e340]
+            - paragraph [ref=f2e341]: Садовая, Ленина, Чапаева, Коминтерна.
+          - article [ref=f2e342]:
+            - heading "Первая квартира" [level=4] [ref=f2e343]
+            - paragraph [ref=f2e344]: Гулаева, Вартанова и компактные форматы.
+          - article [ref=f2e345]:
+            - heading "Под аренду" [level=4] [ref=f2e346]
+            - paragraph [ref=f2e347]: Ленина, Садовая, Платова и свежая вторичка.
+          - article [ref=f2e348]:
+            - heading "Новый дом без ожидания" [level=4] [ref=f2e349]
+            - paragraph [ref=f2e350]: Речников, Строителей и сданные ЖК.
+      - 'heading "Вторичка или новостройка: что выбрать" [level=3] [ref=f2e351]'
+      - generic [ref=f2e352]:
+        - article [ref=f2e353]:
+          - heading "Вторичка в Аксае" [level=4] [ref=f2e354]
+          - paragraph [ref=f2e355]: Даёт широкий выбор по адресам и позволяет увидеть фактическое состояние дома, двора и окружения.
+          - paragraph [ref=f2e356]: Подходит тем, кому важны быстрый переезд и понятный жилой контур.
+        - article [ref=f2e357]:
+          - heading "Новостройка или свежая вторичка" [level=4] [ref=f2e358]
+          - paragraph [ref=f2e359]: Привлекает возрастом дома, современными планировками и инженерными решениями.
+          - paragraph [ref=f2e360]: Сданный ЖК может стать компромиссом между новым качеством среды и отсутствием ожидания стройки.
+      - heading "Что проверить перед покупкой квартиры" [level=3] [ref=f2e361]
+      - list [ref=f2e362]:
+        - listitem [ref=f2e363]: Актуальную выписку ЕГРН по объекту.
+        - listitem [ref=f2e364]: Состав собственников и основания владения квартирой.
+        - listitem [ref=f2e365]: Обременения, аресты, запреты регистрационных действий.
+        - listitem [ref=f2e366]: Ипотеку, залог и порядок снятия ограничений при сделке.
+        - listitem [ref=f2e367]: Использование материнского капитала и выделение долей, если он применялся.
+        - listitem [ref=f2e368]: Перепланировки и соответствие документов фактическому состоянию квартиры.
+        - listitem [ref=f2e369]: Долги, зарегистрированных лиц и порядок освобождения квартиры.
+        - listitem [ref=f2e370]: Совпадение площади, ремонта, инженерии и комплектации с описанием объекта.
+      - article [ref=f2e371]:
+        - heading "Ипотека и материнский капитал" [level=3] [ref=f2e372]
+        - paragraph [ref=f2e373]: Перед подбором удобно заранее рассчитать ориентировочный платеж и понять комфортный диапазон бюджета. Решение банка зависит от покупателя, объекта, первоначального взноса, дохода и действующих правил банка.
+        - paragraph [ref=f2e374]: "Материнский капитал требует корректного оформления документов и учета долей. По новостройкам, сданным ЖК и семейной ипотеке условия нужно проверять на момент сделки: программы меняются, а применимость зависит от конкретного объекта."
+      - generic "FAQ по покупке квартиры в Аксае" [ref=f2e375]:
+        - heading "Частые вопросы" [level=3] [ref=f2e376]
+        - generic [ref=f2e377]:
+          - article [ref=f2e378]:
+            - heading "С чего начать покупку квартиры в Аксае?" [level=4] [ref=f2e379]
+            - paragraph [ref=f2e380]: Сначала определите бюджет, источник оплаты, желаемый срок переезда и обязательные требования к району. После этого можно сравнивать вторичку, сданные дома и новостройки без лишних просмотров.
+          - article [ref=f2e381]:
+            - 'heading "Что лучше выбрать: вторичку или новостройку?" [level=4] [ref=f2e382]'
+            - paragraph [ref=f2e383]: Вторичка удобна, если нужно быстрее заехать и увидеть фактическое состояние дома. Новостройка может подойти тем, кто готов сравнивать планировки, ремонт, условия оплаты и ипотечные программы.
+          - article [ref=f2e384]:
+            - heading "Можно ли купить квартиру в Аксае в ипотеку?" [level=4] [ref=f2e385]
+            - paragraph [ref=f2e386]: Да, но возможность ипотеки зависит от банка, покупателя и конкретного объекта. Перед авансом стоит проверить, подходит ли квартира под требования выбранного банка.
+          - article [ref=f2e387]:
+            - heading "Можно ли использовать материнский капитал?" [level=4] [ref=f2e388]
+            - paragraph [ref=f2e389]: Материнский капитал можно рассматривать как часть оплаты, если объект и сделка соответствуют требованиям. Важно заранее проверить порядок оформления и будущего выделения долей.
+          - article [ref=f2e390]:
+            - heading "Что нужно проверить перед авансом или задатком?" [level=4] [ref=f2e391]
+            - paragraph [ref=f2e392]: Нужно проверить документы, собственников, ЕГРН, обременения, условия возврата денег и сроки выхода на сделку. Аванс или задаток лучше оформлять только после понимания юридической картины.
+          - article [ref=f2e393]:
+            - heading "Почему важно заказать выписку ЕГРН?" [level=4] [ref=f2e394]
+            - paragraph [ref=f2e395]: ЕГРН показывает зарегистрированные права и ограничения по объекту. Это базовая проверка перед переговорами, авансом и подготовкой договора.
+          - article [ref=f2e396]:
+            - heading "Как понять, подходит ли район?" [level=4] [ref=f2e397]
+            - paragraph [ref=f2e398]: "Смотрите не только адрес, но и ежедневный маршрут: школа, садик, магазины, парковка, остановки и выезд в Ростов-на-Дону. Лучше оценивать район в то время суток, когда вы обычно будете им пользоваться."
+          - article [ref=f2e399]:
+            - heading "Можно ли подобрать квартиру рядом с Ростовом-на-Дону?" [level=4] [ref=f2e400]
+            - paragraph [ref=f2e401]: Да, в Аксае часто ищут жилье с удобным выездом к Ростову-на-Дону. Важно сравнить не расстояние на карте, а реальное время дороги и привычный транспортный сценарий.
+      - generic [ref=f2e402]:
+        - heading "Подобрать квартиру под вашу задачу" [level=3] [ref=f2e403]
+        - paragraph [ref=f2e404]: "Если вы выбираете квартиру в Аксае, оставьте заявку: специалист Домиан Квартал уточнит задачу, бюджет, желаемый район и подберет подходящие варианты из актуальной базы."
+        - link "Оставить заявку" [ref=f2e405] [cursor=pointer]:
+          - /url: index.html#contact
+        - generic [ref=f2e406]:
+          - article [ref=f2e407]:
+            - generic [ref=f2e408]: Альтернатива
+            - heading "Дома" [level=4] [ref=f2e409]
+            - paragraph [ref=f2e410]: Если вместо квартиры рассматриваете дом с участком в Аксае или рядом.
+            - link "Перейти в раздел домов" [ref=f2e411] [cursor=pointer]:
+              - /url: houses.html
+              - text: Перейти в раздел домов
+              - generic [ref=f2e412]: →
+          - article [ref=f2e413]:
+            - generic [ref=f2e414]: План строительства
+            - heading "Участки" [level=4] [ref=f2e415]
+            - paragraph [ref=f2e416]: Если планируете строить дом и хотите сравнить земельные предложения.
+            - link "Перейти в раздел участков" [ref=f2e417] [cursor=pointer]:
+              - /url: lands.html
+              - text: Перейти в раздел участков
+              - generic [ref=f2e418]: →
+          - article [ref=f2e419]:
+            - generic [ref=f2e420]: Первичный рынок
+            - heading "Новостройки" [level=4] [ref=f2e421]
+            - paragraph [ref=f2e422]: Если хотите сравнить вторичку с первичным рынком и сданными ЖК.
+            - link "Перейти в раздел новостроек" [ref=f2e423] [cursor=pointer]:
+              - /url: newbuilds.html
+              - text: Перейти в раздел новостроек
+              - generic [ref=f2e424]: →
+          - article [ref=f2e425]:
+            - generic [ref=f2e426]: Гид покупателя
+            - heading "Как проверить квартиру перед сделкой" [level=4] [ref=f2e427]
+            - paragraph [ref=f2e428]: Памятка для тех, кто хочет спокойно пройти проверку ЕГРН, собственников и условий сделки.
+            - link "Открыть материал" [ref=f2e429] [cursor=pointer]:
+              - /url: guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html
+              - text: Открыть материал
+              - generic [ref=f2e430]: →
+          - article [ref=f2e431]:
+            - generic [ref=f2e432]: Гид покупателя
+            - heading "Новостройка или вторичка в Аксае" [level=4] [ref=f2e433]
+            - paragraph [ref=f2e434]: Короткое сравнение форматов, сроков въезда, рисков и ипотечных сценариев.
+            - link "Сравнить форматы" [ref=f2e435] [cursor=pointer]:
+              - /url: guides/novostroyka-ili-vtorichka-v-aksaye.html
+              - text: Сравнить форматы
+              - generic [ref=f2e436]: →
+  - generic [ref=f2e439]:
+    - generic [ref=f2e440]: БЕСПЛАТНО
+    - heading "Нужна помощь с недвижимостью?" [level=2] [ref=f2e441]
+    - paragraph [ref=f2e442]: Расскажите о своей ситуации — мы подскажем оптимальное решение и возьмём на себя все сложные этапы.
+    - link "Получить консультацию" [ref=f2e443] [cursor=pointer]:
+      - /url: index.html#contact
+  - contentinfo [ref=f2e444]:
+    - generic [ref=f2e445]:
+      - navigation [ref=f2e446]: − + + +
+      - generic [ref=f2e447]:
+        - generic [ref=f2e448]:
+          - heading "Контакты" [level=3] [ref=f2e449]
+          - link "Ростовская обл., г. Аксай, ул. Толпинского 130" [ref=f2e453] [cursor=pointer]:
+            - /url: https://yandex.ru/maps/org/domian/158078581361/?ll=39.858160%2C47.260186&z=17
+          - link "+7 953 609-11-22" [ref=f2e458] [cursor=pointer]:
+            - /url: tel:+79536091122
+          - link "zuhra_2010_aidan@mail.ru" [ref=f2e462] [cursor=pointer]:
+            - /url: mailto:zuhra_2010_aidan@mail.ru
+          - generic [ref=f2e463]: Пн-Пт 8:00-20:00
+        - generic [ref=f2e467]:
+          - link "WhatsApp" [ref=f2e468] [cursor=pointer]:
+            - /url: https://wa.me/79536091122
+          - link "Telegram" [ref=f2e469] [cursor=pointer]:
+            - /url: https://t.me/httpsmealieva_rieltor
+          - link "ВКонтакте" [ref=f2e470] [cursor=pointer]:
+            - /url: https://vk.com/domian_kvartal
+      - generic [ref=f2e471]:
+        - paragraph [ref=f2e472]: © 2022-2026 АН «Домиан Квартал». Все права защищены.
+        - generic [ref=f2e473]:
+          - link "Политика конфиденциальности" [ref=f2e474] [cursor=pointer]:
+            - /url: privacy.html
+          - link "Пользовательское соглашение" [ref=f2e475] [cursor=pointer]:
+            - /url: offer.html
+          - link "Реквизиты" [ref=f2e476] [cursor=pointer]:
+            - /url: details.html
+        - paragraph [ref=f2e477]: Информация на сайте не является публичной офертой
+  - link "WhatsApp" [ref=f2e478] [cursor=pointer]:
+    - /url: https://wa.me/79536091122
