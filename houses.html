@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <title>Дома — Агентство недвижимости «Домиан Квартал»</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Дома в Аксае, Ростове-на-Дону и Ростовской области: частные дома, коттеджи и помощь с подбором.">
+    <link rel="canonical" href="https://domian-161.ru/houses.html">
+    <meta property="og:title" content="Дома — Агентство недвижимости «Домиан Квартал»">
+    <meta property="og:description" content="Дома в Аксае, Ростове-на-Дону и Ростовской области: частные дома, коттеджи и помощь с подбором.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://domian-161.ru/houses.html">
+    <meta property="og:image" content="https://domian-161.ru/assets/hero/hero.jpg">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/visual-premium.css">
+    <link rel="stylesheet" href="assets/css/showcase.css">
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         window.DOMIAN_METRIKA_ID = 109303205;
@@ -25,36 +33,80 @@
 
 <header>
     <div class="header-inner">
+        <span class="header-mobile-spacer" aria-hidden="true"></span>
         <a href="index.html" class="logo">Домиан · офис «Квартал»</a>
         <nav>
             <a href="index.html">Главная</a>
             <a href="apartments.html">Квартиры</a>
-            <a href="houses.html">Дома</a>
+            <a href="houses.html" aria-current="page">Дома</a>
             <a href="lands.html">Участки</a>
             <a href="newbuilds.html">Новостройки</a>
+            <a href="rent.html">Аренда</a>
             <a href="construction.html">Строительство домов</a>
             <a href="commercial.html">Коммерческая недвижимость</a>
             <a href="team/zukhra-alieva.html">Команда</a>
         </nav>
         <div class="header-contacts">
             <a href="tel:+79536091122">+7 953 609-11-22</a>
+            <a href="https://wa.me/79536091122" target="_blank" rel="noopener noreferrer" class="header-contacts__messenger">WhatsApp</a>
+            <a href="https://t.me/httpsmealieva_rieltor" target="_blank" rel="noopener noreferrer" class="header-contacts__messenger">Telegram</a>
         </div>
+        <button class="mobile-menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-drawer">
+            <span></span><span></span><span></span>
+        </button>
     </div>
 </header>
 
-<section class="hero">
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="Мобильное меню">
+        <button class="mobile-drawer__close" type="button" aria-label="Закрыть меню">×</button>
+        <div class="mobile-drawer__title">Навигация</div>
+        <nav class="mobile-drawer__nav">
+            <a href="index.html">Главная</a>
+            <a href="apartments.html">Квартиры</a>
+            <a href="houses.html" aria-current="page">Дома</a>
+            <a href="lands.html">Участки</a>
+            <a href="newbuilds.html">Новостройки</a>
+            <a href="rent.html">Аренда</a>
+            <a href="construction.html">Строительство домов</a>
+            <a href="commercial.html">Коммерческая недвижимость</a>
+            <a href="team/zukhra-alieva.html">Команда</a>
+        </nav>
+        <div class="mobile-drawer__actions">
+            <a class="mobile-drawer__call" href="tel:+79536091122">+7 953 609-11-22</a>
+            <a class="mobile-drawer__messenger" href="https://wa.me/79536091122">WhatsApp</a>
+            <a class="mobile-drawer__messenger" href="https://t.me/httpsmealieva_rieltor">Telegram</a>
+        </div>
+    </div>
+</div>
+
+<section class="hero has-eyebrow">
     <div class="container fade-in">
-        <h2>ПОДБЕРЁМ И ОФОРМИМ<br><span>НЕДВИЖИМОСТЬ ЗА 2 ДНЯ</span></h2>
-        <p>Квартиры · Дома · Участки · Коммерция в Аксае и Ростовской области</p>
+        <span class="hero-eyebrow">Дома в продаже</span>
+        <h1>Дома в Аксае и Ростовской области</h1>
+        <p>Подбор домов для жизни, переезда и инвестиций.</p>
         <div class="hero-actions">
-            <a href="apartments.html" class="btn">Смотреть квартиры</a>
+            <a href="houses.html" class="btn">Смотреть дома</a>
             <a href="index.html#contact" class="btn secondary">Консультация</a>
         </div>
     </div>
 </section>
 
 <main>
-    <h1>Дома в продаже</h1>
+    <h2>Каталог домов</h2>
+    <section class="showcase-section showcase-section--plain" id="aksay-house-showcase">
+        <div class="container">
+            <div class="showcase-section__head">
+                <span class="showcase-section__eyebrow">Лучшие объекты</span>
+                <h2>Лучшие дома в Аксае</h2>
+                <p>Подобрали дома, которые чаще всего интересуют покупателей: семейные планировки, востребованные районы и прозрачный бюджет покупки.</p>
+            </div>
+            <div class="showcase-grid" data-showcase="aksay-secondary" data-type="house" data-limit="5" data-cta-label="Подробнее"></div>
+            <div class="showcase-section__actions">
+                <a href="showcase-aksay-secondary.html" class="btn secondary">Смотреть все объекты</a>
+            </div>
+        </div>
+    </section>
     <section class="listing-new-objects" id="listing-new-objects">
         <h2>НОВЫЕ ОБЪЕКТЫ</h2>
         <div class="new-objects-grid" id="listing-new-objects-cards"></div>
@@ -73,6 +125,7 @@
                 <div class="seo-content__lead">
                     <span class="seo-content__eyebrow">Вторичный рынок домов</span>
                     <h2 id="houses-seo-title">Дома в Аксае на вторичном рынке: где искать и что проверить перед покупкой</h2>
+                    <p class="seo-answer">При покупке дома в Аксае безопаснее начинать с проверки дома и земли: права и обременения по ЕГРН, назначение земли, границы участка, подъезд, коммуникации и фактическое состояние объекта.</p>
                     <p>Вторичные дома в Аксае — это не один тип объекта, а широкий сегмент: старый индивидуальный фонд, кирпичные дома 1980-х–2000-х, современные дома 120–200 м², части дома, таунхаусы и дуплексы. Поэтому выбор обычно строится не только вокруг площади, но и вокруг сценария жизни, участка и состояния коммуникаций.</p>
                     <p>По открытой экспозиции объём предложений по домам в Аксае заметно выше, чем по квартирам, а разброс форматов и качества объектов шире. Главная практическая задача покупателя — читать рынок по улицам и проверять не только сам дом, но и юридическую и фактическую конфигурацию земли.</p>
                 </div>
@@ -248,6 +301,13 @@
                         <p>Если хотите сравнить частный дом с новым жилым фондом.</p>
                         <a href="newbuilds.html">Перейти в раздел новостроек <span aria-hidden="true">→</span></a>
                     </article>
+                    <article class="seo-content__link-card">
+                        <span class="seo-content__link-badge">Гид покупателя</span>
+                        <h4 class="seo-content__card-title">Как купить дом в Аксае без лишних рисков</h4>
+                        <p>Пошаговые материалы помогут сравнить дом в городе, дом рядом с Ростовом и документы перед сделкой.</p>
+                        <a href="guides/chto-proverit-pered-pokupkoy-doma-v-aksaye.html">Что проверить перед покупкой дома <span aria-hidden="true">→</span></a>
+                        <a href="guides/gde-kupit-dom-v-aksaye-ryadom-s-rostovom.html">Где купить дом рядом с Ростовом <span aria-hidden="true">→</span></a>
+                    </article>
                 </div>
             </div>
         </div>
@@ -260,7 +320,7 @@
             <span class="footer-cta-badge">БЕСПЛАТНО</span>
             <h2>Нужна помощь с недвижимостью?</h2>
             <p>Расскажите о своей ситуации — мы подскажем оптимальное решение и возьмём на себя все сложные этапы.</p>
-            <a href="index.html#contact" class="btn">Получить консультацию</a>
+            <a href="index.html#lead-form-section" class="btn">Получить консультацию</a>
         </div>
     </div>
 </section>
@@ -278,19 +338,20 @@
                         <li><a href="houses.html">Дома</a></li>
                         <li><a href="lands.html">Участки</a></li>
                         <li><a href="newbuilds.html">Новостройки</a></li>
-                        <li><a href="apartments.html">Коммерческая</a></li>
+                        <li><a href="rent.html">Аренда</a></li>
+                        <li><a href="commercial.html">Коммерческая</a></li>
                     </ul>
                 </div>
                 <!-- Колонка 2: Услуги -->
                 <div class="footer-column">
                     <h3>Услуги</h3>
                     <ul>
-                        <li><a href="#contact">Покупка недвижимости</a></li>
-                        <li><a href="#contact">Продажа недвижимости</a></li>
-                        <li><a href="#mortgage">Ипотека</a></li>
-                        <li><a href="#contact">Юридическое сопровождение</a></li>
-                        <li><a href="#contact">Оценка недвижимости</a></li>
-                        <li><a href="#contact">Подбор недвижимости</a></li>
+                        <li><a href="index.html#contact">Покупка недвижимости</a></li>
+                        <li><a href="index.html#contact">Продажа недвижимости</a></li>
+                        <li><a href="index.html#mortgage">Ипотека</a></li>
+                        <li><a href="index.html#contact">Юридическое сопровождение</a></li>
+                        <li><a href="index.html#contact">Оценка недвижимости</a></li>
+                        <li><a href="index.html#contact">Подбор недвижимости</a></li>
                     </ul>
                 </div>
                 <!-- Колонка 3: Компания -->
@@ -299,20 +360,21 @@
                     <ul>
                         <li><a href="index.html">О компании</a></li>
                         <li><a href="team/zukhra-alieva.html">Сотрудники</a></li>
-                        <li><a href="#reviews">Отзывы</a></li>
-                        <li><a href="#contact">Вакансии</a></li>
-                        <li><a href="#contact">Контакты</a></li>
+                        <li><a href="index.html#reviews">Отзывы</a></li>
+                        <li><a href="index.html#contact">Вакансии</a></li>
+                        <li><a href="index.html#contact">Контакты</a></li>
                     </ul>
                 </div>
                 <!-- Колонка 4: Клиентам -->
                 <div class="footer-column">
                     <h3>Клиентам</h3>
                     <ul>
-                        <li><a href="#mortgage">Ипотечный калькулятор</a></li>
-                        <li><a href="#contact">Партнерские услуги</a></li>
-                        <li><a href="#contact">Строительство домов</a></li>
+                        <li><a href="index.html#mortgage">Ипотечный калькулятор</a></li>
+                        <li><a href="index.html#contact">Партнерские услуги</a></li>
+                        <li><a href="construction.html">Строительство домов</a></li>
                         <li><a href="privacy.html">Документы</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                        <li><a href="guides/index.html">Гид покупателя</a></li>
                     </ul>
                 </div>
             </div>
@@ -393,5 +455,6 @@
 
 <script src="assets/js/main.js" defer></script>
 <script src="assets/js/catalog-mortgage.js" defer></script>
+<script src="assets/js/showcase-cards.js" defer></script>
 </body>
 </html>

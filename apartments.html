@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <title>Квартиры — Агентство недвижимости «Домиан Квартал»</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Квартиры в Аксае, Ростове-на-Дону и Ростовской области: вторичный рынок, удобные локации и помощь с подбором.">
+    <link rel="canonical" href="https://domian-161.ru/apartments.html">
+    <meta property="og:title" content="Квартиры — Агентство недвижимости «Домиан Квартал»">
+    <meta property="og:description" content="Квартиры в Аксае, Ростове-на-Дону и Ростовской области: вторичный рынок, удобные локации и помощь с подбором.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://domian-161.ru/apartments.html">
+    <meta property="og:image" content="https://domian-161.ru/assets/hero/hero.jpg">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/visual-premium.css">
+    <link rel="stylesheet" href="assets/css/showcase.css">
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         window.DOMIAN_METRIKA_ID = 109303205;
@@ -25,27 +33,58 @@
 
 <header>
     <div class="header-inner">
+        <span class="header-mobile-spacer" aria-hidden="true"></span>
         <a href="index.html" class="logo">Домиан · офис «Квартал»</a>
         <nav>
             <a href="index.html">Главная</a>
-            <a href="apartments.html">Квартиры</a>
+            <a href="apartments.html" aria-current="page">Квартиры</a>
             <a href="houses.html">Дома</a>
             <a href="lands.html">Участки</a>
             <a href="newbuilds.html">Новостройки</a>
+            <a href="rent.html">Аренда</a>
             <a href="construction.html">Строительство домов</a>
             <a href="commercial.html">Коммерческая недвижимость</a>
             <a href="team/zukhra-alieva.html">Команда</a>
         </nav>
         <div class="header-contacts">
             <a href="tel:+79536091122">+7 953 609-11-22</a>
+            <a href="https://wa.me/79536091122" target="_blank" rel="noopener noreferrer" class="header-contacts__messenger">WhatsApp</a>
+            <a href="https://t.me/httpsmealieva_rieltor" target="_blank" rel="noopener noreferrer" class="header-contacts__messenger">Telegram</a>
         </div>
+        <button class="mobile-menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-drawer">
+            <span></span><span></span><span></span>
+        </button>
     </div>
 </header>
 
-<section class="hero">
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="Мобильное меню">
+        <button class="mobile-drawer__close" type="button" aria-label="Закрыть меню">×</button>
+        <div class="mobile-drawer__title">Навигация</div>
+        <nav class="mobile-drawer__nav">
+            <a href="index.html">Главная</a>
+            <a href="apartments.html" aria-current="page">Квартиры</a>
+            <a href="houses.html">Дома</a>
+            <a href="lands.html">Участки</a>
+            <a href="newbuilds.html">Новостройки</a>
+            <a href="rent.html">Аренда</a>
+            <a href="construction.html">Строительство домов</a>
+            <a href="commercial.html">Коммерческая недвижимость</a>
+            <a href="team/zukhra-alieva.html">Команда</a>
+        </nav>
+        <div class="mobile-drawer__actions">
+            <a class="mobile-drawer__call" href="tel:+79536091122">+7 953 609-11-22</a>
+            <a class="mobile-drawer__messenger" href="https://wa.me/79536091122">WhatsApp</a>
+            <a class="mobile-drawer__messenger" href="https://t.me/httpsmealieva_rieltor">Telegram</a>
+        </div>
+    </div>
+</div>
+
+<section class="hero has-eyebrow">
     <div class="container fade-in">
-        <h2>ПОДБЕРЁМ И ОФОРМИМ<br><span>НЕДВИЖИМОСТЬ ЗА 2 ДНЯ</span></h2>
-        <p>Квартиры · Дома · Участки · Коммерция в Аксае и Ростовской области</p>
+        <span class="hero-eyebrow">Квартиры в продаже</span>
+        <h1>Квартиры в продаже</h1>
+        <p>Подбор квартир в Аксае, Ростове-на-Дону и Ростовской области.</p>
         <div class="hero-actions">
             <a href="apartments.html" class="btn">Смотреть квартиры</a>
             <a href="index.html#contact" class="btn secondary">Консультация</a>
@@ -54,7 +93,20 @@
 </section>
 
 <main>
-    <h1>Квартиры в продаже</h1>
+    <h2>Каталог квартир</h2>
+    <section class="showcase-section showcase-section--plain" id="aksay-apartment-showcase">
+        <div class="container">
+            <div class="showcase-section__head">
+                <span class="showcase-section__eyebrow">Лучшие объекты</span>
+                <h2>Лучшие квартиры в Аксае</h2>
+                <p>Подобрали квартиры, которые чаще всего выбирают покупатели: удобные локации, актуальные цены и востребованные планировки.</p>
+            </div>
+            <div class="showcase-grid" data-showcase="aksay-secondary" data-type="apartment" data-limit="5" data-cta-label="Подробнее"></div>
+            <div class="showcase-section__actions">
+                <a href="showcase-aksay-secondary.html" class="btn secondary">Смотреть все объекты</a>
+            </div>
+        </div>
+    </section>
     <section class="listing-new-objects" id="listing-new-objects">
         <h2>НОВЫЕ ОБЪЕКТЫ</h2>
         <div class="new-objects-grid" id="listing-new-objects-cards"></div>
@@ -73,12 +125,12 @@
                 <div class="seo-content__lead">
                     <span class="seo-content__eyebrow">Вторичный рынок Аксая</span>
                     <h2 id="apartments-seo-title">Квартиры в Аксае на вторичном рынке: где искать и как выбрать</h2>
-                    <p>По открытой экспозиции вторичные квартиры в Аксае формируют заметный и разнообразный сегмент: на рынке одновременно представлены 1-комнатные и 2-комнатные варианты, более ограниченный объём 3-комнатных квартир, а также студии.</p>
-                    <p>Отдельно выделяется пласт объектов с ремонтом и свежая вторичка в уже сданных жилых комплексах, где покупатель получает более современный дом без ожидания завершения строительства.</p>
+                    <p class="seo-answer">На вторичном рынке Аксая одновременно представлены компактные квартиры, семейные форматы и свежая вторичка в сданных жилых комплексах. Выбирать стоит не только по площади и цене: важны конкретная улица, состояние дома, ежедневный маршрут и юридическая чистота объекта.</p>
+                    <p>Отдельно выделяется свежая вторичка в уже сданных домах: покупатель получает более современную среду без ожидания завершения строительства.</p>
                 </div>
                 <figure class="seo-image">
                     <img src="assets/img/seo/apartments-aksay-map.png" alt="Карта жилых районов и центральных улиц Аксая для выбора квартиры" loading="lazy">
-                    <figcaption>Карта Аксая помогает заранее понять расположение жилых районов, выездов и повседневных маршрутов по городу.</figcaption>
+                    <figcaption>Карта Аксая помогает заранее оценить расположение жилых районов, выездов и повседневных маршрутов.</figcaption>
                 </figure>
             </div>
 
@@ -86,15 +138,15 @@
             <div class="seo-content__grid seo-content__grid--market">
                 <article class="seo-content__card">
                     <h4 class="seo-content__card-title">1–2-комнатные квартиры</h4>
-                    <p>Основной массовый формат на вторичном рынке Аксая: чаще всего именно эти объекты формируют базу для выбора.</p>
+                    <p>Основной массовый формат: чаще всего именно эти объекты формируют базу для выбора первой квартиры, жилья для пары или небольшой семьи.</p>
                 </article>
                 <article class="seo-content__card">
                     <h4 class="seo-content__card-title">3-комнатные квартиры</h4>
-                    <p>Семейный сегмент с устойчивым спросом и меньшим количеством предложений по сравнению с компактными форматами.</p>
+                    <p>Семейный сегмент с устойчивым спросом и более ограниченным предложением по сравнению с компактными форматами.</p>
                 </article>
                 <article class="seo-content__card">
                     <h4 class="seo-content__card-title">Студии</h4>
-                    <p>Компактный формат, который встречается на вторичке, но не является доминирующим в структуре предложения.</p>
+                    <p>Компактный формат для первого жилья или аренды, который встречается на вторичке, но не доминирует в структуре предложения.</p>
                 </article>
                 <article class="seo-content__card">
                     <h4 class="seo-content__card-title">Свежая вторичка</h4>
@@ -106,122 +158,88 @@
             <div class="seo-content__grid seo-content__grid--locations">
                 <article class="seo-content__card">
                     <h4 class="seo-content__card-title">Ленина, Садовая, Мира, Платова</h4>
-                    <div class="seo-content__tags" aria-label="Теги локации">
-                        <span class="seo-content__tag">Центр</span>
-                        <span class="seo-content__tag">Для семьи</span>
-                        <span class="seo-content__tag">Ликвидность</span>
-                    </div>
+                    <div class="seo-content__tags" aria-label="Теги локации"><span class="seo-content__tag">Центр</span><span class="seo-content__tag">Для семьи</span><span class="seo-content__tag">Ликвидность</span></div>
                     <p>Центральная городская ось с высокой концентрацией сервисов и повседневной инфраструктуры.</p>
-                    <p class="seo-content__note"><strong>Подходит для:</strong> семьи, покупателей первой квартиры, тех, кому важна ликвидность.</p>
-                    <p class="seo-content__note"><strong>На что обратить внимание:</strong> нагрузка на парковку и чувствительность к трафику.</p>
+                    <p class="seo-content__note"><strong>Подходит для:</strong> семьи, первой квартиры и тех, кому важна ликвидность.</p>
+                    <p class="seo-content__note"><strong>Проверить:</strong> парковку, трафик и фактический шум у конкретного дома.</p>
                 </article>
                 <article class="seo-content__card">
                     <h4 class="seo-content__card-title">Чапаева, Коминтерна, Гулаева, Вартанова</h4>
-                    <div class="seo-content__tags" aria-label="Теги локации">
-                        <span class="seo-content__tag">Семейный формат</span>
-                        <span class="seo-content__tag">Первое жильё</span>
-                        <span class="seo-content__tag">Аренда</span>
-                    </div>
+                    <div class="seo-content__tags" aria-label="Теги локации"><span class="seo-content__tag">Семейный формат</span><span class="seo-content__tag">Первое жильё</span><span class="seo-content__tag">Аренда</span></div>
                     <p>Смешанный фонд и типовые семейные метражи с разным годом постройки и неоднородным состоянием дворов.</p>
-                    <p class="seo-content__note"><strong>Подходит для:</strong> семей с детьми, покупателей под аренду, стартового бюджета.</p>
-                    <p class="seo-content__note"><strong>На что обратить внимание:</strong> проверка дома и подъезда по каждому адресу отдельно.</p>
+                    <p class="seo-content__note"><strong>Подходит для:</strong> семей с детьми, покупателей под аренду и стартового бюджета.</p>
+                    <p class="seo-content__note"><strong>Проверить:</strong> дом, подъезд и двор по каждому адресу отдельно.</p>
                 </article>
                 <article class="seo-content__card">
                     <h4 class="seo-content__card-title">Речников, Строителей и сданные ЖК</h4>
-                    <div class="seo-content__tags" aria-label="Теги локации">
-                        <span class="seo-content__tag">Свежий фонд</span>
-                        <span class="seo-content__tag">Новый дом</span>
-                        <span class="seo-content__tag">Без ожидания стройки</span>
-                    </div>
-                    <p>Сегмент свежей вторички с более современными планировками и средой, близкой к новому фонду.</p>
+                    <div class="seo-content__tags" aria-label="Теги локации"><span class="seo-content__tag">Свежий фонд</span><span class="seo-content__tag">Новый дом</span><span class="seo-content__tag">Без ожидания стройки</span></div>
+                    <p>Сегмент свежей вторички с современными планировками и средой, близкой к новому фонду.</p>
                     <p class="seo-content__note"><strong>Подходит для:</strong> тех, кто хочет новый дом без ожидания стройки.</p>
-                    <p class="seo-content__note"><strong>На что обратить внимание:</strong> транспортный сценарий и ежедневную логистику.</p>
+                    <p class="seo-content__note"><strong>Проверить:</strong> транспортный сценарий и ежедневную логистику.</p>
                     <figure class="seo-image">
                         <img src="assets/img/seo/apartments-residential-yard.jpg" alt="Современный жилой двор и сданные дома для выбора квартиры в Аксае" loading="lazy">
-                        <figcaption>Свежая вторичка в сданных домах показывает более современную городскую среду без ожидания стройки.</figcaption>
+                        <figcaption>Свежая вторичка позволяет оценить готовый двор и дом до сделки.</figcaption>
                     </figure>
                 </article>
             </div>
 
             <figure class="seo-image seo-image--wide">
-                <img src="assets/img/seo/apartments-city-quarter.png" alt="Современный городской квартал и плотная жилая застройка для выбора квартиры в Аксае" loading="lazy">
-                <figcaption>Городская жилая среда важна тем, кто выбирает квартиру рядом с магазинами, школами, транспортом и понятной структурой кварталов.</figcaption>
+                <img src="assets/img/seo/apartments-city-quarter.png" alt="Современный городской квартал для выбора квартиры в Аксае" loading="lazy">
+                <figcaption>При выборе квартиры важно оценивать не только дом, но и весь повседневный контур квартала.</figcaption>
             </figure>
 
             <div class="seo-content__scenario" aria-label="Сценарии выбора квартиры">
                 <h3>Какой сценарий выбрать</h3>
                 <div class="seo-content__scenario-grid">
-                    <article class="seo-content__scenario-item">
-                        <h4 class="seo-content__card-title">Семья с детьми</h4>
-                        <p>Садовая, Ленина, Чапаева, Коминтерна.</p>
-                    </article>
-                    <article class="seo-content__scenario-item">
-                        <h4 class="seo-content__card-title">Первая квартира</h4>
-                        <p>Гулаева, Вартанова, компактные форматы.</p>
-                    </article>
-                    <article class="seo-content__scenario-item">
-                        <h4 class="seo-content__card-title">Под аренду</h4>
-                        <p>Ленина, Садовая, Платова, свежая вторичка.</p>
-                    </article>
-                    <article class="seo-content__scenario-item">
-                        <h4 class="seo-content__card-title">Новый дом без ожидания стройки</h4>
-                        <p>Речников, Строителей, сданные ЖК.</p>
-                    </article>
+                    <article class="seo-content__scenario-item"><h4 class="seo-content__card-title">Семья с детьми</h4><p>Садовая, Ленина, Чапаева, Коминтерна.</p></article>
+                    <article class="seo-content__scenario-item"><h4 class="seo-content__card-title">Первая квартира</h4><p>Гулаева, Вартанова и компактные форматы.</p></article>
+                    <article class="seo-content__scenario-item"><h4 class="seo-content__card-title">Под аренду</h4><p>Ленина, Садовая, Платова и свежая вторичка.</p></article>
+                    <article class="seo-content__scenario-item"><h4 class="seo-content__card-title">Новый дом без ожидания</h4><p>Речников, Строителей и сданные ЖК.</p></article>
                 </div>
             </div>
 
             <h3>Вторичка или новостройка: что выбрать</h3>
             <div class="seo-content__compare">
-                <article class="seo-content__card">
-                    <h4 class="seo-content__card-title">Вторичка в Аксае</h4>
-                    <p>Обычно даёт более широкий выбор по адресам и позволяет быстрее выйти на сделку.</p>
-                    <p class="seo-content__note">Подходит тем, кто хочет сравнивать улицы и дома в реальном жилом контуре города.</p>
-                </article>
-                <article class="seo-content__card">
-                    <h4 class="seo-content__card-title">Новостройка / свежая вторичка</h4>
-                    <p>Чаще привлекает возрастом дома и более современными инженерными решениями.</p>
-                    <p class="seo-content__note">Свежая вторичка в сданных ЖК — компромисс между скоростью сделки и новым качеством среды.</p>
-                </article>
+                <article class="seo-content__card"><h4 class="seo-content__card-title">Вторичка в Аксае</h4><p>Даёт широкий выбор по адресам и позволяет увидеть фактическое состояние дома, двора и окружения.</p><p class="seo-content__note">Подходит тем, кому важны быстрый переезд и понятный жилой контур.</p></article>
+                <article class="seo-content__card"><h4 class="seo-content__card-title">Новостройка или свежая вторичка</h4><p>Привлекает возрастом дома, современными планировками и инженерными решениями.</p><p class="seo-content__note">Сданный ЖК может стать компромиссом между новым качеством среды и отсутствием ожидания стройки.</p></article>
             </div>
 
             <h3>Что проверить перед покупкой квартиры</h3>
             <ul class="seo-content__checklist">
-                <li>Документы и отсутствие обременений по объекту.</li>
-                <li>Год постройки и техническое состояние дома.</li>
-                <li>Состояние подъезда, двора и общих зон.</li>
-                <li>Реальная ситуация с парковкой в разное время суток.</li>
-                <li>Качество ремонта и инженерной части квартиры.</li>
-                <li>Фактические коммунальные платежи и расходы на содержание.</li>
+                <li>Актуальную выписку ЕГРН по объекту.</li>
+                <li>Состав собственников и основания владения квартирой.</li>
+                <li>Обременения, аресты, запреты регистрационных действий.</li>
+                <li>Ипотеку, залог и порядок снятия ограничений при сделке.</li>
+                <li>Использование материнского капитала и выделение долей, если он применялся.</li>
+                <li>Перепланировки и соответствие документов фактическому состоянию квартиры.</li>
+                <li>Долги, зарегистрированных лиц и порядок освобождения квартиры.</li>
+                <li>Совпадение площади, ремонта, инженерии и комплектации с описанием объекта.</li>
             </ul>
 
-            <div class="seo-content__faq" aria-label="FAQ по вторичным квартирам в Аксае">
+            <article class="seo-content__card seo-content__wide-card">
+                <h3>Ипотека и материнский капитал</h3>
+                <p>Перед подбором удобно заранее рассчитать ориентировочный платеж и понять комфортный диапазон бюджета. Решение банка зависит от покупателя, объекта, первоначального взноса, дохода и действующих правил банка.</p>
+                <p>Материнский капитал требует корректного оформления документов и учета долей. По новостройкам, сданным ЖК и семейной ипотеке условия нужно проверять на момент сделки: программы меняются, а применимость зависит от конкретного объекта.</p>
+            </article>
+
+            <div class="seo-faq seo-content__faq" aria-label="FAQ по покупке квартиры в Аксае">
                 <h3>Частые вопросы</h3>
                 <div class="seo-content__grid seo-content__grid--faq">
-                    <article class="seo-content__faq-item">
-                        <h4 class="seo-content__card-title">Где лучше купить вторичную квартиру в Аксае?</h4>
-                        <p>Сравнивают центральную ось Ленина–Садовая–Мира–Платова и семейные кварталы Чапаева–Коминтерна–Вартанова, исходя из бюджета и сценария жизни.</p>
-                    </article>
-                    <article class="seo-content__faq-item">
-                        <h4 class="seo-content__card-title">Какие улицы Аксая удобны для семьи?</h4>
-                        <p>Чаще всего рассматривают Садовую, Ленина, Чапаева и Коминтерна, где проще выстроить ежедневный маршрут семьи.</p>
-                    </article>
-                    <article class="seo-content__faq-item">
-                        <h4 class="seo-content__card-title">Где искать свежую вторичку в Аксае?</h4>
-                        <p>В первую очередь в зоне Речников и Строителей, а также в квартирах сданных ЖК, уже вышедших на вторичный рынок.</p>
-                    </article>
-                    <article class="seo-content__faq-item">
-                        <h4 class="seo-content__card-title">Что лучше: вторичка или новостройка?</h4>
-                        <p>Вторичка чаще быстрее по сделке и шире по адресам, а новостройка обычно сильнее по новизне дома и инженерии.</p>
-                    </article>
-                    <article class="seo-content__faq-item">
-                        <h4 class="seo-content__card-title">Что проверить перед покупкой квартиры?</h4>
-                        <p>Документы, обременения, год дома, состояние подъезда и двора, качество ремонта, парковку и реальные коммунальные расходы.</p>
-                    </article>
+                    <article class="seo-content__faq-item"><h4 class="seo-content__card-title">С чего начать покупку квартиры в Аксае?</h4><p>Сначала определите бюджет, источник оплаты, желаемый срок переезда и обязательные требования к району. После этого можно сравнивать вторичку, сданные дома и новостройки без лишних просмотров.</p></article>
+                    <article class="seo-content__faq-item"><h4 class="seo-content__card-title">Что лучше выбрать: вторичку или новостройку?</h4><p>Вторичка удобна, если нужно быстрее заехать и увидеть фактическое состояние дома. Новостройка может подойти тем, кто готов сравнивать планировки, ремонт, условия оплаты и ипотечные программы.</p></article>
+                    <article class="seo-content__faq-item"><h4 class="seo-content__card-title">Можно ли купить квартиру в Аксае в ипотеку?</h4><p>Да, но возможность ипотеки зависит от банка, покупателя и конкретного объекта. Перед авансом стоит проверить, подходит ли квартира под требования выбранного банка.</p></article>
+                    <article class="seo-content__faq-item"><h4 class="seo-content__card-title">Можно ли использовать материнский капитал?</h4><p>Материнский капитал можно рассматривать как часть оплаты, если объект и сделка соответствуют требованиям. Важно заранее проверить порядок оформления и будущего выделения долей.</p></article>
+                    <article class="seo-content__faq-item"><h4 class="seo-content__card-title">Что нужно проверить перед авансом или задатком?</h4><p>Нужно проверить документы, собственников, ЕГРН, обременения, условия возврата денег и сроки выхода на сделку. Аванс или задаток лучше оформлять только после понимания юридической картины.</p></article>
+                    <article class="seo-content__faq-item"><h4 class="seo-content__card-title">Почему важно заказать выписку ЕГРН?</h4><p>ЕГРН показывает зарегистрированные права и ограничения по объекту. Это базовая проверка перед переговорами, авансом и подготовкой договора.</p></article>
+                    <article class="seo-content__faq-item"><h4 class="seo-content__card-title">Как понять, подходит ли район?</h4><p>Смотрите не только адрес, но и ежедневный маршрут: школа, садик, магазины, парковка, остановки и выезд в Ростов-на-Дону. Лучше оценивать район в то время суток, когда вы обычно будете им пользоваться.</p></article>
+                    <article class="seo-content__faq-item"><h4 class="seo-content__card-title">Можно ли подобрать квартиру рядом с Ростовом-на-Дону?</h4><p>Да, в Аксае часто ищут жилье с удобным выездом к Ростову-на-Дону. Важно сравнить не расстояние на карте, а реальное время дороги и привычный транспортный сценарий.</p></article>
                 </div>
             </div>
 
-            <div class="seo-content__links" aria-label="Связанные разделы каталога">
-                <h3>Смежные разделы</h3>
+            <div class="seo-cta seo-content__links">
+                <h3>Подобрать квартиру под вашу задачу</h3>
+                <p>Если вы выбираете квартиру в Аксае, оставьте заявку: специалист Домиан Квартал уточнит задачу, бюджет, желаемый район и подберет подходящие варианты из актуальной базы.</p>
+                <a class="btn" href="index.html#lead-form-section">Оставить заявку</a>
                 <div class="seo-content__grid seo-content__grid--links">
                     <article class="seo-content__link-card">
                         <span class="seo-content__link-badge">Альтернатива</span>
@@ -236,10 +254,22 @@
                         <a href="lands.html">Перейти в раздел участков <span aria-hidden="true">→</span></a>
                     </article>
                     <article class="seo-content__link-card">
-                        <span class="seo-content__link-badge">Сравнение</span>
+                        <span class="seo-content__link-badge">Первичный рынок</span>
                         <h4 class="seo-content__card-title">Новостройки</h4>
                         <p>Если хотите сравнить вторичку с первичным рынком и сданными ЖК.</p>
                         <a href="newbuilds.html">Перейти в раздел новостроек <span aria-hidden="true">→</span></a>
+                    </article>
+                    <article class="seo-content__link-card">
+                        <span class="seo-content__link-badge">Гид покупателя</span>
+                        <h4 class="seo-content__card-title">Как проверить квартиру перед сделкой</h4>
+                        <p>Памятка для тех, кто хочет спокойно пройти проверку ЕГРН, собственников и условий сделки.</p>
+                        <a href="guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html">Открыть материал <span aria-hidden="true">→</span></a>
+                    </article>
+                    <article class="seo-content__link-card">
+                        <span class="seo-content__link-badge">Гид покупателя</span>
+                        <h4 class="seo-content__card-title">Новостройка или вторичка в Аксае</h4>
+                        <p>Короткое сравнение форматов, сроков въезда, рисков и ипотечных сценариев.</p>
+                        <a href="guides/novostroyka-ili-vtorichka-v-aksaye.html">Сравнить форматы <span aria-hidden="true">→</span></a>
                     </article>
                 </div>
             </div>
@@ -253,7 +283,7 @@
             <span class="footer-cta-badge">БЕСПЛАТНО</span>
             <h2>Нужна помощь с недвижимостью?</h2>
             <p>Расскажите о своей ситуации — мы подскажем оптимальное решение и возьмём на себя все сложные этапы.</p>
-            <a href="index.html#contact" class="btn">Получить консультацию</a>
+            <a href="index.html#lead-form-section" class="btn">Получить консультацию</a>
         </div>
     </div>
 </section>
@@ -271,19 +301,20 @@
                         <li><a href="houses.html">Дома</a></li>
                         <li><a href="lands.html">Участки</a></li>
                         <li><a href="newbuilds.html">Новостройки</a></li>
-                        <li><a href="apartments.html">Коммерческая</a></li>
+                        <li><a href="rent.html">Аренда</a></li>
+                        <li><a href="commercial.html">Коммерческая</a></li>
                     </ul>
                 </div>
                 <!-- Колонка 2: Услуги -->
                 <div class="footer-column">
                     <h3>Услуги</h3>
                     <ul>
-                        <li><a href="#contact">Покупка недвижимости</a></li>
-                        <li><a href="#contact">Продажа недвижимости</a></li>
-                        <li><a href="#mortgage">Ипотека</a></li>
-                        <li><a href="#contact">Юридическое сопровождение</a></li>
-                        <li><a href="#contact">Оценка недвижимости</a></li>
-                        <li><a href="#contact">Подбор недвижимости</a></li>
+                        <li><a href="index.html#contact">Покупка недвижимости</a></li>
+                        <li><a href="index.html#contact">Продажа недвижимости</a></li>
+                        <li><a href="index.html#mortgage">Ипотека</a></li>
+                        <li><a href="index.html#contact">Юридическое сопровождение</a></li>
+                        <li><a href="index.html#contact">Оценка недвижимости</a></li>
+                        <li><a href="index.html#contact">Подбор недвижимости</a></li>
                     </ul>
                 </div>
                 <!-- Колонка 3: Компания -->
@@ -292,20 +323,21 @@
                     <ul>
                         <li><a href="index.html">О компании</a></li>
                         <li><a href="team/zukhra-alieva.html">Сотрудники</a></li>
-                        <li><a href="#reviews">Отзывы</a></li>
-                        <li><a href="#contact">Вакансии</a></li>
-                        <li><a href="#contact">Контакты</a></li>
+                        <li><a href="index.html#reviews">Отзывы</a></li>
+                        <li><a href="index.html#contact">Вакансии</a></li>
+                        <li><a href="index.html#contact">Контакты</a></li>
                     </ul>
                 </div>
                 <!-- Колонка 4: Клиентам -->
                 <div class="footer-column">
                     <h3>Клиентам</h3>
                     <ul>
-                        <li><a href="#mortgage">Ипотечный калькулятор</a></li>
-                        <li><a href="#contact">Партнерские услуги</a></li>
-                        <li><a href="#contact">Строительство домов</a></li>
+                        <li><a href="index.html#mortgage">Ипотечный калькулятор</a></li>
+                        <li><a href="index.html#contact">Партнерские услуги</a></li>
+                        <li><a href="construction.html">Строительство домов</a></li>
                         <li><a href="privacy.html">Документы</a></li>
-                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                        <li><a href="guides/index.html">Гид покупателя</a></li>
                     </ul>
                 </div>
             </div>
@@ -386,5 +418,6 @@
 
 <script src="assets/js/main.js" defer></script>
 <script src="assets/js/catalog-mortgage.js" defer></script>
+<script src="assets/js/showcase-cards.js" defer></script>
 </body>
 </html>
