@@ -132,6 +132,27 @@
   letter-spacing: -0.045em;
 }
 
+.construction-hero__title-main,
+.construction-hero__title-location {
+  display: block;
+}
+
+.construction-hero__title-main {
+  font-size: clamp(40px, 4.6vw, 64px);
+  line-height: 0.97;
+  letter-spacing: -0.05em;
+}
+
+.construction-hero__title-location {
+  max-width: 24ch;
+  margin-top: 20px;
+  color: #725e53;
+  font-size: clamp(20px, 2.35vw, 32px);
+  font-weight: 650;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
 .construction-hero__grid > div:first-child > p,
 .builder-hero__grid > div:first-child > p {
   max-width: 650px;

@@ -456,7 +456,12 @@ def main() -> None:
     PROJECTS_DIR.mkdir(parents=True, exist_ok=True)
     BUILDERS_DIR.mkdir(parents=True, exist_ok=True)
     write_json()
-    (ROOT / "construction.html").write_text(catalog_page(), encoding="utf-8")
+    catalog_html = catalog_page().replace(
+        "<h1>Строительство домов под ключ в Ростове-на-Дону, Аксае и Ростовской области</h1>",
+        '<h1><span class="construction-hero__title-main">Строительство<br>домов под ключ</span>'
+        '<span class="construction-hero__title-location">в Ростове-на-Дону, Аксае<br>и Ростовской области</span></h1>',
+    )
+    (ROOT / "construction.html").write_text(catalog_html, encoding="utf-8")
     for project in PROJECTS:
         (PROJECTS_DIR / f"{project['slug']}.html").write_text(project_page(project), encoding="utf-8")
     for builder_id, builder in BUILDERS.items():
