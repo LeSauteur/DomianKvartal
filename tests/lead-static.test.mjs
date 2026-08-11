@@ -52,7 +52,7 @@ function plainText(html) {
 }
 
 function isFormCta(text) {
-  return /заявк|получить\s+консультац|обсудить|оценить\s+недвиж|консультац.*ипотек|вашу\s+ситуац|уточнить\s+налич|получить\s+подбор|получить\s+предлож|записаться|^связаться(?:\s|$)|расскажите\s+о\s+вашем\s+объекте|страхование\s+(?:рисков|сделки)|гарантия\s+(?:выбора|продажи)|семейная\s+ипотека\s+за\s+5\s+минут|рассрочка\s+на\s+жилье/i.test(text);
+  return /заявк|получить\s+консультац|обсудить|оценить\s+недвиж|консультац.*ипотек|вашу\s+ситуац|уточнить\s+налич|получить\s+подбор|получить\s+предлож|получить\s+расч[её]т|записаться|^связаться(?:\s|$)|расскажите\s+о\s+вашем\s+объекте|страхование\s+(?:рисков|сделки)|гарантия\s+(?:выбора|продажи)|семейная\s+ипотека\s+за\s+5\s+минут|рассрочка\s+на\s+жилье/i.test(text);
 }
 
 function getAnchors(source) {
@@ -65,11 +65,16 @@ function getAnchors(source) {
 const htmlFiles = collectFiles(root, new Set([".html"]));
 const publicCodeFiles = collectFiles(root, new Set([".html", ".js", ".json"]));
 
-test("production contains one real lead form and a separate preview copy", () => {
+test("production lead forms include the main form and every construction landing page", () => {
   const leadForms = htmlFiles.filter((file) => /<form\b[^>]*\bdata-lead-form\b/i.test(fs.readFileSync(file, "utf8")));
   const relative = leadForms.map((file) => path.relative(root, file).replaceAll("\\", "/")).sort();
 
-  assert.deepEqual(relative, ["index-preview.html", "index.html"]);
+  assert.equal(relative.length, 32);
+  assert.ok(relative.includes("index-preview.html"));
+  assert.ok(relative.includes("index.html"));
+  assert.ok(relative.includes("construction.html"));
+  assert.equal(relative.filter((file) => file.startsWith("construction/projects/")).length, 26);
+  assert.equal(relative.filter((file) => file.startsWith("construction/builders/")).length, 3);
   assert.match(fs.readFileSync(path.join(root, "newbuilds.html"), "utf8"), /id="newbuildFilters"/);
   assert.doesNotMatch(fs.readFileSync(path.join(root, "newbuilds.html"), "utf8"), /data-lead-form/);
 });

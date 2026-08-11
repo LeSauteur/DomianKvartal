@@ -1281,7 +1281,14 @@
         object_type: "",
         object_title: "",
         object_price: "",
-        object_url: ""
+        object_url: "",
+        project_code: "",
+        project_name: "",
+        builder: "",
+        project_area: "",
+        project_url: "",
+        source_transition: "",
+        price_version: ""
       };
     }
 
@@ -1324,7 +1331,14 @@
       object_type: objectType,
       object_title: title,
       object_price: price,
-      object_url: readLeadData(link, "object-url")
+      object_url: readLeadData(link, "object-url"),
+      project_code: readLeadData(link, "project-code") || objectId,
+      project_name: readLeadData(link, "project-name") || title,
+      builder: readLeadData(link, "builder"),
+      project_area: readLeadData(link, "project-area"),
+      project_url: readLeadData(link, "project-url") || readLeadData(link, "object-url"),
+      source_transition: readLeadData(link, "source-transition"),
+      price_version: readLeadData(link, "price-version")
     };
   }
 
@@ -1349,6 +1363,13 @@
         object_title: object.object_title,
         object_price: object.object_price,
         object_url: object.object_url || (object.object_id || object.object_title ? window.location.href : ""),
+        project_code: object.project_code,
+        project_name: object.project_name,
+        builder: object.builder,
+        project_area: object.project_area,
+        project_url: object.project_url || (object.project_code ? window.location.href : ""),
+        source_transition: object.source_transition,
+        price_version: object.price_version,
         captured_at: Date.now()
       };
 

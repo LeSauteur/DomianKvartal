@@ -3502,9 +3502,174 @@ body.catalog-page .cards {
 }
 
 .ui-blocks-wrapper .buyer-path:nth-child(4),
-.ui-blocks-wrapper .buyer-path:nth-child(5) {
-  grid-column: span 3;
-  min-height: 270px;
+.ui-blocks-wrapper .buyer-path:nth-child(5),
+.ui-blocks-wrapper .buyer-path:nth-child(6) {
+  grid-column: span 2;
+  min-height: 290px;
+}
+
+.home-construction {
+  padding: clamp(64px, 8vw, 100px) 0;
+  background: #30231d;
+  color: #fff;
+}
+
+.home-construction__head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 30px;
+}
+
+.home-construction__head span {
+  display: block;
+  margin-bottom: 9px;
+  color: #d7a798;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.home-construction__head h2 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+}
+
+.home-construction__head p {
+  margin: 0;
+  color: #cabcb4;
+}
+
+.home-construction__head .btn.secondary {
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #fff;
+}
+
+.home-construction__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.home-construction__card {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.home-construction__card > a {
+  display: block;
+  overflow: hidden;
+}
+
+.home-construction__card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+.home-construction__card:hover img {
+  transform: scale(1.025);
+}
+
+.home-construction__card > div {
+  padding: 18px;
+}
+
+.home-construction__card span {
+  color: #d7a798;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-construction__card h3 {
+  margin: 7px 0;
+  font-size: 1.2rem;
+}
+
+.home-construction__card h3 a,
+.home-construction__all {
+  color: #fff;
+  text-decoration: none;
+}
+
+.home-construction__card p {
+  margin: 0;
+  color: #cabcb4;
+  font-size: 0.85rem;
+}
+
+.home-construction__all {
+  display: none;
+  margin-top: 22px;
+  font-weight: 800;
+}
+
+.construction-mortgage-link {
+  display: inline-block;
+  margin: 10px 0 0 14px;
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.construction-context-link {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 24px;
+  margin: 30px 0;
+  padding: 24px 26px;
+  border: 1px solid rgba(163, 71, 57, 0.2);
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f9f3ed, #fff);
+}
+
+.construction-context-link h3 {
+  margin: 0 0 6px;
+}
+
+.construction-context-link p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .home-construction__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .home-construction__head {
+    align-items: start;
+  }
+
+  .home-construction__head > .btn {
+    display: none;
+  }
+
+  .home-construction__grid,
+  .construction-context-link {
+    grid-template-columns: 1fr;
+  }
+
+  .home-construction__all {
+    display: inline-block;
+  }
+
+  .construction-mortgage-link {
+    display: block;
+    margin-left: 0;
+  }
 }
 
 .ui-blocks-wrapper .buyer-path::after {

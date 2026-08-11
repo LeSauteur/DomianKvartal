@@ -26,6 +26,13 @@
     "object_title",
     "object_price",
     "object_url",
+    "project_code",
+    "project_name",
+    "builder",
+    "project_area",
+    "project_url",
+    "source_transition",
+    "price_version",
     "mortgage_price",
     "mortgage_down_payment",
     "mortgage_rate",
@@ -202,6 +209,12 @@
     return element ? normalizeValue(element.value || element.textContent) : "";
   }
 
+  function readFormContext(form, name) {
+    var field = form.elements[name];
+    var attribute = "data-" + name.replace(/_/g, "-");
+    return normalizeValue(form.getAttribute(attribute)) || normalizeValue(field && field.value);
+  }
+
   function readMortgageContext() {
     return {
       mortgage_price: readElementValue("#mg-price"),
@@ -253,11 +266,18 @@
       utm_term: utm.utm_term,
       lead_type: leadType,
       source_cta: sourceCta,
-      object_id: context.object_id || "",
-      object_type: context.object_type || "",
-      object_title: context.object_title || "",
-      object_price: context.object_price || "",
-      object_url: context.object_url || "",
+      object_id: context.object_id || readFormContext(form, "project_code") || "",
+      object_type: context.object_type || readFormContext(form, "object_type") || "",
+      object_title: context.object_title || readFormContext(form, "project_name") || "",
+      object_price: context.object_price || readFormContext(form, "object_price") || "",
+      object_url: context.object_url || readFormContext(form, "project_url") || "",
+      project_code: context.project_code || context.object_id || readFormContext(form, "project_code") || "",
+      project_name: context.project_name || context.object_title || readFormContext(form, "project_name") || "",
+      builder: context.builder || readFormContext(form, "builder") || "",
+      project_area: context.project_area || readFormContext(form, "project_area") || "",
+      project_url: context.project_url || context.object_url || readFormContext(form, "project_url") || "",
+      source_transition: context.source_transition || readFormContext(form, "source_transition") || "",
+      price_version: context.price_version || readFormContext(form, "price_version") || "",
       mortgage_price: context.mortgage_price || mortgage.mortgage_price || "",
       mortgage_down_payment: context.mortgage_down_payment || mortgage.mortgage_down_payment || "",
       mortgage_rate: context.mortgage_rate || mortgage.mortgage_rate || "",
@@ -663,7 +683,7 @@
       return;
     }
 
-    fillPayloadFields(form, submitter);
+    var payloadValues = fillPayloadFields(form, submitter);
     formData = new FormData(form);
     setSubmitting(form, state, true);
     state.fallback.hidden = true;
@@ -673,6 +693,9 @@
     submitToProvider(formData)
       .then(function () {
         safeReachGoal("lead_form_success");
+        if (payloadValues.lead_type === "construction") {
+          safeReachGoal("construction_lead_success");
+        }
         clearLeadContext();
         setFormStatus(form, "Заявка принята сервисом. Перенаправляем…", "success");
         window.location.assign(CONFIG.redirectUrl || "/thanks.html");
