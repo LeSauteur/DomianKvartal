@@ -3293,8 +3293,6 @@ body.catalog-page .cards {
 }
 
 .guide-page .guide-check-table {
-  max-height: 680px;
-  overflow: auto;
   margin-bottom: 38px;
 }
 
@@ -3370,9 +3368,6 @@ body.catalog-page .cards {
     text-align: left;
   }
 
-  .guide-page .guide-check-table {
-    max-height: 560px;
-  }
 }
 
 .property-card__price-value {
