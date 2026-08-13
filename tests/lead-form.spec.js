@@ -98,11 +98,12 @@ async function fillValidForm(page, overrides = {}) {
 }
 
 async function submitAndExpectError(page, category) {
-  await page.locator("#lead-form button[type='submit']").click();
+  await page.locator("#lead-form").evaluate((form) => form.requestSubmit());
   await expect(page.locator("[data-form-fallback]")).toBeVisible();
   await expect(page.locator("#lead-form button[type='submit']")).toBeEnabled();
   await expect(page.locator("[data-form-status]")).toHaveClass(/form-status--error/);
   expect(page.url()).toContain("index.html");
+  expect(await page.evaluate(() => sessionStorage.getItem("domian_thanks_category"))).toBeNull();
 
   const goals = await getGoals(page);
   const errors = goals.filter((event) => event.goal === "lead_form_error");
@@ -168,6 +169,10 @@ test("valid submission sends once, includes attribution, and redirects only on c
 
   await page.waitForURL(/thanks\.html$/);
   await expect(page.getByRole("heading", { level: 1 })).toContainText("Спасибо");
+  await expect(page.locator("[data-thanks-guide]").first()).toHaveAttribute(
+    "href",
+    "guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html"
+  );
   expect(network.providerRequests).toBe(1);
 
   const payload = network.payloads[0];

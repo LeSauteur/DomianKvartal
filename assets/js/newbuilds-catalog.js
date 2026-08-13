@@ -2,7 +2,7 @@
   "use strict";
 
   var DATA_URL = "output/newbuilds/catalog-v3.json";
-  var state = { items: [], filtered: [] };
+  var state = { items: [], filtered: [], cardNodes: new Map() };
   var nodes = {};
 
   function text(value) {
@@ -59,7 +59,7 @@
       ? "Проверено " + new Intl.DateTimeFormat("ru-RU").format(new Date(item.checked_at + "T12:00:00"))
       : "Источник требует актуализации";
     return [
-      '<article class="nb-card" data-completeness="' + escapeHtml(item.completeness.state) + '">',
+      '<article class="nb-card" data-newbuild-id="' + escapeHtml(item.id) + '" data-newbuild-slug="' + escapeHtml(item.slug) + '" data-completeness="' + escapeHtml(item.completeness.state) + '">',
       '<div class="nb-card__media">', image,
       '<span class="nb-quality ' + quality.className + '">' + quality.label + "</span>",
       "</div>",
@@ -76,6 +76,92 @@
       '<p class="nb-card__source">' + escapeHtml(sourceLine) + "</p>",
       "</div></article>"
     ].join("");
+  }
+
+  function cardKey(item) {
+    return text(item.id) || text(item.slug);
+  }
+
+  function validateCatalogData(data) {
+    if (!data || !Array.isArray(data.items) || data.items.length === 0) {
+      throw new Error("Catalog payload has no items");
+    }
+
+    var itemsByKey = new Map();
+    data.items.forEach(function (item) {
+      var key = cardKey(item);
+      var completeness = item && item.completeness && item.completeness.state;
+      if (!key || itemsByKey.has(key)) {
+        throw new Error("Catalog payload has a missing or duplicate item key");
+      }
+      if (["complete", "partial", "needs_review"].indexOf(completeness) === -1) {
+        throw new Error("Catalog payload has an invalid completeness state");
+      }
+      itemsByKey.set(key, item);
+    });
+
+    var staticCards = Array.from(nodes.cards.querySelectorAll('.nb-card[data-completeness="complete"]'));
+    var completeItems = data.items.filter(function (item) {
+      return item.completeness.state === "complete";
+    });
+    if (staticCards.length === 0 || staticCards.length !== completeItems.length) {
+      throw new Error("Static and JSON complete-card counts do not match");
+    }
+
+    var staticKeys = new Set();
+    staticCards.forEach(function (card) {
+      var key = text(card.getAttribute("data-newbuild-id")) || text(card.getAttribute("data-newbuild-slug"));
+      var item = itemsByKey.get(key);
+      if (!key || staticKeys.has(key) || !item || item.completeness.state !== "complete" || !text(item.detail_url)) {
+        throw new Error("Static complete cards do not match the catalog payload");
+      }
+      staticKeys.add(key);
+    });
+
+    return data.items;
+  }
+
+  function createCard(item) {
+    var template = document.createElement("template");
+    template.innerHTML = renderCard(item);
+    return template.content.firstElementChild;
+  }
+
+  function bindImageFallback(card) {
+    var image = card.querySelector("img");
+    if (!image) return;
+    image.addEventListener("error", function () {
+      var placeholder = document.createElement("div");
+      placeholder.className = "nb-card__placeholder";
+      placeholder.innerHTML = "<span>ДК</span><small>Изображение уточняется</small>";
+      image.replaceWith(placeholder);
+    }, { once: true });
+  }
+
+  function prepareCards() {
+    nodes.cards.querySelectorAll(".nb-card").forEach(function (card) {
+      var key = text(card.getAttribute("data-newbuild-id")) || text(card.getAttribute("data-newbuild-slug"));
+      if (key) state.cardNodes.set(key, card);
+    });
+
+    state.items.forEach(function (item) {
+      var key = cardKey(item);
+      var rendered = createCard(item);
+      var card = state.cardNodes.get(key);
+
+      if (card) {
+        card.className = rendered.className;
+        card.setAttribute("data-newbuild-id", text(item.id));
+        card.setAttribute("data-newbuild-slug", text(item.slug));
+        card.setAttribute("data-completeness", text(item.completeness.state));
+        card.innerHTML = rendered.innerHTML;
+      } else {
+        card = rendered;
+        state.cardNodes.set(key, card);
+      }
+
+      bindImageFallback(card);
+    });
   }
 
   function normalizeSearch(item) {
@@ -117,17 +203,14 @@
   }
 
   function render() {
-    nodes.cards.innerHTML = state.filtered.map(renderCard).join("");
+    var fragment = document.createDocumentFragment();
+    state.filtered.forEach(function (item) {
+      var card = state.cardNodes.get(cardKey(item));
+      if (card) fragment.appendChild(card);
+    });
+    nodes.cards.replaceChildren(fragment);
     nodes.count.textContent = "Найдено: " + state.filtered.length + " из " + state.items.length;
     nodes.empty.hidden = state.filtered.length !== 0;
-    nodes.cards.querySelectorAll("img").forEach(function (image) {
-      image.addEventListener("error", function () {
-        var placeholder = document.createElement("div");
-        placeholder.className = "nb-card__placeholder";
-        placeholder.innerHTML = "<span>ДК</span><small>Изображение уточняется</small>";
-        image.replaceWith(placeholder);
-      }, { once: true });
-    });
   }
 
   function fillCities() {
@@ -160,14 +243,16 @@
     fetch(DATA_URL, { cache: "no-store" })
       .then(function (response) { if (!response.ok) throw new Error("HTTP " + response.status); return response.json(); })
       .then(function (data) {
-        state.items = Array.isArray(data.items) ? data.items : [];
+        state.items = validateCatalogData(data);
         document.getElementById("nbTotalStat").textContent = state.items.length;
-        document.getElementById("nbVerifiedStat").textContent = state.items.filter(function (item) { return item.detail_url; }).length;
-        fillCities(); bind(); applyFilters();
+        document.getElementById("nbVerifiedStat").textContent = state.items.filter(function (item) {
+          return item.completeness && item.completeness.state === "complete";
+        }).length;
+        fillCities(); prepareCards(); bind(); applyFilters();
       })
       .catch(function (error) {
-        nodes.count.textContent = "Каталог временно недоступен";
-        nodes.cards.innerHTML = '<p class="nb-load-error">Не удалось загрузить данные. Позвоните нам — поможем подобрать новостройку.</p>';
+        var fallbackCount = nodes.cards.querySelectorAll('.nb-card[data-completeness="complete"]').length;
+        nodes.count.textContent = "Показано " + fallbackCount + " проверенных комплексов. Остальные данные временно недоступны.";
         console.error("Newbuilds V3:", error);
       });
   }

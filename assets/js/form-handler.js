@@ -11,6 +11,7 @@
   var METRIKA_ID = CONFIG.metrikaId || window.DOMIAN_METRIKA_ID || 109303205;
   var REQUEST_TIMEOUT_MS = Number(CONFIG.requestTimeoutMs) || 12000;
   var LEAD_CONTEXT_KEY = "domian_lead_context";
+  var THANKS_CATEGORY_KEY = "domian_thanks_category";
   var LEAD_CONTEXT_TTL_MS = 30 * 60 * 1000;
   var UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
   var UTM_STORAGE_PREFIX = "domian_utm_";
@@ -202,6 +203,26 @@
   function clearLeadContext() {
     safeStorageRemove(window.sessionStorage, LEAD_CONTEXT_KEY);
     window.domianMortgageInteracted = false;
+  }
+
+  function saveThanksCategory(values) {
+    var aliases = {
+      apartment: "apartment",
+      flat: "apartment",
+      house: "house",
+      construction: "house",
+      land: "land",
+      plot: "land",
+      newbuild: "newbuild"
+    };
+    var objectType = normalizeValue(values.object_type).toLowerCase();
+    var leadType = normalizeValue(values.lead_type).toLowerCase();
+    var category = aliases[objectType] || aliases[leadType] || "";
+
+    safeStorageRemove(window.sessionStorage, THANKS_CATEGORY_KEY);
+    if (category) {
+      safeStorageSet(window.sessionStorage, THANKS_CATEGORY_KEY, category);
+    }
   }
 
   function readElementValue(selector) {
@@ -696,6 +717,7 @@
         if (payloadValues.lead_type === "construction") {
           safeReachGoal("construction_lead_success");
         }
+        saveThanksCategory(payloadValues);
         clearLeadContext();
         setFormStatus(form, "Заявка принята сервисом. Перенаправляем…", "success");
         window.location.assign(CONFIG.redirectUrl || "/thanks.html");
