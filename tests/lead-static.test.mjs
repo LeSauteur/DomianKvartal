@@ -110,9 +110,17 @@ test("every form CTA resolves to an existing file and anchor from nested pages",
       if (!isFormCta(anchor.text)) continue;
 
       const [relativeTarget, fragment] = anchor.href.split("#");
-      const targetFile = relativeTarget
-        ? path.resolve(path.dirname(file), decodeURIComponent(relativeTarget))
-        : file;
+      let targetFile;
+      if (!relativeTarget) {
+        targetFile = file;
+      } else if (relativeTarget.startsWith("/")) {
+        targetFile = path.resolve(root, decodeURIComponent(relativeTarget).replace(/^\/+/, "") || "index.html");
+      } else {
+        targetFile = path.resolve(path.dirname(file), decodeURIComponent(relativeTarget));
+      }
+      if (fs.existsSync(targetFile) && fs.statSync(targetFile).isDirectory()) {
+        targetFile = path.join(targetFile, "index.html");
+      }
 
       if (!fs.existsSync(targetFile)) {
         failures.push(`${path.relative(root, file)} -> missing ${anchor.href}`);

@@ -10,6 +10,8 @@
     <link rel="icon" href="assets/hero/hero.jpg" type="image/jpeg">
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
+        window.DOMIAN_ANALYTICS_DISABLED = /^(?:localhost|127(?:\.\d+){3}|::1)$/i.test(location.hostname) || new URLSearchParams(location.search).get('qa') === '1';
+        if (!window.DOMIAN_ANALYTICS_DISABLED) {
         window.DOMIAN_METRIKA_ID = 109303205;
         (function(m,e,t,r,i,k,a){
             m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -19,6 +21,8 @@
         })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109303205', 'ym');
 
         ym(109303205, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+
+        }
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/109303205" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
@@ -27,9 +31,9 @@
 
 <header>
     <div class="header-inner">
-        <a href="index.html" class="logo">Домиан · офис «Квартал»</a>
+        <a href="/" class="logo">Домиан · офис «Квартал»</a>
         <nav>
-            <a href="index.html">Главная</a>
+            <a href="/">Главная</a>
             <a href="apartments.html">Квартиры</a>
             <a href="houses.html">Дома</a>
             <a href="lands.html">Участки</a>
@@ -53,7 +57,7 @@
                 <h1>Спасибо за заявку!</h1>
                 <p class="thanks-intro">Сервис принял вашу заявку. Наш специалист свяжется с вами в течение 15 минут.</p>
                 <div class="thanks-actions">
-                    <a href="index.html" class="btn">Вернуться на главную</a>
+                    <a href="/" class="btn">Вернуться на главную</a>
                     <a href="tel:+79536091122" class="btn secondary">Позвонить сейчас</a>
                 </div>
                 <div class="thanks-channels" aria-label="Написать Зухре в мессенджере">
@@ -101,32 +105,32 @@
                 <div class="footer-column">
                     <h3>Услуги</h3>
                     <ul>
-                        <li><a href="index.html#contact">Покупка недвижимости</a></li>
-                        <li><a href="index.html#contact">Продажа недвижимости</a></li>
-                        <li><a href="index.html#mortgage">Ипотека</a></li>
-                        <li><a href="index.html#contact">Юридическое сопровождение</a></li>
-                        <li><a href="index.html#contact">Оценка недвижимости</a></li>
-                        <li><a href="index.html#contact">Подбор недвижимости</a></li>
+                        <li><a href="/#contact">Покупка недвижимости</a></li>
+                        <li><a href="/#contact">Продажа недвижимости</a></li>
+                        <li><a href="/#mortgage">Ипотека</a></li>
+                        <li><a href="/#contact">Юридическое сопровождение</a></li>
+                        <li><a href="/#contact">Оценка недвижимости</a></li>
+                        <li><a href="/#contact">Подбор недвижимости</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Компания</h3>
                     <ul>
-                        <li><a href="index.html">О компании</a></li>
+                        <li><a href="/">О компании</a></li>
                         <li><a href="team/zukhra-alieva.html">Сотрудники</a></li>
-                        <li><a href="index.html#reviews">Отзывы</a></li>
-                        <li><a href="index.html#contact">Вакансии</a></li>
-                        <li><a href="index.html#contact">Контакты</a></li>
+                        <li><a href="/#reviews">Отзывы</a></li>
+                        <li><a href="/#contact">Вакансии</a></li>
+                        <li><a href="/#contact">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Клиентам</h3>
                     <ul>
-                        <li><a href="index.html#mortgage">Ипотечный калькулятор</a></li>
-                        <li><a href="index.html#contact">Партнерские услуги</a></li>
-                        <li><a href="index.html#contact">Строительство домов</a></li>
+                        <li><a href="/#mortgage">Ипотечный калькулятор</a></li>
+                        <li><a href="/#contact">Партнерские услуги</a></li>
+                        <li><a href="/#contact">Строительство домов</a></li>
                         <li><a href="privacy.html">Документы</a></li>
-                        <li><a href="index.html#faq">FAQ</a></li>
+                        <li><a href="/#faq">FAQ</a></li>
                     </ul>
                 </div>
             </div>

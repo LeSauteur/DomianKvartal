@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="assets/css/showcase.css">
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
+        window.DOMIAN_ANALYTICS_DISABLED = /^(?:localhost|127(?:\.\d+){3}|::1)$/i.test(location.hostname) || new URLSearchParams(location.search).get('qa') === '1';
+        if (!window.DOMIAN_ANALYTICS_DISABLED) {
         window.DOMIAN_METRIKA_ID = 109303205;
         (function(m,e,t,r,i,k,a){
             m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -25,6 +27,8 @@
         })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109303205', 'ym');
 
         ym(109303205, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+
+        }
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/109303205" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
@@ -34,9 +38,9 @@
 <header>
     <div class="header-inner">
         <span class="header-mobile-spacer" aria-hidden="true"></span>
-        <a href="index.html" class="logo">Домиан · офис «Квартал»</a>
+        <a href="/" class="logo">Домиан · офис «Квартал»</a>
         <nav>
-            <a href="index.html">Главная</a>
+            <a href="/">Главная</a>
             <a href="apartments.html">Квартиры</a>
             <a href="houses.html" aria-current="page">Дома</a>
             <a href="lands.html">Участки</a>
@@ -57,12 +61,12 @@
     </div>
 </header>
 
-<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" inert>
     <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="Мобильное меню">
         <button class="mobile-drawer__close" type="button" aria-label="Закрыть меню">×</button>
         <div class="mobile-drawer__title">Навигация</div>
         <nav class="mobile-drawer__nav">
-            <a href="index.html">Главная</a>
+            <a href="/">Главная</a>
             <a href="apartments.html">Квартиры</a>
             <a href="houses.html" aria-current="page">Дома</a>
             <a href="lands.html">Участки</a>
@@ -87,7 +91,7 @@
         <p>Подбор домов для жизни, переезда и инвестиций.</p>
         <div class="hero-actions">
             <a href="houses.html" class="btn">Смотреть дома</a>
-            <a href="index.html#contact" class="btn secondary">Консультация</a>
+            <a href="/#contact" class="btn secondary">Консультация</a>
         </div>
     </div>
 </section>
@@ -130,7 +134,7 @@
                     <p>По открытой экспозиции объём предложений по домам в Аксае заметно выше, чем по квартирам, а разброс форматов и качества объектов шире. Главная практическая задача покупателя — читать рынок по улицам и проверять не только сам дом, но и юридическую и фактическую конфигурацию земли.</p>
                 </div>
                 <figure class="seo-image">
-                    <img src="assets/img/seo/houses-private-house-urban.jpg" alt="Частный дом в городской среде Аксая для семейного проживания" loading="lazy">
+                    <img src="assets/img/seo/houses-private-house-urban.jpg" alt="Частный дом в городской среде Аксая для семейного проживания" loading="lazy" width="1600" height="1200">
                     <figcaption>Дом в городской среде Аксая подходит тем, кто хочет жить в частном формате рядом с инфраструктурой и привычными маршрутами.</figcaption>
                 </figure>
             </div>
@@ -178,12 +182,12 @@
             </div>
 
             <figure class="seo-image seo-image--wide">
-                <img src="assets/img/seo/houses-private-sector-street.jpg" alt="Улица частного сектора с семейными домами и спокойной застройкой" loading="lazy">
+                <img src="assets/img/seo/houses-private-sector-street.jpg" alt="Улица частного сектора с семейными домами и спокойной застройкой" loading="lazy" width="698" height="462">
                 <figcaption>Улица частного сектора помогает оценить подъезд, окружение, ритм района и плотность застройки ещё до просмотра самого дома.</figcaption>
             </figure>
 
             <figure class="seo-image">
-                <img src="assets/img/seo/houses-house-with-plot.jpg" alt="Дом с участком и собственной территорией для постоянного проживания" loading="lazy">
+                <img src="assets/img/seo/houses-house-with-plot.jpg" alt="Дом с участком и собственной территорией для постоянного проживания" loading="lazy" width="1280" height="960">
                 <figcaption>Дом с участком показывает сценарий для семьи, которой важны пространство, своя территория и запас по благоустройству двора.</figcaption>
             </figure>
 
@@ -326,7 +330,7 @@
             <span class="footer-cta-badge">БЕСПЛАТНО</span>
             <h2>Нужна помощь с недвижимостью?</h2>
             <p>Расскажите о своей ситуации — мы подскажем оптимальное решение и возьмём на себя все сложные этапы.</p>
-            <a href="index.html#lead-form-section" class="btn">Получить консультацию</a>
+            <a href="/#lead-form-section" class="btn">Получить консультацию</a>
         </div>
     </div>
 </section>
@@ -352,40 +356,40 @@
                 <div class="footer-column">
                     <h3>Услуги</h3>
                     <ul>
-                        <li><a href="index.html#contact">Покупка недвижимости</a></li>
-                        <li><a href="index.html#contact">Продажа недвижимости</a></li>
-                        <li><a href="index.html#mortgage">Ипотека</a></li>
-                        <li><a href="index.html#contact">Юридическое сопровождение</a></li>
-                        <li><a href="index.html#contact">Оценка недвижимости</a></li>
-                        <li><a href="index.html#contact">Подбор недвижимости</a></li>
+                        <li><a href="/#contact">Покупка недвижимости</a></li>
+                        <li><a href="/#contact">Продажа недвижимости</a></li>
+                        <li><a href="/#mortgage">Ипотека</a></li>
+                        <li><a href="/#contact">Юридическое сопровождение</a></li>
+                        <li><a href="/#contact">Оценка недвижимости</a></li>
+                        <li><a href="/#contact">Подбор недвижимости</a></li>
                     </ul>
                 </div>
                 <!-- Колонка 3: Компания -->
                 <div class="footer-column">
                     <h3>Компания</h3>
                     <ul>
-                        <li><a href="index.html">О компании</a></li>
+                        <li><a href="/">О компании</a></li>
                         <li><a href="team/zukhra-alieva.html">Сотрудники</a></li>
-                        <li><a href="index.html#reviews">Отзывы</a></li>
-                        <li><a href="index.html#contact">Вакансии</a></li>
-                        <li><a href="index.html#contact">Контакты</a></li>
+                        <li><a href="/#reviews">Отзывы</a></li>
+                        <li><a href="/#contact">Вакансии</a></li>
+                        <li><a href="/#contact">Контакты</a></li>
                     </ul>
                 </div>
                 <!-- Колонка 4: Клиентам -->
                 <div class="footer-column">
                     <h3>Клиентам</h3>
                     <ul>
-                        <li><a href="index.html#mortgage">Ипотечный калькулятор</a></li>
-                        <li><a href="index.html#contact">Партнерские услуги</a></li>
+                        <li><a href="/#mortgage">Ипотечный калькулятор</a></li>
+                        <li><a href="/#contact">Партнерские услуги</a></li>
                         <li><a href="construction.html">Строительство домов</a></li>
                         <li><a href="privacy.html">Документы</a></li>
-                        <li><a href="index.html#faq">FAQ</a></li>
+                        <li><a href="/#faq">FAQ</a></li>
                         <li><a href="guides/index.html">Гид покупателя</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        
+
         <!-- Уровень 2: Контакты и соцсети -->
         <div class="footer-contacts-block">
             <address class="footer-contacts-info" itemscope itemtype="https://schema.org/RealEstateAgent">
@@ -423,7 +427,7 @@
                 <a href="https://vk.com/domian_kvartal" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
             </div>
         </div>
-        
+
         <!-- Уровень 3: Юридический блок -->
         <div class="footer-legal-block">
             <p>© 2022-2026 АН «Домиан Квартал». Все права защищены.</p>

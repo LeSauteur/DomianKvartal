@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="assets/css/visual-premium.css">
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
+        window.DOMIAN_ANALYTICS_DISABLED = /^(?:localhost|127(?:\.\d+){3}|::1)$/i.test(location.hostname) || new URLSearchParams(location.search).get('qa') === '1';
+        if (!window.DOMIAN_ANALYTICS_DISABLED) {
         window.DOMIAN_METRIKA_ID = 109303205;
         (function(m,e,t,r,i,k,a){
             m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -24,6 +26,8 @@
         })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109303205', 'ym');
 
         ym(109303205, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+
+        }
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/109303205" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
@@ -33,9 +37,9 @@
 <header>
     <div class="header-inner">
         <span class="header-mobile-spacer" aria-hidden="true"></span>
-        <a href="index.html" class="logo">Домиан · офис «Квартал»</a>
+        <a href="/" class="logo">Домиан · офис «Квартал»</a>
         <nav>
-            <a href="index.html">Главная</a>
+            <a href="/">Главная</a>
             <a href="apartments.html">Квартиры</a>
             <a href="houses.html">Дома</a>
             <a href="lands.html">Участки</a>
@@ -56,12 +60,12 @@
     </div>
 </header>
 
-<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true" inert>
     <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="Мобильное меню">
         <button class="mobile-drawer__close" type="button" aria-label="Закрыть меню">×</button>
         <div class="mobile-drawer__title">Навигация</div>
         <nav class="mobile-drawer__nav">
-            <a href="index.html">Главная</a>
+            <a href="/">Главная</a>
             <a href="apartments.html">Квартиры</a>
             <a href="houses.html">Дома</a>
             <a href="lands.html">Участки</a>
@@ -91,14 +95,14 @@
     </div>
 </section>
 
-<main id="commercial-consultation">
+<main>
     <div class="container" style="padding: 26px 0 42px;">
         <section style="background:#fff; border:1px solid #e2d8cc; border-radius:16px; padding:24px; box-shadow:0 8px 20px rgba(0,0,0,.04); margin-bottom:22px;">
             <h2 style="margin-bottom:12px;">Коммерческая недвижимость в Ростове-на-Дону, Аксае и Ростовской области</h2>
             <p style="margin-bottom:14px;">Раздел для подбора коммерческих помещений под бизнес, аренду, покупку или инвестиции. Здесь будут собраны офисы, торговые площади, помещения свободного назначения, склады, участки и другие варианты коммерческой недвижимости.</p>
             <div class="hero-actions" style="margin-top:12px;">
                 <a class="btn" href="#commercial-categories">Подобрать помещение</a>
-                <a class="btn secondary" href="index.html#lead-form-section">Получить консультацию</a>
+                <a class="btn secondary" href="/#lead-form-section">Получить консультацию</a>
             </div>
         </section>
 
@@ -189,7 +193,7 @@
         <section id="commercial-consultation" style="background:#fff; border:1px solid #e2d8cc; border-radius:14px; padding:20px;">
             <h2 style="margin-bottom:8px;">Нужна коммерческая недвижимость под задачу?</h2>
             <p style="margin-bottom:12px;">Опишите формат бизнеса, желаемую локацию, площадь и тип сделки. Мы поможем сориентироваться, какие варианты стоит смотреть в первую очередь.</p>
-            <a class="btn" href="index.html#lead-form-section">Получить консультацию</a>
+            <a class="btn" href="/#lead-form-section">Получить консультацию</a>
         </section>
     </div>
 </main>
@@ -200,7 +204,7 @@
             <span class="footer-cta-badge">БЕСПЛАТНО</span>
             <h2>Нужна помощь с недвижимостью?</h2>
             <p>Расскажите о своей ситуации — мы подскажем оптимальное решение и возьмём на себя все сложные этапы.</p>
-            <a href="index.html#lead-form-section" class="btn">Получить консультацию</a>
+            <a href="/#lead-form-section" class="btn">Получить консультацию</a>
         </div>
     </div>
 </section>
@@ -226,40 +230,40 @@
                 <div class="footer-column">
                     <h3>Услуги</h3>
                     <ul>
-                        <li><a href="index.html#contact">Покупка недвижимости</a></li>
-                        <li><a href="index.html#contact">Продажа недвижимости</a></li>
-                        <li><a href="index.html#mortgage">Ипотека</a></li>
-                        <li><a href="index.html#contact">Юридическое сопровождение</a></li>
-                        <li><a href="index.html#contact">Оценка недвижимости</a></li>
-                        <li><a href="index.html#contact">Подбор недвижимости</a></li>
+                        <li><a href="/#contact">Покупка недвижимости</a></li>
+                        <li><a href="/#contact">Продажа недвижимости</a></li>
+                        <li><a href="/#mortgage">Ипотека</a></li>
+                        <li><a href="/#contact">Юридическое сопровождение</a></li>
+                        <li><a href="/#contact">Оценка недвижимости</a></li>
+                        <li><a href="/#contact">Подбор недвижимости</a></li>
                     </ul>
                 </div>
                 <!-- Колонка 3: Компания -->
                 <div class="footer-column">
                     <h3>Компания</h3>
                     <ul>
-                        <li><a href="index.html">О компании</a></li>
+                        <li><a href="/">О компании</a></li>
                         <li><a href="team/zukhra-alieva.html">Сотрудники</a></li>
-                        <li><a href="index.html#reviews">Отзывы</a></li>
-                        <li><a href="index.html#contact">Вакансии</a></li>
-                        <li><a href="index.html#contact">Контакты</a></li>
+                        <li><a href="/#reviews">Отзывы</a></li>
+                        <li><a href="/#contact">Вакансии</a></li>
+                        <li><a href="/#contact">Контакты</a></li>
                     </ul>
                 </div>
                 <!-- Колонка 4: Клиентам -->
                 <div class="footer-column">
                     <h3>Клиентам</h3>
                     <ul>
-                        <li><a href="index.html#mortgage">Ипотечный калькулятор</a></li>
-                        <li><a href="index.html#contact">Партнерские услуги</a></li>
+                        <li><a href="/#mortgage">Ипотечный калькулятор</a></li>
+                        <li><a href="/#contact">Партнерские услуги</a></li>
                         <li><a href="construction.html">Строительство домов</a></li>
                         <li><a href="privacy.html">Документы</a></li>
-                        <li><a href="index.html#faq">FAQ</a></li>
+                        <li><a href="/#faq">FAQ</a></li>
                         <li><a href="guides/index.html">Гид покупателя</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        
+
         <!-- Уровень 2: Контакты и соцсети -->
         <div class="footer-contacts-block">
             <address class="footer-contacts-info" itemscope itemtype="https://schema.org/RealEstateAgent">
@@ -297,7 +301,7 @@
                 <a href="https://vk.com/domian_kvartal" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
             </div>
         </div>
-        
+
         <!-- Уровень 3: Юридический блок -->
         <div class="footer-legal-block">
             <p>© 2022-2026 АН «Домиан Квартал». Все права защищены.</p>

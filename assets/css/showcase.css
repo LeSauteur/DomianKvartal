@@ -17,7 +17,7 @@
     display: inline-flex;
     align-items: center;
     margin-bottom: 12px;
-    color: #9a6a35;
+    color: #805323;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: .08em;
@@ -148,7 +148,7 @@
 
 .showcase-card__category {
     margin: 0 0 6px;
-    color: #9a6a35;
+    color: #805323;
     font-size: 12px;
     font-weight: 800;
     text-transform: uppercase;

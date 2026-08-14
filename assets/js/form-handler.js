@@ -52,7 +52,7 @@
     try {
       if (typeof window.domianReachGoal === "function") {
         window.domianReachGoal(goal, params || {});
-      } else if (typeof window.ym === "function") {
+      } else if (!window.DOMIAN_ANALYTICS_DISABLED && typeof window.ym === "function") {
         window.ym(window.DOMIAN_METRIKA_ID || METRIKA_ID, "reachGoal", goal, params || {});
       }
     } catch (error) {
