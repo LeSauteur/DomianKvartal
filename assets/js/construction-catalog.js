@@ -5,7 +5,9 @@
 
   function goal(name, params) {
     try {
-      if (typeof window.ym === "function") {
+      if (typeof window.domianReachGoal === "function") {
+        window.domianReachGoal(name, params || {});
+      } else if (!window.DOMIAN_ANALYTICS_DISABLED && typeof window.ym === "function") {
         window.ym(METRIKA_ID, "reachGoal", name, params || {});
       }
     } catch (error) {

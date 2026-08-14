@@ -1015,6 +1015,7 @@
             text-align: left;
         }
 
+        .guarantee-item h3,
         .guarantee-item h4 {
             font-size: 18px;
             margin-bottom: 8px;
@@ -1041,6 +1042,7 @@
             border: 1px solid var(--border-soft);
         }
 
+        .faq-item h3,
         .faq-item h4 {
             font-size: 18px;
             margin-bottom: 12px;
@@ -2106,7 +2108,9 @@ body.catalog-extended .modal img {
 }
 
 .legacy-refresh .benefit h3,
+.legacy-refresh .guarantee-item h3,
 .legacy-refresh .guarantee-item h4,
+.legacy-refresh .faq-item h3,
 .legacy-refresh .faq-item h4 {
     margin-bottom: 10px;
     font-size: 18px;

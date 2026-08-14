@@ -4,8 +4,7 @@ const LOCAL_ORIGIN = "http://127.0.0.1:4173";
 
 async function installGoalProbe(page) {
   await page.addInitScript(() => {
-    window.ym = (_id, method, goal, params) => {
-      if (method !== "reachGoal") return;
+    window.DOMIAN_ANALYTICS_TEST_HOOK = (goal, params) => {
       const events = JSON.parse(sessionStorage.getItem("__construction_goals") || "[]");
       events.push({ goal, params: params || {} });
       sessionStorage.setItem("__construction_goals", JSON.stringify(events));

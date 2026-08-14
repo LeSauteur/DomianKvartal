@@ -232,7 +232,7 @@ for (const categoryCase of CATEGORY_CASES) {
 
     await page.goto(categoryCase.source, { waitUntil: "domcontentloaded" });
     await page.locator(categoryCase.cta).first().click();
-    await page.waitForURL(/index\.html#lead-form-section$/);
+    await page.waitForURL(/\/(?:index\.html)?#lead-form-section$/);
     await fillLeadForm(page);
     await page.locator("#lead-form").evaluate((form) => form.requestSubmit());
     await expect.poll(() => network.providerRequests).toBe(1);

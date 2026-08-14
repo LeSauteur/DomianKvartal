@@ -7,15 +7,41 @@
   var LEAD_CONTEXT_KEY = "domian_lead_context";
   var UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
   var UTM_STORAGE_PREFIX = "domian_utm_";
+  var ANALYTICS_PARAM_KEYS = [
+    "error_category",
+    "page_type",
+    "object_type",
+    "object_id",
+    "source_section",
+    "source_cta",
+    "catalog_type",
+    "filter_name",
+    "card_type",
+    "destination_type",
+    "profile",
+    "interaction",
+    "project_id",
+    "project_name",
+    "builder"
+  ];
   var MAIN_SCRIPT_URL = document.currentScript && document.currentScript.src ? document.currentScript.src : "";
   var leadConfigLoading = false;
   var leadConfigCallbacks = [];
 
   window.DOMIAN_METRIKA_ID = window.DOMIAN_METRIKA_ID || METRIKA_ID;
 
+  function isAnalyticsDisabled() {
+    var hostname = (window.location.hostname || "").toLowerCase();
+    var qaMode = new URLSearchParams(window.location.search || "").get("qa") === "1";
+    return hostname === "localhost" || hostname === "::1" || /^127(?:\.\d+){3}$/.test(hostname) || qaMode;
+  }
+
+  window.DOMIAN_ANALYTICS_DISABLED = window.DOMIAN_ANALYTICS_DISABLED === true || isAnalyticsDisabled();
+
   function ensureMetrika() {
     var script;
 
+    if (window.DOMIAN_ANALYTICS_DISABLED) return;
     if (typeof window.ym === "function") return;
 
     window.ym = function () {
@@ -87,10 +113,27 @@
 
   applyTheme(getStoredTheme());
 
+  function sanitizeAnalyticsParams(params) {
+    var safe = {};
+    if (!params || typeof params !== "object") return safe;
+
+    ANALYTICS_PARAM_KEYS.forEach(function (key) {
+      var value = params[key];
+      if (value == null || value === "") return;
+      safe[key] = String(value).trim().replace(/[^a-zа-яё0-9_-]+/gi, "_").slice(0, 64);
+    });
+    return safe;
+  }
+
   function safeReachGoal(goal, params) {
+    var safeParams = sanitizeAnalyticsParams(params);
     try {
+      if (typeof window.DOMIAN_ANALYTICS_TEST_HOOK === "function") {
+        window.DOMIAN_ANALYTICS_TEST_HOOK(goal, safeParams);
+      }
+      if (window.DOMIAN_ANALYTICS_DISABLED) return;
       if (typeof window.ym === "function") {
-        window.ym(window.DOMIAN_METRIKA_ID || METRIKA_ID, "reachGoal", goal, params || {});
+        window.ym(window.DOMIAN_METRIKA_ID || METRIKA_ID, "reachGoal", goal, safeParams);
       }
     } catch (error) {
       // Ignore analytics errors.
@@ -397,20 +440,20 @@
       var trigger = event.target && event.target.closest ? event.target.closest("[data-max-trigger]") : null;
 
       if (direct) {
-        safeReachGoal("max_direct_open");
+        safeReachGoal("max_direct_open", analyticsLinkParams(direct));
         return;
       }
 
       if (!trigger) return;
 
-      safeReachGoal("max_click");
+      safeReachGoal("max_click", analyticsLinkParams(trigger));
       if (isMaxDirectMode()) {
-        safeReachGoal("max_direct_open");
+        safeReachGoal("max_direct_open", analyticsLinkParams(trigger));
         return;
       }
 
       event.preventDefault();
-      safeReachGoal("max_qr_open");
+      safeReachGoal("max_qr_open", analyticsLinkParams(trigger));
       openDialog(trigger);
     });
 
@@ -740,17 +783,17 @@
       if (!href) return;
 
       if (link.closest(".property-card") && link.matches(".property-card__cta, .property-card__phone")) {
-        safeReachGoal("card_cta_click");
+        safeReachGoal("card_cta_click", analyticsLinkParams(link));
       }
 
       if (href.indexOf("tel:") === 0) {
-        safeReachGoal("phone_click");
+        safeReachGoal("phone_click", analyticsLinkParams(link));
       } else if (href.indexOf("mailto:") === 0) {
-        safeReachGoal("email_click");
+        safeReachGoal("email_click", analyticsLinkParams(link));
       } else if (href.indexOf("wa.me") !== -1 || href.indexOf("whatsapp") !== -1) {
-        safeReachGoal("whatsapp_click");
+        safeReachGoal("whatsapp_click", analyticsLinkParams(link));
       } else if (href.indexOf("t.me") !== -1) {
-        safeReachGoal("telegram_click");
+        safeReachGoal("telegram_click", analyticsLinkParams(link));
       }
     });
   }
@@ -807,6 +850,171 @@
     return normalized !== "" && normalized !== "null" && normalized !== "undefined" && normalized !== "nan";
   }
 
+  function analyticsPageType() {
+    var path = (window.location.pathname || "/").toLowerCase();
+    if (path.indexOf("/guides/") !== -1) return "guide";
+    if (path.indexOf("/newbuilds/") !== -1) return "newbuild_detail";
+    if (path.indexOf("/construction/projects/") !== -1) return "construction_project";
+    if (path.indexOf("/construction/builders/") !== -1) return "construction_builder";
+    if (path.indexOf("/team/") !== -1) return "team";
+    if (path.indexOf("/seo/") !== -1) return "seo_landing";
+    if (path === "/" || path.endsWith("/index.html")) return "home";
+    return "catalog_or_service";
+  }
+
+  function catalogTypeForElement(element) {
+    var listing = document.body && document.body.dataset ? document.body.dataset.listing : "";
+    if (listing) return listing;
+    if (element && element.closest("#newbuildFilters")) return "newbuilds";
+    if (element && element.closest("[data-project-filters]")) return "construction";
+    return "catalog";
+  }
+
+  function analyticsFieldName(element) {
+    var value = element && (element.name || element.id || element.type);
+    return String(value || "unknown").replace(/^(?:nb|mg)-?/i, "").toLowerCase();
+  }
+
+  function externalProfileName(href) {
+    if (href.indexOf("yandex.ru/maps") !== -1) return "yandex_maps";
+    if (href.indexOf("2gis.ru") !== -1) return "2gis";
+    if (href.indexOf("domclick.ru") !== -1) return "domclick";
+    if (href.indexOf("reestr.rgr.ru") !== -1) return "rgr";
+    if (href.indexOf("vk.com") !== -1) return "vk";
+    return "";
+  }
+
+  function analyticsSourceSection(element) {
+    var section = element && element.closest ? element.closest("[data-showcase], [data-project-card], #mortgage, #lead-form-section, header, footer, .mobile-drawer") : null;
+    if (!section) return "page";
+    if (section.hasAttribute("data-showcase")) return section.getAttribute("data-showcase") || "showcase";
+    if (section.hasAttribute("data-project-card")) return "construction_card";
+    if (section.id) return section.id;
+    if (section.matches("header")) return "header";
+    if (section.matches("footer")) return "footer";
+    return "mobile_drawer";
+  }
+
+  function analyticsObjectContext(element) {
+    var card = element && element.closest ? element.closest(".property-card, .nb-card, .construction-card, [data-object-id]") : null;
+    var href = element && element.getAttribute ? element.getAttribute("href") || "" : "";
+    var type = "";
+    var id = "";
+    var match;
+
+    if (card) {
+      type = card.getAttribute("data-object-type") || (card.classList.contains("nb-card") ? "newbuild" : (card.classList.contains("construction-card") ? "construction" : "property"));
+      id = card.getAttribute("data-object-id") || card.getAttribute("data-newbuild-id") || card.getAttribute("data-project-id") || "";
+    }
+    if (!id && href && !/^(?:tel:|mailto:|#)/i.test(href)) {
+      match = href.split(/[?#]/)[0].match(/([^/]+?)(?:\.html)?\/?$/);
+      id = match ? match[1] : "";
+    }
+    return { object_type: type, object_id: id };
+  }
+
+  function analyticsLinkParams(link, overrides) {
+    var object = analyticsObjectContext(link);
+    var params = {
+      page_type: analyticsPageType(),
+      object_type: object.object_type,
+      object_id: object.object_id,
+      source_section: analyticsSourceSection(link),
+      source_cta: link && link.getAttribute ? (link.getAttribute("data-source-cta") || link.getAttribute("data-channel") || "link") : "link"
+    };
+    Object.keys(overrides || {}).forEach(function (key) {
+      params[key] = overrides[key];
+    });
+    return params;
+  }
+
+  function initFunnelAnalytics() {
+    document.addEventListener("change", function (event) {
+      var target = event.target;
+      if (!target || !target.closest) return;
+
+      if (target.closest("#newbuildFilters, [data-project-filters], #filters")) {
+        safeReachGoal("catalog_filter_use", {
+          page_type: analyticsPageType(),
+          object_type: catalogTypeForElement(target),
+          source_section: "filters",
+          source_cta: "change",
+          catalog_type: catalogTypeForElement(target),
+          filter_name: analyticsFieldName(target)
+        });
+      }
+
+      if (target.closest("#mortgage") && !target.closest("#mortgage").getAttribute("data-analytics-fired")) {
+        target.closest("#mortgage").setAttribute("data-analytics-fired", "1");
+        safeReachGoal("mortgage_interaction", {
+          page_type: analyticsPageType(),
+          object_type: "mortgage",
+          source_section: "mortgage",
+          source_cta: analyticsFieldName(target),
+          interaction: analyticsFieldName(target)
+        });
+      }
+    });
+
+    document.addEventListener("click", function (event) {
+      var link = event.target && event.target.closest ? event.target.closest("a[href]") : null;
+      var reset = event.target && event.target.closest ? event.target.closest("#nbReset, [data-project-filters] [type='reset'], #filters [type='reset']") : null;
+      var href;
+      var profile;
+      var destination;
+
+      if (reset) {
+        safeReachGoal("catalog_filter_use", {
+          page_type: analyticsPageType(),
+          object_type: catalogTypeForElement(reset),
+          source_section: "filters",
+          source_cta: "reset",
+          catalog_type: catalogTypeForElement(reset),
+          filter_name: "reset"
+        });
+      }
+      if (!link) return;
+
+      href = (link.getAttribute("href") || "").toLowerCase();
+      profile = externalProfileName(href);
+      if (href.indexOf("yandex.ru/maps") !== -1 || href.indexOf("2gis.ru") !== -1) {
+        safeReachGoal("map_click", analyticsLinkParams(link, { profile: profile }));
+      }
+      if (profile) {
+        safeReachGoal("external_profile_click", analyticsLinkParams(link, { profile: profile }));
+      }
+
+      if (analyticsPageType() === "guide") {
+        if (/\/(?:apartments|houses|lands|newbuilds|construction)\.html/.test(link.href)) {
+          destination = link.href.match(/\/(apartments|houses|lands|newbuilds|construction)\.html/);
+          safeReachGoal("guide_to_catalog", analyticsLinkParams(link, {
+            page_type: "guide",
+            destination_type: destination ? destination[1] : "catalog"
+          }));
+        } else if (link.href.indexOf("#lead-form-section") !== -1) {
+          safeReachGoal("guide_to_lead", analyticsLinkParams(link, { page_type: "guide", destination_type: "lead" }));
+        }
+      }
+
+      if (link.closest("[data-showcase], .showcase-section") && !/^(?:tel:|mailto:|#)/.test(href)) {
+        safeReachGoal("showcase_open", analyticsLinkParams(link, {
+          card_type: "showcase",
+          object_type: (link.closest("[data-showcase]") && link.closest("[data-showcase]").getAttribute("data-type")) || "showcase"
+        }));
+      }
+
+      if (
+        link.closest(".property-card, .nb-card, .construction-card") &&
+        !link.matches("[data-project-quote]") &&
+        !/^(?:tel:|mailto:|#)/.test(href)
+      ) {
+        safeReachGoal("property_card_open", analyticsLinkParams(link, {
+          card_type: link.closest(".nb-card") ? "newbuild" : (link.closest(".construction-card") ? "construction" : "property")
+        }));
+      }
+    });
+  }
+
   function isSafeHttpUrl(value) {
     if (!hasCardValue(value)) return false;
     try {
@@ -836,6 +1044,7 @@
     var closeBtn = qs(".mobile-drawer__close", drawer);
 
     function openDrawer() {
+      drawer.inert = false;
       drawer.classList.add("is-open");
       drawer.setAttribute("aria-hidden", "false");
       toggle.setAttribute("aria-expanded", "true");
@@ -845,6 +1054,7 @@
     function closeDrawer() {
       drawer.classList.remove("is-open");
       drawer.setAttribute("aria-hidden", "true");
+      drawer.inert = true;
       toggle.setAttribute("aria-expanded", "false");
       document.body.classList.remove("drawer-open");
     }
@@ -890,7 +1100,7 @@
     var many = safeImages.length > 1;
     return [
       '<div class="property-card__gallery" data-images="' + encoded + '" data-index="0">',
-      '<div class="property-card__photo" data-src="' + first + '" style="background-image: url(\'' + first + '\');" aria-label="' + escapeHtml(title || "Фото объекта") + '"></div>',
+      '<div class="property-card__photo" role="img" data-src="' + first + '" style="background-image: url(\'' + first + '\');" aria-label="' + escapeHtml(title || "Фото объекта") + '"></div>',
       many ? '<button class="property-card__gallery-btn property-card__gallery-btn--prev" type="button" aria-label="Предыдущее фото">‹</button>' : "",
       many ? '<button class="property-card__gallery-btn property-card__gallery-btn--next" type="button" aria-label="Следующее фото">›</button>' : "",
       many ? '<div class="property-card__counter">1/' + safeImages.length + '</div>' : "",
@@ -1729,6 +1939,7 @@
     initGlobalInteractions();
     initLeadCtaTracking();
     initMetrikaClickGoals();
+    initFunnelAnalytics();
     initActiveNav();
     initMobileDrawer();
     bindPropertyGalleryControls();

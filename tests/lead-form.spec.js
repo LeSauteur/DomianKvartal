@@ -14,8 +14,7 @@ async function installAnalyticsProbe(page, shortenTimeout) {
       };
     }
 
-    window.ym = (_id, method, goal, params) => {
-      if (method !== "reachGoal") return;
+    window.DOMIAN_ANALYTICS_TEST_HOOK = (goal, params) => {
       const goals = JSON.parse(window.sessionStorage.getItem(goalStorageKey) || "[]");
       goals.push({ goal, params: params || {} });
       window.sessionStorage.setItem(goalStorageKey, JSON.stringify(goals));
@@ -158,7 +157,7 @@ test("valid submission sends once, includes attribution, and redirects only on c
   const sourceUrl = "/seo/kvartiry-loc-aksay.html?utm_source=audit&utm_medium=test&utm_campaign=lead&utm_content=card&utm_term=aksay";
   await openPage(page, sourceUrl);
   await page.getByRole("link", { name: /Связаться по объекту object_01/ }).click();
-  await page.waitForURL(/index\.html#lead-form-section$/);
+  await page.waitForURL(/\/(?:index\.html)?#lead-form-section$/);
   await expect(page.locator("#lead-name")).toBeFocused();
 
   await fillValidForm(page, { phone: "89991234567" });
@@ -526,7 +525,7 @@ test("nested CTA scrolls to the form and focuses the first field", async ({ page
   await mockExternalRequests(page);
   await openPage(page, "/newbuilds/zapadnye-allei/");
   await page.getByRole("link", { name: "Уточнить наличие" }).click();
-  await page.waitForURL(/index\.html#lead-form-section$/);
+  await page.waitForURL(/\/(?:index\.html)?#lead-form-section$/);
   await expect(page.locator("#lead-name")).toBeFocused();
 
   const position = await page.locator("#lead-form-section").evaluate((element) => {
