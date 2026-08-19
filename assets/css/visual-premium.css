@@ -3682,6 +3682,7 @@ body.catalog-page .cards {
 .home-construction__card img {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 10;
   object-fit: cover;
   transition: transform 300ms ease;

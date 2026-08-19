@@ -92,6 +92,52 @@ test("mobile drawer and dynamic property images expose valid accessibility state
   expect(network.providerRequests).toBe(0);
 });
 
+test("homepage and team photos preserve their intended rendered proportions", async ({ page }) => {
+  const network = await isolateProductionServices(page);
+
+  for (const width of [390, 768, 1024, 1366]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto("/?qa=1", { waitUntil: "networkidle" });
+
+    const homepageRatios = await page.evaluate((mobile) => {
+      const ratio = (selector) => {
+        const rect = document.querySelector(selector).getBoundingClientRect();
+        return rect.width / rect.height;
+      };
+      return {
+        construction: ratio(".home-construction__card img"),
+        story: ratio(".photo-block img"),
+        team: ratio(".about img"),
+        leadership: ratio(".leadership img"),
+        expectedStory: mobile ? 16 / 10 : 4 / 3,
+        expectedPortrait: mobile ? 16 / 10 : 3 / 4
+      };
+    }, width <= 768);
+
+    expect(homepageRatios.construction).toBeCloseTo(16 / 10, 1);
+    expect(homepageRatios.story).toBeCloseTo(homepageRatios.expectedStory, 1);
+    expect(homepageRatios.team).toBeCloseTo(homepageRatios.expectedPortrait, 1);
+    expect(homepageRatios.leadership).toBeCloseTo(homepageRatios.expectedPortrait, 1);
+
+    await page.goto("/team/zukhra-alieva.html?qa=1", { waitUntil: "networkidle" });
+    const teamLayout = await page.evaluate(() => {
+      const header = document.querySelector("header").getBoundingClientRect();
+      const introLabel = document.querySelector(".team-intro__label").getBoundingClientRect();
+      return { headerBottom: header.bottom, introTop: introLabel.top };
+    });
+    expect(teamLayout.introTop).toBeGreaterThanOrEqual(teamLayout.headerBottom - 1);
+
+    const teamRatios = await page.locator(".agent-photo img").evaluateAll((images) => images.map((image) => {
+      const rect = image.getBoundingClientRect();
+      return rect.width / rect.height;
+    }));
+    expect(teamRatios).toHaveLength(5);
+    for (const ratio of teamRatios) expect(ratio).toBeCloseTo(1, 1);
+  }
+
+  expect(network.providerRequests).toBe(0);
+});
+
 for (const width of [390, 768, 1024, 1366]) {
   test(`changed representative pages have no horizontal overflow at ${width}px`, async ({ page }) => {
     const network = await isolateProductionServices(page);

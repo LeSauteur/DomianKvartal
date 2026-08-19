@@ -408,7 +408,9 @@
         }
 
         .about img {
+            display: block;
             width: 100%;
+            height: auto;
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
@@ -436,7 +438,9 @@
         }
 
         .leadership img {
+            display: block;
             width: 100%;
+            height: auto;
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
@@ -647,7 +651,9 @@
         }
 
         .photo-block img {
+            display: block;
             width: 100%;
+            height: auto;
             min-height: 360px;
             object-fit: cover;
         }
@@ -1365,6 +1371,8 @@
 
     .photo-block img {
         width: 100%;
+        height: auto;
+        min-height: 0;
         aspect-ratio: 16 / 10;
         object-fit: cover;
         overflow: hidden;
@@ -1374,6 +1382,7 @@
     .about img,
     .leadership img {
         width: 100%;
+        height: auto;
         aspect-ratio: 16 / 10;
         object-fit: cover;
         overflow: hidden;
