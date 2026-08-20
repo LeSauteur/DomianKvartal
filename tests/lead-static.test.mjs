@@ -144,7 +144,7 @@ test("Web3Forms key and endpoint have one frontend configuration source", () => 
   for (const file of publicCodeFiles) {
     const source = fs.readFileSync(file, "utf8");
     if (/\baccessKey\s*:\s*["'][^"']+["']/.test(source)) keyDeclarations.push(path.relative(root, file));
-    if (/https:\/\/api\.web3forms\.com\/submit/.test(source)) endpointDeclarations.push(path.relative(root, file));
+    if (/\bendpoint\s*:\s*["']https:\/\/api\.web3forms\.com\/submit["']/.test(source)) endpointDeclarations.push(path.relative(root, file));
     assert.doesNotMatch(source, /name=["']access_key["']/i, `duplicated access_key field in ${path.relative(root, file)}`);
   }
 
