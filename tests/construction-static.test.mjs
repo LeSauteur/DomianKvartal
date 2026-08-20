@@ -39,7 +39,11 @@ function localPageReferences(file, source) {
     const reference = match[1];
     if (!reference || /^(?:https?:|mailto:|tel:|javascript:)/.test(reference)) continue;
     const [pathname, fragment] = reference.split("#");
-    const target = pathname ? path.resolve(path.dirname(file), decodeURIComponent(pathname)) : file;
+    const target = pathname
+      ? pathname.startsWith("/")
+        ? path.resolve(root, decodeURIComponent(pathname).replace(/^\/+/, ""))
+        : path.resolve(path.dirname(file), decodeURIComponent(pathname))
+      : file;
     refs.push({ reference, target, fragment: fragment || "" });
   }
   return refs;

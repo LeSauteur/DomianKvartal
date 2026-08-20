@@ -2833,6 +2833,20 @@ body.drawer-open {
     text-underline-offset: 2px;
 }
 
+.form-consent-note {
+    margin: -10px 0 18px 30px;
+    color: var(--text-muted, #5f5652);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.form-consent-note a {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
 .form-status {
     margin: 0 0 16px;
     padding: 12px 14px;
