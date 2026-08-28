@@ -6147,14 +6147,14 @@ body:not(.catalog-page):not(.static-page) .stage12-workspace + .ui-blocks-wrappe
     font-size: 0.7rem;
   }
 
-  body:not(.catalog-page):not(.static-page) .fixed-wa {
+  body:not(.catalog-page):not(.static-page) .fixed-max {
     right: 12px;
     bottom: 12px;
     width: 46px;
     height: 46px;
   }
 
-  body:not(.catalog-page):not(.static-page) .fixed-wa svg {
+  body:not(.catalog-page):not(.static-page) .fixed-max img {
     width: 24px;
     height: 24px;
   }
@@ -6167,7 +6167,7 @@ body:not(.catalog-page):not(.static-page) .stage12-workspace + .ui-blocks-wrappe
     height: 42px;
   }
 
-  body:not(.catalog-page):not(.static-page) .fixed-wa + .go-top.show {
+  body:not(.catalog-page):not(.static-page) .fixed-max + .go-top.show {
     bottom: 66px;
   }
 }

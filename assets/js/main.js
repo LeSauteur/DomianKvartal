@@ -196,8 +196,7 @@
     var explicit = (link.getAttribute("data-channel") || "").toLowerCase();
     var href = (link.getAttribute("href") || "").toLowerCase();
 
-    if (explicit === "whatsapp" || explicit === "telegram" || explicit === "max") return explicit;
-    if (href.indexOf("wa.me") !== -1 || href.indexOf("whatsapp") !== -1) return "whatsapp";
+    if (explicit === "telegram" || explicit === "max") return explicit;
     if (href.indexOf("t.me") !== -1) return "telegram";
     if (href.indexOf("max.ru/") !== -1) return "max";
     return "";
@@ -205,7 +204,6 @@
 
   function channelLabel(channel) {
     return {
-      whatsapp: "Написать Зухре в WhatsApp",
       telegram: "Написать Зухре в Telegram",
       max: "Написать Зухре в MAX"
     }[channel] || "Открыть мессенджер";
@@ -217,8 +215,7 @@
 
     link.textContent = "";
     hiddenLabel.className = "visually-hidden";
-    hiddenLabel.textContent = channel === "max" ? "MAX" :
-      channel === "telegram" ? "Telegram" : "WhatsApp";
+    hiddenLabel.textContent = channel === "max" ? "MAX" : "Telegram";
 
     if (channel === "max") {
       graphic = document.createElement("img");
@@ -256,9 +253,7 @@
     link.setAttribute("title", label);
     link.classList.add("channel-icon", "channel-icon--" + channel);
 
-    if (channel === "whatsapp" && config.whatsappBaseUrl) {
-      link.href = config.whatsappBaseUrl;
-    } else if (channel === "telegram" && config.telegramUrl) {
+    if (channel === "telegram" && config.telegramUrl) {
       link.href = config.telegramUrl;
     } else if (channel === "max" && config.maxDirectUrl) {
       link.href = config.maxDirectUrl;
@@ -278,7 +273,7 @@
     var existingChannels = qsa("a[href], a[data-channel]", group);
     var hasMessenger = existingChannels.some(function (link) {
       var channel = channelForLink(link);
-      return channel === "whatsapp" || channel === "telegram";
+      return channel === "telegram";
     });
     var hasMax = existingChannels.some(function (link) {
       return channelForLink(link) === "max";
@@ -390,7 +385,7 @@
     var dialog;
     var lastMaxTrigger = null;
 
-    if (!config.maxDirectUrl || !config.telegramUrl || !config.whatsappBaseUrl) return;
+    if (!config.maxDirectUrl || !config.telegramUrl) return;
 
     enhanceContactChannels(document, config);
     window.domianEnhanceContactChannels = function (root) {
@@ -790,8 +785,6 @@
         safeReachGoal("phone_click", analyticsLinkParams(link));
       } else if (href.indexOf("mailto:") === 0) {
         safeReachGoal("email_click", analyticsLinkParams(link));
-      } else if (href.indexOf("wa.me") !== -1 || href.indexOf("whatsapp") !== -1) {
-        safeReachGoal("whatsapp_click", analyticsLinkParams(link));
       } else if (href.indexOf("t.me") !== -1) {
         safeReachGoal("telegram_click", analyticsLinkParams(link));
       }
@@ -1158,23 +1151,6 @@
       var counter = qs(".property-card__counter", gallery);
       if (counter) counter.textContent = String(next + 1) + "/" + String(images.length);
     });
-  }
-
-  function buildObjectWhatsAppText(item, priceText) {
-    var parts = [];
-    var title = item && item.title ? String(item.title).trim() : "";
-    var price = priceText || "";
-
-    if (title) parts.push(title);
-    if (item && item.city) parts.push(String(item.city).trim());
-    if (item && item.district) parts.push(String(item.district).trim());
-    if (price) parts.push(price);
-
-    if (parts.length) {
-      return encodeURIComponent("Здравствуйте. Интересует объект: " + parts.join(", ") + ". Хочу уточнить детали.");
-    }
-
-    return encodeURIComponent("Здравствуйте. Интересует объект на сайте Домиан Квартал. Хочу уточнить детали.");
   }
 
   function buildCard(item, onOpen) {

@@ -882,33 +882,32 @@
             }
         }
 
-        /* Фиксированная кнопка WhatsApp */
-        .fixed-wa {
+        /* Фиксированная кнопка MAX */
+        .fixed-max {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: #25D366;
-            color: white;
+            background: #ffffff;
             width: 60px;
             height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 6px 20px rgba(84, 72, 190, 0.24);
             transition: 0.3s;
             z-index: 999;
         }
 
-        .fixed-wa:hover {
+        .fixed-max:hover {
             transform: scale(1.1);
-            background: #20bd5a;
+            background: #f7f5ff;
         }
 
-        .fixed-wa svg {
+        .fixed-max img {
             width: 30px;
             height: 30px;
-            fill: white;
+            border-radius: 8px;
         }
 
         /* Кнопка "Наверх" */
@@ -1045,7 +1044,7 @@
                 max-width: 95%;
             }
 
-            .fixed-wa {
+            .fixed-max {
                 bottom: 20px;
                 right: 20px;
                 width: 50px;
@@ -1326,8 +1325,8 @@ body.catalog-extended .modal img {
     gap: 15px;
 }
 
-.whatsapp-btn {
-    background: #25D366;
+.max-btn {
+    background: #6253d9;
     border: none;
     color: white;
 }

@@ -3,6 +3,7 @@
 
   var STORAGE_KEY = "domianPrototypeObjects";
   var FALLBACK_PHOTO = "assets/images/ui/hero.jpg";
+  var MAX_PROFILE_URL = "https://max.ru/u/f9LHodD0cOKImT5sxxh2fLN4YFJ-paNFCiI79MwgO-LJJZ8oHXX5TN007y4";
   var DEMO_AGENT_NAMES = [
     "Павел Орлов",
     "Марина Пошивайло",
@@ -167,13 +168,6 @@
     return "status-published";
   }
 
-  function normalizePhoneForWhatsApp(phone) {
-    var digits = String(phone || "").replace(/\D/g, "");
-    if (!digits) return "";
-    if (digits[0] === "8") digits = "7" + digits.slice(1);
-    return digits;
-  }
-
   function buildObjectCard(object, options) {
     object = sanitizeObjectAgent(object);
     var compact = Boolean(options && options.compact);
@@ -184,9 +178,6 @@
       object.floor ? object.floor + "/" + (object.floorsTotal || "—") + " этаж" : "",
       object.landArea ? formatLandArea(object.landArea) : ""
     ].filter(Boolean);
-    var phone = normalizePhoneForWhatsApp(object.agentPhone);
-    var whatsapp = phone ? "https://wa.me/" + phone : "#";
-
     return [
       '<article class="object-card" data-object-id="' + escapeHtml(object.id) + '">',
       '  <a class="object-card__image" href="object.html?id=' + encodeURIComponent(object.id) + '">',
@@ -202,7 +193,7 @@
       compact ? "" : '    <p class="object-card__text">' + escapeHtml(compactText(object.description, 145)) + '</p>',
       '    <div class="object-card__agent">',
       '      <span>' + escapeHtml(object.agentName || "Агент") + '</span>',
-      '      <a href="' + escapeHtml(whatsapp) + '" target="_blank" rel="noopener">WhatsApp</a>',
+      '      <a href="' + MAX_PROFILE_URL + '" target="_blank" rel="noopener noreferrer">MAX</a>',
       '    </div>',
       '    <div class="object-card__actions">',
       '      <a class="btn btn-primary btn-small" href="object.html?id=' + encodeURIComponent(object.id) + '">Подробнее</a>',
@@ -232,7 +223,7 @@
     escapeHtml: escapeHtml,
     compactText: compactText,
     getStatusClass: getStatusClass,
-    normalizePhoneForWhatsApp: normalizePhoneForWhatsApp,
+    MAX_PROFILE_URL: MAX_PROFILE_URL,
     buildObjectCard: buildObjectCard
   };
 })();

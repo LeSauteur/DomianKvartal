@@ -1285,7 +1285,7 @@ body.home-preview-v2:not(.catalog-page):not(.static-page) .stage12-workspace {
     display: none;
   }
 
-  .home-preview-v2 .fixed-wa {
+  .home-preview-v2 .fixed-max {
     display: none !important;
   }
 }
