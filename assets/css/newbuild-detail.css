@@ -58,7 +58,7 @@
 .nbd-footer { padding: 28px 0; background: #2b2420; color: #d8cbc4; }
 .nbd-footer .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px; }
 .nbd-footer p { margin: 0; font-size: 12px; }
-.nbd-footer div div { display: flex; gap: 20px; }
+.nbd-footer div div { display: flex; flex-wrap: wrap; gap: 20px; }
 .nbd-footer a { color: #fff; font-size: 12px; text-decoration: none; }
 
 @media (max-width: 900px) {

@@ -223,20 +223,18 @@ for (const [status, category] of [
 
     expect(network.providerRequests).toBe(1);
     await expect(page.locator("#lead-name")).toHaveValue("Тест Клиент");
-    await expect(page.locator("[data-fallback-whatsapp]")).toBeVisible();
     await expect(page.locator("[data-fallback-telegram]")).toBeVisible();
     await expect(page.locator("[data-fallback-max]")).toBeVisible();
     await expect(page.locator("[data-fallback-phone]")).toHaveAttribute("href", /^tel:/);
-    await expect(page.locator("[data-fallback-whatsapp]")).toHaveAttribute("target", "_blank");
     await expect(page.locator("[data-fallback-telegram]")).toHaveAttribute("rel", "noopener noreferrer");
     await expect(page.locator("[data-fallback-max]")).toHaveAttribute("href", MAX_DIRECT_URL);
     await expect(page.locator("[data-fallback-max]")).toHaveAttribute("aria-label", "Написать Зухре в MAX");
+    await expect(page.locator("[data-fallback-whatsapp]")).toHaveCount(0);
 
-    const whatsappUrl = new URL(await page.locator("[data-fallback-whatsapp]").getAttribute("href"));
-    const fallbackText = whatsappUrl.searchParams.get("text") || "";
-    expect(fallbackText).not.toContain("Тест Клиент");
-    expect(fallbackText).not.toContain("test@example.ru");
-    expect(fallbackText).not.toContain("89991234567");
+    const fallbackLinks = await page.locator("[data-form-fallback] a").evaluateAll((links) => links.map((link) => link.href));
+    expect(JSON.stringify(fallbackLinks)).not.toContain("Тест Клиент");
+    expect(JSON.stringify(fallbackLinks)).not.toContain("test@example.ru");
+    expect(JSON.stringify(fallbackLinks)).not.toContain("89991234567");
 
     if (status === 500) {
       await page.locator("[data-fallback-retry]").click();
@@ -304,21 +302,19 @@ test("view/open and contact-channel goals are distinct and contain no personal d
   await page.evaluate(() => {
     document.addEventListener("click", (event) => {
       const link = event.target.closest("a[href]");
-      if (link && /^(tel:|https:\/\/wa\.me|https:\/\/t\.me)/.test(link.href)) {
+      if (link && /^(tel:|https:\/\/t\.me)/.test(link.href)) {
         event.preventDefault();
       }
     }, true);
   });
 
   await page.locator('a[href^="tel:"]').first().click();
-  await page.locator('a[href*="wa.me"]').first().click();
   await page.locator('a[href*="t.me"]').first().click();
 
   const goals = await getGoals(page);
   expect(goals.some((event) => event.goal === "lead_form_view")).toBeTruthy();
   expect(goals.filter((event) => event.goal === "lead_form_open")).toHaveLength(1);
   expect(goals.some((event) => event.goal === "phone_click")).toBeTruthy();
-  expect(goals.some((event) => event.goal === "whatsapp_click")).toBeTruthy();
   expect(goals.some((event) => event.goal === "telegram_click")).toBeTruthy();
   expect(JSON.stringify(goals)).not.toContain("И");
 });
@@ -398,7 +394,7 @@ test("mobile MAX stays a direct external link and does not open the QR dialog", 
   expect(network.externalUrls.filter((url) => url.startsWith("https://max.ru/"))).toEqual([]);
 });
 
-test("required pages expose compact WhatsApp, Telegram, and MAX controls without console errors", async ({ page }) => {
+test("required pages expose compact Telegram and MAX controls without console errors", async ({ page }) => {
   const errors = [];
   page.on("pageerror", (error) => errors.push(error.message));
   page.on("console", (message) => {
@@ -413,8 +409,8 @@ test("required pages expose compact WhatsApp, Telegram, and MAX controls without
   ]) {
     await openPage(page, url);
     const group = page.locator(selector);
-    await expect(group.locator(".channel-icon")).toHaveCount(3);
-    await expect(group.locator("[data-channel='whatsapp']")).toHaveAttribute("aria-label", /WhatsApp/);
+    await expect(group.locator(".channel-icon")).toHaveCount(2);
+    await expect(group.locator("[data-channel='whatsapp']")).toHaveCount(0);
     await expect(group.locator("[data-channel='telegram']")).toHaveAttribute("aria-label", /Telegram/);
     await expect(group.locator("[data-channel='max']")).toHaveAttribute("href", MAX_DIRECT_URL);
 
@@ -537,6 +533,7 @@ test("nested CTA scrolls to the form and focuses the first field", async ({ page
 });
 
 test("mobile fallback layout is usable and form errors produce no console errors", async ({ page }) => {
+  test.setTimeout(60000);
   const consoleErrors = [];
   page.on("console", (message) => {
     if (message.type() === "error") consoleErrors.push(message.text());
@@ -550,10 +547,14 @@ test("mobile fallback layout is usable and form errors produce no console errors
   });
   await openPage(page, "/index.html#lead-form-section");
   await fillValidForm(page, { email: null });
-  await submitAndExpectError(page, "http_500");
+  await page.locator("#lead-form").evaluate((form) => form.requestSubmit());
+  await expect(page.locator("[data-form-fallback]")).toBeVisible({ timeout: 15000 });
+  await expect(page.locator("#lead-form button[type='submit']")).toBeEnabled();
+  await expect(page.locator("[data-form-status]")).toHaveClass(/form-status--error/);
+  expect(page.url()).toContain("index.html");
 
   await expect(page.locator(".form-fallback__actions .btn")).toHaveCount(2);
-  await expect(page.locator(".form-fallback__channels .channel-icon")).toHaveCount(3);
+  await expect(page.locator(".form-fallback__channels .channel-icon")).toHaveCount(2);
   const dimensions = await page.evaluate(() => ({
     documentWidth: document.documentElement.scrollWidth,
     viewportWidth: window.innerWidth

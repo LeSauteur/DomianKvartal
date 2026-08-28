@@ -46,7 +46,6 @@
   function renderObject(object) {
     var root = document.querySelector("[data-object-page]");
     var phone = String(object.agentPhone || "").replace(/\s/g, "");
-    var whatsapp = store.normalizePhoneForWhatsApp(object.agentPhone);
     var similar = store.getAllObjects().filter(function (item) {
       return item.id !== object.id && (item.type === object.type || item.district === object.district);
     }).slice(0, 4);
@@ -64,7 +63,7 @@
       '    <p class="object-summary__address">' + store.escapeHtml([object.city, object.district, object.address].filter(Boolean).join(", ")) + '</p>',
       '    <div class="object-summary__actions">',
       '      <a class="btn btn-primary" href="tel:' + store.escapeHtml(phone) + '">Позвонить</a>',
-      '      <a class="btn btn-whatsapp" href="' + (whatsapp ? "https://wa.me/" + whatsapp : "#") + '" target="_blank" rel="noopener">Написать в WhatsApp</a>',
+      '      <a class="btn btn-max" href="' + store.MAX_PROFILE_URL + '" target="_blank" rel="noopener noreferrer">Написать в MAX</a>',
       '      <button class="btn btn-soft" type="button" data-request-button>Оставить заявку</button>',
       '    </div>',
       '    <p class="request-note" data-request-note hidden>Заявка в прототипе не отправляется, но в production здесь можно подключить форму или CRM.</p>',

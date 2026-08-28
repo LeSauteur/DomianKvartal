@@ -304,8 +304,8 @@ button {
   color: var(--ink-soft);
 }
 
-.btn-whatsapp {
-  background: var(--green);
+.btn-max {
+  background: #6253d9;
   color: #fff;
 }
 

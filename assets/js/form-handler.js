@@ -555,33 +555,10 @@
     return messages[category] || messages.network;
   }
 
-  function getFallbackInterest(form) {
-    var context = getLeadContext();
-    var service = form.elements.service;
-    var serviceLabel = "";
-
-    if (context.object_title) {
-      return normalizeValue(context.object_title).slice(0, 100);
-    }
-
-    if (service && service.selectedIndex >= 0) {
-      serviceLabel = normalizeValue(service.options[service.selectedIndex].textContent);
-    }
-
-    return serviceLabel && service.value ? serviceLabel : "консультация по недвижимости";
-  }
-
   function updateFallbackLinks(form, fallback) {
-    var whatsapp = fallback.querySelector("[data-fallback-whatsapp]");
     var telegram = fallback.querySelector("[data-fallback-telegram]");
     var max = fallback.querySelector("[data-fallback-max]");
     var phone = fallback.querySelector("[data-fallback-phone]");
-    var message = "Здравствуйте! Пытался оставить заявку на сайте Домиан Квартал, но форма не отправилась. Интересует: " + getFallbackInterest(form) + ".";
-
-    if (whatsapp) {
-      whatsapp.href = CONFIG.whatsappBaseUrl + "?text=" + encodeURIComponent(message);
-    }
-
     if (telegram) {
       telegram.href = CONFIG.telegramUrl;
     }
@@ -599,7 +576,6 @@
   function createFallback(form) {
     var fallback = document.createElement("div");
     var retry = document.createElement("button");
-    var whatsapp = document.createElement("a");
     var telegram = document.createElement("a");
     var max = document.createElement("a");
     var phone = document.createElement("a");
@@ -626,14 +602,6 @@
     retry.setAttribute("data-fallback-retry", "");
     retry.textContent = "Попробовать ещё раз";
 
-    whatsapp.target = "_blank";
-    whatsapp.rel = "noopener noreferrer";
-    whatsapp.setAttribute("data-fallback-whatsapp", "");
-    whatsapp.setAttribute("data-channel", "whatsapp");
-    whatsapp.setAttribute("aria-label", "Написать Зухре в WhatsApp");
-    whatsapp.setAttribute("title", "WhatsApp");
-    whatsapp.textContent = "WhatsApp";
-
     telegram.target = "_blank";
     telegram.rel = "noopener noreferrer";
     telegram.setAttribute("data-fallback-telegram", "");
@@ -656,7 +624,6 @@
 
     actions.appendChild(retry);
     actions.appendChild(phone);
-    channels.appendChild(whatsapp);
     channels.appendChild(telegram);
     channels.appendChild(max);
     actions.appendChild(channels);

@@ -213,7 +213,6 @@ test("analytics uses the required distinct goal IDs without legacy duplicates", 
     "lead_form_success",
     "lead_form_error",
     "phone_click",
-    "whatsapp_click",
     "telegram_click",
     "max_click",
     "max_qr_open",
@@ -221,6 +220,7 @@ test("analytics uses the required distinct goal IDs without legacy duplicates", 
   ];
 
   for (const goal of required) assert.match(combined, new RegExp(`["']${goal}["']`));
+  assert.doesNotMatch(combined, /["']whatsapp_click["']/);
   assert.doesNotMatch(combined, /["']tel_click["']|["']form_success["']|["']form_error["']/);
 });
 
