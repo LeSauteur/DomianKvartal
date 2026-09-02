@@ -37,7 +37,9 @@ function clusterFor(file) {
 }
 
 function variantFor(file) {
-  if (file === "index.html" || file.startsWith("construction") || file.startsWith("guides/") || file.startsWith("newbuilds/")) return "overlay";
+  // Construction hero photography is intentionally light. A solid shell keeps
+  // every navigation control legible without altering the hero content.
+  if (file === "index.html" || file.startsWith("guides/") || file.startsWith("newbuilds/")) return "overlay";
   return "solid";
 }
 
