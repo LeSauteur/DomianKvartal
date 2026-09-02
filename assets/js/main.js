@@ -1032,6 +1032,7 @@
     var toggle = qs(".mobile-menu-toggle");
     var drawer = qs("#mobile-drawer");
     if (!toggle || !drawer) return;
+    if (drawer.hasAttribute("data-unified-drawer")) return;
 
     var panel = qs(".mobile-drawer__panel", drawer);
     var closeBtn = qs(".mobile-drawer__close", drawer);

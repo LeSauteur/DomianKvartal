@@ -25,21 +25,47 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/109303205" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+  <link rel="stylesheet" href="/assets/css/header-unified.css">
 </head>
 <body class="catalog-page listing-page">
-<header>
-  <div class="header-inner">
-    <a href="/" class="logo">Домиан · офис «Квартал»</a>
-    <nav>
-      <a href="/">Главная</a>
-      <a href="../apartments.html">Квартиры</a>
-      <a href="../houses.html">Дома</a>
-      <a href="../lands.html">Участки</a>
-      <a href="../newbuilds.html">Новостройки</a>
+<!-- unified-public-header:start -->
+<header class="unified-header unified-header--solid" data-unified-header data-header-variant="solid" data-active-cluster="apartments">
+  <div class="unified-header__inner">
+    <button class="theme-toggle theme-toggle--header unified-header__utility" type="button" data-unified-theme-toggle aria-label="Включить тёмную тему" aria-pressed="false" title="Тёмная тема"><span aria-hidden="true">◐</span><span class="visually-hidden">Переключить тему</span></button>
+    <a class="unified-header__brand" href="/">Домиан · офис «Квартал»</a>
+    <nav class="unified-header__desktop-nav" aria-label="Основная навигация">
+      <a href="/apartments.html" class="is-active" aria-current="page">Квартиры</a>
+      <a href="/houses.html">Дома</a>
+      <a href="/lands.html">Участки</a>
+      <a href="/newbuilds.html">Новостройки</a>
+      <div class="unified-header__dropdown" data-unified-dropdown><button type="button" aria-expanded="false" aria-controls="header-services-menu">Услуги <span aria-hidden="true">⌄</span></button><div id="header-services-menu" class="unified-header__submenu" role="group" aria-label="Услуги" hidden><a href="/rent.html">Аренда</a><a href="/commercial.html">Коммерческая недвижимость</a><a href="/construction.html">Строительство домов</a></div></div>
+      <a href="/guides/">Гид</a>
+      <div class="unified-header__dropdown" data-unified-dropdown><button type="button" aria-expanded="false" aria-controls="header-company-menu">О компании <span aria-hidden="true">⌄</span></button><div id="header-company-menu" class="unified-header__submenu" role="group" aria-label="О компании" hidden><a href="/team/zukhra-alieva.html">Команда</a><a href="/#contact">Контакты</a><a href="/details.html">Реквизиты</a></div></div>
     </nav>
-    <div class="header-contacts"><a href="tel:+79536091122">+7 953 609-11-22</a></div>
+    <div class="unified-header__contacts header-contacts"><a href="tel:+79536091122">+7 953 609-11-22</a><a href="https://max.ru/u/f9LHodD0cOKImT5sxxh2fLN4YFJ-paNFCiI79MwgO-LJJZ8oHXX5TN007y4" target="_blank" rel="noopener noreferrer" data-channel="max" data-max-trigger aria-label="Написать Зухре в MAX">MAX</a><a href="https://t.me/httpsmealieva_rieltor" target="_blank" rel="noopener noreferrer" data-channel="telegram" aria-label="Написать Зухре в Telegram">Telegram</a></div>
+    <button class="mobile-menu-toggle unified-header__toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-drawer"><span></span><span></span><span></span></button>
   </div>
 </header>
+<div class="mobile-drawer unified-mobile-drawer" id="mobile-drawer" data-unified-drawer aria-hidden="true" inert>
+  <div class="mobile-drawer__panel" role="dialog" aria-modal="true" aria-label="Мобильное меню" tabindex="-1">
+    <div class="unified-mobile-drawer__top"><strong>Навигация</strong><button class="mobile-drawer__close" type="button" aria-label="Закрыть меню">×</button></div>
+    <nav class="mobile-drawer__nav" aria-label="Мобильная навигация">
+      <a href="/">Главная</a>
+      <a href="/apartments.html" class="is-active" aria-current="page">Квартиры</a>
+      <a href="/houses.html">Дома</a>
+      <a href="/lands.html">Участки</a>
+      <a href="/newbuilds.html">Новостройки</a>
+      <a href="/rent.html">Аренда</a>
+      <a href="/commercial.html">Коммерческая недвижимость</a>
+      <a href="/construction.html">Строительство домов</a>
+      <a href="/guides/">Гид покупателя</a>
+      <a href="/team/zukhra-alieva.html">Команда</a>
+      <a href="/#contact">Контакты</a>
+    </nav>
+    <div class="mobile-drawer__actions"><a class="mobile-drawer__call" href="tel:+79536091122">Позвонить: +7 953 609-11-22</a><a class="mobile-drawer__messenger" href="https://max.ru/u/f9LHodD0cOKImT5sxxh2fLN4YFJ-paNFCiI79MwgO-LJJZ8oHXX5TN007y4" target="_blank" rel="noopener noreferrer" data-channel="max" data-max-trigger>MAX</a><a class="mobile-drawer__messenger" href="https://t.me/httpsmealieva_rieltor" target="_blank" rel="noopener noreferrer" data-channel="telegram">Telegram</a></div>
+  </div>
+</div>
+<!-- unified-public-header:end -->
 
 <main>
   <section class="hero" style="margin-bottom:24px;">
@@ -124,5 +150,6 @@
 </footer>
 
 <script src="../assets/js/main.js" defer></script>
+<script src="/assets/js/header-unified.js" defer></script>
 </body>
 </html>
