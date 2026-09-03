@@ -61,7 +61,11 @@
       if (dark) document.documentElement.setAttribute("data-theme", "dark");
       else document.documentElement.removeAttribute("data-theme");
       try { window.localStorage.setItem("domian-color-theme", dark ? "dark" : "light"); } catch (_error) {}
-      document.querySelectorAll("[data-unified-theme-toggle]").forEach(function (item) { item.setAttribute("aria-pressed", String(dark)); });
+      document.querySelectorAll("[data-unified-theme-toggle]").forEach(function (item) {
+        item.setAttribute("aria-pressed", String(dark));
+        item.setAttribute("aria-label", dark ? "Включить светлую тему" : "Включить тёмную тему");
+        item.setAttribute("title", dark ? "Светлая тема" : "Тёмная тема");
+      });
     });
   });
 }());
