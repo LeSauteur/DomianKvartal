@@ -19,10 +19,17 @@
 </head>
 <body class="newbuild-detail-page">
   <!-- unified-public-header:start -->
-<header class="unified-header unified-header--overlay unified-header--compact" data-unified-header data-header-variant="overlay" data-active-cluster="newbuilds">
+<script>(function(){try{if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches&&!window.sessionStorage.getItem("domian-kvartal-logo-seen-v1")){document.documentElement.classList.add("kvartal-logo-motion");window.sessionStorage.setItem("domian-kvartal-logo-seen-v1","1");}}catch(_error){}}());</script>
+<header class="unified-header" data-unified-header data-active-cluster="newbuilds">
   <div class="unified-header__inner">
     <button class="theme-toggle theme-toggle--header unified-header__utility" type="button" data-unified-theme-toggle aria-label="Включить тёмную тему" aria-pressed="false" title="Тёмная тема"><span aria-hidden="true">◐</span><span class="visually-hidden">Переключить тему</span></button>
-    <a class="unified-header__brand" href="/">Домиан · офис «Квартал»</a>
+    <a class="unified-header__brand" href="/" aria-label="Домиан Квартал — на главную"><svg class="kvartal-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <rect class="kvartal-mark__piece kvartal-mark__top" x="9" y="4" width="14" height="3" rx="1.5" />
+        <rect class="kvartal-mark__piece kvartal-mark__right" x="25" y="9" width="3" height="14" rx="1.5" />
+        <rect class="kvartal-mark__piece kvartal-mark__bottom" x="9" y="25" width="14" height="3" rx="1.5" />
+        <rect class="kvartal-mark__piece kvartal-mark__left" x="4" y="9" width="3" height="14" rx="1.5" />
+        <rect class="kvartal-mark__center" x="13.5" y="13.5" width="5" height="5" rx="1" />
+      </svg><span class="unified-header__brand-text"><span>Домиан</span> Квартал</span></a>
     <nav class="unified-header__desktop-nav" aria-label="Основная навигация">
       <a href="/apartments.html">Квартиры</a>
       <a href="/houses.html">Дома</a>
@@ -73,8 +80,12 @@
         </div>
       </div>
     </section>
-
-    <section class="nbd-facts-wrap">
+<!-- unified-property-nav:start -->
+<nav class="unified-property-nav unified-property-nav--compact" aria-label="Направления недвижимости" data-unified-property-nav>
+  <div class="unified-property-nav__track"><a class="unified-property-nav__item unified-property-nav__item--rose" href="/apartments.html"><span class="unified-property-nav__copy"><strong>Квартиры</strong><em>Подбор квартир</em></span><span class="unified-property-nav__image" aria-hidden="true"></span></a><a class="unified-property-nav__item unified-property-nav__item--green" href="/houses.html"><span class="unified-property-nav__copy"><strong>Дома</strong><em>Город и загород</em></span><span class="unified-property-nav__image" aria-hidden="true"></span></a><a class="unified-property-nav__item unified-property-nav__item--olive" href="/lands.html"><span class="unified-property-nav__copy"><strong>Участки</strong><em>ИЖС и дачи</em></span><span class="unified-property-nav__image" aria-hidden="true"></span></a><a class="unified-property-nav__item unified-property-nav__item--blue" href="/commercial.html"><span class="unified-property-nav__copy"><strong>Коммерция</strong><em>Для бизнеса</em></span><span class="unified-property-nav__image" aria-hidden="true"></span></a><a class="unified-property-nav__item unified-property-nav__item--gold is-active" aria-current="page" href="/newbuilds.html"><span class="unified-property-nav__copy"><strong>Новостройки</strong><em>ЖК и комплексы</em></span><span class="unified-property-nav__image" aria-hidden="true"></span></a></div>
+</nav>
+<!-- unified-property-nav:end -->
+<section class="nbd-facts-wrap">
       <div class="container">
         <dl class="nbd-facts">
           <div><dt>Адрес</dt><dd>Ростов-на-Дону, пр-т Ворошиловский, 82/4</dd></div>

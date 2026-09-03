@@ -6,6 +6,28 @@
   var close = drawer && drawer.querySelector(".mobile-drawer__close");
   var previousFocus = null;
   var focusable = "a[href], button:not([disabled]), [tabindex]:not([tabindex='-1'])";
+  var themeStorageKey = "domian-color-theme";
+
+  function updateThemeButtons(dark) {
+    document.querySelectorAll("[data-unified-theme-toggle]").forEach(function (item) {
+      item.setAttribute("aria-pressed", String(dark));
+      item.setAttribute("aria-label", dark ? "Включить светлую тему" : "Включить тёмную тему");
+      item.setAttribute("title", dark ? "Светлая тема" : "Тёмная тема");
+    });
+  }
+
+  function applyTheme(dark, persist) {
+    if (dark) document.documentElement.setAttribute("data-theme", "dark");
+    else document.documentElement.removeAttribute("data-theme");
+    if (persist) {
+      try { window.localStorage.setItem(themeStorageKey, dark ? "dark" : "light"); } catch (_error) {}
+    }
+    updateThemeButtons(dark);
+  }
+
+  var initialDark = document.documentElement.getAttribute("data-theme") === "dark";
+  try { initialDark = window.localStorage.getItem(themeStorageKey) === "dark"; } catch (_error) {}
+  applyTheme(initialDark, false);
 
   function closeDrawer() {
     if (!drawer || !drawer.classList.contains("is-open")) return;
@@ -58,14 +80,7 @@
   document.querySelectorAll("[data-unified-theme-toggle]").forEach(function (button) {
     button.addEventListener("click", function () {
       var dark = document.documentElement.getAttribute("data-theme") !== "dark";
-      if (dark) document.documentElement.setAttribute("data-theme", "dark");
-      else document.documentElement.removeAttribute("data-theme");
-      try { window.localStorage.setItem("domian-color-theme", dark ? "dark" : "light"); } catch (_error) {}
-      document.querySelectorAll("[data-unified-theme-toggle]").forEach(function (item) {
-        item.setAttribute("aria-pressed", String(dark));
-        item.setAttribute("aria-label", dark ? "Включить светлую тему" : "Включить тёмную тему");
-        item.setAttribute("title", dark ? "Светлая тема" : "Тёмная тема");
-      });
+      applyTheme(dark, true);
     });
   });
 }());

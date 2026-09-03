@@ -36,13 +36,6 @@ function clusterFor(file) {
   return "";
 }
 
-function variantFor(file) {
-  // Construction hero photography is intentionally light. A solid shell keeps
-  // every navigation control legible without altering the hero content.
-  if (file === "index.html" || file.startsWith("guides/") || file.startsWith("newbuilds/")) return "overlay";
-  return "solid";
-}
-
 function active(current, key) {
   return current === key ? ' class="is-active" aria-current="page"' : "";
 }
@@ -55,17 +48,26 @@ function drawerLink(label, href, current, key) {
   return `<a href="${href}"${active(current, key)}>${label}</a>`;
 }
 
+function logoMarkup() {
+  return `<svg class="kvartal-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <rect class="kvartal-mark__piece kvartal-mark__top" x="9" y="4" width="14" height="3" rx="1.5" />
+        <rect class="kvartal-mark__piece kvartal-mark__right" x="25" y="9" width="3" height="14" rx="1.5" />
+        <rect class="kvartal-mark__piece kvartal-mark__bottom" x="9" y="25" width="14" height="3" rx="1.5" />
+        <rect class="kvartal-mark__piece kvartal-mark__left" x="4" y="9" width="3" height="14" rx="1.5" />
+        <rect class="kvartal-mark__center" x="13.5" y="13.5" width="5" height="5" rx="1" />
+      </svg>`;
+}
+
 function headerMarkup(file) {
   const cluster = clusterFor(file);
-  const variant = variantFor(file);
   const servicesActive = ["rent", "commercial", "construction"].includes(cluster);
   const companyActive = cluster === "team";
-  const compact = file.startsWith("newbuilds/") ? " unified-header--compact" : "";
   return `<!-- unified-public-header:start -->
-<header class="unified-header unified-header--${variant}${compact}" data-unified-header data-header-variant="${variant}" data-active-cluster="${cluster}">
+<script>(function(){try{if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches&&!window.sessionStorage.getItem("domian-kvartal-logo-seen-v1")){document.documentElement.classList.add("kvartal-logo-motion");window.sessionStorage.setItem("domian-kvartal-logo-seen-v1","1");}}catch(_error){}}());</script>
+<header class="unified-header" data-unified-header data-active-cluster="${cluster}">
   <div class="unified-header__inner">
     <button class="theme-toggle theme-toggle--header unified-header__utility" type="button" data-unified-theme-toggle aria-label="Включить тёмную тему" aria-pressed="false" title="Тёмная тема"><span aria-hidden="true">◐</span><span class="visually-hidden">Переключить тему</span></button>
-    <a class="unified-header__brand" href="/">Домиан · офис «Квартал»</a>
+    <a class="unified-header__brand" href="/" aria-label="Домиан Квартал — на главную">${logoMarkup()}<span class="unified-header__brand-text"><span>Домиан</span> Квартал</span></a>
     <nav class="unified-header__desktop-nav" aria-label="Основная навигация">
       ${desktopLink("Квартиры", "/apartments.html", cluster, "apartments")}
       ${desktopLink("Дома", "/houses.html", cluster, "houses")}
@@ -101,6 +103,37 @@ function headerMarkup(file) {
 <!-- unified-public-header:end -->`;
 }
 
+const propertyItems = [
+  { key: "apartments", label: "Квартиры", description: "Подбор квартир", href: "/apartments.html", tone: "rose" },
+  { key: "houses", label: "Дома", description: "Город и загород", href: "/houses.html", tone: "green" },
+  { key: "lands", label: "Участки", description: "ИЖС и дачи", href: "/lands.html", tone: "olive" },
+  { key: "commercial", label: "Коммерция", description: "Для бизнеса", href: "/commercial.html", tone: "blue" },
+  { key: "newbuilds", label: "Новостройки", description: "ЖК и комплексы", href: "/newbuilds.html", tone: "gold" }
+];
+
+function propertyActiveFor(file) {
+  const cluster = clusterFor(file);
+  if (cluster === "construction") return "houses";
+  return propertyItems.some((item) => item.key === cluster) ? cluster : "";
+}
+
+function propertyNavMarkup(file, mode) {
+  const current = propertyActiveFor(file);
+  const links = propertyItems.map((item) => {
+    const currentAttributes = current === item.key ? ' is-active" aria-current="page' : "";
+    return `<a class="unified-property-nav__item unified-property-nav__item--${item.tone}${currentAttributes}" href="${item.href}"><span class="unified-property-nav__copy"><strong>${item.label}</strong><em>${item.description}</em></span><span class="unified-property-nav__image" aria-hidden="true"></span></a>`;
+  }).join("");
+  return `<!-- unified-property-nav:start -->
+<nav class="unified-property-nav unified-property-nav--${mode}" aria-label="Направления недвижимости" data-unified-property-nav>
+  <div class="unified-property-nav__track">${links}</div>
+</nav>
+<!-- unified-property-nav:end -->`;
+}
+
+function legalPage(file) {
+  return ["details.html", "offer.html", "privacy.html", "personal-data-consent.html", "cookies.html"].includes(file) || /(?:agreement|consent|privacy|policy)/i.test(file);
+}
+
 function matchingDivEnd(source, start) {
   const tag = /<\/?div\b[^>]*>/gi;
   tag.lastIndex = start;
@@ -111,6 +144,18 @@ function matchingDivEnd(source, start) {
     if (depth === 0) return tag.lastIndex;
   }
   throw new Error("Unclosed mobile drawer.");
+}
+
+function matchingElementEnd(source, start, name) {
+  const tag = new RegExp(`<\\/?${name}\\b[^>]*>`, "gi");
+  tag.lastIndex = start;
+  let depth = 0;
+  for (let match = tag.exec(source); match; match = tag.exec(source)) {
+    if (match[0].startsWith("</")) depth -= 1;
+    else depth += 1;
+    if (depth === 0) return tag.lastIndex;
+  }
+  throw new Error(`Unclosed ${name} element.`);
 }
 
 function replaceHeader(source, markup) {
@@ -134,6 +179,39 @@ function addAssets(source) {
   return next;
 }
 
+function replacePropertyNav(source, file) {
+  const generated = /\s*<!-- unified-property-nav:start -->[\s\S]*?<!-- unified-property-nav:end -->\s*/;
+  if (legalPage(file)) return source.replace(generated, "\n");
+  const markup = propertyNavMarkup(file, file === "index.html" ? "cards" : "compact");
+  if (generated.test(source)) return source.replace(generated, `\n${markup}\n`);
+
+  const next = source;
+  if (file === "index.html") {
+    const legacy = /<section\b[^>]*class=["'][^"']*\bstage12-categories\b[^"']*["'][^>]*>/i.exec(next);
+    if (!legacy) throw new Error("Homepage property navigation target is missing.");
+    const end = matchingElementEnd(next, legacy.index, "section");
+    return `${next.slice(0, legacy.index)}${markup}${next.slice(end)}`;
+  }
+
+  const headerEnd = next.indexOf("<!-- unified-public-header:end -->");
+  if (headerEnd === -1) throw new Error(`${file}: generated header boundary is missing.`);
+  const contentStart = headerEnd + "<!-- unified-public-header:end -->".length;
+  const main = /<main\b[^>]*>/i.exec(next.slice(contentStart));
+  const mainStart = main ? contentStart + main.index : -1;
+  const firstSection = /<section\b[^>]*>/i.exec(next.slice(contentStart));
+  const sectionStart = firstSection ? contentStart + firstSection.index : -1;
+  const sectionTag = firstSection ? firstSection[0] : "";
+  const sectionBeforeMain = sectionStart !== -1 && (mainStart === -1 || sectionStart < mainStart);
+  const sectionIsHero = /class=["'][^"']*(?:hero|team-intro)[^"']*["']/i.test(sectionTag);
+
+  if (sectionStart !== -1 && (sectionBeforeMain || sectionIsHero)) {
+    const end = matchingElementEnd(next, sectionStart, "section");
+    return `${next.slice(0, end)}\n${markup}\n${next.slice(end)}`;
+  }
+  if (mainStart !== -1) return `${next.slice(0, mainStart)}${markup}\n${next.slice(mainStart)}`;
+  return `${next.slice(0, contentStart)}\n${markup}\n${next.slice(contentStart)}`;
+}
+
 function normalizeHeaderBoundary(source) {
   return source.replace(/(<!-- unified-public-header:end -->\r?\n)[ \t]*\r?\n[ \t]*(?=<section\b)/, "$1\n");
 }
@@ -144,7 +222,8 @@ for (const publicPath of publicPaths()) {
   const absolute = path.join(root, file);
   if (!fs.existsSync(absolute)) throw new Error(`Missing public page: ${file}`);
   const source = fs.readFileSync(absolute, "utf8");
-  const output = normalizeHeaderBoundary(addAssets(replaceHeader(source, headerMarkup(file))));
+  const withHeader = replaceHeader(source, headerMarkup(file));
+  const output = normalizeHeaderBoundary(addAssets(replacePropertyNav(withHeader, file)));
   if (output !== source) {
     changed += 1;
     if (!check) fs.writeFileSync(absolute, output);
