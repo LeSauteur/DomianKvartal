@@ -295,10 +295,17 @@
 <body>
 
 <!-- unified-public-header:start -->
-<header class="unified-header unified-header--overlay" data-unified-header data-header-variant="overlay" data-active-cluster="">
+<script>(function(){try{if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches&&!window.sessionStorage.getItem("domian-kvartal-logo-seen-v1")){document.documentElement.classList.add("kvartal-logo-motion");window.sessionStorage.setItem("domian-kvartal-logo-seen-v1","1");}}catch(_error){}}());</script>
+<header class="unified-header" data-unified-header data-active-cluster="">
   <div class="unified-header__inner">
     <button class="theme-toggle theme-toggle--header unified-header__utility" type="button" data-unified-theme-toggle aria-label="Включить тёмную тему" aria-pressed="false" title="Тёмная тема"><span aria-hidden="true">◐</span><span class="visually-hidden">Переключить тему</span></button>
-    <a class="unified-header__brand" href="/">Домиан · офис «Квартал»</a>
+    <a class="unified-header__brand" href="/" aria-label="Домиан Квартал — на главную"><svg class="kvartal-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <rect class="kvartal-mark__piece kvartal-mark__top" x="9" y="4" width="14" height="3" rx="1.5" />
+        <rect class="kvartal-mark__piece kvartal-mark__right" x="25" y="9" width="3" height="14" rx="1.5" />
+        <rect class="kvartal-mark__piece kvartal-mark__bottom" x="9" y="25" width="14" height="3" rx="1.5" />
+        <rect class="kvartal-mark__piece kvartal-mark__left" x="4" y="9" width="3" height="14" rx="1.5" />
+        <rect class="kvartal-mark__center" x="13.5" y="13.5" width="5" height="5" rx="1" />
+      </svg><span class="unified-header__brand-text"><span>Домиан</span> Квартал</span></a>
     <nav class="unified-header__desktop-nav" aria-label="Основная навигация">
       <a href="/apartments.html">Квартиры</a>
       <a href="/houses.html">Дома</a>
@@ -384,42 +391,11 @@
         </article>
     </div>
 </section>
-
-<section class="stage12-categories" id="home-stage12-categories" aria-label="Категории недвижимости">
-    <div class="container stage12-categories__grid">
-        <a class="stage12-category stage12-category--rose" href="apartments.html">
-            <span class="stage12-icon stage12-icon--building" aria-hidden="true"></span>
-            <strong>Квартиры</strong>
-            <em>Подбор квартир</em>
-            <img src="assets/types/apartments.jpg" alt="" loading="lazy" width="695" height="464">
-        </a>
-        <a class="stage12-category stage12-category--green" href="houses.html">
-            <span class="stage12-icon stage12-icon--home" aria-hidden="true"></span>
-            <strong>Дома</strong>
-            <em>Город и загород</em>
-            <img src="assets/types/houses.jpg" alt="" loading="lazy" width="698" height="462">
-        </a>
-        <a class="stage12-category stage12-category--olive" href="lands.html">
-            <span class="stage12-icon stage12-icon--tree" aria-hidden="true"></span>
-            <strong>Участки</strong>
-            <em>ИЖС и дачи</em>
-            <img src="assets/types/land.jpg" alt="" loading="lazy" width="699" height="463">
-        </a>
-        <a class="stage12-category stage12-category--blue" href="commercial.html">
-            <span class="stage12-icon stage12-icon--shop" aria-hidden="true"></span>
-            <strong>Коммерция</strong>
-            <em>Для бизнеса</em>
-            <img src="assets/types/commercial.jpg" alt="" loading="lazy" width="697" height="460">
-        </a>
-        <a class="stage12-category stage12-category--gold" href="newbuilds.html">
-            <span class="stage12-icon stage12-icon--crane" aria-hidden="true"></span>
-            <strong>Новостройки</strong>
-            <em>ЖК и комплексы</em>
-            <img src="assets/images/home-stage12/category-newbuilding.jpg" alt="" loading="lazy" width="736" height="901">
-        </a>
-    </div>
-</section>
-
+<!-- unified-property-nav:start -->
+<nav class="unified-property-nav unified-property-nav--cards" aria-label="Направления недвижимости" data-unified-property-nav>
+  <div class="unified-property-nav__track"><a class="unified-property-nav__item unified-property-nav__item--rose" href="/apartments.html"><span class="unified-property-nav__copy"><strong>Квартиры</strong><em>Подбор квартир</em></span><span class="unified-property-nav__image" aria-hidden="true"></span></a><a class="unified-property-nav__item unified-property-nav__item--green" href="/houses.html"><span class="unified-property-nav__copy"><strong>Дома</strong><em>Город и загород</em></span><span class="unified-property-nav__image" aria-hidden="true"></span></a><a class="unified-property-nav__item unified-property-nav__item--olive" href="/lands.html"><span class="unified-property-nav__copy"><strong>Участки</strong><em>ИЖС и дачи</em></span><span class="unified-property-nav__image" aria-hidden="true"></span></a><a class="unified-property-nav__item unified-property-nav__item--blue" href="/commercial.html"><span class="unified-property-nav__copy"><strong>Коммерция</strong><em>Для бизнеса</em></span><span class="unified-property-nav__image" aria-hidden="true"></span></a><a class="unified-property-nav__item unified-property-nav__item--gold" href="/newbuilds.html"><span class="unified-property-nav__copy"><strong>Новостройки</strong><em>ЖК и комплексы</em></span><span class="unified-property-nav__image" aria-hidden="true"></span></a></div>
+</nav>
+<!-- unified-property-nav:end -->
 <section class="stage12-workspace" id="home-stage12-catalog" aria-label="Мини-витрина и заявка собственника">
     <div class="container stage12-workspace__grid">
         <div class="stage12-catalog-preview">
