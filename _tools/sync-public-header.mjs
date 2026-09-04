@@ -113,8 +113,24 @@ const propertyItems = [
 
 function propertyActiveFor(file) {
   const cluster = clusterFor(file);
-  if (cluster === "construction") return "houses";
   return propertyItems.some((item) => item.key === cluster) ? cluster : "";
+}
+
+const internalSearchTargets = new Map([
+  ["apartments.html", "#listing-new-objects"],
+  ["houses.html", "#listing-new-objects"],
+  ["lands.html", "#listing-new-objects"],
+  ["newbuilds.html", "#catalog"],
+  ["rent.html", "/#home-stage12-catalog"],
+  ["commercial.html", "/#home-stage12-catalog"],
+  ["construction.html", "#construction-projects"],
+  ["guides/index.html", "/#home-stage12-catalog"]
+]);
+
+function propertyNavMode(file) {
+  if (file === "index.html") return "cards";
+  if (internalSearchTargets.has(file)) return "internal";
+  return "compact";
 }
 
 function propertyNavMarkup(file, mode) {
@@ -127,6 +143,25 @@ function propertyNavMarkup(file, mode) {
 <nav class="unified-property-nav unified-property-nav--${mode}" aria-label="Направления недвижимости" data-unified-property-nav>
   <div class="unified-property-nav__track">${links}</div>
 </nav>
+<!-- unified-property-nav:end -->`;
+}
+
+function propertyDiscoveryMarkup(file) {
+  const mode = propertyNavMode(file);
+  const nav = propertyNavMarkup(file, mode);
+  const searchTarget = internalSearchTargets.get(file);
+  if (!searchTarget) return nav;
+  return `<!-- unified-property-nav:start -->
+<section class="unified-property-discovery" aria-label="Подбор недвижимости">
+  <a class="unified-property-search" href="${searchTarget}">
+    <span class="unified-property-search__icon" aria-hidden="true"></span>
+    <span class="unified-property-search__text">Поиск по городу, району или адресу</span>
+    <span class="unified-property-search__button">Найти</span>
+  </a>
+  <nav class="unified-property-nav unified-property-nav--${mode}" aria-label="Направления недвижимости" data-unified-property-nav>
+    <div class="unified-property-nav__track">${nav.match(/<div class="unified-property-nav__track">([\s\S]*?)<\/div>/)?.[1] || ""}</div>
+  </nav>
+</section>
 <!-- unified-property-nav:end -->`;
 }
 
@@ -182,7 +217,7 @@ function addAssets(source) {
 function replacePropertyNav(source, file) {
   const generated = /\s*<!-- unified-property-nav:start -->[\s\S]*?<!-- unified-property-nav:end -->\s*/;
   if (legalPage(file)) return source.replace(generated, "\n");
-  const markup = propertyNavMarkup(file, file === "index.html" ? "cards" : "compact");
+  const markup = propertyDiscoveryMarkup(file);
   if (generated.test(source)) return source.replace(generated, `\n${markup}\n`);
 
   const next = source;

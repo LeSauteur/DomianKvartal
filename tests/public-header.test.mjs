@@ -10,7 +10,18 @@ const publicPaths = [...new Set([...sitemap.matchAll(/<loc>https:\/\/domian-161\
 const desktop = ["Квартиры", "Дома", "Участки", "Новостройки", "Услуги", "Гид", "О компании"];
 const mobile = ["Главная", "Квартиры", "Дома", "Участки", "Новостройки", "Аренда", "Коммерческая недвижимость", "Строительство домов", "Гид покупателя", "Команда", "Контакты"];
 const propertyDirections = ["Квартиры", "Дома", "Участки", "Коммерция", "Новостройки"];
+const propertyDescriptions = ["Подбор квартир", "Город и загород", "ИЖС и дачи", "Для бизнеса", "ЖК и комплексы"];
 const legalPages = new Set(["details.html", "offer.html", "privacy.html", "personal-data-consent.html", "cookies.html"]);
+const internalSearchTargets = new Map([
+  ["apartments.html", "#listing-new-objects"],
+  ["houses.html", "#listing-new-objects"],
+  ["lands.html", "#listing-new-objects"],
+  ["newbuilds.html", "#catalog"],
+  ["rent.html", "/#home-stage12-catalog"],
+  ["commercial.html", "/#home-stage12-catalog"],
+  ["construction.html", "#construction-projects"],
+  ["guides/index.html", "/#home-stage12-catalog"]
+]);
 
 function fileFor(publicPath) { return publicPath.endsWith("/") ? `${publicPath}index.html` : publicPath; }
 function expectedCluster(file) {
@@ -63,8 +74,18 @@ test("all 96 public pages use the canonical static header", () => {
     } else {
       assert.equal(navBlocks.length, 1, `${file}: must include one generated property navigation block`);
       for (const item of propertyDirections) assert.match(navBlocks[0], new RegExp(`>${item}<`), `${file}: property navigation is missing ${item}`);
-      assert.match(navBlocks[0], file === "index.html" ? /unified-property-nav--cards/ : /unified-property-nav--compact/,
+      for (const item of propertyDescriptions) assert.match(navBlocks[0], new RegExp(`>${item}<`), `${file}: property navigation is missing ${item}`);
+      assert.match(navBlocks[0], /unified-property-nav__image/, `${file}: property navigation must stay photographic`);
+      const expectedMode = file === "index.html" ? "cards" : (internalSearchTargets.has(file) ? "internal" : "compact");
+      assert.match(navBlocks[0], new RegExp(`unified-property-nav--${expectedMode}`),
         `${file}: wrong property navigation mode`);
+      const searchTarget = internalSearchTargets.get(file);
+      if (searchTarget) {
+        assert.match(navBlocks[0], /class="unified-property-search"/, `${file}: missing shared search action`);
+        assert.match(navBlocks[0], new RegExp(`href="${searchTarget.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"`), `${file}: wrong shared search destination`);
+      } else {
+        assert.doesNotMatch(navBlocks[0], /class="unified-property-search"/, `${file}: shared search must only appear on main internal pages`);
+      }
     }
   }
 });
@@ -76,6 +97,7 @@ test("canonical header stylesheet enforces a normal-flow shell and mobile horizo
   assert.doesNotMatch(css, /\.unified-header(?:--[a-z-]+)?\s*\{[^}]*position:\s*(?:absolute|fixed)/);
   assert.match(css, /scroll-snap-type:\s*x\s+proximity/);
   assert.match(css, /touch-action:\s*pan-x/);
+  assert.doesNotMatch(css, /unified-property-nav--compact[^}]*unified-property-nav__image[^}]*display:\s*none/);
   assert.match(css, /prefers-reduced-motion:\s*reduce/);
 });
 
