@@ -90,13 +90,16 @@ test("all 96 public pages use the canonical static header", () => {
   }
 });
 
-test("canonical header stylesheet enforces a normal-flow shell and mobile horizontal rail", () => {
+test("canonical header stylesheet enforces a normal-flow shell and a clean mobile rail", () => {
   const css = fs.readFileSync(path.join(root, "assets/css/header-unified.css"), "utf8");
   assert.match(css, /--site-shell-width:\s*1320px/);
   assert.match(css, /body > header\.unified-header\s*\{[\s\S]*?position:\s*relative\s*!important/);
   assert.doesNotMatch(css, /\.unified-header(?:--[a-z-]+)?\s*\{[^}]*position:\s*(?:absolute|fixed)/);
-  assert.match(css, /scroll-snap-type:\s*x\s+proximity/);
+  assert.match(css, /scroll-snap-type:\s*x\s+mandatory/);
+  assert.match(css, /scrollbar-width:\s*none/);
+  assert.match(css, /unified-property-nav__track::\-webkit-scrollbar\s*\{\s*display:\s*none/);
   assert.match(css, /touch-action:\s*pan-x/);
+  assert.match(css, /@media \(max-width:\s*768px\)[\s\S]*?\.unified-property-discovery\s*\{[\s\S]*?display:\s*none/);
   assert.doesNotMatch(css, /unified-property-nav--compact[^}]*unified-property-nav__image[^}]*display:\s*none/);
   assert.match(css, /prefers-reduced-motion:\s*reduce/);
 });

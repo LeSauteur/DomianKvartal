@@ -6815,3 +6815,58 @@ html[data-theme="dark"] body.catalog-page .catalog-split-hero p { color: #bbb1a8
   .guide-page .guide-hero--index { min-height: 0; padding: 58px 0 46px; }
   .guide-page .guide-hero--index h1 { font-size: clamp(2rem, 10vw, 2.65rem); }
 }
+
+/* Mobile catalogue hierarchy: the working catalogue follows the hero directly.
+   Promotional subsets stay available on desktop, where they do not block the task. */
+@media (max-width: 768px) {
+  body[data-listing="apartments"] main > .showcase-section,
+  body[data-listing="apartments"] main > .listing-new-objects,
+  body[data-listing="houses"] main > .showcase-section,
+  body[data-listing="houses"] main > .listing-new-objects,
+  body[data-listing="lands"] main > .listing-new-objects {
+    display: none;
+  }
+
+  body.catalog-page .hero.catalog-split-hero > .container.catalog-split-hero__grid {
+    gap: 16px;
+    padding: 20px 18px !important;
+  }
+
+  body.catalog-page .catalog-split-hero .hero-actions {
+    margin-top: 18px;
+  }
+
+  body.catalog-page .catalog-split-hero__media {
+    height: 190px;
+  }
+
+  .newbuilds-v3 .nb-hero__grid {
+    gap: 16px;
+    padding: 20px 18px;
+  }
+
+  .newbuilds-v3 .nb-hero__media {
+    height: 190px;
+  }
+
+  .newbuilds-v3 .nb-hero__facts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .newbuilds-v3 .nb-hero__facts div {
+    display: grid;
+    gap: 6px;
+    align-content: start;
+    padding: 12px 10px;
+  }
+
+  .newbuilds-v3 .nb-hero__facts strong {
+    font-size: 18px;
+  }
+
+  .newbuilds-v3 .nb-hero__facts span {
+    font-size: 10px;
+    line-height: 1.25;
+    text-align: left;
+  }
+}

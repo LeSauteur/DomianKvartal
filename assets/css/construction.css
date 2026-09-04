@@ -1064,6 +1064,133 @@
   .construction-footer__grid > div:first-child {
     grid-column: auto;
   }
+
+  .construction-hero {
+    padding: 14px 0 30px;
+  }
+
+  .construction-hero__grid {
+    gap: 18px;
+  }
+
+  .construction-hero__media {
+    height: 190px;
+  }
+
+  .construction-hero__media > span {
+    display: none;
+  }
+
+  .construction-hero h1 {
+    font-size: 32px;
+  }
+
+  .construction-hero__grid > div:first-child > p {
+    margin-top: 14px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .construction-hero__actions {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  .construction-hero__actions .btn {
+    min-width: 0;
+    padding-inline: 10px;
+    font-size: 13px;
+  }
+
+  .construction-hero dl {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    margin-top: 20px;
+  }
+
+  .construction-hero dl div {
+    min-width: 0;
+    padding: 12px 9px;
+  }
+
+  .construction-hero dt {
+    font-size: 19px;
+  }
+
+  .construction-hero dd {
+    font-size: 10px;
+    line-height: 1.25;
+  }
+
+  .construction-filter {
+    padding: 34px 0 50px;
+  }
+
+  .construction-filter .section-heading {
+    margin-bottom: 16px;
+  }
+
+  .construction-filter .section-heading p {
+    display: none;
+  }
+
+  .construction-filter__panel {
+    margin-bottom: 14px;
+    border: 1px solid var(--construction-line);
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 12px 28px rgba(46, 31, 18, .07);
+  }
+
+  .construction-filter__panel summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 54px;
+    padding: 0 16px;
+    color: var(--construction-ink);
+    font-weight: 800;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .construction-filter__panel summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .construction-filter__panel summary::after {
+    content: "+";
+    color: var(--construction-accent);
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .construction-filter__panel[open] summary::after {
+    content: "−";
+  }
+
+  .construction-filter__panel summary span {
+    margin-left: auto;
+    margin-right: 12px;
+    color: var(--construction-muted);
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .construction-filter__controls {
+    padding: 0 12px 12px;
+  }
+
+  .construction-filter__status {
+    margin-bottom: 14px;
+  }
+}
+
+@media (min-width: 601px) {
+  .construction-filter__panel > summary {
+    display: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -75,8 +75,8 @@ test("header stays in normal flow and the shared property rail follows the first
   }
 });
 
-test("property discovery is photographic internally, active by section, and horizontally scrollable on mobile", async ({ page }) => {
-  await page.setViewportSize({ width: 390, height: 844 });
+test("property discovery is photographic internally, active by section, and uses a clean mobile rail", async ({ page }) => {
+  await page.setViewportSize({ width: 1366, height: 844 });
   await page.goto("/apartments.html?qa=1");
   const nav = page.locator("[data-unified-property-nav]");
   await expect(nav).toHaveClass(/unified-property-nav--internal/);
@@ -84,7 +84,8 @@ test("property discovery is photographic internally, active by section, and hori
   await expect(nav.getByText("Подбор квартир")).toBeVisible();
   expect(await nav.locator(".unified-property-nav__image").first().evaluate((image) => getComputedStyle(image).backgroundImage)).not.toBe("none");
   await expect(page.locator(".unified-property-search")).toHaveAttribute("href", "#listing-new-objects");
-  expect(await nav.locator(".unified-property-nav__track").evaluate((track) => track.scrollWidth > track.clientWidth)).toBeTruthy();
+  await page.setViewportSize({ width: 390, height: 844 });
+  await expect(page.locator(".unified-property-discovery")).toBeHidden();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBeTruthy();
 
   await page.goto("/?qa=1");
@@ -94,6 +95,7 @@ test("property discovery is photographic internally, active by section, and hori
   await page.goto("/construction.html?qa=1");
   await expect(page.locator("[data-unified-property-nav] .is-active")).toHaveCount(0);
   await expect(page.locator(".unified-property-search")).toHaveAttribute("href", "#construction-projects");
+  await expect(page.locator("[data-project-filter-panel]")).not.toHaveAttribute("open", "");
 });
 
 test("catalog heroes use light split media while service heroes remain individual", async ({ page }) => {

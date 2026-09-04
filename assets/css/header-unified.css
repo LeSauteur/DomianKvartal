@@ -513,17 +513,19 @@ body.drawer-open { overflow: hidden; }
     display: flex;
     gap: 10px;
     width: calc(100% - (2 * var(--unified-header-gutter)));
-    padding: 2px 0 8px;
+    padding: 2px 0 4px;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     scroll-padding-inline: 0;
-    scroll-snap-type: x proximity;
-    scrollbar-width: thin;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     touch-action: pan-x;
   }
-  .unified-property-nav__item { flex: 0 0 min(78vw, 290px); min-height: 108px; }
+  .unified-property-nav__track::-webkit-scrollbar { display: none; }
+  .unified-property-nav__item { flex: 0 0 calc((100% - 20px) / 3); min-height: 108px; }
   .unified-property-nav--internal .unified-property-nav__item { min-height: 112px; }
-  .unified-property-nav--compact .unified-property-nav__item { flex-basis: min(68vw, 250px); min-height: 88px; }
+  .unified-property-nav--compact .unified-property-nav__item { flex-basis: calc((100% - 20px) / 3); min-height: 88px; }
 
   .newbuilds-v3 .nb-hero { padding: 14px 0; }
   .newbuilds-v3 .nb-hero__grid { gap: 22px; padding: 24px 20px; border-radius: 20px; }
@@ -531,6 +533,34 @@ body.drawer-open { overflow: hidden; }
   .newbuilds-v3 .nb-hero__facts { grid-template-columns: 1fr; }
   .guide-page .guide-hero--index { min-height: 0; padding: 50px 0 42px; }
   .guide-page .guide-hero--index h1 { font-size: clamp(2rem, 9.5vw, 2.55rem); }
+}
+
+/* Internal pages already expose every direction in the mobile drawer. Keeping the
+   discovery search and the photographic rail here only delays the page's task. */
+@media (max-width: 768px) {
+  .unified-property-discovery {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .unified-property-nav__item,
+  .unified-property-nav--compact .unified-property-nav__item {
+    flex-basis: calc((100% - 10px) / 2);
+  }
+  .unified-property-nav__item { padding: 14px; }
+  .unified-property-nav__item::before { top: 13px; left: 14px; width: 20px; }
+  .unified-property-nav__copy { max-width: 68%; padding-top: 16px; }
+  .unified-property-nav__copy strong { font-size: 1rem; }
+  .unified-property-nav__copy em { margin-top: 5px; font-size: .72rem; }
+  .unified-property-nav__image { width: 64%; }
+}
+
+@media (max-width: 360px) {
+  .unified-property-nav__item,
+  .unified-property-nav--compact .unified-property-nav__item {
+    flex-basis: 100%;
+  }
 }
 
 @media (max-width: 390px) {
