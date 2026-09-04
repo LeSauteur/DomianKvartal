@@ -85,6 +85,12 @@
     applyFilters();
   }
 
+  function initMobileFilterPanel() {
+    var panel = document.querySelector("[data-project-filter-panel]");
+    if (!panel || !window.matchMedia("(max-width: 600px)").matches) return;
+    panel.removeAttribute("open");
+  }
+
   function updateSelectedProject(link) {
     var form = document.querySelector("form[data-lead-form]");
     if (!form) return;
@@ -179,6 +185,7 @@
     });
   }
 
+  initMobileFilterPanel();
   initFilters();
   initProjectActions();
   initCardViews();
