@@ -76,3 +76,35 @@ STATUS: P0 CODE VERIFIED LOCALLY — COMMERCIAL ROUTES IN PROGRESS
 В sitemap добавлено ровно 2 URL. Header генератор и его тест больше не ограничивают развитие сайта магическим числом 96; проверка полноты и единообразия сохранена. Синхронизация не меняет содержание остальных страниц. Первый прогон unit: 48/49, единственная ошибка — повторная нормализация пробелов нового header; синхронизация завершена, --check проходит. Полный повтор и новые сценарии страниц — в финальной проверке.
 
 STATUS: P1 COMMERCIAL ROUTES IMPLEMENTED LOCALLY — LINKING IN PROGRESS
+
+## Этап 5 — известные подборки и география
+
+В исходном списке по фактическим файлам 21 подборка (20 orphan из аудита плюс уже связанная районная страница земли); рассмотрены все, без повторного crawl. Три полезных географических входа связаны с каталогами и detail-route, CTA сохраняет контекст объекта. В городской подборке квартир оставлены только object_01/65 с явным адресом Акcая; object_22 (ЖК Красный Аксай) и object_25 (только хэштег) исключены из этой подборки, сами объекты не удалены. В земле оставлены land_03/05: land_07 с неоднозначным адресом и похожий land_09 не продублированы. У домов городской заголовок расширен до района. Наличие объектов на текущую дату не придумано.
+
+| Страница | Решение | Основание / действие |
+|---|---|---|
+| /seo/doma-loc-aksay.html | LEAVE PENDING DATA | Городская подпись расширена по фактическому составу. Пересечение с районной страницей и актуальность объектов требуют проверки. |
+| /seo/doma-loc-rossiyskiy.html | KEEP + LINK | Вход из houses.html; конкретный объект и контекст формы. Наличие требует подтверждения собственником. |
+| /seo/doma-raion-aksayskiy-rayon.html | LEAVE PENDING DATA | Пересечение с п. Российский и бывшей городской подборкой; нужны наличие объектов и данные запросов. |
+| /seo/kvartiry-loc-aksay.html | KEEP + LINK | Вход из apartments.html; конкретный объект и контекст формы. Наличие требует подтверждения собственником. |
+| /seo/kvartiry-loc-rostov-na-donu.html | LEAVE PENDING DATA | Смешаны object и старые nb ID; актуальность новостроек и необходимость отдельной городской посадочной не доказаны. |
+| /seo/kvartiry-raion-roletarskiy-rayon.html | LEAVE PENDING DATA | Всего два старых объявления; нужны актуальность и районный спрос, URL с ошибкой не переименован без данных. |
+| /seo/kvartiry-ul-40-let-pobedy.html | LEAVE PENDING DATA | Два объекта пересекаются с подборками ЖК; нужен адресный спрос и наличие. |
+| /seo/kvartiry-zhk-aleksandrovskiy.html | LEAVE PENDING DATA | Два вторичных объекта; нужна актуальность и отличие от страницы ЖК. |
+| /seo/kvartiry-zhk-ersona.html | LEAVE PENDING DATA | Два объекта, ошибочный slug; сначала запросы/индекс и подтверждение наличия. |
+| /seo/kvartiry-zhk-levoberezhnyy.html | LEAVE PENDING DATA | Два объекта; пересечение с имеющейся страницей ЖК, нужны URL/запросы из кабинетов. |
+| /seo/kvartiry-zhk-mechty.html | LEAVE PENDING DATA | Два объекта; наличие собственником и отдельный спрос не подтверждены. |
+| /seo/kvartiry-zhk-olet.html | LEAVE PENDING DATA | Смешение вторичных object и старых nb; не связывать nb с неподтверждёнными ID нового каталога. |
+| /seo/kvartiry-zhk-orod-u-reki.html | LEAVE PENDING DATA | Один object и один nb; пересечение со страницей ЖК, необходима сверка. |
+| /seo/kvartiry-zhk-sokol-grad-2.html | LEAVE PENDING DATA | Вероятное пересечение с Сокол Градъ; различия объектов и реальные запросы до объединения. |
+| /seo/kvartiry-zhk-sokol-grad.html | LEAVE PENDING DATA | Парная страница Сокол Град плюс nb; нельзя безопасно слить без актуальности и данных поиска. |
+| /seo/kvartiry-zhk-veresaeva.html | LEAVE PENDING DATA | Вероятное пересечение с Вересаево; название в данных неоднозначно. |
+| /seo/kvartiry-zhk-veresaevo.html | LEAVE PENDING DATA | Смешение object/nb и соседняя Вересаева; сначала актуальность и каннибализация по URL/запросам. |
+| /seo/kvartiry-zhk-vishnevyy-sad.html | LEAVE PENDING DATA | Только старые nb ID, уже есть страница ЖК; требуется сопоставление проектов. |
+| /seo/kvartiry-zhk-zapadnye-allei.html | LEAVE PENDING DATA | Только старые nb ID, проектная посадочная уже существует; требуется сопоставление. |
+| /seo/uchastki-loc-aksay.html | KEEP + LINK | Вход из lands.html; конкретный объект и контекст формы. Наличие требует подтверждения собственником. |
+| /seo/uchastki-raion-aksayskiy-rayon.html | LEAVE PENDING DATA | Пересечение с городской подборкой; land_05/09 похожи, land_07 требует подтверждения адреса. |
+
+Не выполнены массовое noindex, удаления и слияния индексируемых URL без данных об их показах и переходах. Статус перелинковки частичный: 3 KEEP + LINK, 18 LEAVE PENDING DATA (включая районную землю); индексируемость остальных сохранена.
+
+STATUS: P1 SAVED — PERFORMANCE NEXT
