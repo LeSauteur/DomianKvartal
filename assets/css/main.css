@@ -3205,3 +3205,8 @@ html[data-theme="dark"] .max-dialog__instruction {
         padding: 26px 20px 22px;
     }
 }
+
+/* Object detail route: keep the dialog above the fixed public header. */
+body.catalog-page #modal { z-index: 10020; }
+#modalDesc { white-space: pre-line; }
+#modal .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
