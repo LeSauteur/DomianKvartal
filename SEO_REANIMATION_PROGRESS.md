@@ -116,3 +116,11 @@ STATUS: P1 SAVED — PERFORMANCE NEXT
 Один AFTER тем же способом, что BEFORE: Chromium 390×844, новая сессия, networkidle, без прокрутки, localhost /apartments.html?qa=1. BEFORE 17 662 413 bytes / 114 image requests / 124 cards; AFTER 1 546 929 bytes / 9 image requests / 124 cards. Начальный transfer меньше на 91,24%. Это не полная загрузка после прокрутки, не mobile field data, не LCP/CLS/INP и не live-измерение. Размеры исходных файлов не изменены.
 
 STATUS: PERFORMANCE IMPLEMENTED AND MEASURED LOCALLY — HYGIENE + REGRESSION NEXT
+
+## Этап 7 — служебные страницы
+
+Шесть подтверждённых публичных прототипов company-rebuild/index.html, company-rebuild/main-no-company.html, ui-blocks/blocks.html, ui-blocks/index.html, ui-rebuild/index.html и source/apartments.html помечены noindex, follow. Из sitemap они и раньше отсутствовали; robots не блокирует их чтение. Это инструкция роботу после следующего обхода, не мгновенное удаление из поиска. У старого source/apartments.html устаревший HTTP canonical заменён на действующий HTTPS-каталог. Исходники сохранены.
+
+У главной canonical / уже корректен. Подтверждённый аудитом HTTP 200 не «исправляется» JavaScript-переадресацией: серверный HTTPS redirect требует проверки Enforce HTTPS/доменной конфигурации публикации. GitHub Pages и DNS здесь не менялись. /index.html остаётся с canonical /; дублирование URL не доказано причиной нулевых лидов.
+
+STATUS: IMPLEMENTATION SAVED — FINAL REGRESSION IN PROGRESS
