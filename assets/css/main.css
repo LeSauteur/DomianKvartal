@@ -3210,3 +3210,6 @@ html[data-theme="dark"] .max-dialog__instruction {
 body.catalog-page #modal { z-index: 10020; }
 #modalDesc { white-space: pre-line; }
 #modal .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+
+/* Native lazy loading keeps off-screen catalog photos out of the initial transfer. */
+img.property-card__photo { display: block; object-fit: cover; }

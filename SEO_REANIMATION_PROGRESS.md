@@ -108,3 +108,11 @@ STATUS: P1 COMMERCIAL ROUTES IMPLEMENTED LOCALLY — LINKING IN PROGRESS
 Не выполнены массовое noindex, удаления и слияния индексируемых URL без данных об их показах и переходах. Статус перелинковки частичный: 3 KEEP + LINK, 18 LEAVE PENDING DATA (включая районную землю); индексируемость остальных сохранена.
 
 STATUS: P1 SAVED — PERFORMANCE NEXT
+
+## Этап 6 — нагрузка каталога
+
+Фото карточек переведены с немедленно загружаемых CSS backgrounds и дублирующих Image probes на нативные img loading=lazy/decoding=async. Галерея, резервное фото и фиксированная геометрия сохранены. Массовой перекодировки, изменения всех изображений и зависимостей нет.
+
+Один AFTER тем же способом, что BEFORE: Chromium 390×844, новая сессия, networkidle, без прокрутки, localhost /apartments.html?qa=1. BEFORE 17 662 413 bytes / 114 image requests / 124 cards; AFTER 1 546 929 bytes / 9 image requests / 124 cards. Начальный transfer меньше на 91,24%. Это не полная загрузка после прокрутки, не mobile field data, не LCP/CLS/INP и не live-измерение. Размеры исходных файлов не изменены.
+
+STATUS: PERFORMANCE IMPLEMENTED AND MEASURED LOCALLY — HYGIENE + REGRESSION NEXT

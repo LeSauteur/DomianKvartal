@@ -1150,7 +1150,7 @@
     var many = safeImages.length > 1;
     return [
       '<div class="property-card__gallery" data-images="' + encoded + '" data-index="0">',
-      '<div class="property-card__photo" role="img" data-src="' + first + '" style="background-image: url(\'' + first + '\');" aria-label="' + escapeHtml(title || "Фото объекта") + '"></div>',
+      '<img class="property-card__photo" role="img" src="' + first + '" data-src="' + first + '" loading="lazy" decoding="async" width="640" height="480" alt="' + escapeHtml(title || "Фото объекта") + '">',
       many ? '<button class="property-card__gallery-btn property-card__gallery-btn--prev" type="button" aria-label="Предыдущее фото">‹</button>' : "",
       many ? '<button class="property-card__gallery-btn property-card__gallery-btn--next" type="button" aria-label="Следующее фото">›</button>' : "",
       many ? '<div class="property-card__counter">1/' + safeImages.length + '</div>' : "",
@@ -1168,15 +1168,13 @@
 
   function bindPropertyGalleryFallback(scope) {
     qsa(".property-card__photo", scope || document).forEach(function (photo) {
-      var src = photo.getAttribute("data-src");
-      if (!hasCardValue(src)) return;
-      var probe = new Image();
-      probe.onload = function () { photo.classList.remove("is-fallback"); };
-      probe.onerror = function () {
-        photo.style.backgroundImage = "url('assets/hero/hero.jpg')";
+      if (photo.dataset.fallbackBound) return;
+      photo.dataset.fallbackBound = "1";
+      photo.addEventListener("error", function () {
+        if (photo.classList.contains("is-fallback")) return;
         photo.classList.add("is-fallback");
-      };
-      probe.src = src;
+        photo.src = "assets/hero/hero.jpg";
+      });
     });
   }
 
@@ -1202,7 +1200,8 @@
       var photo = qs(".property-card__photo", gallery);
       if (photo) {
         var src = images[next].replace(/'/g, "%27");
-        photo.style.backgroundImage = "url('" + src + "')";
+        photo.classList.remove("is-fallback");
+        photo.src = src;
         photo.setAttribute("data-src", images[next]);
       }
       var counter = qs(".property-card__counter", gallery);
