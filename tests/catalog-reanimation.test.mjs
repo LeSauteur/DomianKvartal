@@ -9,7 +9,7 @@ const context = vm.createContext({});
 vm.runInContext(pure + normalize, context);
 test('IDs and square metres do not become rooms; valid rooms remain', () => {
   for (const value of ['object_905 Квартира', 'object_901 Квартира', 'Дом 100 кв.м', 'Объект 905', '', '100-комнатная']) assert.equal(context.extractRooms(value), null, value);
-  for (const [value, count] of [['1-комнатная',1], ['2-к квартира',2], ['3 комнаты',3], ['4-комнатная квартира',4], ['5 комнат',5], ['евро-2 квартира',null]]) assert.equal(context.extractRooms(value), count, value);
+  for (const [value, count] of [['1-комнатная',1], ['2-к квартира',2], ['3 комнаты',3], ['4-комнатная квартира',4], ['5 комнат',5], ['3х‑комнатная квартира',3], ['1‑комнатная',1], ['евро-2 квартира',null]]) assert.equal(context.extractRooms(value), count, value);
 });
 test('real incomplete records never receive inferred rooms or invented prices', () => {
   const data = JSON.parse(fs.readFileSync(new URL('../objects/object_905/data.json', import.meta.url)));

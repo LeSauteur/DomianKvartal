@@ -215,12 +215,16 @@
   function saveThanksCategory(values) {
     var aliases = {
       apartment: "apartment",
+      apartments: "apartment",
       flat: "apartment",
       house: "house",
+      houses: "house",
       construction: "house",
       land: "land",
+      lands: "land",
       plot: "land",
-      newbuild: "newbuild"
+      newbuild: "newbuild",
+      newbuilds: "newbuild"
     };
     var objectType = normalizeValue(values.object_type).toLowerCase();
     var leadType = normalizeValue(values.lead_type).toLowerCase();
@@ -765,7 +769,7 @@
 
     function focusAndScroll() {
       var firstField = form.querySelector("input:not([type='hidden']):not([type='checkbox']), select, textarea");
-      target.scrollIntoView({ block: "start", behavior: "auto" });
+      target.scrollIntoView({ block: "start", behavior: "instant" });
       if (firstField) firstField.focus({ preventScroll: true });
     }
 

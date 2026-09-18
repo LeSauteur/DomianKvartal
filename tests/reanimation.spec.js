@@ -80,3 +80,49 @@ test('a blocked analytics callback cannot prevent successful form completion', a
   await expect(page).toHaveURL(/thanks\.html\?qa=1/);
 });
 
+
+for (const [path, type, cta] of [
+  ['/sell-apartment.html','sell','sell_apartment_hero'],
+  ['/property-valuation.html','valuation','valuation_hero']
+]) test('mobile service route preserves intent: ' + path, async ({ page }) => {
+  await page.setViewportSize({width:390,height:844});
+  const errors=[]; page.on('pageerror',e=>errors.push(e.message));
+  await page.goto(path+'?qa=1&utm_source=service_test');
+  await expect(page.locator('h1')).toHaveCount(1);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
+  await page.locator('[data-source-cta="'+cta+'"]').click();
+  await expect(page.locator('#lead-form')).toBeVisible();
+  const context=await page.evaluate(()=>JSON.parse(sessionStorage.getItem('domian_lead_context')));
+  expect(context.lead_type).toBe(type);
+  expect(context.source_cta).toBe(cta);
+  await page.waitForFunction(()=>Boolean(window.domianAttribution));
+  expect((await page.evaluate(()=>window.domianAttribution.get())).first_landing).toContain(path);
+  expect(errors).toEqual([]);
+});
+
+test('lazy catalog photos load on scroll and gallery still changes the photo', async ({ page }) => {
+  await page.setViewportSize({width:390,height:844});
+  await page.goto('/apartments.html?qa=1');
+  await expect(page.locator('#cards .property-card')).toHaveCount(124);
+  const photo=page.locator('#cards .property-card__photo').last();
+  expect(await photo.getAttribute('loading')).toBe('lazy');
+  expect(await photo.evaluate(img=>img.complete)).toBe(false);
+  await photo.scrollIntoViewIfNeeded();
+  await expect.poll(()=>photo.evaluate(img=>img.complete&&img.naturalWidth>0)).toBe(true);
+  const card=page.locator('#cards .property-card').filter({has:page.locator('.property-card__gallery-btn--next')}).filter({has:page.locator('img.property-card__photo[data-src^="objects/"]')}).first();
+  const firstSrc=await card.locator('img.property-card__photo').getAttribute('src');
+  await card.locator('.property-card__gallery-btn--next').click();
+  await expect(card.locator('img.property-card__photo')).not.toHaveAttribute('src',firstSrc);
+});
+
+test('a recent listing outside the old index still opens its own details', async ({ page }) => {
+  await page.setViewportSize({width:390,height:844});
+  await page.goto('/apartments.html?qa=1&object=object_914');
+  await expect(page.locator('#modal')).toBeVisible();
+  await expect(page.locator('#modal [data-object-id="object_914"]')).toBeVisible();
+  await expect(page.locator('#modalDesc')).toContainText('66 м²');
+  await expect(page.locator('[data-modal-facts]')).toContainText('3 комн.');
+  await page.keyboard.press('Escape');
+  await expect(page.locator('#modal')).not.toBeVisible();
+  expect(new URL(page.url()).searchParams.has('object')).toBe(false);
+});

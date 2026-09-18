@@ -256,7 +256,7 @@ for (const publicPath of publicPaths()) {
   const file = fileFor(publicPath);
   const absolute = path.join(root, file);
   if (!fs.existsSync(absolute)) throw new Error(`Missing public page: ${file}`);
-  const source = fs.readFileSync(absolute, "utf8");
+  const source = fs.readFileSync(absolute, "utf8").replace(/\r\n/g, "\n");
   const withHeader = replaceHeader(source, headerMarkup(file));
   const output = normalizeHeaderBoundary(addAssets(replacePropertyNav(withHeader, file)));
   if (output !== source) {

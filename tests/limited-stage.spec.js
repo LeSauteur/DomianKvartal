@@ -242,7 +242,7 @@ for (const categoryCase of CATEGORY_CASES) {
     providerGate.release();
     await page.waitForURL(/thanks\.html$/);
     await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /\bnoindex\b.*\bnofollow\b/i);
-    expect(await guideHrefs(page)).toEqual(categoryCase.guides);
+    await expect.poll(() => guideHrefs(page)).toEqual(categoryCase.guides);
     expect(await page.evaluate((key) => sessionStorage.getItem(key), THANKS_KEY)).toBeNull();
     expect(JSON.parse(await page.evaluate((logKey) => sessionStorage.getItem(logKey), THANKS_WRITE_LOG))).toEqual([categoryCase.category]);
     expect(network.providerRequests).toBe(1);

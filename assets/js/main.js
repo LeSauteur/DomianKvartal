@@ -641,7 +641,7 @@
   function extractRooms(text) {
     // Technical IDs and square metres are never room counts.
     var source = normalizeText(text).replace(/\b(?:object|house|land|nb)_\d+\b/gi, '');
-    var match = source.match(/(?:^|[^\d\w])(?:евро\s*[-–]?\s*)?(\d{1,2})\s*(?:[-–]\s*)?(?:комн(?:ат[а-яё]*)?|к)(?=$|[\s.,;:!\/]|[-–])/i);
+    var match = source.match(/(?:^|[^\d\w])(?:евро\s*[-–]?\s*)?(\d{1,2})\s*(?:[-‐‑‒–—]?\s*[хx])?\s*(?:[-‐‑‒–—]\s*)?(?:комн(?:ат[а-яё]*)?|к)(?=$|[\s.,;:!\/]|[-–])/i);
     if (!match) match = source.match(/(?:количество\s+комнат|комнат)\s*[:—-]\s*(\d{1,2})(?!\d)/i);
     return match ? boundedNumber(match[1], 1, 30, true) : null;
   }
@@ -1394,7 +1394,7 @@
     if (type === 'lands') rooms = null;
     var floor = boundedNumber(fields.floor, 1, 150, true);
     if (floor === null) floor = extractFloor(sourceText);
-    var floors = boundedNumber(fields.floors, 1, 150, true);
+    var floors = boundedNumber(fields.floors || fields.totalFloors, 1, 150, true);
     if (floors === null) floors = extractFloors(sourceText);
     if (floor !== null && floors !== null && floor > floors) floor = null;
     var price = parsePriceValue(data.price);
@@ -1688,6 +1688,27 @@
       });
   }
 
+  function resolveRecentObject(type, items) {
+    var requestedId = new URLSearchParams(location.search).get('object');
+    if (!requestedId || items.some(function (item) { return item.id === requestedId; })) return Promise.resolve(items);
+    var feedType = { apartments:'apartment', houses:'house', lands:'land' }[type];
+    if (!feedType) return Promise.resolve(items);
+    // Recently published cards can precede the main catalog index. Resolve only
+    // the requested ID from existing feeds; never substitute a different object.
+    return Promise.all(['output/' + type + '/new-objects.json', 'output/home/new-objects.json'].map(function (url) {
+      return fetchJson(url).catch(function () { return []; });
+    })).then(function (feeds) {
+      var recent = [].concat.apply([], feeds).find(function (item) { return item.id === requestedId && item.type === feedType; });
+      if (!recent) return items;
+      var data = Object.assign({}, recent, {description:recent.description || recent.shortDescription || ''});
+      var normalized = normalizeItem(type, {id:recent.id, path:type + '/' + recent.id}, data, items.length);
+      // Feed images are already site-relative or absolute, unlike folder data.json.
+      normalized.images = getCardImages(recent);
+      normalized.cover = normalized.images[0];
+      return items.concat(normalized);
+    });
+  }
+
   function initCatalogPage(type) {
     var cardsContainer = qs("#cards");
     var filtersContainer = qs("#filters");
@@ -1699,6 +1720,7 @@
     cardsContainer.innerHTML = '<p class="loading-state">Загрузка объектов...</p>';
 
     loadCategoryData(type)
+      .then(function (items) { return resolveRecentObject(type, items); })
       .then(function (items) {
         if (!items.length) {
           cardsContainer.innerHTML = '<p class="loading-state">Объекты не найдены.</p>';

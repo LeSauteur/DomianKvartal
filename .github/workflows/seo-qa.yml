@@ -21,4 +21,4 @@ jobs:
       - run: npm test
       - run: node _tools/sync-public-header.mjs --check
       - run: npm run seo:audit
-      - run: npx playwright test tests/service-pages.spec.js tests/public-header.spec.js
+      - run: npx playwright test tests/service-pages.spec.js tests/public-header.spec.js tests/lead-form.spec.js tests/reanimation.spec.js
