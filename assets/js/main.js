@@ -8,6 +8,8 @@
   var UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
   var UTM_STORAGE_PREFIX = "domian_utm_";
   var ANALYTICS_PARAM_KEYS = [
+    "session_id",
+    "lead_id",
     "error_category",
     "page_type",
     "object_type",
@@ -85,6 +87,47 @@
 
   persistUtmAttribution();
 
+  function createAnonymousId() {
+    return window.crypto && window.crypto.randomUUID ? window.crypto.randomUUID() : Date.now().toString(36) + '-' + Math.random().toString(36).slice(2);
+  }
+  function cleanAttributionUrl(raw, keepCampaign) {
+    try {
+      var url = new URL(raw, location.href), clean = new URL(url.origin + url.pathname);
+      if (!/^https?:$/.test(url.protocol)) return '';
+      (keepCampaign ? UTM_KEYS.concat(['object', 'qa']) : []).forEach(function (key) {
+        var value = url.searchParams.get(key);
+        if (value) clean.searchParams.set(key, value.slice(0, 256));
+      });
+      return clean.href;
+    } catch (_) { return ''; }
+  }
+  var attributionKey = 'domian_attribution_v1';
+  var attribution;
+  try { attribution = JSON.parse(sessionStorage.getItem(attributionKey) || 'null'); } catch (_) {}
+  var attributionNow = Date.now();
+  var qaSession = new URLSearchParams(location.search).get('qa') === '1';
+  if (!attribution || !attribution.session_id || !attribution.last_seen || attributionNow - attribution.last_seen > 30 * 60 * 1000 || Boolean(attribution.is_test) !== Boolean(window.DOMIAN_ANALYTICS_DISABLED)) {
+    attribution = {session_id:createAnonymousId(), first_landing:cleanAttributionUrl(location.href, true), initial_referrer:document.referrer ? cleanAttributionUrl(document.referrer, false) : '', is_test:Boolean(window.DOMIAN_ANALYTICS_DISABLED)};
+    UTM_KEYS.forEach(function (key) { attribution[key] = (new URLSearchParams(location.search).get(key) || '').slice(0,256); });
+  }
+  attribution.last_seen = attributionNow;
+  function saveAttribution() { try { sessionStorage.setItem(attributionKey, JSON.stringify(attribution)); } catch (_) {} }
+  saveAttribution();
+  window.domianAttribution = { get:function () { return Object.assign({}, attribution); }, createId:createAnonymousId, cleanUrl:cleanAttributionUrl };
+  if (!window.DOMIAN_ANALYTICS_DISABLED && typeof window.ym === 'function') {
+    window.ym(METRIKA_ID, 'getClientID', function (id) {
+      if (/^\d{1,32}$/.test(String(id))) { attribution.metrika_client_id = String(id); saveAttribution(); }
+    });
+  }
+  // Carry explicit QA mode to internal pages before their inline counter runs.
+  document.addEventListener('click', function (event) {
+    if (!qaSession) return;
+    var link = event.target.closest && event.target.closest('a[href]');
+    if (!link) return;
+    try { var url = new URL(link.href); if (url.origin === location.origin && /\.html$|\/$/.test(url.pathname)) { url.searchParams.set('qa','1'); link.href = url.href; } } catch (_) {}
+  }, true);
+
+
   function getStoredTheme() {
     try {
       return window.localStorage.getItem(THEME_STORAGE_KEY) === "dark" ? "dark" : "light";
@@ -125,15 +168,15 @@
     return safe;
   }
 
-  function safeReachGoal(goal, params) {
+  function safeReachGoal(goal, params, callback) {
     var safeParams = sanitizeAnalyticsParams(params);
     try {
       if (typeof window.DOMIAN_ANALYTICS_TEST_HOOK === "function") {
         window.DOMIAN_ANALYTICS_TEST_HOOK(goal, safeParams);
       }
-      if (window.DOMIAN_ANALYTICS_DISABLED) return;
+      if (window.DOMIAN_ANALYTICS_DISABLED) { if (callback) callback(); return; }
       if (typeof window.ym === "function") {
-        window.ym(window.DOMIAN_METRIKA_ID || METRIKA_ID, "reachGoal", goal, safeParams);
+        window.ym(window.DOMIAN_METRIKA_ID || METRIKA_ID, "reachGoal", goal, safeParams, callback);
       }
     } catch (error) {
       // Ignore analytics errors.

@@ -16,6 +16,12 @@
   var UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
   var UTM_STORAGE_PREFIX = "domian_utm_";
   var OPTIONAL_CONTEXT_FIELDS = [
+    "session_id",
+    "lead_id",
+    "first_landing",
+    "initial_referrer",
+    "metrika_client_id",
+    "is_test",
     "referrer",
     "utm_source",
     "utm_medium",
@@ -48,12 +54,12 @@
     return value == null ? "" : String(value).replace(/\s+/g, " ").trim();
   }
 
-  function safeReachGoal(goal, params) {
+  function safeReachGoal(goal, params, callback) {
     try {
       if (typeof window.domianReachGoal === "function") {
-        window.domianReachGoal(goal, params || {});
+        window.domianReachGoal(goal, params || {}, callback);
       } else if (!window.DOMIAN_ANALYTICS_DISABLED && typeof window.ym === "function") {
-        window.ym(window.DOMIAN_METRIKA_ID || METRIKA_ID, "reachGoal", goal, params || {});
+        window.ym(window.DOMIAN_METRIKA_ID || METRIKA_ID, "reachGoal", goal, params || {}, callback);
       }
     } catch (error) {
       // Сбой аналитики не должен влиять на форму.
@@ -156,6 +162,7 @@
   }
 
   function collectUtm() {
+    if (window.domianAttribution) return window.domianAttribution.get();
     var fromUrl = readUtmFromUrl();
     var result = {};
 
@@ -268,6 +275,8 @@
   function fillPayloadFields(form) {
     var context = getLeadContext();
     var utm = collectUtm();
+    var attribution = window.domianAttribution ? window.domianAttribution.get() : {};
+    if (!form.dataset.leadId) form.dataset.leadId = window.domianAttribution ? window.domianAttribution.createId() : Date.now().toString(36);
     var email = form.elements.email ? normalizeValue(form.elements.email.value) : "";
     var leadType = inferLeadType(form, context);
     var sourceCta = normalizeValue(context.source_cta) || normalizeValue(form.getAttribute("data-source-cta")) || "contact_form";
@@ -277,6 +286,12 @@
       subject: "Новая заявка с domian-161.ru: " + leadType,
       from_name: "Домиан Квартал — сайт",
       source: "website",
+      session_id: attribution.session_id || "",
+      lead_id: form.dataset.leadId,
+      first_landing: attribution.first_landing || "",
+      initial_referrer: attribution.initial_referrer || "",
+      metrika_client_id: attribution.metrika_client_id || "",
+      is_test: attribution.is_test ? "true" : "false",
       page_url: window.location.href,
       page_title: document.title,
       referrer: document.referrer || "",
@@ -680,14 +695,24 @@
 
     submitToProvider(formData)
       .then(function () {
-        safeReachGoal("lead_form_success");
+        // The provider accepted the request; this is not a qualified lead.
         if (payloadValues.lead_type === "construction") {
           safeReachGoal("construction_lead_success");
         }
         saveThanksCategory(payloadValues);
         clearLeadContext();
         setFormStatus(form, "Заявка принята сервисом. Перенаправляем…", "success");
-        window.location.assign(CONFIG.redirectUrl || "/thanks.html");
+        var redirected = false;
+        function redirectAfterGoal() {
+          if (redirected) return;
+          redirected = true;
+          var destination = new URL(CONFIG.redirectUrl || '/thanks.html', location.href);
+          if (new URLSearchParams(location.search).get('qa') === '1') destination.searchParams.set('qa', '1');
+          window.location.assign(destination.href);
+        }
+        // A blocked counter must never trap a successfully submitted form.
+        window.setTimeout(redirectAfterGoal, 1000);
+        safeReachGoal('lead_form_success', {session_id:payloadValues.session_id, lead_id:payloadValues.lead_id}, redirectAfterGoal);
       })
       .catch(function (error) {
         var category = error && error.category ? error.category : "network";

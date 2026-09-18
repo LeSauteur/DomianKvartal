@@ -54,3 +54,15 @@ FIXED LOCALLY: технические IDs исключены из текста �
 BEFORE performance: локальный актуальный main, Chromium 390×844, fresh context, networkidle, без прокрутки: 17 662 413 bytes resources, 114 image requests, 124 cards. Сравнение AFTER будет тем же методом; с live-измерением аудита напрямую не смешивается.
 
 STATUS: OBJECT ROUTE + DATA FIXED LOCALLY — ATTRIBUTION IN PROGRESS
+
+## Этап 3 — минимальная атрибуция и форма
+
+FIXED LOCALLY: first_landing и initial_referrer сохраняются на первую страницу сессии и переживают внутренние переходы. Сессия ограничена вкладкой/30 минутами неактивности. Сохраняются исходные UTM, обезличенный session_id и lead_id; доступный ClientID Метрики добавляется без блокировки формы. Поисковый query в referrer и произвольные параметры landing не сохраняются. Уже существующие объектный/project context и source_cta сохранены.
+
+lead_form_success остаётся подтверждением приёма провайдером, не квалифицированным лидом. Redirect ждёт callback Метрики, максимум 1 секунду; блокировка счётчика не блокирует успешную форму. Сигнатура callback сверена с официальной документацией: https://yandex.ru/support/metrica/ru/objects/reachgoal.
+
+qa=1 переносится по внутренним ссылкам, тестовый трафик и localhost не отправляют события счётчика. Payload помечает is_test. Первоначальный источник тестового визита не становится нормальной сессией.
+
+4/4 новых браузерных сценария прошли: объект и история, неизвестный ID, исходный referrer/UTM через каталог→главную→перехваченную отправку, завершение при неработающем callback. Найденная ошибка ожидания deferred-скрипта в тесте исправлена. Реальная заявка не отправлена; доставка менеджеру — MANUAL TEST REQUIRED.
+
+STATUS: P0 CODE VERIFIED LOCALLY — COMMERCIAL ROUTES IN PROGRESS
