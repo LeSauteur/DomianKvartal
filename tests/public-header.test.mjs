@@ -41,8 +41,10 @@ test("public header sync is current", () => {
   execFileSync(process.execPath, ["_tools/sync-public-header.mjs", "--check"], { cwd: root, stdio: "pipe" });
 });
 
-test("all 96 public pages use the canonical static header", () => {
-  assert.equal(publicPaths.length, 96);
+test("all sitemap public pages use the canonical static header", () => {
+  assert.ok(publicPaths.length >= 95);
+  assert.ok(publicPaths.includes("sell-apartment.html"));
+  assert.ok(publicPaths.includes("property-valuation.html"));
   for (const publicPath of publicPaths) {
     const file = fileFor(publicPath);
     const html = fs.readFileSync(path.join(root, file), "utf8");

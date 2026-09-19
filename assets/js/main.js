@@ -8,6 +8,8 @@
   var UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
   var UTM_STORAGE_PREFIX = "domian_utm_";
   var ANALYTICS_PARAM_KEYS = [
+    "session_id",
+    "lead_id",
     "error_category",
     "page_type",
     "object_type",
@@ -85,6 +87,47 @@
 
   persistUtmAttribution();
 
+  function createAnonymousId() {
+    return window.crypto && window.crypto.randomUUID ? window.crypto.randomUUID() : Date.now().toString(36) + '-' + Math.random().toString(36).slice(2);
+  }
+  function cleanAttributionUrl(raw, keepCampaign) {
+    try {
+      var url = new URL(raw, location.href), clean = new URL(url.origin + url.pathname);
+      if (!/^https?:$/.test(url.protocol)) return '';
+      (keepCampaign ? UTM_KEYS.concat(['object', 'qa']) : []).forEach(function (key) {
+        var value = url.searchParams.get(key);
+        if (value) clean.searchParams.set(key, value.slice(0, 256));
+      });
+      return clean.href;
+    } catch (_) { return ''; }
+  }
+  var attributionKey = 'domian_attribution_v1';
+  var attribution;
+  try { attribution = JSON.parse(sessionStorage.getItem(attributionKey) || 'null'); } catch (_) {}
+  var attributionNow = Date.now();
+  var qaSession = new URLSearchParams(location.search).get('qa') === '1';
+  if (!attribution || !attribution.session_id || !attribution.last_seen || attributionNow - attribution.last_seen > 30 * 60 * 1000 || Boolean(attribution.is_test) !== Boolean(window.DOMIAN_ANALYTICS_DISABLED)) {
+    attribution = {session_id:createAnonymousId(), first_landing:cleanAttributionUrl(location.href, true), initial_referrer:document.referrer ? cleanAttributionUrl(document.referrer, false) : '', is_test:Boolean(window.DOMIAN_ANALYTICS_DISABLED)};
+    UTM_KEYS.forEach(function (key) { attribution[key] = (new URLSearchParams(location.search).get(key) || '').slice(0,256); });
+  }
+  attribution.last_seen = attributionNow;
+  function saveAttribution() { try { sessionStorage.setItem(attributionKey, JSON.stringify(attribution)); } catch (_) {} }
+  saveAttribution();
+  window.domianAttribution = { get:function () { return Object.assign({}, attribution); }, createId:createAnonymousId, cleanUrl:cleanAttributionUrl };
+  if (!window.DOMIAN_ANALYTICS_DISABLED && typeof window.ym === 'function') {
+    window.ym(METRIKA_ID, 'getClientID', function (id) {
+      if (/^\d{1,32}$/.test(String(id))) { attribution.metrika_client_id = String(id); saveAttribution(); }
+    });
+  }
+  // Carry explicit QA mode to internal pages before their inline counter runs.
+  document.addEventListener('click', function (event) {
+    if (!qaSession) return;
+    var link = event.target.closest && event.target.closest('a[href]');
+    if (!link) return;
+    try { var url = new URL(link.href); if (url.origin === location.origin && /\.html$|\/$/.test(url.pathname)) { url.searchParams.set('qa','1'); link.href = url.href; } } catch (_) {}
+  }, true);
+
+
   function getStoredTheme() {
     try {
       return window.localStorage.getItem(THEME_STORAGE_KEY) === "dark" ? "dark" : "light";
@@ -125,15 +168,15 @@
     return safe;
   }
 
-  function safeReachGoal(goal, params) {
+  function safeReachGoal(goal, params, callback) {
     var safeParams = sanitizeAnalyticsParams(params);
     try {
       if (typeof window.DOMIAN_ANALYTICS_TEST_HOOK === "function") {
         window.DOMIAN_ANALYTICS_TEST_HOOK(goal, safeParams);
       }
-      if (window.DOMIAN_ANALYTICS_DISABLED) return;
+      if (window.DOMIAN_ANALYTICS_DISABLED) { if (callback) callback(); return; }
       if (typeof window.ym === "function") {
-        window.ym(window.DOMIAN_METRIKA_ID || METRIKA_ID, "reachGoal", goal, safeParams);
+        window.ym(window.DOMIAN_METRIKA_ID || METRIKA_ID, "reachGoal", goal, safeParams, callback);
       }
     } catch (error) {
       // Ignore analytics errors.
@@ -590,30 +633,30 @@
     return match ? toNumber(match[1]) : null;
   }
 
+  function boundedNumber(value, min, max, integer) {
+    var n = toNumber(value);
+    return n !== null && n >= min && n <= max && (!integer || Number.isInteger(n)) ? n : null;
+  }
+
   function extractRooms(text) {
-    var source = normalizeText(text).toLowerCase();
-    if (!source) return null;
-
-    var match = source.match(/(\d+)\s*[-–]?\s*(?:комн|комнат|к\b)/i);
-    if (match) return parseInt(match[1], 10);
-
-    match = source.match(/(?:евро\s*[-–]?\s*)?(\d+)\s*[-–]?\s*к/i);
-    if (match) return parseInt(match[1], 10);
-
-    return null;
+    // Technical IDs and square metres are never room counts.
+    var source = normalizeText(text).replace(/\b(?:object|house|land|nb)_\d+\b/gi, '');
+    var match = source.match(/(?:^|[^\d\w])(?:евро\s*[-–]?\s*)?(\d{1,2})\s*(?:[-‐‑‒–—]?\s*[хx])?\s*(?:[-‐‑‒–—]\s*)?(?:комн(?:ат[а-яё]*)?|к)(?=$|[\s.,;:!\/]|[-–])/i);
+    if (!match) match = source.match(/(?:количество\s+комнат|комнат)\s*[:—-]\s*(\d{1,2})(?!\d)/i);
+    return match ? boundedNumber(match[1], 1, 30, true) : null;
   }
 
   function extractFloor(text) {
-    var source = normalizeText(text).toLowerCase();
-    if (!source) return null;
+    var m = normalizeText(text).match(/этаж\s*[:№—-]?\s*(\d+)\s*\/\s*(\d+)|(\d+)\s*\/\s*(\d+)\s*(?:этаж|эт)|(?:этаж\s*[:№—-]?\s*)(\d+)(?!\d)|(\d+)\s*(?:-?й|ом)?\s*этаже?/i);
+    if (!m) return null;
+    var floor = boundedNumber(m[1] || m[3] || m[5] || m[6], 1, 150, true);
+    var floors = boundedNumber(m[2] || m[4], 1, 150, true);
+    return floors && floor > floors ? null : floor;
+  }
 
-    var match = source.match(/этаж\s*[:№]?\s*(\d+)\s*\/\s*(\d+)/i);
-    if (match) return parseInt(match[1], 10);
-
-    match = source.match(/(\d+)\s*\/\s*\d+\s*(?:этаж|эт)/i);
-    if (match) return parseInt(match[1], 10);
-
-    return null;
+  function extractFloors(text) {
+    var m = normalizeText(text).match(/этаж\s*[:№—-]?\s*\d+\s*\/\s*(\d+)|\d+\s*\/\s*(\d+)\s*(?:этаж|эт)|(\d+)\s*[-–]?\s*этажн/i);
+    return m ? boundedNumber(m[1] || m[2] || m[3], 1, 150, true) : null;
   }
 
   function formatPrice(price, priceType) {
@@ -625,47 +668,13 @@
     return formatted + "\u00a0₽";
   }
   function parsePriceValue(value) {
-    if (value === null || value === undefined) return null;
-    var text = String(value).trim();
-    if (!text) return null;
-    var normalized = text.replace(/\s+/g, "").replace(",", ".");
-    var match = normalized.match(/\d+(?:\.\d+)?/);
-    if (!match) return null;
-    var num = Number(match[0]);
-    if (!isFinite(num) || num < 100000) return null;
-    return Math.round(num);
+    var text = normalizeText(value);
+    if (!/^\d[\d\s]*(?:[.,]\d+)?\s*(?:₽|руб(?:лей|ля|ль)?\.?|млн(?:\s*руб\.?|\s*₽)?|тыс(?:\s*руб\.?|\s*₽)?)?$/i.test(text)) return null;
+    var numeric = /[а-я₽]/i.test(text) ? extractPrice(text) : toNumber(text);
+    return boundedNumber(numeric, 100000, 100000000000, false);
   }
 
-  function estimateCatalogPrice(type, area, landArea, rooms) {
-    var ppsmByType = {
-      apartments: 165000,
-      houses: 70000,
-      newbuilds: 175000
-    };
-    var roomMedian = {
-      apartments: { 1: 4600000, 2: 6200000, 3: 7900000, 4: 9800000 },
-      newbuilds: { 1: 5200000, 2: 7000000, 3: 8900000, 4: 10800000 },
-      houses: { 2: 6800000, 3: 8200000, 4: 9800000, 5: 11800000 }
-    };
-
-    if (type === "lands") {
-      var byLand = landArea && landArea > 0 ? landArea * 260000 : 1700000;
-      return Math.round(byLand);
-    }
-
-    if (area && area > 10) {
-      var ppsm = ppsmByType[type] || 120000;
-      return Math.round(area * ppsm);
-    }
-
-    if (rooms && roomMedian[type] && roomMedian[type][rooms]) {
-      return roomMedian[type][rooms];
-    }
-
-    if (type === "houses") return 7800000;
-    if (type === "newbuilds") return 6800000;
-    return 5600000;
-  }
+  // Unknown prices remain unknown; no area-based or median price substitution.
 
   function buildNewbuildTitle(item, data, index) {
     var currentTitle = normalizeText(item.title || "");
@@ -804,37 +813,84 @@
     });
   }
 
+  function propertyUrl(item) {
+    var url = new URL(item.sectionLink || ((item.objectType || 'apartments') + '.html'), window.location.href);
+    url.searchParams.set('object', item.id);
+    url.hash = '';
+    return url.href;
+  }
+
   function bindModal() {
-    var modal = qs("#modal");
+    var modal = qs('#modal');
     if (!modal) return null;
-
-    var title = qs("#modalTitle");
-    var description = qs("#modalDesc");
-    var images = qs("#modalImages");
-
-    function closeModal() {
-      modal.style.display = "none";
+    var title = qs('#modalTitle'), description = qs('#modalDesc'), images = qs('#modalImages');
+    var panel = qs('.modal-content', modal), previousFocus, inertNodes = [];
+    panel.setAttribute('role', 'dialog');
+    panel.setAttribute('aria-modal', 'true');
+    panel.setAttribute('aria-labelledby', 'modalTitle');
+    panel.tabIndex = -1;
+    function hide() {
+      modal.style.display = 'none';
+      document.body.classList.remove('modal-open');
+      inertNodes.forEach(function (entry) { entry.node.inert = entry.inert; });
+      inertNodes = [];
+      if (previousFocus && previousFocus.isConnected) previousFocus.focus({ preventScroll: true });
     }
-
-    qsa(".close-modal", modal).forEach(function (btn) {
-      btn.addEventListener("click", closeModal);
-    });
-
-    modal.addEventListener("click", function (event) {
-      if (event.target === modal) {
-        closeModal();
+    function close() {
+      hide();
+      if (history.state && history.state.domianObject) history.back();
+      else {
+        var url = new URL(location.href);
+        url.searchParams.delete('object');
+        history.replaceState(null, '', url);
+      }
+    }
+    qsa('.close-modal', modal).forEach(function (b) { b.addEventListener('click', close); });
+    modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
+    modal.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { e.preventDefault(); close(); }
+      if (e.key === 'Tab') {
+        var controls = qsa('a[href],button:not([disabled])', panel).filter(function (x) { return x.getBoundingClientRect().width > 0; });
+        var first = controls[0], last = controls[controls.length - 1];
+        if (e.shiftKey && (document.activeElement === first || document.activeElement === panel)) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
       }
     });
-
-    return function openModal(item) {
+    function open(item, fromRoute) {
       if (!title || !description || !images) return;
-      title.textContent = item.title || "Объект";
-      description.textContent = item.description || "";
-      images.innerHTML = (item.images || []).map(function (img) {
-        return '<img src="' + escapeHtml(img) + '" loading="lazy" alt="' + escapeHtml(item.title || "Фото") + '">';
-      }).join("");
-      modal.style.display = "flex";
-    };
+      if (modal.style.display !== 'flex') previousFocus = document.activeElement;
+      title.textContent = item.title || 'Объект';
+      description.textContent = item.description || 'Подробности уточните у специалиста.';
+      images.innerHTML = getCardImages(item).map(function (img) {
+        return '<img src="' + escapeHtml(img) + '" loading="lazy" alt="' + escapeHtml(item.title || 'Объект') + '">';
+      }).join('');
+      var facts = qs('[data-modal-facts]', panel);
+      if (!facts) { facts = document.createElement('div'); facts.setAttribute('data-modal-facts', ''); panel.insertBefore(facts, images); }
+      var meta = item.meta || {};
+      facts.innerHTML = '<p>' + escapeHtml(formatPrice(meta.price)) + '</p>' + renderCardChars([
+        item.address, hasCardValue(meta.rooms) ? meta.rooms + ' комн.' : '',
+        hasCardValue(meta.area) ? meta.area + ' м²' : '',
+        hasCardValue(meta.landArea) ? meta.landArea + ' сот.' : '',
+        hasCardValue(meta.floor) ? 'Этаж ' + meta.floor + (meta.floors ? ' из ' + meta.floors : '') : ''
+      ]);
+      var actions = qs('[data-modal-actions]', panel);
+      if (!actions) { actions = document.createElement('div'); actions.className = 'hero-actions'; actions.setAttribute('data-modal-actions', ''); panel.insertBefore(actions, images); }
+      actions.innerHTML = '<a class="btn" href="/#lead-form-section" data-lead-type="buy" data-source-cta="object_detail" data-object-id="' + escapeHtml(item.id) + '" data-object-type="' + escapeHtml(item.objectType) + '" data-object-title="' + escapeHtml(item.title) + '" data-object-price="' + escapeHtml(meta.price) + '" data-object-url="' + escapeHtml(propertyUrl(item)) + '">Заявка по объекту</a><a class="btn secondary" href="tel:+79536091122">Позвонить</a><a class="btn secondary" href="' + escapeHtml(propertyUrl(item)) + '" data-object-permalink>Ссылка на объект</a>';
+      modal.style.display = 'flex';
+      document.body.classList.add('modal-open');
+      if (!inertNodes.length) Array.prototype.forEach.call(document.body.children, function (node) {
+        if (node !== modal && !node.contains(modal) && !/SCRIPT|STYLE/.test(node.tagName)) { inertNodes.push({node:node,inert:node.inert}); node.inert = true; }
+      });
+      panel.focus({ preventScroll: true });
+      if (!fromRoute) {
+        var url = new URL(location.href);
+        url.searchParams.set('object', item.id);
+        history.pushState({domianObject:true}, '', url);
+        safeReachGoal('property_card_open', {object_id:item.id,object_type:item.objectType});
+      }
+    }
+    open.hide = hide;
+    return open;
   }
 
   function hasCardValue(value) {
@@ -1094,7 +1150,7 @@
     var many = safeImages.length > 1;
     return [
       '<div class="property-card__gallery" data-images="' + encoded + '" data-index="0">',
-      '<div class="property-card__photo" role="img" data-src="' + first + '" style="background-image: url(\'' + first + '\');" aria-label="' + escapeHtml(title || "Фото объекта") + '"></div>',
+      '<img class="property-card__photo" role="img" src="' + first + '" data-src="' + first + '" loading="lazy" decoding="async" width="640" height="480" alt="' + escapeHtml(title || "Фото объекта") + '">',
       many ? '<button class="property-card__gallery-btn property-card__gallery-btn--prev" type="button" aria-label="Предыдущее фото">‹</button>' : "",
       many ? '<button class="property-card__gallery-btn property-card__gallery-btn--next" type="button" aria-label="Следующее фото">›</button>' : "",
       many ? '<div class="property-card__counter">1/' + safeImages.length + '</div>' : "",
@@ -1112,15 +1168,13 @@
 
   function bindPropertyGalleryFallback(scope) {
     qsa(".property-card__photo", scope || document).forEach(function (photo) {
-      var src = photo.getAttribute("data-src");
-      if (!hasCardValue(src)) return;
-      var probe = new Image();
-      probe.onload = function () { photo.classList.remove("is-fallback"); };
-      probe.onerror = function () {
-        photo.style.backgroundImage = "url('assets/hero/hero.jpg')";
+      if (photo.dataset.fallbackBound) return;
+      photo.dataset.fallbackBound = "1";
+      photo.addEventListener("error", function () {
+        if (photo.classList.contains("is-fallback")) return;
         photo.classList.add("is-fallback");
-      };
-      probe.src = src;
+        photo.src = "assets/hero/hero.jpg";
+      });
     });
   }
 
@@ -1146,7 +1200,8 @@
       var photo = qs(".property-card__photo", gallery);
       if (photo) {
         var src = images[next].replace(/'/g, "%27");
-        photo.style.backgroundImage = "url('" + src + "')";
+        photo.classList.remove("is-fallback");
+        photo.src = src;
         photo.setAttribute("data-src", images[next]);
       }
       var counter = qs(".property-card__counter", gallery);
@@ -1157,13 +1212,15 @@
   function buildCard(item, onOpen) {
     var card = document.createElement("article");
     card.className = "card property-card";
+    card.setAttribute("data-object-id", item.id || "");
+    card.setAttribute("data-object-type", item.objectType || "property");
 
     var safeTitle = escapeHtml(item.title || "Объект");
     var galleryImages = getCardImages(item);
     var meta = item.meta || {};
     var priceText = formatPrice(meta.price, meta.priceType) || "Цена по запросу";
-    var sectionLink = isSafeHttpUrl(item.sectionLink) ? item.sectionLink : "index.html#contact";
-    var isExternalLink = /^https?:\/\//i.test(sectionLink);
+    var sectionLink = item.objectType ? propertyUrl(item) : (isSafeHttpUrl(item.sectionLink) ? item.sectionLink : "index.html#contact");
+    var isExternalLink = /^https?:\/\//i.test(sectionLink) && new URL(sectionLink).origin !== location.origin;
     var linkAttrs = isExternalLink ? ' target="_blank" rel="noopener noreferrer"' : "";
 
     var mortgageHtml = "";
@@ -1197,6 +1254,10 @@
       '</div>'
     ].join("");
 
+    if (item.objectType && onOpen) qs('.property-card__cta', card).addEventListener('click', function (event) {
+      if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault(); onOpen(item);
+    });
     bindPropertyGalleryFallback(card);
     return card;
   }
@@ -1321,21 +1382,33 @@
     var cover = item.cover ? resolveAssetPath(basePath, item.cover) : (images[0] ? resolveAssetPath(basePath, images[0]) : "assets/hero/hero.jpg");
     var fullImages = images.map(function (img) { return resolveAssetPath(basePath, img); });
 
-    var sourceText = [item.title, title, description].join(" ");
-    var area = extractAreaM2(sourceText);
-    var landArea = extractLandArea(sourceText);
-    var rooms = extractRooms(sourceText);
-    var floor = extractFloor(sourceText);
+    var sourceText = [title, description].filter(function (value) {
+      return !/^(?:object|house|land|nb)_\d+$/i.test(normalizeText(value));
+    }).join(' ');
+    var fields = Object.assign({}, data.features || {}, data);
+    var total = normalizeText(description).match(/(?:общая\s+площадь|площадь\s+дома)\s*[:—-]?\s*(\d+(?:[.,]\d+)?)\s*(?:м²|м2|кв\.?\s*м)/i);
+    var area = boundedNumber(fields.area || fields.house_area || (total && total[1]) || extractAreaM2(sourceText), 1, 100000, false);
+    var landArea = boundedNumber(fields.land_area || fields.landArea || extractLandArea(sourceText), 0.1, 100000, false);
+    var rooms = boundedNumber(fields.rooms, 1, 30, true);
+    if (rooms === null) rooms = extractRooms(sourceText);
+    if (type === 'lands') rooms = null;
+    var floor = boundedNumber(fields.floor, 1, 150, true);
+    if (floor === null) floor = extractFloor(sourceText);
+    var floors = boundedNumber(fields.floors || fields.totalFloors, 1, 150, true);
+    if (floors === null) floors = extractFloors(sourceText);
+    if (floor !== null && floors !== null && floor > floors) floor = null;
     var price = parsePriceValue(data.price);
+    // Only an explicit labelled total price is accepted from prose.
     if (price === null) {
-      price = extractPrice(sourceText);
+      var priceMatch = normalizeText(description).match(/(?:цена|стоимость)\s*[:—-]?\s*(?:всего\s*)?(\d[\d\s]*(?:[.,]\d+)?\s*(?:млн|миллион\w*|тыс\w*|руб\w*|₽))/i);
+      if (priceMatch && !/^(?:\s*\/|\s*за\s*)\s*(?:м|сот)/i.test(normalizeText(description).slice(priceMatch.index + priceMatch[0].length))) price = extractPrice(priceMatch[1]);
     }
-    if (price === null) {
-      price = estimateCatalogPrice(type, area, landArea, rooms);
-    }
+    price = boundedNumber(price, 100000, 100000000000, false);
 
     return {
       id: item.id,
+      objectType: type,
+      address: normalizeText(data.address),
       title: title,
       description: description,
       cover: cover,
@@ -1347,7 +1420,8 @@
         area: area,
         houseArea: type === "houses" ? area : null,
         landArea: landArea,
-        floor: floor
+        floor: floor,
+        floors: floors
       }
     };
   }
@@ -1614,6 +1688,27 @@
       });
   }
 
+  function resolveRecentObject(type, items) {
+    var requestedId = new URLSearchParams(location.search).get('object');
+    if (!requestedId || items.some(function (item) { return item.id === requestedId; })) return Promise.resolve(items);
+    var feedType = { apartments:'apartment', houses:'house', lands:'land' }[type];
+    if (!feedType) return Promise.resolve(items);
+    // Recently published cards can precede the main catalog index. Resolve only
+    // the requested ID from existing feeds; never substitute a different object.
+    return Promise.all(['output/' + type + '/new-objects.json', 'output/home/new-objects.json'].map(function (url) {
+      return fetchJson(url).catch(function () { return []; });
+    })).then(function (feeds) {
+      var recent = [].concat.apply([], feeds).find(function (item) { return item.id === requestedId && item.type === feedType; });
+      if (!recent) return items;
+      var data = Object.assign({}, recent, {description:recent.description || recent.shortDescription || ''});
+      var normalized = normalizeItem(type, {id:recent.id, path:type + '/' + recent.id}, data, items.length);
+      // Feed images are already site-relative or absolute, unlike folder data.json.
+      normalized.images = getCardImages(recent);
+      normalized.cover = normalized.images[0];
+      return items.concat(normalized);
+    });
+  }
+
   function initCatalogPage(type) {
     var cardsContainer = qs("#cards");
     var filtersContainer = qs("#filters");
@@ -1625,6 +1720,7 @@
     cardsContainer.innerHTML = '<p class="loading-state">Загрузка объектов...</p>';
 
     loadCategoryData(type)
+      .then(function (items) { return resolveRecentObject(type, items); })
       .then(function (items) {
         if (!items.length) {
           cardsContainer.innerHTML = '<p class="loading-state">Объекты не найдены.</p>';
@@ -1651,13 +1747,33 @@
           }
         }
 
-        function runFilter() {
+        function runFilter(updateUrl) {
+          if (updateUrl !== false && filtersContainer) {
+            var url = new URL(location.href);
+            qsa('[data-filter]', filtersContainer).forEach(function (input) {
+              var key = 'f_' + input.getAttribute('data-filter');
+              if (input.value) url.searchParams.set(key, input.value); else url.searchParams.delete(key);
+            });
+            history.replaceState(history.state, '', url);
+          }
           var values = filtersContainer ? parseFilters(filtersContainer) : {};
           var filtered = applyFilters(items, values, type);
           render(filtered);
         }
 
-        render(items);
+        function restoreRoute() {
+          var params = new URLSearchParams(location.search);
+          if (filtersContainer) qsa('[data-filter]', filtersContainer).forEach(function (input) { input.value = params.get('f_' + input.getAttribute('data-filter')) || ''; });
+          runFilter(false);
+          var chosen = items.find(function (item) { return item.id === params.get('object'); });
+          if (chosen && openModal) openModal(chosen, true);
+          else if (openModal) {
+            openModal.hide();
+            if (params.has('object') && resultsCount) resultsCount.textContent += ' · Объект по ссылке не найден. Уточните наличие по телефону.';
+          }
+        }
+        restoreRoute();
+        window.addEventListener('popstate', restoreRoute);
 
         if (filtersContainer) {
           qsa("[data-filter]", filtersContainer).forEach(function (input) {
@@ -1691,6 +1807,7 @@
       lands: "lands.html",
       newbuilds: "newbuilds.html"
     }[item && item.categoryName ? String(item.categoryName).toLowerCase() : ""] || "index.html#contact";
+    if (item.objectType) categoryHref = propertyUrl(item);
     var priceText = formatPrice(item && item.meta ? item.meta.price : null, item && item.meta ? item.meta.priceType : "") || "Цена по запросу";
     var charsHtml = renderCardChars([
       item && item.meta && hasCardValue(item.meta.rooms) ? String(item.meta.rooms) + " комн." : "",
@@ -1779,10 +1896,14 @@
   function renderNewObjectCard(item) {
     var title = escapeHtml(item.title || "Объект");
     var galleryImages = getCardImages(item);
-    var priceText = item.price || "Цена по запросу";
+    var priceText = formatPrice(parsePriceValue(item.price));
     var price = escapeHtml(priceText);
     var typeLabel = escapeHtml(getTypeLabel(item.type));
-    var features = item && item.features && typeof item.features === "object" ? item.features : {};
+    var features = Object.assign({}, item && item.features || {});
+    features.rooms = boundedNumber(features.rooms, 1, 30, true);
+    features.floor = boundedNumber(features.floor, 1, 150, true);
+    features.totalFloors = boundedNumber(features.totalFloors, 1, 150, true);
+    if (features.floor && features.totalFloors && features.floor > features.totalFloors) features.floor = null;
     var sourceText = [item && item.title, item && item.shortDescription, item && item.description].filter(Boolean).join(" ");
     var areaMatch = sourceText.match(/(\d+(?:[.,]\d+)?)\s*(?:кв\.?\s*м|м²|м2)\b/iu);
     var landMatch = sourceText.match(/(\d+(?:[.,]\d+)?)\s*сот(?:к[аи])?/iu);
@@ -1800,6 +1921,8 @@
       land: "lands.html",
       newbuild: "newbuilds.html"
     }[String(item && item.type || "").toLowerCase()] || "index.html#contact";
+
+    if (/^(object|house|land)_\d+$/.test(item.id || '')) detailsHref += '?object=' + encodeURIComponent(item.id);
 
     return [
       '<article class="new-object-card property-card">',
