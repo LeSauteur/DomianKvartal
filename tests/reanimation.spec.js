@@ -29,7 +29,7 @@ test('filter, object, direct link, back and object CTA preserve identity', async
   expect(context.object_id).toBe(id);
   expect(context.object_title).toBe(title);
   expect(context.object_url).toContain('object=' + id);
-  await expect(page.locator('#lead-form')).toBeVisible();
+  await expect(page.locator('[data-lead-form]')).toBeVisible();
 });
 test('unknown direct object never opens a different listing', async ({ page }) => {
   await page.goto('/apartments.html?qa=1&object=does-not-exist');
@@ -91,7 +91,7 @@ for (const [path, type, cta] of [
   await expect(page.locator('h1')).toHaveCount(1);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
   await page.locator('[data-source-cta="'+cta+'"]').click();
-  await expect(page.locator('#lead-form')).toBeVisible();
+  await expect(page.locator('[data-lead-form]')).toBeVisible();
   const context=await page.evaluate(()=>JSON.parse(sessionStorage.getItem('domian_lead_context')));
   expect(context.lead_type).toBe(type);
   expect(context.source_cta).toBe(cta);

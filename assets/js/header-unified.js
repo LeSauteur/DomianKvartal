@@ -7,6 +7,11 @@
   var previousFocus = null;
   var focusable = "a[href], button:not([disabled]), [tabindex]:not([tabindex='-1'])";
   var themeStorageKey = "domian-color-theme";
+  var headerCall = document.querySelector("[data-unified-header] .unified-header__contacts a[href='tel:+79536091122']");
+
+  if (headerCall) {
+    headerCall.setAttribute("aria-label", "Позвонить: +7 953 609-11-22");
+  }
 
   function updateThemeButtons(dark) {
     document.querySelectorAll("[data-unified-theme-toggle]").forEach(function (item) {

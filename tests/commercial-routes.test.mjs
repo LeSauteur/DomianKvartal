@@ -4,14 +4,20 @@ import path from 'node:path';
 import test from 'node:test';
 const root=path.resolve(import.meta.dirname,'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
-for(const file of ['sell-apartment.html','property-valuation.html']) test(`${file}: metadata, relevant CTA and existing internal destinations`,()=>{
+for(const [file,leadType] of [['sell-apartment.html','sell'],['property-valuation.html','valuation']]) test(`${file}: metadata, local lead form and existing internal destinations`,()=>{
  const html=read(file);
  assert.equal([...html.matchAll(/<h1\b/gi)].length,1);
  assert.match(html,/<title>[^<]+<\/title>/);
  assert.match(html,/<meta name="description" content="[^"]+"/);
  assert.ok(html.includes(`rel="canonical" href="https://domian-161.ru/${file}"`));
  assert.ok(read('sitemap.xml').includes(`https://domian-161.ru/${file}`));
- assert.match(html,/href="\/#lead-form-section" data-lead-type="(?:sell|valuation)" data-source-cta="[^"]+"/);
+ assert.match(html,new RegExp(`href="#lead-form-section" data-lead-type="${leadType}" data-source-cta="[^"]+"`));
+ assert.doesNotMatch(html,/href="\/#lead-form-section"/);
+ assert.match(html,new RegExp(`<form[^>]+data-lead-form[^>]+data-lead-type="${leadType}"`));
+ assert.match(html,new RegExp(`name="service" value="${leadType}"`));
+ for(const field of ['name','phone','privacy_consent','botcheck'])assert.match(html,new RegExp(`name="${field}"`));
+ assert.match(html,/data-form-status/);
+ assert.match(html,/assets\/js\/form-handler\.js/);
  for(const match of html.matchAll(/(?:href|src)="([^"]+)"/g)){
   if(/^(?:https?:|tel:|mailto:|data:)/.test(match[1]))continue;
   const u=new URL(match[1],`https://domian-161.ru/${file}`);

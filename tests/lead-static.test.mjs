@@ -69,12 +69,14 @@ test("production lead forms include the main form and every construction landing
   const leadForms = htmlFiles.filter((file) => /<form\b[^>]*\bdata-lead-form\b/i.test(fs.readFileSync(file, "utf8")));
   const relative = leadForms.map((file) => path.relative(root, file).replaceAll("\\", "/")).sort();
 
-  assert.equal(relative.length, 34);
+  assert.equal(relative.length, 36);
   assert.ok(relative.includes("commercial.html"));
   assert.ok(relative.includes("rent.html"));
   assert.ok(relative.includes("index-preview.html"));
   assert.ok(relative.includes("index.html"));
   assert.ok(relative.includes("construction.html"));
+  assert.ok(relative.includes("sell-apartment.html"));
+  assert.ok(relative.includes("property-valuation.html"));
   assert.equal(relative.filter((file) => file.startsWith("construction/projects/")).length, 26);
   assert.equal(relative.filter((file) => file.startsWith("construction/builders/")).length, 3);
   assert.match(fs.readFileSync(path.join(root, "newbuilds.html"), "utf8"), /id="newbuildFilters"/);
