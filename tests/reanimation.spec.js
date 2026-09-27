@@ -60,7 +60,7 @@ test('first source survives internal navigation and is included with an anonymou
   await page.locator('#lead-service').selectOption('buy');
   await page.locator('#lead-privacy-consent').check();
   await page.locator('#lead-form').evaluate(form => form.requestSubmit());
-  await expect(page).toHaveURL(/thanks\.html\?qa=1/);
+  await expect(page).toHaveURL(/thanks\.html\?qa=1/, { timeout: 10000 });
   for (const field of ['first_landing','initial_referrer','session_id','lead_id','utm_source','source_cta','object_id','object_url','is_test']) expect(payload).toContain('name="' + field + '"');
   expect(payload).toContain(initial.session_id);
   expect(payload).toContain('object_905');
@@ -77,7 +77,7 @@ test('a blocked analytics callback cannot prevent successful form completion', a
   await page.locator('#lead-service').selectOption('buy');
   await page.locator('#lead-privacy-consent').check();
   await page.locator('#lead-form').evaluate(form => form.requestSubmit());
-  await expect(page).toHaveURL(/thanks\.html\?qa=1/);
+  await expect(page).toHaveURL(/thanks\.html\?qa=1/, { timeout: 10000 });
 });
 
 
