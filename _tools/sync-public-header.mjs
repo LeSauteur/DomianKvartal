@@ -28,6 +28,7 @@ function clusterFor(file) {
   if (file === "houses.html" || file.startsWith("seo/doma-")) return "houses";
   if (file === "lands.html" || file.startsWith("seo/uchastki-")) return "lands";
   if (file === "newbuilds.html" || file.startsWith("newbuilds/") || file.startsWith("seo/zhk-")) return "newbuilds";
+  if (file === "sell-apartment.html") return "sell";
   if (file === "rent.html") return "rent";
   if (file === "commercial.html") return "commercial";
   if (file.startsWith("construction")) return "construction";
@@ -73,6 +74,7 @@ function headerMarkup(file) {
       ${desktopLink("Дома", "/houses.html", cluster, "houses")}
       ${desktopLink("Участки", "/lands.html", cluster, "lands")}
       ${desktopLink("Новостройки", "/newbuilds.html", cluster, "newbuilds")}
+      ${desktopLink("Продать", "/sell-apartment.html", cluster, "sell")}
       <div class="unified-header__dropdown" data-unified-dropdown><button type="button" aria-expanded="false" aria-controls="header-services-menu"${servicesActive ? ' class="is-active" aria-current="page"' : ""}>Услуги <span aria-hidden="true">⌄</span></button><div id="header-services-menu" class="unified-header__submenu" role="group" aria-label="Услуги" hidden>${desktopLink("Аренда", "/rent.html", cluster, "rent")}${desktopLink("Коммерческая недвижимость", "/commercial.html", cluster, "commercial")}${desktopLink("Строительство домов", "/construction.html", cluster, "construction")}</div></div>
       ${desktopLink("Гид", "/guides/", cluster, "guides")}
       <div class="unified-header__dropdown" data-unified-dropdown><button type="button" aria-expanded="false" aria-controls="header-company-menu"${companyActive ? ' class="is-active" aria-current="page"' : ""}>О компании <span aria-hidden="true">⌄</span></button><div id="header-company-menu" class="unified-header__submenu" role="group" aria-label="О компании" hidden>${desktopLink("Команда", "/team/zukhra-alieva.html", cluster, "team")}<a href="/#contact">Контакты</a><a href="/details.html">Реквизиты</a></div></div>
@@ -90,6 +92,7 @@ function headerMarkup(file) {
       ${drawerLink("Дома", "/houses.html", cluster, "houses")}
       ${drawerLink("Участки", "/lands.html", cluster, "lands")}
       ${drawerLink("Новостройки", "/newbuilds.html", cluster, "newbuilds")}
+      ${drawerLink("Продать", "/sell-apartment.html", cluster, "sell")}
       ${drawerLink("Аренда", "/rent.html", cluster, "rent")}
       ${drawerLink("Коммерческая недвижимость", "/commercial.html", cluster, "commercial")}
       ${drawerLink("Строительство домов", "/construction.html", cluster, "construction")}

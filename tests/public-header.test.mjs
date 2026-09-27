@@ -7,8 +7,8 @@ import test from "node:test";
 const root = path.resolve(import.meta.dirname, "..");
 const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
 const publicPaths = [...new Set([...sitemap.matchAll(/<loc>https:\/\/domian-161\.ru\/(.*?)<\/loc>/g)].map((match) => match[1] || "index.html").concat("seo/zhk-flora-aksay.html"))];
-const desktop = ["Квартиры", "Дома", "Участки", "Новостройки", "Услуги", "Гид", "О компании"];
-const mobile = ["Главная", "Квартиры", "Дома", "Участки", "Новостройки", "Аренда", "Коммерческая недвижимость", "Строительство домов", "Гид покупателя", "Команда", "Контакты"];
+const desktop = ["Квартиры", "Дома", "Участки", "Новостройки", "Продать", "Услуги", "Гид", "О компании"];
+const mobile = ["Главная", "Квартиры", "Дома", "Участки", "Новостройки", "Продать", "Аренда", "Коммерческая недвижимость", "Строительство домов", "Гид покупателя", "Команда", "Контакты"];
 const propertyDirections = ["Квартиры", "Дома", "Участки", "Коммерция", "Новостройки"];
 const propertyDescriptions = ["Подбор квартир", "Город и загород", "ИЖС и дачи", "Для бизнеса", "ЖК и комплексы"];
 const legalPages = new Set(["details.html", "offer.html", "privacy.html", "personal-data-consent.html", "cookies.html"]);
@@ -29,6 +29,7 @@ function expectedCluster(file) {
   if (file === "houses.html" || file.startsWith("seo/doma-")) return "houses";
   if (file === "lands.html" || file.startsWith("seo/uchastki-")) return "lands";
   if (file === "newbuilds.html" || file.startsWith("newbuilds/") || file.startsWith("seo/zhk-")) return "newbuilds";
+  if (file === "sell-apartment.html") return "sell";
   if (file === "rent.html") return "rent";
   if (file === "commercial.html") return "commercial";
   if (file.startsWith("construction")) return "construction";
