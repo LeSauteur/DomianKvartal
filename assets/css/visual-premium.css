@@ -6880,3 +6880,23 @@ html[data-theme="dark"] body.catalog-page .catalog-split-hero p { color: #bbb1a8
     text-align: left;
   }
 }
+
+/* Seller CTA on catalog pages (reuses .construction-context-link) */
+.construction-context-link.seller-cta {
+  margin: 40px auto;
+}
+
+.seller-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.guide-next-step {
+  margin: 24px 0 0;
+}
+
+.nb-hero__aksay a {
+  color: var(--accent);
+  font-weight: 700;
+}
