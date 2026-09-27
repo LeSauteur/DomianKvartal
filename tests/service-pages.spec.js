@@ -33,6 +33,27 @@ for (const pageName of ["commercial.html", "rent.html"]) {
   });
 }
 
+for (const [pageName, leadType] of [["sell-apartment.html", "sell"], ["property-valuation.html", "valuation"]]) {
+  test(`${pageName} keeps its seller CTA and lead form on the same page`, async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(`/${pageName}?qa=1`, { waitUntil: "domcontentloaded" });
+
+    const cta = page.locator('a[href="#lead-form-section"]').first();
+    await expect(cta).toBeVisible();
+    await cta.click();
+    await expect(page.locator("#lead-form-section")).toBeInViewport();
+
+    const form = page.locator("form[data-lead-form]");
+    await expect(form).toHaveAttribute("data-lead-type", leadType);
+    await expect(form.locator('input[name="service"]')).toHaveValue(leadType);
+    await expect(form.locator('input[name="name"]')).toBeVisible();
+    await expect(form.locator('input[name="phone"]')).toBeVisible();
+    await expect(form.locator('input[name="privacy_consent"]')).toBeVisible();
+    await expect(form.locator('input[name="botcheck"]')).toBeAttached();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  });
+}
+
 test("light theme keeps service backgrounds and text colors independent from global static-page cards", async ({ page }) => {
   await page.goto("/commercial.html?qa=1", { waitUntil: "networkidle" });
 

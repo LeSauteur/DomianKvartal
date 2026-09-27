@@ -750,7 +750,12 @@
 
     qsa('a[href^="#"]').forEach(function (anchor) {
       anchor.addEventListener("click", function (event) {
-        var targetId = anchor.getAttribute("href");
+        var targetId;
+        try {
+          targetId = new URL(anchor.href, window.location.href).hash;
+        } catch (_error) {
+          return;
+        }
         if (!targetId || targetId === "#") return;
         var targetElement = qs(targetId);
         if (!targetElement) return;

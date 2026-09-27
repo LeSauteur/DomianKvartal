@@ -466,15 +466,35 @@ body.drawer-open { overflow: hidden; }
 
 @media (max-width: 1100px) {
   body > header.unified-header > .unified-header__inner {
-    grid-template-columns: 46px minmax(0, 1fr) 46px;
+    grid-template-columns: 46px minmax(0, 1fr) 46px 46px;
     gap: 8px;
     min-height: var(--unified-header-height) !important;
     padding: 10px 0 !important;
   }
   .unified-header__brand { justify-self: center; font-size: 17px !important; }
   .kvartal-mark { flex-basis: 28px; width: 28px; height: 28px; }
-  .unified-header__desktop-nav,
-  .unified-header__contacts { display: none !important; }
+  .unified-header__desktop-nav { display: none !important; }
+  body > header.unified-header .unified-header__contacts {
+    display: flex !important;
+    justify-content: center;
+  }
+  .unified-header__contacts > * { display: none !important; }
+  .unified-header__contacts > a[href^="tel"] {
+    display: grid !important;
+    width: 46px;
+    height: 46px;
+    place-items: center;
+    padding: 0 !important;
+    font-size: 0;
+    background: rgba(90, 70, 55, .07) !important;
+    border-color: rgba(90, 70, 55, .2) !important;
+    border-radius: 14px;
+  }
+  .unified-header__contacts > a[href^="tel"]::before {
+    content: "☎";
+    font-size: 22px;
+    line-height: 1;
+  }
   .unified-header__utility,
   .unified-header__toggle { display: grid !important; width: 46px; height: 46px; place-items: center; margin: 0 !important; color: inherit; background: rgba(90, 70, 55, .07) !important; border: 1px solid rgba(90, 70, 55, .2) !important; border-radius: 14px !important; box-shadow: none !important; cursor: pointer; }
   .unified-header__utility { font-size: 20px; }
@@ -571,7 +591,8 @@ html[data-theme="dark"] body > header.unified-header { color: #f5eee8; backgroun
 html[data-theme="dark"] .kvartal-mark { color: #ee8674; }
 html[data-theme="dark"] .unified-header__desktop-theme,
 html[data-theme="dark"] .unified-header__utility,
-html[data-theme="dark"] .unified-header__toggle { color: #f7d39b; background: #3a3732 !important; border-color: rgba(255, 255, 255, .16) !important; }
+html[data-theme="dark"] .unified-header__toggle,
+html[data-theme="dark"] .unified-header__contacts > a[href^="tel"] { color: #f7d39b; background: #3a3732 !important; border-color: rgba(255, 255, 255, .16) !important; }
 html[data-theme="dark"] .unified-header__submenu { color: #f5eee8; background: #292722; border-color: rgba(255, 255, 255, .13); }
 html[data-theme="dark"] .unified-header__submenu a:hover,
 html[data-theme="dark"] .unified-header__submenu a:focus-visible { background: #3a3732 !important; }

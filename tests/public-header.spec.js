@@ -144,24 +144,45 @@ test("brand animation runs once per session and reduced motion is immediately st
   expect(await page.locator(".kvartal-mark__top").evaluate((piece) => getComputedStyle(piece).animationName)).toBe("none");
 });
 
-test("homepage featured house keeps its natural framing and compact body", async ({ page }) => {
-  await page.setViewportSize({ width: 1440, height: 1000 });
+test("homepage removes the demo showcase and keeps production-fed cards", async ({ page }) => {
+  await page.goto("/?qa=1", { waitUntil: "networkidle" });
+  await expect(page.locator(".stage12-featured, .stage12-filter-row, .stage12-mini-grid, .stage12-tabs")).toHaveCount(0);
+  await expect(page.locator("#new-objects-cards .property-card").first()).toBeVisible();
+});
+
+test("mobile task cards and direct header call stay aligned at acceptance widths", async ({ page }) => {
+  for (const width of [375, 390, 434, 768]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto("/?qa=1");
+
+    const widths = await page.locator(".buyer-path").evaluateAll((cards) => cards.map((card) => card.getBoundingClientRect().width));
+    expect(widths).toHaveLength(6);
+    expect(Math.max(...widths) - Math.min(...widths)).toBeLessThan(1);
+
+    const call = page.locator(".unified-header__contacts > a[href='tel:+79536091122']");
+    await expect(call).toBeVisible();
+    await expect(call).toHaveAttribute("aria-label", "Позвонить: +7 953 609-11-22");
+    const controls = await page.evaluate(() => {
+      const rect = (selector) => {
+        const box = document.querySelector(selector).getBoundingClientRect();
+        return { left: box.left, right: box.right };
+      };
+      return [
+        rect(".unified-header__utility"),
+        rect(".unified-header__brand"),
+        rect(".unified-header__contacts > a[href='tel:+79536091122']"),
+        rect(".unified-header__toggle")
+      ].sort((left, right) => left.left - right.left);
+    });
+    for (let index = 1; index < controls.length; index += 1) {
+      expect(controls[index - 1].right).toBeLessThanOrEqual(controls[index].left);
+    }
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  }
+
+  await page.setViewportSize({ width: 1366, height: 900 });
   await page.goto("/?qa=1");
-  const metrics = await page.locator(".stage12-featured").evaluate((card) => {
-    const imageSlot = card.querySelector(".stage12-featured__image");
-    const image = imageSlot.querySelector("img");
-    const body = card.querySelector(".stage12-featured__body");
-    return {
-      slotRatio: imageSlot.clientWidth / imageSlot.clientHeight,
-      naturalRatio: image.naturalWidth / image.naturalHeight,
-      objectFit: getComputedStyle(image).objectFit,
-      bodyHeight: body.getBoundingClientRect().height,
-      cardHeight: card.getBoundingClientRect().height
-    };
-  });
-  expect(metrics.objectFit).toBe("cover");
-  expect(Math.abs(metrics.slotRatio - metrics.naturalRatio)).toBeLessThan(.04);
-  expect(metrics.bodyHeight / metrics.cardHeight).toBeLessThan(.52);
+  await expect(page.locator(".unified-header__contacts > a[href='tel:+79536091122']")).toBeVisible();
 });
 
 test("requested visual top-system matrix", async ({ page }) => {

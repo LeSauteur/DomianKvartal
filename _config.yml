@@ -1,0 +1,31 @@
+exclude:
+  - START.md
+  - START_NEWBUILDS_CHAT.md
+  - PREVIEW_HOME_NOTES.md
+  - SEO_REANIMATION_PROGRESS.md
+  - "SEO_*AUDIT*.md"
+  - "HANDOFF-*.md"
+  - "CLEAN_STRUCTURE_REPORT*"
+  - NFG/
+  - docs/
+  - tests/
+  - source/
+  - data/
+  - company-rebuild/
+  - "ui-blocks/*.html"
+  - ui-blocks/README.md
+  - ui-rebuild/
+  - _private/
+  - _prototype_catalog/
+  - _tools/
+  - "Kvartal new img/"
+  - "output/*.txt"
+  - "output/**/*.txt"
+  - all_objects_addresses.xlsx
+  - admin.html
+  - index-preview.html
+  - package.json
+  - package-lock.json
+  - playwright.config.js
+  - generate_titles.py
+  - "domian-proof-*.txt"
