@@ -132,6 +132,14 @@
       var open = event.target.closest("[data-project-open]");
       var generalQuote = event.target.closest('a[href*="#lead-form-section"]');
 
+      if (generalQuote && generalQuote.dataset.budgetPayment) {
+        var payment = document.querySelector('form[data-lead-form] select[name="budget_payment"]');
+        if (payment) {
+          payment.value = generalQuote.dataset.budgetPayment;
+          payment.dispatchEvent(new Event("change", { bubbles: true }));
+        }
+      }
+
       if (quote) {
         updateSelectedProject(quote);
         goal("construction_quote_click", {

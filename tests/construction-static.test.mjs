@@ -38,7 +38,8 @@ function localPageReferences(file, source) {
   for (const match of source.matchAll(/\bhref="([^"]+)"/g)) {
     const reference = match[1];
     if (!reference || /^(?:https?:|mailto:|tel:|javascript:)/.test(reference)) continue;
-    const [pathname, fragment] = reference.split("#");
+    const [pathAndQuery, fragment] = reference.split("#");
+    const pathname = pathAndQuery.split("?")[0];
     const target = pathname
       ? pathname.startsWith("/")
         ? path.resolve(root, decodeURIComponent(pathname).replace(/^\/+/, ""))
