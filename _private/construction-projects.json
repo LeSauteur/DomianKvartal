@@ -1,5 +1,75 @@
 {
-  "generatedAt": "2026-08-11",
+  "generatedAt": "2026-10-06",
+  "builders": {
+    "postroim-dom": {
+      "name": "Построим Дом",
+      "recordType": "built-object",
+      "short": "Построенные каменные и кирпичные дома площадью 100–120 м².",
+      "about": "«Построим Дом» представляет построенные дома в Ростове-на-Дону и Константиновске. В портфолио компании опубликованы площадь, местоположение, срок строительства и описание каждого объекта.",
+      "geography": "Ростов-на-Дону и Ростовская область. В портфолио представлены Ростов-на-Дону и Константиновск.",
+      "directions": [
+        "Строительство домов",
+        "Строительство по своему проекту",
+        "Индивидуальное проектирование"
+      ],
+      "packages": [
+        "Под ключ — комплектация, указанная в карточках построенных объектов"
+      ],
+      "warranty": null,
+      "sourceUrl": "https://postroim-dom-rostov.ru/"
+    },
+    "domanstroy": {
+      "name": "ДоманСтрой",
+      "short": "Типовые и индивидуальные дома с несколькими уровнями комплектации.",
+      "about": "Компания указывает работу с 2014 года и более 200 построенных домов. В материалах подтверждены строительство в радиусе около 250 км от Ростова-на-Дону, типовые и индивидуальные проекты, срок 6–9 месяцев и гарантия 5 лет на выполненные работы.",
+      "geography": "Ростовская область и север Краснодарского края — окончательная возможность строительства зависит от адреса участка.",
+      "directions": [
+        "Типовые проекты",
+        "Адаптация проекта",
+        "Индивидуальное проектирование",
+        "Строительство под ключ"
+      ],
+      "packages": [
+        "Старт",
+        "Стандарт",
+        "Комфорт",
+        "Премиум"
+      ],
+      "warranty": "5 лет на выполненные работы — по материалам компании; условия фиксируются в договоре."
+    },
+    "soyuz": {
+      "name": "Союз Застройщиков",
+      "short": "Каталог кирпичных домов 69,9–142,2 м² в комплектации White Box.",
+      "about": "В ростовском каталоге представлены одно- и двухэтажные дома с изолированными спальнями, кухней-гостиной и комплектацией White Box. Материалы содержат подробные планировки и конструктив, но цены требуют обязательной актуализации.",
+      "geography": "Ростов-на-Дону и Ростовская область — географию по конкретному участку необходимо подтвердить.",
+      "directions": [
+        "Типовые проекты",
+        "Строительство на участке клиента",
+        "White Box",
+        "Ипотечная сделка"
+      ],
+      "packages": [
+        "White Box"
+      ],
+      "warranty": "5 лет гарантийного обслуживания — по каталогу компании; условия уточняются в договоре."
+    },
+    "eqvita": {
+      "name": "Эквита",
+      "short": "Индивидуальная современная архитектура и проектирование под участок.",
+      "about": "В архитектурной презентации компания сообщает о работе с 2006 года и показывает индивидуальные дома современной архитектуры. Каждый проект требует отдельной проработки состава, материалов и бюджета.",
+      "geography": "Желаемая локация согласуется индивидуально с учётом участка и бюджета.",
+      "directions": [
+        "Индивидуальная архитектура",
+        "Проектирование под участок",
+        "Современные дома",
+        "Строительство по индивидуальному ТЗ"
+      ],
+      "packages": [
+        "Индивидуальная комплектация"
+      ],
+      "warranty": "Сроки и гарантии в презентации не детализированы и должны быть закреплены в договоре."
+    }
+  },
   "projects": [
     {
       "id": "ds-80",
@@ -56,7 +126,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Партнерская программа ДоманСтрой_ (1).pdf",
       "sourcePage": 4,
-      "factSource": "Архив и официальный каталог застройщика, указанный в PDF"
+      "factSource": "Архив и официальный каталог застройщика, указанный в PDF",
+      "recordType": "project"
     },
     {
       "id": "ds-85-5",
@@ -113,7 +184,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Партнерская программа ДоманСтрой_ (1).pdf",
       "sourcePage": 4,
-      "factSource": "Архив и официальный каталог застройщика, указанный в PDF"
+      "factSource": "Архив и официальный каталог застройщика, указанный в PDF",
+      "recordType": "project"
     },
     {
       "id": "ds-85",
@@ -170,7 +242,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Партнерская программа ДоманСтрой_ (1).pdf",
       "sourcePage": 4,
-      "factSource": "Архив и официальный каталог застройщика, указанный в PDF"
+      "factSource": "Архив и официальный каталог застройщика, указанный в PDF",
+      "recordType": "project"
     },
     {
       "id": "ds-115",
@@ -227,7 +300,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Партнерская программа ДоманСтрой_ (1).pdf",
       "sourcePage": 4,
-      "factSource": "Архив и официальный каталог застройщика, указанный в PDF"
+      "factSource": "Архив и официальный каталог застройщика, указанный в PDF",
+      "recordType": "project"
     },
     {
       "id": "ds-116",
@@ -284,7 +358,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Партнерская программа ДоманСтрой_ (1).pdf",
       "sourcePage": 4,
-      "factSource": "Архив и официальный каталог застройщика, указанный в PDF"
+      "factSource": "Архив и официальный каталог застройщика, указанный в PDF",
+      "recordType": "project"
     },
     {
       "id": "ds-128",
@@ -341,7 +416,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Партнерская программа ДоманСтрой_ (1).pdf",
       "sourcePage": 4,
-      "factSource": "Архив и официальный каталог застройщика, указанный в PDF"
+      "factSource": "Архив и официальный каталог застройщика, указанный в PDF",
+      "recordType": "project"
     },
     {
       "id": "ds-130",
@@ -398,7 +474,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Партнерская программа ДоманСтрой_ (1).pdf",
       "sourcePage": 4,
-      "factSource": "Архив и официальный каталог застройщика, указанный в PDF"
+      "factSource": "Архив и официальный каталог застройщика, указанный в PDF",
+      "recordType": "project"
     },
     {
       "id": "soyuz-69-9",
@@ -456,7 +533,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Ростов (1) (1).pdf",
       "sourcePage": 1,
-      "factSource": "Каталог компании, подготовленный в 2023 году"
+      "factSource": "Каталог компании, подготовленный в 2023 году",
+      "recordType": "project"
     },
     {
       "id": "soyuz-75",
@@ -514,7 +592,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Ростов (1) (1).pdf",
       "sourcePage": 1,
-      "factSource": "Каталог компании, подготовленный в 2023 году"
+      "factSource": "Каталог компании, подготовленный в 2023 году",
+      "recordType": "project"
     },
     {
       "id": "soyuz-83-8",
@@ -572,7 +651,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Ростов (1) (1).pdf",
       "sourcePage": 1,
-      "factSource": "Каталог компании, подготовленный в 2023 году"
+      "factSource": "Каталог компании, подготовленный в 2023 году",
+      "recordType": "project"
     },
     {
       "id": "soyuz-84",
@@ -630,7 +710,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Ростов (1) (1).pdf",
       "sourcePage": 1,
-      "factSource": "Каталог компании, подготовленный в 2023 году"
+      "factSource": "Каталог компании, подготовленный в 2023 году",
+      "recordType": "project"
     },
     {
       "id": "soyuz-85",
@@ -688,7 +769,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Ростов (1) (1).pdf",
       "sourcePage": 1,
-      "factSource": "Каталог компании, подготовленный в 2023 году"
+      "factSource": "Каталог компании, подготовленный в 2023 году",
+      "recordType": "project"
     },
     {
       "id": "soyuz-90",
@@ -746,7 +828,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Ростов (1) (1).pdf",
       "sourcePage": 1,
-      "factSource": "Каталог компании, подготовленный в 2023 году"
+      "factSource": "Каталог компании, подготовленный в 2023 году",
+      "recordType": "project"
     },
     {
       "id": "soyuz-99",
@@ -804,7 +887,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Ростов (1) (1).pdf",
       "sourcePage": 1,
-      "factSource": "Каталог компании, подготовленный в 2023 году"
+      "factSource": "Каталог компании, подготовленный в 2023 году",
+      "recordType": "project"
     },
     {
       "id": "soyuz-105",
@@ -862,7 +946,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Ростов (1) (1).pdf",
       "sourcePage": 1,
-      "factSource": "Каталог компании, подготовленный в 2023 году"
+      "factSource": "Каталог компании, подготовленный в 2023 году",
+      "recordType": "project"
     },
     {
       "id": "soyuz-107",
@@ -920,7 +1005,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Ростов (1) (1).pdf",
       "sourcePage": 1,
-      "factSource": "Каталог компании, подготовленный в 2023 году"
+      "factSource": "Каталог компании, подготовленный в 2023 году",
+      "recordType": "project"
     },
     {
       "id": "soyuz-109",
@@ -978,7 +1064,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Ростов (1) (1).pdf",
       "sourcePage": 1,
-      "factSource": "Каталог компании, подготовленный в 2023 году"
+      "factSource": "Каталог компании, подготовленный в 2023 году",
+      "recordType": "project"
     },
     {
       "id": "soyuz-111-1",
@@ -1036,7 +1123,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Ростов (1) (1).pdf",
       "sourcePage": 1,
-      "factSource": "Каталог компании, подготовленный в 2023 году"
+      "factSource": "Каталог компании, подготовленный в 2023 году",
+      "recordType": "project"
     },
     {
       "id": "soyuz-114-2",
@@ -1094,7 +1182,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Ростов (1) (1).pdf",
       "sourcePage": 1,
-      "factSource": "Каталог компании, подготовленный в 2023 году"
+      "factSource": "Каталог компании, подготовленный в 2023 году",
+      "recordType": "project"
     },
     {
       "id": "soyuz-124",
@@ -1152,7 +1241,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Ростов (1) (1).pdf",
       "sourcePage": 1,
-      "factSource": "Каталог компании, подготовленный в 2023 году"
+      "factSource": "Каталог компании, подготовленный в 2023 году",
+      "recordType": "project"
     },
     {
       "id": "soyuz-137",
@@ -1210,7 +1300,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Ростов (1) (1).pdf",
       "sourcePage": 1,
-      "factSource": "Каталог компании, подготовленный в 2023 году"
+      "factSource": "Каталог компании, подготовленный в 2023 году",
+      "recordType": "project"
     },
     {
       "id": "soyuz-142-2",
@@ -1268,7 +1359,8 @@
       "imageKind": "Рендер проекта",
       "sourceDocument": "Ростов (1) (1).pdf",
       "sourcePage": 1,
-      "factSource": "Каталог компании, подготовленный в 2023 году"
+      "factSource": "Каталог компании, подготовленный в 2023 году",
+      "recordType": "project"
     },
     {
       "id": "eqvita-01",
@@ -1319,7 +1411,8 @@
       "imageKind": "Архитектурный рендер",
       "sourceDocument": "архитектура (1).pdf",
       "sourcePage": 5,
-      "factSource": "Архитектурная презентация компании"
+      "factSource": "Архитектурная презентация компании",
+      "recordType": "project"
     },
     {
       "id": "eqvita-02",
@@ -1370,7 +1463,8 @@
       "imageKind": "Архитектурный рендер",
       "sourceDocument": "архитектура (1).pdf",
       "sourcePage": 7,
-      "factSource": "Архитектурная презентация компании"
+      "factSource": "Архитектурная презентация компании",
+      "recordType": "project"
     },
     {
       "id": "eqvita-03",
@@ -1421,7 +1515,8 @@
       "imageKind": "Архитектурный рендер",
       "sourceDocument": "архитектура (1).pdf",
       "sourcePage": 9,
-      "factSource": "Архитектурная презентация компании"
+      "factSource": "Архитектурная презентация компании",
+      "recordType": "project"
     },
     {
       "id": "eqvita-04",
@@ -1472,7 +1567,302 @@
       "imageKind": "Архитектурный рендер",
       "sourceDocument": "архитектура (1).pdf",
       "sourcePage": 11,
-      "factSource": "Архитектурная презентация компании"
+      "factSource": "Архитектурная презентация компании",
+      "recordType": "project"
+    },
+    {
+      "id": "postroim-dom-konstantinovsk-110",
+      "slug": "postroim-dom-konstantinovsk-110",
+      "code": "postroim-dom-konstantinovsk-110",
+      "builderId": "postroim-dom",
+      "builder": "Построим Дом",
+      "recordType": "built-object",
+      "title": "Каменный дом 110 м2",
+      "area": 110,
+      "location": "Константиновск",
+      "constructionDays": 180,
+      "description": "Каменный дом с фасадом из кирпича. Провели все коммуникации (свет, вода). Сделали предчистовую отделку",
+      "floors": null,
+      "bedrooms": null,
+      "bathrooms": null,
+      "material": "Каменный дом",
+      "materialKeys": [],
+      "projectType": null,
+      "price": null,
+      "priceStatus": "not-published",
+      "priceDate": null,
+      "pricePackage": "Под ключ",
+      "scenario": null,
+      "family": null,
+      "features": [],
+      "included": [],
+      "clarify": [],
+      "mainImage": "assets/images/construction/postroim-dom-konstantinovsk-110/facade.webp",
+      "gallery": [
+        "assets/images/construction/postroim-dom-konstantinovsk-110/facade.webp"
+      ],
+      "floorPlans": [],
+      "imageKind": "Построенный дом",
+      "imageWidth": 1184,
+      "imageHeight": 864,
+      "sourceUrl": "https://postroim-dom-rostov.ru/",
+      "sourceRecordId": "rec3586854601",
+      "sourceImages": [
+        {
+          "originalUrl": "https://static.tildacdn.com/tild3030-3336-4637-b161-306236396536/1761971362511p9xigk7.png",
+          "width": 1184,
+          "height": 864
+        }
+      ],
+      "sourceDocument": null,
+      "sourcePage": null,
+      "factSource": "Портфолио «Наши объекты в Ростове и области» компании «Построим Дом»"
+    },
+    {
+      "id": "postroim-dom-rostov-stone-100-120",
+      "slug": "postroim-dom-rostov-stone-100-120",
+      "code": "postroim-dom-rostov-stone-100-120",
+      "builderId": "postroim-dom",
+      "builder": "Построим Дом",
+      "recordType": "built-object",
+      "title": "Каменный дом 100 м2",
+      "area": 100,
+      "location": "Ростов-на-Дону",
+      "constructionDays": 120,
+      "description": "Построили каменный дом с фасадом из кирпича и необычной двухскатной кровлей. Сделали предчистовую отделку.",
+      "floors": null,
+      "bedrooms": null,
+      "bathrooms": null,
+      "material": "Каменный дом",
+      "materialKeys": [],
+      "projectType": null,
+      "price": null,
+      "priceStatus": "not-published",
+      "priceDate": null,
+      "pricePackage": "Под ключ",
+      "scenario": null,
+      "family": null,
+      "features": [],
+      "included": [],
+      "clarify": [],
+      "mainImage": "assets/images/construction/postroim-dom-rostov-stone-100-120/facade.webp",
+      "gallery": [
+        "assets/images/construction/postroim-dom-rostov-stone-100-120/facade.webp"
+      ],
+      "floorPlans": [],
+      "imageKind": "Построенный дом",
+      "imageWidth": 1184,
+      "imageHeight": 864,
+      "sourceUrl": "https://postroim-dom-rostov.ru/",
+      "sourceRecordId": "rec3586854701",
+      "sourceImages": [
+        {
+          "originalUrl": "https://static.tildacdn.com/tild6236-3434-4031-a436-633463616466/image_1765194405597_.png",
+          "width": 1184,
+          "height": 864
+        }
+      ],
+      "sourceDocument": null,
+      "sourcePage": null,
+      "factSource": "Портфолио «Наши объекты в Ростове и области» компании «Построим Дом»"
+    },
+    {
+      "id": "postroim-dom-rostov-brick-110",
+      "slug": "postroim-dom-rostov-brick-110",
+      "code": "postroim-dom-rostov-brick-110",
+      "builderId": "postroim-dom",
+      "builder": "Построим Дом",
+      "recordType": "built-object",
+      "title": "Кирпичный дом 110 м2",
+      "area": 110,
+      "location": "Ростов-на-Дону",
+      "constructionDays": 180,
+      "description": "Дом полностью из кирпича, стена толщиной в 510 мм. Необычный фасадный кирпич м300 под старину, высокий бетонный цоколь.",
+      "floors": null,
+      "bedrooms": null,
+      "bathrooms": null,
+      "material": "Кирпич",
+      "materialKeys": [
+        "brick"
+      ],
+      "projectType": null,
+      "price": null,
+      "priceStatus": "not-published",
+      "priceDate": null,
+      "pricePackage": "Под ключ",
+      "scenario": null,
+      "family": null,
+      "features": [],
+      "included": [],
+      "clarify": [],
+      "mainImage": "assets/images/construction/postroim-dom-rostov-brick-110/facade.webp",
+      "gallery": [
+        "assets/images/construction/postroim-dom-rostov-brick-110/facade.webp"
+      ],
+      "floorPlans": [],
+      "imageKind": "Построенный дом",
+      "imageWidth": 1184,
+      "imageHeight": 864,
+      "sourceUrl": "https://postroim-dom-rostov.ru/",
+      "sourceRecordId": "rec3586854801",
+      "sourceImages": [
+        {
+          "originalUrl": "https://static.tildacdn.com/tild3336-6437-4434-a161-656465623931/image_1765194513731_.png",
+          "width": 1184,
+          "height": 864
+        }
+      ],
+      "sourceDocument": null,
+      "sourcePage": null,
+      "factSource": "Портфолио «Наши объекты в Ростове и области» компании «Построим Дом»"
+    },
+    {
+      "id": "postroim-dom-rostov-brick-100-180",
+      "slug": "postroim-dom-rostov-brick-100-180",
+      "code": "postroim-dom-rostov-brick-100-180",
+      "builderId": "postroim-dom",
+      "builder": "Построим Дом",
+      "recordType": "built-object",
+      "title": "Кирпичный дом 100 м2",
+      "area": 100,
+      "location": "Ростов-на-Дону",
+      "constructionDays": 180,
+      "description": "Кирпичный дом с утеплением ППС. Три спальни, кухня гостинная и просторная терраса.",
+      "floors": null,
+      "bedrooms": 3,
+      "bathrooms": null,
+      "material": "Кирпич",
+      "materialKeys": [
+        "brick"
+      ],
+      "projectType": null,
+      "price": null,
+      "priceStatus": "not-published",
+      "priceDate": null,
+      "pricePackage": "Под ключ",
+      "scenario": null,
+      "family": null,
+      "features": [],
+      "included": [],
+      "clarify": [],
+      "mainImage": "assets/images/construction/postroim-dom-rostov-brick-100-180/facade.webp",
+      "gallery": [
+        "assets/images/construction/postroim-dom-rostov-brick-100-180/facade.webp"
+      ],
+      "floorPlans": [],
+      "imageKind": "Построенный дом",
+      "imageWidth": 1184,
+      "imageHeight": 864,
+      "sourceUrl": "https://postroim-dom-rostov.ru/",
+      "sourceRecordId": "rec3586854901",
+      "sourceImages": [
+        {
+          "originalUrl": "https://static.tildacdn.com/tild6233-3062-4431-a135-336164346665/image_1765194267421_.png",
+          "width": 1184,
+          "height": 864
+        }
+      ],
+      "sourceDocument": null,
+      "sourcePage": null,
+      "factSource": "Портфолио «Наши объекты в Ростове и области» компании «Построим Дом»"
+    },
+    {
+      "id": "postroim-dom-rostov-brick-100-90",
+      "slug": "postroim-dom-rostov-brick-100-90",
+      "code": "postroim-dom-rostov-brick-100-90",
+      "builderId": "postroim-dom",
+      "builder": "Построим Дом",
+      "recordType": "built-object",
+      "title": "Кирпичный дом 100 м2",
+      "area": 100,
+      "location": "Ростов-на-Дону",
+      "constructionDays": 90,
+      "description": "Всего за 3 месяца построили кирпичный дом с утеплением ППС. Очень удобная планировка для вытянутого участка.",
+      "floors": null,
+      "bedrooms": null,
+      "bathrooms": null,
+      "material": "Кирпич",
+      "materialKeys": [
+        "brick"
+      ],
+      "projectType": null,
+      "price": null,
+      "priceStatus": "not-published",
+      "priceDate": null,
+      "pricePackage": "Под ключ",
+      "scenario": null,
+      "family": null,
+      "features": [],
+      "included": [],
+      "clarify": [],
+      "mainImage": "assets/images/construction/postroim-dom-rostov-brick-100-90/facade.webp",
+      "gallery": [
+        "assets/images/construction/postroim-dom-rostov-brick-100-90/facade.webp"
+      ],
+      "floorPlans": [],
+      "imageKind": "Построенный дом",
+      "imageWidth": 1200,
+      "imageHeight": 896,
+      "sourceUrl": "https://postroim-dom-rostov.ru/",
+      "sourceRecordId": "rec3586855001",
+      "sourceImages": [
+        {
+          "originalUrl": "https://static.tildacdn.com/tild6263-3531-4862-b265-623031343738/e398685cf699a072c52e.jpeg",
+          "width": 1200,
+          "height": 896
+        }
+      ],
+      "sourceDocument": null,
+      "sourcePage": null,
+      "factSource": "Портфолио «Наши объекты в Ростове и области» компании «Построим Дом»"
+    },
+    {
+      "id": "postroim-dom-rostov-stone-120",
+      "slug": "postroim-dom-rostov-stone-120",
+      "code": "postroim-dom-rostov-stone-120",
+      "builderId": "postroim-dom",
+      "builder": "Построим Дом",
+      "recordType": "built-object",
+      "title": "Каменный дом 120 м2",
+      "area": 120,
+      "location": "Ростов-на-Дону",
+      "constructionDays": 200,
+      "description": "Просторный дом с кухней гостинной на 40 метров, видовым окном на лес, с цоколем под 2 метра и террасой.",
+      "floors": null,
+      "bedrooms": null,
+      "bathrooms": null,
+      "material": "Каменный дом",
+      "materialKeys": [],
+      "projectType": null,
+      "price": null,
+      "priceStatus": "not-published",
+      "priceDate": null,
+      "pricePackage": "Под ключ",
+      "scenario": null,
+      "family": null,
+      "features": [],
+      "included": [],
+      "clarify": [],
+      "mainImage": "assets/images/construction/postroim-dom-rostov-stone-120/facade.webp",
+      "gallery": [
+        "assets/images/construction/postroim-dom-rostov-stone-120/facade.webp"
+      ],
+      "floorPlans": [],
+      "imageKind": "Построенный дом",
+      "imageWidth": 1200,
+      "imageHeight": 896,
+      "sourceUrl": "https://postroim-dom-rostov.ru/",
+      "sourceRecordId": "rec3586855101",
+      "sourceImages": [
+        {
+          "originalUrl": "https://static.tildacdn.com/tild6163-6266-4361-b263-306339623932/f357133f84058e9a0eb2.jpeg",
+          "width": 1200,
+          "height": 896
+        }
+      ],
+      "sourceDocument": null,
+      "sourcePage": null,
+      "factSource": "Портфолио «Наши объекты в Ростове и области» компании «Построим Дом»"
     }
   ]
 }

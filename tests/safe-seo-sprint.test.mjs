@@ -137,17 +137,18 @@ test("only complete newbuild records receive the new breadcrumb graph", () => {
   }
 });
 
-test("construction projects expose honest Service and Breadcrumb schemas", () => {
+test("construction projects and completed objects expose appropriate schemas", () => {
   const files = fs.readdirSync(path.join(ROOT, "construction/projects"))
     .filter((file) => file.endsWith(".html"))
     .map((file) => `construction/projects/${file}`);
-  assert.equal(files.length, 26);
+  assert.equal(files.length, 32);
   for (const file of files) {
     const nodes = jsonLd(file);
-    const service = nodes.find((node) => node["@type"] === "Service");
-    assert.ok(service, `${file} must have Service schema`);
-    assert.equal(service.provider?.["@id"], ORG_ID);
-    assert.equal("offers" in service, false);
+    const built = file.includes("/postroim-dom-");
+    const content = nodes.find((node) => node["@type"] === (built ? "WebPage" : "Service"));
+    assert.ok(content, `${file} must describe the actual content type`);
+    if (!built) assert.equal(content.provider?.["@id"], ORG_ID);
+    assert.equal("offers" in content, false);
     assert.ok(nodes.some((node) => node["@type"] === "BreadcrumbList"));
   }
   for (const file of fs.readdirSync(path.join(ROOT, "construction/builders")).filter((item) => item.endsWith(".html"))) {

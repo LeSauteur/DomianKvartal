@@ -689,6 +689,36 @@
 }
 
 /* Project pages */
+.is-built-object .project-hero__media img {
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+.is-built-object .project-hero h1 {
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.08;
+}
+
+.built-object__duration {
+  color: var(--construction-accent);
+  font-weight: 800;
+}
+
+.is-built-object .project-facts dl {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr));
+}
+
+.project-source {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.project-source a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
 .project-hero,
 .builder-hero {
   padding: 28px 0 76px;

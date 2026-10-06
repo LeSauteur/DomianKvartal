@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import io
+import argparse
 import re
+import runpy
 import urllib.request
 from pathlib import Path
 
@@ -229,11 +231,32 @@ def build_eqvita() -> None:
         save_variants(source.crop(config["plan"]), target, "plan", trim=True)
 
 
+def build_postroim_dom() -> None:
+    rows = runpy.run_path(str(ROOT / "tools" / "generate-construction-catalog.py"))["POSTROIM_DOM_ROWS"]
+    originals = ROOT / "tmp" / "construction-originals" / "postroim-dom"
+    for row in rows:
+        directory = originals / row["slug"]
+        directory.mkdir(parents=True, exist_ok=True)
+        source = directory / ("source" + Path(row["sourceImage"]).suffix)
+        if not source.exists():
+            request = urllib.request.Request(row["sourceImage"], headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(request, timeout=30) as response:
+                source.write_bytes(response.read())
+        with Image.open(source) as image:
+            if image.size != (row["imageWidth"], row["imageHeight"]):
+                raise ValueError(f"Unexpected original dimensions: {row['slug']} {image.size}")
+            save_variants(image, OUTPUT / row["slug"], "facade")
+
+
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Prepare local construction media from partner originals.")
+    parser.add_argument("--builder", choices=["all", "domanstroy", "soyuz", "eqvita", "postroim-dom"], default="all")
+    args = parser.parse_args()
     OUTPUT.mkdir(parents=True, exist_ok=True)
-    build_domanstroy()
-    build_soyuz()
-    build_eqvita()
+    builders = {"domanstroy": build_domanstroy, "soyuz": build_soyuz, "eqvita": build_eqvita, "postroim-dom": build_postroim_dom}
+    for builder_id, build in builders.items():
+        if args.builder in ("all", builder_id):
+            build()
 
     files = list(OUTPUT.rglob("*.webp"))
     print(f"Prepared {len(files)} optimized construction media files in {OUTPUT}")

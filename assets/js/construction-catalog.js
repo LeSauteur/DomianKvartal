@@ -48,6 +48,7 @@
       var material = String(values.get("material") || "");
       var priceRange = parseRange(String(values.get("price") || ""));
       var projectType = String(values.get("projectType") || "");
+      var recordType = String(values.get("recordType") || "");
       var visible = 0;
 
       cards.forEach(function (card) {
@@ -65,6 +66,7 @@
         if (material && materials.indexOf(material) === -1) show = false;
         if (priceRange && !matchesRange(price, priceRange)) show = false;
         if (projectType && card.getAttribute("data-project-type") !== projectType) show = false;
+        if (recordType && card.getAttribute("data-record-type") !== recordType) show = false;
 
         card.hidden = !show;
         if (show) visible += 1;
@@ -119,7 +121,7 @@
 
     var selected = form.querySelector("[data-selected-project]");
     if (selected && link.dataset.projectName) {
-      selected.textContent = "Выбран проект: " + link.dataset.projectName;
+      selected.textContent = (link.dataset.recordType === "built-object" ? "Выбран объект: " : "Выбран проект: ") + link.dataset.projectName;
       selected.hidden = false;
     }
   }
