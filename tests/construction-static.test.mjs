@@ -49,32 +49,50 @@ function localPageReferences(file, source) {
   return refs;
 }
 
-test("central project data preserves all 26 unique source entries", () => {
-  assert.equal(data.projects.length, 26);
+test("central catalogue preserves 26 projects and adds six distinct completed objects", () => {
+  assert.equal(data.projects.length, 32);
   assert.deepEqual(
-    Object.fromEntries(["domanstroy", "soyuz", "eqvita"].map((builder) => [builder, data.projects.filter((project) => project.builderId === builder).length])),
-    { domanstroy: 7, soyuz: 15, eqvita: 4 }
+    Object.fromEntries(["domanstroy", "soyuz", "eqvita", "postroim-dom"].map((builder) => [builder, data.projects.filter((project) => project.builderId === builder).length])),
+    { domanstroy: 7, soyuz: 15, eqvita: 4, "postroim-dom": 6 }
   );
-  assert.equal(new Set(data.projects.map((project) => project.slug)).size, 26);
-  assert.equal(new Set(data.projects.map((project) => `${project.sourceDocument}:${project.sourcePage}:${project.slug}`)).size, 26);
-  assert.ok(data.projects.every((project) => project.sourceDocument && project.sourcePage));
+  assert.equal(new Set(data.projects.map((project) => project.slug)).size, 32);
+  assert.ok(data.projects.filter((project) => project.recordType === "project").every((project) => project.sourceDocument && project.sourcePage));
+  const built = data.projects.filter((project) => project.recordType === "built-object");
+  assert.deepEqual(built.map((project) => [project.area, project.constructionDays, project.location]), [
+    [110, 180, "Константиновск"], [100, 120, "Ростов-на-Дону"], [110, 180, "Ростов-на-Дону"],
+    [100, 180, "Ростов-на-Дону"], [100, 90, "Ростов-на-Дону"], [120, 200, "Ростов-на-Дону"]
+  ]);
+  assert.equal(new Set(built.map((project) => project.sourceRecordId)).size, 6);
+  assert.equal(new Set(built.map((project) => project.sourceImages[0].originalUrl)).size, 6);
+  for (const project of built) {
+    assert.equal(project.sourceUrl, "https://postroim-dom-rostov.ru/");
+    assert.equal(project.price, null);
+    assert.equal(project.floors, null);
+    assert.equal(project.projectType, null);
+    assert.equal(project.bathrooms, null);
+    assert.deepEqual(project.floorPlans, []);
+    assert.equal(project.gallery.length, 1);
+    assert.match(project.sourceImages[0].originalUrl, /^https:\/\/static\.tildacdn\.com\/tild[^/]+\/[^/]+\.(?:png|jpeg)$/);
+    assert.equal(project.pricePackage, "Под ключ");
+  }
+  assert.deepEqual(built.map((project) => project.bedrooms), [null, null, null, 3, null, null]);
 });
 
 test("catalogue renders all cards and all filters without hiding unknown data by default", () => {
-  assert.equal(count(catalogue, /<article class="construction-card(?:\s|\")/g), 26);
-  assert.equal(count(catalogue, /\bdata-project-card\b/g), 26);
-  for (const field of ["builder", "area", "floors", "bedrooms", "material", "price", "projectType"]) {
+  assert.equal(count(catalogue, /<article class="construction-card(?:\s|\")/g), 32);
+  assert.equal(count(catalogue, /\bdata-project-card\b/g), 32);
+  for (const field of ["builder", "area", "floors", "bedrooms", "material", "price", "projectType", "recordType"]) {
     assert.match(catalogue, new RegExp(`name="${field}"`));
   }
   assert.match(catalogue, /<noscript>/);
-  assert.match(catalogue, />26<\/strong>|data-project-count>26</);
+  assert.match(catalogue, /data-project-count>32</);
 });
 
 test("every project and builder has a separate indexable page", () => {
   const projectFiles = filesIn(projectDirectory);
   const builderFiles = filesIn(builderDirectory);
-  assert.equal(projectFiles.length, 26);
-  assert.equal(builderFiles.length, 3);
+  assert.equal(projectFiles.length, 32);
+  assert.equal(builderFiles.length, 4);
 
   for (const name of [...projectFiles, ...builderFiles]) {
     const file = projectFiles.includes(name) ? path.join(projectDirectory, name) : path.join(builderDirectory, name);
@@ -91,10 +109,16 @@ test("every project and builder has a separate indexable page", () => {
 test("project pages use honest service schema and expose no invented offer", () => {
   for (const name of filesIn(projectDirectory)) {
     const source = fs.readFileSync(path.join(projectDirectory, name), "utf8");
-    assert.match(source, /"@type":"Service"/);
+    const built = name.startsWith("postroim-dom-");
+    assert.match(source, built ? /"@type":"WebPage"/ : /"@type":"Service"/);
     assert.doesNotMatch(source, /"@type":"Product"/);
     assert.doesNotMatch(source, /"offers"\s*:/);
-    assert.match(source, /Не является публичной офертой/);
+    if (!built) assert.match(source, /Не является публичной офертой/);
+    if (built) {
+      assert.doesNotMatch(source, /Рендер проекта|вариант фасада|class="[^\"]*project-plan|class="[^\"]*project-living|None этажа/);
+      assert.doesNotMatch(source, /(?:src|srcset)="https?:\/\//);
+      assert.match(source, /Стоимость и срок нового строительства определяются отдельно/);
+    }
     assert.match(source, /data-project-code=/);
     assert.match(source, /name="project_code"/);
     assert.match(source, /name="price_version"/);
