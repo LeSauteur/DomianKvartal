@@ -38,6 +38,81 @@ test.beforeEach(async ({ page }) => {
   await installGoalProbe(page);
 });
 
+test("mobile builder navigation has no obsolete header gap or pill links", async ({ page }) => {
+  await mockExternalRequests(page);
+  for (const width of [375, 390, 434, 768]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto("/construction/builders/postroim-dom.html");
+    const layout = await page.evaluate(() => {
+      const header = document.querySelector(".unified-header").getBoundingClientRect();
+      const breadcrumbs = document.querySelector(".construction-breadcrumbs");
+      const link = breadcrumbs.querySelector("a");
+      const box = link.getBoundingClientRect();
+      const style = getComputedStyle(link);
+      return { gap: box.top - header.bottom, background: style.backgroundColor, radius: style.borderRadius, padding: style.paddingTop, overflow: document.documentElement.scrollWidth > innerWidth };
+    });
+    expect(layout.gap).toBeLessThanOrEqual(22);
+    expect(layout.background).toBe("rgba(0, 0, 0, 0)");
+    expect(layout.radius).toBe("0px");
+    expect(layout.padding).toBe("0px");
+    expect(layout.overflow).toBe(false);
+    const actions = page.locator(".builder-hero__actions .btn");
+    await expect(actions).toHaveCount(2);
+    expect(await actions.first().evaluate((link) => getComputedStyle(link).borderRadius)).toBe("12px");
+    if (width < 600) {
+      const first = await actions.nth(0).boundingBox();
+      const second = await actions.nth(1).boundingBox();
+      expect(Math.abs(first.width - second.width)).toBeLessThan(1);
+      expect(second.y).toBeGreaterThanOrEqual(first.y + first.height + 9);
+    }
+    if (width === 390) await page.screenshot({ path: "output/playwright/mortgage-builder-mobile.jpg" });
+  }
+});
+
+test("family mortgage CTA selects financing and preserves the selected object", async ({ page }) => {
+  const network = await mockExternalRequests(page);
+  await page.goto("/construction/projects/postroim-dom-konstantinovsk-110.html");
+  await page.locator("#family-mortgage .btn").click();
+  await expect(page.locator('#lead-form select[name="budget_payment"]')).toHaveValue("family_mortgage");
+  await page.locator('#lead-form input[name="name"]').fill("Тест Семейная");
+  await page.locator('#lead-form input[name="phone"]').fill("+7 999 123-45-67");
+  await page.locator('#lead-form input[name="privacy_consent"]').check();
+  await page.locator('#lead-form button[type="submit"]').click();
+  await expect.poll(() => network.providerRequests).toBe(1);
+  const payload = network.payloads[0];
+  const field = (name) => payload.match(new RegExp('name="' + name + '"\\r\\n\\r\\n([^\\r\\n]*)'))?.[1];
+  expect(field("budget_payment")).toBe("family_mortgage");
+  expect(field("builder")).toBe("Построим Дом");
+  expect(field("project_code")).toBe("postroim-dom-konstantinovsk-110");
+  expect(field("source_cta")).toBe("family_mortgage_broker");
+});
+
+test("mortgage entry points reach the construction offer and fit mobile screens", async ({ page }) => {
+  test.setTimeout(90000);
+  await mockExternalRequests(page);
+  for (const width of [375, 768, 1366]) {
+    await page.setViewportSize({ width, height: 900 });
+    for (const route of ["/", "/houses.html", "/construction.html", "/construction/builders/postroim-dom.html"]) {
+      await page.goto(route);
+      const offer = page.locator("#family-mortgage");
+      await expect(offer).toHaveCount(1);
+      await expect(offer).toContainText("Кредитный брокер");
+      await expect(offer).toContainText("сверх льготного лимита ставка может отличаться");
+      await offer.scrollIntoViewIfNeeded();
+      const box = await offer.locator(".family-mortgage__panel").boundingBox();
+      expect(box.x).toBeGreaterThanOrEqual(0);
+      expect(box.x + box.width).toBeLessThanOrEqual(width);
+      expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+      if (width === 375 && route === "/construction.html") await offer.screenshot({ path: "output/playwright/family-mortgage-mobile.jpg" });
+      if (width === 1366 && route === "/") await offer.screenshot({ path: "output/playwright/family-mortgage-desktop.jpg" });
+    }
+  }
+  await page.goto("/houses.html");
+  await page.locator("#family-mortgage .btn").click();
+  await expect(page).toHaveURL(/construction\.html#family-mortgage$/);
+  await expect(page.locator("#family-mortgage .btn")).toHaveAttribute("href", "#lead-form-section");
+});
+
 test("catalogue shows all projects and filters by builder without reload", async ({ page }) => {
   await page.goto("/construction.html", { waitUntil: "domcontentloaded" });
   const cards = page.locator("[data-project-grid] [data-project-card]");

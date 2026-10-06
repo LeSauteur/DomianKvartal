@@ -1,0 +1,127 @@
+.family-mortgage {
+  padding: 32px 0;
+  color: var(--text-main, #30231d);
+}
+
+.family-mortgage__panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px 40px;
+  align-items: center;
+  padding: clamp(24px, 4vw, 46px);
+  border: 1px solid #e2d3c4;
+  border-radius: 24px;
+  background: linear-gradient(120deg, #fffaf3, #efe3d5);
+}
+
+.family-mortgage__eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: #a53f30;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.family-mortgage .family-mortgage__title {
+  margin: 0 0 12px;
+  font-size: clamp(25px, 3vw, 38px);
+  line-height: 1.13;
+  letter-spacing: -.03em;
+}
+
+.family-mortgage__copy {
+  max-width: 65ch;
+  margin: 0;
+  color: #6c594d;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.family-mortgage__offer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.family-mortgage__rate {
+  color: #a53f30;
+  font-size: clamp(44px, 6vw, 64px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.family-mortgage__offer > span {
+  color: #6c594d;
+  font-size: 14px;
+}
+
+.family-mortgage__offer .btn {
+  margin: 14px 0 0;
+  min-height: 48px;
+  padding: 13px 20px;
+  border-radius: 12px !important;
+  box-shadow: 0 6px 16px rgba(62, 42, 31, 0.1);
+  text-align: center;
+  line-height: 1.25;
+}
+
+.family-mortgage__terms {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding-top: 20px;
+  border-top: 1px solid #dfcfc0;
+  color: #6c594d;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.family-mortgage__terms a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.family-mortgage__badge {
+  display: inline-block;
+  margin: 0 0 16px;
+  color: #a53f30;
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.family-mortgage--compact .family-mortgage__title {
+  font-size: clamp(24px, 2.5vw, 32px);
+}
+
+[data-theme="dark"] .family-mortgage__panel {
+  background: #302923;
+  border-color: #645348;
+  color: #f8f1e9;
+}
+
+[data-theme="dark"] .family-mortgage__eyebrow,
+[data-theme="dark"] .family-mortgage__rate,
+[data-theme="dark"] .family-mortgage__badge {
+  color: #f4ac93;
+}
+
+[data-theme="dark"] .family-mortgage__copy,
+[data-theme="dark"] .family-mortgage__offer > span,
+[data-theme="dark"] .family-mortgage__terms {
+  color: #decdbd;
+}
+
+@media (max-width: 600px) {
+  .family-mortgage { padding: 20px 0; }
+  .family-mortgage__panel { grid-template-columns: 1fr; gap: 20px; padding: 24px 20px; border-radius: 18px; }
+  .family-mortgage__copy { font-size: 15px; }
+  .family-mortgage__offer { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 14px; align-items: center; }
+  .family-mortgage__rate { grid-row: 1 / 3; }
+  .family-mortgage__offer .btn { grid-column: 1 / -1; width: 100%; }
+  .family-mortgage__terms { padding-top: 16px; }
+}
