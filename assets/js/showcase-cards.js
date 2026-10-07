@@ -1,5 +1,5 @@
 (function () {
-    const DATA_URL = 'output/showcase/aksay-secondary.json';
+    const DATA_URL = '/output/catalog/registry.json';
     const cache = new Map();
 
     function text(value, fallback = '') {
@@ -33,7 +33,13 @@
         const promise = fetch(DATA_URL, { cache: 'no-store' })
             .then((response) => {
                 if (!response.ok) throw new Error('Showcase data request failed');
-                return response.json();
+                return response.json().then(records => records.filter(r => (!r.status || r.status === 'active') && ['Аксай','Аксайский район'].includes(r.city)).map(r => ({
+                  ...r, price:r.price === null ? 'Цена по запросу' : new Intl.NumberFormat('ru-RU').format(r.price)+' ₽',
+                  image:r.image && r.image.replace(/^https:\/\/domian-161\.ru(?=\/)/,''), fallbackImage:'/assets/hero/hero.jpg',
+                  categoryLabel:r.type === 'apartment' ? 'Квартира' : 'Дом', location:r.city,
+                  area:r.features.area ? r.features.area+' м²' : '', rooms:r.features.rooms,
+                  landArea:r.features.landArea ? r.features.landArea+' сот.' : '', floor:r.features.floor ? r.features.floor+' эт.' : '',features:[]
+                })));
             });
 
         cache.set(name, promise);
@@ -82,7 +88,7 @@
         const img = document.createElement('img');
         img.className = 'showcase-card__image property-card__gallery-image';
         img.src = text(item.image, fallback);
-        img.alt = `${text(item.title, 'Объект недвижимости в Аксае')}`;
+        img.alt = `${text(item.title, 'Объект недвижимости')}`;
         img.loading = 'lazy';
         img.decoding = 'async';
         img.addEventListener('error', () => {
@@ -96,11 +102,11 @@
 
         const category = document.createElement('span');
         category.className = 'showcase-card__category new-object-card__type property-card__meta';
-        category.textContent = text(item.categoryLabel, 'Вторичная недвижимость в Аксае');
+        category.textContent = text(item.categoryLabel, 'Объект из каталога');
 
         const title = document.createElement('h3');
         title.className = 'showcase-card__title property-card__title';
-        title.textContent = text(item.title, 'Лучший объект в Аксае');
+        title.textContent = text(item.title, 'Объект недвижимости');
 
         const location = document.createElement('p');
         location.className = 'showcase-card__location';
@@ -130,7 +136,7 @@
 
         const appointmentCta = document.createElement('a');
         appointmentCta.className = 'btn property-card__cta showcase-card__cta';
-        appointmentCta.href = container.dataset.ctaHref || ({
+        appointmentCta.href = item.url || container.dataset.ctaHref || ({
             apartment: 'apartments.html',
             house: 'houses.html',
             land: 'lands.html',

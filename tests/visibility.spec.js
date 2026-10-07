@@ -35,3 +35,20 @@ test('direct object form overrides stale object context and uses the shared prov
   expect(payload).not.toContain('other-object');
   expect(payload).not.toContain('5950000');
 });
+test('city filters preserve unknown locations and expose Rostov and Azov accurately',async({page})=>{
+  await page.goto('/apartments.html?qa=1');
+  await expect(page.locator('#cards .property-card').first()).toContainText('Аксай');
+  await page.locator('[data-filter=city]').selectOption('Аксай');
+  await expect(page.locator('#cards .property-card')).toHaveCount(6);
+  await expect(page).toHaveURL(/f_city=/);
+  await page.locator('[data-filter=city]').selectOption('unknown');
+  const registry=require('../data/catalog/registry.json');
+  await expect(page.locator('#cards .property-card')).toHaveCount(registry.filter(r=>r.type==='apartment'&&r.city===null).length);
+  await page.goto('/houses.html?qa=1');
+  await page.locator('[data-filter=city]').selectOption('Ростов-на-Дону');
+  await expect(page.locator('#cards .property-card')).toHaveCount(1);
+  await expect(page.locator('#cards [data-object-id="house_912"]')).toContainText('Ростов-на-Дону');
+  await page.goto('/lands.html?qa=1');
+  await page.locator('[data-filter=city]').selectOption('другое');
+  await expect(page.locator('#cards [data-object-id="land_01"]')).toContainText('Азовский р-н');
+});

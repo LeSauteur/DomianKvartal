@@ -1242,7 +1242,8 @@
       hasCardValue(meta.area) ? String(meta.area) + " м²" : "",
       hasCardValue(meta.houseArea) ? "дом " + String(meta.houseArea) + " м²" : "",
       hasCardValue(meta.landArea) ? "участок " + String(meta.landArea) + " сот." : "",
-      hasCardValue(meta.floor) ? String(meta.floor) + " эт." : ""
+      hasCardValue(meta.floor) ? String(meta.floor) + " эт." : "",
+      item.city === "другое" ? (item.district || "Другой город или район") : (item.city || "")
     ]);
     var detailsHtml = renderCardChars(item.cardDetails || []);
 
@@ -1300,14 +1301,15 @@
       ]
     };
 
-    return templates[type] || [];
+    var city = '<label>Город<select data-filter="city"><option value="">Все города</option><option value="Аксай">Аксай</option><option value="Аксайский район">Аксайский район</option><option value="Ростов-на-Дону">Ростов-на-Дону</option><option value="другое">Другой город или район</option><option value="unknown">Город не указан</option></select></label>';
+    return (type === 'newbuilds' ? [] : [city]).concat(templates[type] || []);
   }
 
   function parseFilters(container) {
     var values = {};
     qsa("[data-filter]", container).forEach(function (input) {
       var key = input.getAttribute("data-filter");
-      values[key] = key === "query" || key === "sort" ? normalizeText(input.value) : toNumber(input.value);
+      values[key] = key === "query" || key === "sort" || key === "city" ? normalizeText(input.value) : toNumber(input.value);
     });
     return values;
   }
@@ -1315,6 +1317,7 @@
   function applyFilters(items, filters, type) {
     var filtered = items.filter(function (item) {
       var meta = item.meta;
+      if (filters.city && (item.city || "unknown") !== filters.city) return false;
 
       if (filters.priceMin !== null && (meta.price === null || meta.price < filters.priceMin)) return false;
       if (filters.priceMax !== null && (meta.price === null || meta.price > filters.priceMax)) return false;
@@ -1659,7 +1662,7 @@
           city:r.city, district:r.district, settlement:r.settlement, address:r.address,
           images:localImages, cover:localImages[0] || '', sectionLink:type+'.html',
           meta:{price:r.price,rooms:f.rooms,area:f.area,houseArea:type==='houses'?f.area:null,landArea:f.landArea,floor:f.floor,floors:f.totalFloors} };
-      });
+      }).sort(function (a,b) { return (b.city === 'Аксай' ? 1 : 0) - (a.city === 'Аксай' ? 1 : 0); });
     });
 
     return fetchJson("output/newbuilds/newbuilds-v2-merged.json")
@@ -1898,7 +1901,7 @@
       hasCardValue(features.floor) && hasCardValue(features.totalFloors) ? String(features.floor) + "/" + String(features.totalFloors) + " эт." : "",
       areaMatch && areaMatch[1] ? areaMatch[1].replace(",", ".") + " м²" : "",
       landMatch && landMatch[1] ? landMatch[1].replace(",", ".") + " сот." : "",
-      hasCardValue(item && item.city) ? String(item.city) : "",
+      hasCardValue(item && item.city) ? (item.city === "другое" ? item.district || "Другой город или район" : String(item.city)) : "",
       hasCardValue(item && item.district) ? String(item.district) : ""
     ]);
     var detailsHref = {
@@ -1973,7 +1976,7 @@
           container.innerHTML = '<p class="loading-state">Новые объекты пока не добавлены.</p>';
           return;
         }
-        container.innerHTML = items.slice(0, 10).map(renderNewObjectCard).join("");
+        container.innerHTML = items.slice().sort(function (a,b) { return (b.city === "Аксай" ? 1 : 0) - (a.city === "Аксай" ? 1 : 0); }).slice(0, 10).map(renderNewObjectCard).join("");
         bindPropertyGalleryFallback(container);
       })
       .catch(function (error) {

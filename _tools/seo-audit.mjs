@@ -2,6 +2,7 @@ import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import process from "node:process";
+import { geographyMismatch } from "./visibility-geo.mjs";
 
 const ROOT = process.cwd();
 const SITE_ORIGIN = "https://domian-161.ru";
@@ -111,12 +112,14 @@ function jsonLdNodes(value) {
 const htmlFiles = trackedFiles("*.html").filter(isPublishable);
 const documentFiles = htmlFiles.filter((file) => !VERIFICATION_FILES.has(file));
 const htmlCache = new Map(documentFiles.map((file) => [file, read(file)]));
+const geographyRegistry = exists("data/catalog/registry.json") ? JSON.parse(read("data/catalog/registry.json")) : [];
 const idCache = new Map();
 const titles = new Map();
 const canonicals = new Map();
 
 for (const file of documentFiles) {
   const html = htmlCache.get(file);
+  if (geographyMismatch(html, geographyRegistry)) report("error", file, "Aksay-only heading with more than 50% static Rostov properties");
   const lower = html.toLowerCase();
   const noindex = /<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/iu.test(html);
   const titleMatch = html.match(/<title\b[^>]*>([\s\S]*?)<\/title>/iu);
