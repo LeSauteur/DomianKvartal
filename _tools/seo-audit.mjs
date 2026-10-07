@@ -158,6 +158,11 @@ for (const file of documentFiles) {
   }
 
   const duplicateIds = ids.filter((id, index) => ids.indexOf(id) !== index);
+  if (file.startsWith("obekt/")) {
+    const canonical = attr(canonicalMatches[0]?.[0] || "", "href");
+    if (canonical !== SITE_ORIGIN + "/" + file) report("error", file, "object page canonical is not its own URL");
+    if (/\b(?:null|undefined|NaN)\b/u.test(stripTags(html.replace(/<script\b[\s\S]*?<\/script>/giu,"")))) report("error", file, "invalid placeholder in object text");
+  }
   for (const id of new Set(duplicateIds)) report("error", file, `duplicate id: #${id}`);
 
   for (const match of html.matchAll(/<script\b[^>]*type=(["'])application\/ld\+json\1[^>]*>([\s\S]*?)<\/script>/giu)) {
@@ -232,7 +237,7 @@ for (const file of documentFiles) {
     }
   }
 
-  if (lower.includes("aggregateRating".toLowerCase()) || lower.includes('"@type":"offer"') || lower.includes('"@type": "offer"')) {
+  if (!file.startsWith("obekt/") && (lower.includes("aggregateRating".toLowerCase()) || lower.includes('"@type":"offer"') || lower.includes('"@type": "offer"'))) {
     report("warning", file, "review potentially sensitive rating/Offer structured data manually");
   }
 }

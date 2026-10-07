@@ -59,7 +59,7 @@ function logoMarkup() {
       </svg>`;
 }
 
-function headerMarkup(file) {
+export function headerMarkup(file) {
   const cluster = clusterFor(file);
   const servicesActive = ["rent", "commercial", "construction"].includes(cluster);
   const companyActive = cluster === "team";
@@ -149,7 +149,7 @@ function propertyNavMarkup(file, mode) {
 <!-- unified-property-nav:end -->`;
 }
 
-function propertyDiscoveryMarkup(file) {
+export function propertyDiscoveryMarkup(file) {
   const mode = propertyNavMode(file);
   const nav = propertyNavMarkup(file, mode);
   const searchTarget = internalSearchTargets.get(file);
@@ -254,6 +254,7 @@ function normalizeHeaderBoundary(source) {
   return source.replace(/(<!-- unified-public-header:end -->\r?\n)[ \t]*\r?\n[ \t]*(?=<section\b)/, "$1\n");
 }
 
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
 let changed = 0;
 for (const publicPath of publicPaths()) {
   const file = fileFor(publicPath);
@@ -273,3 +274,5 @@ if (check && changed) {
   process.exit(1);
 }
 console.log(check ? "Public header sync is current." : `Unified public header synced: ${changed} page(s).`);
+
+}

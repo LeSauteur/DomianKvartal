@@ -93,7 +93,7 @@ test("every production lead form uses a separate required unchecked consent", ()
     }
   }
 
-  assert.equal(count, 43);
+  assert.equal(count, 43 + JSON.parse(fs.readFileSync(path.join(root, 'data/catalog/registry.json'), 'utf8')).length + (fs.existsSync(path.join(root, 'data/zhk/aksay.json')) ? JSON.parse(fs.readFileSync(path.join(root, 'data/zhk/aksay.json'), 'utf8')).filter(r => r.publish).length : 0));
   assert.deepEqual(failures, []);
 });
 

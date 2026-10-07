@@ -69,7 +69,7 @@ test("production lead forms include the main form and every construction landing
   const leadForms = htmlFiles.filter((file) => /<form\b[^>]*\bdata-lead-form\b/i.test(fs.readFileSync(file, "utf8")));
   const relative = leadForms.map((file) => path.relative(root, file).replaceAll("\\", "/")).sort();
 
-  assert.equal(relative.length, 43);
+  assert.equal(relative.length, 43 + JSON.parse(fs.readFileSync(path.join(root, 'data/catalog/registry.json'), 'utf8')).length + (fs.existsSync(path.join(root, 'data/zhk/aksay.json')) ? JSON.parse(fs.readFileSync(path.join(root, 'data/zhk/aksay.json'), 'utf8')).filter(r => r.publish).length : 0));
   assert.ok(relative.includes("commercial.html"));
   assert.ok(relative.includes("rent.html"));
   assert.ok(relative.includes("index-preview.html"));

@@ -881,6 +881,7 @@
       var actions = qs('[data-modal-actions]', panel);
       if (!actions) { actions = document.createElement('div'); actions.className = 'hero-actions'; actions.setAttribute('data-modal-actions', ''); panel.insertBefore(actions, images); }
       actions.innerHTML = '<a class="btn" href="/#lead-form-section" data-lead-type="buy" data-source-cta="object_detail" data-object-id="' + escapeHtml(item.id) + '" data-object-type="' + escapeHtml(item.objectType) + '" data-object-title="' + escapeHtml(item.title) + '" data-object-price="' + escapeHtml(meta.price) + '" data-object-url="' + escapeHtml(propertyUrl(item)) + '">Заявка по объекту</a><a class="btn secondary" href="tel:+79536091122">Позвонить</a><a class="btn secondary" href="' + escapeHtml(propertyUrl(item)) + '" data-object-permalink>Ссылка на объект</a>';
+      if (/^(object|house|land)_\d+$/.test(item.id || '')) actions.innerHTML += '<a class="btn secondary" href="/obekt/' + escapeHtml(item.id) + '.html" data-object-page>Открыть страницу объекта</a>';
       modal.style.display = 'flex';
       document.body.classList.add('modal-open');
       if (!inertNodes.length) Array.prototype.forEach.call(document.body.children, function (node) {
@@ -1255,6 +1256,7 @@
       '<div class="property-card__actions">',
       '<a class="btn property-card__cta" href="' + escapeHtml(sectionLink) + '"' + linkAttrs + '>' + escapeHtml(item.ctaLabel || "Подробнее") + '</a>',
       '<a class="btn property-card__phone" href="tel:+79536091122">Позвонить</a>',
+      /^(object|house|land)_\d+$/.test(item.id || '') ? '<a class="btn secondary property-card__page" href="/obekt/' + escapeHtml(item.id) + '.html">Страница объекта</a>' : '',
       "</div>",
       '</div>'
     ].join("");
@@ -1648,38 +1650,17 @@
   }
 
   function loadCategoryData(type) {
-    if (type === "apartments") {
-      return fetchJson("objects/index.json").then(function (ids) {
-        var list = ids.map(function (id) {
-          return { id: id, path: "objects/" + id, title: id, cover: null };
-        });
-        return Promise.all(list.map(function (item, idx) {
-          return fetchJson(item.path + "/data.json").then(function (data) {
-            return normalizeItem(type, item, data, idx);
-          });
-        }));
+    var registryType = {apartments:'apartment',houses:'house',lands:'land'}[type];
+    if (registryType) return fetchJson('/output/catalog/registry.json').then(function (records) {
+      return records.filter(function (r) { return r.type === registryType && (!r.status || r.status === 'active'); }).map(function (r) {
+        var f = r.features || {};
+        var localImages = r.images.map(function (image) { return image.replace(/^https:\/\/domian-161\.ru(?=\/)/, ''); });
+        return { id:r.id, objectType:type, title:r.title, description:r.fullDescription || '',
+          city:r.city, district:r.district, settlement:r.settlement, address:r.address,
+          images:localImages, cover:localImages[0] || '', sectionLink:type+'.html',
+          meta:{price:r.price,rooms:f.rooms,area:f.area,houseArea:type==='houses'?f.area:null,landArea:f.landArea,floor:f.floor,floors:f.totalFloors} };
       });
-    }
-
-    if (type === "houses") {
-      return fetchJson("output/houses/index.json").then(function (items) {
-        return Promise.all(items.map(function (item, idx) {
-          return fetchJson("output/" + item.path + "/data.json").then(function (data) {
-            return normalizeItem(type, item, data, idx);
-          });
-        }));
-      });
-    }
-
-    if (type === "lands") {
-      return fetchJson("lands/index.json").then(function (items) {
-        return Promise.all(items.map(function (item, idx) {
-          return fetchJson(item.path + "/data.json").then(function (data) {
-            return normalizeItem(type, item, data, idx);
-          });
-        }));
-      });
-    }
+    });
 
     return fetchJson("output/newbuilds/newbuilds-v2-merged.json")
       .then(function (items) {

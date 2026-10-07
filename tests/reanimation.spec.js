@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
 });
 test('filter, object, direct link, back and object CTA preserve identity', async ({ page }) => {
   await page.goto('/apartments.html?qa=1');
-  await expect(page.locator('#cards .property-card')).toHaveCount(124);
+  await expect(page.locator('#cards .property-card')).toHaveCount(require('../data/catalog/registry.json').filter(r => r.type === 'apartment').length);
   await expect(page.locator('#cards')).not.toContainText(/(?:905|901|100) комн/);
   await page.locator('[data-filter="priceMax"]').fill('5000000');
   const card = page.locator('#cards .property-card').first();
@@ -103,13 +103,13 @@ for (const [path, type, cta] of [
 test('lazy catalog photos load on scroll and gallery still changes the photo', async ({ page }) => {
   await page.setViewportSize({width:390,height:844});
   await page.goto('/apartments.html?qa=1');
-  await expect(page.locator('#cards .property-card')).toHaveCount(124);
+  await expect(page.locator('#cards .property-card')).toHaveCount(require('../data/catalog/registry.json').filter(r => r.type === 'apartment').length);
   const photo=page.locator('#cards .property-card__photo').last();
   expect(await photo.getAttribute('loading')).toBe('lazy');
   expect(await photo.evaluate(img=>img.complete)).toBe(false);
   await photo.scrollIntoViewIfNeeded();
   await expect.poll(()=>photo.evaluate(img=>img.complete&&img.naturalWidth>0)).toBe(true);
-  const card=page.locator('#cards .property-card').filter({has:page.locator('.property-card__gallery-btn--next')}).filter({has:page.locator('img.property-card__photo[data-src^="objects/"]')}).first();
+  const card=page.locator('#cards .property-card').filter({has:page.locator('.property-card__gallery-btn--next')}).filter({has:page.locator('img.property-card__photo[data-src*="/objects/"]')}).first();
   const firstSrc=await card.locator('img.property-card__photo').getAttribute('src');
   await card.locator('.property-card__gallery-btn--next').click();
   await expect(card.locator('img.property-card__photo')).not.toHaveAttribute('src',firstSrc);
