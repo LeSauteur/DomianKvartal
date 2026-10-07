@@ -12,7 +12,7 @@ export function breadcrumbs(items) {
     itemListElement:items.map(([name,url],i)=>({"@type":"ListItem",position:i+1,name,item:new URL(url,origin).href}))
   });
 }
-function footer() {
+export function footer() {
   const source = fs.readFileSync(root+"/index.html","utf8").match(/<footer\b[\s\S]*?<\/footer>/i)?.[0];
   if (!source) throw new Error("Site footer missing");
   return source.replace(/(href|src)=(["'])(.*?)\2/g,(full,key,q,url)=> {

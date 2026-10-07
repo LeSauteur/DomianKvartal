@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import process from "node:process";
 import { geographyMismatch } from "./visibility-geo.mjs";
+import { linkGraph } from "./site-pages.mjs";
 
 const ROOT = process.cwd();
 const SITE_ORIGIN = "https://domian-161.ru";
@@ -281,12 +282,19 @@ for (const value of sitemapUrls) {
     continue;
   }
   const html = read(file);
+  const ownCanonical = attr((html.match(/<link\b[^>]*rel=["']canonical["'][^>]*>/iu) || [""])[0], "href");
+  if (ownCanonical !== value) report("error", "sitemap.xml", "non-self-canonical page is present: " + value);
   if (/<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/iu.test(html)) {
     report("error", "sitemap.xml", `noindex page is present in sitemap: ${value}`);
   }
 }
 
 const robots = read("robots.txt");
+const discovery = linkGraph(documentFiles);
+for (const file of sitemapFiles) {
+  if (!discovery.incoming.get(file)) report("error", file, "sitemap page has no incoming static internal link");
+  if (!discovery.reachable.has(file)) report("error", file, "sitemap page is unreachable from the homepage");
+}
 if (exists("data/catalog/registry.json")) {
   const registry = JSON.parse(read("data/catalog/registry.json"));
   const byId = new Map(registry.map((item) => [item.id, item]));
