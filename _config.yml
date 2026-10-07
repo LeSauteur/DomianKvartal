@@ -1,4 +1,5 @@
 exclude:
+  - VISIBILITY_PROGRESS.md
   - START.md
   - START_NEWBUILDS_CHAT.md
   - PREVIEW_HOME_NOTES.md

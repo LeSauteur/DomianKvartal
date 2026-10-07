@@ -279,6 +279,20 @@ for (const value of sitemapUrls) {
 }
 
 const robots = read("robots.txt");
+if (exists("data/catalog/registry.json")) {
+  const registry = JSON.parse(read("data/catalog/registry.json"));
+  const byId = new Map(registry.map((item) => [item.id, item]));
+  if (byId.size !== registry.length) report("error", "data/catalog/registry.json", "duplicate property IDs");
+  for (const dir of ["apartments", "houses", "lands", "home"]) {
+    const file = `output/${dir}/new-objects.json`;
+    for (const item of JSON.parse(read(file))) {
+      if (!["apartment", "house", "land"].includes(item.type)) continue;
+      const source = byId.get(item.id);
+      if (!source) report("error", file, `property missing from registry: ${item.id}`);
+      else if (item.price !== source.price) report("error", file, `price differs from registry: ${item.id}`);
+    }
+  }
+}
 if (!/^User-agent:\s*\*/imu.test(robots)) report("error", "robots.txt", "missing User-agent: *");
 if (!/^Sitemap:\s*https:\/\/domian-161\.ru\/sitemap\.xml\s*$/imu.test(robots)) {
   report("error", "robots.txt", "missing canonical sitemap directive");
