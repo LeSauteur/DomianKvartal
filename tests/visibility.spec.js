@@ -52,3 +52,23 @@ test('city filters preserve unknown locations and expose Rostov and Azov accurat
   await page.locator('[data-filter=city]').selectOption('другое');
   await expect(page.locator('#cards [data-object-id="land_01"]')).toContainText('Азовский р-н');
 });
+test('ZHK forms keep their project attribution and page layouts fit mobile',async({page})=>{
+  await page.setViewportSize({width:390,height:844});
+  for(const slug of ['flora','vishnevyy-sad','samotsvety','atmosfera','novyy']){
+    await page.goto('/seo/zhk-'+slug+'-aksay.html?qa=1');
+    await expect(page.locator('h1')).toHaveCount(1);
+    await expect(page.locator('[data-lead-form]')).toHaveAttribute('data-source-cta','zhk_'+slug);
+    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
+  }
+  let payload='';
+  await page.route('https://api.web3forms.com/submit',route=>{payload=route.request().postData();return route.fulfill({status:200,contentType:'application/json',body:'{"success":true}'});});
+  await page.goto('/seo/zhk-flora-aksay.html?qa=1');
+  await page.locator('#lead-name').fill('Тест без отправки');
+  await page.locator('#lead-phone').fill('+79991234567');
+  await page.locator('#lead-service').selectOption('buy');
+  await page.locator('#lead-privacy-consent').check();
+  await page.locator('#lead-form').evaluate(form=>form.requestSubmit());
+  await expect(page).toHaveURL(/thanks\.html\?qa=1/);
+  expect(payload).toContain('zhk_flora');
+  expect(payload).toContain('/seo/zhk-flora-aksay.html');
+});

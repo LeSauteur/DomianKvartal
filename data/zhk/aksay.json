@@ -1,0 +1,59 @@
+[
+  {
+    "slug": "flora", "name": "Флора", "publish": true,
+    "developer": "ГК «Доннефтестрой»",
+    "address": "ул. Янтарная, рядом с МЕГА и Аксайским пр.",
+    "status": "есть сданные корпуса и строящаяся очередь",
+    "deadlines": "ближайшая сдача — IV кв. 2027 (литеры 4.1, 4.2); третий квартал комплекса объявлен сданным 03.02.2026",
+    "price": "от 3 000 000 ₽ (публикация застройщика)",
+    "source": "https://доннефтестрой.рф/projects/flora", "verifiedAt": "2026-10-07",
+    "provenance": "owner_supplied_snapshot", "independent_check": "страница доступна; цена от 3 млн и ближайшая сдача IV кв. 2027 подтверждены; отдельная новость 03.02.2026 не проверена"
+  },
+  {
+    "slug": "vishnevyy-sad", "name": "Вишнёвый сад", "publish": true,
+    "developer": "ГК «ЮгСпецСтрой»", "address": "центр Аксая",
+    "status": "UNK", "deadlines": "UNK", "price": "UNK",
+    "source": "https://www.yugspecstroy.ru/kompleksy/", "verifiedAt": "2026-10-07",
+    "provenance": "owner_supplied_snapshot", "independent_check": "страница доступна; карточка Вишнёвого сада в извлечённом тексте не найдена"
+  },
+  {
+    "slug": "samotsvety", "name": "Самоцветы", "publish": true,
+    "developer": "ООО СЗ «СУ-5 Аксай»", "address": "ул. Строителей, 7а и 10/6",
+    "status": "эти дома сданы", "deadlines": "IV кв. 2021 (7а), IV кв. 2022 (10/6)", "price": "UNK",
+    "source": "https://наш.дом.рф/сервисы/каталог-новостроек/объект/40962", "verifiedAt": "2026-10-07",
+    "provenance": "owner_supplied_snapshot", "independent_check": "ЕИСЖС недоступна инструменту чтения; перенесён предоставленный владельцем снимок фактов"
+  },
+  {
+    "slug": "atmosfera", "name": "Атмосфера", "publish": true,
+    "developer": "СЗ «АВА»", "address": "UNK",
+    "status": "корпуса ЕИСЖС 36960 и 36958 сданы", "deadlines": "ввод — 30.08.2021", "price": "UNK",
+    "source": "https://наш.дом.рф/сервисы/каталог-новостроек/объект/36960", "verifiedAt": "2026-10-07",
+    "provenance": "owner_supplied_snapshot", "independent_check": "ЕИСЖС недоступна инструменту чтения; перенесён предоставленный владельцем снимок фактов"
+  },
+  {
+    "slug": "novyy", "name": "Новый Аксай", "publish": true,
+    "developer": "UNK — первичный источник не найден", "address": "UNK",
+    "status": "UNK", "deadlines": "UNK", "price": "UNK", "source": null, "verifiedAt": "2026-10-07",
+    "provenance": "owner_supplied_snapshot", "independent_check": "первичный источник отсутствует"
+  },
+  {
+    "slug": "pridonye", "name": "Придонье", "publish": false,
+    "developer": "ССК", "address": "Аксай", "status": "строится", "deadlines": "UNK", "price": "UNK",
+    "source": "https://sskuban.ru/rostov-na-donu/pridonye", "verifiedAt": "2026-10-07",
+    "provenance": "owner_supplied_snapshot", "independent_check": "официальная страница доступна; сотрудничество агентства не подтверждено"
+  },
+  {
+    "slug": "stolitsyno", "name": "Столицыно", "publish": false,
+    "developer": "ГК «Точно», ООО СЗ «Столицыно»", "address": "Новочеркасское ш. / М-4",
+    "status": "строится", "deadlines": "одна очередь — IV кв. 2026", "price": "от 3 640 000 ₽",
+    "source": "https://zhkstolitsino.ru/", "verifiedAt": "2026-10-07",
+    "provenance": "owner_supplied_snapshot", "independent_check": "официальная страница недоступна инструменту; сотрудничество агентства не подтверждено"
+  },
+  {
+    "slug": "aviator", "name": "Авиатор", "publish": false,
+    "developer": "ООО СЗ «СУ-5 Аксай»", "address": "Аксай, пр. Ленина, 40н (строительный адрес)",
+    "status": "строится", "deadlines": "UNK", "price": "UNK",
+    "source": "https://su5aksay.ru/", "verifiedAt": "2026-10-07",
+    "provenance": "owner_supplied_snapshot", "independent_check": "официальная страница доступна; сотрудничество агентства не подтверждено"
+  }
+]
