@@ -4,6 +4,7 @@ import path from "node:path";
 import process from "node:process";
 import { geographyMismatch } from "./visibility-geo.mjs";
 import { linkGraph } from "./site-pages.mjs";
+import { parseApartmentArea } from './catalog-parser.mjs';
 
 const ROOT = process.cwd();
 const SITE_ORIGIN = "https://domian-161.ru";
@@ -326,14 +327,19 @@ if (exists("data/catalog/registry.json")) {
   const registry = JSON.parse(read("data/catalog/registry.json"));
   const byId = new Map(registry.map((item) => [item.id, item]));
   if (byId.size !== registry.length) report("error", "data/catalog/registry.json", "duplicate property IDs");
-  for (const dir of ["apartments", "houses", "lands", "home"]) {
-    const file = `output/${dir}/new-objects.json`;
+  for (const r of registry.filter(r=>r.type==="apartment")) {
+    const parsed=parseApartmentArea(r.title_raw,r.description_raw);
+    if(r.area_total!==parsed.area_total || JSON.stringify(r.area_conflict)!==JSON.stringify(parsed.area_conflict)) report("error", "data/catalog/registry.json", `apartment total area or conflict evidence differs from source parsing: ${r.id}`);
+  }
+  for (const dir of ["apartments", "houses", "lands", "home", "catalog"]) {
+    const file = dir==="catalog" ? "output/catalog/registry.json" : `output/${dir}/new-objects.json`;
     for (const item of JSON.parse(read(file))) {
       if (!["apartment", "house", "land"].includes(item.type)) continue;
       const source = byId.get(item.id);
       if (!source) report("error", file, `property missing from registry: ${item.id}`);
       else if (source.status === "placeholder") report("error", file, `placeholder present in public feed: ${item.id}`);
       else if (item.price !== source.price) report("error", file, `price differs from registry: ${item.id}`);
+      else if (item.features?.area !== source.area_total) report("error", file, `area differs from registry: ${item.id}`);
     }
   }
 }

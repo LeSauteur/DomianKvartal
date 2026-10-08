@@ -129,6 +129,20 @@ test('city filters preserve unknown locations and expose Rostov and Azov accurat
   await page.locator('[data-filter=city]').selectOption('другое');
   await expect(page.locator('#cards [data-object-id="land_01"]')).toContainText('Азовский р-н');
 });
+test('reviewed apartment areas stay corrected or absent in modal facts and public headings',async({page})=>{
+  for(const [id,correct,wrong] of [[112,null,10],[45,null,15],[59,17.8,13],[62,54.4,13],[91,40.5,10],[95,null,15]]) {
+    await page.goto('/apartments.html?qa=1&object=object_'+id);
+    await expect(page.locator('#modal')).toBeVisible();
+    const facts=page.locator('[data-modal-facts]');
+    if(correct!==null) await expect(facts).toContainText(correct+' м²');
+    await expect(facts).not.toContainText(wrong+' м²');
+    await expect(page.locator('#modalTitle')).not.toContainText(wrong+' м²');
+    await page.goto('/obekt/object_'+id+'.html?qa=1');
+    await expect(page.locator('h1')).not.toContainText(wrong+' м²');
+    if(correct!==null) await expect(page.locator('.visibility-facts')).toContainText(correct+' м²');
+    else await expect(page.locator('.visibility-facts dt').filter({hasText:/^Площадь$/})).toHaveCount(0);
+  }
+});
 test('ZHK forms keep their project attribution and page layouts fit mobile',async({page})=>{
   await page.setViewportSize({width:390,height:844});
   for(const slug of ['flora','vishnevyy-sad','samotsvety','atmosfera','novyy']){

@@ -2,9 +2,10 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parsePrice, parseNumbers, parseLocation } from "./catalog-parser.mjs";
+import { writeGenerated } from './write-generated.mjs';
 export const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = p => JSON.parse(fs.readFileSync(path.join(root, p), "utf8").replace(/^\uFEFF/, ""));
-const write = (p, value) => { fs.mkdirSync(path.dirname(path.join(root,p)), {recursive:true}); fs.writeFileSync(path.join(root,p), typeof value === "string" ? value : JSON.stringify(value, null, 2) + "\n"); };
+const write = (p, value) => writeGenerated(path.join(root,p), typeof value === "string" ? value : JSON.stringify(value, null, 2) + "\n");
 export const csv = value => '"' + String(value ?? "").replaceAll('"','""') + '"';
 const feeds = ["output/apartments/new-objects.json", "output/houses/new-objects.json", "output/lands/new-objects.json", "output/home/new-objects.json"];
 export function buildRegistry() {
@@ -54,8 +55,13 @@ export function buildRegistry() {
   });
   write("data/catalog/registry.json",registry);
   const byId = new Map(registry.map(r=>[r.id,r]));
+  const publicTitle = r => {
+    if(r.type!=="apartment" || !r.area_conflict) return r.title_raw;
+    const clean=r.title_raw.replace(/\s*[·,]?\s*\d+(?:[.,]\d+)?\s*(?:м²|м2|кв\.?\s*м\.?)/giu,'').replace(/\s*[·,]\s*$/u,'').trim();
+    return clean+(r.area_total!==null?' · '+r.area_total+' м²':'');
+  };
   function feedItem(r, old = {}) {
-    return {...old,id:r.id,type:r.type,title:r.title_raw,description:r.description_raw,
+    return {...old,id:r.id,type:r.type,title:publicTitle(r),description:r.description_raw,
       fullDescription:r.description_raw,shortDescription:r.description_raw.slice(0,200),
       price:r.price === null ? null : r.price,price_conflict:r.price_conflict,
       image:r.images[0] || null,cover:r.images[0] || null,images:r.images,
@@ -66,12 +72,13 @@ export function buildRegistry() {
   for (const p of feeds) write(p,snapshot[p].filter(item=>byId.get(item.id)?.status !== "placeholder").map(item=>byId.has(item.id) ? feedItem(byId.get(item.id),item) : item));
   // Public projection; internal evidence remains excluded by Jekyll.
   write("output/catalog/registry.json",registry.filter(r=>r.status!=="placeholder").map(r=>feedItem(r)));
-  const rows = registry.filter(r=>r.status!=="placeholder" && (r.city === null || r.price_conflict || r.photo_folder_mismatch)).map(r=>[
+  const rows = registry.filter(r=>r.status!=="placeholder" && (r.city === null || r.price_conflict || r.photo_folder_mismatch || r.area_conflict)).map(r=>[
     r.id,r.type,r.title_raw,r.price,r.city_suggested,r.city_evidence,
-    [r.city===null?"city_missing":"",r.price_conflict?"price_conflict":"",r.photo_folder_mismatch?"photo_folder_mismatch":""].filter(Boolean).join(", "),
-    "https://domian-161.ru/obekt/" + r.id + ".html"
+    [r.city===null?"city_missing":"",r.price_conflict?"price_conflict":"",r.photo_folder_mismatch?"photo_folder_mismatch":"",r.area_conflict?"area_conflict":""].filter(Boolean).join(", "),
+    "https://domian-161.ru/obekt/" + r.id + ".html",
+    r.area_conflict?.title.join(', '),r.area_conflict?.description.join(', '),r.area_conflict?.evidence.join(' | '),r.area_total
   ].map(csv).join(";"));
-  write("docs/owner/registry-to-verify.csv","id;type;title;price;city_suggested;city_evidence;issue;URL на сайте\n"+rows.join("\n")+"\n");
+  write("docs/owner/registry-to-verify.csv","id;type;title;price;city_suggested;city_evidence;issue;URL на сайте;area_title;area_description;area_evidence;area_selected\n"+rows.join("\n")+"\n");
   return registry;
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

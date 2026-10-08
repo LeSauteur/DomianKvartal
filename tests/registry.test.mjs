@@ -50,6 +50,48 @@ test("price and location rules require evidence",()=>{
   assert.equal(parseLocation("Дом","п. Российский").city_suggested,"Российский");
   assert.match(parseLocation("Дом","п. Российский").city_evidence,/п\. Российский/);
 });
+test('apartment total area prioritizes description, rejects small unconfirmed titles and excludes partial areas',()=>{
+  for(const [title,description,area] of [
+    ['Квартира 50 м²','Общая площадь — 42,5 м²',42.5],
+    ['Квартира 10 м²','Площадь — 40,5 м², кухня — 10 м²',40.5],
+    ['Квартира 13 м²','Квартира:\n- 2 изолированные комнаты, 54,4 м²\n- Кухня 13 м²',54.4],
+    ['Квартира 13 м²','Общая площадь — 17.8 м², жилая — 13 м²',17.8],
+    ['Квартира 15 м²','До центра 15 минут',null],
+    ['Квартира 15 м²','Жилая площадь 20 м², площадь кухни 9 м²',null],
+    ['Квартира 50 м²','Общая площадь 42 м². Общая площадь 43 м²',null],
+    ['Квартира 50 м²','Жилая площадь 20 м², площадь кухни 9 м²',50],
+    ['Квартира','Студия площадью 25 м²',25],
+    ['Квартира 55,1 м² + 6 м² лоджия','',55.1],
+    ['Квартира 35 м². Общая площадь 35 м² Площадь кухни 12.4 м² Жилая площадь 12.6 м²','',35],
+    ['Квартира 40 м²','40 м² общая площадь 8.8 м² площадь кухни',40],
+    ['Квартира 40 м²','40 м² общая площадь 8.8 м² площадь кухни. Общая площадь — 39,8 м²',null],
+    ['Квартира 18 м²','Общая площадь 18 м²',18]
+  ]) assert.equal(nums(title,description).area_total,area,title+': '+description);
+  const conflict=nums('Квартира 10 м²','Площадь — 40,5 м²');
+  assert.deepEqual(conflict.area_conflict.title,[10]);
+  assert.deepEqual(conflict.area_conflict.description,[40.5]);
+  assert.ok(conflict.area_conflict.evidence.includes('Площадь — 40,5 м²'));
+  assert.equal(nums('Квартира 18 м²','Общая площадь 18 м²').area_conflict,null);
+});
+test('reviewed apartment areas and every area conflict appear in the owner CSV and public facts',()=>{
+  const registry=JSON.parse(fs.readFileSync(root+'/data/catalog/registry.json','utf8'));
+  const feed=JSON.parse(fs.readFileSync(root+'/output/catalog/registry.json','utf8'));
+  const csv=fs.readFileSync(root+'/docs/owner/registry-to-verify.csv','utf8');
+  for(const [id,area,wrong] of [[112,null,10],[45,null,15],[59,17.8,13],[62,54.4,13],[91,40.5,10],[95,null,15]]) {
+    const r=registry.find(r=>r.id==='object_'+id), item=feed.find(r=>r.id==='object_'+id);
+    assert.equal(r.area_total,area,r.id);
+    assert.equal(item.features.area,area,r.id);
+    assert.ok(r.area_conflict,r.id);
+    assert.doesNotMatch(item.title,new RegExp('(?:^|[^\\d])'+wrong+' м²'),r.id);
+  }
+  for(const r of registry.filter(r=>r.area_conflict && r.status!=='placeholder')) {
+    // Parse the ID/issue columns without splitting quoted evidence containing semicolons/newlines.
+    const start=csv.indexOf('"'+r.id+'";');
+    assert.ok(start>=0,r.id);
+    const prefix=csv.slice(start).match(/^(?:"(?:[^"]|"")*";){6}"([^"]*)";/s);
+    assert.ok(prefix?.[1].includes('area_conflict'),r.id);
+  }
+});
 test("registry is deterministic, retains conflicting evidence and covers feed IDs",()=>{
   const first=buildRegistry(), bytes=fs.readFileSync(root+"/data/catalog/registry.json","utf8");
   assert.deepEqual(buildRegistry(),first);

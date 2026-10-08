@@ -3,6 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import { root } from './build-registry.mjs';
+import { writeGenerated } from './write-generated.mjs';
 import { publicHtmlFiles, readPage, noindex, canonical, urlFor } from './site-pages.mjs';
 
 export function indexableFiles() {
@@ -42,7 +43,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
       process.exitCode = 1;
     } else console.log('Sitemap is current.');
   } else {
-    fs.writeFileSync(root + '/sitemap.xml', output);
+    writeGenerated(root + '/sitemap.xml', output);
     console.log('Sitemap generated: ' + indexableFiles().length + ' URLs.');
   }
 }

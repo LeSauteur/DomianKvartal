@@ -1735,6 +1735,7 @@
       // Feed images are already site-relative or absolute, unlike folder data.json.
       normalized.images = getCardImages(recent);
       normalized.cover = normalized.images[0];
+      if (recent.features && Object.prototype.hasOwnProperty.call(recent.features, 'area')) normalized.meta.area = recent.features.area;
       return items.concat(normalized);
     });
   }
@@ -1936,11 +1937,12 @@
     if (features.floor && features.totalFloors && features.floor > features.totalFloors) features.floor = null;
     var sourceText = [item && item.title, item && item.shortDescription, item && item.description].filter(Boolean).join(" ");
     var areaMatch = sourceText.match(/(\d+(?:[.,]\d+)?)\s*(?:кв\.?\s*м|м²|м2)\b/iu);
+    var area = Object.prototype.hasOwnProperty.call(features, 'area') ? boundedNumber(features.area, 1, 100000, false) : areaMatch ? boundedNumber(areaMatch[1], 1, 100000, false) : null;
     var landMatch = sourceText.match(/(\d+(?:[.,]\d+)?)\s*сот(?:к[аи])?/iu);
     var charsHtml = renderCardChars([
       hasCardValue(features.rooms) ? String(features.rooms) + " комн." : "",
       hasCardValue(features.floor) && hasCardValue(features.totalFloors) ? String(features.floor) + "/" + String(features.totalFloors) + " эт." : "",
-      areaMatch && areaMatch[1] ? areaMatch[1].replace(",", ".") + " м²" : "",
+      hasCardValue(area) ? String(area) + " м²" : "",
       landMatch && landMatch[1] ? landMatch[1].replace(",", ".") + " сот." : "",
       hasCardValue(item && item.city) ? (item.city === "другое" ? item.district || "Другой город или район" : String(item.city)) : "",
       hasCardValue(item && item.district) ? String(item.district) : ""
@@ -2183,4 +2185,3 @@
     });
   }
 })();
-

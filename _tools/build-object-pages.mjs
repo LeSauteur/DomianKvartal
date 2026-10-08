@@ -5,6 +5,7 @@ import { execFileSync } from "node:child_process";
 import { root } from "./build-registry.mjs";
 import { publicPage, esc, origin, category, money, breadcrumbs, schema, leadForm } from "./public-page.mjs";
 import { buildSitemap } from "./build-sitemap.mjs";
+import { writeGenerated } from './write-generated.mjs';
 export function objectHeading(r) {
   const name = {apartment:"Квартира",house:"Дом",land:"Участок"}[r.type];
   const facts = [r.rooms===null?null:r.rooms+" комн.",r.area_total===null?null:r.area_total+" м²",r.type==="land"&&r.lot_area_sotok!==null?r.lot_area_sotok+" сот.":null,r.type==="apartment"&&r.floor!==null?"этаж "+r.floor:null].filter(Boolean);
@@ -41,7 +42,7 @@ export function buildObjectPages() {
         if (mainPages.has(file)) throw new Error("Refusing to remove an existing main page: "+file);
         fs.unlinkSync(root+"/"+file); // Only placeholder pages introduced in this PR.
       }
-    } else fs.writeFileSync(root+"/"+file,objectPage(r,duplicateTitles));
+    } else writeGenerated(root+"/"+file,objectPage(r,duplicateTitles));
   }
   for (const type of ["apartment","house","land"]) {
     const file = category[type][1], name = category[type][0];
@@ -51,9 +52,9 @@ export function buildObjectPages() {
     let source = fs.readFileSync(root+"/"+file,"utf8");
     source = /<!-- static-object-links:start -->/.test(source) ? source.replace(/<!-- static-object-links:start -->[\s\S]*?<!-- static-object-links:end -->/,block) : source.replace('</main>',block+'\n</main>');
     if(!source.includes("/assets/css/visibility.css")) source=source.replace('</head>','<link rel="stylesheet" href="/assets/css/visibility.css">\n</head>');
-    fs.writeFileSync(root+"/"+file,source);
+    writeGenerated(root+"/"+file,source);
   }
-  fs.writeFileSync(root+"/sitemap.xml",buildSitemap());
+  writeGenerated(root+"/sitemap.xml",buildSitemap());
   console.log("Object pages:",registry.filter(r=>r.status!=="placeholder").length,"; indexed:",registry.filter(eligible).length);
 }
 if (process.argv[1] && path.resolve(process.argv[1])===fileURLToPath(import.meta.url)) buildObjectPages();
