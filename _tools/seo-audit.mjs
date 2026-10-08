@@ -2,6 +2,9 @@ import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import process from "node:process";
+import { geographyMismatch } from "./visibility-geo.mjs";
+import { linkGraph } from "./site-pages.mjs";
+import { parseApartmentArea } from './catalog-parser.mjs';
 
 const ROOT = process.cwd();
 const SITE_ORIGIN = "https://domian-161.ru";
@@ -111,18 +114,29 @@ function jsonLdNodes(value) {
 const htmlFiles = trackedFiles("*.html").filter(isPublishable);
 const documentFiles = htmlFiles.filter((file) => !VERIFICATION_FILES.has(file));
 const htmlCache = new Map(documentFiles.map((file) => [file, read(file)]));
+const geographyRegistry = exists("data/catalog/registry.json") ? JSON.parse(read("data/catalog/registry.json")) : [];
+const placeholderIds = geographyRegistry.filter(r=>r.status==="placeholder").map(r=>r.id);
 const idCache = new Map();
 const titles = new Map();
 const canonicals = new Map();
 
 for (const file of documentFiles) {
   const html = htmlCache.get(file);
+  for (const id of placeholderIds) {
+    if (file === "obekt/"+id+".html" || new RegExp("(?:/obekt/|object=|data-registry-id=[\"'])"+id+"(?:\\.html|[\"'&])").test(html)) {
+      report("error", file, "placeholder property is publicly linked or has a generated page: "+id);
+    }
+  }
+  if (geographyMismatch(html, geographyRegistry)) report("error", file, "Aksay-only heading with more than 50% static Rostov properties");
   const lower = html.toLowerCase();
   const noindex = /<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/iu.test(html);
   const titleMatch = html.match(/<title\b[^>]*>([\s\S]*?)<\/title>/iu);
   const descriptionMatch = html.match(/<meta\b[^>]*name=["']description["'][^>]*content=(["'])(.*?)\1/iu);
   const canonicalMatches = [...html.matchAll(/<link\b[^>]*rel=(["'])canonical\1[^>]*>/giu)];
   const h1Count = (html.match(/<h1\b/giu) || []).length;
+  if (/mc\.yandex\.ru|\bym\s*\([^)]*["']init["']/iu.test(html)) {
+    report("error", file, "inline analytics bypasses the single main.js initialization path");
+  }
   const ids = idsIn(html);
   idCache.set(file, new Set(ids));
 
@@ -158,6 +172,21 @@ for (const file of documentFiles) {
   }
 
   const duplicateIds = ids.filter((id, index) => ids.indexOf(id) !== index);
+  if (file.startsWith("obekt/")) {
+    const h1 = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/iu)?.[1] || "";
+    for (const text of [titleMatch?.[1]||"",descriptionMatch?.[2]||"",h1]) {
+      if (/(?:object|house|land)_\d+/u.test(text)) report("error", file, "technical object ID appears in visible metadata");
+    }
+    for (const match of html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/giu)) {
+      try {
+        const node=JSON.parse(match[1]);
+        if(node["@type"]==="BreadcrumbList" && node.itemListElement.at(-1)?.name!==stripTags(h1)) report("error", file, "last breadcrumb name differs from H1");
+      } catch { /* Invalid JSON is reported below. */ }
+    }
+    const canonical = attr(canonicalMatches[0]?.[0] || "", "href");
+    if (canonical !== SITE_ORIGIN + "/" + file) report("error", file, "object page canonical is not its own URL");
+    if (/\b(?:null|undefined|NaN)\b/u.test(stripTags(html.replace(/<script\b[\s\S]*?<\/script>/giu,"")))) report("error", file, "invalid placeholder in object text");
+  }
   for (const id of new Set(duplicateIds)) report("error", file, `duplicate id: #${id}`);
 
   for (const match of html.matchAll(/<script\b[^>]*type=(["'])application\/ld\+json\1[^>]*>([\s\S]*?)<\/script>/giu)) {
@@ -223,6 +252,14 @@ for (const file of documentFiles) {
   }
 
   if (html.includes("data-lead-form")) {
+    for (const match of html.matchAll(/<form\b[^>]*data-lead-form[^>]*>[\s\S]*?<\/form>/giu)) {
+      const form = match[0];
+      const checkbox = form.match(/<input\b[^>]*name=["']privacy_consent["'][^>]*>/iu)?.[0] || "";
+      if (!/type=["']checkbox["']/iu.test(checkbox) || !/\brequired(?:\s|>|=)/iu.test(checkbox) || /\bchecked(?:\s|>|=)/iu.test(checkbox)
+          || !/href=["']\/personal-data-consent\.html["']/iu.test(form) || !/href=["']\/privacy\.html["']/iu.test(form)) {
+        report("error", file, "lead form needs a separate required unchecked consent and both legal links");
+      }
+    }
     for (const resource of ["assets/js/lead-config.js", "assets/js/main.js", "assets/js/form-handler.js"]) {
       const relative = slash(path.relative(path.dirname(file), resource));
       const variants = new Set([relative, `./${relative}`, `/${resource}`]);
@@ -232,7 +269,7 @@ for (const file of documentFiles) {
     }
   }
 
-  if (lower.includes("aggregateRating".toLowerCase()) || lower.includes('"@type":"offer"') || lower.includes('"@type": "offer"')) {
+  if (!file.startsWith("obekt/") && (lower.includes("aggregateRating".toLowerCase()) || lower.includes('"@type":"offer"') || lower.includes('"@type": "offer"'))) {
     report("warning", file, "review potentially sensitive rating/Offer structured data manually");
   }
 }
@@ -273,12 +310,39 @@ for (const value of sitemapUrls) {
     continue;
   }
   const html = read(file);
+  const ownCanonical = attr((html.match(/<link\b[^>]*rel=["']canonical["'][^>]*>/iu) || [""])[0], "href");
+  if (ownCanonical !== value) report("error", "sitemap.xml", "non-self-canonical page is present: " + value);
   if (/<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/iu.test(html)) {
     report("error", "sitemap.xml", `noindex page is present in sitemap: ${value}`);
   }
 }
 
 const robots = read("robots.txt");
+const discovery = linkGraph(documentFiles);
+for (const file of sitemapFiles) {
+  if (!discovery.incoming.get(file)) report("error", file, "sitemap page has no incoming static internal link");
+  if (!discovery.reachable.has(file)) report("error", file, "sitemap page is unreachable from the homepage");
+}
+if (exists("data/catalog/registry.json")) {
+  const registry = JSON.parse(read("data/catalog/registry.json"));
+  const byId = new Map(registry.map((item) => [item.id, item]));
+  if (byId.size !== registry.length) report("error", "data/catalog/registry.json", "duplicate property IDs");
+  for (const r of registry.filter(r=>r.type==="apartment")) {
+    const parsed=parseApartmentArea(r.title_raw,r.description_raw);
+    if(r.area_total!==parsed.area_total || JSON.stringify(r.area_conflict)!==JSON.stringify(parsed.area_conflict)) report("error", "data/catalog/registry.json", `apartment total area or conflict evidence differs from source parsing: ${r.id}`);
+  }
+  for (const dir of ["apartments", "houses", "lands", "home", "catalog"]) {
+    const file = dir==="catalog" ? "output/catalog/registry.json" : `output/${dir}/new-objects.json`;
+    for (const item of JSON.parse(read(file))) {
+      if (!["apartment", "house", "land"].includes(item.type)) continue;
+      const source = byId.get(item.id);
+      if (!source) report("error", file, `property missing from registry: ${item.id}`);
+      else if (source.status === "placeholder") report("error", file, `placeholder present in public feed: ${item.id}`);
+      else if (item.price !== source.price) report("error", file, `price differs from registry: ${item.id}`);
+      else if (item.features?.area !== source.area_total) report("error", file, `area differs from registry: ${item.id}`);
+    }
+  }
+}
 if (!/^User-agent:\s*\*/imu.test(robots)) report("error", "robots.txt", "missing User-agent: *");
 if (!/^Sitemap:\s*https:\/\/domian-161\.ru\/sitemap\.xml\s*$/imu.test(robots)) {
   report("error", "robots.txt", "missing canonical sitemap directive");

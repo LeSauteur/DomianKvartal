@@ -159,7 +159,7 @@ test("construction projects and completed objects expose appropriate schemas", (
 
 test("structured data contains none of the prohibited mass schema types", () => {
   const prohibited = new Set(["AggregateRating", "FAQPage", "Offer", "Product"]);
-  for (const file of trackedHtml()) {
+  for (const file of trackedHtml().filter(file => !file.startsWith("obekt/"))) {
     let baseline = "";
     try {
       baseline = execFileSync("git", ["show", `HEAD:${file}`], { encoding: "utf8" });

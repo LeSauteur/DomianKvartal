@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v7
         with:
           node-version: 22
@@ -21,4 +23,4 @@ jobs:
       - run: npm test
       - run: node _tools/sync-public-header.mjs --check
       - run: npm run seo:audit
-      - run: npx playwright test tests/service-pages.spec.js tests/public-header.spec.js tests/lead-form.spec.js tests/reanimation.spec.js
+      - run: npx playwright test tests/service-pages.spec.js tests/public-header.spec.js tests/lead-form.spec.js tests/reanimation.spec.js tests/visibility.spec.js

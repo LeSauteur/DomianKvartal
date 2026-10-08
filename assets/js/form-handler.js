@@ -278,6 +278,12 @@
 
   function fillPayloadFields(form) {
     var context = getLeadContext();
+    var formSource = form.getAttribute('data-source-cta') || '';
+    if (formSource === 'object_page' || formSource.indexOf('zhk_') === 0) {
+      context = { lead_type:readFormContext(form, 'lead_type') || 'buy', source_cta:formSource,
+        object_id:readFormContext(form, 'object_id'), object_type:readFormContext(form, 'object_type'),
+        object_title:readFormContext(form, 'object_title'), object_price:readFormContext(form, 'object_price'), object_url:readFormContext(form, 'object_url') };
+    }
     var utm = collectUtm();
     var attribution = window.domianAttribution ? window.domianAttribution.get() : {};
     if (!form.dataset.leadId) form.dataset.leadId = window.domianAttribution ? window.domianAttribution.createId() : Date.now().toString(36);

@@ -1,0 +1,21 @@
+.visibility-intro { padding-block: 36px; max-width: 1120px; }
+.visibility-page h1 { font-size: clamp(1.7rem, 3vw, 2.5rem); line-height: 1.2; overflow-wrap: anywhere; }
+.visibility-breadcrumbs { margin-block: 20px; font-size: .95rem; }
+.visibility-breadcrumbs a { text-decoration: underline; }
+.visibility-facts { display: grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap: 16px; margin-block: 24px; }
+.visibility-facts div { padding: 16px; border: 1px solid #aaa8; border-radius: 12px; }
+.visibility-facts dt { font-size: .9rem; opacity: .85; }
+.visibility-facts dd { margin: 6px 0 0; font-weight: 600; overflow-wrap: anywhere; }
+.visibility-gallery { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(260px,100%),1fr)); gap: 12px; margin-block: 24px; }
+.visibility-gallery img { width: 100%; height: 280px; object-fit: cover; border-radius: 12px; }
+.visibility-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-block: 24px; }
+.visibility-static-links { padding: 24px; margin: 24px auto; max-width: 1200px; }
+.visibility-static-links ul { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(270px,100%),1fr)); gap: 12px; padding-left: 20px; }
+.visibility-static-links a { overflow-wrap: anywhere; text-decoration: underline; }
+.visibility-notice { border-left: 4px solid #b19045; padding: 16px; margin-block: 24px; }
+.visibility-page .form-container { max-width: 680px; }
+.visibility-page .form-container p { margin-block: 16px; }
+.preserved-zhk-content { margin-block: 32px; min-width: 0; }
+.preserved-zhk-content img { display: block; width: 100%; max-width: 100%; height: auto; min-width: 0; }
+.preserved-zhk-content .container { width: 100%; padding-inline: 0; }
+.preserved-zhk-content .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }

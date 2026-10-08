@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import process from "node:process";
 import { fileURLToPath } from "node:url";
+import { publicHtmlFiles } from "./site-pages.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const check = process.argv.includes("--check");
@@ -9,13 +10,7 @@ const maxUrl = "https://max.ru/u/f9LHodD0cOKImT5sxxh2fLN4YFJ-paNFCiI79MwgO-LJJZ8
 const telegramUrl = "https://t.me/httpsmealieva_rieltor";
 
 function publicPaths() {
-  const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
-  const paths = [...sitemap.matchAll(/<loc>https:\/\/domian-161\.ru\/(.*?)<\/loc>/g)]
-    .map((match) => match[1] || "index.html");
-  paths.push("seo/zhk-flora-aksay.html");
-  const unique = [...new Set(paths)];
-  if (!unique.includes("index.html") || unique.length < 95) throw new Error("Public sitemap is unexpectedly incomplete.");
-  return unique;
+  return publicHtmlFiles();
 }
 
 function fileFor(publicPath) {
@@ -59,7 +54,7 @@ function logoMarkup() {
       </svg>`;
 }
 
-function headerMarkup(file) {
+export function headerMarkup(file) {
   const cluster = clusterFor(file);
   const servicesActive = ["rent", "commercial", "construction"].includes(cluster);
   const companyActive = cluster === "team";
@@ -149,7 +144,7 @@ function propertyNavMarkup(file, mode) {
 <!-- unified-property-nav:end -->`;
 }
 
-function propertyDiscoveryMarkup(file) {
+export function propertyDiscoveryMarkup(file) {
   const mode = propertyNavMode(file);
   const nav = propertyNavMarkup(file, mode);
   const searchTarget = internalSearchTargets.get(file);
@@ -254,6 +249,7 @@ function normalizeHeaderBoundary(source) {
   return source.replace(/(<!-- unified-public-header:end -->\r?\n)[ \t]*\r?\n[ \t]*(?=<section\b)/, "$1\n");
 }
 
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
 let changed = 0;
 for (const publicPath of publicPaths()) {
   const file = fileFor(publicPath);
@@ -273,3 +269,5 @@ if (check && changed) {
   process.exit(1);
 }
 console.log(check ? "Public header sync is current." : `Unified public header synced: ${changed} page(s).`);
+
+}

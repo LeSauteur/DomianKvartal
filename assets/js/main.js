@@ -40,10 +40,43 @@
 
   window.DOMIAN_ANALYTICS_DISABLED = window.DOMIAN_ANALYTICS_DISABLED === true || isAnalyticsDisabled();
 
+  // Owner-controlled rollout: the production default preserves existing behavior.
+  window.DOMIAN_CONSENT_MODE = window.DOMIAN_CONSENT_MODE || "off";
+  var consentMode = window.DOMIAN_CONSENT_MODE === "on";
+  var consentStorageKey = "domian-cookie-choice-v1";
+  var consentChoice = null;
+  try {
+    var savedConsent = window.localStorage.getItem(consentStorageKey);
+    if (savedConsent === "accepted" || savedConsent === "necessary") consentChoice = savedConsent;
+  } catch (_error) { /* The current-page choice still works when storage is unavailable. */ }
+
+  function analyticsConsentGranted() {
+    return !consentMode || consentChoice === "accepted";
+  }
+
+  function initCookieConsent() {
+    if (!consentMode || consentChoice || document.getElementById("domian-cookie-banner")) return;
+    var banner = document.createElement("section");
+    banner.id = "domian-cookie-banner";
+    banner.className = "domian-cookie-banner";
+    banner.setAttribute("aria-label", "Настройки cookie");
+    banner.innerHTML = '<p>Мы используем необходимые хранилища для работы сайта. С вашего согласия подключим Яндекс Метрику для анализа посещений. <a href="/cookies.html">Политика cookie</a></p>'
+      + '<div class="domian-cookie-actions"><button type="button" data-cookie-choice="accepted">Принять</button><button type="button" data-cookie-choice="necessary">Только необходимые</button></div>';
+    banner.addEventListener("click", function (event) {
+      var button = event.target.closest("[data-cookie-choice]");
+      if (!button) return;
+      consentChoice = button.getAttribute("data-cookie-choice");
+      try { window.localStorage.setItem(consentStorageKey, consentChoice); } catch (_error) {}
+      banner.remove();
+      if (consentChoice === "accepted") ensureMetrika();
+    });
+    document.body.appendChild(banner);
+  }
+
   function ensureMetrika() {
     var script;
 
-    if (window.DOMIAN_ANALYTICS_DISABLED) return;
+    if (window.DOMIAN_ANALYTICS_DISABLED || !analyticsConsentGranted()) return;
     if (typeof window.ym === "function") return;
 
     window.ym = function () {
@@ -66,9 +99,12 @@
       accurateTrackBounce: true,
       trackLinks: true
     });
+    if (attribution) captureMetrikaClientId();
   }
 
   ensureMetrika();
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initCookieConsent);
+  else initCookieConsent();
 
   function persistUtmAttribution() {
     var params = new URLSearchParams(window.location.search || "");
@@ -114,12 +150,15 @@
   function saveAttribution() { try { sessionStorage.setItem(attributionKey, JSON.stringify(attribution)); } catch (_) {} }
   saveAttribution();
   window.domianAttribution = { get:function () { return Object.assign({}, attribution); }, createId:createAnonymousId, cleanUrl:cleanAttributionUrl };
-  if (!window.DOMIAN_ANALYTICS_DISABLED && typeof window.ym === 'function') {
-    window.ym(METRIKA_ID, 'getClientID', function (id) {
-      if (/^\d{1,32}$/.test(String(id))) { attribution.metrika_client_id = String(id); saveAttribution(); }
-    });
+  function captureMetrikaClientId() {
+    if (!window.DOMIAN_ANALYTICS_DISABLED && analyticsConsentGranted() && typeof window.ym === 'function') {
+      window.ym(METRIKA_ID, 'getClientID', function (id) {
+        if (/^\d{1,32}$/.test(String(id))) { attribution.metrika_client_id = String(id); saveAttribution(); }
+      });
+    }
   }
-  // Carry explicit QA mode to internal pages before their inline counter runs.
+  captureMetrikaClientId();
+  // Carry explicit QA mode to internal pages before their analytics initialization.
   document.addEventListener('click', function (event) {
     if (!qaSession) return;
     var link = event.target.closest && event.target.closest('a[href]');
@@ -174,7 +213,7 @@
       if (typeof window.DOMIAN_ANALYTICS_TEST_HOOK === "function") {
         window.DOMIAN_ANALYTICS_TEST_HOOK(goal, safeParams);
       }
-      if (window.DOMIAN_ANALYTICS_DISABLED) { if (callback) callback(); return; }
+      if (window.DOMIAN_ANALYTICS_DISABLED || !analyticsConsentGranted()) { if (callback) callback(); return; }
       if (typeof window.ym === "function") {
         window.ym(window.DOMIAN_METRIKA_ID || METRIKA_ID, "reachGoal", goal, safeParams, callback);
       }
@@ -881,6 +920,7 @@
       var actions = qs('[data-modal-actions]', panel);
       if (!actions) { actions = document.createElement('div'); actions.className = 'hero-actions'; actions.setAttribute('data-modal-actions', ''); panel.insertBefore(actions, images); }
       actions.innerHTML = '<a class="btn" href="/#lead-form-section" data-lead-type="buy" data-source-cta="object_detail" data-object-id="' + escapeHtml(item.id) + '" data-object-type="' + escapeHtml(item.objectType) + '" data-object-title="' + escapeHtml(item.title) + '" data-object-price="' + escapeHtml(meta.price) + '" data-object-url="' + escapeHtml(propertyUrl(item)) + '">Заявка по объекту</a><a class="btn secondary" href="tel:+79536091122">Позвонить</a><a class="btn secondary" href="' + escapeHtml(propertyUrl(item)) + '" data-object-permalink>Ссылка на объект</a>';
+      if (/^(object|house|land)_\d+$/.test(item.id || '')) actions.innerHTML += '<a class="btn secondary" href="/obekt/' + escapeHtml(item.id) + '.html" data-object-page>Открыть страницу объекта</a>';
       modal.style.display = 'flex';
       document.body.classList.add('modal-open');
       if (!inertNodes.length) Array.prototype.forEach.call(document.body.children, function (node) {
@@ -1241,7 +1281,8 @@
       hasCardValue(meta.area) ? String(meta.area) + " м²" : "",
       hasCardValue(meta.houseArea) ? "дом " + String(meta.houseArea) + " м²" : "",
       hasCardValue(meta.landArea) ? "участок " + String(meta.landArea) + " сот." : "",
-      hasCardValue(meta.floor) ? String(meta.floor) + " эт." : ""
+      hasCardValue(meta.floor) ? String(meta.floor) + " эт." : "",
+      item.city === "другое" ? (item.district || "Другой город или район") : (item.city || "")
     ]);
     var detailsHtml = renderCardChars(item.cardDetails || []);
 
@@ -1255,6 +1296,7 @@
       '<div class="property-card__actions">',
       '<a class="btn property-card__cta" href="' + escapeHtml(sectionLink) + '"' + linkAttrs + '>' + escapeHtml(item.ctaLabel || "Подробнее") + '</a>',
       '<a class="btn property-card__phone" href="tel:+79536091122">Позвонить</a>',
+      /^(object|house|land)_\d+$/.test(item.id || '') ? '<a class="btn secondary property-card__page" href="/obekt/' + escapeHtml(item.id) + '.html">Страница объекта</a>' : '',
       "</div>",
       '</div>'
     ].join("");
@@ -1298,14 +1340,15 @@
       ]
     };
 
-    return templates[type] || [];
+    var city = '<label>Город<select data-filter="city"><option value="">Все города</option><option value="Аксай">Аксай</option><option value="Аксайский район">Аксайский район</option><option value="Ростов-на-Дону">Ростов-на-Дону</option><option value="другое">Другой город или район</option><option value="unknown">Город не указан</option></select></label>';
+    return (type === 'newbuilds' ? [] : [city]).concat(templates[type] || []);
   }
 
   function parseFilters(container) {
     var values = {};
     qsa("[data-filter]", container).forEach(function (input) {
       var key = input.getAttribute("data-filter");
-      values[key] = key === "query" || key === "sort" ? normalizeText(input.value) : toNumber(input.value);
+      values[key] = key === "query" || key === "sort" || key === "city" ? normalizeText(input.value) : toNumber(input.value);
     });
     return values;
   }
@@ -1313,6 +1356,7 @@
   function applyFilters(items, filters, type) {
     var filtered = items.filter(function (item) {
       var meta = item.meta;
+      if (filters.city && (item.city || "unknown") !== filters.city) return false;
 
       if (filters.priceMin !== null && (meta.price === null || meta.price < filters.priceMin)) return false;
       if (filters.priceMax !== null && (meta.price === null || meta.price > filters.priceMax)) return false;
@@ -1647,39 +1691,20 @@
     });
   }
 
+  function aksayFirst(item) { return ['Аксай', 'Аксайский район'].includes(item.city) ? 1 : 0; }
+
   function loadCategoryData(type) {
-    if (type === "apartments") {
-      return fetchJson("objects/index.json").then(function (ids) {
-        var list = ids.map(function (id) {
-          return { id: id, path: "objects/" + id, title: id, cover: null };
-        });
-        return Promise.all(list.map(function (item, idx) {
-          return fetchJson(item.path + "/data.json").then(function (data) {
-            return normalizeItem(type, item, data, idx);
-          });
-        }));
-      });
-    }
-
-    if (type === "houses") {
-      return fetchJson("output/houses/index.json").then(function (items) {
-        return Promise.all(items.map(function (item, idx) {
-          return fetchJson("output/" + item.path + "/data.json").then(function (data) {
-            return normalizeItem(type, item, data, idx);
-          });
-        }));
-      });
-    }
-
-    if (type === "lands") {
-      return fetchJson("lands/index.json").then(function (items) {
-        return Promise.all(items.map(function (item, idx) {
-          return fetchJson(item.path + "/data.json").then(function (data) {
-            return normalizeItem(type, item, data, idx);
-          });
-        }));
-      });
-    }
+    var registryType = {apartments:'apartment',houses:'house',lands:'land'}[type];
+    if (registryType) return fetchJson('/output/catalog/registry.json').then(function (records) {
+      return records.filter(function (r) { return r.type === registryType && (!r.status || r.status === 'active'); }).map(function (r) {
+        var f = r.features || {};
+        var localImages = r.images.map(function (image) { return image.replace(/^https:\/\/domian-161\.ru(?=\/)/, ''); });
+        return { id:r.id, objectType:type, title:r.title, description:r.fullDescription || '',
+          city:r.city, district:r.district, settlement:r.settlement, address:r.address,
+          images:localImages, cover:localImages[0] || '', sectionLink:type+'.html',
+          meta:{price:r.price,rooms:f.rooms,area:f.area,houseArea:type==='houses'?f.area:null,landArea:f.landArea,floor:f.floor,floors:f.totalFloors} };
+      }).sort(function (a,b) { return aksayFirst(b) - aksayFirst(a); });
+    });
 
     return fetchJson("output/newbuilds/newbuilds-v2-merged.json")
       .then(function (items) {
@@ -1703,13 +1728,14 @@
     return Promise.all(['output/' + type + '/new-objects.json', 'output/home/new-objects.json'].map(function (url) {
       return fetchJson(url).catch(function () { return []; });
     })).then(function (feeds) {
-      var recent = [].concat.apply([], feeds).find(function (item) { return item.id === requestedId && item.type === feedType; });
+      var recent = [].concat.apply([], feeds).find(function (item) { return item.id === requestedId && item.type === feedType && item.status !== 'placeholder' && !item.is_placeholder; });
       if (!recent) return items;
       var data = Object.assign({}, recent, {description:recent.description || recent.shortDescription || ''});
       var normalized = normalizeItem(type, {id:recent.id, path:type + '/' + recent.id}, data, items.length);
       // Feed images are already site-relative or absolute, unlike folder data.json.
       normalized.images = getCardImages(recent);
       normalized.cover = normalized.images[0];
+      if (recent.features && Object.prototype.hasOwnProperty.call(recent.features, 'area')) normalized.meta.area = recent.features.area;
       return items.concat(normalized);
     });
   }
@@ -1911,13 +1937,14 @@
     if (features.floor && features.totalFloors && features.floor > features.totalFloors) features.floor = null;
     var sourceText = [item && item.title, item && item.shortDescription, item && item.description].filter(Boolean).join(" ");
     var areaMatch = sourceText.match(/(\d+(?:[.,]\d+)?)\s*(?:кв\.?\s*м|м²|м2)\b/iu);
+    var area = Object.prototype.hasOwnProperty.call(features, 'area') ? boundedNumber(features.area, 1, 100000, false) : areaMatch ? boundedNumber(areaMatch[1], 1, 100000, false) : null;
     var landMatch = sourceText.match(/(\d+(?:[.,]\d+)?)\s*сот(?:к[аи])?/iu);
     var charsHtml = renderCardChars([
       hasCardValue(features.rooms) ? String(features.rooms) + " комн." : "",
       hasCardValue(features.floor) && hasCardValue(features.totalFloors) ? String(features.floor) + "/" + String(features.totalFloors) + " эт." : "",
-      areaMatch && areaMatch[1] ? areaMatch[1].replace(",", ".") + " м²" : "",
+      hasCardValue(area) ? String(area) + " м²" : "",
       landMatch && landMatch[1] ? landMatch[1].replace(",", ".") + " сот." : "",
-      hasCardValue(item && item.city) ? String(item.city) : "",
+      hasCardValue(item && item.city) ? (item.city === "другое" ? item.district || "Другой город или район" : String(item.city)) : "",
       hasCardValue(item && item.district) ? String(item.district) : ""
     ]);
     var detailsHref = {
@@ -1958,6 +1985,7 @@
           container.innerHTML = '<p class="loading-state">Новые объекты пока не добавлены.</p>';
           return;
         }
+        items = items.filter(function (item) { return item.status !== 'placeholder' && !item.is_placeholder; });
         container.innerHTML = items.slice(0, 8).map(renderNewObjectCard).join("");
         bindPropertyGalleryFallback(container);
       })
@@ -1992,7 +2020,8 @@
           container.innerHTML = '<p class="loading-state">Новые объекты пока не добавлены.</p>';
           return;
         }
-        container.innerHTML = items.slice(0, 10).map(renderNewObjectCard).join("");
+        items = items.filter(function (item) { return item.status !== 'placeholder' && !item.is_placeholder; });
+        container.innerHTML = items.slice().sort(function (a,b) { return aksayFirst(b) - aksayFirst(a); }).slice(0, 10).map(renderNewObjectCard).join("");
         bindPropertyGalleryFallback(container);
       })
       .catch(function (error) {
@@ -2156,5 +2185,3 @@
     });
   }
 })();
-
-

@@ -4,6 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import test from "node:test";
 import vm from "node:vm";
+import { publicHtmlFiles } from '../_tools/site-pages.mjs';
 
 const root = path.resolve(import.meta.dirname, "..");
 const maxDirectUrl = "https://max.ru/u/f9LHodD0cOKImT5sxxh2fLN4YFJ-paNFCiI79MwgO-LJJZ8oHXX5TN007y4";
@@ -65,11 +66,34 @@ function getAnchors(source) {
 const htmlFiles = collectFiles(root, new Set([".html"]));
 const publicCodeFiles = collectFiles(root, new Set([".html", ".js", ".json"]));
 
+test('every public lead form, including objects and ZHK, has a separate unchecked consent and policy link', () => {
+  const seen = new Set();
+  for (const file of publicHtmlFiles()) {
+    const html = fs.readFileSync(path.join(root,file),'utf8');
+    for (const match of html.matchAll(/<form\b[^>]*data-lead-form[^>]*>[\s\S]*?<\/form>/gi)) {
+      const form=match[0];
+      seen.add(file);
+      const inputs=[...form.matchAll(/<input\b[^>]*name=["']privacy_consent["'][^>]*>/gi)];
+      assert.equal(inputs.length,1,file);
+      const input=inputs[0][0], id=input.match(/\bid=["']([^"']+)["']/i)?.[1];
+      assert.match(input,/type=["']checkbox["']/i,file);
+      assert.match(input,/\brequired(?:\s|>|=)/i,file);
+      assert.doesNotMatch(input,/\bchecked(?:\s|>|=)/i,file);
+      const wrappedByLabel=[...form.matchAll(/<label\b[^>]*>([\s\S]*?)<\/label>/gi)].some(label=>label[1].includes(input));
+      assert.ok((id && form.includes('for="'+id+'"')) || wrappedByLabel,file);
+      assert.match(form,/href=["']\/personal-data-consent\.html["']/i,file);
+      assert.match(form,/href=["']\/privacy\.html["']/i,file);
+    }
+  }
+  assert.equal([...seen].filter(f=>f.startsWith('obekt/')).length,JSON.parse(fs.readFileSync(path.join(root,'data/catalog/registry.json'),'utf8')).filter(r=>r.status!=='placeholder').length);
+  assert.equal([...seen].filter(f=>f.startsWith('seo/zhk-')).length,JSON.parse(fs.readFileSync(path.join(root,'data/zhk/aksay.json'),'utf8')).filter(r=>r.publish).length);
+});
+
 test("production lead forms include the main form and every construction landing page", () => {
   const leadForms = htmlFiles.filter((file) => /<form\b[^>]*\bdata-lead-form\b/i.test(fs.readFileSync(file, "utf8")));
   const relative = leadForms.map((file) => path.relative(root, file).replaceAll("\\", "/")).sort();
 
-  assert.equal(relative.length, 43);
+  assert.equal(relative.length, 43 + JSON.parse(fs.readFileSync(path.join(root, 'data/catalog/registry.json'), 'utf8')).filter(r=>r.status!=='placeholder').length + (fs.existsSync(path.join(root, 'data/zhk/aksay.json')) ? JSON.parse(fs.readFileSync(path.join(root, 'data/zhk/aksay.json'), 'utf8')).filter(r => r.publish).length : 0));
   assert.ok(relative.includes("commercial.html"));
   assert.ok(relative.includes("rent.html"));
   assert.ok(relative.includes("index-preview.html"));
