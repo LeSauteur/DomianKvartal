@@ -16,6 +16,47 @@ test('production counter initializes exactly once through main.js, without live 
   await page.addScriptTag({url:'https://domian-161.ru/assets/js/main.js'});
   expect(await page.evaluate(()=>Array.from(window.ym.a).filter(a=>a[1]==='init').length)).toBe(1);
   expect(await page.locator('script[src*="mc.yandex.ru/metrika/tag.js"]').count()).toBe(1);
+  expect(await page.evaluate(()=>window.DOMIAN_CONSENT_MODE)).toBe('off');
+  await expect(page.locator('#domian-cookie-banner')).toHaveCount(0);
+});
+
+test('consent on blocks analytics until acceptance and remembers acceptance across pages',async({page})=>{
+  await serveProductionLocally(page);
+  await page.addInitScript(()=>window.DOMIAN_CONSENT_MODE='on');
+  let analyticsRequests=0;
+  await page.route('https://mc.yandex.ru/**',route=>{analyticsRequests++;return route.fulfill({status:204,body:''});});
+  await page.goto('https://domian-161.ru/obekt/object_910.html');
+  await expect(page.locator('#domian-cookie-banner')).toBeVisible();
+  expect(await page.evaluate(()=>typeof window.ym)).toBe('undefined');
+  expect(analyticsRequests).toBe(0);
+  await page.getByRole('button',{name:'Принять',exact:true}).click();
+  await expect.poll(()=>page.evaluate(()=>Array.from(window.ym?.a||[]).filter(a=>a[1]==='init').length)).toBe(1);
+  await expect(page.locator('#domian-cookie-banner')).toHaveCount(0);
+  await expect.poll(()=>analyticsRequests).toBe(1);
+  await page.goto('https://domian-161.ru/seo/zhk-flora-aksay.html');
+  await expect.poll(()=>page.evaluate(()=>Array.from(window.ym?.a||[]).filter(a=>a[1]==='init').length)).toBe(1);
+  await expect(page.locator('#domian-cookie-banner')).toHaveCount(0);
+});
+test('necessary-only choice survives reload without analytics and banner fits mobile',async({page})=>{
+  await serveProductionLocally(page);
+  await page.addInitScript(()=>window.DOMIAN_CONSENT_MODE='on');
+  await page.setViewportSize({width:390,height:844});
+  let analyticsRequests=0;
+  await page.route('https://mc.yandex.ru/**',route=>{analyticsRequests++;return route.fulfill({status:204,body:''});});
+  await page.goto('https://domian-161.ru/');
+  await expect(page.locator('#domian-cookie-banner')).toBeVisible();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
+  await page.getByRole('button',{name:'Только необходимые',exact:true}).click();
+  await page.reload();
+  await expect(page.locator('#domian-cookie-banner')).toHaveCount(0);
+  expect(await page.evaluate(()=>typeof window.ym)).toBe('undefined');
+  expect(analyticsRequests).toBe(0);
+});
+test('consent acceptance keeps QA analytics disabled',async({page})=>{
+  await page.addInitScript(()=>window.DOMIAN_CONSENT_MODE='on');
+  await page.goto('/?qa=1');
+  await page.getByRole('button',{name:'Принять',exact:true}).click();
+  expect(await page.evaluate(()=>typeof window.ym)).toBe('undefined');
 });
 test('static category links and object facts remain available without JavaScript',async({browser})=>{
   const context=await browser.newContext({javaScriptEnabled:false});

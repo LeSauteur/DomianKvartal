@@ -40,10 +40,43 @@
 
   window.DOMIAN_ANALYTICS_DISABLED = window.DOMIAN_ANALYTICS_DISABLED === true || isAnalyticsDisabled();
 
+  // Owner-controlled rollout: the production default preserves existing behavior.
+  window.DOMIAN_CONSENT_MODE = window.DOMIAN_CONSENT_MODE || "off";
+  var consentMode = window.DOMIAN_CONSENT_MODE === "on";
+  var consentStorageKey = "domian-cookie-choice-v1";
+  var consentChoice = null;
+  try {
+    var savedConsent = window.localStorage.getItem(consentStorageKey);
+    if (savedConsent === "accepted" || savedConsent === "necessary") consentChoice = savedConsent;
+  } catch (_error) { /* The current-page choice still works when storage is unavailable. */ }
+
+  function analyticsConsentGranted() {
+    return !consentMode || consentChoice === "accepted";
+  }
+
+  function initCookieConsent() {
+    if (!consentMode || consentChoice || document.getElementById("domian-cookie-banner")) return;
+    var banner = document.createElement("section");
+    banner.id = "domian-cookie-banner";
+    banner.className = "domian-cookie-banner";
+    banner.setAttribute("aria-label", "Настройки cookie");
+    banner.innerHTML = '<p>Мы используем необходимые хранилища для работы сайта. С вашего согласия подключим Яндекс Метрику для анализа посещений. <a href="/cookies.html">Политика cookie</a></p>'
+      + '<div class="domian-cookie-actions"><button type="button" data-cookie-choice="accepted">Принять</button><button type="button" data-cookie-choice="necessary">Только необходимые</button></div>';
+    banner.addEventListener("click", function (event) {
+      var button = event.target.closest("[data-cookie-choice]");
+      if (!button) return;
+      consentChoice = button.getAttribute("data-cookie-choice");
+      try { window.localStorage.setItem(consentStorageKey, consentChoice); } catch (_error) {}
+      banner.remove();
+      if (consentChoice === "accepted") ensureMetrika();
+    });
+    document.body.appendChild(banner);
+  }
+
   function ensureMetrika() {
     var script;
 
-    if (window.DOMIAN_ANALYTICS_DISABLED) return;
+    if (window.DOMIAN_ANALYTICS_DISABLED || !analyticsConsentGranted()) return;
     if (typeof window.ym === "function") return;
 
     window.ym = function () {
@@ -66,9 +99,12 @@
       accurateTrackBounce: true,
       trackLinks: true
     });
+    if (attribution) captureMetrikaClientId();
   }
 
   ensureMetrika();
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initCookieConsent);
+  else initCookieConsent();
 
   function persistUtmAttribution() {
     var params = new URLSearchParams(window.location.search || "");
@@ -114,12 +150,15 @@
   function saveAttribution() { try { sessionStorage.setItem(attributionKey, JSON.stringify(attribution)); } catch (_) {} }
   saveAttribution();
   window.domianAttribution = { get:function () { return Object.assign({}, attribution); }, createId:createAnonymousId, cleanUrl:cleanAttributionUrl };
-  if (!window.DOMIAN_ANALYTICS_DISABLED && typeof window.ym === 'function') {
-    window.ym(METRIKA_ID, 'getClientID', function (id) {
-      if (/^\d{1,32}$/.test(String(id))) { attribution.metrika_client_id = String(id); saveAttribution(); }
-    });
+  function captureMetrikaClientId() {
+    if (!window.DOMIAN_ANALYTICS_DISABLED && analyticsConsentGranted() && typeof window.ym === 'function') {
+      window.ym(METRIKA_ID, 'getClientID', function (id) {
+        if (/^\d{1,32}$/.test(String(id))) { attribution.metrika_client_id = String(id); saveAttribution(); }
+      });
+    }
   }
-  // Carry explicit QA mode to internal pages before their inline counter runs.
+  captureMetrikaClientId();
+  // Carry explicit QA mode to internal pages before their analytics initialization.
   document.addEventListener('click', function (event) {
     if (!qaSession) return;
     var link = event.target.closest && event.target.closest('a[href]');
@@ -174,7 +213,7 @@
       if (typeof window.DOMIAN_ANALYTICS_TEST_HOOK === "function") {
         window.DOMIAN_ANALYTICS_TEST_HOOK(goal, safeParams);
       }
-      if (window.DOMIAN_ANALYTICS_DISABLED) { if (callback) callback(); return; }
+      if (window.DOMIAN_ANALYTICS_DISABLED || !analyticsConsentGranted()) { if (callback) callback(); return; }
       if (typeof window.ym === "function") {
         window.ym(window.DOMIAN_METRIKA_ID || METRIKA_ID, "reachGoal", goal, safeParams, callback);
       }
@@ -2140,5 +2179,4 @@
     });
   }
 })();
-
 

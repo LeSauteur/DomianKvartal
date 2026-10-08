@@ -235,6 +235,14 @@ for (const file of documentFiles) {
   }
 
   if (html.includes("data-lead-form")) {
+    for (const match of html.matchAll(/<form\b[^>]*data-lead-form[^>]*>[\s\S]*?<\/form>/giu)) {
+      const form = match[0];
+      const checkbox = form.match(/<input\b[^>]*name=["']privacy_consent["'][^>]*>/iu)?.[0] || "";
+      if (!/type=["']checkbox["']/iu.test(checkbox) || !/\brequired(?:\s|>|=)/iu.test(checkbox) || /\bchecked(?:\s|>|=)/iu.test(checkbox)
+          || !/href=["']\/personal-data-consent\.html["']/iu.test(form) || !/href=["']\/privacy\.html["']/iu.test(form)) {
+        report("error", file, "lead form needs a separate required unchecked consent and both legal links");
+      }
+    }
     for (const resource of ["assets/js/lead-config.js", "assets/js/main.js", "assets/js/form-handler.js"]) {
       const relative = slash(path.relative(path.dirname(file), resource));
       const variants = new Set([relative, `./${relative}`, `/${resource}`]);
