@@ -1,34 +1,5 @@
 [
   {
-    "id": "house_910",
-    "title": "Новый дом 910",
-    "price": 25000000,
-    "image": null,
-    "type": "house",
-    "created_at": "2026-03-30",
-    "url": "/obekt/house_910.html",
-    "sourceFolder": "house_2001",
-    "images": [],
-    "shortDescription": "Описание объекта",
-    "fullDescription": "Описание объекта",
-    "description": "Описание объекта",
-    "price_conflict": null,
-    "cover": null,
-    "city": null,
-    "district": null,
-    "settlement": null,
-    "address": null,
-    "status": "active",
-    "features": {
-      "rooms": null,
-      "area": null,
-      "floor": null,
-      "totalFloors": null,
-      "landArea": null
-    },
-    "source_path": "output/houses/house_910/data.json"
-  },
-  {
     "id": "house_911",
     "title": "Дом 297 кв. м в Аксае, участок 20 соток — премиум‑класс с бассейном и выходом на две улицы! Рос",
     "price": 7000000,

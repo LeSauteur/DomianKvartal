@@ -3360,14 +3360,12 @@
     "price_conflict": null,
     "images": [],
     "photo_folder_mismatch": false,
-    "status": "active",
+    "status": "placeholder",
     "status_source": "output/houses/house_901/data.json",
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
-    "listing_urls": [
-      "/houses.html"
-    ]
+    "listing_urls": []
   },
   {
     "id": "house_902",
@@ -3390,14 +3388,12 @@
     "price_conflict": null,
     "images": [],
     "photo_folder_mismatch": false,
-    "status": "active",
+    "status": "placeholder",
     "status_source": "output/houses/house_902/data.json",
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
-    "listing_urls": [
-      "/houses.html"
-    ]
+    "listing_urls": []
   },
   {
     "id": "house_903",
@@ -3420,14 +3416,12 @@
     "price_conflict": null,
     "images": [],
     "photo_folder_mismatch": false,
-    "status": "active",
+    "status": "placeholder",
     "status_source": "output/houses/house_903/data.json",
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
-    "listing_urls": [
-      "/houses.html"
-    ]
+    "listing_urls": []
   },
   {
     "id": "house_904",
@@ -3450,14 +3444,12 @@
     "price_conflict": null,
     "images": [],
     "photo_folder_mismatch": false,
-    "status": "active",
+    "status": "placeholder",
     "status_source": "output/houses/house_904/data.json",
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
-    "listing_urls": [
-      "/houses.html"
-    ]
+    "listing_urls": []
   },
   {
     "id": "house_905",
@@ -3480,14 +3472,12 @@
     "price_conflict": null,
     "images": [],
     "photo_folder_mismatch": false,
-    "status": "active",
+    "status": "placeholder",
     "status_source": "output/houses/house_905/data.json",
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
-    "listing_urls": [
-      "/houses.html"
-    ]
+    "listing_urls": []
   },
   {
     "id": "house_906",
@@ -3510,14 +3500,12 @@
     "price_conflict": null,
     "images": [],
     "photo_folder_mismatch": false,
-    "status": "active",
+    "status": "placeholder",
     "status_source": "output/houses/house_906/data.json",
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
-    "listing_urls": [
-      "/houses.html"
-    ]
+    "listing_urls": []
   },
   {
     "id": "house_907",
@@ -3540,14 +3528,12 @@
     "price_conflict": null,
     "images": [],
     "photo_folder_mismatch": false,
-    "status": "active",
+    "status": "placeholder",
     "status_source": "output/houses/house_907/data.json",
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
-    "listing_urls": [
-      "/houses.html"
-    ]
+    "listing_urls": []
   },
   {
     "id": "house_908",
@@ -3570,14 +3556,12 @@
     "price_conflict": null,
     "images": [],
     "photo_folder_mismatch": false,
-    "status": "active",
+    "status": "placeholder",
     "status_source": "output/houses/house_908/data.json",
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
-    "listing_urls": [
-      "/houses.html"
-    ]
+    "listing_urls": []
   },
   {
     "id": "house_909",
@@ -3600,14 +3584,12 @@
     "price_conflict": null,
     "images": [],
     "photo_folder_mismatch": false,
-    "status": "active",
+    "status": "placeholder",
     "status_source": "output/houses/house_909/data.json",
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
-    "listing_urls": [
-      "/houses.html"
-    ]
+    "listing_urls": []
   },
   {
     "id": "house_910",
@@ -3630,15 +3612,12 @@
     "price_conflict": null,
     "images": [],
     "photo_folder_mismatch": false,
-    "status": "active",
+    "status": "placeholder",
     "status_source": "output/houses/house_910/data.json",
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
-    "listing_urls": [
-      "/",
-      "/houses.html"
-    ]
+    "listing_urls": []
   },
   {
     "id": "house_911",
@@ -4161,14 +4140,12 @@
     "price_conflict": null,
     "images": [],
     "photo_folder_mismatch": false,
-    "status": "active",
+    "status": "placeholder",
     "status_source": "lands/land_901/data.json",
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
-    "listing_urls": [
-      "/lands.html"
-    ]
+    "listing_urls": []
   },
   {
     "id": "land_902",
@@ -4191,14 +4168,12 @@
     "price_conflict": null,
     "images": [],
     "photo_folder_mismatch": false,
-    "status": "active",
+    "status": "placeholder",
     "status_source": "lands/land_902/data.json",
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
-    "listing_urls": [
-      "/lands.html"
-    ]
+    "listing_urls": []
   },
   {
     "id": "land_903",
@@ -4221,14 +4196,12 @@
     "price_conflict": null,
     "images": [],
     "photo_folder_mismatch": false,
-    "status": "active",
+    "status": "placeholder",
     "status_source": "lands/land_903/data.json",
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
-    "listing_urls": [
-      "/lands.html"
-    ]
+    "listing_urls": []
   },
   {
     "id": "land_904",
@@ -4251,14 +4224,12 @@
     "price_conflict": null,
     "images": [],
     "photo_folder_mismatch": false,
-    "status": "active",
+    "status": "placeholder",
     "status_source": "lands/land_904/data.json",
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
-    "listing_urls": [
-      "/lands.html"
-    ]
+    "listing_urls": []
   },
   {
     "id": "land_905",
@@ -4281,14 +4252,12 @@
     "price_conflict": null,
     "images": [],
     "photo_folder_mismatch": false,
-    "status": "active",
+    "status": "placeholder",
     "status_source": "lands/land_905/data.json",
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
-    "listing_urls": [
-      "/lands.html"
-    ]
+    "listing_urls": []
   },
   {
     "id": "land_906",
@@ -4311,14 +4280,12 @@
     "price_conflict": null,
     "images": [],
     "photo_folder_mismatch": false,
-    "status": "active",
+    "status": "placeholder",
     "status_source": "lands/land_906/data.json",
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
-    "listing_urls": [
-      "/lands.html"
-    ]
+    "listing_urls": []
   },
   {
     "id": "land_907",
@@ -4341,14 +4308,12 @@
     "price_conflict": null,
     "images": [],
     "photo_folder_mismatch": false,
-    "status": "active",
+    "status": "placeholder",
     "status_source": "lands/land_907/data.json",
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
-    "listing_urls": [
-      "/lands.html"
-    ]
+    "listing_urls": []
   },
   {
     "id": "land_908",
@@ -4371,14 +4336,12 @@
     "price_conflict": null,
     "images": [],
     "photo_folder_mismatch": false,
-    "status": "active",
+    "status": "placeholder",
     "status_source": "lands/land_908/data.json",
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
-    "listing_urls": [
-      "/lands.html"
-    ]
+    "listing_urls": []
   },
   {
     "id": "land_909",
@@ -4401,14 +4364,12 @@
     "price_conflict": null,
     "images": [],
     "photo_folder_mismatch": false,
-    "status": "active",
+    "status": "placeholder",
     "status_source": "lands/land_909/data.json",
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
-    "listing_urls": [
-      "/lands.html"
-    ]
+    "listing_urls": []
   },
   {
     "id": "land_910",
@@ -4431,14 +4392,12 @@
     "price_conflict": null,
     "images": [],
     "photo_folder_mismatch": false,
-    "status": "active",
+    "status": "placeholder",
     "status_source": "lands/land_910/data.json",
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
-    "listing_urls": [
-      "/lands.html"
-    ]
+    "listing_urls": []
   },
   {
     "id": "object_01",

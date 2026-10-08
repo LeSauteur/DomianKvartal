@@ -85,7 +85,7 @@ test('every public lead form, including objects and ZHK, has a separate unchecke
       assert.match(form,/href=["']\/privacy\.html["']/i,file);
     }
   }
-  assert.equal([...seen].filter(f=>f.startsWith('obekt/')).length,JSON.parse(fs.readFileSync(path.join(root,'data/catalog/registry.json'),'utf8')).length);
+  assert.equal([...seen].filter(f=>f.startsWith('obekt/')).length,JSON.parse(fs.readFileSync(path.join(root,'data/catalog/registry.json'),'utf8')).filter(r=>r.status!=='placeholder').length);
   assert.equal([...seen].filter(f=>f.startsWith('seo/zhk-')).length,JSON.parse(fs.readFileSync(path.join(root,'data/zhk/aksay.json'),'utf8')).filter(r=>r.publish).length);
 });
 
@@ -93,7 +93,7 @@ test("production lead forms include the main form and every construction landing
   const leadForms = htmlFiles.filter((file) => /<form\b[^>]*\bdata-lead-form\b/i.test(fs.readFileSync(file, "utf8")));
   const relative = leadForms.map((file) => path.relative(root, file).replaceAll("\\", "/")).sort();
 
-  assert.equal(relative.length, 43 + JSON.parse(fs.readFileSync(path.join(root, 'data/catalog/registry.json'), 'utf8')).length + (fs.existsSync(path.join(root, 'data/zhk/aksay.json')) ? JSON.parse(fs.readFileSync(path.join(root, 'data/zhk/aksay.json'), 'utf8')).filter(r => r.publish).length : 0));
+  assert.equal(relative.length, 43 + JSON.parse(fs.readFileSync(path.join(root, 'data/catalog/registry.json'), 'utf8')).filter(r=>r.status!=='placeholder').length + (fs.existsSync(path.join(root, 'data/zhk/aksay.json')) ? JSON.parse(fs.readFileSync(path.join(root, 'data/zhk/aksay.json'), 'utf8')).filter(r => r.publish).length : 0));
   assert.ok(relative.includes("commercial.html"));
   assert.ok(relative.includes("rent.html"));
   assert.ok(relative.includes("index-preview.html"));

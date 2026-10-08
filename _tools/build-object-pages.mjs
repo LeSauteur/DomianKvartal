@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { execFileSync } from "node:child_process";
 import { root } from "./build-registry.mjs";
 import { publicPage, esc, origin, category, money, breadcrumbs, schema, leadForm } from "./public-page.mjs";
+import { buildSitemap } from "./build-sitemap.mjs";
 export function objectHeading(r) {
   const name = {apartment:"Квартира",house:"Дом",land:"Участок"}[r.type];
   const facts = [r.rooms===null?null:r.rooms+" комн.",r.area_total===null?null:r.area_total+" м²",r.type==="land"&&r.lot_area_sotok!==null?r.lot_area_sotok+" сот.":null].filter(Boolean);
@@ -26,23 +27,27 @@ export function objectPage(r) {
 export function buildObjectPages() {
   const registry = JSON.parse(fs.readFileSync(root+"/data/catalog/registry.json","utf8"));
   fs.mkdirSync(root+"/obekt",{recursive:true});
-  for (const r of registry) fs.writeFileSync(root+"/obekt/"+r.id+".html",objectPage(r));
+  const mainPages = new Set(execFileSync("git",["ls-tree","-r","--name-only","origin/main","--","obekt/"],{cwd:root,encoding:"utf8"}).trim().split(/\r?\n/));
+  for (const r of registry) {
+    const file = "obekt/"+r.id+".html";
+    if (r.status === "placeholder") {
+      if (fs.existsSync(root+"/"+file)) {
+        if (mainPages.has(file)) throw new Error("Refusing to remove an existing main page: "+file);
+        fs.unlinkSync(root+"/"+file); // Only placeholder pages introduced in this PR.
+      }
+    } else fs.writeFileSync(root+"/"+file,objectPage(r));
+  }
   for (const type of ["apartment","house","land"]) {
     const file = category[type][1], name = category[type][0];
-    const links = registry.filter(r=>r.type===type && (r.status===null||r.status==="active")).sort((a,b)=>(b.city==="Аксай"?1:0)-(a.city==="Аксай"?1:0)).map(r=>'<li data-registry-id="'+r.id+'"><a href="/obekt/'+r.id+'.html">'+esc(objectHeading(r))+'</a></li>').join("\n");
+    const aksay = r => ["Аксай","Аксайский район"].includes(r.city) ? 1 : 0;
+    const links = registry.filter(r=>r.type===type && (r.status===null||r.status==="active")).sort((a,b)=>aksay(b)-aksay(a)).map(r=>'<li data-registry-id="'+r.id+'"><a href="/obekt/'+r.id+'.html">'+esc(objectHeading(r))+'</a></li>').join("\n");
     const block = '<!-- static-object-links:start -->\n<section class="visibility-static-links" aria-label="'+name+' — ссылки на объекты"><h2>Все объекты раздела</h2><p>Откройте страницу объекта, чтобы посмотреть характеристики и связаться с нами.</p><ul>'+links+'</ul></section>\n<!-- static-object-links:end -->';
     let source = fs.readFileSync(root+"/"+file,"utf8");
     source = /<!-- static-object-links:start -->/.test(source) ? source.replace(/<!-- static-object-links:start -->[\s\S]*?<!-- static-object-links:end -->/,block) : source.replace('</main>',block+'\n</main>');
     if(!source.includes("/assets/css/visibility.css")) source=source.replace('</head>','<link rel="stylesheet" href="/assets/css/visibility.css">\n</head>');
     fs.writeFileSync(root+"/"+file,source);
   }
-  // S6 replaces this migration append with the complete sitemap generator.
-  let sitemap = fs.readFileSync(root+"/sitemap.xml","utf8").replace(/\s*<url>\s*<loc>https:\/\/domian-161\.ru\/obekt\/[\s\S]*?<\/url>/g,"");
-  const added = registry.filter(eligible).map(r=>{
-    const lastmod = execFileSync("git",["log","-1","--format=%cs","--",r.source_path],{cwd:root,encoding:"utf8"}).trim() || "2026-10-07";
-    return "  <url><loc>"+origin+"/obekt/"+r.id+".html</loc><lastmod>"+lastmod+"</lastmod></url>";
-  }).join("\n");
-  fs.writeFileSync(root+"/sitemap.xml",sitemap.replace('</urlset>',added+'\n</urlset>'));
-  console.log("Object pages:",registry.length,"; indexed:",registry.filter(eligible).length);
+  fs.writeFileSync(root+"/sitemap.xml",buildSitemap());
+  console.log("Object pages:",registry.filter(r=>r.status!=="placeholder").length,"; indexed:",registry.filter(eligible).length);
 }
 if (process.argv[1] && path.resolve(process.argv[1])===fileURLToPath(import.meta.url)) buildObjectPages();

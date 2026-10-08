@@ -46,9 +46,10 @@ export function buildRegistry() {
       ...parseLocation(title_raw,description_raw,source.path.endsWith("/data.json") ? data : {}),
       ...parseNumbers(title_raw,description_raw,obj.type),
       price:price_conflict ? null : prices[0]?.price ?? null,price_conflict,images,photo_folder_mismatch,
-      status:data.status || null,status_source:data.status ? source.path : null,
+      status:data.is_placeholder === true ? "placeholder" : data.status || null,
+      status_source:data.is_placeholder === true || data.status ? source.path : null,
       verifiedAt:data.verifiedAt || null,verifiedBy:data.verifiedBy || null,agent:data.agent || null,
-      listing_urls:[...new Set([...(obj.sources.some(s=>s.path==="output/home/new-objects.json") ? ["/"] : []),"/" + {apartment:"apartments",house:"houses",land:"lands"}[obj.type] + ".html"])]
+      listing_urls:data.is_placeholder === true ? [] : [...new Set([...(obj.sources.some(s=>s.path==="output/home/new-objects.json") ? ["/"] : []),"/" + {apartment:"apartments",house:"houses",land:"lands"}[obj.type] + ".html"])]
     };
   });
   write("data/catalog/registry.json",registry);
@@ -62,10 +63,10 @@ export function buildRegistry() {
       features:{rooms:r.rooms,area:r.area_total,floor:r.floor,totalFloors:r.floors,landArea:r.lot_area_sotok},
       url:"/obekt/" + r.id + ".html",source_path:r.source_path};
   }
-  for (const p of feeds) write(p,snapshot[p].map(item=>byId.has(item.id) ? feedItem(byId.get(item.id),item) : item));
+  for (const p of feeds) write(p,snapshot[p].filter(item=>byId.get(item.id)?.status !== "placeholder").map(item=>byId.has(item.id) ? feedItem(byId.get(item.id),item) : item));
   // Public projection; internal evidence remains excluded by Jekyll.
-  write("output/catalog/registry.json",registry.map(r=>feedItem(r)));
-  const rows = registry.filter(r=>r.city === null || r.price_conflict || r.photo_folder_mismatch).map(r=>[
+  write("output/catalog/registry.json",registry.filter(r=>r.status!=="placeholder").map(r=>feedItem(r)));
+  const rows = registry.filter(r=>r.status!=="placeholder" && (r.city === null || r.price_conflict || r.photo_folder_mismatch)).map(r=>[
     r.id,r.type,r.title_raw,r.price,r.city_suggested,r.city_evidence,
     [r.city===null?"city_missing":"",r.price_conflict?"price_conflict":"",r.photo_folder_mismatch?"photo_folder_mismatch":""].filter(Boolean).join(", "),
     "https://domian-161.ru/obekt/" + r.id + ".html"

@@ -1691,6 +1691,8 @@
     });
   }
 
+  function aksayFirst(item) { return ['Аксай', 'Аксайский район'].includes(item.city) ? 1 : 0; }
+
   function loadCategoryData(type) {
     var registryType = {apartments:'apartment',houses:'house',lands:'land'}[type];
     if (registryType) return fetchJson('/output/catalog/registry.json').then(function (records) {
@@ -1701,7 +1703,7 @@
           city:r.city, district:r.district, settlement:r.settlement, address:r.address,
           images:localImages, cover:localImages[0] || '', sectionLink:type+'.html',
           meta:{price:r.price,rooms:f.rooms,area:f.area,houseArea:type==='houses'?f.area:null,landArea:f.landArea,floor:f.floor,floors:f.totalFloors} };
-      }).sort(function (a,b) { return (b.city === 'Аксай' ? 1 : 0) - (a.city === 'Аксай' ? 1 : 0); });
+      }).sort(function (a,b) { return aksayFirst(b) - aksayFirst(a); });
     });
 
     return fetchJson("output/newbuilds/newbuilds-v2-merged.json")
@@ -1726,7 +1728,7 @@
     return Promise.all(['output/' + type + '/new-objects.json', 'output/home/new-objects.json'].map(function (url) {
       return fetchJson(url).catch(function () { return []; });
     })).then(function (feeds) {
-      var recent = [].concat.apply([], feeds).find(function (item) { return item.id === requestedId && item.type === feedType; });
+      var recent = [].concat.apply([], feeds).find(function (item) { return item.id === requestedId && item.type === feedType && item.status !== 'placeholder' && !item.is_placeholder; });
       if (!recent) return items;
       var data = Object.assign({}, recent, {description:recent.description || recent.shortDescription || ''});
       var normalized = normalizeItem(type, {id:recent.id, path:type + '/' + recent.id}, data, items.length);
@@ -1981,6 +1983,7 @@
           container.innerHTML = '<p class="loading-state">Новые объекты пока не добавлены.</p>';
           return;
         }
+        items = items.filter(function (item) { return item.status !== 'placeholder' && !item.is_placeholder; });
         container.innerHTML = items.slice(0, 8).map(renderNewObjectCard).join("");
         bindPropertyGalleryFallback(container);
       })
@@ -2015,7 +2018,8 @@
           container.innerHTML = '<p class="loading-state">Новые объекты пока не добавлены.</p>';
           return;
         }
-        container.innerHTML = items.slice().sort(function (a,b) { return (b.city === "Аксай" ? 1 : 0) - (a.city === "Аксай" ? 1 : 0); }).slice(0, 10).map(renderNewObjectCard).join("");
+        items = items.filter(function (item) { return item.status !== 'placeholder' && !item.is_placeholder; });
+        container.innerHTML = items.slice().sort(function (a,b) { return aksayFirst(b) - aksayFirst(a); }).slice(0, 10).map(renderNewObjectCard).join("");
         bindPropertyGalleryFallback(container);
       })
       .catch(function (error) {

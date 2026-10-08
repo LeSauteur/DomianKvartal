@@ -3,7 +3,24 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import { parsePrice, parseNumbers, parseLocation } from "../_tools/catalog-parser.mjs";
 import { buildRegistry, root } from "../_tools/build-registry.mjs";
+import { publicHtmlFiles, readPage } from '../_tools/site-pages.mjs';
 const nums = (t,d="",type="apartment") => parseNumbers(t,d,type);
+test('source placeholders remain marked and never gain public pages, links or feeds',()=>{
+  const registry=JSON.parse(fs.readFileSync(root+'/data/catalog/registry.json','utf8'));
+  const placeholders=registry.filter(r=>r.status==='placeholder');
+  assert.equal(placeholders.length,20);
+  for(const r of placeholders) {
+    assert.equal(JSON.parse(fs.readFileSync(root+'/'+r.source_path,'utf8')).is_placeholder,true,r.id);
+    assert.deepEqual(r.listing_urls,[]);
+    assert.equal(fs.existsSync(root+'/obekt/'+r.id+'.html'),false,r.id);
+    for(const file of publicHtmlFiles()) assert.doesNotMatch(readPage(file),new RegExp('(?:/obekt/|object=|data-registry-id=["\'])'+r.id+'(?:\\.html|["\'&])'),file);
+    assert.ok(!fs.readFileSync(root+'/sitemap.xml','utf8').includes('/obekt/'+r.id+'.html'));
+    for(const dir of ['apartments','houses','lands','home','catalog']) {
+      const feed=JSON.parse(fs.readFileSync(root+'/output/'+dir+'/'+(dir==='catalog'?'registry':'new-objects')+'.json','utf8'));
+      assert.ok(!feed.some(item=>item.id===r.id),dir+': '+r.id);
+    }
+  }
+});
 test("registry numeric rules accept explicit units and reject IDs and unrelated letters",()=>{
   for (const t of ["100 кв.м","object_905","2 квартиры рядом","100-комнатная","улица 3к5"]) assert.equal(nums(t).rooms,null,t);
   for (const [t,n] of [["1-комнатная",1],["2-к квартира",2],["3 комнаты",3],["3х-комнатная",3]]) assert.equal(nums(t).rooms,n,t);

@@ -5,7 +5,7 @@ import { objectPage, eligible } from "../_tools/build-object-pages.mjs";
 const root = process.cwd(), registry = JSON.parse(fs.readFileSync("data/catalog/registry.json","utf8"));
 test("every property has a unique self-canonical page with only supported facts",()=>{
   const titles = new Set(), canonicals = new Set();
-  for(const r of registry) {
+  for(const r of registry.filter(r=>r.status!=="placeholder")) {
     const html=fs.readFileSync(root+"/obekt/"+r.id+".html","utf8");
     const title=html.match(/<title>(.*?)<\/title>/)[1], canonical=html.match(/rel="canonical" href="([^"]+)"/)[1];
     assert.ok(!titles.has(title),r.id); titles.add(title);
@@ -34,6 +34,6 @@ test("unknown values stay absent and non-active or imageless properties are excl
 test("category source exposes every registry property without JavaScript",()=>{
   for(const [type,file] of [["apartment","apartments.html"],["house","houses.html"],["land","lands.html"]]){
     const html=fs.readFileSync(file,"utf8");
-    for(const r of registry.filter(x=>x.type===type)) assert.ok(html.includes('href="/obekt/'+r.id+'.html"'),r.id);
+    for(const r of registry.filter(x=>x.type===type && (x.status===null||x.status==="active"))) assert.ok(html.includes('href="/obekt/'+r.id+'.html"'),r.id);
   }
 });

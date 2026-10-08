@@ -192,35 +192,6 @@
     "source_path": "objects/object_909/data.json"
   },
   {
-    "id": "house_910",
-    "title": "Новый дом 910",
-    "price": 25000000,
-    "image": null,
-    "type": "house",
-    "created_at": "2026-03-30",
-    "url": "/obekt/house_910.html",
-    "sourceFolder": "house_2001",
-    "images": [],
-    "shortDescription": "Описание объекта",
-    "fullDescription": "Описание объекта",
-    "description": "Описание объекта",
-    "price_conflict": null,
-    "cover": null,
-    "city": null,
-    "district": null,
-    "settlement": null,
-    "address": null,
-    "status": "active",
-    "features": {
-      "rooms": null,
-      "area": null,
-      "floor": null,
-      "totalFloors": null,
-      "landArea": null
-    },
-    "source_path": "output/houses/house_910/data.json"
-  },
-  {
     "id": "object_913",
     "title": "Продаётся просторная 3х‑комнатная квартира 62 м² на 6 этаже из 9 — отличный вариант для комфорт",
     "price": 6500000,

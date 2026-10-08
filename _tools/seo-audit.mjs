@@ -114,12 +114,18 @@ const htmlFiles = trackedFiles("*.html").filter(isPublishable);
 const documentFiles = htmlFiles.filter((file) => !VERIFICATION_FILES.has(file));
 const htmlCache = new Map(documentFiles.map((file) => [file, read(file)]));
 const geographyRegistry = exists("data/catalog/registry.json") ? JSON.parse(read("data/catalog/registry.json")) : [];
+const placeholderIds = geographyRegistry.filter(r=>r.status==="placeholder").map(r=>r.id);
 const idCache = new Map();
 const titles = new Map();
 const canonicals = new Map();
 
 for (const file of documentFiles) {
   const html = htmlCache.get(file);
+  for (const id of placeholderIds) {
+    if (file === "obekt/"+id+".html" || new RegExp("(?:/obekt/|object=|data-registry-id=[\"'])"+id+"(?:\\.html|[\"'&])").test(html)) {
+      report("error", file, "placeholder property is publicly linked or has a generated page: "+id);
+    }
+  }
   if (geographyMismatch(html, geographyRegistry)) report("error", file, "Aksay-only heading with more than 50% static Rostov properties");
   const lower = html.toLowerCase();
   const noindex = /<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/iu.test(html);
@@ -316,6 +322,7 @@ if (exists("data/catalog/registry.json")) {
       if (!["apartment", "house", "land"].includes(item.type)) continue;
       const source = byId.get(item.id);
       if (!source) report("error", file, `property missing from registry: ${item.id}`);
+      else if (source.status === "placeholder") report("error", file, `placeholder present in public feed: ${item.id}`);
       else if (item.price !== source.price) report("error", file, `price differs from registry: ${item.id}`);
     }
   }

@@ -2,6 +2,26 @@ const {test,expect}=require('@playwright/test');
 test.beforeEach(async({page})=>{
   await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.fulfill({status:204,body:''}));
 });
+test('placeholder query never opens a listing and no placeholder cards are rendered',async({page})=>{
+  for(const category of ['houses','lands']) {
+    const id=category==='houses'?'house_901':'land_901';
+    await page.goto('/'+category+'.html?qa=1&object='+id);
+    await expect(page.locator('#cards .property-card').first()).toBeVisible();
+    await expect(page.locator('#modal')).not.toBeVisible();
+    await expect(page.locator('a[href*="'+id+'"]')).toHaveCount(0);
+    await expect(page.locator('[data-object-id="'+id+'"]')).toHaveCount(0);
+  }
+});
+test('Aksay district joins Aksay ahead of other cities',async({page})=>{
+  const data=require('../output/catalog/registry.json').filter(r=>r.type==='house');
+  const sample=[{...data[0],city:'Ростов-на-Дону'},{...data[1],city:'Аксайский район'},{...data[2],city:'Аксай'}];
+  await page.route('**/output/catalog/registry.json',route=>route.fulfill({json:sample}));
+  await page.goto('/houses.html?qa=1');
+  await expect(page.locator('#cards .property-card')).toHaveCount(3);
+  await expect(page.locator('#cards .property-card').nth(0)).toContainText('Аксайский район');
+  await expect(page.locator('#cards .property-card').nth(1)).toContainText('Аксай');
+  await expect(page.locator('#cards .property-card').nth(2)).toContainText('Ростов-на-Дону');
+});
 
 async function serveProductionLocally(page) {
   await page.route('https://domian-161.ru/**', async route => {
