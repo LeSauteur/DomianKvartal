@@ -85,7 +85,8 @@ test('static category links and object facts remain available without JavaScript
   await page.goto('http://127.0.0.1:4173/apartments.html');
   await expect(page.locator('[data-registry-id="object_910"] a')).toHaveAttribute('href','/obekt/object_910.html');
   await page.locator('[data-registry-id="object_910"] a').click();
-  await expect(page.locator('h1')).toContainText('object_910');
+  await expect(page.locator('h1')).toHaveText(/Квартира.*36 м².*Ростов-на-Дону/);
+  await expect(page.locator('h1')).not.toContainText('object_910');
   await expect(page.locator('.visibility-price')).toHaveText('Цена по запросу');
   await context.close();
 });

@@ -1,8 +1,27 @@
 import fs from "node:fs";
 import assert from "node:assert/strict";
 import test from "node:test";
-import { objectPage, eligible } from "../_tools/build-object-pages.mjs";
+import { objectPage, eligible, objectTitle } from "../_tools/build-object-pages.mjs";
 const root = process.cwd(), registry = JSON.parse(fs.readFileSync("data/catalog/registry.json","utf8"));
+test('object metadata has no technical IDs; breadcrumb uses H1 and numeric suffixes only resolve duplicate titles',()=>{
+  const pages=registry.filter(r=>r.status!=='placeholder');
+  const counts=new Map();
+  for(const r of pages) counts.set(objectTitle(r),(counts.get(objectTitle(r))||0)+1);
+  for(const r of pages) {
+    const html=fs.readFileSync(root+'/obekt/'+r.id+'.html','utf8');
+    const title=html.match(/<title>(.*?)<\/title>/)[1];
+    const h1=html.match(/<h1>(.*?)<\/h1>/)[1];
+    const description=html.match(/name="description" content="([^"]+)"/)[1];
+    const decode=s=>s.replaceAll('&amp;','&').replaceAll('&quot;','"').replaceAll('&#39;',"'").replaceAll('&lt;','<').replaceAll('&gt;','>');
+    const breadcrumb=[...html.matchAll(/type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1])).find(n=>n['@type']==='BreadcrumbList');
+    const last=breadcrumb.itemListElement.at(-1);
+    for(const value of [title,h1,description,last.name]) assert.doesNotMatch(value,/(?:object|house|land)_\d+/u,r.id);
+    assert.equal(last.name,decode(h1),r.id);
+    const duplicates=counts.get(objectTitle(r));
+    if(duplicates>1) assert.match(decode(title),new RegExp(' № '+Number(r.id.split('_')[1])+'$'),r.id);
+    else assert.equal(decode(title),objectTitle(r),r.id);
+  }
+});
 test("every property has a unique self-canonical page with only supported facts",()=>{
   const titles = new Set(), canonicals = new Set();
   for(const r of registry.filter(r=>r.status!=="placeholder")) {

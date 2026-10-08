@@ -7,26 +7,32 @@ import { publicPage, esc, origin, category, money, breadcrumbs, schema, leadForm
 import { buildSitemap } from "./build-sitemap.mjs";
 export function objectHeading(r) {
   const name = {apartment:"Квартира",house:"Дом",land:"Участок"}[r.type];
-  const facts = [r.rooms===null?null:r.rooms+" комн.",r.area_total===null?null:r.area_total+" м²",r.type==="land"&&r.lot_area_sotok!==null?r.lot_area_sotok+" сот.":null].filter(Boolean);
-  return name+(facts.length?" "+facts.join(", "):"")+" · "+r.id+(r.city!==null?" — "+r.city:"");
+  const facts = [r.rooms===null?null:r.rooms+" комн.",r.area_total===null?null:r.area_total+" м²",r.type==="land"&&r.lot_area_sotok!==null?r.lot_area_sotok+" сот.":null,r.type==="apartment"&&r.floor!==null?"этаж "+r.floor:null].filter(Boolean);
+  const location=[...new Set([r.city,r.settlement,r.address].filter(Boolean))];
+  return name+(facts.length?" "+facts.join(", "):"")+(location.length?" — "+location.join(", "):"");
 }
 export function eligible(r) { return (r.status===null || r.status==="active") && r.images.length>0; }
-export function objectPage(r) {
+export const objectTitle = r => objectHeading(r)+" — "+money(r.price_conflict ? null : r.price)+" | Домиан Квартал";
+export function objectPage(r, duplicateTitles = new Set()) {
   const file = "obekt/"+r.id+".html", h1 = objectHeading(r);
   const price = r.price_conflict ? null : r.price;
   const facts = [["Город",r.city],["Населённый пункт",r.settlement],["Район",r.district],["Адрес",r.address],["Площадь",r.area_total===null?null:r.area_total+" м²"],["Комнаты",r.rooms],["Этаж",r.floor],["Этажей в доме",r.floors],["Участок",r.lot_area_sotok===null?null:r.lot_area_sotok+" сот."]];
-  const body = breadcrumbs([["Главная","/"],category[r.type].map((v,i)=>i?"/"+v:v),[r.id,"/"+file]])
+  const body = breadcrumbs([["Главная","/"],category[r.type].map((v,i)=>i?"/"+v:v),[h1,"/"+file]])
     +'<p class="visibility-price">'+esc(money(price))+'</p><dl class="visibility-facts">'+facts.filter(([,v])=>v!==null).map(([label,v])=>'<div><dt>'+esc(label)+'</dt><dd>'+esc(v)+'</dd></div>').join('')+'</dl>'
     +'<p>Мы агентство недвижимости. Уточним наличие объекта и организуем просмотр по договорённости.</p>'
     +'<div class="visibility-actions"><a class="btn" href="tel:+79536091122">Позвонить</a><a class="btn" href="https://max.ru/u/f9LHodD0cOKImT5sxxh2fLN4YFJ-paNFCiI79MwgO-LJJZ8oHXX5TN007y4" target="_blank" rel="noopener noreferrer" data-channel="max" data-max-trigger>MAX</a><a class="btn" href="https://t.me/httpsmealieva_rieltor" target="_blank" rel="noopener noreferrer" data-channel="telegram">Telegram</a><a class="btn" href="#lead-form-section" data-lead-type="buy" data-source-cta="object_page" data-object-id="'+esc(r.id)+'" data-object-type="'+esc(r.type)+'" data-object-title="'+esc(h1)+'" data-object-url="'+origin+'/'+file+'">Заявка по объекту</a></div>'
     +'<div class="visibility-gallery">'+r.images.map((image,i)=>'<img src="'+esc(image)+'" alt="'+esc(h1)+' — фото '+(i+1)+'" loading="lazy" width="800" height="600">').join('')+'</div>';
   const product = price!==null ? schema({"@context":"https://schema.org","@type":"Product",name:h1,image:r.images,url:origin+"/"+file,offers:{"@type":"Offer",price,priceCurrency:"RUB",url:origin+"/"+file}}) : "";
-  return publicPage({file,h1,title:h1+" — "+money(price)+" | Домиан Квартал",description:h1+". "+money(price)+". Уточните наличие и условия просмотра в агентстве Домиан Квартал.",body,structured:product,noindex:!eligible(r),
+  const title = objectTitle(r)+(duplicateTitles.has(objectTitle(r)) ? " № "+Number(r.id.split('_')[1]) : "");
+  return publicPage({file,h1,title,description:h1+". "+money(price)+". Уточните наличие и условия просмотра в агентстве Домиан Квартал.",body,structured:product,noindex:!eligible(r),
     form:leadForm("object_page",{lead_type:"buy",object_id:r.id,object_type:r.type,object_title:h1,object_price:price,object_url:origin+"/"+file})});
 }
 export function buildObjectPages() {
   const registry = JSON.parse(fs.readFileSync(root+"/data/catalog/registry.json","utf8"));
   fs.mkdirSync(root+"/obekt",{recursive:true});
+  const counts=new Map();
+  for(const r of registry.filter(r=>r.status!=="placeholder")) counts.set(objectTitle(r),(counts.get(objectTitle(r))||0)+1);
+  const duplicateTitles=new Set([...counts].filter(([,count])=>count>1).map(([title])=>title));
   const mainPages = new Set(execFileSync("git",["ls-tree","-r","--name-only","origin/main","--","obekt/"],{cwd:root,encoding:"utf8"}).trim().split(/\r?\n/));
   for (const r of registry) {
     const file = "obekt/"+r.id+".html";
@@ -35,7 +41,7 @@ export function buildObjectPages() {
         if (mainPages.has(file)) throw new Error("Refusing to remove an existing main page: "+file);
         fs.unlinkSync(root+"/"+file); // Only placeholder pages introduced in this PR.
       }
-    } else fs.writeFileSync(root+"/"+file,objectPage(r));
+    } else fs.writeFileSync(root+"/"+file,objectPage(r,duplicateTitles));
   }
   for (const type of ["apartment","house","land"]) {
     const file = category[type][1], name = category[type][0];

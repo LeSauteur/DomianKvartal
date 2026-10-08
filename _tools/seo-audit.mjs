@@ -172,6 +172,16 @@ for (const file of documentFiles) {
 
   const duplicateIds = ids.filter((id, index) => ids.indexOf(id) !== index);
   if (file.startsWith("obekt/")) {
+    const h1 = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/iu)?.[1] || "";
+    for (const text of [titleMatch?.[1]||"",descriptionMatch?.[2]||"",h1]) {
+      if (/(?:object|house|land)_\d+/u.test(text)) report("error", file, "technical object ID appears in visible metadata");
+    }
+    for (const match of html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/giu)) {
+      try {
+        const node=JSON.parse(match[1]);
+        if(node["@type"]==="BreadcrumbList" && node.itemListElement.at(-1)?.name!==stripTags(h1)) report("error", file, "last breadcrumb name differs from H1");
+      } catch { /* Invalid JSON is reported below. */ }
+    }
     const canonical = attr(canonicalMatches[0]?.[0] || "", "href");
     if (canonical !== SITE_ORIGIN + "/" + file) report("error", file, "object page canonical is not its own URL");
     if (/\b(?:null|undefined|NaN)\b/u.test(stripTags(html.replace(/<script\b[\s\S]*?<\/script>/giu,"")))) report("error", file, "invalid placeholder in object text");
