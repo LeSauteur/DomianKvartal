@@ -15,3 +15,7 @@
 .visibility-notice { border-left: 4px solid #b19045; padding: 16px; margin-block: 24px; }
 .visibility-page .form-container { max-width: 680px; }
 .visibility-page .form-container p { margin-block: 16px; }
+.preserved-zhk-content { margin-block: 32px; min-width: 0; }
+.preserved-zhk-content img { display: block; width: 100%; max-width: 100%; height: auto; min-width: 0; }
+.preserved-zhk-content .container { width: 100%; padding-inline: 0; }
+.preserved-zhk-content .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }

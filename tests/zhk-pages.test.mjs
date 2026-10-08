@@ -1,8 +1,25 @@
 import fs from "node:fs";
 import test from "node:test";
 import assert from "node:assert/strict";
+import { execFileSync } from 'node:child_process';
 import { zhkPage, zhkFile, apartmentsFor } from "../_tools/build-zhk-pages.mjs";
 const records=JSON.parse(fs.readFileSync("data/zhk/aksay.json","utf8"));
+const mainContent=html=>html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/iu)?.[1]||'';
+const words=html=>mainContent(html).replace(/<(?:script|style)\b[\s\S]*?<\/(?:script|style)>/giu,'').replace(/<[^>]*>/g,' ').trim().split(/\s+/u).filter(Boolean).length;
+test('each Aksay ZHK retains main content volume, substantive blocks, title and any FAQ schema',()=>{
+  for(const record of records.filter(r=>r.publish)) {
+    const file=zhkFile(record), before=execFileSync('git',['show','origin/main:'+file],{encoding:'utf8'}), after=fs.readFileSync(file,'utf8');
+    assert.ok(words(after)>=words(before),`${file}: ${words(before)} -> ${words(after)}`);
+    for(const heading of [...mainContent(before).matchAll(/<h[23]\b[^>]*>([\s\S]*?)<\/h[23]>/giu)]) assert.ok(after.includes(heading[1]),file+': '+heading[1]);
+    const title=before.match(/<title>(.*?)<\/title>/u)[1];
+    if(/Акса[йея]/iu.test(title)) assert.equal(after.match(/<title>(.*?)<\/title>/u)[1],title);
+    assert.ok(after.indexOf('preserved-zhk-content:start')>after.indexOf(record.source?'Факты о ЖК':'Информация о проекте'));
+    const faq=JSON.parse(fs.readFileSync('data/zhk/main-content.json','utf8')).pages[file].faq;
+    for(const node of faq) assert.ok(after.includes(JSON.stringify(node).replaceAll('<','\\u003c')),file);
+    const registry=JSON.parse(fs.readFileSync('data/catalog/registry.json','utf8'));
+    assert.equal(zhkPage(record,registry),zhkPage(record,registry),'deterministic legacy preservation');
+  }
+});
 test("five existing ZHK pages share factual layout and omit every unknown field",()=>{
   for(const record of records.filter(r=>r.publish)) {
     const html=fs.readFileSync(zhkFile(record),"utf8");
