@@ -2,6 +2,21 @@ const {test,expect}=require('@playwright/test');
 test.beforeEach(async({page})=>{
   await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.fulfill({status:204,body:''}));
 });
+
+async function serveProductionLocally(page) {
+  await page.route('https://domian-161.ru/**', async route => {
+    const url=new URL(route.request().url());
+    await route.fulfill({response:await route.fetch({url:'http://127.0.0.1:4173'+url.pathname+url.search})});
+  });
+}
+test('production counter initializes exactly once through main.js, without live analytics',async({page})=>{
+  await serveProductionLocally(page);
+  await page.goto('https://domian-161.ru/');
+  await expect.poll(()=>page.evaluate(()=>Array.from(window.ym?.a||[]).filter(a=>a[1]==='init').length)).toBe(1);
+  await page.addScriptTag({url:'https://domian-161.ru/assets/js/main.js'});
+  expect(await page.evaluate(()=>Array.from(window.ym.a).filter(a=>a[1]==='init').length)).toBe(1);
+  expect(await page.locator('script[src*="mc.yandex.ru/metrika/tag.js"]').count()).toBe(1);
+});
 test('static category links and object facts remain available without JavaScript',async({browser})=>{
   const context=await browser.newContext({javaScriptEnabled:false});
   const page=await context.newPage();

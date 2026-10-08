@@ -9,7 +9,8 @@ export function publicHtmlFiles() {
     .filter(file=>file && !excluded.some(p=>file.startsWith(p)) && !["admin.html","index-preview.html","googlea9952ce6911e1672.html","yandex_9a50321c8f91e932.html"].includes(file)).sort();
 }
 export const readPage = file => fs.readFileSync(path.join(root,file),"utf8");
-export const urlFor = file => siteOrigin + "/" + (file==="index.html"?"":file.endsWith("/index.html")?file.slice(0,-10):file);
+// Preserve the established /guides/index.html canonical; other directory pages use trailing slashes.
+export const urlFor = file => siteOrigin + "/" + (file==="index.html"?"":file!=="guides/index.html" && file.endsWith("/index.html")?file.slice(0,-10):file);
 export const noindex = html => /<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/iu.test(html);
 export const canonical = html => html.match(/<link\b[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["']/iu)?.[1] || null;
 export function fileForUrl(value, from="index.html") {

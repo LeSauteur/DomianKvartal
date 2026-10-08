@@ -127,6 +127,9 @@ for (const file of documentFiles) {
   const descriptionMatch = html.match(/<meta\b[^>]*name=["']description["'][^>]*content=(["'])(.*?)\1/iu);
   const canonicalMatches = [...html.matchAll(/<link\b[^>]*rel=(["'])canonical\1[^>]*>/giu)];
   const h1Count = (html.match(/<h1\b/giu) || []).length;
+  if (/mc\.yandex\.ru|\bym\s*\([^)]*["']init["']/iu.test(html)) {
+    report("error", file, "inline analytics bypasses the single main.js initialization path");
+  }
   const ids = idsIn(html);
   idCache.set(file, new Set(ids));
 
