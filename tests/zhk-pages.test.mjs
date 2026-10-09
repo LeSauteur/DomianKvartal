@@ -6,11 +6,13 @@ import { zhkPage, zhkFile, apartmentsFor } from "../_tools/build-zhk-pages.mjs";
 const records=JSON.parse(fs.readFileSync("data/zhk/aksay.json","utf8"));
 const mainContent=html=>html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/iu)?.[1]||'';
 const words=html=>mainContent(html).replace(/<(?:script|style)\b[\s\S]*?<\/(?:script|style)>/giu,'').replace(/<[^>]*>/g,' ').trim().split(/\s+/u).filter(Boolean).length;
-test('each Aksay ZHK retains main content volume, substantive blocks, title and any FAQ schema',()=>{
+test('each Aksay ZHK retains substantive blocks, title and synchronized FAQ schema',()=>{
   for(const record of records.filter(r=>r.publish)) {
     const file=zhkFile(record), before=execFileSync('git',['show','origin/main:'+file],{encoding:'utf8'}), after=fs.readFileSync(file,'utf8');
-    assert.ok(words(after)>=words(before),`${file}: ${words(before)} -> ${words(after)}`);
-    for(const heading of [...mainContent(before).matchAll(/<h[23]\b[^>]*>([\s\S]*?)<\/h[23]>/giu)]) assert.ok(after.includes(heading[1]),file+': '+heading[1]);
+    for(const heading of [...mainContent(before).matchAll(/<h[23]\b[^>]*>([\s\S]*?)<\/h[23]>/giu)]) {
+      const approvedHeading = heading[1] === 'Квартиры из нашего реестра' ? 'Квартиры в продаже в этом ЖК' : heading[1];
+      assert.ok(after.includes(approvedHeading),file+': '+approvedHeading);
+    }
     const title=before.match(/<title>(.*?)<\/title>/u)[1];
     if(/Акса[йея]/iu.test(title)) assert.equal(after.match(/<title>(.*?)<\/title>/u)[1],title);
     assert.ok(after.indexOf('preserved-zhk-content:start')>after.indexOf(record.source?'Факты о ЖК':'Информация о проекте'));
@@ -23,11 +25,12 @@ test('each Aksay ZHK retains main content volume, substantive blocks, title and 
 test("five existing ZHK pages share factual layout and omit every unknown field",()=>{
   for(const record of records.filter(r=>r.publish)) {
     const html=fs.readFileSync(zhkFile(record),"utf8");
-    assert.match(html,/Мы агентство недвижимости, а не застройщик/);
+    assert.match(html,/Мы агентство недвижимости, а не застройщик\. Поможем подобрать квартиру/);
+    assert.doesNotMatch(html,/согласовать условия покупки с застройщиком/);
     assert.match(html,/Чем поможем/);
     assert.match(html,new RegExp('data-source-cta="zhk_'+record.slug+'"'));
     assert.doesNotMatch(html,/UNK|city_suggested|лучшие|самые выгодные|гарантируем/iu);
-    if(record.source) {assert.ok(html.includes(record.source));assert.match(html,/07\.10\.2026/);}
+    if(record.source) {assert.ok(html.includes(record.source));assert.doesNotMatch(html,/По данным застройщика на/);assert.match(html,/Сроки относятся к указанным корпусам и очередям/);}
     else assert.doesNotMatch(html,/Застройщик<\/dt>|Сроки и отдельные корпуса<\/dt>/);
   }
   const flora=fs.readFileSync("seo/zhk-flora-aksay.html","utf8");

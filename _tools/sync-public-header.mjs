@@ -249,6 +249,10 @@ function normalizeHeaderBoundary(source) {
   return source.replace(/(<!-- unified-public-header:end -->\r?\n)[ \t]*\r?\n[ \t]*(?=<section\b)/, "$1\n");
 }
 
+export function syncPublicPage(source, file) {
+  return normalizeHeaderBoundary(addAssets(replacePropertyNav(replaceHeader(source, headerMarkup(file)), file)));
+}
+
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
 let changed = 0;
 for (const publicPath of publicPaths()) {
@@ -256,8 +260,7 @@ for (const publicPath of publicPaths()) {
   const absolute = path.join(root, file);
   if (!fs.existsSync(absolute)) throw new Error(`Missing public page: ${file}`);
   const source = fs.readFileSync(absolute, "utf8").replace(/\r\n/g, "\n");
-  const withHeader = replaceHeader(source, headerMarkup(file));
-  const output = normalizeHeaderBoundary(addAssets(replacePropertyNav(withHeader, file)));
+  const output = syncPublicPage(source, file);
   if (output !== source) {
     changed += 1;
     if (!check) fs.writeFileSync(absolute, output);

@@ -168,13 +168,18 @@ test("all local links in the construction cluster resolve", () => {
   assert.deepEqual(failures, []);
 });
 
-test("prices retain source dates and unavailable prices stay unavailable", () => {
+test("approved prices remain visible while source dates stay private", () => {
   const domanPrices = Object.fromEntries(data.projects.filter((project) => project.builderId === "domanstroy" && project.price).map((project) => [project.area, project.price]));
   assert.deepEqual(domanPrices, { 85: 4590000, 116: 6032000, 130: 6760000 });
   assert.ok(data.projects.filter((project) => project.builderId === "soyuz").every((project) => project.priceDate === "2023" && project.priceStatus === "partner-outdated"));
   assert.ok(data.projects.filter((project) => project.builderId === "eqvita").every((project) => project.price === null && project.priceStatus === "individual"));
-  assert.match(catalogue, /Ориентир по материалам партнёра 2023 года/);
-  assert.match(catalogue, /таблица от май 2026/);
+  assert.doesNotMatch(catalogue, /Ориентир по материалам партнёра 2023 года|таблица от май 2026|Что подтверждено|структурированные данные/);
+  for (const project of data.projects.filter(project => project.price)) {
+    const card = catalogue.match(new RegExp(`<article[^>]*data-project-card[^>]*data-price="${project.price}"[\\s\\S]*?</article>`));
+    assert.ok(card, project.slug);
+    assert.ok(card[0].includes(new Intl.NumberFormat("ru-RU").format(project.price)), project.slug);
+    assert.match(card[0], /Цена и наличие не являются публичной офертой/);
+  }
 });
 
 test("private partner mechanics are absent from public construction pages", () => {
@@ -188,6 +193,35 @@ test("private partner mechanics are absent from public construction pages", () =
     /комисси(?:я|онные) агент/i
   ]) {
     assert.doesNotMatch(sources, forbidden);
+  }
+});
+
+test("price requests are not repeated and White Box belongs only to Soyuz cards", () => {
+  const sources = [catalogue, ...filesIn(projectDirectory).map(name => fs.readFileSync(path.join(projectDirectory, name), "utf8")), ...filesIn(builderDirectory).map(name => fs.readFileSync(path.join(builderDirectory, name), "utf8"))];
+  for (const source of sources) {
+    for (const match of source.matchAll(/<div class="(?:construction-card__price|project-hero__price|project-price-note)">([\s\S]*?)<\/div>/g)) {
+      const text = match[1].replace(/<[^>]+>/g, " ");
+      assert.ok(count(text, /Стоимость по запросу/g) <= 1, text);
+      assert.doesNotMatch(match[1], /<(?:small|span|p)>\s*<\//);
+    }
+    for (const match of source.matchAll(/<article class="construction-card[^>]*>[\s\S]*?<\/article>/g)) {
+      if (match[0].includes("Комплектация White Box")) assert.match(match[0], /data-builder="soyuz"/);
+    }
+  }
+  for (const project of data.projects) {
+    if (JSON.stringify(project).includes("White Box")) assert.equal(project.builderId, "soyuz");
+  }
+});
+
+test("builder descriptions use customer text and counted projects", () => {
+  const expected = { domanstroy: "7 проектов", soyuz: "15 проектов", eqvita: "4 проекта", "postroim-dom": "6 построенных домов" };
+  for (const [builder, quantity] of Object.entries(expected)) {
+    const html = fs.readFileSync(path.join(builderDirectory, `${builder}.html`), "utf8");
+    for (const pattern of [/<meta name="description" content="([^"]*)"/, /<meta property="og:description" content="([^"]*)"/]) {
+      const description = html.match(pattern)?.[1];
+      assert.ok(description?.includes(quantity), description);
+      assert.doesNotMatch(description, /из материалов компании/);
+    }
   }
 });
 

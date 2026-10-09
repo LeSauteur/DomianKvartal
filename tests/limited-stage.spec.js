@@ -117,8 +117,9 @@ test("JSON enhancement reuses every static card and every filter reuses the same
     );
   });
 
-  for (const [value, count] of [["partial", 5], ["complete", 20], ["needs_review", 53], ["", 78], ["complete", 20], ["", 78]]) {
-    await page.locator("#nbCompleteness").selectOption(value);
+  for (const value of ["name", "price-asc", "price-desc", "name"]) {
+    const count = 78;
+    await page.locator("#nbSort").selectOption(value);
     await expect(page.locator("#cards > .nb-card")).toHaveCount(count);
     const identity = await page.evaluate(() => {
       const cards = [...document.querySelectorAll("#cards > .nb-card")];
@@ -152,7 +153,7 @@ for (const [label, body] of [
     }));
 
     await page.goto("/newbuilds.html", { waitUntil: "domcontentloaded" });
-    await expect(page.locator("#resultsCount")).toContainText("Показано 20 проверенных комплексов");
+    await expect(page.locator("#resultsCount")).toContainText("Показано 20 комплексов");
     const cards = page.locator("#cards > .nb-card");
     await expect(cards).toHaveCount(20);
     await expect(cards.first()).toBeVisible();
@@ -305,3 +306,46 @@ for (const viewportWidth of [390, 768, 1024, 1366]) {
     expect(network.providerRequests).toBe(0);
   });
 }
+
+
+test("client catalog filters preserve URL context, sorting and all approved prices", async ({ page }) => {
+  await blockExternalRequests(page);
+  const errors = [];
+  page.on("pageerror", error => errors.push(error.message));
+  const route = "/newbuilds.html?qa=1&utm_source=copy-review&sort=priority&completeness=complete";
+  await page.goto(route);
+  await expect(page.locator("#cards > .nb-card")).toHaveCount(78);
+  await expect(page.locator("#nbCompleteness, .nb-quality")).toHaveCount(0);
+  await expect(page.locator("#nbSort")).toHaveValue("name");
+  const originalUrl = page.url();
+  const catalog = await page.evaluate(() => fetch("output/newbuilds/catalog-v3.json").then(response => response.json()));
+  const keys = items => items.map(item => item.id);
+  const visibleKeys = () => page.locator("#cards > .nb-card").evaluateAll(nodes => nodes.map(node => node.dataset.newbuildId));
+  const named = catalog.items.slice().sort((a, b) => a.title.localeCompare(b.title, "ru"));
+  expect(await visibleKeys()).toEqual(keys(named));
+  for (const sort of ["price-asc", "price-desc"]) {
+    await page.locator("#nbSort").selectOption(sort);
+    const direction = sort === "price-asc" ? 1 : -1;
+    const ordered = catalog.items.slice().sort((a, b) => {
+      const av = Number(a.price?.value) || (direction === 1 ? Infinity : -Infinity);
+      const bv = Number(b.price?.value) || (direction === 1 ? Infinity : -Infinity);
+      return direction * (av - bv) || a.title.localeCompare(b.title, "ru");
+    });
+    expect(await visibleKeys()).toEqual(keys(ordered));
+  }
+  const first = catalog.items.find(item => item.city && item.address);
+  await page.locator("#nbCity").selectOption(first.city);
+  expect((await visibleKeys()).length).toBe(catalog.items.filter(item => item.city === first.city).length);
+  await page.locator("#nbSearch").fill(first.title);
+  await expect(page.locator(`[data-newbuild-id="${first.id}"]`)).toBeVisible();
+  await page.locator("#nbReset").click();
+  await expect(page.locator("#nbSort")).toHaveValue("name");
+  await expect(page.locator("#cards > .nb-card")).toHaveCount(78);
+  expect(page.url()).toBe(originalUrl);
+  for (const item of catalog.items.filter(item => item.price?.value >= 100000)) {
+    const card = page.locator(`[data-newbuild-id="${item.id}"]`);
+    await expect(card.locator(".nb-price")).toContainText(new Intl.NumberFormat("ru-RU").format(item.price.value));
+    await expect(card.locator(".price-disclaimer")).toHaveText("Цена и наличие не являются публичной офертой");
+  }
+  expect(errors).toEqual([]);
+});

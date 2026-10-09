@@ -33,7 +33,7 @@ test("QA mode blocks Metrika while the complete funnel emits non-personal events
 
   await page.goto("/newbuilds.html?qa=1", { waitUntil: "domcontentloaded" });
   await expect(page.locator("#cards > .nb-card")).toHaveCount(78);
-  await page.locator("#nbCompleteness").selectOption("complete");
+  await page.locator("#nbCity").selectOption("Ростов-на-Дону");
   const newbuildLink = page.locator("#cards > .nb-card h3 a").first();
   await preventNavigation(newbuildLink);
   await newbuildLink.click();

@@ -1254,6 +1254,10 @@
     });
   }
 
+  function priceDisclaimer(value) {
+    return /\d/.test(String(value || "")) ? '<p class="price-disclaimer">Цена и наличие не являются публичной офертой</p>' : "";
+  }
+
   function buildCard(item, onOpen) {
     var card = document.createElement("article");
     card.className = "card property-card";
@@ -1291,6 +1295,7 @@
       '<div class="card-content property-card__body">',
       '<h2 class="property-card__title">' + safeTitle + '</h2>',
       '<div class="card-meta property-card__price"><span class="property-card__price-value">' + escapeHtml(priceText) + '</span>' + mortgageHtml + '</div>',
+      priceDisclaimer(priceText),
       charsHtml,
       detailsHtml,
       '<div class="property-card__actions">',
@@ -1852,6 +1857,7 @@
       '<span class="hot-offer-tag property-card__meta">' + escapeHtml(item.categoryName) + '</span>',
       '<h3 class="property-card__title">' + safeTitle + '</h3>',
       '<div class="hot-offer-price property-card__price">' + escapeHtml(formatPrice(item.meta.price, item.meta.priceType)) + '</div>',
+      priceDisclaimer(formatPrice(item.meta.price, item.meta.priceType)),
       charsHtml,
       '<div class="property-card__actions">',
       '<a class="btn property-card__cta" href="' + categoryHref + '">Подробнее</a>',
@@ -1963,6 +1969,7 @@
       '<span class="new-object-card__type property-card__meta">' + typeLabel + '</span>',
       '<h3 class="property-card__title">' + title + '</h3>',
       '<div class="new-object-card__price property-card__price">' + price + '</div>',
+      priceDisclaimer(priceText),
       charsHtml,
       '<div class="property-card__actions">',
       '<a class="btn property-card__cta" href="' + detailsHref + '">Подробнее</a>',
