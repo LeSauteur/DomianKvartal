@@ -1,0 +1,155 @@
+{
+  "5-element-aske": {
+    "schemaGraph": true,
+    "robots": "noindex,follow",
+    "floorplans": {}
+  },
+  "academia": {
+    "schemaGraph": true,
+    "robots": "noindex,follow",
+    "floorplans": {
+      "assets/images/newbuilds/academia/floorplan-3-room.webp": {
+        "width": 1920,
+        "height": 1358
+      },
+      "assets/images/newbuilds/academia/floorplan-2-room.webp": {
+        "width": 1920,
+        "height": 1358
+      },
+      "assets/images/newbuilds/academia/floorplan-1-room.webp": {
+        "width": 1920,
+        "height": 1358
+      }
+    }
+  },
+  "akvatoriya": {
+    "schemaGraph": true,
+    "robots": "noindex,follow",
+    "floorplans": {}
+  },
+  "donskoy-arbat": {
+    "schemaGraph": true,
+    "robots": "noindex,follow",
+    "floorplans": {}
+  },
+  "donskoy-arbat-2": {
+    "schemaGraph": true,
+    "robots": "noindex,follow",
+    "floorplans": {}
+  },
+  "dvizhenie-61": {
+    "schemaGraph": true,
+    "robots": "noindex,follow",
+    "floorplans": {}
+  },
+  "four-premiers": {
+    "schemaGraph": true,
+    "robots": "noindex,follow",
+    "floorplans": {}
+  },
+  "gorod-u-reki": {
+    "schemaGraph": true,
+    "robots": "noindex,follow",
+    "floorplans": {}
+  },
+  "gray": {
+    "schemaGraph": true,
+    "robots": "noindex,follow",
+    "floorplans": {
+      "assets/images/newbuilds/gray/floorplan-01.webp": {
+        "width": 1358,
+        "height": 1920
+      },
+      "assets/images/newbuilds/gray/floorplan-02.webp": {
+        "width": 1000,
+        "height": 1000
+      }
+    }
+  },
+  "green-park": {
+    "schemaGraph": true,
+    "robots": "noindex,follow",
+    "floorplans": {}
+  },
+  "grinside": {
+    "schemaGraph": true,
+    "robots": "noindex,follow",
+    "floorplans": {}
+  },
+  "kristall-2": {
+    "schemaGraph": true,
+    "robots": "noindex,follow",
+    "floorplans": {}
+  },
+  "legenda-rostova": {
+    "schemaGraph": true,
+    "robots": "noindex,follow",
+    "floorplans": {}
+  },
+  "leventsovka-park": {
+    "schemaGraph": true,
+    "robots": "noindex,follow",
+    "floorplans": {}
+  },
+  "levoberezhe": {
+    "schemaGraph": false,
+    "robots": "noindex,follow",
+    "floorplans": {
+      "assets/images/newbuilds/levoberezhe/floorplan-01.webp": {
+        "width": 797,
+        "height": 961
+      },
+      "assets/images/newbuilds/levoberezhe/floorplan-02.webp": {
+        "width": 858,
+        "height": 1920
+      },
+      "assets/images/newbuilds/levoberezhe/floorplan-03.webp": {
+        "width": 1448,
+        "height": 1134
+      }
+    }
+  },
+  "oktyabr-park": {
+    "schemaGraph": true,
+    "robots": "noindex,follow",
+    "floorplans": {
+      "assets/images/newbuilds/oktyabr-park/floorplan-studio.webp": {
+        "width": 700,
+        "height": 700
+      },
+      "assets/images/newbuilds/oktyabr-park/floorplan-1-room.webp": {
+        "width": 700,
+        "height": 700
+      },
+      "assets/images/newbuilds/oktyabr-park/floorplan-2-room.webp": {
+        "width": 700,
+        "height": 700
+      }
+    }
+  },
+  "royal-towers": {
+    "schemaGraph": true,
+    "robots": "noindex,follow",
+    "floorplans": {}
+  },
+  "siyanie": {
+    "schemaGraph": true,
+    "robots": "noindex,follow",
+    "floorplans": {}
+  },
+  "smartpolet": {
+    "schemaGraph": true,
+    "robots": "noindex,follow",
+    "floorplans": {}
+  },
+  "suvorovskiy": {
+    "schemaGraph": true,
+    "robots": "noindex,follow",
+    "floorplans": {}
+  },
+  "zapadnye-allei": {
+    "schemaGraph": true,
+    "robots": "noindex,follow",
+    "floorplans": {}
+  }
+}

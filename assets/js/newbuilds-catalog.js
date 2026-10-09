@@ -31,37 +31,25 @@
     return "unknown";
   }
 
-  function completenessLabel(item) {
-    var status = item.completeness && item.completeness.state;
-    if (status === "complete") return { label: "Проверено", className: "is-complete" };
-    if (status === "partial") return { label: "Частично проверено", className: "is-partial" };
-    return { label: "Данные уточняются", className: "is-review" };
-  }
-
   function meta(label, value) {
     if (!text(value)) return "";
     return '<li><span>' + escapeHtml(label) + '</span><strong>' + escapeHtml(value) + "</strong></li>";
   }
 
   function renderCard(item) {
-    var quality = completenessLabel(item);
     var title = escapeHtml(item.title);
     var image = item.cover && item.cover.src
       ? '<img src="' + escapeHtml(item.cover.src) + '" alt="' + escapeHtml(item.cover.alt || item.title) + '" loading="lazy" width="720" height="480">'
-      : '<div class="nb-card__placeholder" aria-hidden="true"><span>ДК</span><small>Изображение уточняется</small></div>';
+      : '<div class="nb-card__placeholder" aria-hidden="true"><span>ДК</span><small>Фото комплекса</small></div>';
     var titleMarkup = item.detail_url
       ? '<a href="' + escapeHtml(item.detail_url) + '">' + title + "</a>"
       : title;
     var primary = item.detail_url
       ? '<a class="nb-card__primary" href="' + escapeHtml(item.detail_url) + '">О комплексе</a>'
-      : '<a class="nb-card__primary" href="index.html#contact">Уточнить данные</a>';
-    var sourceLine = item.checked_at
-      ? "Проверено " + new Intl.DateTimeFormat("ru-RU").format(new Date(item.checked_at + "T12:00:00"))
-      : "Источник требует актуализации";
+      : '<a class="nb-card__primary" href="index.html#contact">Подобрать квартиру</a>';
     return [
       '<article class="nb-card" data-newbuild-id="' + escapeHtml(item.id) + '" data-newbuild-slug="' + escapeHtml(item.slug) + '" data-completeness="' + escapeHtml(item.completeness.state) + '">',
       '<div class="nb-card__media">', image,
-      '<span class="nb-quality ' + quality.className + '">' + quality.label + "</span>",
       "</div>",
       '<div class="nb-card__body">',
       '<div class="nb-card__top"><p>' + escapeHtml(item.city || "Ростовская область") + '</p><h3>' + titleMarkup + "</h3></div>",
@@ -73,7 +61,7 @@
       meta("Застройщик", item.developer || "Уточняется"),
       "</ul>",
       '<div class="nb-card__actions">', primary, '<a href="tel:+79536091122">Позвонить</a></div>',
-      '<p class="nb-card__source">' + escapeHtml(sourceLine) + "</p>",
+      item.price && Number(item.price.value) >= 100000 ? '<p class="price-disclaimer">Цена и наличие не являются публичной офертой</p>' : "",
       "</div></article>"
     ].join("");
   }
@@ -133,7 +121,7 @@
     image.addEventListener("error", function () {
       var placeholder = document.createElement("div");
       placeholder.className = "nb-card__placeholder";
-      placeholder.innerHTML = "<span>ДК</span><small>Изображение уточняется</small>";
+      placeholder.innerHTML = "<span>ДК</span><small>Фото комплекса</small>";
       image.replaceWith(placeholder);
     }, { once: true });
   }
@@ -173,12 +161,10 @@
     var query = text(nodes.search.value).toLocaleLowerCase("ru-RU");
     var city = nodes.city.value;
     var status = nodes.status.value;
-    var completeness = nodes.completeness.value;
     var result = state.items.filter(function (item) {
       if (query && normalizeSearch(item).indexOf(query) === -1) return false;
       if (city && item.city !== city) return false;
       if (status && statusGroup(item) !== status) return false;
-      if (completeness && item.completeness.state !== completeness) return false;
       return true;
     });
 
@@ -195,8 +181,7 @@
         }
         return av - bv || a.title.localeCompare(b.title, "ru");
       }
-      var rank = { complete: 0, partial: 1, legacy: 2, needs_review: 3 };
-      return (rank[a.completeness.state] - rank[b.completeness.state]) || a.title.localeCompare(b.title, "ru");
+      return a.title.localeCompare(b.title, "ru");
     });
     state.filtered = result;
     render();
@@ -225,7 +210,7 @@
   }
 
   function bind() {
-    [nodes.search, nodes.city, nodes.status, nodes.completeness, nodes.sort].forEach(function (node) {
+    [nodes.search, nodes.city, nodes.status, nodes.sort].forEach(function (node) {
       node.addEventListener(node === nodes.search ? "input" : "change", applyFilters);
     });
     nodes.form.addEventListener("reset", function () { window.setTimeout(applyFilters, 0); });
@@ -235,7 +220,7 @@
     nodes = {
       form: document.getElementById("newbuildFilters"), search: document.getElementById("nbSearch"),
       city: document.getElementById("nbCity"), status: document.getElementById("nbStatus"),
-      completeness: document.getElementById("nbCompleteness"), sort: document.getElementById("nbSort"),
+      sort: document.getElementById("nbSort"),
       cards: document.getElementById("cards"), count: document.getElementById("resultsCount"),
       empty: document.getElementById("nbEmpty")
     };
@@ -245,14 +230,11 @@
       .then(function (data) {
         state.items = validateCatalogData(data);
         document.getElementById("nbTotalStat").textContent = state.items.length;
-        document.getElementById("nbVerifiedStat").textContent = state.items.filter(function (item) {
-          return item.completeness && item.completeness.state === "complete";
-        }).length;
         fillCities(); prepareCards(); bind(); applyFilters();
       })
       .catch(function (error) {
         var fallbackCount = nodes.cards.querySelectorAll('.nb-card[data-completeness="complete"]').length;
-        nodes.count.textContent = "Показано " + fallbackCount + " проверенных комплексов. Остальные данные временно недоступны.";
+        nodes.count.textContent = "Показано " + fallbackCount + " комплексов. Другие предложения можно подобрать со специалистом.";
         console.error("Newbuilds V3:", error);
       });
   }

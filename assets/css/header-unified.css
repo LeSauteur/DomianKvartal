@@ -432,7 +432,7 @@ body.drawer-open { overflow: hidden; }
   box-shadow: 0 22px 48px rgba(54, 38, 27, .1);
 }
 .newbuilds-v3 .nb-hero__content { grid-area: content; align-self: center; }
-.newbuilds-v3 .nb-hero__facts { grid-area: facts; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.newbuilds-v3 .nb-hero__facts { grid-area: facts; grid-template-columns: minmax(0, 1fr); }
 .newbuilds-v3 .nb-hero__media {
   grid-area: media;
   height: 350px;

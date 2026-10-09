@@ -40,11 +40,11 @@ function staticCardSnapshot(match) {
   const body = match[2];
   const heading = body.match(/<h3>\s*<a\b([^>]*)>([\s\S]*?)<\/a>\s*<\/h3>/i);
   const image = body.match(/<img\b([^>]*)>/i);
-  const checked = body.match(/<p\b[^>]*class=["'][^"']*nb-card__source[^"']*["'][^>]*>([\s\S]*?)<\/p>/i);
+  if (/\d[\d\s.,]*\s*₽/.test(textContent(body))) assert.match(body, /Цена и наличие не являются публичной офертой/);
 
   assert.ok(heading, `card ${attribute(attributes, "data-newbuild-id")} needs a linked heading`);
   assert.ok(image, `card ${attribute(attributes, "data-newbuild-id")} needs a cover image`);
-  assert.ok(checked, `card ${attribute(attributes, "data-newbuild-id")} needs a checked date`);
+
 
   return {
     id: attribute(attributes, "data-newbuild-id"),
@@ -53,8 +53,7 @@ function staticCardSnapshot(match) {
     detailUrl: attribute(heading[1], "href"),
     title: textContent(heading[2]),
     coverSrc: attribute(image[1], "src"),
-    coverAlt: attribute(image[1], "alt"),
-    checkedLabel: textContent(checked[1])
+    coverAlt: attribute(image[1], "alt")
   };
 }
 
@@ -66,8 +65,7 @@ function expectedCompleteSnapshot(item) {
     detailUrl: item.detail_url,
     title: item.title,
     coverSrc: item.cover.src,
-    coverAlt: item.cover.alt,
-    checkedLabel: `Проверено ${new Intl.DateTimeFormat("ru-RU").format(new Date(`${item.checked_at}T12:00:00`))}`
+    coverAlt: item.cover.alt
   };
 }
 
@@ -159,4 +157,47 @@ test("thanks context persistence is limited to an allowlisted non-personal categ
   assert.match(handler, /aliases\[objectType\]\s*\|\|\s*aliases\[leadType\]/);
   assert.doesNotMatch(handler, /localStorage/);
   assert.ok(successGuard >= 0 && persistenceCall > successGuard, "thanks category must be saved after the success guard");
+});
+
+
+test("newbuild detail regeneration retains values and omits approved technical annotations", async () => {
+  const { default: generator } = await import("../_private/generate-newbuild-pages.js");
+  const catalog = JSON.parse(read("output/newbuilds/catalog-v3.json"));
+  for (const item of catalog.items.filter(item => item.detail_url)) {
+    const html = generator.render(item);
+    assert.doesNotMatch(html, /Проверено|Источник и актуальность|Проверка данных|Файлы сохранены локально|Официальные материалы/);
+    assert.match(html, /Цена и наличие не являются публичной офертой/);
+    assert.ok(html.includes(item.official_url || item.sources[0]?.url));
+    if (item.price?.value >= 100000) assert.ok(html.includes(new Intl.NumberFormat("ru-RU").format(item.price.value)));
+    const schema = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+    const residence = schema["@graph"]?.find(node => node["@type"] === "Residence") || schema;
+    assert.equal(residence.description, item.description);
+    assert.equal(residence.name, item.title);
+    const currentSchema = JSON.parse(read(`newbuilds/${item.slug}/index.html`).match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+    assert.deepEqual(schema, currentSchema, `existing schema changed for ${item.slug}`);
+  }
+});
+
+
+test("client descriptions stay nonempty and gallery omission never generates a placeholder", async () => {
+  const { default: generator } = await import("../_private/generate-newbuild-pages.js");
+  const catalog = JSON.parse(read("output/newbuilds/catalog-v3.json"));
+  const first = catalog.items.find(item => item.detail_url);
+  const empty = generator.render({ ...first, description: "" });
+  assert.match(empty, /Подробности — по запросу/);
+  assert.doesNotMatch(empty, /undefined|Что уточнить|<p[^>]*>\s*<\/p>/);
+  for (const [slug, expected] of [["zhk-lenina-46-rostov", "Сданный жилой комплекс рядом с площадью Ленина."], ["zhk-ekaterininskiy-rostov", "Многокорпусный жилой комплекс в западной части Ростова-на-Дону."]]) {
+    const original = catalog.items.find(item => item.slug === slug);
+    const html = generator.render({ ...first, description: original.description });
+    const schema = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+    const residence = schema["@graph"]?.find(node => node["@type"] === "Residence") || schema;
+    assert.equal(residence.description, expected);
+    assert.ok(html.includes(`<p class="nbd-lead">${expected}</p>`));
+    assert.doesNotMatch(html, /не подтвержден|не подтверждён/);
+    assert.equal(original.description, catalog.items.find(item => item.slug === slug).description);
+  }
+  const river = catalog.items.find(item => item.slug === "levoberezhe");
+  const html = generator.render(river);
+  assert.equal([...html.matchAll(/class="nbd-gallery__item/g)].length, river.images.length);
+  assert.doesNotMatch(html, /Что уточнить|nbd-note|placeholder/);
 });

@@ -118,6 +118,11 @@
         const normalizedPrice = rawPrice.replace(/^\s*от\s+/i, '').trim();
         price.textContent = normalizedPrice;
 
+        const priceNotice = document.createElement('p');
+        priceNotice.className = 'price-disclaimer';
+        priceNotice.textContent = 'Цена и наличие не являются публичной офертой';
+        priceNotice.hidden = !/\d/.test(normalizedPrice);
+
         const desc = document.createElement('p');
         desc.className = 'showcase-card__description';
         desc.textContent = text(item.shortDescription);
@@ -153,7 +158,7 @@
         ctaGroup.className = 'showcase-card__actions';
         ctaGroup.append(appointmentCta, phoneCta);
 
-        body.append(category, title, location, price, createMeta(item), details, ctaGroup);
+        body.append(category, title, location, price, priceNotice, createMeta(item), details, ctaGroup);
         article.append(imageWrap, body);
         return article;
     }

@@ -1,8 +1,10 @@
 const fs = require("fs");
 const path = require("path");
+const { syncPublicPage } = require("../_tools/sync-public-header.mjs");
 
 const ROOT = path.resolve(__dirname, "..");
 const DATA = JSON.parse(fs.readFileSync(path.join(ROOT, "output", "newbuilds", "catalog-v3.json"), "utf8"));
+const PRESENTATION = JSON.parse(fs.readFileSync(path.join(ROOT, "_private", "newbuild-page-presentation.json"), "utf8"));
 
 function esc(value) {
   return String(value ?? "").replace(/[&<>'"]/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;" }[char]));
@@ -22,18 +24,36 @@ function fact(label, value) {
   return `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`;
 }
 
-const missingLabels = {
-  city: "город", address: "адрес", developer: "застройщик", status: "статус",
-  description: "описание", official_url: "официальный сайт", checked_at: "дата проверки",
-  cover: "обложка", gallery_3: "третье изображение галереи", detail_page: "внутренняя страница"
-};
+function clientDescription(item) {
+  const descriptions = {
+    "Сданный жилой комплекс рядом с площадью Ленина. Актуальная цена и наличие квартир на официальной странице не подтверждены.": "Сданный жилой комплекс рядом с площадью Ленина.",
+    "Многокорпусный жилой комплекс в западной части Ростова-на-Дону. Актуальная цена первичного предложения не подтверждена.": "Многокорпусный жилой комплекс в западной части Ростова-на-Дону."
+  };
+  return descriptions[item.description] || item.description || "Подробности — по запросу";
+}
 
 function render(item) {
+  const description = clientDescription(item);
   const canonical = `https://domian-161.ru/newbuilds/${item.slug}/`;
-  const checked = item.checked_at ? new Intl.DateTimeFormat("ru-RU").format(new Date(`${item.checked_at}T12:00:00`)) : "уточняется";
+  const presentation = PRESENTATION[item.slug] || { schemaGraph: false, robots: "noindex,follow", floorplans: {} };
+  const residence = {
+    "@context": "https://schema.org", "@type": "Residence", name: item.title,
+    description, address: item.address, url: canonical,
+    image: item.images.map((image) => `https://domian-161.ru/${image.src}`)
+  };
+  const structured = presentation.schemaGraph ? { "@context": "https://schema.org", "@graph": [
+    { ...residence, "@id": `${canonical}#residence` },
+    { "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://domian-161.ru/" },
+      { "@type": "ListItem", "position": 2, "name": "Новостройки", "item": "https://domian-161.ru/newbuilds.html" },
+      { "@type": "ListItem", "position": 3, "name": item.title, "item": canonical }
+    ] }
+  ] } : residence;
+  const floorplanSize = (plan) => {
+    const size = presentation.floorplans[plan.src];
+    return size ? ` width="${size.width}" height="${size.height}"` : "";
+  };
   const area = item.areas?.min && item.areas?.max ? `${item.areas.min}–${item.areas.max} м²` : item.areas?.min ? `от ${item.areas.min} м²` : null;
-  const quality = item.completeness.state === "complete" ? "Проверено по официальному источнику" : "Часть данных уточняется";
-  const qualityClass = item.completeness.state === "complete" ? "is-complete" : "is-partial";
   const gallery = item.images.map((image, index) => `
         <figure class="nbd-gallery__item${index === 0 ? " is-wide" : ""}">
           <img src="${asset(image.src)}" alt="${esc(image.alt)}" loading="${index === 0 ? "eager" : "lazy"}" width="1200" height="800">
@@ -41,33 +61,28 @@ function render(item) {
         </figure>`).join("");
   const floorplans = item.floorplans.length ? `
     <section class="nbd-section" aria-labelledby="floorplans-title">
-      <div class="nbd-section__head"><span>Квартиры</span><h2 id="floorplans-title">Планировки</h2><p>Изображения получены с официального сайта проекта. Наличие конкретной квартиры и параметры нужно подтвердить перед сделкой.</p></div>
+      <div class="nbd-section__head"><span>Квартиры</span><h2 id="floorplans-title">Планировки</h2><p>Выберите подходящую планировку — поможем подобрать квартиру.</p></div>
       <div class="nbd-floorplans">${item.floorplans.map((plan) => `
-        <figure><img src="${asset(plan.src)}" alt="${esc(plan.alt)}" loading="lazy"><figcaption>${esc(plan.alt)}</figcaption></figure>`).join("")}</div>
+        <figure><img src="${asset(plan.src)}" alt="${esc(plan.alt)}" loading="lazy"${floorplanSize(plan)}><figcaption>${esc(plan.alt)}</figcaption></figure>`).join("")}</div>
     </section>` : "";
-  const missing = item.completeness.missing.length ? `<p class="nbd-note"><strong>Что уточнить:</strong> ${esc(item.completeness.missing.map((key) => missingLabels[key] || key).join(", "))}.</p>` : "";
 
-  return `<!DOCTYPE html>
+  const html = `<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${esc(item.title)} — цены, фото и информация о ЖК | Домиан Квартал</title>
-  <meta name="description" content="${esc(item.title)}: ${esc(item.description || "информация о жилом комплексе")}. Адрес, застройщик, статус, официальные фото и планировки.">
+  <meta name="description" content="${esc(item.title)}: ${esc(description)}. Адрес, застройщик, статус, официальные фото и планировки.">
   <link rel="canonical" href="${canonical}">
   <meta property="og:title" content="${esc(item.title)} — Домиан Квартал">
-  <meta property="og:description" content="${esc(item.description || "Информация о жилом комплексе")}">
+  <meta property="og:description" content="${esc(description)}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="${canonical}">
   <meta property="og:image" content="https://domian-161.ru/${esc(item.cover.src)}">
   <link rel="stylesheet" href="../../assets/css/main.css">
   <link rel="stylesheet" href="../../assets/css/visual-premium.css">
   <link rel="stylesheet" href="../../assets/css/newbuild-detail.css">
-  <script type="application/ld+json">${JSON.stringify({
-    "@context": "https://schema.org", "@type": "Residence", name: item.title,
-    description: item.description, address: item.address, url: canonical,
-    image: item.images.map((image) => `https://domian-161.ru/${image.src}`)
-  }).replace(/</g, "\\u003c")}</script>
+  <script type="application/ld+json">${JSON.stringify(structured).replace(/</g, "\\u003c")}</script>
 </head>
 <body class="newbuild-detail-page">
   <header class="nbd-header">
@@ -84,13 +99,12 @@ function render(item) {
       <div class="container nbd-hero__grid">
         <div class="nbd-hero__media"><img src="${asset(item.cover.src)}" alt="${esc(item.cover.alt)}" width="1200" height="800"></div>
         <div class="nbd-hero__content">
-          <span class="nbd-quality ${qualityClass}">${quality}</span>
           <p class="nbd-location">${esc(item.city || "Ростовская область")}</p>
           <h1>${esc(item.title)}</h1>
           ${priceMarkup(item.price)}
-          <p class="nbd-lead">${esc(item.description || "Информация о проекте уточняется.")}</p>
+          <p class="nbd-lead">${esc(description)}</p>
           <div class="nbd-actions"><a class="btn" href="../../index.html#contact">Уточнить наличие</a><a class="btn secondary" href="tel:+79536091122">Позвонить</a></div>
-          <p class="nbd-disclaimer">Цена и наличие не являются публичной офертой. Проверено: ${checked}.</p>
+          <p class="nbd-disclaimer">Цена и наличие не являются публичной офертой</p>
         </div>
       </div>
     </section>
@@ -109,19 +123,18 @@ function render(item) {
     </section>
 
     <section class="nbd-section" aria-labelledby="gallery-title">
-      <div class="nbd-section__head"><span>Официальные материалы</span><h2 id="gallery-title">Галерея проекта</h2><p>Файлы сохранены локально с официального сайта ЖК или застройщика. Изображения агрегаторов не используются.</p></div>
+      <div class="nbd-section__head"><h2 id="gallery-title">Галерея проекта</h2></div>
       <div class="nbd-gallery">${gallery}</div>
     </section>
     ${floorplans}
 
-    <section class="nbd-section nbd-source" aria-labelledby="source-title">
+    <div class="nbd-section nbd-source" role="group" aria-label="Информация для покупателя">
       <div class="nbd-source__content">
-        <span>Проверка данных</span><h2 id="source-title">Источник и актуальность</h2>
-        <p>Основные сведения сверены с первичным источником. Для цены, конкретного корпуса, срока передачи ключей и доступности квартиры обязательна повторная проверка перед бронированием.</p>
-        ${missing}
+
+        <p>Поможем выбрать корпус и квартиру, сравнить стоимость, сроки передачи ключей и условия покупки.</p>
       </div>
-      <div class="nbd-source__card"><small>Официальный источник</small><strong>${esc(item.sources[0]?.domain || "Не указан")}</strong><a href="${esc(item.official_url || item.sources[0]?.url || "../../newbuilds.html")}" target="_blank" rel="noopener noreferrer">Открыть официальный сайт →</a><span>Проверено: ${checked}</span></div>
-    </section>
+      <div class="nbd-source__card"><small>Сайт застройщика</small><strong>${esc(item.sources[0]?.domain || "Не указан")}</strong><a href="${esc(item.official_url || item.sources[0]?.url || "../../newbuilds.html")}" target="_blank" rel="noopener noreferrer">Сайт застройщика →</a></div>
+    </div>
 
     <section class="nbd-cta"><div><span>Поможем сравнить проекты</span><h2>Нужна квартира в новостройке?</h2><p>Проверим доступность лотов, условия застройщика и документы на дату обращения.</p></div><a class="btn" href="../../index.html#contact">Получить подборку</a></section>
   </main>
@@ -130,37 +143,49 @@ function render(item) {
   <script src="../../assets/js/main.js" defer></script>
 </body>
 </html>\n`;
+  const file = `newbuilds/${item.slug}/index.html`;
+  const withHeader = syncPublicPage(html.replaceAll('href="../../index.html#contact"', 'href="/#lead-form-section"')
+    .replaceAll('href="../../index.html"', 'href="/"')
+    .replace('<a href="../../privacy.html">Политика конфиденциальности</a>', '<a href="/privacy.html">Политика обработки персональных данных</a><a href="/personal-data-consent.html">Согласие на обработку персональных данных</a><a href="/cookies.html">Политика cookie</a><a href="/offer.html">Пользовательское соглашение</a><a href="/details.html">Реквизиты</a>'), file);
+  return syncPublicPage(withHeader, file)
+    .replace('</head>', `<meta name="robots" content="${esc(presentation.robots)}">\n</head>`)
+    .replace(/[ \t]+$/gm, "");
 }
 
-let count = 0;
-const detailItems = DATA.items.filter((entry) => entry.detail_url);
-for (const item of detailItems) {
-  const directory = path.join(ROOT, "newbuilds", item.slug);
-  fs.mkdirSync(directory, { recursive: true });
-  fs.writeFileSync(path.join(directory, "index.html"), render(item), "utf8");
-  count += 1;
+function generatePages() {
+  let count = 0;
+  const detailItems = DATA.items.filter((entry) => entry.detail_url);
+  for (const item of detailItems) {
+    const directory = path.join(ROOT, "newbuilds", item.slug);
+    fs.mkdirSync(directory, { recursive: true });
+    fs.writeFileSync(path.join(directory, "index.html"), render(item), "utf8");
+    count += 1;
+  }
+
+  const sitemapPath = path.join(ROOT, "sitemap.xml");
+  let sitemap = fs.readFileSync(sitemapPath, "utf8");
+  const generatedDate = String(DATA.generated_at || "").slice(0, 10);
+  if (generatedDate) {
+    sitemap = sitemap.replace(
+      /(<url><loc>https:\/\/domian-161\.ru\/newbuilds\.html<\/loc><lastmod>)[^<]+/,
+      `$1${generatedDate}`
+    );
+  }
+
+  const missingSitemapEntries = [];
+  for (const item of detailItems) {
+    const loc = `https://domian-161.ru/newbuilds/${item.slug}/`;
+    if (sitemap.includes(`<loc>${loc}</loc>`)) continue;
+    missingSitemapEntries.push(`  <url><loc>${loc}</loc><lastmod>${item.checked_at || generatedDate}</lastmod></url>`);
+  }
+  if (missingSitemapEntries.length) {
+    sitemap = sitemap.replace("</urlset>", `${missingSitemapEntries.join("\n")}\n</urlset>`);
+  }
+  fs.writeFileSync(sitemapPath, sitemap, "utf8");
+
+  console.log(`generated=${count}`);
+  console.log(`sitemap_added=${missingSitemapEntries.length}`);
 }
 
-const sitemapPath = path.join(ROOT, "sitemap.xml");
-let sitemap = fs.readFileSync(sitemapPath, "utf8");
-const generatedDate = String(DATA.generated_at || "").slice(0, 10);
-if (generatedDate) {
-  sitemap = sitemap.replace(
-    /(<url><loc>https:\/\/domian-161\.ru\/newbuilds\.html<\/loc><lastmod>)[^<]+/,
-    `$1${generatedDate}`
-  );
-}
-
-const missingSitemapEntries = [];
-for (const item of detailItems) {
-  const loc = `https://domian-161.ru/newbuilds/${item.slug}/`;
-  if (sitemap.includes(`<loc>${loc}</loc>`)) continue;
-  missingSitemapEntries.push(`  <url><loc>${loc}</loc><lastmod>${item.checked_at || generatedDate}</lastmod></url>`);
-}
-if (missingSitemapEntries.length) {
-  sitemap = sitemap.replace("</urlset>", `${missingSitemapEntries.join("\n")}\n</urlset>`);
-}
-fs.writeFileSync(sitemapPath, sitemap, "utf8");
-
-console.log(`generated=${count}`);
-console.log(`sitemap_added=${missingSitemapEntries.length}`);
+module.exports = { render };
+if (require.main === module) generatePages();

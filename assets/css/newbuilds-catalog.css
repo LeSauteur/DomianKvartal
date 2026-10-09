@@ -47,7 +47,8 @@
 .nb-hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
 .newbuilds-v3 .nb-hero__actions .btn { min-width: 190px; text-align: center; }
 
-.nb-hero__facts {
+.newbuilds-v3 .nb-hero__facts {
+  grid-template-columns: minmax(0, 1fr);
   display: grid;
   gap: 1px;
   overflow: hidden;
@@ -68,7 +69,7 @@
 
 .nb-filters {
   display: grid;
-  grid-template-columns: minmax(260px, 1.6fr) repeat(4, minmax(150px, 1fr)) auto;
+  grid-template-columns: minmax(260px, 1.6fr) repeat(3, minmax(150px, 1fr)) auto;
   gap: 12px;
   padding: 18px;
   border: 1px solid rgba(114, 64, 49, .14);
