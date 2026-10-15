@@ -2803,6 +2803,15 @@ body.drawer-open {
     line-height: 1.4;
 }
 
+[data-lead-form] .h-captcha {
+  display: flex;
+  grid-column: 1 / -1;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 16px;
+}
+
 .form-consent {
     display: grid;
     grid-template-columns: auto 1fr;

@@ -1,6 +1,5 @@
-const { test, expect } = require("@playwright/test");
+const { test, expect, LOCAL_ORIGIN } = require("./captcha-fixture");
 
-const LOCAL_ORIGIN = "http://127.0.0.1:4173";
 const THANKS_KEY = "domian_thanks_category";
 const THANKS_WRITE_LOG = "__test_thanks_category_writes";
 

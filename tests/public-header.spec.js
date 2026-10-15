@@ -1,4 +1,4 @@
-const { test, expect } = require("@playwright/test");
+const { test, expect } = require("./captcha-fixture");
 const path = require("node:path");
 
 test("unified header keeps a navigation entry point through the construction breakpoint", async ({ page }) => {

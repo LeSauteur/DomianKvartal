@@ -500,6 +500,10 @@
         }
       }
 
+      if (data && data.success === false && /captcha/i.test(String(data.message || ""))) {
+        throw new LeadSubmissionError("captcha");
+      }
+
       if (!response.ok) {
         throw new LeadSubmissionError(categoryForHttpStatus(response.status));
       }
@@ -563,6 +567,7 @@
 
   function messageForError(category) {
     var messages = {
+      captcha: "Подтвердите, что вы не робот, и отправьте ещё раз",
       offline: "Сейчас нет подключения к интернету. Проверьте сеть и попробуйте ещё раз.",
       timeout: "Сервис не ответил вовремя. Данные сохранены в форме — попробуйте ещё раз.",
       http_400: "Не удалось отправить заявку. Проверьте поля или свяжитесь с нами напрямую.",

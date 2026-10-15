@@ -1,4 +1,4 @@
-const {test,expect}=require('@playwright/test');
+const {test,expect,LOCAL_ORIGIN}=require("./captcha-fixture");
 test.beforeEach(async({page})=>{
   await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.fulfill({status:204,body:''}));
 });
@@ -26,7 +26,7 @@ test('Aksay district joins Aksay ahead of other cities',async({page})=>{
 async function serveProductionLocally(page) {
   await page.route('https://domian-161.ru/**', async route => {
     const url=new URL(route.request().url());
-    await route.fulfill({response:await route.fetch({url:'http://127.0.0.1:4173'+url.pathname+url.search})});
+    await route.fulfill({response:await route.fetch({url:LOCAL_ORIGIN+url.pathname+url.search})});
   });
 }
 test('production counter initializes exactly once through main.js, without live analytics',async({page})=>{
@@ -82,7 +82,7 @@ test('static category links and object facts remain available without JavaScript
   const context=await browser.newContext({javaScriptEnabled:false});
   const page=await context.newPage();
   await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.fulfill({status:204,body:''}));
-  await page.goto('http://127.0.0.1:4173/apartments.html');
+  await page.goto(LOCAL_ORIGIN+'/apartments.html');
   await expect(page.locator('[data-registry-id="object_910"] a')).toHaveAttribute('href','/obekt/object_910.html');
   await page.locator('[data-registry-id="object_910"] a').click();
   await expect(page.locator('h1')).toHaveText(/Квартира.*36 м².*Ростов-на-Дону/);

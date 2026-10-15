@@ -1,4 +1,5 @@
 const { defineConfig } = require("@playwright/test");
+const baseURL = process.env.PLAYWRIGHT_BASE_URL || "http://127.0.0.1:4173";
 
 module.exports = defineConfig({
   testDir: "./tests",
@@ -11,7 +12,7 @@ module.exports = defineConfig({
   workers: 1,
   reporter: [["list"]],
   use: {
-    baseURL: "http://127.0.0.1:4173",
+    baseURL,
     channel: "chrome",
     headless: true,
     screenshot: "only-on-failure",
@@ -19,8 +20,9 @@ module.exports = defineConfig({
   },
   webServer: {
     command: "node tests/static-server.mjs",
-    url: "http://127.0.0.1:4173/index.html",
-    reuseExistingServer: true,
+    env: { PORT: new URL(baseURL).port || "4173" },
+    url: baseURL + "/index.html",
+    reuseExistingServer: false,
     timeout: 10000
   }
 });

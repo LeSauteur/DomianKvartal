@@ -117,7 +117,8 @@ test("project pages use honest service schema and expose no invented offer", () 
     if (!built) assert.match(source, /Не является публичной офертой/);
     if (built) {
       assert.doesNotMatch(source, /Рендер проекта|вариант фасада|class="[^\"]*project-plan|class="[^\"]*project-living|None этажа/);
-      assert.doesNotMatch(source, /(?:src|srcset)="https?:\/\//);
+      const withoutCaptchaScript = source.replace('<script src="https://web3forms.com/client/script.js" async defer></script>', '');
+      assert.doesNotMatch(withoutCaptchaScript, /(?:src|srcset)="https?:\/\//);
       assert.match(source, /Стоимость и срок нового строительства определяются отдельно/);
     }
     assert.match(source, /data-project-code=/);
