@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require("./captcha-fixture");
 test.use({ screenshot: 'off', trace: 'off' });
 test.beforeEach(async ({ page }) => {
   await page.route('**/*', route => {

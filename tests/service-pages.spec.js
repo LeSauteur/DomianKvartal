@@ -1,4 +1,4 @@
-const { test, expect } = require("@playwright/test");
+const { test, expect } = require("./captcha-fixture");
 
 function rgb(value) {
   return (value.match(/\d+(?:\.\d+)?/g) || []).slice(0, 3).map(Number);

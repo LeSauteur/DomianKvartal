@@ -1,6 +1,5 @@
-const { test, expect } = require("@playwright/test");
+const { test, expect, LOCAL_ORIGIN } = require("./captcha-fixture");
 
-const LOCAL_ORIGIN = "http://127.0.0.1:4173";
 
 async function isolateProductionServices(page) {
   const network = { providerRequests: 0, metrikaRequests: 0, external: [] };

@@ -36,5 +36,5 @@ export function publicPage({file,title,description,h1,body,structured="",noindex
     +structured+'\n</head><body class="visibility-page">'+headerMarkup(file)+'\n'
     +'<main><section class="visibility-intro container"><h1>'+esc(h1)+'</h1>'+body+'</section>\n'
     +propertyDiscoveryMarkup(file)+'\n'+form+'</main>'+footer()
-    +'<script src="/assets/js/lead-config.js" defer></script><script src="/assets/js/main.js" defer></script><script src="/assets/js/form-handler.js" defer></script><script src="/assets/js/header-unified.js" defer></script></body></html>\n';
+    +'<script src="/assets/js/lead-config.js" defer></script><script src="/assets/js/main.js" defer></script><script src="/assets/js/form-handler.js" defer></script><script src="/assets/js/header-unified.js" defer></script>'+(form?'<script src="https://web3forms.com/client/script.js" async defer></script>':'')+'</body></html>\n';
 }

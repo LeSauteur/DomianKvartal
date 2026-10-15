@@ -1,6 +1,5 @@
-const { test, expect } = require("@playwright/test");
+const { test, expect, mockCaptchaScript, LOCAL_ORIGIN } = require("./captcha-fixture");
 
-const LOCAL_ORIGIN = "http://127.0.0.1:4173";
 const MAX_DIRECT_URL = "https://max.ru/u/f9LHodD0cOKImT5sxxh2fLN4YFJ-paNFCiI79MwgO-LJJZ8oHXX5TN007y4";
 
 async function installAnalyticsProbe(page, shortenTimeout) {
@@ -39,6 +38,11 @@ async function mockExternalRequests(page, scenario = {}) {
     }
 
     network.externalUrls.push(url.href);
+
+    if (url.href === "https://web3forms.com/client/script.js") {
+      await mockCaptchaScript(route);
+      return;
+    }
 
     if (url.hostname === "api.web3forms.com") {
       network.providerRequests += 1;
@@ -94,6 +98,7 @@ async function fillValidForm(page, overrides = {}) {
   }
   await page.locator("#lead-service").selectOption(overrides.service || "buy");
   await page.locator("#lead-privacy-consent").check();
+  await page.getByRole('checkbox', { name: 'Тестовая hCaptcha' }).check();
 }
 
 async function submitAndExpectError(page, category) {
@@ -187,6 +192,8 @@ test("valid submission sends once, includes attribution, and redirects only on c
   expect(payload).toContain('name="object_title"');
   expect(payload).toContain('name="lead_type"');
   expect(payload).toContain('name="source_cta"');
+  expect(payload).toContain('name="h-captcha-response"');
+  expect(payload).toContain('test-captcha-token');
   expect(payload).toContain('name="subject"');
   expect(payload).toContain('name="from_name"');
   expect(payload).toContain('name="source"');
@@ -252,6 +259,74 @@ test("success:false is an error and never redirects", async ({ page }) => {
   await fillValidForm(page);
   await submitAndExpectError(page, "success_false");
   expect(network.providerRequests).toBe(1);
+});
+
+for (const status of [200, 400, 403]) {
+  test(`captcha rejection at HTTP ${status} preserves fields and emits captcha error`, async ({ page }) => {
+    const network = await mockExternalRequests(page, {
+      status,
+      body: JSON.stringify({ success: false, message: 'hCaptcha validation failed' })
+    });
+    await openPage(page, '/index.html?qa=1#lead-form-section');
+    await fillValidForm(page);
+    await page.getByRole('checkbox', { name: 'Тестовая hCaptcha' }).uncheck();
+    await submitAndExpectError(page, 'captcha');
+    await expect(page.locator('[data-form-status]')).toHaveText('Подтвердите, что вы не робот, и отправьте ещё раз');
+    await expect(page.locator('#lead-name')).toHaveValue('Тест Клиент');
+    await expect(page.locator('#lead-privacy-consent')).toBeChecked();
+    expect(network.providerRequests).toBe(1);
+    expect(network.payloads[0]).not.toContain('test-captcha-token');
+    expect((await getGoals(page)).some(event => event.goal === 'lead_form_success')).toBe(false);
+  });
+}
+
+test('QA retry after captcha rejection retains attribution and redirects after solving', async ({ page }) => {
+  const scenario = { status: 400, body: JSON.stringify({ success: false, message: 'CAPTCHA is required' }) };
+  const network = await mockExternalRequests(page, scenario);
+  await openPage(page, '/index.html?qa=1&utm_source=captcha_test#lead-form-section');
+  await fillValidForm(page);
+  await page.getByRole('checkbox', { name: 'Тестовая hCaptcha' }).uncheck();
+  await submitAndExpectError(page, 'captcha');
+  const leadId = await page.locator('[name="lead_id"]').inputValue();
+  const sessionId = await page.locator('[name="session_id"]').inputValue();
+  await page.getByRole('checkbox', { name: 'Тестовая hCaptcha' }).check();
+  scenario.status = 200;
+  scenario.body = JSON.stringify({ success: true });
+  await page.locator('[data-fallback-retry]').click();
+  await page.waitForURL(/thanks\.html\?qa=1$/);
+  expect(network.providerRequests).toBe(2);
+  for (const payload of network.payloads) {
+    expect(payload).toContain(leadId);
+    expect(payload).toContain(sessionId);
+    expect(payload).toContain('captcha_test');
+    expect(payload).toContain('name="is_test"\r\n\r\ntrue');
+    expect(payload).toContain('name="source_cta"');
+    expect(payload).toContain('name="lead_type"');
+  }
+  expect(network.payloads[1]).toContain('test-captcha-token');
+});
+
+test('captcha fits every form layout at 375 and 1366 pixels', async ({ page }) => {
+  test.setTimeout(60000);
+  await mockExternalRequests(page);
+  const zhkFile = require('node:fs').readdirSync(require('node:path').join(__dirname, '../seo')).find(name => name.startsWith('zhk-') && name.endsWith('.html'));
+  for (const width of [375, 1366]) {
+    await page.setViewportSize({ width, height: 900 });
+    for (const file of ['index.html', 'index-preview.html', 'rent.html', 'commercial.html', 'sell-apartment.html', 'property-valuation.html', 'construction.html', 'construction/projects/eqvita-03.html', 'construction/builders/eqvita.html', 'obekt/object_916.html', 'seo/' + zhkFile]) {
+      await openPage(page, '/' + file + '?qa=1');
+      const captcha = page.locator('[data-lead-form] .h-captcha');
+      await expect(captcha.getByRole('checkbox')).toBeVisible();
+      const bounds = await captcha.evaluate(widget => {
+        const form = widget.closest('form').getBoundingClientRect();
+        const box = widget.firstElementChild.getBoundingClientRect();
+        return { left: box.left, right: box.right, formLeft: form.left, formRight: form.right, viewport: innerWidth, overflow: document.documentElement.scrollWidth > innerWidth };
+      });
+      expect(bounds.left, `${file} at ${width}px`).toBeGreaterThanOrEqual(bounds.formLeft);
+      expect(bounds.right, `${file} at ${width}px`).toBeLessThanOrEqual(bounds.formRight);
+      expect(bounds.right, `${file} at ${width}px`).toBeLessThanOrEqual(bounds.viewport);
+      if (width === 375) expect(bounds.overflow, file).toBe(false);
+    }
+  }
 });
 
 test("invalid JSON is an error and never redirects", async ({ page }) => {

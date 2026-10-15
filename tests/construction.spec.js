@@ -1,8 +1,7 @@
-const { test, expect } = require("@playwright/test");
+const { test, expect, LOCAL_ORIGIN } = require("./captcha-fixture");
 const fs = require("node:fs");
 const path = require("node:path");
 
-const LOCAL_ORIGIN = "http://127.0.0.1:4173";
 
 async function installGoalProbe(page) {
   await page.addInitScript(() => {
