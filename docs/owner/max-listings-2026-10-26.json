@@ -6,7 +6,7 @@
       "id": "house_914",
       "source": "source_001",
       "type": "house",
-      "canonical": "output\\houses\\house_914\\data.json",
+      "canonical": "output/houses/house_914/data.json",
       "price": 11500000,
       "price_basis": "owner_authorized_thousands_interpretation_pending_confirmation",
       "source_message_indexes": [
@@ -92,7 +92,7 @@
       "id": "house_915",
       "source": "source_002",
       "type": "house",
-      "canonical": "output\\houses\\house_915\\data.json",
+      "canonical": "output/houses/house_915/data.json",
       "price": null,
       "price_basis": "on_request_due_to_source_conflict",
       "source_message_indexes": [
@@ -208,7 +208,7 @@
       "id": "object_1013",
       "source": "source_003",
       "type": "apartment",
-      "canonical": "objects\\object_1013\\data.json",
+      "canonical": "objects/object_1013/data.json",
       "price": 8800000,
       "price_basis": "owner_authorized_thousands_interpretation_pending_confirmation",
       "source_message_indexes": [
@@ -366,7 +366,7 @@
       "id": "house_916",
       "source": "source_004",
       "type": "house",
-      "canonical": "output\\houses\\house_916\\data.json",
+      "canonical": "output/houses/house_916/data.json",
       "price": 24500000,
       "price_basis": "explicit_in_source",
       "source_message_indexes": [
@@ -546,7 +546,7 @@
       "id": "object_1014",
       "source": "source_005",
       "type": "apartment",
-      "canonical": "objects\\object_1014\\data.json",
+      "canonical": "objects/object_1014/data.json",
       "price": 6900000,
       "price_basis": "owner_authorized_thousands_interpretation_pending_confirmation",
       "source_message_indexes": [

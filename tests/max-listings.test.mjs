@@ -12,6 +12,7 @@ const expected = {house_914:[11500000,10],house_915:[null,14],object_1013:[88000
 test('MAX listings retain approved prices, unique local media and exclude unconfirmed apartments',()=>{
   const hashes=new Set();
   for(const record of provenance.records){
+    assert.doesNotMatch(record.canonical,/\\/,'Source paths must work on Windows and Linux');
     const r=registry.find(r=>r.id===record.id), d=read(record.canonical);
     assert.equal(r.price,expected[r.id][0]);
     assert.equal(r.images.length,expected[r.id][1]);
