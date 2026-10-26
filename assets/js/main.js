@@ -908,6 +908,18 @@
       images.innerHTML = getCardImages(item).map(function (img) {
         return '<img src="' + escapeHtml(img) + '" loading="lazy" alt="' + escapeHtml(item.title || 'Объект') + '">';
       }).join('');
+      var plans = qs('[data-modal-plans]', panel);
+      if (item.floorPlans && item.floorPlans.length && !plans) {
+        plans = document.createElement('section');
+        plans.setAttribute('data-modal-plans', '');
+        images.insertAdjacentElement('afterend', plans);
+      }
+      if (plans) {
+        plans.hidden = !(item.floorPlans && item.floorPlans.length);
+        plans.innerHTML = plans.hidden ? '' : '<h3>Планировка</h3>' + item.floorPlans.map(function (image) {
+          return '<a href="' + escapeHtml(image) + '" target="_blank" rel="noopener noreferrer"><img src="' + escapeHtml(image) + '" loading="lazy" alt="Планировка квартиры"></a>';
+        }).join('');
+      }
       var facts = qs('[data-modal-facts]', panel);
       if (!facts) { facts = document.createElement('div'); facts.setAttribute('data-modal-facts', ''); panel.insertBefore(facts, images); }
       var meta = item.meta || {};
@@ -1707,6 +1719,7 @@
         return { id:r.id, objectType:type, title:r.title, description:r.fullDescription || '',
           city:r.city, district:r.district, settlement:r.settlement, address:r.address,
           images:localImages, cover:localImages[0] || '', sectionLink:type+'.html',
+          floorPlans:(r.floor_plans || []).map(function (image) { return image.replace(/^https:\/\/domian-161\.ru(?=\/)/, ''); }),
           meta:{price:r.price,rooms:f.rooms,area:f.area,houseArea:type==='houses'?f.area:null,landArea:f.landArea,floor:f.floor,floors:f.totalFloors} };
       }).sort(function (a,b) { return aksayFirst(b) - aksayFirst(a); });
     });

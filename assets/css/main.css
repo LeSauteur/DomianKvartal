@@ -2812,6 +2812,9 @@ body.drawer-open {
   margin-bottom: 16px;
 }
 
+#modalDesc { white-space: pre-line; }
+[data-modal-plans] img { display:block; max-width:100%; height:auto; margin-block:16px; }
+
 .form-consent {
     display: grid;
     grid-template-columns: auto 1fr;

@@ -2,6 +2,35 @@ const {test,expect,LOCAL_ORIGIN}=require("./captcha-fixture");
 test.beforeEach(async({page})=>{
   await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.fulfill({status:204,body:''}));
 });
+
+test('new MAX listings render approved prices and keep floor plans separate on mobile and desktop',async({page})=>{
+  test.setTimeout(60000);
+  for(const width of [375,1366]){
+    await page.setViewportSize({width,height:900});
+    for(const [id,price,count] of [['house_914','11 500 000 ₽',10],['house_915','Цена по запросу',14],['object_1013','8 800 000 ₽',19],['house_916','24 500 000 ₽',23],['object_1014','6 900 000 ₽',10]]){
+      await page.goto('/obekt/'+id+'.html?qa=1');
+      await expect(page.locator('.visibility-price')).toHaveText(price);
+      await expect(page.locator('.visibility-gallery img')).toHaveCount(count);
+      await expect(page.locator('.visibility-description')).toBeVisible();
+      const images=await page.locator('.visibility-gallery img, [data-object-plans] img').evaluateAll(async images=>{
+        return Promise.all(images.map(async image=>{image.loading='eager';await image.decode();return image.naturalWidth>0;}));
+      });
+      expect(images.every(Boolean)).toBe(true);
+      expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+      if(id==='house_915')await expect(page.locator('.visibility-description')).not.toContainText('16 500 000');
+      await expect(page.locator('[data-object-plans]')).toHaveCount(id==='object_1013'?1:0);
+    }
+  }
+  await page.goto('/apartments.html?qa=1&object=object_1013');
+  await expect(page.locator('#modal')).toBeVisible();
+  await expect(page.locator('#modalImages img')).toHaveCount(19);
+  await expect(page.locator('[data-modal-plans] img')).toHaveCount(1);
+  await expect(page.locator('[data-modal-plans]')).toContainText('Планировка');
+  await page.keyboard.press('Escape');
+  await page.locator('[data-object-id="object_1014"] .property-card__cta').click();
+  await expect(page.locator('#modalImages img')).toHaveCount(10);
+  await expect(page.locator('[data-modal-plans]')).toBeHidden();
+});
 test('placeholder query never opens a listing and no placeholder cards are rendered',async({page})=>{
   for(const category of ['houses','lands']) {
     const id=category==='houses'?'house_901':'land_901';
@@ -113,14 +142,15 @@ test('direct object form overrides stale object context and uses the shared prov
   expect(payload).not.toContain('5950000');
 });
 test('city filters preserve unknown locations and expose Rostov and Azov accurately',async({page})=>{
+  const registry=require('../data/catalog/registry.json');
+  const apartments=registry.filter(r=>r.type==='apartment'&&(!r.status||r.status==='active'));
   await page.goto('/apartments.html?qa=1');
   await expect(page.locator('#cards .property-card').first()).toContainText('Аксай');
   await page.locator('[data-filter=city]').selectOption('Аксай');
-  await expect(page.locator('#cards .property-card')).toHaveCount(6);
+  await expect(page.locator('#cards .property-card')).toHaveCount(apartments.filter(r=>['Аксай','Аксайский район'].includes(r.city)).length);
   await expect(page).toHaveURL(/f_city=/);
   await page.locator('[data-filter=city]').selectOption('unknown');
-  const registry=require('../data/catalog/registry.json');
-  await expect(page.locator('#cards .property-card')).toHaveCount(registry.filter(r=>r.type==='apartment'&&r.city===null).length);
+  await expect(page.locator('#cards .property-card')).toHaveCount(apartments.filter(r=>r.city===null).length);
   await page.goto('/houses.html?qa=1');
   await page.locator('[data-filter=city]').selectOption('Ростов-на-Дону');
   await expect(page.locator('#cards .property-card')).toHaveCount(1);
