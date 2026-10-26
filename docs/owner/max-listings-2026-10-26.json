@@ -1,0 +1,657 @@
+{
+  "date": "2026-10-26",
+  "source_archive_sha256": "d2d0d9b9314b773eaab671236faf660b02f73e1c2e49fa116048afac2ea3d104",
+  "records": [
+    {
+      "id": "house_914",
+      "source": "source_001",
+      "type": "house",
+      "canonical": "output/houses/house_914/data.json",
+      "price": 11500000,
+      "price_basis": "owner_authorized_thousands_interpretation_pending_confirmation",
+      "source_message_indexes": [
+        94,
+        95,
+        96
+      ],
+      "media": [
+        {
+          "source_file": "img/m096_01.webp",
+          "source_message_index": 96,
+          "path": "/assets/images/listings/house_914/01.webp",
+          "kind": "photo",
+          "sha256": "1e5df8c769226d075f7e15002d9bb1cafd3480f3c0384c2d6a4eb9446a0b9ea0"
+        },
+        {
+          "source_file": "img/m096_02.webp",
+          "source_message_index": 96,
+          "path": "/assets/images/listings/house_914/02.webp",
+          "kind": "photo",
+          "sha256": "8928f65cd6fa1647409d8835cc20cb63e3732c69e87f36167c9621519a634854"
+        },
+        {
+          "source_file": "img/m096_03.webp",
+          "source_message_index": 96,
+          "path": "/assets/images/listings/house_914/03.webp",
+          "kind": "photo",
+          "sha256": "57545852e4ec02f3c1056705638dc8fbead11fd83bda8d0e3bcd85110ff5b3bd"
+        },
+        {
+          "source_file": "img/m096_04.webp",
+          "source_message_index": 96,
+          "path": "/assets/images/listings/house_914/04.webp",
+          "kind": "photo",
+          "sha256": "4b502bd2b3a4d7aa99b3c8714bf381b6dd8bf5fbfc0440987db8030c313069ee"
+        },
+        {
+          "source_file": "img/m096_05.webp",
+          "source_message_index": 96,
+          "path": "/assets/images/listings/house_914/05.webp",
+          "kind": "photo",
+          "sha256": "61f4a263c64502bdcc1f66ed2ea3fb0db6285b5005e64057869309ea68eab7e2"
+        },
+        {
+          "source_file": "img/m096_06.webp",
+          "source_message_index": 96,
+          "path": "/assets/images/listings/house_914/06.webp",
+          "kind": "photo",
+          "sha256": "c6cba7e4f5321772ed4d9e3dcf2e6d96ff6010a1a30f75554c14ee49c721c6eb"
+        },
+        {
+          "source_file": "img/m096_07.webp",
+          "source_message_index": 96,
+          "path": "/assets/images/listings/house_914/07.webp",
+          "kind": "photo",
+          "sha256": "31677853fa21f9e22ac87454effab3f505396990dfb2cbb010e66bf0ae0a6898"
+        },
+        {
+          "source_file": "img/m096_08.webp",
+          "source_message_index": 96,
+          "path": "/assets/images/listings/house_914/08.webp",
+          "kind": "photo",
+          "sha256": "8b751a4e550a441b9724c8af25730dca74831ca046faad57ecb6495d6945fb4c"
+        },
+        {
+          "source_file": "img/m096_09.webp",
+          "source_message_index": 96,
+          "path": "/assets/images/listings/house_914/09.webp",
+          "kind": "photo",
+          "sha256": "884d0084356c3ea088d0d3c96e7177e5b368d7f21e264fb8bf7964695b93f180"
+        },
+        {
+          "source_file": "img/m096_10.webp",
+          "source_message_index": 96,
+          "path": "/assets/images/listings/house_914/10.webp",
+          "kind": "photo",
+          "sha256": "28afbe615187686f999de0f21590cd31efd87f2f3c24f9f595c736c4a4ac403a"
+        }
+      ],
+      "excluded_source_files": []
+    },
+    {
+      "id": "house_915",
+      "source": "source_002",
+      "type": "house",
+      "canonical": "output/houses/house_915/data.json",
+      "price": null,
+      "price_basis": "on_request_due_to_source_conflict",
+      "source_message_indexes": [
+        97,
+        98,
+        99,
+        100,
+        101
+      ],
+      "media": [
+        {
+          "source_file": "img/m099_01.webp",
+          "source_message_index": 99,
+          "path": "/assets/images/listings/house_915/01.webp",
+          "kind": "photo",
+          "sha256": "ce777c3d68f0a588ddfd7e71ba40b8786d345edd4d926dfd50c091d4679ab789"
+        },
+        {
+          "source_file": "img/m099_02.webp",
+          "source_message_index": 99,
+          "path": "/assets/images/listings/house_915/02.webp",
+          "kind": "photo",
+          "sha256": "ac6f545827dd840f188bf46d59775f8c97ba6c1b9d383e213873bec21a61e8cf"
+        },
+        {
+          "source_file": "img/m099_03.webp",
+          "source_message_index": 99,
+          "path": "/assets/images/listings/house_915/03.webp",
+          "kind": "photo",
+          "sha256": "f8dd8c3671f2358ba3301f8febf26c0ef336f061650140f6108417b9bdd57173"
+        },
+        {
+          "source_file": "img/m099_04.webp",
+          "source_message_index": 99,
+          "path": "/assets/images/listings/house_915/04.webp",
+          "kind": "photo",
+          "sha256": "576968cd5c74b6ce4e2cb59eedfe8bbfe12bbbd708cea21d3a0e69ddbc632eec"
+        },
+        {
+          "source_file": "img/m099_05.webp",
+          "source_message_index": 99,
+          "path": "/assets/images/listings/house_915/05.webp",
+          "kind": "photo",
+          "sha256": "56b670b7b9366e16be921bd27c45219e64cbc93686183df1b1877d226d20430d"
+        },
+        {
+          "source_file": "img/m100_01.webp",
+          "source_message_index": 100,
+          "path": "/assets/images/listings/house_915/06.webp",
+          "kind": "photo",
+          "sha256": "d8d4abdaf8187c6cb2fbb314c82cc314665b33285d21d69add832ecb3bc76068"
+        },
+        {
+          "source_file": "img/m100_02.webp",
+          "source_message_index": 100,
+          "path": "/assets/images/listings/house_915/07.webp",
+          "kind": "photo",
+          "sha256": "ae542d8d9b90ea0a842ff87558ae0e838232f83c733353a281d1e868f5707c43"
+        },
+        {
+          "source_file": "img/m100_03.webp",
+          "source_message_index": 100,
+          "path": "/assets/images/listings/house_915/08.webp",
+          "kind": "photo",
+          "sha256": "6ad21836ffacde48fb8fddcdeba44ec2940a72c91b531c11c532573b853947b5"
+        },
+        {
+          "source_file": "img/m100_04.webp",
+          "source_message_index": 100,
+          "path": "/assets/images/listings/house_915/09.webp",
+          "kind": "photo",
+          "sha256": "b0d81ab5a06ab87821d423161bf5b9f34e3cc496ca9d889eccaa4d3587f3401b"
+        },
+        {
+          "source_file": "img/m100_05.webp",
+          "source_message_index": 100,
+          "path": "/assets/images/listings/house_915/10.webp",
+          "kind": "photo",
+          "sha256": "cf3473c3b97258f0f3fa0b61121988a5c2f0b9b735ecb125748c51ef04298c65"
+        },
+        {
+          "source_file": "img/m100_06.webp",
+          "source_message_index": 100,
+          "path": "/assets/images/listings/house_915/11.webp",
+          "kind": "photo",
+          "sha256": "3de5ee30dff18f91ebe484e282c9a4852fba580d660c9453ccbe435dae2a3635"
+        },
+        {
+          "source_file": "img/m100_07.webp",
+          "source_message_index": 100,
+          "path": "/assets/images/listings/house_915/12.webp",
+          "kind": "photo",
+          "sha256": "1cc97ee9393636f0afcc3e8fd4c9967bfa55e3004c6a794938c6a0bff56133d2"
+        },
+        {
+          "source_file": "img/m100_08.webp",
+          "source_message_index": 100,
+          "path": "/assets/images/listings/house_915/13.webp",
+          "kind": "photo",
+          "sha256": "264e980c6188a3518a1e5057bafadbca6b1c14606113471e3320989bab07b1b9"
+        },
+        {
+          "source_file": "img/m100_09.webp",
+          "source_message_index": 100,
+          "path": "/assets/images/listings/house_915/14.webp",
+          "kind": "photo",
+          "sha256": "300d378c297db38356380462321b519d6342ceb1ba288bb993b79f71403cc391"
+        }
+      ],
+      "excluded_source_files": []
+    },
+    {
+      "id": "object_1013",
+      "source": "source_003",
+      "type": "apartment",
+      "canonical": "objects/object_1013/data.json",
+      "price": 8800000,
+      "price_basis": "owner_authorized_thousands_interpretation_pending_confirmation",
+      "source_message_indexes": [
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "media": [
+        {
+          "source_file": "img/m104_01.webp",
+          "source_message_index": 104,
+          "path": "/assets/images/listings/object_1013/01.webp",
+          "kind": "photo",
+          "sha256": "a6c500f4fc8453c2854d978f973a90bd85887155a4da7c640618e1c0b137ca6d"
+        },
+        {
+          "source_file": "img/m104_02.webp",
+          "source_message_index": 104,
+          "path": "/assets/images/listings/object_1013/02.webp",
+          "kind": "photo",
+          "sha256": "a2fe9062768c9dd94a19d76e989c9aace9477098b4842072305520d62b7164cb"
+        },
+        {
+          "source_file": "img/m104_03.webp",
+          "source_message_index": 104,
+          "path": "/assets/images/listings/object_1013/03.webp",
+          "kind": "photo",
+          "sha256": "7d33af13b2c4891831d2cfe72b693f63565941070992e6a49d0531024e3775bf"
+        },
+        {
+          "source_file": "img/m104_04.webp",
+          "source_message_index": 104,
+          "path": "/assets/images/listings/object_1013/04.webp",
+          "kind": "photo",
+          "sha256": "d54443373f641d6bf6323c59848e3cfafd21e5bcc5389a78e2f70f8e3a9af904"
+        },
+        {
+          "source_file": "img/m104_05.webp",
+          "source_message_index": 104,
+          "path": "/assets/images/listings/object_1013/05.webp",
+          "kind": "photo",
+          "sha256": "58839af026d136c77715f15c468e9cb23f0aa680aa64580489995ed16046fd0d"
+        },
+        {
+          "source_file": "img/m104_06.webp",
+          "source_message_index": 104,
+          "path": "/assets/images/listings/object_1013/06.webp",
+          "kind": "photo",
+          "sha256": "e7e4c36cd164ba8dc77133fd3884bc9db01b2c986308a588841fe0e29934b4d2"
+        },
+        {
+          "source_file": "img/m104_07.webp",
+          "source_message_index": 104,
+          "path": "/assets/images/listings/object_1013/07.webp",
+          "kind": "photo",
+          "sha256": "8af85646b23681cd0a97abe83ab608a1967d5198a67ea3e751e085c83af57cfd"
+        },
+        {
+          "source_file": "img/m104_08.webp",
+          "source_message_index": 104,
+          "path": "/assets/images/listings/object_1013/08.webp",
+          "kind": "photo",
+          "sha256": "6979f171e971aa24acedbdb4f377c3df1b5f813090cc8f17f62c9c708fba9f34"
+        },
+        {
+          "source_file": "img/m104_09.webp",
+          "source_message_index": 104,
+          "path": "/assets/images/listings/object_1013/09.webp",
+          "kind": "photo",
+          "sha256": "3897cdb8a024111577fc404759adf7eec001ed3c80f770262ed3061a88f838db"
+        },
+        {
+          "source_file": "img/m104_10.webp",
+          "source_message_index": 104,
+          "path": "/assets/images/listings/object_1013/10.webp",
+          "kind": "photo",
+          "sha256": "d43c31543799b263a9aea7ff8aea4c9b60d411c1177c03ea42d1f81d9c8398e9"
+        },
+        {
+          "source_file": "img/m105_01.webp",
+          "source_message_index": 105,
+          "path": "/assets/images/listings/object_1013/11.webp",
+          "kind": "photo",
+          "sha256": "6dd55403b9f8299d3e782fb80fb1d029032ce53810057d4d46ff4fd3045f5538"
+        },
+        {
+          "source_file": "img/m105_02.webp",
+          "source_message_index": 105,
+          "path": "/assets/images/listings/object_1013/12.webp",
+          "kind": "photo",
+          "sha256": "1a0c0adede5bb309300e94e212c7522a1932977692fff2aef63d641dd46cd894"
+        },
+        {
+          "source_file": "img/m105_03.webp",
+          "source_message_index": 105,
+          "path": "/assets/images/listings/object_1013/13.webp",
+          "kind": "photo",
+          "sha256": "41be7a06ea5a9603f2f43ed1a37a86aec8e5da9e48ffe1a69de0871a7d9b86b5"
+        },
+        {
+          "source_file": "img/m105_04.webp",
+          "source_message_index": 105,
+          "path": "/assets/images/listings/object_1013/14.webp",
+          "kind": "photo",
+          "sha256": "413d10c160d5f0eabae2c7164d5200872b4e7e8e438f67d22a001946b76af815"
+        },
+        {
+          "source_file": "img/m105_05.webp",
+          "source_message_index": 105,
+          "path": "/assets/images/listings/object_1013/plan.webp",
+          "kind": "floor_plan",
+          "sha256": "c382cb42ade27430cc39c35f1b7060f7f28ad01100421378558e557ceecea61a"
+        },
+        {
+          "source_file": "img/m105_06.webp",
+          "source_message_index": 105,
+          "path": "/assets/images/listings/object_1013/15.webp",
+          "kind": "photo",
+          "sha256": "c7415a4d4a8a17e143c984a913f70f7786ecdf644be4d34bbe785cde52ccc11c"
+        },
+        {
+          "source_file": "img/m105_07.webp",
+          "source_message_index": 105,
+          "path": "/assets/images/listings/object_1013/16.webp",
+          "kind": "photo",
+          "sha256": "0c9fb2a5495e17668de320cb5f70d3276c4b7b14dc60fb7813c3d4a7ca3c76e4"
+        },
+        {
+          "source_file": "img/m105_08.webp",
+          "source_message_index": 105,
+          "path": "/assets/images/listings/object_1013/17.webp",
+          "kind": "photo",
+          "sha256": "f077d989ac27b72bb2052981828d719612d2d66e08a36fae263a3a54f06e22dd"
+        },
+        {
+          "source_file": "img/m105_09.webp",
+          "source_message_index": 105,
+          "path": "/assets/images/listings/object_1013/18.webp",
+          "kind": "photo",
+          "sha256": "e62ae182d04293210383fe2af2f30ea51e8d3bf0377962725c9408eb290ea37d"
+        },
+        {
+          "source_file": "img/m106_01.webp",
+          "source_message_index": 106,
+          "path": "/assets/images/listings/object_1013/19.webp",
+          "kind": "photo",
+          "sha256": "3899a47e661d3bcae7a98d1157d31a304832fa08c9873dd93651c2574ae92d13"
+        }
+      ],
+      "excluded_source_files": []
+    },
+    {
+      "id": "house_916",
+      "source": "source_004",
+      "type": "house",
+      "canonical": "output/houses/house_916/data.json",
+      "price": 24500000,
+      "price_basis": "explicit_in_source",
+      "source_message_indexes": [
+        107,
+        108,
+        109,
+        110
+      ],
+      "media": [
+        {
+          "source_file": "img/m108_01.webp",
+          "source_message_index": 108,
+          "path": "/assets/images/listings/house_916/01.webp",
+          "kind": "photo",
+          "sha256": "3c54879a5a4ba755b3e3c686b23911fa990eaa6bdb93db772336631897f2cf86"
+        },
+        {
+          "source_file": "img/m108_02.webp",
+          "source_message_index": 108,
+          "path": "/assets/images/listings/house_916/02.webp",
+          "kind": "photo",
+          "sha256": "c52ec0ec07cd2f708bf639485a09730a13fa618087cca10e26a38bb8d918c7a4"
+        },
+        {
+          "source_file": "img/m108_03.webp",
+          "source_message_index": 108,
+          "path": "/assets/images/listings/house_916/03.webp",
+          "kind": "photo",
+          "sha256": "f1b5f0f51195240912891163eac171bbdf68e5f174e1e96d298eec5db4c76774"
+        },
+        {
+          "source_file": "img/m108_04.webp",
+          "source_message_index": 108,
+          "path": "/assets/images/listings/house_916/04.webp",
+          "kind": "photo",
+          "sha256": "5c707443a84bf6ebd0325c433fc58e468c5ee9c88b04c880acd465ae4cdc02c2"
+        },
+        {
+          "source_file": "img/m108_05.webp",
+          "source_message_index": 108,
+          "path": "/assets/images/listings/house_916/05.webp",
+          "kind": "photo",
+          "sha256": "367d25a240c3dd856d3bdadfd0ce03fcb0158ad8fa0cdc54798600bda6e0725b"
+        },
+        {
+          "source_file": "img/m108_08.webp",
+          "source_message_index": 108,
+          "path": "/assets/images/listings/house_916/06.webp",
+          "kind": "photo",
+          "sha256": "463f3161176a13107ea11b804122e89c82824b7ea8800041d4aff075e3cfbde4"
+        },
+        {
+          "source_file": "img/m108_09.webp",
+          "source_message_index": 108,
+          "path": "/assets/images/listings/house_916/07.webp",
+          "kind": "photo",
+          "sha256": "e9dfb67aef1177af5c913b4cb78d3c6d36642457e293b3b48060e8ff28dd5304"
+        },
+        {
+          "source_file": "img/m108_10.webp",
+          "source_message_index": 108,
+          "path": "/assets/images/listings/house_916/08.webp",
+          "kind": "photo",
+          "sha256": "e78988c361e0fb772b91dd09bb6d68a1a1529ced0baae7dc67142d256fcd3e46"
+        },
+        {
+          "source_file": "img/m109_01.webp",
+          "source_message_index": 109,
+          "path": "/assets/images/listings/house_916/09.webp",
+          "kind": "photo",
+          "sha256": "c6572aa1a56f6bb8705d9b59ac4a30d17eedd4a072634a840d566425182f4034"
+        },
+        {
+          "source_file": "img/m109_02.webp",
+          "source_message_index": 109,
+          "path": "/assets/images/listings/house_916/10.webp",
+          "kind": "photo",
+          "sha256": "717aad25e63c58b8a30f9f10cacb5bf950db526a14027f50028770f982b3e2b6"
+        },
+        {
+          "source_file": "img/m109_03.webp",
+          "source_message_index": 109,
+          "path": "/assets/images/listings/house_916/11.webp",
+          "kind": "photo",
+          "sha256": "028ce0da9cee40ef9490070fbbba6e9997ecbea7cbf6d3c2307c3ff3c634c836"
+        },
+        {
+          "source_file": "img/m109_04.webp",
+          "source_message_index": 109,
+          "path": "/assets/images/listings/house_916/12.webp",
+          "kind": "photo",
+          "sha256": "625a6de66ceae66d4ef8b1dd944f70df71d76ae5b03269636892648ac7d1febe"
+        },
+        {
+          "source_file": "img/m109_05.webp",
+          "source_message_index": 109,
+          "path": "/assets/images/listings/house_916/13.webp",
+          "kind": "photo",
+          "sha256": "052b2183ffd098d7446f8c76e1787e5c1e4d15d60e34fc2a0b75955a779a1dc8"
+        },
+        {
+          "source_file": "img/m109_06.webp",
+          "source_message_index": 109,
+          "path": "/assets/images/listings/house_916/14.webp",
+          "kind": "photo",
+          "sha256": "7e8a8d016e8e4c2a30a5d19059517861902adb69d571b7982e119709c5f56251"
+        },
+        {
+          "source_file": "img/m109_08.webp",
+          "source_message_index": 109,
+          "path": "/assets/images/listings/house_916/15.webp",
+          "kind": "photo",
+          "sha256": "93e176e6c789a3714fdd586e5b059b8a8623176339272649f0eeb1c15122d5ba"
+        },
+        {
+          "source_file": "img/m109_09.webp",
+          "source_message_index": 109,
+          "path": "/assets/images/listings/house_916/16.webp",
+          "kind": "photo",
+          "sha256": "99b6156e4f94520dd86ee7df4d5b4fa17a006a5d1f527ab4753aabd52b8ad724"
+        },
+        {
+          "source_file": "img/m109_10.webp",
+          "source_message_index": 109,
+          "path": "/assets/images/listings/house_916/17.webp",
+          "kind": "photo",
+          "sha256": "47cb55ce378ba0493842c5eab52b6dad19ac41e38e7eff737d9c1509977b13f6"
+        },
+        {
+          "source_file": "img/m110_01.webp",
+          "source_message_index": 110,
+          "path": "/assets/images/listings/house_916/18.webp",
+          "kind": "photo",
+          "sha256": "2c7e7967b06dacd51b3f7d6d8291394c1bf17834521cf7bfaeb84f3e4d1e2e66"
+        },
+        {
+          "source_file": "img/m110_02.webp",
+          "source_message_index": 110,
+          "path": "/assets/images/listings/house_916/19.webp",
+          "kind": "photo",
+          "sha256": "2b22e34e734548319b7aaa296197779e6fd859bab5376c45ca0841bf617ea243"
+        },
+        {
+          "source_file": "img/m110_03.webp",
+          "source_message_index": 110,
+          "path": "/assets/images/listings/house_916/20.webp",
+          "kind": "photo",
+          "sha256": "42917cc3b2222365a416cbbd51cd7d038e76d359d6727b7249cab57ab5d50073"
+        },
+        {
+          "source_file": "img/m110_04.webp",
+          "source_message_index": 110,
+          "path": "/assets/images/listings/house_916/21.webp",
+          "kind": "photo",
+          "sha256": "140594607942355d55d0e163daaccd0e475d8f6ffeacf1702be8aab7d58954a8"
+        },
+        {
+          "source_file": "img/m110_05.webp",
+          "source_message_index": 110,
+          "path": "/assets/images/listings/house_916/22.webp",
+          "kind": "photo",
+          "sha256": "225593113e4e1601e69f0ac66010dc1e78a435e0895e765cc70c88d2bcfcc611"
+        },
+        {
+          "source_file": "img/m110_06.webp",
+          "source_message_index": 110,
+          "path": "/assets/images/listings/house_916/23.webp",
+          "kind": "photo",
+          "sha256": "ac186fa06ba1b3a8ea5951d21cd3faee82aab8ed9fd5fa8506d874b1ae469817"
+        }
+      ],
+      "excluded_source_files": [],
+      "cover_source_file": "img/m110_03.webp",
+      "cover_path": "/assets/images/listings/house_916/20.webp"
+    },
+    {
+      "id": "object_1014",
+      "source": "source_005",
+      "type": "apartment",
+      "canonical": "objects/object_1014/data.json",
+      "price": 6900000,
+      "price_basis": "owner_authorized_thousands_interpretation_pending_confirmation",
+      "source_message_indexes": [
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123
+      ],
+      "media": [
+        {
+          "source_file": "img/m112_01.webp",
+          "source_message_index": 112,
+          "path": "/assets/images/listings/object_1014/01.webp",
+          "kind": "photo",
+          "sha256": "73508c6c47a3dc989a83b8558d5ba139f6e52694e5fba5248e00e414c9d048f9"
+        },
+        {
+          "source_file": "img/m112_02.webp",
+          "source_message_index": 112,
+          "path": "/assets/images/listings/object_1014/02.webp",
+          "kind": "photo",
+          "sha256": "e9b79f8118c12df9a46f4bf89898a6b4a28e409e8a97cb9ee81cc3a99c528b50"
+        },
+        {
+          "source_file": "img/m112_03.webp",
+          "source_message_index": 112,
+          "path": "/assets/images/listings/object_1014/03.webp",
+          "kind": "photo",
+          "sha256": "8c98e742e1c36052bdeacf91d6a119701fa0526ee8527dee15026118834d333b"
+        },
+        {
+          "source_file": "img/m112_04.webp",
+          "source_message_index": 112,
+          "path": "/assets/images/listings/object_1014/04.webp",
+          "kind": "photo",
+          "sha256": "097826bb36f7ff991e0d6d0e08abcfea57ed9b52f2485c35c7a4b35ed1816f05"
+        },
+        {
+          "source_file": "img/m112_05.webp",
+          "source_message_index": 112,
+          "path": "/assets/images/listings/object_1014/05.webp",
+          "kind": "photo",
+          "sha256": "08b2ed7e39f90de46a3d1204a4ea8663b24e20843cd8d9c6bf62025fc626004c"
+        },
+        {
+          "source_file": "img/m112_06.webp",
+          "source_message_index": 112,
+          "path": "/assets/images/listings/object_1014/06.webp",
+          "kind": "photo",
+          "sha256": "701ddfcfb500f560b8032df8a6b3159c0acac675317af79649aa628bd4f3813d"
+        },
+        {
+          "source_file": "img/m112_07.webp",
+          "source_message_index": 112,
+          "path": "/assets/images/listings/object_1014/07.webp",
+          "kind": "photo",
+          "sha256": "204ff21b013f785073e59eaf11df175db1c7fbfa76ac127f392945d81d7c8106"
+        },
+        {
+          "source_file": "img/m112_08.webp",
+          "source_message_index": 112,
+          "path": "/assets/images/listings/object_1014/08.webp",
+          "kind": "photo",
+          "sha256": "d95dbd048031d465bd2a31cf721f677ca4375371a5830b8058c816a1bbb6a07c"
+        },
+        {
+          "source_file": "img/m112_09.webp",
+          "source_message_index": 112,
+          "path": "/assets/images/listings/object_1014/09.webp",
+          "kind": "photo",
+          "sha256": "b7b69a11ad6015568d723d17eb4309fc7641148d4e2a1f3736af04df1174d691"
+        },
+        {
+          "source_file": "img/m112_10.webp",
+          "source_message_index": 112,
+          "path": "/assets/images/listings/object_1014/10.webp",
+          "kind": "photo",
+          "sha256": "dd8d3d7cffa6b072d29e8b006cc31b1e065f1e46cf61d2f16af43705c48f2b6d"
+        }
+      ],
+      "excluded_source_files": [
+        "img/m113_01.webp",
+        "img/m114_01.webp",
+        "img/m115_01.webp",
+        "img/m116_01.webp",
+        "img/m117_01.webp",
+        "img/m118_01.webp",
+        "img/m119_01.webp",
+        "img/m120_01.webp",
+        "img/m121_01.webp",
+        "img/m122_01.webp",
+        "img/m123_01.webp"
+      ],
+      "cover_source_file": "img/m112_03.webp",
+      "cover_path": "/assets/images/listings/object_1014/03.webp"
+    }
+  ],
+  "gallery_policy": "Selected cover first; other images retain source order. File names and source mapping remain unchanged."
+}

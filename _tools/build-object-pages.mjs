@@ -16,17 +16,21 @@ export function eligible(r) { return (r.status===null || r.status==="active") &&
 export const objectTitle = r => objectHeading(r)+" — "+money(r.price_conflict ? null : r.price)+" | Домиан Квартал";
 export function objectPage(r, duplicateTitles = new Set()) {
   const file = "obekt/"+r.id+".html", h1 = objectHeading(r);
+  const asset = image => r.published_at && image.startsWith(origin+'/') ? image.slice(origin.length) : image;
   const price = r.price_conflict ? null : r.price;
   const facts = [["Город",r.city],["Населённый пункт",r.settlement],["Район",r.district],["Адрес",r.address],["Площадь",r.area_total===null?null:r.area_total+" м²"],["Комнаты",r.rooms],["Этаж",r.floor],["Этажей в доме",r.floors],["Участок",r.lot_area_sotok===null?null:r.lot_area_sotok+" сот."]];
   const body = breadcrumbs([["Главная","/"],category[r.type].map((v,i)=>i?"/"+v:v),[h1,"/"+file]])
     +'<p class="visibility-price">'+esc(money(price))+'</p><dl class="visibility-facts">'+facts.filter(([,v])=>v!==null).map(([label,v])=>'<div><dt>'+esc(label)+'</dt><dd>'+esc(v)+'</dd></div>').join('')+'</dl>'
     +'<p>Мы агентство недвижимости. Уточним наличие объекта и организуем просмотр по договорённости.</p>'
     +'<div class="visibility-actions"><a class="btn" href="tel:+79536091122">Позвонить</a><a class="btn" href="https://max.ru/u/f9LHodD0cOKImT5sxxh2fLN4YFJ-paNFCiI79MwgO-LJJZ8oHXX5TN007y4" target="_blank" rel="noopener noreferrer" data-channel="max" data-max-trigger>MAX</a><a class="btn" href="https://t.me/httpsmealieva_rieltor" target="_blank" rel="noopener noreferrer" data-channel="telegram">Telegram</a><a class="btn" href="#lead-form-section" data-lead-type="buy" data-source-cta="object_page" data-object-id="'+esc(r.id)+'" data-object-type="'+esc(r.type)+'" data-object-title="'+esc(h1)+'" data-object-url="'+origin+'/'+file+'">Заявка по объекту</a></div>'
-    +'<div class="visibility-gallery">'+r.images.map((image,i)=>'<img src="'+esc(image)+'" alt="'+esc(h1)+' — фото '+(i+1)+'" loading="lazy" width="800" height="600">').join('')+'</div>';
+    +'<div class="visibility-gallery">'+r.images.map((image,i)=>'<img src="'+esc(asset(image))+'" alt="'+esc(h1)+' — фото '+(i+1)+'" loading="lazy" width="800" height="600">').join('')+'</div>'
+    +(r.floor_plans?.length ? '<section class="visibility-plans" data-object-plans><h2>Планировка</h2>'+r.floor_plans.map(image=>'<a href="'+esc(asset(image))+'" target="_blank" rel="noopener noreferrer"><img src="'+esc(asset(image))+'" alt="Планировка — '+esc(h1)+'" loading="lazy" width="1320" height="1145"></a>').join('')+'</section>' : '')
+    +(r.description_public ? '<section class="visibility-description"><h2>Описание</h2><p>'+esc(r.description_public).replaceAll('\n','<br>')+'</p></section>' : '');
   const product = price!==null ? schema({"@context":"https://schema.org","@type":"Product",name:h1,image:r.images,url:origin+"/"+file,offers:{"@type":"Offer",price,priceCurrency:"RUB",url:origin+"/"+file}}) : "";
   const title = objectTitle(r)+(duplicateTitles.has(objectTitle(r)) ? " № "+Number(r.id.split('_')[1]) : "");
-  return publicPage({file,h1,title,description:h1+". "+money(price)+". Уточните наличие и условия просмотра в агентстве Домиан Квартал.",body,structured:product,noindex:!eligible(r),
+  const html = publicPage({file,h1,title,description:h1+". "+money(price)+". Уточните наличие и условия просмотра в агентстве Домиан Квартал.",body,structured:product,noindex:!eligible(r),
     form:leadForm("object_page",{lead_type:"buy",object_id:r.id,object_type:r.type,object_title:h1,object_price:price,object_url:origin+"/"+file})});
+  return r.published_at ? html.replaceAll('\r\n','\n').replace(/[ \t]+$/gm,'') : html;
 }
 export function buildObjectPages() {
   const registry = JSON.parse(fs.readFileSync(root+"/data/catalog/registry.json","utf8"));

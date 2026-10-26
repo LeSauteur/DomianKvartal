@@ -50,7 +50,9 @@ export function buildRegistry() {
       status:data.is_placeholder === true ? "placeholder" : data.status || null,
       status_source:data.is_placeholder === true || data.status ? source.path : null,
       verifiedAt:data.verifiedAt || null,verifiedBy:data.verifiedBy || null,agent:data.agent || null,
-      listing_urls:data.is_placeholder === true ? [] : [...new Set([...(obj.sources.some(s=>s.path==="output/home/new-objects.json") ? ["/"] : []),"/" + {apartment:"apartments",house:"houses",land:"lands"}[obj.type] + ".html"])]
+      ...(data.published_at ? {published_at:data.published_at,publication_order:data.publication_order || 0,description_public:description_raw} : {}),
+      ...(data.floor_plans?.length ? {floor_plans:data.floor_plans.map(image=>new URL(image,"https://domian-161.ru/"+source.base).href)} : {}),
+      listing_urls:data.is_placeholder === true ? [] : [...new Set([...(data.published_at || obj.sources.some(s=>s.path==="output/home/new-objects.json") ? ["/"] : []),"/" + {apartment:"apartments",house:"houses",land:"lands"}[obj.type] + ".html"])]
     };
   });
   write("data/catalog/registry.json",registry);
@@ -61,15 +63,25 @@ export function buildRegistry() {
     return clean+(r.area_total!==null?' · '+r.area_total+' м²':'');
   };
   function feedItem(r, old = {}) {
+    const images=r.published_at?r.images.map(image=>image.replace(/^https:\/\/domian-161\.ru(?=\/)/,'')):r.images;
     return {...old,id:r.id,type:r.type,title:publicTitle(r),description:r.description_raw,
       fullDescription:r.description_raw,shortDescription:r.description_raw.slice(0,200),
       price:r.price === null ? null : r.price,price_conflict:r.price_conflict,
-      image:r.images[0] || null,cover:r.images[0] || null,images:r.images,
+      image:images[0] || null,cover:images[0] || null,images,
       city:r.city,district:r.district,settlement:r.settlement,address:r.address,status:r.status,
       features:{rooms:r.rooms,area:r.area_total,floor:r.floor,totalFloors:r.floors,landArea:r.lot_area_sotok},
+      ...(r.published_at ? {created_at:r.published_at} : {}),
+      ...(r.floor_plans?.length ? {floor_plans:r.floor_plans} : {}),
       url:"/obekt/" + r.id + ".html",source_path:r.source_path};
   }
-  for (const p of feeds) write(p,snapshot[p].filter(item=>byId.get(item.id)?.status !== "placeholder").map(item=>byId.has(item.id) ? feedItem(byId.get(item.id),item) : item));
+  for (const p of feeds) {
+    const existing=snapshot[p].filter(item=>byId.get(item.id)?.status !== "placeholder").map(item=>byId.has(item.id) ? feedItem(byId.get(item.id),item) : item);
+    const ids=new Set(existing.map(item=>item.id));
+    const type=p.includes('/apartments/')?'apartment':p.includes('/houses/')?'house':p.includes('/lands/')?'land':null;
+    const recent=registry.filter(r=>r.published_at && r.status==='active' && !ids.has(r.id) && (!type || r.type===type))
+      .sort((a,b)=>b.published_at.localeCompare(a.published_at)||a.publication_order-b.publication_order||a.id.localeCompare(b.id));
+    write(p,[...recent.map(r=>feedItem(r)),...existing]);
+  }
   // Public projection; internal evidence remains excluded by Jekyll.
   write("output/catalog/registry.json",registry.filter(r=>r.status!=="placeholder").map(r=>feedItem(r)));
   const rows = registry.filter(r=>r.status!=="placeholder" && (r.city === null || r.price_conflict || r.photo_folder_mismatch || r.area_conflict)).map(r=>[

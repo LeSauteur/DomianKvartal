@@ -8,6 +8,8 @@
 .visibility-facts dd { margin: 6px 0 0; font-weight: 600; overflow-wrap: anywhere; }
 .visibility-gallery { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(260px,100%),1fr)); gap: 12px; margin-block: 24px; }
 .visibility-gallery img { width: 100%; height: 280px; object-fit: cover; border-radius: 12px; }
+.visibility-plans img { display:block; width:100%; max-width:760px; height:auto; margin-block:16px; }
+.visibility-description { margin-block:28px; line-height:1.65; overflow-wrap:anywhere; }
 .visibility-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-block: 24px; }
 .visibility-static-links { padding: 24px; margin: 24px auto; max-width: 1200px; }
 .visibility-static-links ul { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(270px,100%),1fr)); gap: 12px; padding-left: 20px; }
