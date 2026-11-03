@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parsePrice, parseNumbers, parseLocation } from "./catalog-parser.mjs";
 import { writeGenerated } from './write-generated.mjs';
+import { normalizeRecord, finalizeDescriptions, publicFacts, heading, metaDescription } from './catalog-presentation.mjs';
 export const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = p => JSON.parse(fs.readFileSync(path.join(root, p), "utf8").replace(/^\uFEFF/, ""));
 const write = (p, value) => writeGenerated(path.join(root,p), typeof value === "string" ? value : JSON.stringify(value, null, 2) + "\n");
@@ -32,7 +33,7 @@ export function buildRegistry() {
     if (!["apartment","house","land"].includes(item.type)) continue;
     add(item.id,item.type,p,{...item,description:item.fullDescription || item.description || item.shortDescription || ""},"");
   }
-  const registry = [...objects.values()].sort((a,b)=>a.id.localeCompare(b.id,"en")).map(obj=>{
+  const registry = finalizeDescriptions([...objects.values()].sort((a,b)=>a.id.localeCompare(b.id,"en")).map(obj=>{
     const source = obj.sources[0], data = source.data;
     const prices = obj.sources.map(s=>({source_path:s.path,price:parsePrice(s.data.price)})).filter(s=>s.price !== null);
     const price_conflict = new Set(prices.map(s=>s.price)).size > 1 ? {sources:prices} : null;
@@ -42,7 +43,7 @@ export function buildRegistry() {
       const folder = image.match(/\/(object_\d+|house_\d+|land_\d+)\//)?.[1];
       return folder && folder !== obj.id;
     });
-    return {
+    return normalizeRecord({
       id:obj.id,type:obj.type,source_path:source.path,title_raw,description_raw,
       ...parseLocation(title_raw,description_raw,source.path.endsWith("/data.json") ? data : {}),
       ...parseNumbers(title_raw,description_raw,obj.type),
@@ -53,8 +54,8 @@ export function buildRegistry() {
       ...(data.published_at ? {published_at:data.published_at,publication_order:data.publication_order || 0,description_public:description_raw} : {}),
       ...(data.floor_plans?.length ? {floor_plans:data.floor_plans.map(image=>new URL(image,"https://domian-161.ru/"+source.base).href)} : {}),
       listing_urls:data.is_placeholder === true ? [] : [...new Set([...(data.published_at || obj.sources.some(s=>s.path==="output/home/new-objects.json") ? ["/"] : []),"/" + {apartment:"apartments",house:"houses",land:"lands"}[obj.type] + ".html"])]
-    };
-  });
+    });
+  }));
   write("data/catalog/registry.json",registry);
   const byId = new Map(registry.map(r=>[r.id,r]));
   const publicTitle = r => {
@@ -63,16 +64,18 @@ export function buildRegistry() {
     return clean+(r.area_total!==null?' · '+r.area_total+' м²':'');
   };
   function feedItem(r, old = {}) {
+    const {source_path, price_conflict:oldConflict, ...publicOld}=old;
+    const p=publicFacts(r);
     const images=r.published_at?r.images.map(image=>image.replace(/^https:\/\/domian-161\.ru(?=\/)/,'')):r.images;
-    return {...old,id:r.id,type:r.type,title:publicTitle(r),description:r.description_raw,
-      fullDescription:r.description_raw,shortDescription:r.description_raw.slice(0,200),
-      price:r.price === null ? null : r.price,price_conflict:r.price_conflict,
+    return {...publicOld,id:r.id,type:r.type,title:heading(r),description:r.description_public,
+      fullDescription:r.description_public,shortDescription:r.description_public.replace(/\s+/g,' ').slice(0,200),
+      price:p.price,priceCurrency:'RUB',price_conflict:r.price_conflict?true:null,
       image:images[0] || null,cover:images[0] || null,images,
-      city:r.city,district:r.district,settlement:r.settlement,address:r.address,status:r.status,
-      features:{rooms:r.rooms,area:r.area_total,floor:r.floor,totalFloors:r.floors,landArea:r.lot_area_sotok},
+      city:r.city,district:r.district,settlement:r.settlement,address:r.address,status:r.status,statusLabel:r.status_label,
+      features:{rooms:r.rooms,area:p.area_total,livingArea:r.area_living,kitchenArea:r.area_kitchen,floor:r.floor,totalFloors:r.floors,landArea:r.lot_area_sotok},
       ...(r.published_at ? {created_at:r.published_at} : {}),
       ...(r.floor_plans?.length ? {floor_plans:r.floor_plans} : {}),
-      url:"/obekt/" + r.id + ".html",source_path:r.source_path};
+      url:"/obekt/" + r.id + ".html"};
   }
   for (const p of feeds) {
     const existing=snapshot[p].filter(item=>byId.get(item.id)?.status !== "placeholder").map(item=>byId.has(item.id) ? feedItem(byId.get(item.id),item) : item);
@@ -91,6 +94,11 @@ export function buildRegistry() {
     r.area_conflict?.title.join(', '),r.area_conflict?.description.join(', '),r.area_conflict?.evidence.join(' | '),r.area_total
   ].map(csv).join(";"));
   write("docs/owner/registry-to-verify.csv","id;type;title;price;city_suggested;city_evidence;issue;URL на сайте;area_title;area_description;area_evidence;area_selected\n"+rows.join("\n")+"\n");
+  write('docs/owner/catalog-completeness-20261103.json',{
+    date:'2026-11-03',scope:'publication approval, not individual inspection',
+    count:registry.filter(r=>r.status!=='placeholder').length,
+    issues:registry.filter(r=>r.status!=='placeholder'&&(r.content_issues.length||r.photo_folder_mismatch||!r.city)).map(r=>({id:r.id,issues:r.content_issues,city:r.city,settlement:r.settlement,photo_folder_mismatch:r.photo_folder_mismatch,source_path:r.source_path}))
+  });
   return registry;
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

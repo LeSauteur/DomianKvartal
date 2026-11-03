@@ -1,0 +1,14 @@
+Первый проход до последних исправлений. После исправлений НЕ повторялся.
+✖ every property has a unique self-canonical page with only supported facts (95.6019ms)
+✖ reviewed apartment areas and every area conflict appear in the owner CSV and public facts (33.9698ms)
+ℹ tests 85
+ℹ suites 0
+ℹ pass 83
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 20390.1079
+✖ failing tests:
+✖ every property has a unique self-canonical page with only supported facts (95.6019ms)
+✖ reviewed apartment areas and every area conflict appear in the owner CSV and public facts (33.9698ms)

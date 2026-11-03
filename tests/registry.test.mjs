@@ -80,7 +80,7 @@ test('reviewed apartment areas and every area conflict appear in the owner CSV a
   for(const [id,area,wrong] of [[112,null,10],[45,null,15],[59,17.8,13],[62,54.4,13],[91,40.5,10],[95,null,15]]) {
     const r=registry.find(r=>r.id==='object_'+id), item=feed.find(r=>r.id==='object_'+id);
     assert.equal(r.area_total,area,r.id);
-    assert.equal(item.features.area,area,r.id);
+    assert.equal(item.features.area,null,r.id+' public area stays absent until conflict is resolved');
     assert.ok(r.area_conflict,r.id);
     assert.doesNotMatch(item.title,new RegExp('(?:^|[^\\d])'+wrong+' м²'),r.id);
   }
