@@ -118,10 +118,6 @@
         const normalizedPrice = rawPrice.replace(/^\s*от\s+/i, '').trim();
         price.textContent = normalizedPrice;
 
-        const priceNotice = document.createElement('p');
-        priceNotice.className = 'price-disclaimer';
-        priceNotice.textContent = 'Цена и наличие не являются публичной офертой';
-        priceNotice.hidden = !/\d/.test(normalizedPrice);
 
         const desc = document.createElement('p');
         desc.className = 'showcase-card__description';
@@ -162,7 +158,7 @@
         status.setAttribute('data-listing-status', '');
         status.textContent = 'Актуально';
         status.hidden = !/^(object|house|land)_\d+$/.test(item.id || '');
-        body.append(category, title, status, location, price, priceNotice, createMeta(item), details, ctaGroup);
+        body.append(category, title, status, location, price, createMeta(item), details, ctaGroup);
         article.append(imageWrap, body);
         return article;
     }

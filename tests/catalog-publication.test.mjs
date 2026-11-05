@@ -59,8 +59,7 @@ test('ambiguous totals and prices stay private; cleaning keeps addresses and fac
   assert.equal(r.address,'п. Российский, ул. Парковая, 118');assert.equal(r.settlement,'Российский');
   assert.doesNotMatch(r.description_public,/8 млн|100 м²|120 м²|999 123|Звоните/u);
   assert.match(r.description_public,/Парковая, 118/u);
-  const duplicates=finalizeDescriptions([{...r,id:'house_99998'},{...r,id:'house_99999'}]);
-  assert.notEqual(duplicates[0].description_public,duplicates[1].description_public);
+  assert.throws(()=>finalizeDescriptions([{...r,id:'house_99998'},{...r,id:'house_99999'}]),/editorial review/);
   const lots=published.find(r=>r.id==='land_01');
   assert.ok(lots.price_conflict.sources.some(s=>s.price===950000));
   assert.equal(lots.price,null);

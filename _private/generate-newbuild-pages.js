@@ -104,7 +104,7 @@ function render(item) {
           ${priceMarkup(item.price)}
           <p class="nbd-lead">${esc(description)}</p>
           <div class="nbd-actions"><a class="btn" href="../../index.html#contact">Уточнить наличие</a><a class="btn secondary" href="tel:+79536091122">Позвонить</a></div>
-          <p class="nbd-disclaimer">Цена и наличие не являются публичной офертой</p>
+
         </div>
       </div>
     </section>
@@ -139,7 +139,7 @@ function render(item) {
     <section class="nbd-cta"><div><span>Поможем сравнить проекты</span><h2>Нужна квартира в новостройке?</h2><p>Проверим доступность лотов, условия застройщика и документы на дату обращения.</p></div><a class="btn" href="../../index.html#contact">Получить подборку</a></section>
   </main>
 
-  <footer class="nbd-footer"><div class="container"><p>© 2022–2026 АН «Домиан Квартал»</p><div><a href="../../newbuilds.html">Каталог новостроек</a><a href="../../privacy.html">Политика конфиденциальности</a></div><p>Информация не является публичной офертой</p></div></footer>
+  <footer class="nbd-footer"><div class="container"><p>© 2022–2026 АН «Домиан Квартал»</p><div><a href="../../newbuilds.html">Каталог новостроек</a><a href="../../privacy.html">Политика конфиденциальности</a></div></div></footer>
   <script src="../../assets/js/main.js" defer></script>
 </body>
 </html>\n`;

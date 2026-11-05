@@ -46,3 +46,18 @@ test('geography filters retain named regions and the modal uses the public descr
   const id=new URL(page.url()).searchParams.get('object');
   await expect(page.locator('#modalDesc')).toHaveText(records.find(r=>r.id===id).fullDescription);
 });
+
+test('marketing copy stays clean in desktop and mobile rendered pages',async({page},info)=>{
+  for(const width of [390,1440]){
+    await page.setViewportSize({width,height:900});
+    for(const file of ['index.html','apartments.html','newbuilds.html','construction.html','obekt/house_14.html','obekt/object_01.html']){
+      await page.goto('/'+file+'?qa=1');
+      if(file==='apartments.html')await expect(page.locator('#cards .property-card').first()).toBeVisible();
+      if(file==='newbuilds.html')await expect(page.locator('#cards > .nb-card')).toHaveCount(78);
+      await expect(page.locator('body')).not.toContainText(/публичн.{0,30}оферт|Неизвестные характеристики не выдуманы|предложение №/iu);
+      await expect(page.locator('.price-disclaimer,.footer-legal-note,.nbd-disclaimer')).toHaveCount(0);
+      expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
+      if(file==='construction.html'||file==='obekt/house_14.html')await page.screenshot({path:info.outputPath(file.replaceAll('/','-')+'-'+width+'.png')});
+    }
+  }
+});
