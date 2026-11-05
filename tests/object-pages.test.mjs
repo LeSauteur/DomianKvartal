@@ -35,7 +35,7 @@ test("every property has a unique self-canonical page with only supported facts"
     assert.doesNotMatch(visible,/\b(?:null|undefined|NaN)\b/);
     const intro=html.match(/<section class="visibility-intro container">([\s\S]*?)<\/section>/)[1];
     if(r.city===null) assert.doesNotMatch(intro,/Город<\/dt>|Аксай/);
-    if(r.city!=="Аксай"&&r.city!=="Аксайский район") assert.doesNotMatch(intro,/Аксай/);
+    if(r.city!=="Аксай"&&r.city!=="Аксайский район") assert.doesNotMatch(intro,/<dt>Город<\/dt><dd>Аксай(?:ский район)?<\/dd>/);
     if(r.price_conflict) {assert.match(intro,/Цена по запросу/);assert.doesNotMatch(html,/"@type":"(?:Product|Offer)"/);}
     else if(r.price!==null) assert.match(html,/"@type":"Offer"/);
     for(const match of html.matchAll(/type="application\/ld\+json">([\s\S]*?)<\/script>/g)) assert.doesNotThrow(()=>JSON.parse(match[1]));

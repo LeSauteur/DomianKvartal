@@ -326,4 +326,3 @@ P0 — доказанный массовый запрет доступа или 
 У обоих локальных проектов до начала уже были чужие изменённые и неотслеживаемые файлы. Их не редактировали, не удаляли и не коммитили. `git status --short --branch` до и после адресной проверки совпадает: [«Квартал», до](C:/Users/domia/.codex/outputs/domian-audit-2026-11-03/kvartal-status-delta-before.txt), [после](C:/Users/domia/.codex/outputs/domian-audit-2026-11-03/kvartal-status-delta-after.txt); [Шахты, до](C:/Users/domia/.codex/outputs/domian-audit-2026-11-03/shakhty-status-delta-before.txt), [после](C:/Users/domia/.codex/outputs/domian-audit-2026-11-03/shakhty-status-delta-after.txt).
 
 Артефакты этого отчёта находятся вне репозиториев. Ветки не переключались, сборки в проектах не запускались. Этап 2 требует отдельного поручения владельца; текущий результат — актуализированный список работ на основе уже выполненных исследований.
-

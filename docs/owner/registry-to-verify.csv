@@ -33,8 +33,8 @@ id;type;title;price;city_suggested;city_evidence;issue;URL на сайте;area_
 "house_38";"house";"Дом";"9000000";"";"";"city_missing";"https://domian-161.ru/obekt/house_38.html";"";"";"";""
 "house_40";"house";"Дом · участок 9 сот.";"7400000";"";"";"city_missing";"https://domian-161.ru/obekt/house_40.html";"";"";"";""
 "house_41";"house";"Дом · 120 м²";"4900000";"";"";"city_missing";"https://domian-161.ru/obekt/house_41.html";"";"";"";"120"
-"house_42";"house";"Продается дом 115 м² 6 соток 
-Прoдaeтcя шикapный oдноэтажный и полностью кирпичный дом в х. Большой Лог 
+"house_42";"house";"Продается дом 115 м² 6 соток
+Прoдaeтcя шикapный oдноэтажный и полностью кирпичный дом в х. Большой Лог
 Дом от надежного и проверенного застройщика";"4900000";"Большой Лог";"х. Большой Лог";"city_missing";"https://domian-161.ru/obekt/house_42.html";"";"";"";"115"
 "house_43";"house";"Дом";"7000000";"";"";"city_missing";"https://domian-161.ru/obekt/house_43.html";"";"";"";""
 "house_44";"house";"Дом";"7000000";"";"";"city_missing";"https://domian-161.ru/obekt/house_44.html";"";"";"";""
@@ -59,6 +59,7 @@ id;type;title;price;city_suggested;city_evidence;issue;URL на сайте;area_
 "house_63";"house";"Дом";"7000000";"";"";"city_missing";"https://domian-161.ru/obekt/house_63.html";"";"";"";""
 "house_64";"house";"Дом";"9000000";"";"";"city_missing";"https://domian-161.ru/obekt/house_64.html";"";"";"";""
 "house_65";"house";"Дом · участок 6 сот.";"4900000";"Российский";"пос. Российский";"city_missing";"https://domian-161.ru/obekt/house_65.html";"";"";"";""
+"house_66";"house";"Дом";"3850000";"";"";"city_missing";"https://domian-161.ru/obekt/house_66.html";"";"";"";""
 "house_67";"house";"Дом";"9000000";"";"";"city_missing";"https://domian-161.ru/obekt/house_67.html";"";"";"";""
 "house_68";"house";"Дом";"4100000";"";"";"city_missing";"https://domian-161.ru/obekt/house_68.html";"";"";"";"106"
 "house_69";"house";"Дом";"4100000";"";"";"city_missing";"https://domian-161.ru/obekt/house_69.html";"";"";"";"150"
@@ -69,6 +70,7 @@ id;type;title;price;city_suggested;city_evidence;issue;URL на сайте;area_
 "house_911";"house";"Дом 297 кв. м в Аксае, участок 20 соток — премиум‑класс с бассейном и выходом на две улицы! Рос";"7000000";"";"в Аксае";"photo_folder_mismatch";"https://domian-161.ru/obekt/house_911.html";"";"";"";"297"
 "house_912";"house";"Дом 67 кв. м в Ростов-на-Дону, участок 3 сотки — кирпичный, коммуникации центральные. Зезжайте";"7000000";"";"Ростов-на-Дону";"photo_folder_mismatch";"https://domian-161.ru/obekt/house_912.html";"";"";"";"67"
 "house_913";"house";"Загородный дом мечты в станице Старочеркасская: гармония природы и комфорта! Просторный двухэта";"16000000";"Старочеркасская";"станице Старочеркасская";"city_missing, photo_folder_mismatch";"https://domian-161.ru/obekt/house_913.html";"";"";"";""
+"land_01";"land";"Продается участок 6 сотокРостовская обл., Азовский р-н, Елизаветинское сельское поселение, хутор Городище";"";"";"Азовский р-н";"price_conflict";"https://domian-161.ru/obekt/land_01.html";"";"";"";""
 "land_04";"land";"🔥 СРОЧНАЯ ПРОДАЖА! НЕ УПУСТИТЕ ВЫГОДНЫЙ ВАРИАНТ! 🔥 В продаже участок 6 сот. садоводческое товарищество Донское, 777,778,778А";"";"";"";"city_missing";"https://domian-161.ru/obekt/land_04.html";"";"";"";""
 "land_06";"land";"Продается участок 26 сотоккп Алексеево";"";"";"";"city_missing";"https://domian-161.ru/obekt/land_06.html";"";"";"";""
 "land_07";"land";"Продается участок 26 соток кп Алексеево";"";"";"";"city_missing";"https://domian-161.ru/obekt/land_07.html";"";"";"";""
@@ -76,7 +78,7 @@ id;type;title;price;city_suggested;city_evidence;issue;URL на сайте;area_
 "object_23";"apartment";"Квартира · Ростовская область";"";"ул. Орбитальная";"ул. Орбитальная";"price_conflict";"https://domian-161.ru/obekt/object_23.html";"";"";"";""
 "object_24";"apartment";"Квартира · Ростовская область";"";"";"";"price_conflict";"https://domian-161.ru/obekt/object_24.html";"";"";"";""
 "object_33";"apartment";"2-комнатная квартира · Ростовская область · 40 м²";"5200000";"";"Ростове-на-Дону";"area_conflict";"https://domian-161.ru/obekt/object_33.html";"40";"68.4";"Общая площадь 68,4 м²";"68.4"
-"object_40";"apartment";"Продается 2 комн.кв 76 м² 
+"object_40";"apartment";"Продается 2 комн.кв 76 м²
 Ростовская обл.,г. Ростов-на-Дону,Пролетарский р-н,пр-кт 40-летия Победы,";"";"";"Ростов-на-Дону";"price_conflict";"https://domian-161.ru/obekt/object_40.html";"";"";"";"76"
 "object_42";"apartment";"1-комнатная квартира · Ростовская область · 13 м²";"2500000";"";"Ростове-на-Дону";"area_conflict";"https://domian-161.ru/obekt/object_42.html";"13";"40.7";"Общая площадь 40.7 м²";"40.7"
 "object_43";"apartment";"1-комнатная квартира · Ростовская область · 18 м²";"2950000";"";"Ростове-на-Дону";"area_conflict";"https://domian-161.ru/obekt/object_43.html";"18";"37.9";"Общая площадь 37.9 м²";"37.9"

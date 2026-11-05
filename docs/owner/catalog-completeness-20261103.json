@@ -531,6 +531,14 @@
       "source_path": "output/houses/house_65/data.json"
     },
     {
+      "id": "house_66",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_66/data.json"
+    },
+    {
       "id": "house_67",
       "issues": [],
       "city": null,
@@ -609,6 +617,23 @@
       "settlement": "Старочеркасская",
       "photo_folder_mismatch": true,
       "source_path": "output/houses/new-objects.json"
+    },
+    {
+      "id": "land_01",
+      "issues": [
+        {
+          "field": "price",
+          "reason": "conflicting_values",
+          "values": [
+            1700000,
+            950000
+          ]
+        }
+      ],
+      "city": "Азовский район",
+      "settlement": "Городище",
+      "photo_folder_mismatch": false,
+      "source_path": "lands/land_01/data.json"
     },
     {
       "id": "land_04",
@@ -932,7 +957,7 @@
       "id": "object_906",
       "issues": [],
       "city": null,
-      "settlement": "Удобства",
+      "settlement": null,
       "photo_folder_mismatch": true,
       "source_path": "objects/object_906/data.json"
     },

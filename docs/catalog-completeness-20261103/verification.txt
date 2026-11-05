@@ -1,0 +1,16 @@
+05.11.2026 — локальный QA, публикации нет
+Команда: npm run qa
+Exit: 0
+ℹ tests 88
+ℹ pass 88
+ℹ fail 0
+ℹ skipped 0
+SEO audit: 329 publishable HTML documents, 297 sitemap URLs.
+ERRORS (0)
+WARNINGS (7)
+Result: 0 error(s), 7 warning(s).
+  1 skipped
+  106 passed (6.2m)
+Header sync: current
+Sitemap: current
+Git diff --check относительно e4cd944: PASS
