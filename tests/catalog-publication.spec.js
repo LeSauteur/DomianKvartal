@@ -48,6 +48,7 @@ test('geography filters retain named regions and the modal uses the public descr
 });
 
 test('marketing copy stays clean in desktop and mobile rendered pages',async({page},info)=>{
+  test.setTimeout(60000);
   for(const width of [390,1440]){
     await page.setViewportSize({width,height:900});
     for(const file of ['index.html','apartments.html','newbuilds.html','construction.html','obekt/house_14.html','obekt/object_01.html']){

@@ -85,7 +85,7 @@ test("catalogue renders all cards and all filters without hiding unknown data by
   for (const field of ["builder", "area", "floors", "bedrooms", "material", "price", "projectType", "recordType"]) {
     assert.match(catalogue, new RegExp(`name="${field}"`));
   }
-  assert.match(catalogue, /<noscript>/);
+  assert.doesNotMatch(catalogue, /JavaScript отключ[её]н/iu);
   assert.match(catalogue, /data-project-count>32</);
 });
 
