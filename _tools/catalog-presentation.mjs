@@ -141,12 +141,28 @@ export function cleanDescription(r) {
   return [name+(locationLabel(p)?'. '+locationLabel(p):''),...facts,amount(p.price),photos?'В галерее — '+photos+' '+(photos%10===1&&photos%100!==11?'фотография':photos%10>=2&&photos%10<=4&&!(photos%100>=12&&photos%100<=14)?'фотографии':'фотографий'):null].filter(Boolean).map(s=>s.replace(/[.\s]+$/u,'')+'.').join(' ');
 }
 export function finalizeDescriptions(records) {
+  const openings = {
+    house_14:'Одноэтажный дом площадью 100 м² на участке 5 соток в посёлке Октябрьский Аксайского района.',
+    house_23:'Одноэтажный дом площадью 150 м² на участке 5 соток с широким фасадом и придомовой территорией.',
+    house_32:'В посёлке Октябрьский Аксайского района продаётся одноэтажный дом с предчистовой отделкой.',
+    house_42:'Дом площадью 115 м² на участке 6 соток с кухней-столовой и выходом на террасу.',
+    house_50:'Дом 115 м² с тремя изолированными спальнями, кухней-столовой и участком 6 соток.',
+    house_70:'Продаётся одноэтажный дом 150 м² с участком 5 соток и широким фасадом.',
+    object_01:'Двухкомнатная квартира 55,1 м² с дизайнерским ремонтом в ЖК «Новый Аксай», на Объездной улице, 7к5.',
+    object_40:'Двухкомнатная квартира 76 м² на 11-м этаже 19-этажного дома: Ростов-на-Дону, улица 40-летия Победы, 85.',
+    object_46:'Двухкомнатная квартира с дизайнерским ремонтом в доме 2021 года в Ростове-на-Дону.',
+    object_54:'Квартира с двумя изолированными комнатами, мебелью и техникой в Ростове-на-Дону, в доме 2021 года.',
+    object_55:'В Ростове-на-Дону продаётся двухкомнатная квартира 76 м² на улице 40-летия Победы, 85; комнаты изолированы.',
+    object_99:'Квартира с дизайнерским ремонтом, индивидуальным отоплением и тёплыми полами на кухне и в санузле.'
+  };
+  for(const r of records)if(openings[r.id]){
+    const paragraphs=r.description_public.split('\n\n');
+    paragraphs[0]=openings[r.id];
+    r.description_public=paragraphs.join('\n\n');
+  }
   const groups=new Map();
   for(const r of records.filter(r=>r.status!=='placeholder')){const key=r.description_public;const group=groups.get(key)||[];group.push(r);groups.set(key,group);}
-  for(const group of groups.values())if(group.length>1)for(const r of group){
-    const code=Number(r.id.split('_')[1]);
-    r.description_public=typeNames[r.type]+', предложение № '+code+'. '+r.description_public;
-  }
+  for(const group of groups.values())if(group.length>1)throw new Error('Duplicate descriptions need editorial review: '+group.map(r=>r.id).join(', '));
   return records;
 }
 export function metaDescription(r) {

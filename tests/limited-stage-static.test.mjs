@@ -40,7 +40,7 @@ function staticCardSnapshot(match) {
   const body = match[2];
   const heading = body.match(/<h3>\s*<a\b([^>]*)>([\s\S]*?)<\/a>\s*<\/h3>/i);
   const image = body.match(/<img\b([^>]*)>/i);
-  if (/\d[\d\s.,]*\s*₽/.test(textContent(body))) assert.match(body, /Цена и наличие не являются публичной офертой/);
+  assert.doesNotMatch(body, /публичной офертой/iu);
 
   assert.ok(heading, `card ${attribute(attributes, "data-newbuild-id")} needs a linked heading`);
   assert.ok(image, `card ${attribute(attributes, "data-newbuild-id")} needs a cover image`);
@@ -166,7 +166,7 @@ test("newbuild detail regeneration retains values and omits approved technical a
   for (const item of catalog.items.filter(item => item.detail_url)) {
     const html = generator.render(item);
     assert.doesNotMatch(html, /Проверено|Источник и актуальность|Проверка данных|Файлы сохранены локально|Официальные материалы/);
-    assert.match(html, /Цена и наличие не являются публичной офертой/);
+    assert.doesNotMatch(html, /публичной офертой/iu);
     assert.ok(html.includes(item.official_url || item.sources[0]?.url));
     if (item.price?.value >= 100000) assert.ok(html.includes(new Intl.NumberFormat("ru-RU").format(item.price.value)));
     const schema = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);

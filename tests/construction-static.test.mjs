@@ -85,7 +85,7 @@ test("catalogue renders all cards and all filters without hiding unknown data by
   for (const field of ["builder", "area", "floors", "bedrooms", "material", "price", "projectType", "recordType"]) {
     assert.match(catalogue, new RegExp(`name="${field}"`));
   }
-  assert.match(catalogue, /<noscript>/);
+  assert.doesNotMatch(catalogue, /JavaScript отключ[её]н/iu);
   assert.match(catalogue, /data-project-count>32</);
 });
 
@@ -114,7 +114,7 @@ test("project pages use honest service schema and expose no invented offer", () 
     assert.match(source, built ? /"@type":"WebPage"/ : /"@type":"Service"/);
     assert.doesNotMatch(source, /"@type":"Product"/);
     assert.doesNotMatch(source, /"offers"\s*:/);
-    if (!built) assert.match(source, /Не является публичной офертой/);
+    assert.doesNotMatch(source, /публичной офертой/iu);
     if (built) {
       assert.doesNotMatch(source, /Рендер проекта|вариант фасада|class="[^\"]*project-plan|class="[^\"]*project-living|None этажа/);
       const withoutCaptchaScript = source.replace('<script src="https://web3forms.com/client/script.js" async defer></script>', '');
@@ -179,7 +179,7 @@ test("approved prices remain visible while source dates stay private", () => {
     const card = catalogue.match(new RegExp(`<article[^>]*data-project-card[^>]*data-price="${project.price}"[\\s\\S]*?</article>`));
     assert.ok(card, project.slug);
     assert.ok(card[0].includes(new Intl.NumberFormat("ru-RU").format(project.price)), project.slug);
-    assert.match(card[0], /Цена и наличие не являются публичной офертой/);
+    assert.doesNotMatch(card[0], /публичной офертой/iu);
   }
 });
 

@@ -344,7 +344,7 @@ test("client catalog filters preserve URL context, sorting and all approved pric
   for (const item of catalog.items.filter(item => item.price?.value >= 100000)) {
     const card = page.locator(`[data-newbuild-id="${item.id}"]`);
     await expect(card.locator(".nb-price")).toContainText(new Intl.NumberFormat("ru-RU").format(item.price.value));
-    await expect(card.locator(".price-disclaimer")).toHaveText("Цена и наличие не являются публичной офертой");
+    await expect(card.locator(".price-disclaimer")).toHaveCount(0);
   }
   expect(errors).toEqual([]);
 });

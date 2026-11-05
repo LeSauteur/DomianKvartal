@@ -61,7 +61,6 @@
       meta("Застройщик", item.developer || "Уточняется"),
       "</ul>",
       '<div class="nb-card__actions">', primary, '<a href="tel:+79536091122">Позвонить</a></div>',
-      item.price && Number(item.price.value) >= 100000 ? '<p class="price-disclaimer">Цена и наличие не являются публичной офертой</p>' : "",
       "</div></article>"
     ].join("");
   }
