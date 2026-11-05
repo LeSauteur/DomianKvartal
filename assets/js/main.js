@@ -923,7 +923,7 @@
       var facts = qs('[data-modal-facts]', panel);
       if (!facts) { facts = document.createElement('div'); facts.setAttribute('data-modal-facts', ''); panel.insertBefore(facts, images); }
       var meta = item.meta || {};
-      facts.innerHTML = '<p>' + escapeHtml(formatPrice(meta.price)) + '</p>' + renderCardChars([
+      facts.innerHTML = '<p data-listing-status>Актуально</p><p>' + escapeHtml(formatPrice(meta.price) || 'Цена по запросу') + '</p>' + renderCardChars([
         item.address, hasCardValue(meta.rooms) ? meta.rooms + ' комн.' : '',
         hasCardValue(meta.area) ? meta.area + ' м²' : '',
         hasCardValue(meta.landArea) ? meta.landArea + ' сот.' : '',
@@ -1306,6 +1306,7 @@
       renderPropertyGallery(galleryImages, safeTitle),
       '<div class="card-content property-card__body">',
       '<h2 class="property-card__title">' + safeTitle + '</h2>',
+      /^(object|house|land)_\d+$/.test(item.id || '') ? '<p data-listing-status>Актуально</p>' : '',
       '<div class="card-meta property-card__price"><span class="property-card__price-value">' + escapeHtml(priceText) + '</span>' + mortgageHtml + '</div>',
       priceDisclaimer(priceText),
       charsHtml,
@@ -1373,7 +1374,8 @@
   function applyFilters(items, filters, type) {
     var filtered = items.filter(function (item) {
       var meta = item.meta;
-      if (filters.city && (item.city || "unknown") !== filters.city) return false;
+      var cityGroup = ["Аксай", "Аксайский район", "Ростов-на-Дону"].indexOf(item.city) >= 0 ? item.city : item.city ? "другое" : "unknown";
+      if (filters.city && cityGroup !== filters.city) return false;
 
       if (filters.priceMin !== null && (meta.price === null || meta.price < filters.priceMin)) return false;
       if (filters.priceMax !== null && (meta.price === null || meta.price > filters.priceMax)) return false;
@@ -1869,6 +1871,7 @@
       '<div class="hot-offer-content property-card__body">',
       '<span class="hot-offer-tag property-card__meta">' + escapeHtml(item.categoryName) + '</span>',
       '<h3 class="property-card__title">' + safeTitle + '</h3>',
+      /^(object|house|land)_\d+$/.test(item.id || '') ? '<p data-listing-status>Актуально</p>' : '',
       '<div class="hot-offer-price property-card__price">' + escapeHtml(formatPrice(item.meta.price, item.meta.priceType)) + '</div>',
       priceDisclaimer(formatPrice(item.meta.price, item.meta.priceType)),
       charsHtml,
@@ -1981,6 +1984,7 @@
       '<div class="new-object-card__content property-card__body">',
       '<span class="new-object-card__type property-card__meta">' + typeLabel + '</span>',
       '<h3 class="property-card__title">' + title + '</h3>',
+      /^(object|house|land)_\d+$/.test(item.id || '') ? '<p data-listing-status>Актуально</p>' : '',
       '<div class="new-object-card__price property-card__price">' + price + '</div>',
       priceDisclaimer(priceText),
       charsHtml,

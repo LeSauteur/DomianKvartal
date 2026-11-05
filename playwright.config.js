@@ -3,7 +3,7 @@ const baseURL = process.env.PLAYWRIGHT_BASE_URL || "http://127.0.0.1:4173";
 
 module.exports = defineConfig({
   testDir: "./tests",
-  testMatch: ["reanimation.spec.js", "lead-form.spec.js", "construction.spec.js", "limited-stage.spec.js", "safe-seo.spec.js", "service-pages.spec.js", "public-header.spec.js", "visibility.spec.js"],
+  testMatch: ["catalog-publication.spec.js", "reanimation.spec.js", "lead-form.spec.js", "construction.spec.js", "limited-stage.spec.js", "safe-seo.spec.js", "service-pages.spec.js", "public-header.spec.js", "visibility.spec.js"],
   timeout: 30000,
   expect: {
     timeout: 5000

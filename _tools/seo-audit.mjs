@@ -339,7 +339,7 @@ if (exists("data/catalog/registry.json")) {
       if (!source) report("error", file, `property missing from registry: ${item.id}`);
       else if (source.status === "placeholder") report("error", file, `placeholder present in public feed: ${item.id}`);
       else if (item.price !== source.price) report("error", file, `price differs from registry: ${item.id}`);
-      else if (item.features?.area !== source.area_total) report("error", file, `area differs from registry: ${item.id}`);
+      else if (item.features?.area !== (source.area_conflict ? null : source.area_total)) report("error", file, `area differs from public registry facts: ${item.id}`);
     }
   }
 }

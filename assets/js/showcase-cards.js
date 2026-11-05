@@ -158,7 +158,11 @@
         ctaGroup.className = 'showcase-card__actions';
         ctaGroup.append(appointmentCta, phoneCta);
 
-        body.append(category, title, location, price, priceNotice, createMeta(item), details, ctaGroup);
+        const status = document.createElement('p');
+        status.setAttribute('data-listing-status', '');
+        status.textContent = 'Актуально';
+        status.hidden = !/^(object|house|land)_\d+$/.test(item.id || '');
+        body.append(category, title, status, location, price, priceNotice, createMeta(item), details, ctaGroup);
         article.append(imageWrap, body);
         return article;
     }

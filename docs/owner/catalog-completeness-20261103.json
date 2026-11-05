@@ -1,0 +1,1105 @@
+{
+  "date": "2026-11-03",
+  "scope": "publication approval, not individual inspection",
+  "count": 220,
+  "issues": [
+    {
+      "id": "house_01",
+      "issues": [
+        {
+          "field": "price",
+          "reason": "conflicting_values",
+          "values": [
+            4100000,
+            4099999.9999999995
+          ]
+        }
+      ],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_01/data.json"
+    },
+    {
+      "id": "house_02",
+      "issues": [
+        {
+          "field": "area_total",
+          "reason": "conflicting_total_area",
+          "values": [
+            20,
+            200
+          ]
+        }
+      ],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_02/data.json"
+    },
+    {
+      "id": "house_03",
+      "issues": [],
+      "city": null,
+      "settlement": "Мержаново",
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_03/data.json"
+    },
+    {
+      "id": "house_04",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_04/data.json"
+    },
+    {
+      "id": "house_05",
+      "issues": [],
+      "city": null,
+      "settlement": "Большой Лог",
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_05/data.json"
+    },
+    {
+      "id": "house_06",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_06/data.json"
+    },
+    {
+      "id": "house_07",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_07/data.json"
+    },
+    {
+      "id": "house_08",
+      "issues": [
+        {
+          "field": "price",
+          "reason": "conflicting_values",
+          "values": [
+            4100000,
+            7300000
+          ]
+        }
+      ],
+      "city": null,
+      "settlement": "Российский",
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_08/data.json"
+    },
+    {
+      "id": "house_09",
+      "issues": [],
+      "city": null,
+      "settlement": "Темерницкий",
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_09/data.json"
+    },
+    {
+      "id": "house_10",
+      "issues": [
+        {
+          "field": "price",
+          "reason": "conflicting_values",
+          "values": [
+            4100000,
+            8199999.999999999
+          ]
+        }
+      ],
+      "city": null,
+      "settlement": "Щепкин",
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_10/data.json"
+    },
+    {
+      "id": "house_11",
+      "issues": [
+        {
+          "field": "price",
+          "reason": "conflicting_values",
+          "values": [
+            4100000,
+            6800000
+          ]
+        }
+      ],
+      "city": null,
+      "settlement": "Щепкин",
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_11/data.json"
+    },
+    {
+      "id": "house_12",
+      "issues": [
+        {
+          "field": "price",
+          "reason": "conflicting_values",
+          "values": [
+            4100000,
+            9200000
+          ]
+        }
+      ],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_12/data.json"
+    },
+    {
+      "id": "house_13",
+      "issues": [
+        {
+          "field": "price",
+          "reason": "conflicting_values",
+          "values": [
+            4900000,
+            10500000
+          ]
+        }
+      ],
+      "city": null,
+      "settlement": "Темерницкий",
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_13/data.json"
+    },
+    {
+      "id": "house_15",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_15/data.json"
+    },
+    {
+      "id": "house_16",
+      "issues": [],
+      "city": null,
+      "settlement": "Багаевская",
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_16/data.json"
+    },
+    {
+      "id": "house_19",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_19/data.json"
+    },
+    {
+      "id": "house_20",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_20/data.json"
+    },
+    {
+      "id": "house_21",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_21/data.json"
+    },
+    {
+      "id": "house_22",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_22/data.json"
+    },
+    {
+      "id": "house_23",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_23/data.json"
+    },
+    {
+      "id": "house_24",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_24/data.json"
+    },
+    {
+      "id": "house_25",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_25/data.json"
+    },
+    {
+      "id": "house_27",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_27/data.json"
+    },
+    {
+      "id": "house_29",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_29/data.json"
+    },
+    {
+      "id": "house_30",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_30/data.json"
+    },
+    {
+      "id": "house_31",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_31/data.json"
+    },
+    {
+      "id": "house_33",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_33/data.json"
+    },
+    {
+      "id": "house_34",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_34/data.json"
+    },
+    {
+      "id": "house_35",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_35/data.json"
+    },
+    {
+      "id": "house_36",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_36/data.json"
+    },
+    {
+      "id": "house_37",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_37/data.json"
+    },
+    {
+      "id": "house_38",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_38/data.json"
+    },
+    {
+      "id": "house_40",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_40/data.json"
+    },
+    {
+      "id": "house_41",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_41/data.json"
+    },
+    {
+      "id": "house_42",
+      "issues": [],
+      "city": null,
+      "settlement": "Большой Лог",
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_42/data.json"
+    },
+    {
+      "id": "house_43",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_43/data.json"
+    },
+    {
+      "id": "house_44",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_44/data.json"
+    },
+    {
+      "id": "house_45",
+      "issues": [],
+      "city": null,
+      "settlement": "Октябрьский",
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_45/data.json"
+    },
+    {
+      "id": "house_46",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_46/data.json"
+    },
+    {
+      "id": "house_47",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_47/data.json"
+    },
+    {
+      "id": "house_48",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_48/data.json"
+    },
+    {
+      "id": "house_49",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_49/data.json"
+    },
+    {
+      "id": "house_50",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_50/data.json"
+    },
+    {
+      "id": "house_51",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_51/data.json"
+    },
+    {
+      "id": "house_52",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_52/data.json"
+    },
+    {
+      "id": "house_53",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_53/data.json"
+    },
+    {
+      "id": "house_54",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_54/data.json"
+    },
+    {
+      "id": "house_55",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_55/data.json"
+    },
+    {
+      "id": "house_56",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_56/data.json"
+    },
+    {
+      "id": "house_57",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_57/data.json"
+    },
+    {
+      "id": "house_58",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_58/data.json"
+    },
+    {
+      "id": "house_59",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_59/data.json"
+    },
+    {
+      "id": "house_60",
+      "issues": [],
+      "city": null,
+      "settlement": "Октябрьский",
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_60/data.json"
+    },
+    {
+      "id": "house_61",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_61/data.json"
+    },
+    {
+      "id": "house_62",
+      "issues": [],
+      "city": null,
+      "settlement": "Октябрьский",
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_62/data.json"
+    },
+    {
+      "id": "house_63",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_63/data.json"
+    },
+    {
+      "id": "house_64",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_64/data.json"
+    },
+    {
+      "id": "house_65",
+      "issues": [],
+      "city": null,
+      "settlement": "Российский",
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_65/data.json"
+    },
+    {
+      "id": "house_66",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_66/data.json"
+    },
+    {
+      "id": "house_67",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_67/data.json"
+    },
+    {
+      "id": "house_68",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_68/data.json"
+    },
+    {
+      "id": "house_69",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_69/data.json"
+    },
+    {
+      "id": "house_70",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_70/data.json"
+    },
+    {
+      "id": "house_71",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_71/data.json"
+    },
+    {
+      "id": "house_72",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_72/data.json"
+    },
+    {
+      "id": "house_73",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "output/houses/house_73/data.json"
+    },
+    {
+      "id": "house_911",
+      "issues": [],
+      "city": "Аксай",
+      "settlement": null,
+      "photo_folder_mismatch": true,
+      "source_path": "output/houses/new-objects.json"
+    },
+    {
+      "id": "house_912",
+      "issues": [],
+      "city": "Ростов-на-Дону",
+      "settlement": null,
+      "photo_folder_mismatch": true,
+      "source_path": "output/houses/new-objects.json"
+    },
+    {
+      "id": "house_913",
+      "issues": [],
+      "city": null,
+      "settlement": "Старочеркасская",
+      "photo_folder_mismatch": true,
+      "source_path": "output/houses/new-objects.json"
+    },
+    {
+      "id": "land_01",
+      "issues": [
+        {
+          "field": "price",
+          "reason": "conflicting_values",
+          "values": [
+            1700000,
+            950000
+          ]
+        }
+      ],
+      "city": "Азовский район",
+      "settlement": "Городище",
+      "photo_folder_mismatch": false,
+      "source_path": "lands/land_01/data.json"
+    },
+    {
+      "id": "land_04",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "lands/land_04/data.json"
+    },
+    {
+      "id": "land_06",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "lands/land_06/data.json"
+    },
+    {
+      "id": "land_07",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "lands/land_07/data.json"
+    },
+    {
+      "id": "object_112",
+      "issues": [
+        {
+          "field": "area_total",
+          "reason": "small_title_without_confirmed_total",
+          "values": [
+            10
+          ]
+        }
+      ],
+      "city": "Аксай",
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "objects/object_112/data.json"
+    },
+    {
+      "id": "object_23",
+      "issues": [
+        {
+          "field": "price",
+          "reason": "conflicting_values",
+          "values": [
+            2000000,
+            7500000
+          ]
+        }
+      ],
+      "city": "Ростовская область",
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "objects/object_23/data.json"
+    },
+    {
+      "id": "object_24",
+      "issues": [
+        {
+          "field": "price",
+          "reason": "conflicting_values",
+          "values": [
+            6820000,
+            5100000
+          ]
+        }
+      ],
+      "city": "Ростовская область",
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "objects/object_24/data.json"
+    },
+    {
+      "id": "object_33",
+      "issues": [
+        {
+          "field": "area_total",
+          "reason": "title_description_mismatch",
+          "values": [
+            40,
+            68.4
+          ]
+        }
+      ],
+      "city": "Ростов-на-Дону",
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "objects/object_33/data.json"
+    },
+    {
+      "id": "object_40",
+      "issues": [
+        {
+          "field": "price",
+          "reason": "conflicting_values",
+          "values": [
+            9900000,
+            9000000
+          ]
+        }
+      ],
+      "city": "Ростов-на-Дону",
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "objects/object_40/data.json"
+    },
+    {
+      "id": "object_42",
+      "issues": [
+        {
+          "field": "area_total",
+          "reason": "title_description_mismatch",
+          "values": [
+            13,
+            40.7
+          ]
+        }
+      ],
+      "city": "Ростов-на-Дону",
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "objects/object_42/data.json"
+    },
+    {
+      "id": "object_43",
+      "issues": [
+        {
+          "field": "area_total",
+          "reason": "title_description_mismatch",
+          "values": [
+            18,
+            37.9
+          ]
+        }
+      ],
+      "city": "Ростов-на-Дону",
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "objects/object_43/data.json"
+    },
+    {
+      "id": "object_45",
+      "issues": [
+        {
+          "field": "area_total",
+          "reason": "small_title_without_confirmed_total",
+          "values": [
+            15
+          ]
+        }
+      ],
+      "city": "Ростовская область",
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "objects/object_45/data.json"
+    },
+    {
+      "id": "object_46",
+      "issues": [
+        {
+          "field": "area_total",
+          "reason": "title_description_mismatch",
+          "values": [
+            14,
+            59.9
+          ]
+        }
+      ],
+      "city": "Ростов-на-Дону",
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "objects/object_46/data.json"
+    },
+    {
+      "id": "object_54",
+      "issues": [
+        {
+          "field": "area_total",
+          "reason": "title_description_mismatch",
+          "values": [
+            14,
+            59.9
+          ]
+        }
+      ],
+      "city": "Ростов-на-Дону",
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "objects/object_54/data.json"
+    },
+    {
+      "id": "object_55",
+      "issues": [
+        {
+          "field": "price",
+          "reason": "conflicting_values",
+          "values": [
+            9900000,
+            9000000
+          ]
+        }
+      ],
+      "city": "Ростов-на-Дону",
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "objects/object_55/data.json"
+    },
+    {
+      "id": "object_59",
+      "issues": [
+        {
+          "field": "area_total",
+          "reason": "title_description_mismatch",
+          "values": [
+            13,
+            17.8
+          ]
+        }
+      ],
+      "city": "Ростов-на-Дону",
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "objects/object_59/data.json"
+    },
+    {
+      "id": "object_62",
+      "issues": [
+        {
+          "field": "area_total",
+          "reason": "title_description_mismatch",
+          "values": [
+            13,
+            54.4
+          ]
+        }
+      ],
+      "city": "Ростовская область",
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "objects/object_62/data.json"
+    },
+    {
+      "id": "object_67",
+      "issues": [
+        {
+          "field": "area_total",
+          "reason": "title_description_mismatch",
+          "values": [
+            14,
+            88.5
+          ]
+        }
+      ],
+      "city": "Ростовская область",
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "objects/object_67/data.json"
+    },
+    {
+      "id": "object_901",
+      "issues": [
+        {
+          "field": "price",
+          "reason": "conflicting_values",
+          "values": [
+            9000000,
+            5250000
+          ]
+        }
+      ],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": true,
+      "source_path": "objects/object_901/data.json"
+    },
+    {
+      "id": "object_902",
+      "issues": [],
+      "city": "Аксай",
+      "settlement": null,
+      "photo_folder_mismatch": true,
+      "source_path": "objects/object_902/data.json"
+    },
+    {
+      "id": "object_903",
+      "issues": [],
+      "city": "Аксай",
+      "settlement": null,
+      "photo_folder_mismatch": true,
+      "source_path": "objects/object_903/data.json"
+    },
+    {
+      "id": "object_904",
+      "issues": [
+        {
+          "field": "area_total",
+          "reason": "ambiguous_description",
+          "values": [
+            40,
+            39.8
+          ]
+        }
+      ],
+      "city": "Ростов-на-Дону",
+      "settlement": null,
+      "photo_folder_mismatch": true,
+      "source_path": "objects/object_904/data.json"
+    },
+    {
+      "id": "object_905",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": true,
+      "source_path": "objects/object_905/data.json"
+    },
+    {
+      "id": "object_906",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": true,
+      "source_path": "objects/object_906/data.json"
+    },
+    {
+      "id": "object_907",
+      "issues": [
+        {
+          "field": "price",
+          "reason": "conflicting_values",
+          "values": [
+            5950000,
+            5050000
+          ]
+        }
+      ],
+      "city": "Ростов-на-Дону",
+      "settlement": null,
+      "photo_folder_mismatch": true,
+      "source_path": "objects/object_907/data.json"
+    },
+    {
+      "id": "object_908",
+      "issues": [
+        {
+          "field": "price",
+          "reason": "conflicting_values",
+          "values": [
+            6350000,
+            5000000
+          ]
+        }
+      ],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": true,
+      "source_path": "objects/object_908/data.json"
+    },
+    {
+      "id": "object_909",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": true,
+      "source_path": "objects/object_909/data.json"
+    },
+    {
+      "id": "object_91",
+      "issues": [
+        {
+          "field": "area_total",
+          "reason": "title_description_mismatch",
+          "values": [
+            10,
+            40.5
+          ]
+        }
+      ],
+      "city": "Ростовская область",
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "objects/object_91/data.json"
+    },
+    {
+      "id": "object_910",
+      "issues": [
+        {
+          "field": "price",
+          "reason": "conflicting_values",
+          "values": [
+            5950000,
+            5050000
+          ]
+        }
+      ],
+      "city": "Ростов-на-Дону",
+      "settlement": null,
+      "photo_folder_mismatch": true,
+      "source_path": "objects/object_910/data.json"
+    },
+    {
+      "id": "object_913",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": true,
+      "source_path": "output/apartments/new-objects.json"
+    },
+    {
+      "id": "object_914",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": true,
+      "source_path": "output/apartments/new-objects.json"
+    },
+    {
+      "id": "object_915",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": true,
+      "source_path": "output/apartments/new-objects.json"
+    },
+    {
+      "id": "object_916",
+      "issues": [],
+      "city": null,
+      "settlement": null,
+      "photo_folder_mismatch": true,
+      "source_path": "output/apartments/new-objects.json"
+    },
+    {
+      "id": "object_92",
+      "issues": [
+        {
+          "field": "area_total",
+          "reason": "small_title_without_confirmed_total",
+          "values": [
+            19
+          ]
+        }
+      ],
+      "city": "Ростовская область",
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "objects/object_92/data.json"
+    },
+    {
+      "id": "object_95",
+      "issues": [
+        {
+          "field": "area_total",
+          "reason": "small_title_without_confirmed_total",
+          "values": [
+            15
+          ]
+        }
+      ],
+      "city": "Ростовская область",
+      "settlement": null,
+      "photo_folder_mismatch": false,
+      "source_path": "objects/object_95/data.json"
+    }
+  ]
+}

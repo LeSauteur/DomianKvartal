@@ -1,0 +1,71 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {createHash} from 'node:crypto';
+import {normalizeRecord,finalizeDescriptions} from '../_tools/catalog-presentation.mjs';
+const read=p=>fs.readFileSync(p,'utf8');
+const json=p=>JSON.parse(read(p));
+const records=json('data/catalog/registry.json'), published=records.filter(r=>r.status!=='placeholder');
+const baseline=json('tests/fixtures/catalog-publication-20261103.json');
+const hash=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
+const decode=s=>s.replaceAll('&quot;','"').replaceAll('&#39;',"'").replaceAll('&lt;','<').replaceAll('&gt;','>').replaceAll('&amp;','&');
+const text=s=>decode(s.replace(/<script\b[\s\S]*?<\/script>/gi,'').replace(/<style\b[\s\S]*?<\/style>/gi,'').replace(/<[^>]*>/g,' ')).replace(/\s+/g,' ').trim();
+const forbidden=/информация предоставлена владельцем|со слов собственника|по заявлению пользователя|независимую проверку|автоматически сгенерирован|данные получены из JSON|description_raw|description_public|publication_approval|source_path|undefined|\bNaN\b|\bnull\b/iu;
+test('all 220 published IDs, source descriptions, images and 20 placeholders survive',()=>{
+  assert.equal(published.length,220);
+  assert.deepEqual(published.map(r=>r.id),baseline.ids);
+  assert.equal(hash(records.map(r=>({id:r.id,type:r.type,source_path:r.source_path,title_raw:r.title_raw,description_raw:r.description_raw,images:r.images,floor_plans:r.floor_plans}))),baseline.sourceHash);
+  assert.equal(hash(records.filter(r=>r.status==='placeholder')),baseline.placeholderHash);
+});
+test('all 220 static pages expose coherent descriptions, status, unique metadata and correct schema',()=>{
+  const titles=new Set(),descriptions=new Set(),bodyDescriptions=new Set(),sitemap=read('sitemap.xml');
+  const feed=json('output/catalog/registry.json');
+  assert.equal(feed.length,220);
+  for(const r of published){
+    const html=read('obekt/'+r.id+'.html'), main=text(html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)[1]);
+    assert.equal(r.status,'active',r.id);assert.equal(r.status_label,'Актуально',r.id);
+    assert.equal(r.publication_approval.basis,'owner-decision',r.id);
+    assert.ok(r.description_public?.length>15,r.id);
+    assert.ok(!bodyDescriptions.has(r.description_public),r.id);bodyDescriptions.add(r.description_public);
+    assert.ok(main.includes(r.description_public.replace(/\s+/g,' ').trim()),r.id+' static description');
+    assert.match(html,/data-listing-status>Актуально</u,r.id);assert.doesNotMatch(main,forbidden,r.id);
+    assert.equal((html.match(/<h1\b/gu)||[]).length,1,r.id);assert.doesNotMatch(html,/<meta[^>]+content="noindex/iu,r.id);
+    const title=decode(html.match(/<title>(.*?)<\/title>/s)[1]),description=decode(html.match(/name="description" content="([^"]+)"/)[1]);
+    assert.ok(!titles.has(title),r.id+' duplicate title');titles.add(title);
+    assert.ok(!descriptions.has(description),r.id+' duplicate metadata');descriptions.add(description);
+    const url='https://domian-161.ru/obekt/'+r.id+'.html';
+    assert.ok(html.includes('rel="canonical" href="'+url+'"'),r.id);assert.ok(sitemap.includes('<loc>'+url+'</loc>'),r.id);
+    assert.ok(html.includes('href="tel:+79536091122"'),r.id);
+    const nodes=[...html.matchAll(/type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1]));
+    const listing=nodes.find(x=>x['@type']==='RealEstateListing');assert.ok(listing,r.id);
+    assert.equal(listing.description,r.description_public,r.id);assert.equal(listing.url,url,r.id);
+    assert.equal(listing.mainEntity['@type'],{apartment:'Apartment',house:'House',land:'Place'}[r.type],r.id);
+    if(r.price===null||r.price_conflict){assert.match(main,/Цена по запросу/u,r.id);assert.equal(listing.offers,undefined,r.id);}
+    else assert.equal(listing.offers.price,r.price,r.id);
+    if(r.area_conflict)assert.equal(listing.mainEntity.floorSize,undefined,r.id);
+    const publicItem=feed.find(x=>x.id===r.id);assert.ok(publicItem,r.id);
+    assert.equal(publicItem.fullDescription,r.description_public,r.id);
+    assert.equal(publicItem.statusLabel,'Актуально',r.id);
+    assert.equal(publicItem.source_path,undefined,r.id);
+    assert.equal(publicItem.features.area,r.area_conflict?null:r.area_total,r.id);
+    const category={apartment:'apartments',house:'houses',land:'lands'}[r.type];
+    assert.ok(read(category+'.html').includes('href="/obekt/'+r.id+'.html"'),r.id);
+  }
+});
+test('ambiguous totals and prices stay private; cleaning keeps addresses and facts',()=>{
+  const input={...records[0],id:'house_99998',title_raw:'Дом 100 м²',description_raw:'Адрес: п. Российский, ул. Парковая, 118\nОбщая площадь — 120 м².\nЦена: 8 млн рублей.\nЗвоните +7 999 123-45-67!',price:7000000,price_conflict:null,area_total:100,area_conflict:null,city:null,settlement:null,address:null,district:null};
+  const r=normalizeRecord(input);
+  assert.ok(r.price_conflict);assert.ok(r.area_conflict);assert.equal(r.price,null);
+  assert.equal(r.address,'п. Российский, ул. Парковая, 118');assert.equal(r.settlement,'Российский');
+  assert.doesNotMatch(r.description_public,/8 млн|100 м²|120 м²|999 123|Звоните/u);
+  assert.match(r.description_public,/Парковая, 118/u);
+  const duplicates=finalizeDescriptions([{...r,id:'house_99998'},{...r,id:'house_99999'}]);
+  assert.notEqual(duplicates[0].description_public,duplicates[1].description_public);
+  const lots=published.find(r=>r.id==='land_01');
+  assert.ok(lots.price_conflict.sources.some(s=>s.price===950000));
+  assert.equal(lots.price,null);
+  const locality=published.find(r=>r.id==='land_10');
+  assert.equal(locality.city,'Аксайский район');
+  assert.equal(locality.settlement,'Верхнетемерницкий');
+  assert.equal(published.find(r=>r.id==='house_66').city,null,'bus destination is not the property location');
+});

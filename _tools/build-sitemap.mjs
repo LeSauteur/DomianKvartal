@@ -14,6 +14,10 @@ export function indexableFiles() {
 }
 let committedDates;
 export function lastmod(file) {
+  if(/^obekt\/(?:object|house|land)_\d+\.html$/.test(file)){
+    const record=JSON.parse(fs.readFileSync(path.join(root,'data/catalog/registry.json'),'utf8')).find(r=>'obekt/'+r.id+'.html'===file);
+    if(/^\d{4}-\d{2}-\d{2}$/.test(record?.content_updated_at||''))return record.content_updated_at;
+  }
   if (!committedDates) {
     committedDates = new Map();
     // Read history once rather than launching git for every property page.
