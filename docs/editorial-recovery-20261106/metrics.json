@@ -1,0 +1,850 @@
+{
+  "baseCommit": "1976779faf7e22f2818f63a9bb645543f5f53e1d",
+  "editorialCommit": "942f385bc34c9d02a7b201efa7edcddf9442411b",
+  "reviewed": 220,
+  "unchanged": 48,
+  "changed": 172,
+  "retainedOriginalBlocks": {
+    "preserved": 592,
+    "total": 633
+  },
+  "restoredDescriptions": 164,
+  "correctedOnly": 8,
+  "removedUnsupported": [
+    {
+      "id": "house_06",
+      "removed": [
+        "Крытый вход, мощёная дорожка, калитка и ограждение — сведения только по фото"
+      ]
+    },
+    {
+      "id": "house_07",
+      "removed": [
+        "Навес, большие окна, тёмная облицовка и светлые вставки — сведения только по фото"
+      ]
+    },
+    {
+      "id": "house_19",
+      "removed": [
+        "Цвет фасада, мощёный двор, крыльцо, высокое окно и остеклённый проём — сведения только по фото"
+      ]
+    },
+    {
+      "id": "house_22",
+      "removed": [
+        "Двускатный навес, две опоры, терракотовый и светлый фасад — сведения только по фото"
+      ]
+    },
+    {
+      "id": "house_24",
+      "removed": [
+        "Выступ фасада, тёмные рамы, утопленный вход и ступени — сведения только по фото"
+      ]
+    },
+    {
+      "id": "house_25",
+      "removed": [
+        "Крытое крыльцо, ступени, дорожка, цвета фасада и рам — сведения только по фото"
+      ]
+    },
+    {
+      "id": "land_06",
+      "removed": [
+        "Треугольный вытянутый контур, сужение и расположение вдоль дороги — сведения только по изображению"
+      ]
+    },
+    {
+      "id": "land_07",
+      "removed": [
+        "Назначение для строительства загородного дома не подтверждено видом разрешённого использования"
+      ]
+    },
+    {
+      "id": "object_20",
+      "removed": [
+        "Отделка, напольное покрытие, мебельная композиция и кондиционер — сведения только по фото"
+      ]
+    },
+    {
+      "id": "object_94",
+      "removed": [
+        "Подземная парковка — отсутствует в исходных данных"
+      ]
+    },
+    {
+      "id": "object_97",
+      "removed": [
+        "Единственное число санузла не соответствует исходнику"
+      ]
+    }
+  ],
+  "templateAdjusted": [
+    "house_42",
+    "house_45",
+    "house_47",
+    "house_48",
+    "house_49",
+    "house_50",
+    "house_51",
+    "house_54",
+    "house_57",
+    "house_60",
+    "house_61",
+    "house_62",
+    "house_69",
+    "house_71",
+    "house_73"
+  ],
+  "wordCounts": {
+    "raw": 22671,
+    "publishedBase": 16077,
+    "editorialBefore": 9498,
+    "after": 10700
+  },
+  "shortDescriptions": {
+    "before": 135,
+    "after": 118
+  },
+  "identicalLimitedSources": [
+    [
+      "house_06",
+      "house_07"
+    ],
+    [
+      "house_19",
+      "house_22",
+      "house_24"
+    ],
+    [
+      "land_06",
+      "land_07"
+    ]
+  ],
+  "conflicts": [
+    {
+      "id": "house_01",
+      "issues": [
+        "price: conflicting_values; [4100000,4099999.9999999995]"
+      ]
+    },
+    {
+      "id": "house_02",
+      "issues": [
+        "area_total: conflicting_total_area; [20,200]"
+      ]
+    },
+    {
+      "id": "house_08",
+      "issues": [
+        "price: conflicting_values; [4100000,7300000]"
+      ]
+    },
+    {
+      "id": "house_10",
+      "issues": [
+        "price: conflicting_values; [4100000,8199999.999999999]"
+      ]
+    },
+    {
+      "id": "house_11",
+      "issues": [
+        "price: conflicting_values; [4100000,6800000]"
+      ]
+    },
+    {
+      "id": "house_12",
+      "issues": [
+        "price: conflicting_values; [4100000,9200000]"
+      ]
+    },
+    {
+      "id": "house_13",
+      "issues": [
+        "price: conflicting_values; [4900000,10500000]"
+      ]
+    },
+    {
+      "id": "house_911",
+      "issues": [
+        "Общая площадь 297 м²; в исходнике первый и второй этажи названы по 150 м². Значения не исправлялись и площади этажей не выбирались."
+      ]
+    },
+    {
+      "id": "land_01",
+      "issues": [
+        "price: conflicting_values; [1700000,950000]"
+      ]
+    },
+    {
+      "id": "land_11",
+      "issues": [
+        "В заголовке 6 соток, в описании 20 × 40 м (800 м², 8 соток при прямоугольной форме). Исходные значения не изменены, размеры в текст не возвращены."
+      ]
+    },
+    {
+      "id": "object_04",
+      "issues": [
+        "В исходнике год постройки указан как 2019/2020. Один год не выбирался; цена отдельной кладовой не переносилась в цену квартиры."
+      ]
+    },
+    {
+      "id": "object_112",
+      "issues": [
+        "area_total: small_title_without_confirmed_total; [10]"
+      ]
+    },
+    {
+      "id": "object_23",
+      "issues": [
+        "price: conflicting_values; [2000000,7500000]"
+      ]
+    },
+    {
+      "id": "object_24",
+      "issues": [
+        "price: conflicting_values; [6820000,5100000]"
+      ]
+    },
+    {
+      "id": "object_33",
+      "issues": [
+        "area_total: title_description_mismatch; [40,68.4]"
+      ]
+    },
+    {
+      "id": "object_40",
+      "issues": [
+        "price: conflicting_values; [9900000,9000000]"
+      ]
+    },
+    {
+      "id": "object_42",
+      "issues": [
+        "area_total: title_description_mismatch; [13,40.7]"
+      ]
+    },
+    {
+      "id": "object_43",
+      "issues": [
+        "area_total: title_description_mismatch; [18,37.9]"
+      ]
+    },
+    {
+      "id": "object_45",
+      "issues": [
+        "area_total: small_title_without_confirmed_total; [15]"
+      ]
+    },
+    {
+      "id": "object_46",
+      "issues": [
+        "area_total: title_description_mismatch; [14,59.9]"
+      ]
+    },
+    {
+      "id": "object_51",
+      "issues": [
+        "Заголовок — студия, исходное описание — однокомнатная квартира. Тип планировки не выбран."
+      ]
+    },
+    {
+      "id": "object_54",
+      "issues": [
+        "area_total: title_description_mismatch; [14,59.9]"
+      ]
+    },
+    {
+      "id": "object_55",
+      "issues": [
+        "price: conflicting_values; [9900000,9000000]"
+      ]
+    },
+    {
+      "id": "object_59",
+      "issues": [
+        "area_total: title_description_mismatch; [13,17.8]"
+      ]
+    },
+    {
+      "id": "object_62",
+      "issues": [
+        "area_total: title_description_mismatch; [13,54.4]"
+      ]
+    },
+    {
+      "id": "object_67",
+      "issues": [
+        "area_total: title_description_mismatch; [14,88.5]"
+      ]
+    },
+    {
+      "id": "object_82",
+      "issues": [
+        "Высота потолков 44,3 м выглядит ошибочной и требует подтверждения. Число не исправлено на предполагаемое значение."
+      ]
+    },
+    {
+      "id": "object_84",
+      "issues": [
+        "В тексте чистовая отделка, в поле ремонта требует ремонта. Состояние не выбрано, оба исходных значения сохранены."
+      ]
+    },
+    {
+      "id": "object_901",
+      "issues": [
+        "price: conflicting_values; [9000000,5250000]"
+      ]
+    },
+    {
+      "id": "object_904",
+      "issues": [
+        "area_total: ambiguous_description; [40,39.8]",
+        "Общая площадь 39,8 и 40 м²; жилая 19 и 20 м². Спорные значения не выбирались; 20 м² убраны из публичных параметров без изменения исходного поля."
+      ]
+    },
+    {
+      "id": "object_907",
+      "issues": [
+        "price: conflicting_values; [5950000,5050000]"
+      ]
+    },
+    {
+      "id": "object_908",
+      "issues": [
+        "price: conflicting_values; [6350000,5000000]"
+      ]
+    },
+    {
+      "id": "object_91",
+      "issues": [
+        "area_total: title_description_mismatch; [10,40.5]"
+      ]
+    },
+    {
+      "id": "object_910",
+      "issues": [
+        "price: conflicting_values; [5950000,5050000]"
+      ]
+    },
+    {
+      "id": "object_92",
+      "issues": [
+        "area_total: small_title_without_confirmed_total; [19]"
+      ]
+    },
+    {
+      "id": "object_95",
+      "issues": [
+        "area_total: small_title_without_confirmed_total; [15]"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "house_02",
+      "questions": [
+        "В исходнике указано «профиль 7» без единицы измерения и модели. Это не превращалось ни в 7 камер, ни в 70 мм; параметр требует уточнения."
+      ]
+    },
+    {
+      "id": "house_912",
+      "questions": [
+        "Фраза про бассейн повторяет рекламный фрагмент house_911. Наличие бассейна следует подтвердить у агента; редактура не является подтверждением."
+      ]
+    },
+    {
+      "id": "house_913",
+      "questions": [
+        "В исходнике указаны 20 минут до Аксая и 35 минут до Ростова без маршрута и условий. Обещания времени в пути не восстанавливались как постоянная характеристика."
+      ]
+    },
+    {
+      "id": "house_915",
+      "questions": [
+        "Фраза «до города 4 км» не называет город и точку отсчёта; в публичный текст не возвращена."
+      ]
+    },
+    {
+      "id": "land_02",
+      "questions": [
+        "Бесплатное подключение газа и 40 000 рублей за электричество зависят от программы, даты и условий; до подтверждения не восстанавливались."
+      ]
+    },
+    {
+      "id": "object_01",
+      "questions": [
+        "Обещание открытия школы в 2025 году устарело и не подтверждает фактическое открытие. Не восстановлено."
+      ]
+    },
+    {
+      "id": "object_112",
+      "questions": [
+        "10 м² из исходного заголовка не подтверждены описанием. Площадь не выбрана. Время до Меги/Ростова не восстанавливалось как постоянная величина."
+      ]
+    },
+    {
+      "id": "object_42",
+      "questions": [
+        "В источнике мощности кондиционеров указаны 7 и 9 кВт. Единицы/модели требуют уточнения; не заменялись на БТЕ и не добавлялись в публичный текст."
+      ]
+    },
+    {
+      "id": "object_45",
+      "questions": [
+        "Заголовок называет студию 15 м², описание — спальню с гардеробной и кухню-гостиную без метража. Тип планировки и общая площадь требуют уточнения."
+      ]
+    },
+    {
+      "id": "object_61",
+      "questions": [
+        "«Дом электрический» не уточняет тип плиты/газоснабжение. Не заменялось на конкретное оборудование."
+      ]
+    },
+    {
+      "id": "object_81",
+      "questions": [
+        "Фраза «котел колонка» не позволяет однозначно установить, одно это устройство или два. Тип водонагревателя не придумывался."
+      ]
+    },
+    {
+      "id": "object_83",
+      "questions": [
+        "Поле требует ремонта и фраза готова для жилья описывают состояние неоднозначно. Новая оценка состояния не присваивалась."
+      ]
+    },
+    {
+      "id": "object_904",
+      "questions": [
+        "Тип дома описан как монолитный и кирпично-монолитный. Конструкция не переопределялась."
+      ]
+    },
+    {
+      "id": "object_910",
+      "questions": [
+        "Жилая комната 26 м² и кухня 10 м² в сумме равны всей площади 36 м² без санузла/коридора. Методика площадей требует уточнения; значения не изменялись."
+      ]
+    },
+    {
+      "id": "object_99",
+      "questions": [
+        "Обещанное открытие школы в 2025 году не проверено и не восстановлено."
+      ]
+    }
+  ],
+  "preservation": {
+    "publicPagesChecked": 328,
+    "sitemapUrls": 297,
+    "allOriginalCharacteristics": true,
+    "photosAndPaths": true,
+    "forms": true,
+    "linkDestinations": true,
+    "canonicalAndIndexability": true,
+    "h1": true,
+    "scripts": true
+  },
+  "rebuild": {
+    "checkedFiles": 341,
+    "ordinaryRebuild": "byte-identical",
+    "registryDeletedRebuild": "byte-identical",
+    "staleReviewGuard": "rejected before generated files were overwritten",
+    "sourceOfReviewedCopy": "data/catalog/editorial-copy.json",
+    "hashes": {
+      "404.html": "a88526ac8daf04b59dce58ad04914c30c45ee6731be4db6747077b2017cbca0e",
+      "apartments.html": "508a59e75da81a78f30501b1ec3dcd4d5986ec00811e38dc7e5c5ad004c29747",
+      "commercial.html": "ad74aedcd2a6cb74121233500c5404ce9355f1280000c7338964b372e570fb74",
+      "construction.html": "095fd7a9da41030cd69b047061f2f61c3bdc835a85f390caa7bcf503e4fb563d",
+      "construction/builders/domanstroy.html": "17071bfa2eefdff3103ad2193a15a23fa0a943b6ba4f49f3e6810245ecdee5af",
+      "construction/builders/eqvita.html": "d9e6512947a1d60d3f08acbe4a76f51bf2c1a25f2ff6eb9fbf9b6501907890c3",
+      "construction/builders/postroim-dom.html": "5da8ff981d20b571db8f416a7dbdefc7505a67e7ec35495478f9830759d3cc04",
+      "construction/builders/soyuz.html": "644efebbb95a2eda8849a7a1889beb6c563af37e7c86033cd22ef84505271c34",
+      "construction/projects/domanstroy-ds-115.html": "d4ada7ce39fb3c9894513694fb936187768543d3c78def18da9da85212baec1b",
+      "construction/projects/domanstroy-ds-116.html": "832966db92d906c1d31ce6118c9710890bad1398a282db7ef31c4ac767ee82e0",
+      "construction/projects/domanstroy-ds-128.html": "38af8246e579ca4fccfbf2f89851dd5cd42ecc1e159b93c7629481270df090e7",
+      "construction/projects/domanstroy-ds-130.html": "d39a478b7671f687df9c6de03db3a9944ecd144075f0c3976aa48afa110bfdab",
+      "construction/projects/domanstroy-ds-80.html": "c13fd5fddabeba8d676c416973caab6540074b7c715f97f5eee8103eb84560c4",
+      "construction/projects/domanstroy-ds-85-5.html": "31603d390cff05c2d2b211ddb038ae14a03cbe249b870c8c47995738b53f8ed6",
+      "construction/projects/domanstroy-ds-85.html": "1b2b229d20854f59605ce379d1658786e91e961b7f4a522c0d2b2c70af046bc6",
+      "construction/projects/eqvita-01.html": "78666992ad1d3e7d38716254f9245640c2a90946289be191384a4e7888ba7bbb",
+      "construction/projects/eqvita-02.html": "9c27b76f552d028045e34b4303324dacf101a04fc05f1e35c03105ebed2d2e04",
+      "construction/projects/eqvita-03.html": "f2c62b6d847c1bbb5da904a04ea8c7252f50edba5c544880a14c0f9180211ee5",
+      "construction/projects/eqvita-04.html": "d296b7fc2043f5cb2bf93edf7b671d8f838a6389736558d6dee94efd5a960983",
+      "construction/projects/postroim-dom-konstantinovsk-110.html": "5a7f89c63eeef6f879ecbeaf2090e41d1509a066649c38ff4f28443b9fccc3c2",
+      "construction/projects/postroim-dom-rostov-brick-100-180.html": "10b7054c9689c801d120656302ea9cff990aec85d5087c9b6ea4148114049319",
+      "construction/projects/postroim-dom-rostov-brick-100-90.html": "9f7dcfe63c9cf42981610bdd13681eec4036e73b3b7d5a53d5a0d19cc3fe1cf5",
+      "construction/projects/postroim-dom-rostov-brick-110.html": "3ac790bb5b983f1c59b3929bf9273248a484f0527687c8f057ff75fc6c99fe72",
+      "construction/projects/postroim-dom-rostov-stone-100-120.html": "e4055f775f4ede53ced7888be37fc55fbbcddac85d963a83cb849c28c46e3d60",
+      "construction/projects/postroim-dom-rostov-stone-120.html": "cc02e9356e96a85d36413a21bdd2bf5416b161ef166914ecf2be0bd2aba3ae71",
+      "construction/projects/soyuz-105.html": "f72d193f69d554b90330849d470efddc8ed97b563d8df270e4f8bedd636883ad",
+      "construction/projects/soyuz-107.html": "84627e6165784b3023d936b52ecaf85bc26a51357e398b256d13a7af58de0264",
+      "construction/projects/soyuz-109.html": "0f1b2ec02409a24d9c8106dbdd4ad16039fa2a672c21ff8519778bf8d41eecd1",
+      "construction/projects/soyuz-111-1.html": "584919570fa770663998e43efdfa156bbe0e036212c0c8c94b0622faee4a439d",
+      "construction/projects/soyuz-114-2.html": "feb9cfc7dbae8571ec37667052d8bd22ffc752c92d1170bbedce506629dbba2b",
+      "construction/projects/soyuz-124.html": "68ca711c63e73837091525617578f9ad4b7b633d04d1944290f0654e28774cb6",
+      "construction/projects/soyuz-137.html": "a546487a313fb139b64865abf6bb229bfd2790d0a8eb648953b734b20a978a90",
+      "construction/projects/soyuz-142-2.html": "6faa81be2adce8bab6aa32da9e65ec1e4fe80dfb22b6beedafdb54cfb949bc47",
+      "construction/projects/soyuz-69-9.html": "873a37a2b34dc2a3dbde7f7a58fa1702dc224d5461baa4520a8d31667afa8224",
+      "construction/projects/soyuz-75.html": "97064413c770c0401f4762cb738315e37de40f947d28e7330aec1a6d9496e0fc",
+      "construction/projects/soyuz-83-8.html": "94a268fde84a454f12a7b511d161eab1452e3651a0af6816189a8f9568d603df",
+      "construction/projects/soyuz-84.html": "1d6572bc90c721ba273a028d23e14c5df4f1f26c80fa19be744317f19f76bf09",
+      "construction/projects/soyuz-85.html": "404c9b5e858347df67d43c71a0122d7eb4b3f6c83ee14ac18c6a2650a929ce44",
+      "construction/projects/soyuz-90.html": "9d0e29cb63dc72279dc6d6a08f264e4f7f35c778f1920bf39df24b994f454fae",
+      "construction/projects/soyuz-99.html": "2f349382a1c80ea27e8df2c4e329e4e93faca1a37e1da1f0278d360a4ed288c6",
+      "cookies.html": "a0a3db0834dae7ff91bf012bf612e80973f4ba8f43f67ede1a6db2bf215b4928",
+      "details.html": "60eb243df1dee4e95f569fd5cc51a1701714513b597b8009dced6b10cec6955e",
+      "guides/chto-proverit-pered-pokupkoy-doma-v-aksaye.html": "8bfaf6c473e317ba2f55d0d132b6978ad65a18fab40af48a7509ff687f7fe9a3",
+      "guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html": "fee20cc281cd31933d6725adc0a65dadaef520a47166a2b1d4e40d9dd3df32ea",
+      "guides/chto-proverit-pered-pokupkoy-uchastka-v-aksaye.html": "b72c91f0ad0a9aac8008624254d054082d120c9322a26e63649067dc4da72aac",
+      "guides/gde-kupit-dom-v-aksaye-ryadom-s-rostovom.html": "fa0cf660e025a2b8503f83731452e6916b8c6616897359b6b0f8cd3e09ff387c",
+      "guides/index.html": "f11e86cd19677e85093a6c333b6b14c93d320b9cc466ef7643fab15c796cc9e2",
+      "guides/novostroyka-ili-vtorichka-v-aksaye.html": "8ad1f277801e0f262e84635aa6a4ad2e1d178b7dff473ae44b1c8aaa7ba868ae",
+      "houses.html": "c19053ad3f497c678c96fc09dad85edd34edabbb46102f2603ab449f9a3279fe",
+      "index.html": "bcd9cc3130c7bc31051b2ccb6a122157d97950750f9b890970cc2a4084c06b5b",
+      "lands.html": "b0004dfd765ee6dd07231ff3713180423097432f25e0f293e12b0663fbf6f4e4",
+      "newbuilds.html": "b7e9d8e1c0989aee3839ece2dfa16a9eb58f86822b2c33a7cc376b69d9584c2c",
+      "newbuilds/5-element-aske/index.html": "3372a6b1132009ecd578c42f41222835bcba14863b6ec36b03e0685b1a6e50bb",
+      "newbuilds/academia/index.html": "6965d8f5e997601f18bf1144e944a2b0e04048906eeeeb1b05b8a0175cbd8c11",
+      "newbuilds/akvatoriya/index.html": "d7281cb09227b8c2b7656b7cf78bf9c6083b56bdac43068e9800f27ab994700b",
+      "newbuilds/donskoy-arbat-2/index.html": "0c48539758f7a1ec24980a9ca37f442ec64e4f19237bb303d149a0cae8942b7d",
+      "newbuilds/donskoy-arbat/index.html": "798cd13516d9bde386a7e2c3e8fd9eb6e23e0ccedc797099e5d09535ebb938ec",
+      "newbuilds/dvizhenie-61/index.html": "170854f24dc910cd463d852c1fef639e16e71c7160362694bdc87bb818e00c59",
+      "newbuilds/four-premiers/index.html": "78d81212112e00e78b15484d10ce9e019369dc870cdc415b7b00925fdc290bd0",
+      "newbuilds/gorod-u-reki/index.html": "759b8251d1e2b1bed909e6e2d4420bde0e3a0ec0af0315aaeb6d01bb298f0e41",
+      "newbuilds/gray/index.html": "d6ff61458c91af8b619f7b1590370daf8f74e48d42e2f6fa3bfb1a219f85e66a",
+      "newbuilds/green-park/index.html": "ebb648648f92ae370eef81403434a9a27c057cae2ccd399904ba58ac23ab0abc",
+      "newbuilds/grinside/index.html": "213dda8bef62146cb080b5dff02776cb74397e8f7a75b642ca8af6c8138924f4",
+      "newbuilds/kristall-2/index.html": "d886f4f060b16027a5749106d6801dfcbea3e77415a83f3a6751a19cbfae09c3",
+      "newbuilds/legenda-rostova/index.html": "fbefeddd8b7149d3d06f423db736d2640494b802c4fdef279eb031b6e198c4da",
+      "newbuilds/leventsovka-park/index.html": "cb921c579c306a6cd4a044ecfb773cd52817d6f8abf95efe4aadf764fd6e513a",
+      "newbuilds/levoberezhe/index.html": "0698f53a94f2efe24e0568cb4baa8003e8c3372704fb0a7c0a1e417a382bbddc",
+      "newbuilds/oktyabr-park/index.html": "2bbf03591f067f4bec6e91434e3b6352ed6a2e8aef85a5d0035fe2de3f9f4bbf",
+      "newbuilds/royal-towers/index.html": "c976621ee6975008fc034bcf02febdd0cc03f4a59ce4d3ee7cc9f5347d68c9bb",
+      "newbuilds/siyanie/index.html": "78ab74688b0719f381b753df47e93022af7227feaefdd917f1fa85284eb95c0d",
+      "newbuilds/smartpolet/index.html": "21cbecb3fe5a71f3a911d554d6df6febd0386b4bc3ca9fb02c050498648ddefb",
+      "newbuilds/suvorovskiy/index.html": "89619665b134ee4ccebb27121adcf1fa1b0132888fe0dc522c5f325d4164a3c5",
+      "newbuilds/zapadnye-allei/index.html": "203e7854fb9630245aabb2a389c89010ac715c12b35b597f42b4e83df9eac40a",
+      "obekt/house_01.html": "4c52b6db613edf253ad8d16f94abcda215df579145b2cde072d40e2beef0a660",
+      "obekt/house_02.html": "2e1550766350223b990f0ce39b0f4cc536ba79f8e60e65f4dbe5014e18ae326a",
+      "obekt/house_03.html": "de47f51ee82efa6851a13cb2fdcba9700f4ceb8ac1ab4221a40950015a643856",
+      "obekt/house_04.html": "ad2e0030b919c7001bea0639cdfc56b799e9f0645b83dfec373bf355ef368b41",
+      "obekt/house_05.html": "05db2093cad7a0f5e9bd81df38bdff78e9e952ff17e84ec5c8f431771aab90a8",
+      "obekt/house_06.html": "2a41c7d3f7c5ac2cba3a7c161a95faec66fa46de3217be31266bd67968292076",
+      "obekt/house_07.html": "478ed8b71bcf588b40ebf49d0dcfff6bc3a54eca1b1be14d2b3b75c43606cca7",
+      "obekt/house_08.html": "6596286fd76ba67f748f0a3f7f20636bb9861934f2c487941dbc1265f2464cab",
+      "obekt/house_09.html": "4c4f38f5ed280163b4078192c051feb5624b5eb9551de73874a338dcf0ae1c33",
+      "obekt/house_10.html": "cd2e900859167f62119a74614a9ab92e61ae5bd8e05e8eba6bbc1763937ff378",
+      "obekt/house_11.html": "479651eabff9e3fa2664df2d8577330b38e8c92901cb2d03aabcbd97f11c6f88",
+      "obekt/house_12.html": "02acbbbbd84c15654101ba64a0d0da5f7588ef32a23e66f7fd284f30def3ad60",
+      "obekt/house_13.html": "7ec444093805831fa04e86b9c99f676addff075d6c0c1108df4586d52d8250a6",
+      "obekt/house_14.html": "335cefeea39f672a31f34e182d4701200e0ad4d6f639253ff846c71d4f174a57",
+      "obekt/house_15.html": "59f8671c21728195b35fd0177d305a7cfb9506d91f8c32fe8482f9293254169a",
+      "obekt/house_16.html": "cdffad26739481207e3cf74db02176c0ba0824288b8965525510077500cd5a87",
+      "obekt/house_17.html": "773f483b4466ebfccfb58c5a13b578a5942eaf459c060318c2a5293c6b51095e",
+      "obekt/house_18.html": "0da43768bbd2ccfee96450c6a5627668f00a1cb74caebe124eb9586082a090ef",
+      "obekt/house_19.html": "d5468e2b0a4b085a340a5df0ae462e3a4e6cc0d7d46555f7e23cbef88b5bef6e",
+      "obekt/house_20.html": "723cf58bb482707ace65fb5e6b52770fda012989c2f7fdb83828745e15884fb5",
+      "obekt/house_21.html": "dac7e259e3f805d90f84d948f30b8398b0dc0a749f3915825cdb57a2d8f0d954",
+      "obekt/house_22.html": "1fe860f5310141cbf4c8e6b88a904ebe9b719dd8b7f40e4768958b783ca75b74",
+      "obekt/house_23.html": "f802f63a5a02635594b8cae5752026fd57e715722ebfbe603024c2b1080ad5e8",
+      "obekt/house_24.html": "d0a9f907f71d901f5432cf23b72006a3da4b01bc9547c5640112490c85f7d325",
+      "obekt/house_25.html": "a99d1fd806287e9f1fe521728f14103613c4ca4228b62f6087b3c32000041727",
+      "obekt/house_26.html": "13a377996edca0361efb8ac1fb45797f6b431dcb5c7b876dfed5ae2048c0baea",
+      "obekt/house_27.html": "d5df3cf2c18fe31c2ce0b37af619e4f3c073898ab18be1a036af6aa011a5bbb3",
+      "obekt/house_28.html": "b97b48904fb59886833b987aeb07eb53996dde92ccf5883194b21fa179a00276",
+      "obekt/house_29.html": "602570fd021aaf5d9a2f11506e34c55fa6ee7d820724add8a4f9661e5e5740bf",
+      "obekt/house_30.html": "43d817d6ca89806a09ad809eefffcd7ae4c168e68186bb0c89ed6555b0c34ba8",
+      "obekt/house_31.html": "cd6ef73e8278c18d9541e08f8b90c5b2159dfb7d15e28adbf55660e5eab079bf",
+      "obekt/house_32.html": "4816f7a8e9c1283fc0ee97d637eba9cfd541f0ef16aef45b8013364bc66275ed",
+      "obekt/house_33.html": "4a9cde88245d294f6635d625bee20c7eceedb25e82ed7abf5c0836dbfa380d8b",
+      "obekt/house_34.html": "02a4b7056a09af057c20fe05b7b3072f30346143b26a0f231c7efb22591b297b",
+      "obekt/house_35.html": "64efc2dfd297142f33d5c450d3872392ec27daff618118ebbc51e03c2f70b7ed",
+      "obekt/house_36.html": "5bd7e70e823db5fd3dfc72a8fe7cdeef2c8ed6804ae279e64f32728c7072948d",
+      "obekt/house_37.html": "804149e1aaf13db0a66f31b7f704a2fde6c13e98cd16c5557f2cb844638a17cc",
+      "obekt/house_38.html": "81d4e3f7a0f5646bd50e7e524149fc6bc5dbbd5d5d2c268e1276184a1e2d83c6",
+      "obekt/house_39.html": "a93c16e838902230ea9d0df13d67bbdacd6cca556ed7c489622386c89ad463de",
+      "obekt/house_40.html": "c47afcb03e961d7a44a99cc5ebf51a3e2fcdb20325db15f53d5055fc9df500c0",
+      "obekt/house_41.html": "2270f17ffa3f41b11aa5619127ba77ef9ea530bade2f22be69d5f642ff471500",
+      "obekt/house_42.html": "38e16d4d1408ee1cd93f113277d1204e44fef9ae9fed9c46b51b42e8e99a6d18",
+      "obekt/house_43.html": "fedd050f7ef3038ebfa40f4a30d5c97de49a3dcb1ac63d1932493e596e975cf7",
+      "obekt/house_44.html": "a62c54c441bc23b2d3bb3889e1860b0af8c7da4074d1793bb197ff2ded97c1ba",
+      "obekt/house_45.html": "ca7ba814446e79ec530ad9660c2f4610d219251978471117a1ee257f66f2597b",
+      "obekt/house_46.html": "40c92978bc936334bb138999002e6fc9a32efc4f933d7dab014849188d4df6a4",
+      "obekt/house_47.html": "eb38c0c7ba0fd4072f52f4225e2abbaf49e222634a10c3927d82b729f52bdd07",
+      "obekt/house_48.html": "8dab23365024db643514d9648695bdb7605aae249ad352efc0cbfd7da1fc1646",
+      "obekt/house_49.html": "289cb21fd20e5bf8925d2c4f758b31cd48a73db8dab0402cc1f6fab97cacdb94",
+      "obekt/house_50.html": "1db6ca7a1aa000ff2e5e65fd79bdf5e1873e4bf6a61bb040457c5ed27ade8840",
+      "obekt/house_51.html": "78ce84aa21ed7e06f6847181964ae3f79393616b6d6c9ce4965040a3e0b2c1ab",
+      "obekt/house_52.html": "19a3aa46945779197ee22653e13c0a6a874ff1b11d989a9183b8ba79f4913e17",
+      "obekt/house_53.html": "b56f7fc0206a4a9f1b7999c6794a3324287440b9b02f257766dc0394f852b4dd",
+      "obekt/house_54.html": "7eeaaff08940a55f692155241713a8b15fd552b62f672d1217da2a01f05ee8ff",
+      "obekt/house_55.html": "d68c905e57f52c30aa2f1f93a446f8087012e8286181c5f206ac52fc968cc99a",
+      "obekt/house_56.html": "76be9f605baf5fe6a6f213966fee9f7df8bd17b6c2f5cc86576cd2df0db8b152",
+      "obekt/house_57.html": "640cc3bc22700da83ae995686292a70b5137cbd768e1f23991b5103202f2fe85",
+      "obekt/house_58.html": "049c339a2ecae9a86a1e883d1539517d48cf3bebfe1d295aab7dc6bdba118caf",
+      "obekt/house_59.html": "9c9e4f17aaea0ba4808b77f9f714c60c25c694bb981d8c2ba1548cc7ca522be6",
+      "obekt/house_60.html": "40498292ab2151c576c6e9c05300533273b6d912cc327d0ca7a67375f53c06ad",
+      "obekt/house_61.html": "c394ab8537e1149fd893b99f6d087a3be91a6ffb89638e28b01a99e8d291f919",
+      "obekt/house_62.html": "7754857956c76377c30286bbcc8ad4752c750963b4f7c5ae646f16036db7d47c",
+      "obekt/house_63.html": "f4d3edfde42a20e3e979d1c1f35ad0f06fe31204009e57b51f7f29c87374631a",
+      "obekt/house_64.html": "e84c54c9d40c82a4faedbae6e5f55798702482f8451c9b6a25781ca92aa22417",
+      "obekt/house_65.html": "79ef096f63f088676753740c50388530467f0932b046be39ba37fa48a18a71e3",
+      "obekt/house_66.html": "e8326679fa92abc193d720ad800c52db7f61468f1b6b9a406677807f76d48f78",
+      "obekt/house_67.html": "5bdfb09d69afa061b2ff90068c8b48edd5a6e0b4f0029c2fe188510326230e9d",
+      "obekt/house_68.html": "bec0075e353995d7c6425d214f59e9d5faa0a64d748493a7221c70d14602f29f",
+      "obekt/house_69.html": "0878ac5f3379464f69b1de1fc338b9716eb37b7c818c5769767e4e6ca5031b54",
+      "obekt/house_70.html": "f43bc64161a784932a6a2e222e973e50c88359c0db5fd530d3c9f530bd96562d",
+      "obekt/house_71.html": "baa75c1f176141ddbeae1a47a3c7c5b23d5415be411284b6a89e929a7c645740",
+      "obekt/house_72.html": "48cb7d5d2c99e46b3ea1dee6f70b064e816b00289ec5f2e6bad13c9aa8642dba",
+      "obekt/house_73.html": "37a78fa275858837e3a3d797b0e24a5790baf37a4b135a369bb726dc22a3cb14",
+      "obekt/house_911.html": "8db618fce4cc50f902beb8cdbad8d65a814048740387f47c53d1d28b46f1f3b8",
+      "obekt/house_912.html": "90f256309bedbce8ee5fe6696bf410817eb9c51e8f2c90a9eca6a56540de8397",
+      "obekt/house_913.html": "ee5d77e86ce9767249513a62d4b95f17c278cd2cf147c15dfddf7bf8ee2817ce",
+      "obekt/house_914.html": "03ddfbb2449b2b36e70dd1d6a6e6c62e88f9a55cf61dc5bf061022892609528c",
+      "obekt/house_915.html": "af8d41e704fa08dc9b16d3bffc90268b2a9e935434a3f992fa6b1987a491f4b8",
+      "obekt/house_916.html": "a2c7b78d160739d55b808cdad90652d39cac1ef3b6d257602a91f5daabe8b949",
+      "obekt/land_01.html": "87345d4f4ed15e148421ce2d0ee1b51cece4d79e36c241ce7452cd16a6f39e2b",
+      "obekt/land_02.html": "52f002a7fa465a8fbc3e05f3576d9c6e1a0d7c9e19d6baecfe73327f54bc7f1b",
+      "obekt/land_03.html": "590839048161af2340c40b544421f33cd64b95e2c8fbb6e2dab635c27ea1b8c3",
+      "obekt/land_04.html": "47871c7fc9bfa0fed2d9f0e76c9a91aed10d27031776febabdea919a8475fa14",
+      "obekt/land_05.html": "7db655ef69e2c9933452044985e6d54af9419a90569a67be1ccdf6f51269f46a",
+      "obekt/land_06.html": "929966d208a141fe6f0c9b88634ac6aed222b9b351b10b6d6534c98d6d51a813",
+      "obekt/land_07.html": "639fa0556e5b05045e36b7cd0efee2af8cc12dd8ba9aa07f09ea226231aaa50c",
+      "obekt/land_08.html": "1b2de0de1dd7918f44d3b625acab17d4e6632118c3e91ebca31f6769bfcdb4bd",
+      "obekt/land_09.html": "9524357d8b2a3b88ae44b6ab0d9c00ea25a0286928a3f76605f12faa5a093f2c",
+      "obekt/land_10.html": "98e73087b2fe5f92255817291cd69f390f41691cf501e0bfc1f8e0535bb1ad4a",
+      "obekt/land_11.html": "41a3af63d17ae7c6ef4d790a0d2fb44c8149ed3509e72e5a611fae9c54f516b5",
+      "obekt/object_01.html": "b5e03ac4d1ecddbf8474b20d02d6b7b45d9fa6e5fa90c4c8df16823aeeae9b40",
+      "obekt/object_02.html": "cf3cc0b45891e1adc46c0b0325080f54f1e9d69c5896f5c20273cc67af9b2ab8",
+      "obekt/object_03.html": "2de81e0453abbb138f0feb94d1df7aa6acd545f65769d049de43b84d92ed2473",
+      "obekt/object_04.html": "b9a91674a20b97faa1c6185ad1d038f9c5c0b1463e309f2e1439f51b432804da",
+      "obekt/object_05.html": "4ff6d6e36d05267d48ed43abf072d280a8ed3b0768f8ab8d0bf4645471be5d66",
+      "obekt/object_06.html": "88aeea3061161196d0cc1cb7d6cff90970126bd6288807a8e80bb620e1812e65",
+      "obekt/object_07.html": "022d973ace6a78b4af0d33758624f51411ed52c6069007fa48a464dfa568268c",
+      "obekt/object_08.html": "578fe0cc0e86c4834383bc29c1d5867b0b0ea7096895b25fd2001a0378222fb2",
+      "obekt/object_09.html": "98035626f2c6359f111f1166c1fe8f5e866c69484544e829b17a9d50e348c801",
+      "obekt/object_10.html": "c366ccd77775922c11e6da8ed7ea335b4ec1c7d34b63cae43f8925b25ffaace8",
+      "obekt/object_100.html": "ecd8da77ca0778276109b3c28e3938508ad01448d3c488e5b17ba2a012b28d84",
+      "obekt/object_101.html": "41a8824e3c0525c31b6b8ea5a2e3f3a9f0defe64e425a64bf2805ac31f0d2748",
+      "obekt/object_1011.html": "ed4bbb059a83e602421a794710d643229f4660d495c44ab4b402e223ac4d7ab5",
+      "obekt/object_1012.html": "7f109323cec07166891749dd0c89532aa61bbf050d38ce5832d28f31daf8f6ee",
+      "obekt/object_1013.html": "a1a9eea5deb560eea176957f7d6212feab07407618c5e61da6f9459f15c3da81",
+      "obekt/object_1014.html": "d581cb18a58736298088943cfba4e3a4413e8cc0f14ec49d955406991c639841",
+      "obekt/object_102.html": "96dcf4b2b77f0db8583bb6fc7d352055338fd7438ec6676af9415511218a6905",
+      "obekt/object_103.html": "9df684752d83fdd1e0294208d701143df3ad0eed63a8442648db115258beb4bd",
+      "obekt/object_104.html": "f7ff865af7cc23745302aa7b67d97cdba1542b375726928cb333d72d761c61b0",
+      "obekt/object_105.html": "9de7a4f1a92434c683e1a56b826161237738e77fe3f364b703b79486954a29e6",
+      "obekt/object_106.html": "584ee91f56091aa558b8c68f854ee33c2395928f650762e44506db0071fb6233",
+      "obekt/object_107.html": "566bf42409d6bb6d84a2618bc1e758e6769f9d79a1067ec24d556c5b6de1b264",
+      "obekt/object_108.html": "3e363ffb2630778b8d7883c608ed5beae137edea2ef330742a7812dba668d574",
+      "obekt/object_109.html": "cc058e429ae2f94db35166aa0124c7aea69c978e337ee94b9dcef3a9318b2c9c",
+      "obekt/object_11.html": "2e6877b594f12dc8243e8ee5765771ec50d072dfdf31501b4d68bc4be00a1aee",
+      "obekt/object_110.html": "d4d254ae621424df6c5a58c9ac9498ed63545367e7343856a46cc20e51a1a770",
+      "obekt/object_111.html": "01ac17c8b8ca66cbb549804cb9a2d4f2abdd3a32de13fe98c03b9edb43fb95bc",
+      "obekt/object_112.html": "37f56dec794b67778713a3e9e985e9592e0847dc46c06952798190ca793cabb4",
+      "obekt/object_12.html": "e2a2eb9de39cc2dfe9ac28dd748727f8d5d6bc33cee5061016dfbc3a530f6ce1",
+      "obekt/object_13.html": "e386f2334077adee314c5d5f679647b807956c66dedf66e34dcd0a59cb9786ec",
+      "obekt/object_14.html": "8f0b842c9f92e62b9475780112aedab2100740169b5f6d2d42af08b6dda3fcc4",
+      "obekt/object_15.html": "c074baa270f796769ea01d56ee9cc8c9f807ec4b4d869c7ea8fe90cc3eb743f2",
+      "obekt/object_16.html": "440bd6b40793c85cbfcd58f3700d0aa7e2c1907bc39deff03a1575dcf483295c",
+      "obekt/object_17.html": "0b301f4ba24fbe983131566e5d6f10bb20dfcf8bdec5a57b681ea18897f6f94e",
+      "obekt/object_18.html": "6382563cc3f82580ec250584a8f462fb069cd464764d2d2ade0dab74bcc920a5",
+      "obekt/object_19.html": "1f6b7ff432c1c173c80576de635890cdd551caf798d76201b485b428067982d4",
+      "obekt/object_20.html": "e8b5dc270bebd719663b3da94732c309dc86d3c2e24dc28a06f316c493cde4e5",
+      "obekt/object_21.html": "07d4b34d3f563fec4139059361038d5fb1d3d702ec54709b0bb88efda22a70dd",
+      "obekt/object_22.html": "6a20838cb18d0b5b0a42219d95eacea928ae0c8f14af4470524ff25b0ce90e07",
+      "obekt/object_23.html": "4afe0a02c13dcd57006af4e1b4a11a4d395bf12a416b323f604e4e8f028b7dd5",
+      "obekt/object_24.html": "1e1a95d4ddbcbbdb17180cb1db10d0cd39dce1994d5e081138e2b89f60b8f016",
+      "obekt/object_25.html": "039f0fe89c200e9459714c0a9f1979d4e880092dd7d308a3ad2fb645b484abee",
+      "obekt/object_26.html": "73f04ddb7d6acf788ae9a2dc8fef93e8ea05c40f1901db12be295744957e0c3e",
+      "obekt/object_27.html": "7e7621065119310c14ff793d0ac4da5a8b24e68985bdc426f7ef5034f3f874da",
+      "obekt/object_28.html": "e57f3596d64d5ea80390c13dd51a970512de3501bb1cb91871d45dbf90bf1cfb",
+      "obekt/object_29.html": "ca171f69972ce71ab641b12b6b0be6ad201bb5568aaa8982eec1e3e8a4889a26",
+      "obekt/object_30.html": "60ac8b43b4fc53daf678f2eab176ab2ab4445d556d72f6e54ea397b5f1e2f364",
+      "obekt/object_31.html": "89c156db045a65b2cfe8a91b115ee938ffc1b866235868d8c7d322e29dcfd906",
+      "obekt/object_32.html": "232530de4dde05e711d9007c5636b502c602456cef502b495159bd52b55521bf",
+      "obekt/object_33.html": "0b7fd4362e88071ff2dcaaa0da8d8db9eb1c214e6ffa7029b97395c374b3152f",
+      "obekt/object_34.html": "67a61866aa3eb49ee90e60b5a26cfd265576fa7b95b2cbb3d35667d91bf67b71",
+      "obekt/object_35.html": "c80f1de0ef4e217345097ef4f598a13f8251ff09da1ef232c9d003a98fd34674",
+      "obekt/object_36.html": "c378186d5dfb17388da35d8b73c65d5372af8fb3edb3ec392e2a85d950f13b1e",
+      "obekt/object_37.html": "383a7cb0cf975233d4998d9981a8bdde96d46b977a34a46467da459f962bcd76",
+      "obekt/object_38.html": "41bd50fa833c4dc76293b96505192275d0e29163051b164ab8ce5f884cfaa16b",
+      "obekt/object_39.html": "941b80e215a397f2b551d3a6fe7bc2e74e49490a489fa849a6edb623f90866e4",
+      "obekt/object_40.html": "02000df1c783e30a2762016ab730dc1fd40bc145019a56ab29cb79b5a885aa1f",
+      "obekt/object_41.html": "ec33e1d759eb4deb5211aaed5762542f6992875d49d935983b4fcfe6be35067f",
+      "obekt/object_42.html": "177a5db8a0ce3b9dda2ec2a70063c7004d05660cfc777c6b859b40ba4c8e349c",
+      "obekt/object_43.html": "c6b419c8d054929a44cbd0616cb9b9cd7caeabf6b8aa02702d660fabf316697a",
+      "obekt/object_44.html": "780e0a533f9352ddf02178cebe2063712ecc10807398fd23a40af9c467e59f53",
+      "obekt/object_45.html": "500c7f38cbc77b7a246a77f6584ff07f452374707e2b4088b40b29facddec500",
+      "obekt/object_46.html": "2e4fdaf3f1258feb5af2d3c74e1e4aa3f7573b35dbb804060e75e135946fb8c7",
+      "obekt/object_47.html": "95ae67a9288418b1f48509af7cb6ae9f071f0f70ec946de37c64202382c9f8e4",
+      "obekt/object_48.html": "a0308dda73e00b454fbe3701de59e78617d9851aa8b8786cf3b29a8bc4abc2e4",
+      "obekt/object_49.html": "e2f86bc3f38808bd8f3dc910e54eaa0b9dccaf185bb1b8156134c018ba51746c",
+      "obekt/object_50.html": "5974d71869a91841999ad7f2e53582ac980f6c3be06a92d0208eeca43c007ddb",
+      "obekt/object_51.html": "51bf97d0ed72d8c545eda4f310ff0083fc55f19f5553371425c15056d42242be",
+      "obekt/object_52.html": "2e684143ea633f702185b5b27340b251b018c2c93f1755b14d91c17d8eb5778d",
+      "obekt/object_53.html": "565af90afc4c345f828cd5dfaca531d554aa38237250fe676dc57360ba0a479f",
+      "obekt/object_54.html": "f2e0cf3f0b391c7319195c940579b0963d207f78e07b36cba31257a3d505ffce",
+      "obekt/object_55.html": "416ab6b15108d45fe51ee6c5574d5cf311bda677252504501bfb4be8d7b44bb3",
+      "obekt/object_56.html": "661c79a1fe5dc5737832a20ccd61bb82495039e63998f714b2cb8898c138e4a5",
+      "obekt/object_57.html": "f4af99c26483db6238b32faa20c2f4fb7268cdcb1b3b6f79ccbf06ea41665cbc",
+      "obekt/object_58.html": "92ffa0c06b78b105b0ea11d173d6dc7eb2c9585ec66afbcb31e6099f5745b7ba",
+      "obekt/object_59.html": "e552668fe23990400ee78ad2dea8800e1297c802d600613ea870be53649e86f0",
+      "obekt/object_60.html": "bccfa2c02260313bb1fe71efb3da163f7dc0b19a131f134837324b75972a02b6",
+      "obekt/object_61.html": "d90b859a0628e019e5f1c566f0a7934431a6fdae0d91be7070eab35e37b812f2",
+      "obekt/object_62.html": "555b7b821fc7e13a1b2f8cbd47df3d46f691811629be2f847e44732c0fdb299f",
+      "obekt/object_63.html": "df50d7c7fb8e998193b1171bc7dfcddeca3db2c7d5e8d98acec8027f6c0830fd",
+      "obekt/object_64.html": "53fb0727c3d5e69d5c98d174b7a62e39167ec7ea7960bc78d65d75eb4fef5373",
+      "obekt/object_65.html": "a8d60aa6da223c667def83ceecd0b99d00b1ebd6979c2a9bd8d21b3cd9404a35",
+      "obekt/object_66.html": "984f9ae02b75b977061b29830cf8238d9f08bac4ddd49a61f5b2f275a4519294",
+      "obekt/object_67.html": "51d4853bf21e982c48fc6a626124bca03f886ab8f7957936fc20605d89e1f15f",
+      "obekt/object_68.html": "684ad7d40ff8888ac1b521e08b8e60e630fe6b0a01becb3bb486e876188a47e7",
+      "obekt/object_69.html": "491330b02054fd3479d186292fc656a17e707dee9facfff939dca44bbb83cbbd",
+      "obekt/object_70.html": "5516b003ff3f0b2e737e308ac848f48e3c4f77285525645e5934fda477057caf",
+      "obekt/object_71.html": "476810c07b77a42d35cf60f39a1fa607abf5cd884d3ed182d705a9c785ab2b41",
+      "obekt/object_72.html": "bbf554c4039c4ef3b53dedfb92692ff947a6a15a9017f9ab0dc668c335ccd5ed",
+      "obekt/object_73.html": "e9da264a15f59fd52869595cbc820283a8bf90db58e2572fd7140216e3ae1ffd",
+      "obekt/object_74.html": "e7ab60d98b5f94decf97715278587cd353349db4bc66c9cb5f06baa762b9d9ef",
+      "obekt/object_75.html": "a13d9cfd790316bbbd2f4f6f11e84ec2235b119d590b803ab3334aa441f6b187",
+      "obekt/object_76.html": "d75fa49c07ce09fd24b67548ba10f6f656b2a60ea6018b4c087e0152ab387838",
+      "obekt/object_77.html": "be4b84000999db2e667571b1699ef93c6d9ca5accd2baec484c38b6738a391da",
+      "obekt/object_78.html": "74981c54e7db88ca5618f21203b5dd18f1f83ede76bd8e6f55cd57a02d4491ef",
+      "obekt/object_79.html": "bc09e7cf2d390f48af4227f2618e5c3249c945e884abdbb80d03c633d9fdf257",
+      "obekt/object_80.html": "915303a6bd25ed7934dd3b0213ee012932e2a05a1326fac6f64f07bb12d06247",
+      "obekt/object_81.html": "59af3c919ebb1054ef23f201355d8509b8c326097332fa598ea6561cae306b35",
+      "obekt/object_82.html": "03c45db20366bc4c2827a7c52c1076b04a00a4ce6b39abc29484c9065e95eb69",
+      "obekt/object_83.html": "5f0e0a67f8780a5b62d93abc50dac8d1abf7e1db28fe48e30cc92ebacc8c0c74",
+      "obekt/object_84.html": "def5f2e97f2741980a9240de72d503f3d50113d48f45f4071b2464665e77b9e5",
+      "obekt/object_85.html": "d4db15bde3807b7899b33cb17f96a6044825e14bea79b0f9b9c75b4be1a87319",
+      "obekt/object_86.html": "8604762969bccf34020932dae15c9d72ee404e403c11998711ee06d5d505399a",
+      "obekt/object_87.html": "08b22eda12c049a0432c1b750ee1e3c8a2df110d62ae59e59e2cb594a1160156",
+      "obekt/object_88.html": "9754c79343bcf1680fd3aa219eca0bca64b5e006d1a59887827acd1cded7cb63",
+      "obekt/object_89.html": "d141d2f36568151904776ff9c84e96c7905aa43911e1c5d8bfefbeec17f2f4de",
+      "obekt/object_90.html": "6ccd021424ac1bccc04064225f9db79a9298f2f9ae57f72a1890d0c946b9ffc1",
+      "obekt/object_901.html": "b764f417248bc1859625caa627b3b0e6340d9122974889084709844e770c6299",
+      "obekt/object_902.html": "0aedc23e3373c747c318c6b4cf309e6dd0ba451fe1e06d13a786b9748bcd6d5b",
+      "obekt/object_903.html": "ef4b91d03a729bc3229ccdd7280a5942253f63aa8c332d54fcbcb1a2cb38b40e",
+      "obekt/object_904.html": "cd63c5424538b43a97a8211f7a6268b63120d918f06ce3ee2199e041c00be0fc",
+      "obekt/object_905.html": "9a6049c356798c38c3034711a814f11af52804b67ace784ddc7890944ab1ce4f",
+      "obekt/object_906.html": "8d5051382de721c6f5a377d6a3471c68adf58f6457e0985cf631f59f4e9be231",
+      "obekt/object_907.html": "b2617b2f2a6343be312e237f7200113b687e25327000f4e6e5f58f6a39f7e2ad",
+      "obekt/object_908.html": "dc5ac06c2a1a320ed61c539ed68b780267ae250254b57ea8063284ccbe915526",
+      "obekt/object_909.html": "ce34d35f3824049c503094c7dab0a2a70c34d0a6f273691799daefdc323d28bb",
+      "obekt/object_91.html": "826a317ef58568fffed22b6fa271d827735ccc1854c7a6dab2881d38eb91a175",
+      "obekt/object_910.html": "13de52205ae118f88a32cc9440987989412e41125ca00d9da49253fd7631d559",
+      "obekt/object_913.html": "53c252eac616cf618275f599820b2352b47f21e9773321f1173331f8267b8acf",
+      "obekt/object_914.html": "5f931b9bba5e466423d835a97164c1720986a2c8e7bb2703c73b9349cadcf95e",
+      "obekt/object_915.html": "3c483cd019560b05d9c0035544c654ad9fd894eca0ab66210f5705bb19034881",
+      "obekt/object_916.html": "64087cf5307f6f2061e81830fbc3e25408baba7c46fe268f9b422821cfbe5b99",
+      "obekt/object_92.html": "ad05c9d7d476caf8b0001d86ea41fe875600ad8c50d0e3f50f4ec2d7e36cc775",
+      "obekt/object_93.html": "3075535b49e976a726bc70fd087b1c72afd47dfa4871902e5c9b4bb59a1c5766",
+      "obekt/object_94.html": "b45fea5fd9d6cc566d4ad91f8ffc232ba937eb252312ffd41a304f50a5467c26",
+      "obekt/object_95.html": "158ec9ca1564b137d681742aaed34fdde05b9373f327168192bfd6aaa8e369ba",
+      "obekt/object_96.html": "e3faa3fc3a18847bad3feb115d10f0d1809b43537547cffa85f2d049f4c96879",
+      "obekt/object_97.html": "34fa8a207dcb0ca4e5113acf8c89e53a30982ae233223da1ed566f9a575980a5",
+      "obekt/object_98.html": "f51c18b99ee10a805a3f50b609e17dda2e395f7fe83143961e4be94c98569eac",
+      "obekt/object_99.html": "ac40f94ad766008c919e8f4f79a134390638f1cfbad5a7bb811eba2bf76e3771",
+      "offer.html": "01337ed9853b90be184a8acc8be908213cccac8a4781db37bc3ce91605006f1f",
+      "personal-data-consent.html": "ec636ecc1c2a965ab8dc1ec5826d017708d1b004cfeb433a4515fc9637dd714e",
+      "privacy.html": "5cc41fe3ebb6f6283a30064955fed967021090336bcd91261fbaf61819050c89",
+      "property-valuation.html": "ff0eadefc5c662c0c2fcb1cf41debad781d3f640e1367a72262ea82186524f3b",
+      "rent.html": "840fc30c6730f583fd5ed6e02293f51713045a2430e778ddc1d4bd0484c8a567",
+      "sell-apartment.html": "de42f293596e602fb9a403434e538a9c1153b098589b79ad28aa39652137298b",
+      "seo/doma-loc-aksay.html": "61df556bdfcd917c8013bb9b0a32bcaafb9dba9a4fc577beca2fa984d9319b1c",
+      "seo/doma-loc-rossiyskiy.html": "c1666620293b0161d70e0d0be1f0aa8afd1f8d856a41287c1a180c81e38ef049",
+      "seo/doma-raion-aksayskiy-rayon.html": "df6a30064faec7430a9984dae1a3cef02b5b543cf1d6c59b64444b2a628729b3",
+      "seo/kvartiry-loc-aksay.html": "f8f9e629f3d5b154ce6113f98daf33911243168471a0e65da74628cbe72ca8b7",
+      "seo/kvartiry-loc-rostov-na-donu.html": "129ba8854228059f88152485dec1b72f0de36238d6ef9e51734b8a80ebe34de8",
+      "seo/kvartiry-raion-roletarskiy-rayon.html": "3f795fc8702adca796f20ff998d524be563505c5ecb5f1a0fd4921a0e829a383",
+      "seo/kvartiry-ul-40-let-pobedy.html": "c93067f21f892021e274d998b9b397401fdef99dbec95e4fa61d9a5aec8facc4",
+      "seo/kvartiry-zhk-aleksandrovskiy.html": "aebe95555d626c43de86c7432430436d920bc84ab09b99c54b4012a0bfd62402",
+      "seo/kvartiry-zhk-ersona.html": "dc786daa6a794f466d6de70c28fd2466273926ba004e9479e9e24e7455ee4ec0",
+      "seo/kvartiry-zhk-levoberezhnyy.html": "e27c6cc5d38c5a4eae02c986ba6e3ffbc393a5f0991f7c9577d7de679bc9980a",
+      "seo/kvartiry-zhk-mechty.html": "f8bf1aabb239ddfcc4c6d3f1248d04e1e68362ea77a61d05612c27f3762ee8b5",
+      "seo/kvartiry-zhk-olet.html": "ffd9b3b406b48948cbaf84cd3d8ad63262d50a6f05253e1e7d584bd3ec64b92c",
+      "seo/kvartiry-zhk-orod-u-reki.html": "97e2dcf7d634bc2efc61191c64c2dd016ceda7ec8b4d7bab7aaa4a6cc0432ad2",
+      "seo/kvartiry-zhk-sokol-grad-2.html": "2ce38d11ad1e955b52535e7b8863410096fe5f99f696a50039bfc8a717097d4b",
+      "seo/kvartiry-zhk-sokol-grad.html": "c7e4874f98a413b3427420a63ab702f1a6e2188d75138a6ff97a1a0f6db0a188",
+      "seo/kvartiry-zhk-veresaeva.html": "f27d83f1d103436d9d124cce5beb13342b3096ce98aa196a1f63097f8bad7612",
+      "seo/kvartiry-zhk-veresaevo.html": "dab953cd16edf8b1411fc16d1a0d8ca986609ea595794dac3e1ca267eedd7de9",
+      "seo/kvartiry-zhk-vishnevyy-sad.html": "2cc3b6f44dc82a907b8671d49f4d2d91734b18b2605de4408313ef7cc1696cc6",
+      "seo/kvartiry-zhk-zapadnye-allei.html": "2aa944e288710c0a54e1d9121dc06496d9f491e189951de7f510e5bf02e2e3a7",
+      "seo/uchastki-loc-aksay.html": "3f80540cb7eeef4c8f9b161669aaa7587eae6cbb99cb59217a80050a90d2267b",
+      "seo/uchastki-raion-aksayskiy-rayon.html": "2ae65cb59e8b93c0598cb7a8dcbd906df7f05ca124b4f9281c7c7cbbccab521c",
+      "seo/zhk-atmosfera-aksay.html": "33d35078dded548f37d8eb58b22068e73fef2e0d6d6cba1b92e32191ebf51c1a",
+      "seo/zhk-flora-aksay.html": "2c6447710ee675ff6aad65af52b9e6d9afae6c3d7942e8b06b36656641da7702",
+      "seo/zhk-novyy-aksay.html": "e9d193329ac00cec76eb929b3be152df6ceddf68565e6fdd36b92008d9e74fb1",
+      "seo/zhk-samotsvety-aksay.html": "9a57a2e637963b7f97790e2aa6e921fa58bde550c56d7abc25061692e187a241",
+      "seo/zhk-vishnevyy-sad-aksay.html": "fb75d50c5cb3a1474291db2880958533c4573ec012a73de6a40ec0c2290db1f7",
+      "showcase-aksay-secondary.html": "ed9249caf9863027adf5282ac7c2a4ff6db050419b452b89751b4d79b418b3c0",
+      "team/zukhra-alieva.html": "3c0d49b39e88c0a972f3b938bcfc1f654a921a1a8e098bf8a0d104067a732ef9",
+      "thanks.html": "33dd1cb7040e1ad6d34cdd5762f358262d1cf7138ee0485c2dd75005e1334a6a",
+      "data/catalog/registry.json": "f6179e9b4d54edd5deccfab53897c31c72fc9a8cbd8f6f1835c252d00fa4c991",
+      "data/catalog/editorial-copy.json": "a5fea1cf99675398007a4b1dac14a6d0a3f52cbb6540e0f224540a90bc6f0a65",
+      "output/catalog/registry.json": "13ef4c6de6a797811f59c79fb835be32ddd2df01d1dc9f58bd67d15cc2bd73c1",
+      "output/apartments/new-objects.json": "e76c64dd6c70f4c6a5115899d7ac7c67a13bf46ed6d7c0eeae5b4ac9d3d77c91",
+      "output/houses/new-objects.json": "c980e8a61e8e9ea6d09924476c8bdca150b2f7b159dfb2f3f2d3f3a8d732e300",
+      "output/lands/new-objects.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "output/home/new-objects.json": "d4beb56d28f9bd39c8ef037c746cd979ada737de5c2fb0d3d01783d6fec3e1af",
+      "data/catalog/source-feeds.json": "cf07934cb3843f8256de3c0f83d230b8ab53b3243501354ca469c130c8d42f61",
+      "docs/owner/registry-to-verify.csv": "c770e947237aba28556976139e6d85fc572977d6ed088ffb897e7535ebbe537f",
+      "docs/owner/catalog-completeness-20261103.json": "c3a7371e65756761e9f6763b465a140fc7083dcbfea2f9666cac52ca617512d3",
+      "docs/owner/seo-pages-decision.csv": "c0505fa59c94c0837821ea4f7b83dc4093eb4586a3bd73d648357d7ee2203c3c",
+      "docs/editorial-20261106/seo-coverage.json": "c528d811c4e8fc14b882eefb154ecaa70f506c484efa94cf4d33a1e0b10f4b9e",
+      "sitemap.xml": "16ffa84c361ca6e71003bc9dff6d2d31adc2e7e97dba7bfd6d6a70052de310f5"
+    }
+  },
+  "validation": {
+    "date": "2026-11-06",
+    "branch": "codex/editorial-recovery-20261106",
+    "npmCi": {
+      "exitCode": 0,
+      "vulnerabilities": 0
+    },
+    "fullQa": {
+      "command": "VISUAL_TOP_QA=1 npm run qa",
+      "exitCode": 0,
+      "unitPassed": 102,
+      "unitFailed": 0,
+      "browserPassed": 111,
+      "browserFailed": 0,
+      "skipped": 0,
+      "visualMatrixEnabled": true
+    },
+    "finalCopyCheck": {
+      "reason": "Removed one generic advertising sentence from each of house_43, object_41 and object_94 after the full QA run.",
+      "unitCommand": "npm test",
+      "unitExitCode": 0,
+      "unitPassed": 102,
+      "browserCommand": "npx playwright test tests/editorial-content.spec.js",
+      "browserExitCode": 0,
+      "browserPassed": 3,
+      "allThreeFinalCardsIncluded": true,
+      "recoveryViewportWidths": [
+        390,
+        768,
+        1440
+      ]
+    },
+    "seo": {
+      "errors": 0,
+      "warnings": 7,
+      "warningsPreexisting": true
+    },
+    "headerCheck": "passed",
+    "sitemapCheck": "passed; 297 URLs retained",
+    "diffCheck": "passed",
+    "repeatBuild": "341 files byte-identical",
+    "deletedRegistryRebuild": "341 files byte-identical",
+    "staleReviewGuard": "build rejected before generated output was overwritten",
+    "preservationComparison": "328 public HTML pages compared with 942f385: forms, image paths, link destinations, H1, scripts, canonical and indexability unchanged",
+    "visualInspection": [
+      "house_02 at 390px",
+      "house_22 at 390px",
+      "object_910 at 390px"
+    ],
+    "realMessagesSent": false,
+    "testCorrections": [
+      "Normalized CRLF/LF before comparing identical header markup; content assertions preserved.",
+      "Optional visual matrix now respects the existing CSS rule that hides internal discovery at <=768px; no CSS or navigation was changed."
+    ]
+  }
+}

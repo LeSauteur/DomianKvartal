@@ -62,7 +62,7 @@ test('four similar houses link to each concrete alternative without claiming one
 
 test('all 26 SEO pages preserve canonical policy and original images',()=>{
   for(const c of json('tests/fixtures/editorial-seo-20261106.json')){
-    const html=read(c.file);
+    const html=read(c.file).replaceAll('\r\n','\n');
     assert.equal(html.match(/<link[^>]*rel="canonical"[^>]*href="([^"]+)"/i)?.[1],c.canonical,c.file);
     assert.equal(/<meta[^>]*(?:name="robots"[^>]*content="[^"]*noindex|content="[^"]*noindex[^>]*name="robots")/i.test(html),c.noindex,c.file);
     assert.deepEqual([...html.matchAll(/<img\b[^>]*src="([^"]+)"/g)].map(m=>m[1]),c.images,c.file);

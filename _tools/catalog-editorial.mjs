@@ -1,6 +1,7 @@
 import { createHash } from 'node:crypto';
 
-// Copy is stored with its property in the existing registry, not in a second catalogue.
+// Reviewed blocks are sourced from data/catalog/editorial-copy.json by the builder.
+// The registry contains their generated projection, never the only editable copy.
 export function editorialFingerprint(r) {
   const keys=['id','type','title_raw','description_raw','city','district','settlement','address','area_total','area_conflict','area_living','area_kitchen','lot_area_sotok','rooms','floor','floors','images','floor_plans'];
   return createHash('sha256').update(JSON.stringify(keys.map(key=>[key,r[key]??null]))).digest('hex');

@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-06",
+  "branch": "codex/editorial-recovery-20261106",
+  "npmCi": {"exitCode": 0, "vulnerabilities": 0},
+  "fullQa": {
+    "command": "VISUAL_TOP_QA=1 npm run qa",
+    "exitCode": 0,
+    "unitPassed": 102,
+    "unitFailed": 0,
+    "browserPassed": 111,
+    "browserFailed": 0,
+    "skipped": 0,
+    "visualMatrixEnabled": true
+  },
+  "finalCopyCheck": {
+    "reason": "Removed one generic advertising sentence from each of house_43, object_41 and object_94 after the full QA run.",
+    "unitCommand": "npm test",
+    "unitExitCode": 0,
+    "unitPassed": 102,
+    "browserCommand": "npx playwright test tests/editorial-content.spec.js",
+    "browserExitCode": 0,
+    "browserPassed": 3,
+    "allThreeFinalCardsIncluded": true,
+    "recoveryViewportWidths": [390, 768, 1440]
+  },
+  "seo": {"errors": 0, "warnings": 7, "warningsPreexisting": true},
+  "headerCheck": "passed",
+  "sitemapCheck": "passed; 297 URLs retained",
+  "diffCheck": "passed",
+  "repeatBuild": "341 files byte-identical",
+  "deletedRegistryRebuild": "341 files byte-identical",
+  "staleReviewGuard": "build rejected before generated output was overwritten",
+  "preservationComparison": "328 public HTML pages compared with 942f385: forms, image paths, link destinations, H1, scripts, canonical and indexability unchanged",
+  "visualInspection": ["house_02 at 390px", "house_22 at 390px", "object_910 at 390px"],
+  "realMessagesSent": false,
+  "testCorrections": [
+    "Normalized CRLF/LF before comparing identical header markup; content assertions preserved.",
+    "Optional visual matrix now respects the existing CSS rule that hides internal discovery at <=768px; no CSS or navigation was changed."
+  ]
+}

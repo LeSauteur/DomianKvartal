@@ -25,8 +25,14 @@ test('all 220 static pages expose coherent descriptions, status, unique metadata
     const html=read('obekt/'+r.id+'.html'), main=text(html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)[1]);
     assert.equal(r.status,'active',r.id);assert.equal(r.status_label,'Актуально',r.id);
     assert.equal(r.publication_approval.basis,'owner-decision',r.id);
-    assert.ok(r.description_public?.length>15,r.id);
-    assert.ok(!bodyDescriptions.has(r.description_public),r.id);bodyDescriptions.add(r.description_public);
+    assert.ok(r.description_public?.trim().length>0,r.id);
+    // Sparse sources may honestly say only "Дом." or "Коттедж.".
+    // Individual exceptions are audited; inventing photo traits is not a fix.
+    if(r.editorial?.allowIdenticalSparseCopy!==true){
+      assert.ok(r.description_public.length>15,r.id);
+      assert.ok(!bodyDescriptions.has(r.description_public),r.id);
+    }
+    bodyDescriptions.add(r.description_public);
     assert.ok(main.includes(r.description_public.replace(/\s+/g,' ').trim()),r.id+' static description');
     assert.match(html,/data-listing-status>Актуально</u,r.id);assert.doesNotMatch(main,forbidden,r.id);
     assert.equal((html.match(/<h1\b/gu)||[]).length,1,r.id);assert.doesNotMatch(html,/<meta[^>]+content="noindex/iu,r.id);

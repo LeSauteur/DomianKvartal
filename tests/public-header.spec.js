@@ -219,6 +219,8 @@ test("requested visual top-system matrix", async ({ page }) => {
           h1Top: h1s[0]?.getBoundingClientRect().top ?? 0,
           headerBottom: header?.getBoundingClientRect().bottom ?? 0,
           navExists: Boolean(nav),
+          navVisible: Boolean(nav && nav.getClientRects().length),
+          discoveryWrapped: Boolean(nav?.closest('.unified-property-discovery')),
           navScrollable: nav ? nav.querySelector(".unified-property-nav__track").scrollWidth > nav.querySelector(".unified-property-nav__track").clientWidth : false,
           tileCount: tiles.length,
           tileHeights: tiles.map((tile) => Math.round(tile.getBoundingClientRect().height)),
@@ -236,7 +238,14 @@ test("requested visual top-system matrix", async ({ page }) => {
         expect(metrics.navExists).toBeTruthy();
         expect(metrics.tileCount).toBe(5);
         expect(metrics.imageLayers.every((value) => value !== "none")).toBeTruthy();
-        if (width <= 900) expect(metrics.navScrollable, `${route} at ${width}px must use the horizontal rail`).toBeTruthy();
+        // The established internal discovery block is intentionally hidden at
+        // <=768px; its destinations remain available in the mobile drawer.
+        if (width <= 768 && metrics.discoveryWrapped) {
+          expect(metrics.navVisible, `${route} at ${width}px hides internal discovery`).toBeFalsy();
+        } else {
+          expect(metrics.navVisible, `${route} at ${width}px shows discovery`).toBeTruthy();
+          if (width <= 900) expect(metrics.navScrollable, `${route} at ${width}px must use the horizontal rail`).toBeTruthy();
+        }
         if (width > 900) expect(new Set(metrics.tileHeights).size, `${route} at ${width}px tile heights must match`).toBe(1);
       }
       if (metrics.internal) {

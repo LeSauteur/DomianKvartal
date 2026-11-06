@@ -1,0 +1,12 @@
+[WebServer] (node:20364) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:2888) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 tests\editorial-content.spec.js:14:1 › reviewed copy remains readable at mobile and desktop widths, including direct SEO links (14.8s)
+  ok 2 tests\editorial-content.spec.js:69:1 › edited descriptions, structured lists and object links work without JavaScript (2.7s)
+  ok 3 tests\editorial-content.spec.js:82:1 › recovered facts, sparse sources and unresolved areas stay readable on three widths (17.3s)
+
+  3 passed (39.6s)

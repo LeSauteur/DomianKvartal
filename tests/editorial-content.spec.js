@@ -78,3 +78,33 @@ test('edited descriptions, structured lists and object links work without JavaSc
   await expect(page.locator('.visibility-description')).toBeVisible();
   await context.close();
 });
+
+test('recovered facts, sparse sources and unresolved areas stay readable on three widths',async({page},testInfo)=>{
+  test.setTimeout(90000);
+  await localOnly(page);
+  const examples={
+    house_02:'Подвал и терраса — по 25 м²',
+    house_64:'Участок — 6 соток',
+    house_913:'125 м²',
+    house_22:'Дом.',
+    house_43:'Документы готовы, возможен торг',
+    object_41:'Мебель и техника остаются',
+    object_94:'Территория дома закрытая',
+    object_58:'Ипотечный расчёт не подходит',
+    object_97:'два санузла',
+    object_904:'отопление центральное',
+    object_910:'августе 2025 года'
+  };
+  for(const width of [390,768,1440]){
+    await page.setViewportSize({width,height:900});
+    for(const [id,fact]of Object.entries(examples)){
+      await page.goto('/obekt/'+id+'.html?qa=1');
+      const description=page.locator('.visibility-description');
+      await expect(description).toContainText(fact);
+      expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),id+' '+width).toBe(true);
+      if(id==='object_904')await expect(page.locator('.visibility-facts')).not.toContainText('Жилая площадь');
+      if(width===390&&['house_02','house_22','object_910'].includes(id))
+        await description.screenshot({path:testInfo.outputPath('recovery-'+id+'-'+width+'.png')});
+    }
+  }
+});

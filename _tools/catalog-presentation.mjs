@@ -82,7 +82,8 @@ export function normalizeRecord(r) {
   return retainEditorial(result,r);
 }
 export function publicFacts(r) {
-  return {...r,area_total:r.area_conflict?null:r.area_total,price:r.price_conflict?null:r.price};
+  return {...r,area_total:r.area_conflict?null:r.area_total,price:r.price_conflict?null:r.price,
+    area_living:r.editorial?.suppressedFacts?.includes('area_living')?null:r.area_living};
 }
 export function locationLabel(r) {return unique([r.city,r.settlement,r.address]).join(', ')||r.district||'';}
 export function heading(r) {
@@ -166,7 +167,7 @@ export function finalizeDescriptions(records) {
   }
   const groups=new Map();
   for(const r of records.filter(r=>r.status!=='placeholder')){const key=r.description_public;const group=groups.get(key)||[];group.push(r);groups.set(key,group);}
-  for(const group of groups.values())if(group.length>1)throw new Error('Duplicate descriptions need editorial review: '+group.map(r=>r.id).join(', '));
+  for(const group of groups.values())if(group.length>1&&!group.every(r=>r.editorial?.allowIdenticalSparseCopy===true))throw new Error('Duplicate descriptions need editorial review: '+group.map(r=>r.id).join(', '));
   return records;
 }
 export function metaDescription(r) {
