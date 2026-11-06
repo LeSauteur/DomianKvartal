@@ -17,7 +17,7 @@ export function apartmentsFor(record, registry) {
 }
 export function zhkPage(record,registry) {
   const file=zhkFile(record),h1="ЖК «"+record.name+"»"+(record.name==="Новый Аксай"?"":" в Аксае");
-  // Frozen approved content from origin/main; regeneration must not recursively copy its own output after merge.
+  // Reviewed source content; regeneration never copies its own rendered output.
   const legacy=JSON.parse(fs.readFileSync(root+'/data/zhk/main-content.json','utf8')).pages[file];
   const legacyContent=legacy ? '<!-- preserved-zhk-content:start -->\n<div class="preserved-zhk-content">'+legacy.main
     .replace(/<h1\b([^>]*)>/giu,'<h2$1>').replace(/<\/h1>/giu,'</h2>')
@@ -30,9 +30,8 @@ export function zhkPage(record,registry) {
     +facts+legacyContent+'<h2>Квартиры в продаже в этом ЖК</h2>'
     +(apartments.length?'<ul>'+apartments.map(r=>'<li data-registry-id="'+r.id+'"><a href="/obekt/'+r.id+'.html">'+esc(objectHeading(r))+'</a></li>').join('')+'</ul>':'<p>Обратитесь к нам, чтобы подобрать предложения в этом ЖК.</p>')
     +'<h2>Чем поможем</h2><p>Подберём квартиру под вашу задачу, проверим документы, поможем с ипотекой и сопроводим сделку.</p>'
-    +'<p class="visibility-notice">Мы агентство недвижимости, а не застройщик. Поможем подобрать квартиру.</p>'
     +'<div class="visibility-actions"><a class="btn" href="#lead-form-section" data-lead-type="newbuild" data-source-cta="zhk_'+esc(record.slug)+'">Заявка по ЖК</a><a class="btn secondary" href="tel:+79536091122">Позвонить</a></div>';
-  return publicPage({file,h1,title:legacy && /Акса[йея]/iu.test(legacy.title) ? legacy.title : h1+" — информация и подбор квартиры | Домиан Квартал",description:"Мы агентство недвижимости. Поможем с подбором квартиры в ЖК «"+record.name+"», проверкой документов, ипотекой и сопровождением сделки.",body,structured:(legacy?.faq||[]).map(schema).join('\n'),
+  return publicPage({file,h1,title:legacy && /Акса[йея]/iu.test(legacy.title) ? legacy.title : h1+" — информация и подбор квартиры | Домиан Квартал",description:legacy?.description||"Подбор квартиры в ЖК «"+record.name+"»: планировка, дом и условия просмотра.",body,structured:(legacy?.faq||[]).map(schema).join('\n'),
     form:leadForm("zhk_"+record.slug,{lead_type:"newbuild",project_code:"zhk_"+record.slug,project_name:"ЖК «"+record.name+"»",project_url:origin+"/"+file,object_type:"newbuild"})});
 }
 export function buildZhkPages(args=process.argv.slice(2)) {

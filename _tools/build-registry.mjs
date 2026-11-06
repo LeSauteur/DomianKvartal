@@ -4,12 +4,14 @@ import { fileURLToPath } from "node:url";
 import { parsePrice, parseNumbers, parseLocation } from "./catalog-parser.mjs";
 import { writeGenerated } from './write-generated.mjs';
 import { normalizeRecord, finalizeDescriptions, publicFacts, heading, metaDescription } from './catalog-presentation.mjs';
+import { retainEditorial } from './catalog-editorial.mjs';
 export const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = p => JSON.parse(fs.readFileSync(path.join(root, p), "utf8").replace(/^\uFEFF/, ""));
 const write = (p, value) => writeGenerated(path.join(root,p), typeof value === "string" ? value : JSON.stringify(value, null, 2) + "\n");
 export const csv = value => '"' + String(value ?? "").replace(/[ \t]+$/gm,'').replaceAll('"','""') + '"';
 const feeds = ["output/apartments/new-objects.json", "output/houses/new-objects.json", "output/lands/new-objects.json", "output/home/new-objects.json"];
 export function buildRegistry() {
+  const previous = new Map((fs.existsSync(path.join(root,'data/catalog/registry.json'))?read('data/catalog/registry.json'):[]).map(r=>[r.id,r]));
   // Immutable migration evidence; generated feeds must never erase conflicts.
   const snapshotPath = "data/catalog/source-feeds.json";
   if (!fs.existsSync(path.join(root,snapshotPath))) write(snapshotPath, Object.fromEntries(feeds.map(p=>[p,read(p)])));
@@ -43,7 +45,7 @@ export function buildRegistry() {
       const folder = image.match(/\/(object_\d+|house_\d+|land_\d+)\//)?.[1];
       return folder && folder !== obj.id;
     });
-    return normalizeRecord({
+    return retainEditorial(normalizeRecord({
       id:obj.id,type:obj.type,source_path:source.path,title_raw,description_raw,
       ...parseLocation(title_raw,description_raw,source.path.endsWith("/data.json") ? data : {}),
       ...parseNumbers(title_raw,description_raw,obj.type),
@@ -54,7 +56,7 @@ export function buildRegistry() {
       ...(data.published_at ? {published_at:data.published_at,publication_order:data.publication_order || 0,description_public:description_raw} : {}),
       ...(data.floor_plans?.length ? {floor_plans:data.floor_plans.map(image=>new URL(image,"https://domian-161.ru/"+source.base).href)} : {}),
       listing_urls:data.is_placeholder === true ? [] : [...new Set([...(data.published_at || obj.sources.some(s=>s.path==="output/home/new-objects.json") ? ["/"] : []),"/" + {apartment:"apartments",house:"houses",land:"lands"}[obj.type] + ".html"])]
-    });
+    }),previous.get(obj.id));
   }));
   write("data/catalog/registry.json",registry);
   const byId = new Map(registry.map(r=>[r.id,r]));
@@ -68,7 +70,7 @@ export function buildRegistry() {
     const p=publicFacts(r);
     const images=r.published_at?r.images.map(image=>image.replace(/^https:\/\/domian-161\.ru(?=\/)/,'')):r.images;
     return {...publicOld,id:r.id,type:r.type,title:heading(r),description:r.description_public,
-      fullDescription:r.description_public,shortDescription:r.description_public.replace(/\s+/g,' ').slice(0,200),
+      fullDescription:r.description_public,shortDescription:r.editorial?.blocks[0]?.text||r.description_public.split(/\n\s*\n/)[0],
       price:p.price,priceCurrency:'RUB',price_conflict:r.price_conflict?true:null,
       image:images[0] || null,cover:images[0] || null,images,
       city:r.city,district:r.district,settlement:r.settlement,address:r.address,status:r.status,statusLabel:r.status_label,

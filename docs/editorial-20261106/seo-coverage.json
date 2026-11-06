@@ -1,0 +1,292 @@
+[
+  {
+    "file": "seo/doma-loc-aksay.html",
+    "objectIds": [
+      "house_14",
+      "house_17",
+      "house_18",
+      "house_26",
+      "house_32",
+      "house_39",
+      "house_911",
+      "house_914",
+      "house_915",
+      "house_916"
+    ],
+    "projectId": null,
+    "omittedPlaceholderIds": []
+  },
+  {
+    "file": "seo/doma-loc-rossiyskiy.html",
+    "objectIds": [
+      "house_08",
+      "house_18",
+      "house_26",
+      "house_65",
+      "house_914"
+    ],
+    "projectId": null,
+    "omittedPlaceholderIds": []
+  },
+  {
+    "file": "seo/doma-raion-aksayskiy-rayon.html",
+    "objectIds": [
+      "house_14",
+      "house_17",
+      "house_18",
+      "house_26",
+      "house_32",
+      "house_39",
+      "house_911",
+      "house_914",
+      "house_915",
+      "house_916"
+    ],
+    "projectId": null,
+    "omittedPlaceholderIds": []
+  },
+  {
+    "file": "seo/kvartiry-loc-aksay.html",
+    "objectIds": [
+      "object_01",
+      "object_1013",
+      "object_1014",
+      "object_112",
+      "object_26",
+      "object_65",
+      "object_902",
+      "object_903"
+    ],
+    "projectId": null,
+    "omittedPlaceholderIds": []
+  },
+  {
+    "file": "seo/kvartiry-loc-rostov-na-donu.html",
+    "objectIds": [
+      "object_04",
+      "object_05",
+      "object_09",
+      "object_10",
+      "object_1011",
+      "object_1012",
+      "object_102",
+      "object_11",
+      "object_12",
+      "object_13",
+      "object_14",
+      "object_15",
+      "object_16",
+      "object_17",
+      "object_18",
+      "object_19",
+      "object_21",
+      "object_31",
+      "object_33",
+      "object_34",
+      "object_36",
+      "object_37",
+      "object_38",
+      "object_40",
+      "object_42",
+      "object_43",
+      "object_44",
+      "object_46",
+      "object_47",
+      "object_48",
+      "object_52",
+      "object_54",
+      "object_55",
+      "object_56",
+      "object_57",
+      "object_58",
+      "object_59",
+      "object_60",
+      "object_82",
+      "object_904",
+      "object_907",
+      "object_910"
+    ],
+    "projectId": null,
+    "omittedPlaceholderIds": [
+      "nb_07",
+      "nb_08"
+    ]
+  },
+  {
+    "file": "seo/kvartiry-raion-roletarskiy-rayon.html",
+    "objectIds": [
+      "object_1011",
+      "object_1012",
+      "object_36",
+      "object_40",
+      "object_904"
+    ],
+    "projectId": null,
+    "omittedPlaceholderIds": []
+  },
+  {
+    "file": "seo/kvartiry-ul-40-let-pobedy.html",
+    "objectIds": [
+      "object_1011",
+      "object_40",
+      "object_55",
+      "object_904"
+    ],
+    "projectId": null,
+    "omittedPlaceholderIds": []
+  },
+  {
+    "file": "seo/kvartiry-zhk-aleksandrovskiy.html",
+    "objectIds": [
+      "object_12",
+      "object_53"
+    ],
+    "projectId": null,
+    "omittedPlaceholderIds": []
+  },
+  {
+    "file": "seo/kvartiry-zhk-ersona.html",
+    "objectIds": [
+      "object_72",
+      "object_84"
+    ],
+    "projectId": null,
+    "omittedPlaceholderIds": []
+  },
+  {
+    "file": "seo/kvartiry-zhk-levoberezhnyy.html",
+    "objectIds": [
+      "object_96",
+      "object_97"
+    ],
+    "projectId": null,
+    "omittedPlaceholderIds": []
+  },
+  {
+    "file": "seo/kvartiry-zhk-mechty.html",
+    "objectIds": [
+      "object_41",
+      "object_94"
+    ],
+    "projectId": null,
+    "omittedPlaceholderIds": []
+  },
+  {
+    "file": "seo/kvartiry-zhk-olet.html",
+    "objectIds": [
+      "object_102",
+      "object_98"
+    ],
+    "projectId": null,
+    "omittedPlaceholderIds": [
+      "nb_24",
+      "nb_25",
+      "nb_26"
+    ]
+  },
+  {
+    "file": "seo/kvartiry-zhk-orod-u-reki.html",
+    "objectIds": [
+      "object_03"
+    ],
+    "projectId": "newbuild-009",
+    "omittedPlaceholderIds": [
+      "nb_07"
+    ]
+  },
+  {
+    "file": "seo/kvartiry-zhk-sokol-grad-2.html",
+    "objectIds": [
+      "object_44",
+      "object_74"
+    ],
+    "projectId": null,
+    "omittedPlaceholderIds": []
+  },
+  {
+    "file": "seo/kvartiry-zhk-sokol-grad.html",
+    "objectIds": [
+      "object_06",
+      "object_1011",
+      "object_44",
+      "object_74",
+      "object_75",
+      "object_908"
+    ],
+    "projectId": null,
+    "omittedPlaceholderIds": [
+      "nb_12"
+    ]
+  },
+  {
+    "file": "seo/kvartiry-zhk-veresaeva.html",
+    "objectIds": [
+      "object_04",
+      "object_10"
+    ],
+    "projectId": null,
+    "omittedPlaceholderIds": []
+  },
+  {
+    "file": "seo/kvartiry-zhk-veresaevo.html",
+    "objectIds": [
+      "object_04",
+      "object_10",
+      "object_1012",
+      "object_11",
+      "object_17",
+      "object_19",
+      "object_82"
+    ],
+    "projectId": null,
+    "omittedPlaceholderIds": [
+      "nb_09",
+      "nb_10"
+    ]
+  },
+  {
+    "file": "seo/kvartiry-zhk-vishnevyy-sad.html",
+    "objectIds": [
+      "object_1013"
+    ],
+    "projectId": null,
+    "omittedPlaceholderIds": [
+      "nb_22",
+      "nb_23"
+    ]
+  },
+  {
+    "file": "seo/kvartiry-zhk-zapadnye-allei.html",
+    "objectIds": [],
+    "projectId": "newbuild-019",
+    "omittedPlaceholderIds": [
+      "nb_06",
+      "nb_16",
+      "nb_17"
+    ]
+  },
+  {
+    "file": "seo/uchastki-loc-aksay.html",
+    "objectIds": [
+      "land_03",
+      "land_05",
+      "land_09"
+    ],
+    "projectId": null,
+    "omittedPlaceholderIds": []
+  },
+  {
+    "file": "seo/uchastki-raion-aksayskiy-rayon.html",
+    "objectIds": [
+      "land_02",
+      "land_03",
+      "land_05",
+      "land_08",
+      "land_09",
+      "land_10",
+      "land_11"
+    ],
+    "projectId": null,
+    "omittedPlaceholderIds": []
+  }
+]

@@ -1,0 +1,509 @@
+[
+  {
+    "file": "seo/doma-loc-aksay.html",
+    "h1": "Дома в Аксае и Аксайском районе",
+    "title": "Дома в Аксае и Аксайском районе | Домиан Квартал",
+    "description": "Дом в Аксае и дом в соседнем посёлке стоит сравнивать по одному списку требований: общая площадь, участок, комнаты, состояние отделки и коммуникации. На этой странице собраны предложения с установленной привязкой к Аксаю или Аксайскому району; точная территория указана у каждого объекта.",
+    "type": "house",
+    "selector": "aksay-area",
+    "projectNames": [],
+    "focusTitle": "Дом, участок и ежедневный маршрут",
+    "originalIds": [
+      "house_14",
+      "house_32",
+      "house_48",
+      "house_56"
+    ],
+    "hero": "<img src=\"../images/default/location.jpg\" alt=\"Недвижимость в этом районе\" loading=\"lazy\" width=\"911\" height=\"1367\">",
+    "related": [
+      {
+        "file": "guides/chto-proverit-pered-pokupkoy-doma-v-aksaye.html",
+        "label": "Что проверить перед покупкой дома"
+      }
+    ]
+  },
+  {
+    "file": "seo/doma-loc-rossiyskiy.html",
+    "h1": "Дома в п. Российский",
+    "title": "Дома в п. Российский | Домиан Квартал",
+    "description": "В предложениях посёлка Российского встречаются разные площади домов и участков. Выбор полезно начинать с планировки и состояния: сколько нужно изолированных комнат, требуется ли кабинет, подходит ли предчистовая отделка или нужен выполненный ремонт.",
+    "type": "house",
+    "selector": "russian",
+    "projectNames": [],
+    "focusTitle": "От планировки до коммуникаций",
+    "originalIds": [
+      "house_08",
+      "house_26"
+    ],
+    "hero": "<img src=\"../images/default/location.jpg\" alt=\"Недвижимость в этом районе\" loading=\"lazy\" width=\"911\" height=\"1367\">",
+    "related": [
+      {
+        "file": "guides/chto-proverit-pered-pokupkoy-doma-v-aksaye.html",
+        "label": "Что проверить перед покупкой дома"
+      }
+    ]
+  },
+  {
+    "file": "seo/doma-raion-aksayskiy-rayon.html",
+    "h1": "Дома в Аксайском районе",
+    "title": "Дома в Аксайском районе | Домиан Квартал",
+    "description": "Подборка по Аксайскому району помогает сопоставить дома в разных населённых пунктах. Название района не означает одинаковую дорогу, окружение и состав коммуникаций. Начните с адреса или посёлка и только затем сравнивайте одинаковые по площади варианты.",
+    "type": "house",
+    "selector": "aksay-area",
+    "projectNames": [],
+    "focusTitle": "Что сравнивать в разных посёлках",
+    "originalIds": [
+      "house_17",
+      "house_26"
+    ],
+    "hero": "<img src=\"../images/default/location.jpg\" alt=\"Недвижимость в этом районе\" loading=\"lazy\" width=\"911\" height=\"1367\">",
+    "related": [
+      {
+        "file": "guides/chto-proverit-pered-pokupkoy-doma-v-aksaye.html",
+        "label": "Что проверить перед покупкой дома"
+      }
+    ]
+  },
+  {
+    "file": "seo/kvartiry-loc-aksay.html",
+    "h1": "Квартиры в Аксае",
+    "title": "Квартиры в Аксае | Домиан Квартал",
+    "description": "Квартиры Аксая в этой подборке можно сравнить по площади, этажу и адресу. Помимо количества комнат, посмотрите на устройство кухни, наличие изолированных спальных помещений и балконов. Одинаковая общая площадь не означает одинаковое полезное пространство.",
+    "type": "apartment",
+    "selector": "aksay",
+    "projectNames": [],
+    "focusTitle": "Планировка и расходы на переезд",
+    "originalIds": [
+      "object_01",
+      "object_65"
+    ],
+    "hero": "<img src=\"../images/default/location.jpg\" alt=\"Недвижимость в этом районе\" loading=\"lazy\" width=\"911\" height=\"1367\">",
+    "related": [
+      {
+        "file": "guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html",
+        "label": "Подготовка к просмотру квартиры"
+      }
+    ]
+  },
+  {
+    "file": "seo/kvartiry-loc-rostov-na-donu.html",
+    "h1": "Квартиры в Ростове-на-Дону",
+    "title": "Квартиры в Ростове-на-Дону | Домиан Квартал",
+    "description": "Ростовские квартиры удобнее отбирать от ежедневного маршрута и нужной планировки, а не от одного рекламного определения района. В подборке ниже указаны адреса или подтверждённые территории, площади и этажи отдельных предложений.",
+    "type": "apartment",
+    "selector": "rostov",
+    "projectNames": [],
+    "focusTitle": "Выбор по адресу и устройству квартиры",
+    "originalIds": [
+      "object_09",
+      "object_102",
+      "object_12",
+      "object_19",
+      "object_34",
+      "object_40",
+      "object_47",
+      "object_55",
+      "object_56",
+      "object_57",
+      "object_58",
+      "object_59",
+      "object_60",
+      "nb_07",
+      "nb_08"
+    ],
+    "hero": "<img src=\"../images/default/location.jpg\" alt=\"Недвижимость в этом районе\" loading=\"lazy\" width=\"911\" height=\"1367\">",
+    "related": [
+      {
+        "file": "guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html",
+        "label": "Подготовка к просмотру квартиры"
+      }
+    ]
+  },
+  {
+    "file": "seo/kvartiry-raion-roletarskiy-rayon.html",
+    "h1": "Квартиры в Пролетарском районе",
+    "title": "Квартиры в Пролетарском районе | Домиан Квартал",
+    "description": "В Пролетарском районе Ростова-на-Дону квартиры стоит сравнивать по конкретным улицам и домам. В объявлениях могут одновременно упоминаться административный район и Александровка; для маршрута и осмотра нужен полный адрес.",
+    "type": "apartment",
+    "selector": "proletarskiy",
+    "projectNames": [],
+    "focusTitle": "Район, дом и конкретная квартира",
+    "originalIds": [
+      "object_36",
+      "object_40"
+    ],
+    "hero": "<img src=\"../images/default/location.jpg\" alt=\"Недвижимость в этом районе\" loading=\"lazy\" width=\"911\" height=\"1367\">",
+    "related": [
+      {
+        "file": "guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html",
+        "label": "Подготовка к просмотру квартиры"
+      }
+    ]
+  },
+  {
+    "file": "seo/kvartiry-ul-40-let-pobedy.html",
+    "h1": "Квартиры на проспекте 40-летия Победы в Ростове-на-Дону",
+    "title": "Квартиры на проспекте 40-летия Победы в Ростове-на-Дону | Домиан Квартал",
+    "description": "На проспекте 40-летия Победы в Ростове-на-Дону сравнивайте предложения по номеру дома: одного названия магистрали недостаточно. Корпуса, этажность и расположение подъезда влияют на то, каким будет ваш повседневный маршрут.",
+    "type": "apartment",
+    "selector": "40-pobedy",
+    "projectNames": [],
+    "focusTitle": "Сравнение по номеру дома",
+    "originalIds": [
+      "object_55",
+      "object_74"
+    ],
+    "hero": "<img src=\"../images/default/location.jpg\" alt=\"Недвижимость в этом районе\" loading=\"lazy\" width=\"911\" height=\"1367\">",
+    "related": [
+      {
+        "file": "guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html",
+        "label": "Подготовка к просмотру квартиры"
+      }
+    ]
+  },
+  {
+    "file": "seo/kvartiry-zhk-aleksandrovskiy.html",
+    "h1": "Квартиры в ЖК Александровский",
+    "title": "Квартиры в ЖК Александровский | Домиан Квартал",
+    "description": "В ЖК «Александровский» сначала сопоставьте нужное число комнат и распределение площади. Квартира с большой общей зоной и квартира с дополнительной изолированной комнатой дают разные возможности для жизни при близком метраже.",
+    "type": "apartment",
+    "selector": "project",
+    "projectNames": [
+      "Александровский"
+    ],
+    "focusTitle": "Планировка, отделка и состав продажи",
+    "originalIds": [
+      "object_12",
+      "object_53"
+    ],
+    "hero": "<img src=\"../images/default/location.jpg\" alt=\"Недвижимость в этом районе\" loading=\"lazy\" width=\"911\" height=\"1367\">",
+    "related": [
+      {
+        "file": "guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html",
+        "label": "Подготовка к просмотру квартиры"
+      }
+    ]
+  },
+  {
+    "file": "seo/kvartiry-zhk-ersona.html",
+    "h1": "Квартиры в ЖК Персона",
+    "title": "Квартиры в ЖК Персона | Домиан Квартал",
+    "description": "Квартиры в ЖК «Персона» можно начать сравнивать с этажа, площади и устройства кухни. Даже два двухкомнатных предложения не обязательно одинаковы: различаться могут размещение комнат, окна и состояние отделки.",
+    "type": "apartment",
+    "selector": "project",
+    "projectNames": [
+      "Персона"
+    ],
+    "focusTitle": "Планировка, отделка и состав продажи",
+    "originalIds": [
+      "object_72",
+      "object_84"
+    ],
+    "hero": "<img src=\"../images/default/location.jpg\" alt=\"Недвижимость в этом районе\" loading=\"lazy\" width=\"911\" height=\"1367\">",
+    "related": [
+      {
+        "file": "guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html",
+        "label": "Подготовка к просмотру квартиры"
+      }
+    ]
+  },
+  {
+    "file": "seo/kvartiry-zhk-levoberezhnyy.html",
+    "h1": "Квартиры в ЖК Левобережный",
+    "title": "Квартиры в ЖК Левобережный | Домиан Квартал",
+    "description": "В предложениях ЖК «Левобережный» обращайте внимание на кухню-гостиную, лоджию и места хранения. Эти помещения нужно оценивать по их фактическому устройству: где поставить мебель и как пользоваться квартирой каждый день.",
+    "type": "apartment",
+    "selector": "project",
+    "projectNames": [
+      "Левобережный"
+    ],
+    "focusTitle": "Планировка, отделка и состав продажи",
+    "originalIds": [
+      "object_96",
+      "object_97"
+    ],
+    "hero": "<img src=\"../images/default/location.jpg\" alt=\"Недвижимость в этом районе\" loading=\"lazy\" width=\"911\" height=\"1367\">",
+    "related": [
+      {
+        "file": "guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html",
+        "label": "Подготовка к просмотру квартиры"
+      }
+    ]
+  },
+  {
+    "file": "seo/kvartiry-zhk-mechty.html",
+    "h1": "Квартиры в ЖК Мечты",
+    "title": "Квартиры в ЖК Мечты | Домиан Квартал",
+    "description": "Для квартиры в ЖК «Мечты» полезно заранее определить требования к хранению, санузлу и общей жилой зоне. Эти детали влияют на удобство сильнее, чем общее рекламное описание дома.",
+    "type": "apartment",
+    "selector": "project",
+    "projectNames": [
+      "Мечты"
+    ],
+    "focusTitle": "Планировка, отделка и состав продажи",
+    "originalIds": [
+      "object_41",
+      "object_94"
+    ],
+    "hero": "<img src=\"../images/default/location.jpg\" alt=\"Недвижимость в этом районе\" loading=\"lazy\" width=\"911\" height=\"1367\">",
+    "related": [
+      {
+        "file": "guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html",
+        "label": "Подготовка к просмотру квартиры"
+      }
+    ]
+  },
+  {
+    "file": "seo/kvartiry-zhk-olet.html",
+    "h1": "Квартиры в ЖК «Полёт»",
+    "title": "Квартиры в ЖК «Полёт» | Домиан Квартал",
+    "description": "В ЖК «Полёт» представлены однокомнатные квартиры с ремонтом, мебелью и техникой. Для переезда сравните метраж, этаж и расположение окон, затем составьте список вещей, которые нужно будет перевезти.",
+    "type": "apartment",
+    "selector": "project",
+    "projectNames": [
+      "Полёт"
+    ],
+    "focusTitle": "Планировка, отделка и состав продажи",
+    "originalIds": [
+      "object_102",
+      "object_98",
+      "nb_24",
+      "nb_25",
+      "nb_26"
+    ],
+    "hero": "<img src=\"../images/default/location.jpg\" alt=\"Недвижимость в этом районе\" loading=\"lazy\" width=\"911\" height=\"1367\">",
+    "related": [
+      {
+        "file": "guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html",
+        "label": "Подготовка к просмотру квартиры"
+      }
+    ]
+  },
+  {
+    "file": "seo/kvartiry-zhk-orod-u-reki.html",
+    "h1": "Квартиры в ЖК «Город у реки»",
+    "title": "Квартиры в ЖК «Город у реки» | Домиан Квартал",
+    "description": "Квартиру в ЖК «Город у реки» удобно оценивать от планировки: как связаны кухня и гостиная, есть ли отдельная спальня и достаточно ли хранения. Название евроформата само по себе не показывает расположение помещений.",
+    "type": "apartment",
+    "selector": "project",
+    "projectNames": [
+      "Город у реки"
+    ],
+    "focusTitle": "Планировка, отделка и состав продажи",
+    "originalIds": [
+      "object_03",
+      "nb_07"
+    ],
+    "hero": "<img src=\"../images/default/location.jpg\" alt=\"Недвижимость в этом районе\" loading=\"lazy\" width=\"911\" height=\"1367\">",
+    "related": [
+      {
+        "file": "guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html",
+        "label": "Подготовка к просмотру квартиры"
+      }
+    ]
+  },
+  {
+    "file": "seo/kvartiry-zhk-sokol-grad-2.html",
+    "h1": "Квартиры в ЖК Сокол Град",
+    "title": "Квартиры в ЖК Сокол Град | Домиан Квартал",
+    "description": "В этой подборке ЖК «Сокол Град» собраны отдельные квартиры для сравнения. В каждом случае начните с площади, числа комнат и этажа, затем переходите к ремонту и остающемуся оборудованию.",
+    "type": "apartment",
+    "selector": "seed",
+    "projectNames": [
+      "Сокол Град",
+      "Сокол Градъ"
+    ],
+    "focusTitle": "Планировка, отделка и состав продажи",
+    "originalIds": [
+      "object_44",
+      "object_74"
+    ],
+    "hero": "<img src=\"../images/default/location.jpg\" alt=\"Недвижимость в этом районе\" loading=\"lazy\" width=\"911\" height=\"1367\">",
+    "related": [
+      {
+        "file": "seo/kvartiry-zhk-sokol-grad.html",
+        "label": "Все предложения ЖК «Сокол Градъ»"
+      },
+      {
+        "file": "guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html",
+        "label": "Подготовка к просмотру квартиры"
+      }
+    ]
+  },
+  {
+    "file": "seo/kvartiry-zhk-sokol-grad.html",
+    "h1": "Квартиры в ЖК Сокол Градъ",
+    "title": "Квартиры в ЖК Сокол Градъ | Домиан Квартал",
+    "description": "В ЖК «Сокол Градъ» есть квартиры с готовым ремонтом и варианты под отделку. В подборке встречаются разные этажи и площади: от компактных однокомнатных до двухкомнатных. Начните с нужного числа изолированных помещений.",
+    "type": "apartment",
+    "selector": "project",
+    "projectNames": [
+      "Сокол Град",
+      "Сокол Градъ"
+    ],
+    "focusTitle": "Планировка, отделка и состав продажи",
+    "originalIds": [
+      "object_06",
+      "object_75",
+      "nb_12"
+    ],
+    "hero": "<img src=\"../images/default/location.jpg\" alt=\"Недвижимость в этом районе\" loading=\"lazy\" width=\"911\" height=\"1367\">",
+    "related": [
+      {
+        "file": "guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html",
+        "label": "Подготовка к просмотру квартиры"
+      }
+    ]
+  },
+  {
+    "file": "seo/kvartiry-zhk-veresaeva.html",
+    "h1": "Квартиры в ЖК Вересаева",
+    "title": "Квартиры в ЖК Вересаева | Домиан Квартал",
+    "description": "Квартиры ЖК «Вересаево» в этой подборке различаются метражом и числом комнат. Можно сравнить однокомнатный вариант и еврочетырёхкомнатную квартиру на Берберовской улице. Для осмотра выберите подходящий дом и этаж.",
+    "type": "apartment",
+    "selector": "seed",
+    "projectNames": [
+      "Вересаево",
+      "Вересаева"
+    ],
+    "focusTitle": "Планировка, отделка и состав продажи",
+    "originalIds": [
+      "object_04",
+      "object_10"
+    ],
+    "hero": "<img src=\"../images/default/location.jpg\" alt=\"Недвижимость в этом районе\" loading=\"lazy\" width=\"911\" height=\"1367\">",
+    "related": [
+      {
+        "file": "seo/kvartiry-zhk-veresaevo.html",
+        "label": "Основная подборка ЖК «Вересаево»"
+      },
+      {
+        "file": "guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html",
+        "label": "Подготовка к просмотру квартиры"
+      }
+    ]
+  },
+  {
+    "file": "seo/kvartiry-zhk-veresaevo.html",
+    "h1": "Квартиры в ЖК Вересаево",
+    "title": "Квартиры в ЖК Вересаево | Домиан Квартал",
+    "description": "В ЖК «Вересаево» квартиры отличаются планировкой, этажом и состоянием отделки. В подборке можно сопоставить варианты с разным числом комнат и метражом, не возвращаясь каждый раз к началу общего каталога.",
+    "type": "apartment",
+    "selector": "project",
+    "projectNames": [
+      "Вересаево",
+      "Вересаева"
+    ],
+    "focusTitle": "Планировка, отделка и состав продажи",
+    "originalIds": [
+      "object_17",
+      "object_19",
+      "object_82",
+      "nb_09",
+      "nb_10"
+    ],
+    "hero": "<img src=\"../images/default/location.jpg\" alt=\"Недвижимость в этом районе\" loading=\"lazy\" width=\"911\" height=\"1367\">",
+    "related": [
+      {
+        "file": "guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html",
+        "label": "Подготовка к просмотру квартиры"
+      }
+    ]
+  },
+  {
+    "file": "seo/kvartiry-zhk-vishnevyy-sad.html",
+    "h1": "Квартиры в ЖК Вишнёвый Сад",
+    "title": "Квартиры в ЖК Вишнёвый Сад | Домиан Квартал",
+    "description": "В подборке ЖК «Вишнёвый сад» представлена двухкомнатная квартира в Аксае, на улице Ленина, 40У. В ней выполнен дизайнерский ремонт; есть индивидуальное отопление, тёплый пол и два балкона.",
+    "type": "apartment",
+    "selector": "project",
+    "projectNames": [
+      "Вишнёвый сад"
+    ],
+    "focusTitle": "Планировка, отделка и состав продажи",
+    "originalIds": [
+      "nb_22",
+      "nb_23"
+    ],
+    "hero": "<img src=\"../images/default/location.jpg\" alt=\"Недвижимость в этом районе\" loading=\"lazy\" width=\"911\" height=\"1367\">",
+    "related": [
+      {
+        "file": "seo/zhk-vishnevyy-sad-aksay.html",
+        "label": "ЖК «Вишнёвый сад» в Аксае"
+      },
+      {
+        "file": "guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html",
+        "label": "Подготовка к просмотру квартиры"
+      }
+    ]
+  },
+  {
+    "file": "seo/kvartiry-zhk-zapadnye-allei.html",
+    "h1": "Квартиры в ЖК Западные Аллеи",
+    "title": "Квартиры в ЖК Западные Аллеи | Домиан Квартал",
+    "description": "Подбор квартиры в ЖК «Западные Аллеи» начните с желаемой планировки и бюджета. На странице комплекса ниже можно посмотреть адрес и сведения о проекте, затем обсудить с агентством подходящие варианты.",
+    "type": "apartment",
+    "selector": "project",
+    "projectNames": [
+      "Западные Аллеи"
+    ],
+    "focusTitle": "Планировка, отделка и состав продажи",
+    "originalIds": [
+      "nb_06",
+      "nb_16",
+      "nb_17"
+    ],
+    "hero": "<img src=\"../images/default/location.jpg\" alt=\"Недвижимость в этом районе\" loading=\"lazy\" width=\"911\" height=\"1367\">",
+    "related": [
+      {
+        "file": "guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html",
+        "label": "Подготовка к просмотру квартиры"
+      }
+    ]
+  },
+  {
+    "file": "seo/uchastki-loc-aksay.html",
+    "h1": "Участки в Аксае",
+    "title": "Участки в Аксае | Домиан Квартал",
+    "description": "Земельный участок в Аксае нужно выбирать вместе с будущим использованием: домом, въездом, двором и местами парковки. Площадь в сотках важна, но форма и протяжённость фасада могут сильнее ограничивать подходящую планировку.",
+    "type": "land",
+    "selector": "aksay",
+    "projectNames": [],
+    "focusTitle": "Площадь и форма участка",
+    "originalIds": [
+      "land_03",
+      "land_05"
+    ],
+    "hero": "<img src=\"../images/default/location.jpg\" alt=\"Недвижимость в этом районе\" loading=\"lazy\" width=\"911\" height=\"1367\">",
+    "related": [
+      {
+        "file": "guides/chto-proverit-pered-pokupkoy-uchastka-v-aksaye.html",
+        "label": "Что проверить перед покупкой участка"
+      }
+    ]
+  },
+  {
+    "file": "seo/uchastki-raion-aksayskiy-rayon.html",
+    "h1": "Участки в Аксайском районе",
+    "title": "Участки в Аксайском районе | Домиан Квартал",
+    "description": "Участки Аксайского района различаются населённым пунктом, формой и возможностями размещения дома. Сначала выберите подходящую территорию и назначение, затем сравнивайте площадь, подъезд и коммуникации.",
+    "type": "land",
+    "selector": "aksay-area",
+    "projectNames": [],
+    "focusTitle": "Территория, подъезд и посадка дома",
+    "originalIds": [
+      "land_02",
+      "land_05",
+      "land_07",
+      "land_08",
+      "land_09"
+    ],
+    "hero": "<img src=\"../images/default/location.jpg\" alt=\"Недвижимость в этом районе\" loading=\"lazy\" width=\"911\" height=\"1367\">",
+    "related": [
+      {
+        "file": "guides/chto-proverit-pered-pokupkoy-uchastka-v-aksaye.html",
+        "label": "Что проверить перед покупкой участка"
+      }
+    ]
+  }
+]

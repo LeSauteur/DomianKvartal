@@ -10,6 +10,17 @@
 .visibility-gallery img { width: 100%; height: 280px; object-fit: cover; border-radius: 12px; }
 .visibility-plans img { display:block; width:100%; max-width:760px; height:auto; margin-block:16px; }
 .visibility-description { margin-block:28px; line-height:1.65; overflow-wrap:anywhere; }
+.visibility-description p { margin-block: 0 1em; max-width: 78ch; }
+.visibility-description h3 { margin-block: 1.35em .55em; font-size: 1.12rem; line-height: 1.35; }
+.visibility-description ul { max-width: 78ch; padding-left: 1.4em; margin-block: .5em 1.15em; list-style: disc; }
+.visibility-description li { margin-block: .35em; }
+.visibility-comparison { margin-block: 28px; line-height: 1.65; }
+.visibility-comparison ul { padding-left: 1.4em; list-style: disc; }
+.visibility-comparison a { text-decoration: underline; overflow-wrap: anywhere; }
+.seo-editorial-copy { margin-block: 28px; line-height: 1.65; }
+.seo-editorial-copy p { max-width: 82ch; margin-block: 1em; }
+.seo-editorial-copy ul { padding-left: 1.4em; list-style: disc; }
+.seo-editorial-hero img { display: block; width: 100%; max-width: 100%; height: clamp(180px, 30vw, 360px); object-fit: cover; border-radius: 12px; margin-block: 20px; }
 .visibility-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-block: 24px; }
 .visibility-static-links { padding: 24px; margin: 24px auto; max-width: 1200px; }
 .visibility-static-links ul { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(270px,100%),1fr)); gap: 12px; padding-left: 20px; }

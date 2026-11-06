@@ -1,0 +1,1932 @@
+[
+  {
+    "id": "house_01",
+    "words": 17,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_02",
+    "words": 48,
+    "sections": [
+      "Планировка и коммуникации"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_03",
+    "words": 52,
+    "sections": [
+      "Дом и участки"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_04",
+    "words": 19,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_05",
+    "words": 44,
+    "sections": [
+      "Планировка",
+      "Участок и расположение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_06",
+    "words": 17,
+    "sections": [],
+    "issues": [
+      "Missing descriptive fields in source JSON"
+    ],
+    "visualEvidence": [
+      "https://domian-161.ru/output/houses/house_06/img_01.jpg"
+    ]
+  },
+  {
+    "id": "house_07",
+    "words": 19,
+    "sections": [],
+    "issues": [
+      "Missing descriptive fields in source JSON"
+    ],
+    "visualEvidence": [
+      "https://domian-161.ru/output/houses/house_07/img_01.jpg"
+    ]
+  },
+  {
+    "id": "house_08",
+    "words": 15,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_09",
+    "words": 11,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_10",
+    "words": 11,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_11",
+    "words": 10,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_12",
+    "words": 13,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_13",
+    "words": 11,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_14",
+    "words": 37,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_15",
+    "words": 24,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_16",
+    "words": 13,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_17",
+    "words": 25,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_18",
+    "words": 59,
+    "sections": [
+      "Планировка",
+      "Участок и окружение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_19",
+    "words": 22,
+    "sections": [],
+    "issues": [
+      "Missing descriptive fields in source JSON"
+    ],
+    "visualEvidence": [
+      "https://domian-161.ru/output/houses/house_19/img_01.jpg"
+    ]
+  },
+  {
+    "id": "house_20",
+    "words": 33,
+    "sections": [
+      "Помещения"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_21",
+    "words": 16,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_22",
+    "words": 19,
+    "sections": [],
+    "issues": [
+      "Missing descriptive fields in source JSON"
+    ],
+    "visualEvidence": [
+      "https://domian-161.ru/output/houses/house_22/img_01.jpg"
+    ]
+  },
+  {
+    "id": "house_23",
+    "words": 49,
+    "sections": [
+      "Планировка",
+      "Отделка и коммуникации"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_24",
+    "words": 21,
+    "sections": [],
+    "issues": [
+      "Missing descriptive fields in source JSON"
+    ],
+    "visualEvidence": [
+      "https://domian-161.ru/output/houses/house_24/img_01.jpg"
+    ]
+  },
+  {
+    "id": "house_25",
+    "words": 20,
+    "sections": [],
+    "issues": [
+      "Missing descriptive fields in source JSON"
+    ],
+    "visualEvidence": [
+      "https://domian-161.ru/output/houses/house_25/img_01.jpg"
+    ]
+  },
+  {
+    "id": "house_26",
+    "words": 14,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_27",
+    "words": 54,
+    "sections": [
+      "Планировка и оснащение",
+      "Двор"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_28",
+    "words": 20,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_29",
+    "words": 9,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_30",
+    "words": 18,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_31",
+    "words": 54,
+    "sections": [
+      "Дополнительные помещения"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_32",
+    "words": 34,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_33",
+    "words": 11,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_34",
+    "words": 14,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_35",
+    "words": 32,
+    "sections": [
+      "Помещения"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_36",
+    "words": 39,
+    "sections": [
+      "Помещения и оборудование",
+      "Участок"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_37",
+    "words": 25,
+    "sections": [
+      "Особенности дома"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_38",
+    "words": 15,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_39",
+    "words": 85,
+    "sections": [
+      "Два этажа",
+      "Двор и подъезд"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_40",
+    "words": 22,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_41",
+    "words": 20,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_42",
+    "words": 48,
+    "sections": [
+      "Планировка",
+      "Отделка и коммуникации"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_43",
+    "words": 8,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_44",
+    "words": 26,
+    "sections": [
+      "Планировка и оборудование"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_45",
+    "words": 61,
+    "sections": [
+      "Планировка",
+      "Отделка и коммуникации"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_46",
+    "words": 30,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_47",
+    "words": 55,
+    "sections": [
+      "Планировка",
+      "Отделка и коммуникации"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_48",
+    "words": 55,
+    "sections": [
+      "Планировка",
+      "Отделка и коммуникации"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_49",
+    "words": 55,
+    "sections": [
+      "Планировка",
+      "Отделка и коммуникации"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_50",
+    "words": 46,
+    "sections": [
+      "Планировка",
+      "Отделка и коммуникации"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_51",
+    "words": 50,
+    "sections": [
+      "Планировка",
+      "Отделка и коммуникации"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_52",
+    "words": 50,
+    "sections": [
+      "Планировка",
+      "Предчистовая отделка"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_53",
+    "words": 53,
+    "sections": [
+      "Помещения"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_54",
+    "words": 50,
+    "sections": [
+      "Планировка",
+      "Отделка и коммуникации"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_55",
+    "words": 39,
+    "sections": [
+      "По этажам"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_56",
+    "words": 42,
+    "sections": [
+      "Планировка"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_57",
+    "words": 50,
+    "sections": [
+      "Планировка",
+      "Отделка и коммуникации"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_58",
+    "words": 39,
+    "sections": [
+      "Помещения и коммуникации"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_59",
+    "words": 49,
+    "sections": [
+      "Внутри"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_60",
+    "words": 56,
+    "sections": [
+      "Планировка",
+      "Отделка и коммуникации"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_61",
+    "words": 55,
+    "sections": [
+      "Планировка",
+      "Отделка и коммуникации"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_62",
+    "words": 61,
+    "sections": [
+      "Планировка",
+      "Отделка и коммуникации"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_63",
+    "words": 44,
+    "sections": [
+      "Дом и двор"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_64",
+    "words": 8,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_65",
+    "words": 73,
+    "sections": [
+      "По этажам"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_66",
+    "words": 63,
+    "sections": [
+      "В доме",
+      "Участок и подъезд"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_67",
+    "words": 35,
+    "sections": [
+      "Планировка"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_68",
+    "words": 25,
+    "sections": [
+      "Планировка"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_69",
+    "words": 55,
+    "sections": [
+      "Планировка",
+      "Отделка и коммуникации"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_70",
+    "words": 46,
+    "sections": [
+      "Планировка",
+      "Отделка и коммуникации"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_71",
+    "words": 55,
+    "sections": [
+      "Планировка",
+      "Отделка и коммуникации"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_72",
+    "words": 56,
+    "sections": [
+      "Планировка",
+      "Отделка и коммуникации"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_73",
+    "words": 49,
+    "sections": [
+      "Планировка",
+      "Отделка и коммуникации"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_911",
+    "words": 84,
+    "sections": [
+      "Планировка и оборудование",
+      "На участке"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_912",
+    "words": 42,
+    "sections": [
+      "Дом и двор"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_913",
+    "words": 32,
+    "sections": [
+      "Помещения и участок"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_914",
+    "words": 57,
+    "sections": [
+      "Планировка",
+      "Предчистовая отделка"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_915",
+    "words": 71,
+    "sections": [
+      "Дом",
+      "Подъезд и окружение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "house_916",
+    "words": 76,
+    "sections": [
+      "Дом и помещения"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "land_01",
+    "words": 16,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "land_02",
+    "words": 36,
+    "sections": [
+      "Расположение и границы"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "land_03",
+    "words": 9,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "land_04",
+    "words": 13,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "land_05",
+    "words": 15,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "land_06",
+    "words": 19,
+    "sections": [],
+    "issues": [
+      "Missing descriptive fields in source JSON"
+    ],
+    "visualEvidence": [
+      "https://domian-161.ru/lands/land_06/img_01.jpg"
+    ]
+  },
+  {
+    "id": "land_07",
+    "words": 10,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "land_08",
+    "words": 24,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "land_09",
+    "words": 15,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "land_10",
+    "words": 35,
+    "sections": [
+      "Участок и двор"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "land_11",
+    "words": 13,
+    "sections": [],
+    "issues": [
+      "Title area 6 sotok and description dimensions 20x40 need reconciliation; dimensions omitted"
+    ],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_01",
+    "words": 111,
+    "sections": [
+      "Отопление и оснащение"
+    ],
+    "issues": [
+      "Past future-tense claim about 2025 removed"
+    ],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_02",
+    "words": 72,
+    "sections": [
+      "Планировка",
+      "Дом и двор"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_03",
+    "words": 72,
+    "sections": [
+      "Внутри квартиры"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_04",
+    "words": 61,
+    "sections": [
+      "Планировка и отделка"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_05",
+    "words": 39,
+    "sections": [
+      "В квартире"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_06",
+    "words": 75,
+    "sections": [
+      "Планировка и ремонт",
+      "Дом"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_07",
+    "words": 62,
+    "sections": [
+      "Планировка и оснащение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_08",
+    "words": 62,
+    "sections": [
+      "Планировка"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_09",
+    "words": 84,
+    "sections": [
+      "Квартира"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_10",
+    "words": 24,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_100",
+    "words": 23,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_101",
+    "words": 20,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_1011",
+    "words": 71,
+    "sections": [
+      "Планировка и оснащение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_1012",
+    "words": 82,
+    "sections": [
+      "Помещения и оборудование"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_1013",
+    "words": 55,
+    "sections": [
+      "Планировка и оснащение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_1014",
+    "words": 28,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_102",
+    "words": 25,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_103",
+    "words": 30,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_104",
+    "words": 47,
+    "sections": [
+      "Отделка и оснащение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_105",
+    "words": 22,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_106",
+    "words": 41,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_107",
+    "words": 30,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_108",
+    "words": 17,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_109",
+    "words": 29,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_11",
+    "words": 84,
+    "sections": [
+      "Планировка и отделка"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_110",
+    "words": 39,
+    "sections": [
+      "Планировка"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_111",
+    "words": 33,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_112",
+    "words": 42,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_12",
+    "words": 65,
+    "sections": [
+      "Планировка и оснащение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_13",
+    "words": 58,
+    "sections": [
+      "Планировка"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_14",
+    "words": 75,
+    "sections": [
+      "Помещения"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_15",
+    "words": 76,
+    "sections": [
+      "Планировка и ремонт"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_16",
+    "words": 61,
+    "sections": [
+      "Планировка и отделка"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_17",
+    "words": 17,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_18",
+    "words": 144,
+    "sections": [
+      "Планировка",
+      "Расположение",
+      "Отделка и коммуникации",
+      "Мебель и оборудование"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_19",
+    "words": 102,
+    "sections": [
+      "Планировка",
+      "Отделка и коммуникации",
+      "Мебель и оборудование",
+      "Расположение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_20",
+    "words": 22,
+    "sections": [],
+    "issues": [
+      "Missing descriptive fields in source JSON"
+    ],
+    "visualEvidence": [
+      "https://domian-161.ru/objects/object_20/img_01.jpg"
+    ]
+  },
+  {
+    "id": "object_21",
+    "words": 94,
+    "sections": [
+      "Планировка",
+      "Расположение",
+      "Мебель и оборудование",
+      "Дом и двор"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_22",
+    "words": 90,
+    "sections": [
+      "Отделка и оборудование",
+      "Территория ЖК"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_23",
+    "words": 17,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_24",
+    "words": 6,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_25",
+    "words": 6,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_26",
+    "words": 37,
+    "sections": [
+      "Планировка и состояние"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_27",
+    "words": 23,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_28",
+    "words": 47,
+    "sections": [
+      "Планировка"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_29",
+    "words": 23,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_30",
+    "words": 21,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_31",
+    "words": 31,
+    "sections": [
+      "Планировка"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_32",
+    "words": 14,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_33",
+    "words": 64,
+    "sections": [
+      "Планировка"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_34",
+    "words": 30,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_35",
+    "words": 83,
+    "sections": [
+      "В квартире"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_36",
+    "words": 93,
+    "sections": [
+      "Планировка",
+      "Дом и двор",
+      "Отделка и коммуникации",
+      "Мебель и оборудование"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_37",
+    "words": 70,
+    "sections": [
+      "Планировка",
+      "Отделка и коммуникации",
+      "Мебель и оборудование",
+      "Дом и двор"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_38",
+    "words": 71,
+    "sections": [
+      "Планировка",
+      "Дом и двор"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_39",
+    "words": 61,
+    "sections": [
+      "Планировка и материалы"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_40",
+    "words": 42,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_41",
+    "words": 20,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_42",
+    "words": 79,
+    "sections": [
+      "Отделка и оборудование"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_43",
+    "words": 46,
+    "sections": [
+      "Планировка и оснащение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_44",
+    "words": 101,
+    "sections": [
+      "Планировка",
+      "Дом и двор",
+      "Мебель и оборудование",
+      "Расположение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_45",
+    "words": 53,
+    "sections": [
+      "Внутри квартиры"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_46",
+    "words": 118,
+    "sections": [
+      "Отделка и коммуникации",
+      "Мебель и оборудование",
+      "Планировка",
+      "Дом и двор",
+      "Расположение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_47",
+    "words": 59,
+    "sections": [
+      "Планировка",
+      "Мебель и оборудование"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_48",
+    "words": 63,
+    "sections": [
+      "Помещения и оснащение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_49",
+    "words": 105,
+    "sections": [
+      "Планировка",
+      "Расположение",
+      "Отделка и коммуникации",
+      "Мебель и оборудование",
+      "Дом и двор"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_50",
+    "words": 18,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_51",
+    "words": 35,
+    "sections": [
+      "Планировка"
+    ],
+    "issues": [
+      "Studio/one-room wording differs in title and description; neutral apartment wording retained"
+    ],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_52",
+    "words": 61,
+    "sections": [
+      "Планировка",
+      "Мебель и оборудование"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_53",
+    "words": 84,
+    "sections": [
+      "Планировка",
+      "Дом и двор",
+      "Отделка и коммуникации",
+      "Мебель и оборудование"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_54",
+    "words": 121,
+    "sections": [
+      "Отделка и коммуникации",
+      "Мебель и оборудование",
+      "Планировка",
+      "Дом и двор",
+      "Расположение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_55",
+    "words": 42,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_56",
+    "words": 74,
+    "sections": [
+      "Планировка и оснащение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_57",
+    "words": 88,
+    "sections": [
+      "Планировка",
+      "Дом и двор",
+      "Мебель и оборудование"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_58",
+    "words": 80,
+    "sections": [
+      "Планировка",
+      "Дом и двор",
+      "Мебель и оборудование",
+      "Расположение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_59",
+    "words": 44,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_60",
+    "words": 63,
+    "sections": [
+      "Планировка и ремонт"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_61",
+    "words": 51,
+    "sections": [
+      "Состояние и оборудование"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_62",
+    "words": 67,
+    "sections": [
+      "Расположение",
+      "Дом и двор",
+      "Планировка",
+      "Мебель и оборудование"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_63",
+    "words": 42,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_64",
+    "words": 16,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_65",
+    "words": 16,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_66",
+    "words": 50,
+    "sections": [
+      "Планировка и состояние"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_67",
+    "words": 68,
+    "sections": [
+      "Отделка и помещения"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_68",
+    "words": 66,
+    "sections": [
+      "Планировка",
+      "Отделка и коммуникации",
+      "Дом и двор",
+      "Расположение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_69",
+    "words": 73,
+    "sections": [
+      "Планировка",
+      "Расположение",
+      "Дом и двор",
+      "Мебель и оборудование",
+      "Отделка и коммуникации"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_70",
+    "words": 38,
+    "sections": [
+      "Планировка"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_71",
+    "words": 37,
+    "sections": [
+      "Планировка и отделка"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_72",
+    "words": 11,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_73",
+    "words": 27,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_74",
+    "words": 25,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_75",
+    "words": 19,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_76",
+    "words": 56,
+    "sections": [
+      "Отделка и коммуникации",
+      "Дом и двор"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_77",
+    "words": 11,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_78",
+    "words": 62,
+    "sections": [
+      "Планировка",
+      "Дом и двор",
+      "Мебель и оборудование"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_79",
+    "words": 8,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_80",
+    "words": 29,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_81",
+    "words": 45,
+    "sections": [
+      "Планировка"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_82",
+    "words": 45,
+    "sections": [
+      "Планировка"
+    ],
+    "issues": [
+      "Implausible ceiling height 44.3 m omitted; no replacement invented"
+    ],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_83",
+    "words": 72,
+    "sections": [
+      "Помещения"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_84",
+    "words": 37,
+    "sections": [
+      "Помещения и дом"
+    ],
+    "issues": [
+      "Finishing described both as complete and requiring repairs; conflicting labels omitted"
+    ],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_85",
+    "words": 21,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_86",
+    "words": 18,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_87",
+    "words": 64,
+    "sections": [
+      "Планировка"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_88",
+    "words": 50,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_89",
+    "words": 52,
+    "sections": [
+      "Мебель и техника остаются"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_90",
+    "words": 59,
+    "sections": [
+      "Планировка и оснащение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_901",
+    "words": 57,
+    "sections": [
+      "Параметры и ремонт"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_902",
+    "words": 14,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_903",
+    "words": 20,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_904",
+    "words": 36,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_905",
+    "words": 9,
+    "sections": [],
+    "issues": [
+      "Missing descriptive fields in source JSON",
+      "Photo-folder mismatch: no visual characteristics inferred"
+    ],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_906",
+    "words": 44,
+    "sections": [
+      "Помещения"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_907",
+    "words": 17,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_908",
+    "words": 73,
+    "sections": [
+      "Планировка и подготовка к отделке"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_909",
+    "words": 22,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_91",
+    "words": 66,
+    "sections": [
+      "Расположение",
+      "Мебель и оборудование",
+      "Дом и двор"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_910",
+    "words": 52,
+    "sections": [
+      "Квартира и комплекс"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_913",
+    "words": 40,
+    "sections": [
+      "Планировка и состояние"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_914",
+    "words": 41,
+    "sections": [
+      "Планировка и состояние"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_915",
+    "words": 42,
+    "sections": [
+      "Помещения и оснащение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_916",
+    "words": 19,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_92",
+    "words": 31,
+    "sections": [
+      "Оснащение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_93",
+    "words": 16,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_94",
+    "words": 26,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_95",
+    "words": 30,
+    "sections": [
+      "Планировка и оснащение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_96",
+    "words": 35,
+    "sections": [
+      "Планировка и оснащение"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_97",
+    "words": 36,
+    "sections": [
+      "Внутри квартиры"
+    ],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_98",
+    "words": 19,
+    "sections": [],
+    "issues": [],
+    "visualEvidence": []
+  },
+  {
+    "id": "object_99",
+    "words": 96,
+    "sections": [
+      "Мебель и техника"
+    ],
+    "issues": [
+      "Past future-tense claim about 2025 removed"
+    ],
+    "visualEvidence": []
+  }
+]

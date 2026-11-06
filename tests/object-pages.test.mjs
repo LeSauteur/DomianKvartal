@@ -43,7 +43,7 @@ test("every property has a unique self-canonical page with only supported facts"
   }
 });
 test("unknown values stay absent and non-active or imageless properties are excluded",()=>{
-  const empty={...registry[0],city:null,settlement:null,district:null,address:null,rooms:null,floor:null,floors:null,area_total:null,lot_area_sotok:null,price:null,price_conflict:null,images:[]};
+  const empty={...registry[0],editorial:undefined,description_public:'',city:null,settlement:null,district:null,address:null,rooms:null,floor:null,floors:null,area_total:null,lot_area_sotok:null,price:null,price_conflict:null,images:[]};
   assert.equal(eligible(empty),false);
   const html=objectPage(empty);
   assert.doesNotMatch(html,/0 м²|уточняйте этаж/);

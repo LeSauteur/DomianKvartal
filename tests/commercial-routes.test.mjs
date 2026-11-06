@@ -27,14 +27,14 @@ for(const [file,leadType] of [['sell-apartment.html','sell'],['property-valuatio
  }
 });
 test('linked local selections contain only valid specific catalog IDs',()=>{
- const configs=[['kvartiry-loc-aksay.html','apartments','objects/index.json'],['doma-loc-rossiyskiy.html','houses','output/houses/index.json'],['uchastki-loc-aksay.html','lands','lands/index.json']];
- for(const [file,type,index] of configs){
-  const ids=JSON.parse(read(index)).map(item=>typeof item==='string'?item:item.id);
+ const configs=[['kvartiry-loc-aksay.html','apartments','apartment'],['doma-loc-rossiyskiy.html','houses','house'],['uchastki-loc-aksay.html','lands','land']];
+ for(const [file,type,propertyType] of configs){
+  const ids=JSON.parse(read('output/catalog/registry.json')).filter(r=>r.type===propertyType).map(r=>r.id);
   const html=read('seo/'+file);
   assert.ok(read(type+'.html').includes(`href="seo/${file}"`));
-  const links=[...html.matchAll(/href="\/(?:apartments|houses|lands)\.html\?object=([^"]+)"/g)];
-  assert.equal(links.length,2);
-  for(const match of links){assert.ok(ids.includes(match[1]),`${file}: unknown ${match[1]}`);assert.ok(html.includes(`data-object-id="${match[1]}"`));}
+  const cards=[...html.matchAll(/data-registry-id="([^"]+)"/g)];
+  assert.ok(cards.length>0);
+  for(const match of cards){assert.ok(ids.includes(match[1]),`${file}: unknown ${match[1]}`);assert.ok(html.includes(`href="/obekt/${match[1]}.html"`));assert.ok(html.includes(`href="/obekt/${match[1]}.html#lead-form-section"`));}
  }
 });
 test('confirmed public prototypes are excluded from index and sitemap',()=>{

@@ -1,5 +1,6 @@
 // Presentation is derived from the existing source records; evidence stays private.
-export const CATALOG_UPDATED_AT = '2026-11-05';
+import { retainEditorial } from './catalog-editorial.mjs';
+export const CATALOG_UPDATED_AT = '2026-11-06';
 export const PUBLICATION_APPROVAL = Object.freeze({
   date: '2026-11-03', basis: 'owner-decision', scope: 'continued-publication',
   note: 'Решение владельца от 03.11.2026 о сохранении всех опубликованных объявлений; не индивидуальный осмотр или независимая проверка.'
@@ -71,11 +72,14 @@ export function normalizeRecord(r) {
   const rooms=labelled(text,/(?:количество\s+комнат|комнат)\s*:\s*(\d{1,2})(?!\d)/giu,0,30).value;
   const address=normalizeText(r.description_raw).match(/(?:Адрес\s*:\s*|по\s+адресу\s*:\s*)([^\n]+)/iu)?.[1]?.split(/(?:Цена|Стоимость|Основные\s+параметры|Тип\s+объекта|Количество\s+комнат|Общая\s+площадь|Этаж|Расположение|Инфраструктура)\s*:|\s+Общая\s+площадь|,\s*евро[- ]\d|,?\s*(?:дом\s+\d+\s*кв|—|\s-\s)/iu)[0]?.trim().replace(/[.,\s]+$/u,'');
   const result={...r,...geo,address:r.address||address||null,area_total:area,area_conflict:areaConflict,area_living:living.value,area_kitchen:kitchen.value,
-    rooms:r.rooms??rooms,price:priceConflict?null:r.price??rawPrices[0]??null,price_conflict:priceConflict,
+    rooms:r.rooms??rooms,
+    floor:r.floor??(r.type==='apartment'?labelled(text,/(?:^|\n)\s*(\d{1,3})\s*этаж(?!\p{L})/giu,0,200).value:null),
+    lot_area_sotok:r.lot_area_sotok??(r.type==='land'?labelled(normalizeText(r.title_raw),/(\d+(?:[.,]\d+)?)\s*сот(?:ок|ки|ка|\.)?/giu,0,100000).value:null),
+    price:priceConflict?null:r.price??rawPrices[0]??null,price_conflict:priceConflict,
     price_currency:'RUB',status:'active',status_label:'Актуально',content_updated_at:CATALOG_UPDATED_AT,
     publication_approval:{...PUBLICATION_APPROVAL},content_issues:issues};
   result.description_public=cleanDescription(result);
-  return result;
+  return retainEditorial(result,r);
 }
 export function publicFacts(r) {
   return {...r,area_total:r.area_conflict?null:r.area_total,price:r.price_conflict?null:r.price};
@@ -155,7 +159,7 @@ export function finalizeDescriptions(records) {
     object_55:'В Ростове-на-Дону продаётся двухкомнатная квартира 76 м² на улице 40-летия Победы, 85; комнаты изолированы.',
     object_99:'Квартира с дизайнерским ремонтом, индивидуальным отоплением и тёплыми полами на кухне и в санузле.'
   };
-  for(const r of records)if(openings[r.id]){
+  for(const r of records)if(openings[r.id]&&!r.editorial){
     const paragraphs=r.description_public.split('\n\n');
     paragraphs[0]=openings[r.id];
     r.description_public=paragraphs.join('\n\n');

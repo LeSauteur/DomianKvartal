@@ -9,7 +9,7 @@ const records=json('data/catalog/registry.json'), published=records.filter(r=>r.
 const baseline=json('tests/fixtures/catalog-publication-20261103.json');
 const hash=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
 const decode=s=>s.replaceAll('&quot;','"').replaceAll('&#39;',"'").replaceAll('&lt;','<').replaceAll('&gt;','>').replaceAll('&amp;','&');
-const text=s=>decode(s.replace(/<script\b[\s\S]*?<\/script>/gi,'').replace(/<style\b[\s\S]*?<\/style>/gi,'').replace(/<[^>]*>/g,' ')).replace(/\s+/g,' ').trim();
+const text=s=>decode(s.replace(/<script\b[\s\S]*?<\/script>/gi,'').replace(/<style\b[\s\S]*?<\/style>/gi,'').replace(/<\/?(?:strong|em)\b[^>]*>/gi,'').replace(/<[^>]*>/g,' ')).replace(/\s+/g,' ').trim();
 const forbidden=/информация предоставлена владельцем|со слов собственника|по заявлению пользователя|независимую проверку|автоматически сгенерирован|данные получены из JSON|description_raw|description_public|publication_approval|source_path|undefined|\bNaN\b|\bnull\b/iu;
 test('all 220 published IDs, source descriptions, images and 20 placeholders survive',()=>{
   assert.equal(published.length,220);

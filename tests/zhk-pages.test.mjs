@@ -9,7 +9,9 @@ const words=html=>mainContent(html).replace(/<(?:script|style)\b[\s\S]*?<\/(?:sc
 test('each Aksay ZHK retains substantive blocks, title and synchronized FAQ schema',()=>{
   for(const record of records.filter(r=>r.publish)) {
     const file=zhkFile(record), before=execFileSync('git',['show','origin/main:'+file],{encoding:'utf8'}), after=fs.readFileSync(file,'utf8');
-    for(const heading of [...mainContent(before).matchAll(/<h[23]\b[^>]*>([\s\S]*?)<\/h[23]>/giu)]) {
+    const source=JSON.parse(fs.readFileSync('data/zhk/main-content.json','utf8')).pages[file];
+    const approvedContent=source.editorialReviewedAt?source.main:mainContent(before);
+    for(const heading of [...approvedContent.matchAll(/<h[23]\b[^>]*>([\s\S]*?)<\/h[23]>/giu)]) {
       const approvedHeading = heading[1] === 'Квартиры из нашего реестра' ? 'Квартиры в продаже в этом ЖК' : heading[1];
       assert.ok(after.includes(approvedHeading),file+': '+approvedHeading);
     }
@@ -25,7 +27,7 @@ test('each Aksay ZHK retains substantive blocks, title and synchronized FAQ sche
 test("five existing ZHK pages share factual layout and omit every unknown field",()=>{
   for(const record of records.filter(r=>r.publish)) {
     const html=fs.readFileSync(zhkFile(record),"utf8");
-    assert.match(html,/Мы агентство недвижимости, а не застройщик\. Поможем подобрать квартиру/);
+    assert.doesNotMatch(html,/class="visibility-notice"/);
     assert.doesNotMatch(html,/согласовать условия покупки с застройщиком/);
     assert.match(html,/Чем поможем/);
     assert.match(html,new RegExp('data-source-cta="zhk_'+record.slug+'"'));

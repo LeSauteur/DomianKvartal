@@ -1,0 +1,327 @@
+{
+  "baseCommit": "1976779faf7e22f2818f63a9bb645543f5f53e1d",
+  "before": {
+    "objects": 220,
+    "uniqueDescriptions": 220,
+    "under50Words": 68,
+    "goodOffer": 22,
+    "waitingForYou": 23,
+    "withLists": 0,
+    "withHeadings": 0
+  },
+  "after": {
+    "objects": 220,
+    "uniqueDescriptions": 220,
+    "under50Words": 135,
+    "goodOffer": 0,
+    "waitingForYou": 0,
+    "withLists": 129,
+    "withHeadings": 128
+  },
+  "changedDescriptions": 220,
+  "originalSourcesAndMediaUnchanged": true,
+  "placeholders": 20,
+  "seoPages": 26,
+  "rewrittenSeoSelections": 21,
+  "directSelectionObjectLinks": 123,
+  "constructionPages": 32,
+  "closePairsBefore": [
+    {
+      "ids": [
+        "house_47",
+        "house_48"
+      ],
+      "jaccard": 0.857
+    },
+    {
+      "ids": [
+        "object_01",
+        "object_99"
+      ],
+      "jaccard": 0.854
+    },
+    {
+      "ids": [
+        "house_49",
+        "house_69"
+      ],
+      "jaccard": 0.836
+    },
+    {
+      "ids": [
+        "object_41",
+        "object_94"
+      ],
+      "jaccard": 0.835
+    },
+    {
+      "ids": [
+        "object_96",
+        "object_97"
+      ],
+      "jaccard": 0.827
+    },
+    {
+      "ids": [
+        "object_46",
+        "object_54"
+      ],
+      "jaccard": 0.787
+    },
+    {
+      "ids": [
+        "object_102",
+        "object_98"
+      ],
+      "jaccard": 0.783
+    },
+    {
+      "ids": [
+        "object_105",
+        "object_80"
+      ],
+      "jaccard": 0.768
+    },
+    {
+      "ids": [
+        "object_101",
+        "object_105"
+      ],
+      "jaccard": 0.766
+    },
+    {
+      "ids": [
+        "house_47",
+        "house_49"
+      ],
+      "jaccard": 0.759
+    },
+    {
+      "ids": [
+        "house_48",
+        "house_49"
+      ],
+      "jaccard": 0.759
+    },
+    {
+      "ids": [
+        "house_49",
+        "house_71"
+      ],
+      "jaccard": 0.754
+    },
+    {
+      "ids": [
+        "land_05",
+        "land_09"
+      ],
+      "jaccard": 0.75
+    }
+  ],
+  "closePairsAfter": [
+    {
+      "ids": [
+        "house_47",
+        "house_48"
+      ],
+      "jaccard": 0.852
+    },
+    {
+      "ids": [
+        "house_49",
+        "house_69"
+      ],
+      "jaccard": 0.849
+    },
+    {
+      "ids": [
+        "house_54",
+        "house_57"
+      ],
+      "jaccard": 0.84
+    },
+    {
+      "ids": [
+        "house_47",
+        "house_71"
+      ],
+      "jaccard": 0.833
+    },
+    {
+      "ids": [
+        "house_48",
+        "house_49"
+      ],
+      "jaccard": 0.833
+    },
+    {
+      "ids": [
+        "object_46",
+        "object_54"
+      ],
+      "jaccard": 0.777
+    },
+    {
+      "ids": [
+        "house_47",
+        "house_49"
+      ],
+      "jaccard": 0.768
+    },
+    {
+      "ids": [
+        "house_47",
+        "house_69"
+      ],
+      "jaccard": 0.768
+    },
+    {
+      "ids": [
+        "house_48",
+        "house_69"
+      ],
+      "jaccard": 0.768
+    },
+    {
+      "ids": [
+        "house_49",
+        "house_71"
+      ],
+      "jaccard": 0.75
+    },
+    {
+      "ids": [
+        "house_69",
+        "house_71"
+      ],
+      "jaccard": 0.75
+    }
+  ],
+  "priceConflicts": [
+    "house_01",
+    "house_08",
+    "house_10",
+    "house_11",
+    "house_12",
+    "house_13",
+    "land_01",
+    "object_23",
+    "object_24",
+    "object_40",
+    "object_55",
+    "object_901",
+    "object_907",
+    "object_908",
+    "object_910"
+  ],
+  "areaConflicts": [
+    "house_02",
+    "object_112",
+    "object_33",
+    "object_42",
+    "object_43",
+    "object_45",
+    "object_46",
+    "object_54",
+    "object_59",
+    "object_62",
+    "object_67",
+    "object_904",
+    "object_91",
+    "object_92",
+    "object_95"
+  ],
+  "editorialIssues": [
+    {
+      "id": "house_06",
+      "issues": [
+        "Missing descriptive fields in source JSON"
+      ]
+    },
+    {
+      "id": "house_07",
+      "issues": [
+        "Missing descriptive fields in source JSON"
+      ]
+    },
+    {
+      "id": "house_19",
+      "issues": [
+        "Missing descriptive fields in source JSON"
+      ]
+    },
+    {
+      "id": "house_22",
+      "issues": [
+        "Missing descriptive fields in source JSON"
+      ]
+    },
+    {
+      "id": "house_24",
+      "issues": [
+        "Missing descriptive fields in source JSON"
+      ]
+    },
+    {
+      "id": "house_25",
+      "issues": [
+        "Missing descriptive fields in source JSON"
+      ]
+    },
+    {
+      "id": "land_06",
+      "issues": [
+        "Missing descriptive fields in source JSON"
+      ]
+    },
+    {
+      "id": "land_11",
+      "issues": [
+        "Title area 6 sotok and description dimensions 20x40 need reconciliation; dimensions omitted"
+      ]
+    },
+    {
+      "id": "object_01",
+      "issues": [
+        "Past future-tense claim about 2025 removed"
+      ]
+    },
+    {
+      "id": "object_20",
+      "issues": [
+        "Missing descriptive fields in source JSON"
+      ]
+    },
+    {
+      "id": "object_51",
+      "issues": [
+        "Studio/one-room wording differs in title and description; neutral apartment wording retained"
+      ]
+    },
+    {
+      "id": "object_82",
+      "issues": [
+        "Implausible ceiling height 44.3 m omitted; no replacement invented"
+      ]
+    },
+    {
+      "id": "object_84",
+      "issues": [
+        "Finishing described both as complete and requiring repairs; conflicting labels omitted"
+      ]
+    },
+    {
+      "id": "object_905",
+      "issues": [
+        "Missing descriptive fields in source JSON",
+        "Photo-folder mismatch: no visual characteristics inferred"
+      ]
+    },
+    {
+      "id": "object_99",
+      "issues": [
+        "Past future-tense claim about 2025 removed"
+      ]
+    }
+  ]
+}

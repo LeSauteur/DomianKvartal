@@ -15,19 +15,22 @@ const CATEGORY_CASES = [
   {
     category: "apartment",
     source: "/seo/kvartiry-loc-aksay.html",
-    cta: 'a[aria-label="Связаться по объекту object_01"]',
+    cta: '[data-registry-id="object_01"] a[href$="#lead-form-section"]',
+    objectId: 'object_01',
     guides: [GUIDE_URLS.apartment, GUIDE_URLS.newbuild, GUIDE_URLS.land]
   },
   {
     category: "house",
     source: "/seo/doma-loc-aksay.html",
-    cta: 'a[aria-label="Связаться по объекту house_14"]',
+    cta: '[data-registry-id="house_14"] a[href$="#lead-form-section"]',
+    objectId: 'house_14',
     guides: [GUIDE_URLS.house, GUIDE_URLS.houseArea, GUIDE_URLS.land]
   },
   {
     category: "land",
     source: "/seo/uchastki-loc-aksay.html",
-    cta: 'a[aria-label="Связаться по объекту land_03"]',
+    cta: '[data-registry-id="land_03"] a[href$="#lead-form-section"]',
+    objectId: 'land_03',
     guides: [GUIDE_URLS.land, GUIDE_URLS.house, GUIDE_URLS.houseArea]
   },
   {
@@ -232,7 +235,7 @@ for (const categoryCase of CATEGORY_CASES) {
 
     await page.goto(categoryCase.source, { waitUntil: "domcontentloaded" });
     await page.locator(categoryCase.cta).first().click();
-    await page.waitForURL(/\/(?:index\.html)?#lead-form-section$/);
+    await page.waitForURL(categoryCase.objectId ? new RegExp('/obekt/'+categoryCase.objectId+'\\.html#lead-form-section$') : /\/(?:index\.html)?#lead-form-section$/);
     await fillLeadForm(page);
     await page.locator("#lead-form").evaluate((form) => form.requestSubmit());
     await expect.poll(() => network.providerRequests).toBe(1);
