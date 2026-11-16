@@ -152,7 +152,7 @@ function render(item) {
     .replace(/[ \t]+$/gm, "");
 }
 
-function generatePages() {
+async function generatePages() {
   let count = 0;
   const detailItems = DATA.items.filter((entry) => entry.detail_url);
   for (const item of detailItems) {
@@ -162,30 +162,11 @@ function generatePages() {
     count += 1;
   }
 
-  const sitemapPath = path.join(ROOT, "sitemap.xml");
-  let sitemap = fs.readFileSync(sitemapPath, "utf8");
-  const generatedDate = String(DATA.generated_at || "").slice(0, 10);
-  if (generatedDate) {
-    sitemap = sitemap.replace(
-      /(<url><loc>https:\/\/domian-161\.ru\/newbuilds\.html<\/loc><lastmod>)[^<]+/,
-      `$1${generatedDate}`
-    );
-  }
-
-  const missingSitemapEntries = [];
-  for (const item of detailItems) {
-    const loc = `https://domian-161.ru/newbuilds/${item.slug}/`;
-    if (sitemap.includes(`<loc>${loc}</loc>`)) continue;
-    missingSitemapEntries.push(`  <url><loc>${loc}</loc><lastmod>${item.checked_at || generatedDate}</lastmod></url>`);
-  }
-  if (missingSitemapEntries.length) {
-    sitemap = sitemap.replace("</urlset>", `${missingSitemapEntries.join("\n")}\n</urlset>`);
-  }
-  fs.writeFileSync(sitemapPath, sitemap, "utf8");
-
+  // Respect approved robots/canonical policy instead of re-adding noindex URLs.
+  const { buildSitemap } = await import('../_tools/build-sitemap.mjs');
+  fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), buildSitemap(), 'utf8');
   console.log(`generated=${count}`);
-  console.log(`sitemap_added=${missingSitemapEntries.length}`);
 }
 
 module.exports = { render };
-if (require.main === module) generatePages();
+if (require.main === module) generatePages().catch(error => { console.error(error); process.exitCode = 1; });
