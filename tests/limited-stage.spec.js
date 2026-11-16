@@ -1,3 +1,4 @@
+const newbuildCount=require('../output/newbuilds/catalog-v3.json').item_count;
 const { test, expect, LOCAL_ORIGIN } = require("./captcha-fixture");
 
 const THANKS_KEY = "domian_thanks_category";
@@ -104,8 +105,8 @@ test("JSON enhancement reuses every static card and every filter reuses the same
   });
 
   catalogGate.release();
-  await expect(page.locator("#resultsCount")).toContainText("Найдено: 78 из 78");
-  await expect(page.locator("#cards > .nb-card")).toHaveCount(78);
+  await expect(page.locator("#resultsCount")).toContainText(`Найдено: ${newbuildCount} из ${newbuildCount}`);
+  await expect(page.locator("#cards > .nb-card")).toHaveCount(newbuildCount);
   expect(await page.evaluate(() => {
     return [...window.__staticCardRefs].every(([id, card]) => card === document.querySelector(`[data-newbuild-id="${id}"]`));
   })).toBe(true);
@@ -117,7 +118,7 @@ test("JSON enhancement reuses every static card and every filter reuses the same
   });
 
   for (const value of ["name", "price-asc", "price-desc", "name"]) {
-    const count = 78;
+    const count = newbuildCount;
     await page.locator("#nbSort").selectOption(value);
     await expect(page.locator("#cards > .nb-card")).toHaveCount(count);
     const identity = await page.evaluate(() => {
@@ -168,7 +169,7 @@ for (const [label, body] of [
 test("partial and needs_review cards only expose declared, existing detail pages", async ({ page, request }) => {
   const network = await blockExternalRequests(page);
   await page.goto("/newbuilds.html", { waitUntil: "domcontentloaded" });
-  await expect(page.locator("#cards > .nb-card")).toHaveCount(78);
+  await expect(page.locator("#cards > .nb-card")).toHaveCount(newbuildCount);
 
   const comparison = await page.evaluate(async () => {
     const catalog = await fetch("output/newbuilds/catalog-v3.json", { cache: "no-store" }).then((response) => response.json());
@@ -232,7 +233,7 @@ for (const categoryCase of CATEGORY_CASES) {
 
     await page.goto(categoryCase.source, { waitUntil: "domcontentloaded" });
     await page.locator(categoryCase.cta).first().click();
-    await page.waitForURL(/\/(?:index\.html)?#lead-form-section$/);
+    await page.waitForURL(/(?:\/obekt\/(?:object|house|land)_\d+\.html|\/(?:index\.html)?)#lead-form-section$/);
     await fillLeadForm(page);
     await page.locator("#lead-form").evaluate((form) => form.requestSubmit());
     await expect.poll(() => network.providerRequests).toBe(1);
@@ -294,7 +295,7 @@ for (const viewportWidth of [390, 768, 1024, 1366]) {
     for (const target of ["/newbuilds.html", "/thanks.html"]) {
       await page.goto(target, { waitUntil: "domcontentloaded" });
       if (target.includes("newbuilds")) {
-        await expect(page.locator("#resultsCount")).toContainText("Найдено: 78 из 78");
+        await expect(page.locator("#resultsCount")).toContainText(`Найдено: ${newbuildCount} из ${newbuildCount}`);
       }
       const overflow = await page.evaluate(() => {
         return Math.max(document.documentElement.scrollWidth, document.body.scrollWidth) - window.innerWidth;
@@ -313,7 +314,7 @@ test("client catalog filters preserve URL context, sorting and all approved pric
   page.on("pageerror", error => errors.push(error.message));
   const route = "/newbuilds.html?qa=1&utm_source=copy-review&sort=priority&completeness=complete";
   await page.goto(route);
-  await expect(page.locator("#cards > .nb-card")).toHaveCount(78);
+  await expect(page.locator("#cards > .nb-card")).toHaveCount(newbuildCount);
   await expect(page.locator("#nbCompleteness, .nb-quality")).toHaveCount(0);
   await expect(page.locator("#nbSort")).toHaveValue("name");
   const originalUrl = page.url();
@@ -339,7 +340,7 @@ test("client catalog filters preserve URL context, sorting and all approved pric
   await expect(page.locator(`[data-newbuild-id="${first.id}"]`)).toBeVisible();
   await page.locator("#nbReset").click();
   await expect(page.locator("#nbSort")).toHaveValue("name");
-  await expect(page.locator("#cards > .nb-card")).toHaveCount(78);
+  await expect(page.locator("#cards > .nb-card")).toHaveCount(newbuildCount);
   expect(page.url()).toBe(originalUrl);
   for (const item of catalog.items.filter(item => item.price?.value >= 100000)) {
     const card = page.locator(`[data-newbuild-id="${item.id}"]`);

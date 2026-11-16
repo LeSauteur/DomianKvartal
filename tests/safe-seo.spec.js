@@ -1,3 +1,4 @@
+const newbuildCount=require('../output/newbuilds/catalog-v3.json').item_count;
 const { test, expect, LOCAL_ORIGIN } = require("./captcha-fixture");
 
 
@@ -31,7 +32,7 @@ test("QA mode blocks Metrika while the complete funnel emits non-personal events
   const network = await isolateProductionServices(page);
 
   await page.goto("/newbuilds.html?qa=1", { waitUntil: "domcontentloaded" });
-  await expect(page.locator("#cards > .nb-card")).toHaveCount(78);
+  await expect(page.locator("#cards > .nb-card")).toHaveCount(newbuildCount);
   await page.locator("#nbCity").selectOption("Ростов-на-Дону");
   const newbuildLink = page.locator("#cards > .nb-card h3 a").first();
   await preventNavigation(newbuildLink);

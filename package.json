@@ -2,6 +2,8 @@
   "name": "domian-kvartal-static-site",
   "private": true,
   "scripts": {
+    "build:catalog": "node _tools/build-registry.mjs && node _tools/build-object-pages.mjs && node _tools/build-zhk-pages.mjs && node _tools/sync-local-selections.mjs && node _tools/sync-local-newbuilds.mjs && node _tools/sync-public-header.mjs && node _tools/build-sitemap.mjs",
+    "check:indexation": "node _tools/check-audit-indexation.mjs --live",
     "test": "node --test tests/*.test.mjs",
     "test:browser": "playwright test",
     "seo:audit": "node _tools/seo-audit.mjs",

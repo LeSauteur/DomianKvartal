@@ -28,7 +28,9 @@
     "settlement": "Российский",
     "address": null,
     "status": "active",
-    "statusLabel": "Актуально",
+    "statusLabel": "В каталоге",
+    "availabilityStatus": "unverified",
+    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 125,
@@ -74,7 +76,9 @@
     "settlement": "Янтарный",
     "address": null,
     "status": "active",
-    "statusLabel": "Актуально",
+    "statusLabel": "В каталоге",
+    "availabilityStatus": "unverified",
+    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 3,
       "area": 118,
@@ -129,7 +133,9 @@
     "settlement": "Темерницкий",
     "address": null,
     "status": "active",
-    "statusLabel": "Актуально",
+    "statusLabel": "В каталоге",
+    "availabilityStatus": "unverified",
+    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 5,
       "area": 250,
@@ -176,7 +182,9 @@
     "settlement": null,
     "address": null,
     "status": "active",
-    "statusLabel": "Актуально"
+    "statusLabel": "В каталоге",
+    "availabilityStatus": "unverified",
+    "availabilityVerifiedAt": null
   },
   {
     "id": "house_912",
@@ -212,7 +220,9 @@
     "settlement": null,
     "address": null,
     "status": "active",
-    "statusLabel": "Актуально"
+    "statusLabel": "В каталоге",
+    "availabilityStatus": "unverified",
+    "availabilityVerifiedAt": null
   },
   {
     "id": "house_913",
@@ -248,6 +258,8 @@
     "settlement": "Старочеркасская",
     "address": null,
     "status": "active",
-    "statusLabel": "Актуально"
+    "statusLabel": "В каталоге",
+    "availabilityStatus": "unverified",
+    "availabilityVerifiedAt": null
   }
 ]

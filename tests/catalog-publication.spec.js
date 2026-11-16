@@ -1,3 +1,4 @@
+const newbuildCount=require('../output/newbuilds/catalog-v3.json').item_count;
 const {test,expect}=require('./captcha-fixture');
 const fs=require('node:fs'),path=require('node:path');
 const records=require('../output/catalog/registry.json');
@@ -22,7 +23,7 @@ for(const width of [390,1440])test(`updated apartment, house and land remain rea
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   for(const id of ['object_1013','house_914','land_10']){
     await page.goto(baseURL+'/obekt/'+id+'.html?qa=1');
-    await expect(page.locator('[data-listing-status]')).toHaveText('Актуально');
+    await expect(page.locator('[data-listing-status]')).toHaveText('В каталоге');
     await expect(page.locator('[data-listing-description]')).toContainText(records.find(r=>r.id===id).fullDescription.replace(/\s+/g,' '),{useInnerText:true});
     await expect(page.locator('h1')).toBeVisible();
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
@@ -42,7 +43,7 @@ test('geography filters retain named regions and the modal uses the public descr
   expect(expected.length).toBeGreaterThan(0);
   await page.locator('#cards .property-card').first().locator('.property-card__cta').click();
   await expect(page.locator('#modal')).toBeVisible();
-  await expect(page.locator('#modal [data-listing-status]')).toHaveText('Актуально');
+  await expect(page.locator('#modal [data-listing-status]')).toHaveText('В каталоге');
   const id=new URL(page.url()).searchParams.get('object');
   await expect(page.locator('#modalDesc')).toHaveText(records.find(r=>r.id===id).fullDescription);
 });
@@ -54,7 +55,7 @@ test('marketing copy stays clean in desktop and mobile rendered pages',async({pa
     for(const file of ['index.html','apartments.html','newbuilds.html','construction.html','obekt/house_14.html','obekt/object_01.html']){
       await page.goto('/'+file+'?qa=1');
       if(file==='apartments.html')await expect(page.locator('#cards .property-card').first()).toBeVisible();
-      if(file==='newbuilds.html')await expect(page.locator('#cards > .nb-card')).toHaveCount(78);
+      if(file==='newbuilds.html')await expect(page.locator('#cards > .nb-card')).toHaveCount(newbuildCount);
       await expect(page.locator('body')).not.toContainText(/публичн.{0,30}оферт|Неизвестные характеристики не выдуманы|предложение №/iu);
       await expect(page.locator('.price-disclaimer,.footer-legal-note,.nbd-disclaimer')).toHaveCount(0);
       expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);

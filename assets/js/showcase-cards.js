@@ -156,7 +156,7 @@
 
         const status = document.createElement('p');
         status.setAttribute('data-listing-status', '');
-        status.textContent = 'Актуально';
+        status.textContent = item.statusLabel || 'В каталоге';
         status.hidden = !/^(object|house|land)_\d+$/.test(item.id || '');
         body.append(category, title, status, location, price, createMeta(item), details, ctaGroup);
         article.append(imageWrap, body);

@@ -13,14 +13,14 @@ const propertyDirections = ["Квартиры", "Дома", "Участки", "�
 const propertyDescriptions = ["Подбор квартир", "Город и загород", "ИЖС и дачи", "Для бизнеса", "ЖК и комплексы"];
 const legalPages = new Set(["details.html", "offer.html", "privacy.html", "personal-data-consent.html", "cookies.html"]);
 const internalSearchTargets = new Map([
-  ["apartments.html", "#listing-new-objects"],
-  ["houses.html", "#listing-new-objects"],
-  ["lands.html", "#listing-new-objects"],
+  ["apartments.html", "#filters"],
+  ["houses.html", "#filters"],
+  ["lands.html", "#filters"],
   ["newbuilds.html", "#catalog"],
-  ["rent.html", "/#home-stage12-catalog"],
-  ["commercial.html", "/#home-stage12-catalog"],
+  ["rent.html", "/apartments.html#catalog"],
+  ["commercial.html", "/apartments.html#catalog"],
   ["construction.html", "#construction-projects"],
-  ["guides/index.html", "/#home-stage12-catalog"]
+  ["guides/index.html", "/apartments.html#catalog"]
 ]);
 
 function fileFor(publicPath) { return publicPath.endsWith("/") ? `${publicPath}index.html` : publicPath; }

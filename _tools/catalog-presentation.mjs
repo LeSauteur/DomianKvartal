@@ -72,7 +72,9 @@ export function normalizeRecord(r) {
   const address=normalizeText(r.description_raw).match(/(?:Адрес\s*:\s*|по\s+адресу\s*:\s*)([^\n]+)/iu)?.[1]?.split(/(?:Цена|Стоимость|Основные\s+параметры|Тип\s+объекта|Количество\s+комнат|Общая\s+площадь|Этаж|Расположение|Инфраструктура)\s*:|\s+Общая\s+площадь|,\s*евро[- ]\d|,?\s*(?:дом\s+\d+\s*кв|—|\s-\s)/iu)[0]?.trim().replace(/[.,\s]+$/u,'');
   const result={...r,...geo,address:r.address||address||null,area_total:area,area_conflict:areaConflict,area_living:living.value,area_kitchen:kitchen.value,
     rooms:r.rooms??rooms,price:priceConflict?null:r.price??rawPrices[0]??null,price_conflict:priceConflict,
-    price_currency:'RUB',status:'active',status_label:'Актуально',content_updated_at:CATALOG_UPDATED_AT,
+    price_currency:'RUB',status:r.status || 'active',
+    status_label:r.availability_status==='confirmed' && r.verifiedAt ? 'Наличие подтверждено' : 'В каталоге',
+    availability_status:r.availability_status==='confirmed' && r.verifiedAt ? 'confirmed' : 'unverified',content_updated_at:CATALOG_UPDATED_AT,
     publication_approval:{...PUBLICATION_APPROVAL},content_issues:issues};
   result.description_public=cleanDescription(result);
   return result;

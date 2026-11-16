@@ -447,6 +447,7 @@ function main() {
     return item;
   });
 
+  require('./local-newbuild-projects.js').syncLocalProjects(items, JSON.parse(fs.readFileSync(path.join(ROOT,'data/zhk/aksay.json'),'utf8')));
   const counts = items.reduce((acc, item) => {
     acc[item.completeness.state] = (acc[item.completeness.state] || 0) + 1;
     return acc;

@@ -1,0 +1,5570 @@
+{
+  "checked_at": "2026-11-16T07:42:49.735Z",
+  "gsc_snapshot": "2026-11-09",
+  "baseline": "1976779faf7e22f2818f63a9bb645543f5f53e1d",
+  "scope": "Local checks: all 220. Live checks: 25 local, 5 complete non-local, 3 indexed controls, deduplicated.",
+  "totals": {
+    "local_checked": 220,
+    "local_failed": 0,
+    "live_checked": 33,
+    "live_failed": 0
+  },
+  "results": [
+    {
+      "id": "house_01",
+      "url": "https://domian-161.ru/obekt/house_01.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 47,
+      "missing": [
+        "precise_location",
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_02",
+      "url": "https://domian-161.ru/obekt/house_02.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 74,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_03",
+      "url": "https://domian-161.ru/obekt/house_03.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 66,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_04",
+      "url": "https://domian-161.ru/obekt/house_04.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 35,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_05",
+      "url": "https://domian-161.ru/obekt/house_05.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 72,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_06",
+      "url": "https://domian-161.ru/obekt/house_06.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 10,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_07",
+      "url": "https://domian-161.ru/obekt/house_07.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 10,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_08",
+      "url": "https://domian-161.ru/obekt/house_08.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 39,
+      "missing": [
+        "precise_location",
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_09",
+      "url": "https://domian-161.ru/obekt/house_09.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 21,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_10",
+      "url": "https://domian-161.ru/obekt/house_10.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 26,
+      "missing": [
+        "precise_location",
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_11",
+      "url": "https://domian-161.ru/obekt/house_11.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 21,
+      "missing": [
+        "precise_location",
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_12",
+      "url": "https://domian-161.ru/obekt/house_12.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 14,
+      "missing": [
+        "precise_location",
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_13",
+      "url": "https://domian-161.ru/obekt/house_13.html",
+      "gsc_20261109": "indexed",
+      "control": true,
+      "local": false,
+      "incoming": 1,
+      "description_words": 17,
+      "missing": [
+        "precise_location",
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/house_13.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "house_14",
+      "url": "https://domian-161.ru/obekt/house_14.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 4,
+      "description_words": 37,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/house_14.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "house_15",
+      "url": "https://domian-161.ru/obekt/house_15.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 51,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_16",
+      "url": "https://domian-161.ru/obekt/house_16.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 103,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_17",
+      "url": "https://domian-161.ru/obekt/house_17.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 4,
+      "description_words": 37,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/house_17.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "house_18",
+      "url": "https://domian-161.ru/obekt/house_18.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 4,
+      "description_words": 95,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/house_18.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "house_19",
+      "url": "https://domian-161.ru/obekt/house_19.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 10,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_20",
+      "url": "https://domian-161.ru/obekt/house_20.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 36,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_21",
+      "url": "https://domian-161.ru/obekt/house_21.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 33,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_22",
+      "url": "https://domian-161.ru/obekt/house_22.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 10,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_23",
+      "url": "https://domian-161.ru/obekt/house_23.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 64,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_24",
+      "url": "https://domian-161.ru/obekt/house_24.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 10,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_25",
+      "url": "https://domian-161.ru/obekt/house_25.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 8,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_26",
+      "url": "https://domian-161.ru/obekt/house_26.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 4,
+      "description_words": 14,
+      "missing": [
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/house_26.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "house_27",
+      "url": "https://domian-161.ru/obekt/house_27.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 100,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_28",
+      "url": "https://domian-161.ru/obekt/house_28.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 65,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_29",
+      "url": "https://domian-161.ru/obekt/house_29.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 43,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_30",
+      "url": "https://domian-161.ru/obekt/house_30.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 61,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_31",
+      "url": "https://domian-161.ru/obekt/house_31.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 80,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_32",
+      "url": "https://domian-161.ru/obekt/house_32.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 4,
+      "description_words": 34,
+      "missing": [
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/house_32.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "house_33",
+      "url": "https://domian-161.ru/obekt/house_33.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 30,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_34",
+      "url": "https://domian-161.ru/obekt/house_34.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 46,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_35",
+      "url": "https://domian-161.ru/obekt/house_35.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 36,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_36",
+      "url": "https://domian-161.ru/obekt/house_36.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 70,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_37",
+      "url": "https://domian-161.ru/obekt/house_37.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 81,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_38",
+      "url": "https://domian-161.ru/obekt/house_38.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 87,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_39",
+      "url": "https://domian-161.ru/obekt/house_39.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 4,
+      "description_words": 181,
+      "missing": [
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/house_39.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "house_40",
+      "url": "https://domian-161.ru/obekt/house_40.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 28,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_41",
+      "url": "https://domian-161.ru/obekt/house_41.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 25,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_42",
+      "url": "https://domian-161.ru/obekt/house_42.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 48,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_43",
+      "url": "https://domian-161.ru/obekt/house_43.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 39,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_44",
+      "url": "https://domian-161.ru/obekt/house_44.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 49,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_45",
+      "url": "https://domian-161.ru/obekt/house_45.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 61,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_46",
+      "url": "https://domian-161.ru/obekt/house_46.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 80,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_47",
+      "url": "https://domian-161.ru/obekt/house_47.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 55,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_48",
+      "url": "https://domian-161.ru/obekt/house_48.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 55,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_49",
+      "url": "https://domian-161.ru/obekt/house_49.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 54,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_50",
+      "url": "https://domian-161.ru/obekt/house_50.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 46,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_51",
+      "url": "https://domian-161.ru/obekt/house_51.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 52,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_52",
+      "url": "https://domian-161.ru/obekt/house_52.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 63,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_53",
+      "url": "https://domian-161.ru/obekt/house_53.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 70,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_54",
+      "url": "https://domian-161.ru/obekt/house_54.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 81,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_55",
+      "url": "https://domian-161.ru/obekt/house_55.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 72,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_56",
+      "url": "https://domian-161.ru/obekt/house_56.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 50,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_57",
+      "url": "https://domian-161.ru/obekt/house_57.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 50,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_58",
+      "url": "https://domian-161.ru/obekt/house_58.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 101,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_59",
+      "url": "https://domian-161.ru/obekt/house_59.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 60,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_60",
+      "url": "https://domian-161.ru/obekt/house_60.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 56,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_61",
+      "url": "https://domian-161.ru/obekt/house_61.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 55,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_62",
+      "url": "https://domian-161.ru/obekt/house_62.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 61,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_63",
+      "url": "https://domian-161.ru/obekt/house_63.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 81,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_64",
+      "url": "https://domian-161.ru/obekt/house_64.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 103,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_65",
+      "url": "https://domian-161.ru/obekt/house_65.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 103,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_66",
+      "url": "https://domian-161.ru/obekt/house_66.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 133,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_67",
+      "url": "https://domian-161.ru/obekt/house_67.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 55,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_68",
+      "url": "https://domian-161.ru/obekt/house_68.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 39,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_69",
+      "url": "https://domian-161.ru/obekt/house_69.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 55,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_70",
+      "url": "https://domian-161.ru/obekt/house_70.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 61,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_71",
+      "url": "https://domian-161.ru/obekt/house_71.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 54,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_72",
+      "url": "https://domian-161.ru/obekt/house_72.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 66,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_73",
+      "url": "https://domian-161.ru/obekt/house_73.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 49,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_911",
+      "url": "https://domian-161.ru/obekt/house_911.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 4,
+      "description_words": 126,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/house_911.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "house_912",
+      "url": "https://domian-161.ru/obekt/house_912.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 69,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_913",
+      "url": "https://domian-161.ru/obekt/house_913.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 96,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "house_914",
+      "url": "https://domian-161.ru/obekt/house_914.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 4,
+      "description_words": 113,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/house_914.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "house_915",
+      "url": "https://domian-161.ru/obekt/house_915.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 4,
+      "description_words": 132,
+      "missing": [
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/house_915.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "house_916",
+      "url": "https://domian-161.ru/obekt/house_916.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 4,
+      "description_words": 122,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/house_916.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "land_01",
+      "url": "https://domian-161.ru/obekt/land_01.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 24,
+      "missing": [
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "land_02",
+      "url": "https://domian-161.ru/obekt/land_02.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 1,
+      "description_words": 104,
+      "missing": [
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/land_02.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "land_03",
+      "url": "https://domian-161.ru/obekt/land_03.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 4,
+      "description_words": 15,
+      "missing": [
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/land_03.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "land_04",
+      "url": "https://domian-161.ru/obekt/land_04.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 24,
+      "missing": [
+        "precise_location",
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "land_05",
+      "url": "https://domian-161.ru/obekt/land_05.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 4,
+      "description_words": 38,
+      "missing": [
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/land_05.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "land_06",
+      "url": "https://domian-161.ru/obekt/land_06.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 9,
+      "missing": [
+        "precise_location",
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "land_07",
+      "url": "https://domian-161.ru/obekt/land_07.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 29,
+      "missing": [
+        "precise_location",
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "land_08",
+      "url": "https://domian-161.ru/obekt/land_08.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 1,
+      "description_words": 79,
+      "missing": [
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/land_08.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "land_09",
+      "url": "https://domian-161.ru/obekt/land_09.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 4,
+      "description_words": 37,
+      "missing": [
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/land_09.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "land_10",
+      "url": "https://domian-161.ru/obekt/land_10.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 1,
+      "description_words": 40,
+      "missing": [
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/land_10.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "land_11",
+      "url": "https://domian-161.ru/obekt/land_11.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 1,
+      "description_words": 7,
+      "missing": [
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/land_11.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "object_01",
+      "url": "https://domian-161.ru/obekt/object_01.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 4,
+      "description_words": 185,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/object_01.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "object_02",
+      "url": "https://domian-161.ru/obekt/object_02.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 96,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_03",
+      "url": "https://domian-161.ru/obekt/object_03.html",
+      "gsc_20261109": "indexed",
+      "control": true,
+      "local": false,
+      "incoming": 1,
+      "description_words": 103,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/object_03.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "object_04",
+      "url": "https://domian-161.ru/obekt/object_04.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 73,
+      "missing": [
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_05",
+      "url": "https://domian-161.ru/obekt/object_05.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 70,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_06",
+      "url": "https://domian-161.ru/obekt/object_06.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 98,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_07",
+      "url": "https://domian-161.ru/obekt/object_07.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 89,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_08",
+      "url": "https://domian-161.ru/obekt/object_08.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 136,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_09",
+      "url": "https://domian-161.ru/obekt/object_09.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 129,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_10",
+      "url": "https://domian-161.ru/obekt/object_10.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 22,
+      "missing": [
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_100",
+      "url": "https://domian-161.ru/obekt/object_100.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 32,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_101",
+      "url": "https://domian-161.ru/obekt/object_101.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 72,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_1011",
+      "url": "https://domian-161.ru/obekt/object_1011.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": false,
+      "incoming": 1,
+      "description_words": 101,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/object_1011.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "object_1012",
+      "url": "https://domian-161.ru/obekt/object_1012.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": false,
+      "incoming": 1,
+      "description_words": 125,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/object_1012.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "object_1013",
+      "url": "https://domian-161.ru/obekt/object_1013.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 5,
+      "description_words": 151,
+      "missing": [
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/object_1013.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "object_1014",
+      "url": "https://domian-161.ru/obekt/object_1014.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 5,
+      "description_words": 129,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/object_1014.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "object_102",
+      "url": "https://domian-161.ru/obekt/object_102.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 59,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_103",
+      "url": "https://domian-161.ru/obekt/object_103.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 61,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_104",
+      "url": "https://domian-161.ru/obekt/object_104.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 113,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_105",
+      "url": "https://domian-161.ru/obekt/object_105.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 76,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_106",
+      "url": "https://domian-161.ru/obekt/object_106.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 74,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_107",
+      "url": "https://domian-161.ru/obekt/object_107.html",
+      "gsc_20261109": "indexed",
+      "control": true,
+      "local": false,
+      "incoming": 1,
+      "description_words": 108,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/object_107.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "object_108",
+      "url": "https://domian-161.ru/obekt/object_108.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 71,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_109",
+      "url": "https://domian-161.ru/obekt/object_109.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 52,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_11",
+      "url": "https://domian-161.ru/obekt/object_11.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 120,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_110",
+      "url": "https://domian-161.ru/obekt/object_110.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 77,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_111",
+      "url": "https://domian-161.ru/obekt/object_111.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 85,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_112",
+      "url": "https://domian-161.ru/obekt/object_112.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 4,
+      "description_words": 80,
+      "missing": [
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/object_112.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "object_12",
+      "url": "https://domian-161.ru/obekt/object_12.html",
+      "gsc_20261109": "indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 106,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_13",
+      "url": "https://domian-161.ru/obekt/object_13.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 114,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_14",
+      "url": "https://domian-161.ru/obekt/object_14.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 148,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_15",
+      "url": "https://domian-161.ru/obekt/object_15.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 119,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_16",
+      "url": "https://domian-161.ru/obekt/object_16.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 103,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_17",
+      "url": "https://domian-161.ru/obekt/object_17.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 57,
+      "missing": [
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_18",
+      "url": "https://domian-161.ru/obekt/object_18.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 144,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_19",
+      "url": "https://domian-161.ru/obekt/object_19.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 107,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_20",
+      "url": "https://domian-161.ru/obekt/object_20.html",
+      "gsc_20261109": "indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 12,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_21",
+      "url": "https://domian-161.ru/obekt/object_21.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 94,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_22",
+      "url": "https://domian-161.ru/obekt/object_22.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 232,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_23",
+      "url": "https://domian-161.ru/obekt/object_23.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 33,
+      "missing": [
+        "precise_location",
+        "price",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_24",
+      "url": "https://domian-161.ru/obekt/object_24.html",
+      "gsc_20261109": "indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 46,
+      "missing": [
+        "precise_location",
+        "price",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_25",
+      "url": "https://domian-161.ru/obekt/object_25.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 16,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_26",
+      "url": "https://domian-161.ru/obekt/object_26.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 4,
+      "description_words": 93,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/object_26.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "object_27",
+      "url": "https://domian-161.ru/obekt/object_27.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": false,
+      "incoming": 1,
+      "description_words": 79,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/object_27.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "object_28",
+      "url": "https://domian-161.ru/obekt/object_28.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 79,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_29",
+      "url": "https://domian-161.ru/obekt/object_29.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 34,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_30",
+      "url": "https://domian-161.ru/obekt/object_30.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 38,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_31",
+      "url": "https://domian-161.ru/obekt/object_31.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 52,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_32",
+      "url": "https://domian-161.ru/obekt/object_32.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 41,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_33",
+      "url": "https://domian-161.ru/obekt/object_33.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 115,
+      "missing": [
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_34",
+      "url": "https://domian-161.ru/obekt/object_34.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 63,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_35",
+      "url": "https://domian-161.ru/obekt/object_35.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 150,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_36",
+      "url": "https://domian-161.ru/obekt/object_36.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 112,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_37",
+      "url": "https://domian-161.ru/obekt/object_37.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 88,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_38",
+      "url": "https://domian-161.ru/obekt/object_38.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 96,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_39",
+      "url": "https://domian-161.ru/obekt/object_39.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 120,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_40",
+      "url": "https://domian-161.ru/obekt/object_40.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 49,
+      "missing": [
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_41",
+      "url": "https://domian-161.ru/obekt/object_41.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 73,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_42",
+      "url": "https://domian-161.ru/obekt/object_42.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 153,
+      "missing": [
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_43",
+      "url": "https://domian-161.ru/obekt/object_43.html",
+      "gsc_20261109": "indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 85,
+      "missing": [
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_44",
+      "url": "https://domian-161.ru/obekt/object_44.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 131,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_45",
+      "url": "https://domian-161.ru/obekt/object_45.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 101,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_46",
+      "url": "https://domian-161.ru/obekt/object_46.html",
+      "gsc_20261109": "indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 124,
+      "missing": [
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_47",
+      "url": "https://domian-161.ru/obekt/object_47.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 91,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_48",
+      "url": "https://domian-161.ru/obekt/object_48.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 129,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_49",
+      "url": "https://domian-161.ru/obekt/object_49.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 123,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_50",
+      "url": "https://domian-161.ru/obekt/object_50.html",
+      "gsc_20261109": "indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 66,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_51",
+      "url": "https://domian-161.ru/obekt/object_51.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 104,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_52",
+      "url": "https://domian-161.ru/obekt/object_52.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 71,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_53",
+      "url": "https://domian-161.ru/obekt/object_53.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 93,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_54",
+      "url": "https://domian-161.ru/obekt/object_54.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 127,
+      "missing": [
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_55",
+      "url": "https://domian-161.ru/obekt/object_55.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 49,
+      "missing": [
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_56",
+      "url": "https://domian-161.ru/obekt/object_56.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 135,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_57",
+      "url": "https://domian-161.ru/obekt/object_57.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 94,
+      "missing": [
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_58",
+      "url": "https://domian-161.ru/obekt/object_58.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 80,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_59",
+      "url": "https://domian-161.ru/obekt/object_59.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 81,
+      "missing": [
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_60",
+      "url": "https://domian-161.ru/obekt/object_60.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 135,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_61",
+      "url": "https://domian-161.ru/obekt/object_61.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 67,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_62",
+      "url": "https://domian-161.ru/obekt/object_62.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 74,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_63",
+      "url": "https://domian-161.ru/obekt/object_63.html",
+      "gsc_20261109": "indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 71,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_64",
+      "url": "https://domian-161.ru/obekt/object_64.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": false,
+      "incoming": 1,
+      "description_words": 31,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/object_64.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "object_65",
+      "url": "https://domian-161.ru/obekt/object_65.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 4,
+      "description_words": 71,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/object_65.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "object_66",
+      "url": "https://domian-161.ru/obekt/object_66.html",
+      "gsc_20261109": "indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 83,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_67",
+      "url": "https://domian-161.ru/obekt/object_67.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 99,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_68",
+      "url": "https://domian-161.ru/obekt/object_68.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 75,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_69",
+      "url": "https://domian-161.ru/obekt/object_69.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 66,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_70",
+      "url": "https://domian-161.ru/obekt/object_70.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 48,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_71",
+      "url": "https://domian-161.ru/obekt/object_71.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 65,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_72",
+      "url": "https://domian-161.ru/obekt/object_72.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 17,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_73",
+      "url": "https://domian-161.ru/obekt/object_73.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 42,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_74",
+      "url": "https://domian-161.ru/obekt/object_74.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": false,
+      "incoming": 1,
+      "description_words": 44,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/object_74.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "object_75",
+      "url": "https://domian-161.ru/obekt/object_75.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 31,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_76",
+      "url": "https://domian-161.ru/obekt/object_76.html",
+      "gsc_20261109": "indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 67,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_77",
+      "url": "https://domian-161.ru/obekt/object_77.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 45,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_78",
+      "url": "https://domian-161.ru/obekt/object_78.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 59,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_79",
+      "url": "https://domian-161.ru/obekt/object_79.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 53,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_80",
+      "url": "https://domian-161.ru/obekt/object_80.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 81,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_81",
+      "url": "https://domian-161.ru/obekt/object_81.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 92,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_82",
+      "url": "https://domian-161.ru/obekt/object_82.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 77,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_83",
+      "url": "https://domian-161.ru/obekt/object_83.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 162,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_84",
+      "url": "https://domian-161.ru/obekt/object_84.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 67,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_85",
+      "url": "https://domian-161.ru/obekt/object_85.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 41,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_86",
+      "url": "https://domian-161.ru/obekt/object_86.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 39,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_87",
+      "url": "https://domian-161.ru/obekt/object_87.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 76,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_88",
+      "url": "https://domian-161.ru/obekt/object_88.html",
+      "gsc_20261109": "indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 52,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_89",
+      "url": "https://domian-161.ru/obekt/object_89.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 68,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_90",
+      "url": "https://domian-161.ru/obekt/object_90.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 65,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_901",
+      "url": "https://domian-161.ru/obekt/object_901.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 192,
+      "missing": [
+        "precise_location",
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_902",
+      "url": "https://domian-161.ru/obekt/object_902.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 4,
+      "description_words": 33,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/object_902.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "object_903",
+      "url": "https://domian-161.ru/obekt/object_903.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": true,
+      "local": true,
+      "incoming": 4,
+      "description_words": 37,
+      "missing": [
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": {
+        "status": 200,
+        "x_robots_tag": "",
+        "final_url": "https://domian-161.ru/obekt/object_903.html",
+        "checks": {
+          "http_200": true,
+          "no_redirect": true,
+          "html": true,
+          "self_canonical": true,
+          "allows_indexing": true,
+          "static_description": true,
+          "robots_allows": true
+        },
+        "ok": true
+      }
+    },
+    {
+      "id": "object_904",
+      "url": "https://domian-161.ru/obekt/object_904.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 68,
+      "missing": [
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_905",
+      "url": "https://domian-161.ru/obekt/object_905.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 10,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_906",
+      "url": "https://domian-161.ru/obekt/object_906.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 139,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_907",
+      "url": "https://domian-161.ru/obekt/object_907.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 106,
+      "missing": [
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_908",
+      "url": "https://domian-161.ru/obekt/object_908.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 173,
+      "missing": [
+        "precise_location",
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_909",
+      "url": "https://domian-161.ru/obekt/object_909.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 44,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_91",
+      "url": "https://domian-161.ru/obekt/object_91.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 61,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_910",
+      "url": "https://domian-161.ru/obekt/object_910.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 92,
+      "missing": [
+        "price",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_913",
+      "url": "https://domian-161.ru/obekt/object_913.html",
+      "gsc_20261109": "indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 97,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_914",
+      "url": "https://domian-161.ru/obekt/object_914.html",
+      "gsc_20261109": "indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 95,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_915",
+      "url": "https://domian-161.ru/obekt/object_915.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 91,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_916",
+      "url": "https://domian-161.ru/obekt/object_916.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 43,
+      "missing": [
+        "precise_location",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_92",
+      "url": "https://domian-161.ru/obekt/object_92.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 49,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_93",
+      "url": "https://domian-161.ru/obekt/object_93.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 65,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_94",
+      "url": "https://domian-161.ru/obekt/object_94.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 86,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_95",
+      "url": "https://domian-161.ru/obekt/object_95.html",
+      "gsc_20261109": "indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 45,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_96",
+      "url": "https://domian-161.ru/obekt/object_96.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 78,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_97",
+      "url": "https://domian-161.ru/obekt/object_97.html",
+      "gsc_20261109": "indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 84,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_98",
+      "url": "https://domian-161.ru/obekt/object_98.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 57,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    },
+    {
+      "id": "object_99",
+      "url": "https://domian-161.ru/obekt/object_99.html",
+      "gsc_20261109": "discovered_not_indexed",
+      "control": false,
+      "local": false,
+      "incoming": 1,
+      "description_words": 184,
+      "missing": [
+        "precise_location",
+        "total_area",
+        "availability_verification"
+      ],
+      "checks": {
+        "self_canonical": true,
+        "allows_indexing": true,
+        "sitemap": true,
+        "reachable": true,
+        "static_description": true,
+        "robots_allows": true
+      },
+      "local_ok": true,
+      "live": null
+    }
+  ]
+}

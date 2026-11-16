@@ -115,14 +115,14 @@ function propertyActiveFor(file) {
 }
 
 const internalSearchTargets = new Map([
-  ["apartments.html", "#listing-new-objects"],
-  ["houses.html", "#listing-new-objects"],
-  ["lands.html", "#listing-new-objects"],
+  ["apartments.html", "#filters"],
+  ["houses.html", "#filters"],
+  ["lands.html", "#filters"],
   ["newbuilds.html", "#catalog"],
-  ["rent.html", "/#home-stage12-catalog"],
-  ["commercial.html", "/#home-stage12-catalog"],
+  ["rent.html", "/apartments.html#catalog"],
+  ["commercial.html", "/apartments.html#catalog"],
   ["construction.html", "#construction-projects"],
-  ["guides/index.html", "/#home-stage12-catalog"]
+  ["guides/index.html", "/apartments.html#catalog"]
 ]);
 
 function propertyNavMode(file) {
@@ -153,8 +153,8 @@ export function propertyDiscoveryMarkup(file) {
 <section class="unified-property-discovery" aria-label="Подбор недвижимости">
   <a class="unified-property-search" href="${searchTarget}">
     <span class="unified-property-search__icon" aria-hidden="true"></span>
-    <span class="unified-property-search__text">Поиск по городу, району или адресу</span>
-    <span class="unified-property-search__button">Найти</span>
+    <span class="unified-property-search__text">${file==='construction.html'?'Каталог проектов домов':file==='newbuilds.html'?'Каталог жилых комплексов':file==='houses.html'?'Каталог домов':file==='lands.html'?'Каталог участков':'Каталог квартир'}</span>
+    <span class="unified-property-search__button">Открыть</span>
   </a>
   <nav class="unified-property-nav unified-property-nav--${mode}" aria-label="Направления недвижимости" data-unified-property-nav>
     <div class="unified-property-nav__track">${nav.match(/<div class="unified-property-nav__track">([\s\S]*?)<\/div>/)?.[1] || ""}</div>

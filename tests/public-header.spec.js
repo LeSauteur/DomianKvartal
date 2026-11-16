@@ -83,7 +83,7 @@ test("property discovery is photographic internally, active by section, and uses
   await expect(nav.getByRole("link", { name: "Квартиры" })).toHaveAttribute("aria-current", "page");
   await expect(nav.getByText("Подбор квартир")).toBeVisible();
   expect(await nav.locator(".unified-property-nav__image").first().evaluate((image) => getComputedStyle(image).backgroundImage)).not.toBe("none");
-  await expect(page.locator(".unified-property-search")).toHaveAttribute("href", "#listing-new-objects");
+  await expect(page.locator(".unified-property-search")).toHaveAttribute("href", "#filters");
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(page.locator(".unified-property-discovery")).toBeHidden();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBeTruthy();
@@ -219,6 +219,7 @@ test("requested visual top-system matrix", async ({ page }) => {
           h1Top: h1s[0]?.getBoundingClientRect().top ?? 0,
           headerBottom: header?.getBoundingClientRect().bottom ?? 0,
           navExists: Boolean(nav),
+          navVisible: Boolean(nav && nav.getClientRects().length),
           navScrollable: nav ? nav.querySelector(".unified-property-nav__track").scrollWidth > nav.querySelector(".unified-property-nav__track").clientWidth : false,
           tileCount: tiles.length,
           tileHeights: tiles.map((tile) => Math.round(tile.getBoundingClientRect().height)),
@@ -236,7 +237,12 @@ test("requested visual top-system matrix", async ({ page }) => {
         expect(metrics.navExists).toBeTruthy();
         expect(metrics.tileCount).toBe(5);
         expect(metrics.imageLayers.every((value) => value !== "none")).toBeTruthy();
-        if (width <= 900) expect(metrics.navScrollable, `${route} at ${width}px must use the horizontal rail`).toBeTruthy();
+        if (metrics.internal && width <= 768) {
+          expect(metrics.navVisible, `${route} at ${width}px uses the mobile drawer`).toBeFalsy();
+        } else {
+          expect(metrics.navVisible, `${route} at ${width}px must show its property rail`).toBeTruthy();
+          if (width <= 900) expect(metrics.navScrollable, `${route} at ${width}px must use the horizontal rail`).toBeTruthy();
+        }
         if (width > 900) expect(new Set(metrics.tileHeights).size, `${route} at ${width}px tile heights must match`).toBe(1);
       }
       if (metrics.internal) {
