@@ -67,6 +67,7 @@ function expectedCompleteness(item) {
   if (missing === 0) return "complete";
   if (item.official_url || item.images.length || item.checked_at) return "partial";
   if (!item.checked_at && !item.official_url && item.source_type === "aggregator") return "needs_review";
+  if (item.source_type === "site_page") return "needs_review";
   return "legacy";
 }
 
@@ -74,7 +75,7 @@ if (!fs.existsSync(DATA_PATH)) fail("catalog-v3.json is missing");
 const data = errors.length ? { items: [] } : JSON.parse(fs.readFileSync(DATA_PATH, "utf8"));
 if (data.schema_version !== 3) fail("schema_version must be 3");
 if (!Array.isArray(data.items)) fail("items must be an array");
-if (data.items.length !== 78) fail(`expected 78 items, found ${data.items.length}`);
+if (data.items.filter(item => item.source_type !== 'site_page').length !== 78) fail('Original 78 catalog records must survive');
 if (data.item_count !== data.items.length) fail("item_count does not match items length");
 
 const ids = new Set();
@@ -149,11 +150,16 @@ for (const [index, item] of data.items.entries()) {
       if (/undefined|>null<|NaN/.test(html)) fail(`${label} detail HTML contains invalid text`);
     }
   }
+  if (item.local_detail_url && !exists(item.local_detail_url.replace(/^\//,''))) fail(`${label} local project page missing`);
 }
 
 const sitemap = fs.existsSync(SITEMAP_PATH) ? fs.readFileSync(SITEMAP_PATH, "utf8") : "";
 for (const item of data.items.filter((entry) => entry.detail_url)) {
-  if (!sitemap.includes(`https://domian-161.ru/${item.detail_url}`)) fail(`${item.title} missing from sitemap`);
+  const html=fs.readFileSync(path.join(ROOT,item.detail_url,'index.html'),'utf8');
+  const url=`https://domian-161.ru/${item.detail_url}`;
+  const eligible=!/<meta\b[^>]*name="robots"[^>]*content="[^"]*noindex/iu.test(html)
+    && html.includes(`rel="canonical" href="${url}"`);
+  if (sitemap.includes(`<loc>${url}</loc>`) !== eligible) fail(`${item.title} sitemap inclusion disagrees with robots/canonical`);
 }
 
 for (const required of ["assets/js/newbuilds-catalog.js", "assets/css/newbuilds-catalog.css", "assets/css/newbuild-detail.css", "newbuilds.html"]) {

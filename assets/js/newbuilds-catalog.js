@@ -25,7 +25,8 @@
   }
 
   function statusGroup(item) {
-    var value = (text(item.status) + " " + text(item.deadline)).toLowerCase();
+    // An old deadline is not evidence of either completion or current construction.
+    var value = text(item.status).toLowerCase();
     if (/сдан|заверш|введ[её]н/.test(value)) return "ready";
     if (/строит|возвод|кв\.|очеред/.test(value)) return "building";
     return "unknown";
@@ -41,12 +42,12 @@
     var image = item.cover && item.cover.src
       ? '<img src="' + escapeHtml(item.cover.src) + '" alt="' + escapeHtml(item.cover.alt || item.title) + '" loading="lazy" width="720" height="480">'
       : '<div class="nb-card__placeholder" aria-hidden="true"><span>ДК</span><small>Фото комплекса</small></div>';
-    var titleMarkup = item.detail_url
-      ? '<a href="' + escapeHtml(item.detail_url) + '">' + title + "</a>"
+    var detailUrl = item.local_detail_url || item.detail_url;
+    var titleMarkup = detailUrl
+      ? '<a href="' + escapeHtml(detailUrl) + '">' + title + "</a>"
       : title;
-    var primary = item.detail_url
-      ? '<a class="nb-card__primary" href="' + escapeHtml(item.detail_url) + '">О комплексе</a>'
-      : '<a class="nb-card__primary" href="index.html#contact">Подобрать квартиру</a>';
+    var primary = detailUrl ? '<a href="' + escapeHtml(detailUrl) + '">О комплексе</a>' : '';
+    var request = '<a class="nb-card__primary" href="/#lead-form-section" data-lead-type="newbuild" data-source-cta="newbuild_catalog" data-object-type="newbuild" data-object-id="' + escapeHtml(item.id) + '" data-object-title="' + title + '" data-project-code="' + escapeHtml(item.id) + '" data-project-name="' + title + '" data-project-url="' + escapeHtml(new URL(detailUrl || 'newbuilds.html', location.href).href) + '">Подобрать квартиру</a>';
     return [
       '<article class="nb-card" data-newbuild-id="' + escapeHtml(item.id) + '" data-newbuild-slug="' + escapeHtml(item.slug) + '" data-completeness="' + escapeHtml(item.completeness.state) + '">',
       '<div class="nb-card__media">', image,
@@ -57,10 +58,10 @@
       '<ul class="nb-card__meta">',
       meta("Адрес", item.address || "Уточняется"),
       meta("Статус", item.status || "Уточняется"),
-      meta("Срок", item.deadline || "Уточняется"),
+      meta("Срок в источнике", item.deadline || "Уточняется"),
       meta("Застройщик", item.developer || "Уточняется"),
       "</ul>",
-      '<div class="nb-card__actions">', primary, '<a href="tel:+79536091122">Позвонить</a></div>',
+      '<div class="nb-card__actions">', primary, request, '<a href="tel:+79536091122">Позвонить</a></div>',
       "</div></article>"
     ].join("");
   }

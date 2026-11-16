@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
   "generated_at": "2026-07-16T00:00:00+03:00",
-  "item_count": 78,
+  "item_count": 81,
   "completeness_counts": {
     "complete": 20,
     "partial": 5,
-    "needs_review": 53
+    "needs_review": 56
   },
   "items": [
     {
@@ -2030,7 +2030,8 @@
           "gallery_3",
           "detail_page"
         ]
-      }
+      },
+      "local_detail_url": "/seo/zhk-flora-aksay.html"
     },
     {
       "id": "newbuild-024",
@@ -4173,7 +4174,8 @@
           "gallery_3",
           "detail_page"
         ]
-      }
+      },
+      "local_detail_url": "/seo/zhk-vishnevyy-sad-aksay.html"
     },
     {
       "id": "newbuild-056",
@@ -5730,6 +5732,156 @@
           "detail_page"
         ]
       }
+    },
+    {
+      "id": "aksay-samotsvety",
+      "slug": "aksay-samotsvety",
+      "title": "Самоцветы",
+      "city": "Аксай",
+      "district": null,
+      "address": null,
+      "developer": null,
+      "class": null,
+      "status": null,
+      "deadline": null,
+      "price": {
+        "value": null,
+        "currency": "RUB",
+        "type": "on_request",
+        "verified": false,
+        "note": null
+      },
+      "areas": {
+        "min": null,
+        "max": null,
+        "unit": "m2"
+      },
+      "description": null,
+      "features": [],
+      "official_url": null,
+      "checked_at": null,
+      "source_type": "site_page",
+      "cover": null,
+      "images": [],
+      "floorplans": [],
+      "detail_url": null,
+      "sources": [],
+      "completeness": {
+        "state": "needs_review",
+        "score": 10,
+        "missing": [
+          "address",
+          "developer",
+          "status",
+          "description",
+          "official_url",
+          "checked_at",
+          "cover",
+          "gallery_3",
+          "detail_page"
+        ]
+      },
+      "local_detail_url": "/seo/zhk-samotsvety-aksay.html"
+    },
+    {
+      "id": "aksay-atmosfera",
+      "slug": "aksay-atmosfera",
+      "title": "Атмосфера",
+      "city": "Аксай",
+      "district": null,
+      "address": null,
+      "developer": null,
+      "class": null,
+      "status": null,
+      "deadline": null,
+      "price": {
+        "value": null,
+        "currency": "RUB",
+        "type": "on_request",
+        "verified": false,
+        "note": null
+      },
+      "areas": {
+        "min": null,
+        "max": null,
+        "unit": "m2"
+      },
+      "description": null,
+      "features": [],
+      "official_url": null,
+      "checked_at": null,
+      "source_type": "site_page",
+      "cover": null,
+      "images": [],
+      "floorplans": [],
+      "detail_url": null,
+      "sources": [],
+      "completeness": {
+        "state": "needs_review",
+        "score": 10,
+        "missing": [
+          "address",
+          "developer",
+          "status",
+          "description",
+          "official_url",
+          "checked_at",
+          "cover",
+          "gallery_3",
+          "detail_page"
+        ]
+      },
+      "local_detail_url": "/seo/zhk-atmosfera-aksay.html"
+    },
+    {
+      "id": "aksay-novyy",
+      "slug": "aksay-novyy",
+      "title": "Новый Аксай",
+      "city": "Аксай",
+      "district": null,
+      "address": null,
+      "developer": null,
+      "class": null,
+      "status": null,
+      "deadline": null,
+      "price": {
+        "value": null,
+        "currency": "RUB",
+        "type": "on_request",
+        "verified": false,
+        "note": null
+      },
+      "areas": {
+        "min": null,
+        "max": null,
+        "unit": "m2"
+      },
+      "description": null,
+      "features": [],
+      "official_url": null,
+      "checked_at": null,
+      "source_type": "site_page",
+      "cover": null,
+      "images": [],
+      "floorplans": [],
+      "detail_url": null,
+      "sources": [],
+      "completeness": {
+        "state": "needs_review",
+        "score": 10,
+        "missing": [
+          "address",
+          "developer",
+          "status",
+          "description",
+          "official_url",
+          "checked_at",
+          "cover",
+          "gallery_3",
+          "detail_page"
+        ]
+      },
+      "local_detail_url": "/seo/zhk-novyy-aksay.html"
     }
   ]
 }
