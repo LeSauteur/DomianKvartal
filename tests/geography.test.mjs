@@ -13,6 +13,8 @@ test("apartment metadata is honest and showcase is excluded without removing its
   const html=fs.readFileSync("apartments.html","utf8");
   assert.match(html,/<h1>Квартиры в Аксае и Ростове-на-Дону<\/h1>/);
   assert.match(html,/<title>Квартиры в Аксае и Ростове-на-Дону — вторичное жильё \| Домиан Квартал<\/title>/);
-  assert.match(html,/В Аксае сейчас 6 квартир/);
+  const records=JSON.parse(fs.readFileSync('output/catalog/registry.json','utf8'));
+  const count=records.filter(r=>r.type==='apartment'&&r.city==='Аксай'&&(!r.status||r.status==='active')).length;
+  assert.ok(html.includes('В Аксае сейчас '+count+' квартир'));
   assert.match(fs.readFileSync("showcase-aksay-secondary.html","utf8"),/content="noindex,follow"/);
 });

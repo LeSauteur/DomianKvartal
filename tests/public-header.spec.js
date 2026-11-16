@@ -83,7 +83,7 @@ test("property discovery is photographic internally, active by section, and uses
   await expect(nav.getByRole("link", { name: "Квартиры" })).toHaveAttribute("aria-current", "page");
   await expect(nav.getByText("Подбор квартир")).toBeVisible();
   expect(await nav.locator(".unified-property-nav__image").first().evaluate((image) => getComputedStyle(image).backgroundImage)).not.toBe("none");
-  await expect(page.locator(".unified-property-search")).toHaveAttribute("href", "#listing-new-objects");
+  await expect(page.locator(".unified-property-search")).toHaveAttribute("href", "#filters");
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(page.locator(".unified-property-discovery")).toBeHidden();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBeTruthy();

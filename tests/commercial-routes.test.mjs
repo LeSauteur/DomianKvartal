@@ -33,7 +33,12 @@ test('linked local selections contain only valid specific catalog IDs',()=>{
   const html=read('seo/'+file);
   assert.ok(read(type+'.html').includes(`href="seo/${file}"`));
   const links=[...html.matchAll(/href="\/(?:apartments|houses|lands)\.html\?object=([^"]+)"/g)];
-  assert.equal(links.length,2);
+  if(file==='doma-loc-rossiyskiy.html') assert.equal(links.length,2);
+  else {
+    const direct=[...html.matchAll(/href="\/obekt\/([^"#]+)\.html"/g)];
+    assert.ok(direct.length>0,file);
+    for(const match of direct) assert.ok(fs.existsSync(path.join(root,'obekt',match[1]+'.html')));
+  }
   for(const match of links){assert.ok(ids.includes(match[1]),`${file}: unknown ${match[1]}`);assert.ok(html.includes(`data-object-id="${match[1]}"`));}
  }
 });

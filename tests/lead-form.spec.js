@@ -162,7 +162,7 @@ test("valid submission sends once, includes attribution, and redirects only on c
   const sourceUrl = "/seo/kvartiry-loc-aksay.html?utm_source=audit&utm_medium=test&utm_campaign=lead&utm_content=card&utm_term=aksay";
   await openPage(page, sourceUrl);
   await page.getByRole("link", { name: /Связаться по объекту object_01/ }).click();
-  await page.waitForURL(/\/(?:index\.html)?#lead-form-section$/);
+  await page.waitForURL(/\/obekt\/object_01\.html#lead-form-section$/);
   await expect(page.locator("#lead-name")).toBeFocused();
 
   await fillValidForm(page, { phone: "89991234567" });
