@@ -51,6 +51,7 @@ export function buildRegistry() {
       status:data.is_placeholder === true ? "placeholder" : data.status || null,
       status_source:data.is_placeholder === true || data.status ? source.path : null,
       verifiedAt:data.verifiedAt || null,verifiedBy:data.verifiedBy || null,agent:data.agent || null,
+      ...(data.is_placeholder===true ? {} : {availability_status:data.availability_status || 'unverified'}),
       ...(data.published_at ? {published_at:data.published_at,publication_order:data.publication_order || 0,description_public:description_raw} : {}),
       ...(data.floor_plans?.length ? {floor_plans:data.floor_plans.map(image=>new URL(image,"https://domian-161.ru/"+source.base).href)} : {}),
       listing_urls:data.is_placeholder === true ? [] : [...new Set([...(data.published_at || obj.sources.some(s=>s.path==="output/home/new-objects.json") ? ["/"] : []),"/" + {apartment:"apartments",house:"houses",land:"lands"}[obj.type] + ".html"])]
@@ -72,6 +73,7 @@ export function buildRegistry() {
       price:p.price,priceCurrency:'RUB',price_conflict:r.price_conflict?true:null,
       image:images[0] || null,cover:images[0] || null,images,
       city:r.city,district:r.district,settlement:r.settlement,address:r.address,status:r.status,statusLabel:r.status_label,
+      availabilityStatus:r.availability_status,availabilityVerifiedAt:r.verifiedAt,
       features:{rooms:r.rooms,area:p.area_total,livingArea:r.area_living,kitchenArea:r.area_kitchen,floor:r.floor,totalFloors:r.floors,landArea:r.lot_area_sotok},
       ...(r.published_at ? {created_at:r.published_at} : {}),
       ...(r.floor_plans?.length ? {floor_plans:r.floor_plans} : {}),

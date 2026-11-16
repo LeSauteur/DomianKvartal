@@ -24,8 +24,11 @@ export function leadForm(sourceCta, data = {}) {
   const source = fs.readFileSync(root+"/index.html","utf8").match(/<form\b[^>]*data-lead-form[\s\S]*?<\/form>/i)?.[0];
   if (!source) throw new Error("Production lead form missing");
   const attrs = Object.entries(data).filter(([,v])=>v!==null && v!==undefined).map(([key,v])=>' data-'+key.replaceAll("_","-")+'="'+esc(v)+'"').join("");
-  const form = source.replace('data-source-cta="contact_form"','data-source-cta="'+esc(sourceCta)+'"'+attrs)
+  let form = source.replace('data-source-cta="contact_form"','data-source-cta="'+esc(sourceCta)+'"'+attrs)
     .replace(/ class="([^"]*)fade-in([^"]*)"/g,' class="$1$2"');
+  if(data.object_id || data.project_code) {
+    form=form.replace('value="" disabled selected','value="" disabled').replace('<option value="buy">','<option value="buy" selected>');
+  }
   return '<section class="form-section" id="lead-form-section" aria-labelledby="lead-form-title"><div class="container form-container"><h2 id="lead-form-title">Оставьте заявку</h2><p>Мы свяжемся с вами и уточним детали.</p>'+form+'</div></section>';
 }
 export function publicPage({file,title,description,h1,body,structured="",noindex=false,form=""}) {

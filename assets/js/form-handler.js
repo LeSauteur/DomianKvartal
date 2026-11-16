@@ -259,10 +259,10 @@
 
   function inferLeadType(form, context) {
     var service = form.elements.service ? normalizeValue(form.elements.service.value) : "";
-    var sourceCta = normalizeValue(context.source_cta);
-
-    if (context.lead_type) return normalizeValue(context.lead_type);
-    if (sourceCta === "mortgage_calculator" || sourceCta === "mortgage_consultation") return "mortgage";
+    // The chosen service wins over an earlier generic CTA (for example contact).
+    // A project is a more specific purchase, rather than a different service.
+    if (service === "buy" && context.lead_type === "newbuild") return "newbuild";
+    if (service === "consultation" && ["construction", "commercial"].indexOf(context.lead_type) !== -1) return context.lead_type;
     if (service === "consultation") return "contact";
     return service || "contact";
   }
@@ -829,9 +829,18 @@
     state.fallback = form.querySelector("[data-form-fallback]") || createFallback(form);
 
     observeFormView(form);
+    preselectService(form);
     focusFormFromAnchor(form);
+    // Native cross-page fragment navigation can move focus after DOMContentLoaded.
+    // Reapply it after load, once the browser has resolved the fragment target.
+    if (document.readyState !== 'complete') window.addEventListener('load', function () {
+      window.requestAnimationFrame(function () {
+        if (!form.contains(document.activeElement)) focusFormFromAnchor(form);
+      });
+    }, {once:true});
 
     window.addEventListener("hashchange", function () {
+      preselectService(form);
       focusFormFromAnchor(form);
     });
 
@@ -853,6 +862,7 @@
         targetUrl.hash === "#lead-form-section"
       ) {
         window.setTimeout(function () {
+          preselectService(form, true);
           if (window.location.hash !== "#lead-form-section" && window.history && window.history.pushState) {
             window.history.pushState(null, "", "#lead-form-section");
           }
@@ -873,6 +883,7 @@
     });
 
     form.addEventListener("change", function (event) {
+      if (event.target && event.target.name === 'service') form.dataset.serviceChosen = 'true';
       if (event.target && event.target.name) {
         clearFieldError(form, event.target);
       }
@@ -887,6 +898,16 @@
 
       handleSubmit(form, state, event.submitter || document.activeElement || null);
     });
+  }
+
+  function preselectService(form, newCta) {
+    var field = form.elements.service;
+    if (!field || field.type === 'hidden' || (!newCta && form.dataset.serviceChosen === 'true')) return;
+    if (newCta) delete form.dataset.serviceChosen;
+    var context = getLeadContext();
+    var type = readFormContext(form, 'lead_type') || context.lead_type;
+    var service = {buy:'buy', newbuild:'buy', sell:'sell', rent:'rent', mortgage:'mortgage', construction:'consultation', commercial:'consultation'}[type];
+    if (service && Array.from(field.options).some(function (option) { return option.value === service; })) field.value = service;
   }
 
   function initFormHandlers() {

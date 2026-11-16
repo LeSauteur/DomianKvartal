@@ -23,12 +23,12 @@ test('all 220 static pages expose coherent descriptions, status, unique metadata
   assert.equal(feed.length,220);
   for(const r of published){
     const html=read('obekt/'+r.id+'.html'), main=text(html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)[1]);
-    assert.equal(r.status,'active',r.id);assert.equal(r.status_label,'Актуально',r.id);
+    assert.equal(r.status,'active',r.id);assert.equal(r.status_label,'В каталоге',r.id);
     assert.equal(r.publication_approval.basis,'owner-decision',r.id);
     assert.ok(r.description_public?.length>15,r.id);
     assert.ok(!bodyDescriptions.has(r.description_public),r.id);bodyDescriptions.add(r.description_public);
     assert.ok(main.includes(r.description_public.replace(/\s+/g,' ').trim()),r.id+' static description');
-    assert.match(html,/data-listing-status>Актуально</u,r.id);assert.doesNotMatch(main,forbidden,r.id);
+    assert.match(html,/data-listing-status>В каталоге</u,r.id);assert.doesNotMatch(main,forbidden,r.id);
     assert.equal((html.match(/<h1\b/gu)||[]).length,1,r.id);assert.doesNotMatch(html,/<meta[^>]+content="noindex/iu,r.id);
     const title=decode(html.match(/<title>(.*?)<\/title>/s)[1]),description=decode(html.match(/name="description" content="([^"]+)"/)[1]);
     assert.ok(!titles.has(title),r.id+' duplicate title');titles.add(title);
@@ -45,7 +45,7 @@ test('all 220 static pages expose coherent descriptions, status, unique metadata
     if(r.area_conflict)assert.equal(listing.mainEntity.floorSize,undefined,r.id);
     const publicItem=feed.find(x=>x.id===r.id);assert.ok(publicItem,r.id);
     assert.equal(publicItem.fullDescription,r.description_public,r.id);
-    assert.equal(publicItem.statusLabel,'Актуально',r.id);
+    assert.equal(publicItem.statusLabel,'В каталоге',r.id);
     assert.equal(publicItem.source_path,undefined,r.id);
     assert.equal(publicItem.features.area,r.area_conflict?null:r.area_total,r.id);
     const category={apartment:'apartments',house:'houses',land:'lands'}[r.type];

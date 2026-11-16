@@ -48,6 +48,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -58,7 +59,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -133,6 +134,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -141,7 +143,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -204,6 +206,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -215,7 +218,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -273,6 +276,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -281,7 +285,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -344,6 +348,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -354,7 +359,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -412,6 +417,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -420,7 +426,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -474,6 +480,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -482,7 +489,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -551,6 +558,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -562,7 +570,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -615,6 +623,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -625,7 +634,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -688,6 +697,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -698,7 +708,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -762,6 +772,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -772,7 +783,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -845,6 +856,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -853,7 +865,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -927,6 +939,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -937,7 +950,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -994,6 +1007,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -1005,7 +1019,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -1063,6 +1077,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -1071,7 +1086,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -1137,6 +1152,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -1148,7 +1164,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -1208,6 +1224,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -1218,7 +1235,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -1273,6 +1290,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -1285,7 +1303,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -1341,6 +1359,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -1349,7 +1368,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -1400,6 +1419,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -1408,7 +1428,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -1468,6 +1488,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -1476,7 +1497,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -1527,6 +1548,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -1535,7 +1557,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -1585,6 +1607,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -1593,7 +1616,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -1641,6 +1664,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -1649,7 +1673,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -1695,6 +1719,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -1703,7 +1728,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -1756,6 +1781,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -1767,7 +1793,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -1833,6 +1859,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -1841,7 +1868,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -1887,6 +1914,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -1897,7 +1925,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -1960,6 +1988,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -1968,7 +1997,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -2021,6 +2050,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -2029,7 +2059,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -2099,6 +2129,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -2107,7 +2138,7 @@
     "area_living": null,
     "area_kitchen": 15,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -2158,6 +2189,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -2169,7 +2201,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -2222,6 +2254,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -2230,7 +2263,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -2294,6 +2327,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -2302,7 +2336,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -2356,6 +2390,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -2364,7 +2399,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -2428,6 +2463,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -2436,7 +2472,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -2507,6 +2543,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -2515,7 +2552,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -2570,6 +2607,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -2578,7 +2616,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -2632,6 +2670,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -2642,7 +2681,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -2689,6 +2728,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -2697,7 +2737,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -2742,6 +2782,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -2750,7 +2791,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -2804,6 +2845,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -2815,7 +2857,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -2860,6 +2902,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -2868,7 +2911,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -2924,6 +2967,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -2932,7 +2976,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -2978,6 +3022,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -2989,7 +3034,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -3044,6 +3089,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -3052,7 +3098,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -3104,6 +3150,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -3112,7 +3159,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -3157,6 +3204,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -3165,7 +3213,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -3216,6 +3264,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -3224,7 +3273,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -3268,6 +3317,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -3276,7 +3326,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -3326,6 +3376,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -3334,7 +3385,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -3384,6 +3435,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -3392,7 +3444,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -3438,6 +3490,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -3446,7 +3499,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -3494,6 +3547,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -3502,7 +3556,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -3576,6 +3630,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -3584,7 +3639,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -3635,6 +3690,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -3643,7 +3699,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -3697,6 +3753,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -3705,7 +3762,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -3767,6 +3824,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -3775,7 +3833,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -3829,6 +3887,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -3837,7 +3896,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -3880,6 +3939,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -3891,7 +3951,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -3937,6 +3997,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -3945,7 +4006,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -3993,6 +4054,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -4004,7 +4066,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -4050,6 +4112,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -4058,7 +4121,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -4114,6 +4177,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -4122,7 +4186,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -4194,6 +4258,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -4205,7 +4270,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -4261,6 +4326,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -4269,7 +4335,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -4322,6 +4388,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -4330,7 +4397,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -4378,6 +4445,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -4386,7 +4454,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -4438,6 +4506,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -4446,7 +4515,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -4499,6 +4568,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -4507,7 +4577,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -4555,6 +4625,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -4563,7 +4634,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -4613,6 +4684,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -4621,7 +4693,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -4681,6 +4753,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -4689,7 +4762,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -5021,6 +5094,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/",
       "/houses.html"
@@ -5032,7 +5106,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -5074,6 +5148,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/houses.html"
     ],
@@ -5084,7 +5159,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -5126,6 +5201,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/",
       "/houses.html"
@@ -5137,7 +5213,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -5186,6 +5262,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "published_at": "2026-10-26",
     "publication_order": 0,
     "description_public": "Предлагаем готовый кирпичный дом 125 кв. м на участке 5,5 соток — в центре посёлка, рядом школы, детсады, магазины.\n\n3 спальни + просторная кухня-гостиная с выходом на террасу и во двор — удобно жить и принимать гостей.\n\n2 санузла — без утренней суеты и очередей.\n\nОтдельная котельная — надёжно, тихо, безопасно.\n\nТерраса — место для семейных чаепитий и закатов.\n\nПодвал, где можно хранить весь необходимый инвентарь.\n\nПредчистовая отделка — можно быстро переходить к финишу.\n\nШтукатурка стен.\n\nСтяжка и тёплые полы (кроме спален).\n\nРазведены электрика и сантехника.\n\nУстановлен двухконтурный котёл — тепло и горячая вода круглый год.\n\nУчасток 5,5 соток: хватит на детскую площадку, грядки и зону отдыха.\n\nВсе коммуникации подключены.\n\nПродажа от застройщика.",
@@ -5201,7 +5278,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -5253,6 +5330,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "published_at": "2026-10-26",
     "publication_order": 1,
     "description_public": "Новый одноэтажный кирпичный дом 2025 года в посёлке Янтарный (Аксайский район) — построен, готов к отделке под ваш стиль.\n\nОбщая площадь с террасой — 118 м², участок — 5 соток под ИЖС.\n\nВнешний вид — строгий и современный, таких в Янтарном единицы.\n\nСтены из клинкерного кирпича — надёжность на десятилетия.\n\nГрафитовая мягкая кровля — тихо и без забот.\n\nОкна в профиле 70 мм с двойным стеклопакетом — тепло зимой, прохладно летом.\n\nПросторная кухня-гостиная.\n\nХозяйская спальня с гардеробной.\n\nТерраса с выходом во двор.\n\nНа участке и рядом.\n\nВъезд и парковка на 3 автомобиля.\n\nАсфальтированная дорога прямо к дому.\n\nДо остановки общественного транспорта — 600 м пешком.\n\nРядом магазин, аптека, детский сад и школа.\n\nДо города — 4 км.\n\nПодберу и другие варианты домов, коттеджей и участков в Аксайском районе, если этот не подойдёт.",
@@ -5268,7 +5346,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -5329,6 +5407,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "published_at": "2026-10-26",
     "publication_order": 3,
     "description_public": "Двухэтажный кирпичный дом 250 м² в посёлке Темерницкий (Аксайский район, 14 км до Ростова-на-Дону) на участке 7,5 сотки.\n\nПостроен в 2011 году, дизайнерский ремонт, газ, центральное водоснабжение, отопление.\n\n5 комнат, включая мастер-спальню.\n\nБалконы и лоджии.\n\nТерраса / веранда.\n\nЛетний флигель с кухней на втором этаже.\n\nПросторный подвал — хранение продуктов и вещей.\n\nВозможность обустройства чердака.\n\nПристройка с отдельным входом и окном — подходит под ПВЗ (Ozon, Wildberries), офис или магазин.\n\nУчасток и территория.\n\nСквозной, подъезд с двух улиц, можно выделить отдельную часть.\n\nТеплицы для овощей и зелени, своё хозяйство.\n\nМесто для дополнительной кухни.\n\nПарковка на 3 автомобиля.\n\nВозможность дополнительного строительства.\n\nИнфраструктура рядом: магазин, аптека, детский сад, школа.\n\nАсфальтированная дорога, остановка общественного транспорта.\n\nПодойдёт для большой семьи или для совмещения проживания с бизнесом.",
@@ -5344,7 +5423,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -5402,6 +5481,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/lands.html"
     ],
@@ -5413,7 +5493,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -5467,6 +5547,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/lands.html"
     ],
@@ -5478,7 +5559,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -5521,6 +5602,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/lands.html"
     ],
@@ -5531,7 +5613,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -5576,6 +5658,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/lands.html"
     ],
@@ -5584,7 +5667,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -5635,6 +5718,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/lands.html"
     ],
@@ -5646,7 +5730,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -5686,6 +5770,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/lands.html"
     ],
@@ -5694,7 +5779,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -5736,6 +5821,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/lands.html"
     ],
@@ -5744,7 +5830,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -5787,6 +5873,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/lands.html"
     ],
@@ -5798,7 +5885,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -5839,6 +5926,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/lands.html"
     ],
@@ -5850,7 +5938,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -5893,6 +5981,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/lands.html"
     ],
@@ -5907,7 +5996,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -5950,6 +6039,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/lands.html"
     ],
@@ -5960,7 +6050,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -6301,6 +6391,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -6311,7 +6402,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -6355,6 +6446,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -6365,7 +6457,7 @@
     "area_living": null,
     "area_kitchen": 5.3,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -6412,6 +6504,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -6422,7 +6515,7 @@
     "area_living": null,
     "area_kitchen": 12,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -6467,6 +6560,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -6478,7 +6572,7 @@
     "area_living": null,
     "area_kitchen": 11.4,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -6526,6 +6620,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -6536,7 +6631,7 @@
     "area_living": null,
     "area_kitchen": 12,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -6586,6 +6681,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -6596,7 +6692,7 @@
     "area_living": null,
     "area_kitchen": 9,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -6643,6 +6739,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -6653,7 +6750,7 @@
     "area_living": null,
     "area_kitchen": 9,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -6698,6 +6795,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -6708,7 +6806,7 @@
     "area_living": null,
     "area_kitchen": 16.5,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -6761,6 +6859,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -6771,7 +6870,7 @@
     "area_living": null,
     "area_kitchen": 8,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -6829,6 +6928,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -6840,7 +6940,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -6893,6 +6993,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -6903,7 +7004,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -6964,6 +7065,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -6974,7 +7076,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -7029,6 +7131,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/",
       "/apartments.html"
@@ -7040,7 +7143,7 @@
     "area_living": 16,
     "area_kitchen": 9,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -7094,6 +7197,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/",
       "/apartments.html"
@@ -7105,7 +7209,7 @@
     "area_living": 30,
     "area_kitchen": 10,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -7163,6 +7267,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "published_at": "2026-10-26",
     "publication_order": 2,
     "description_public": "Продаётся 2-комнатная квартира с дизайнерским ремонтом в ЖК «Вишнёвый сад», г. Аксай, ул. Ленина, 40У.\n\nКвартира полностью готова к жизни.\n\nВыполнен качественный дизайнерский ремонт.\n\nВся мебель и техника остаются.\n\nПосудомоечная машина.\n\nСтиральная машина.\n\nМикроволновая печь.\n\nЭтаж: 7 из 9.\n\nДизайнерский ремонт.\n\nИндивидуальное отопление.\n\nТёплый пол.\n\nДва балкона (один остеклён).\n\nГрузовой лифт в доме.\n\nИнтернет уже подключён и проведён.\n\nО жилом комплексе.\n\n«Вишнёвый сад» — стильный современный комплекс, где всё под рукой.\n\nМагазины и супермаркеты.\n\nСпортивные клубы и секции для детей и взрослых.\n\nБлагоустроенная территория.\n\nВсё, что нужно для комфортной жизни, — в пешей доступности.\n\nРасположение и транспорт.\n\nУдобная транспортная развязка — быстрый выезд в сторону Ростова-на-Дону и в любую точку Аксая.\n\nПарковочные места рядом с домом, не нужно крутить круги в поисках места.\n\nМолодой семье, паре или тем, кто хочет сразу заехать в готовое жильё без вложений в ремонт, мебель и технику.\n\nКвартира полностью укомплектована и не требует никаких дополнительных расходов.",
@@ -7180,7 +7285,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -7228,6 +7333,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "published_at": "2026-10-26",
     "publication_order": 4,
     "description_public": "1-комнатная квартира 36 кв. м в ЖК «Самоцветы».\n\nПредлагаю отличный вариант в современном ЖК «Самоцветы».\n\n1-комнатную квартиру площадью 36 кв. м — достаточно места для комфортной жизни.\n\nПолностью меблированную квартиру: вся мебель остаётся — можно сразу заезжать.\n\nВсю необходимую технику — ничего докупать не нужно.\n\nБалкон — дополнительное пространство для утреннего кофе или хранения.\n\nВид из окна во двор — тихо, спокойно, без шума проезжей части.\n\nПреимущества локации и комплекса.\n\nБлагоустроенная территория ЖК — приятно гулять и отдыхать рядом с домом.\n\nРазвитая инфраструктура в шаговой доступности: магазины, остановки, детские площадки.\n\nУдобная транспортная доступность — легко добраться до центра Аксая, Ростова-на-Дону и других районов.\n\nКвартира подойдёт как для собственного проживания, так и для сдачи в аренду: объект полностью готов к заселению, а значит, можно быстро выйти на доход, без обременений.",
@@ -7243,7 +7349,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -7289,6 +7395,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -7299,7 +7406,7 @@
     "area_living": 12.6,
     "area_kitchen": 12.4,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -7347,6 +7454,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -7357,7 +7465,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -7413,6 +7521,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -7423,7 +7532,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -7475,6 +7584,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -7485,7 +7595,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -7537,6 +7647,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -7547,7 +7658,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -7606,6 +7717,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -7616,7 +7728,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -7678,6 +7790,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -7688,7 +7801,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -7735,6 +7848,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -7745,7 +7859,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -7802,6 +7916,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -7813,7 +7928,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -7868,6 +7983,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -7878,7 +7994,7 @@
     "area_living": null,
     "area_kitchen": 12,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -7927,6 +8043,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -7937,7 +8054,7 @@
     "area_living": null,
     "area_kitchen": 6.7,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -7994,6 +8111,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -8004,7 +8122,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -8059,6 +8177,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -8069,7 +8188,7 @@
     "area_living": 44,
     "area_kitchen": 19,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -8117,6 +8236,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -8127,7 +8247,7 @@
     "area_living": null,
     "area_kitchen": 9,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -8174,6 +8294,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -8184,7 +8305,7 @@
     "area_living": null,
     "area_kitchen": 10,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -8232,6 +8353,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -8242,7 +8364,7 @@
     "area_living": 32,
     "area_kitchen": 10,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -8289,6 +8411,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -8299,7 +8422,7 @@
     "area_living": 42.8,
     "area_kitchen": 12.4,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -8339,6 +8462,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -8349,7 +8473,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -8405,6 +8529,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -8415,7 +8540,7 @@
     "area_living": null,
     "area_kitchen": 7.2,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -8465,6 +8590,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -8475,7 +8601,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -8533,6 +8659,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -8543,7 +8670,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -8599,6 +8726,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -8609,7 +8737,7 @@
     "area_living": null,
     "area_kitchen": 7.7,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -8667,6 +8795,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -8677,7 +8806,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -8738,6 +8867,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -8749,7 +8879,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -8817,6 +8947,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -8827,7 +8958,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -8881,6 +9012,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -8891,7 +9023,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -8947,6 +9079,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -8957,7 +9090,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -9004,6 +9137,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -9014,7 +9148,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -9058,6 +9192,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -9068,7 +9203,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -9122,6 +9257,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -9132,7 +9268,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -9183,6 +9319,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -9193,7 +9330,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -9240,6 +9377,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -9250,7 +9388,7 @@
     "area_living": null,
     "area_kitchen": 9,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -9300,6 +9438,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -9311,7 +9450,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -9366,6 +9505,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -9376,7 +9516,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -9437,6 +9577,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -9447,7 +9588,7 @@
     "area_living": null,
     "area_kitchen": 8,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -9493,6 +9634,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -9503,7 +9645,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -9550,6 +9692,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -9560,7 +9703,7 @@
     "area_living": null,
     "area_kitchen": 7,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -9615,6 +9758,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -9625,7 +9769,7 @@
     "area_living": null,
     "area_kitchen": 10,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -9678,6 +9822,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -9688,7 +9833,7 @@
     "area_living": null,
     "area_kitchen": 8,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -9734,6 +9879,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -9744,7 +9890,7 @@
     "area_living": null,
     "area_kitchen": 7.9,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -9806,6 +9952,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -9816,7 +9963,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -9876,6 +10023,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -9886,7 +10034,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -9949,6 +10097,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -9959,7 +10108,7 @@
     "area_living": null,
     "area_kitchen": 13,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -10025,6 +10174,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -10035,7 +10185,7 @@
     "area_living": null,
     "area_kitchen": 13,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -10101,6 +10251,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -10111,7 +10262,7 @@
     "area_living": null,
     "area_kitchen": 12.8,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -10178,6 +10329,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -10188,7 +10340,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -10261,6 +10413,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -10271,7 +10424,7 @@
     "area_living": null,
     "area_kitchen": 14,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -10325,6 +10478,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -10335,7 +10489,7 @@
     "area_living": null,
     "area_kitchen": 20,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -10383,6 +10537,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -10393,7 +10548,7 @@
     "area_living": null,
     "area_kitchen": 13.8,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -10442,6 +10597,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -10452,7 +10608,7 @@
     "area_living": null,
     "area_kitchen": 9.3,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -10499,6 +10655,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -10509,7 +10666,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -10557,6 +10714,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -10567,7 +10725,7 @@
     "area_living": null,
     "area_kitchen": 8,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -10614,6 +10772,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -10624,7 +10783,7 @@
     "area_living": null,
     "area_kitchen": 5,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -10675,6 +10834,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -10685,7 +10845,7 @@
     "area_living": null,
     "area_kitchen": 12,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -10752,6 +10912,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -10762,7 +10923,7 @@
     "area_living": null,
     "area_kitchen": 14,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -10822,6 +10983,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -10832,7 +10994,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -10891,6 +11053,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -10901,7 +11064,7 @@
     "area_living": null,
     "area_kitchen": 13,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -10949,6 +11112,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -10959,7 +11123,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -11006,6 +11170,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -11016,7 +11181,7 @@
     "area_living": null,
     "area_kitchen": 8,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -11084,6 +11249,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -11094,7 +11260,7 @@
     "area_living": null,
     "area_kitchen": 3,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -11154,6 +11320,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -11164,7 +11331,7 @@
     "area_living": null,
     "area_kitchen": 21.7,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -11210,6 +11377,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -11220,7 +11388,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -11281,6 +11449,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -11291,7 +11460,7 @@
     "area_living": null,
     "area_kitchen": 13,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -11352,6 +11521,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -11362,7 +11532,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -11412,6 +11582,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -11422,7 +11593,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -11473,6 +11644,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -11483,7 +11655,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -11529,6 +11701,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -11539,7 +11712,7 @@
     "area_living": null,
     "area_kitchen": 13,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -11598,6 +11771,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -11608,7 +11782,7 @@
     "area_living": null,
     "area_kitchen": 14,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -11666,6 +11840,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -11676,7 +11851,7 @@
     "area_living": null,
     "area_kitchen": 9,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -11730,6 +11905,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -11740,7 +11916,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -11794,6 +11970,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -11804,7 +11981,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -11858,6 +12035,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -11868,7 +12046,7 @@
     "area_living": 44,
     "area_kitchen": 14,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -11908,6 +12086,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -11918,7 +12097,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -11958,6 +12137,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -11968,7 +12148,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -12008,6 +12188,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -12018,7 +12199,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -12058,6 +12239,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -12068,7 +12250,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -12112,6 +12294,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -12122,7 +12305,7 @@
     "area_living": null,
     "area_kitchen": 5,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -12172,6 +12355,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -12182,7 +12366,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -12232,6 +12416,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -12242,7 +12427,7 @@
     "area_living": 44,
     "area_kitchen": 6,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -12293,6 +12478,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -12303,7 +12489,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -12362,6 +12548,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -12372,7 +12559,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -12419,6 +12606,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -12429,7 +12617,7 @@
     "area_living": 50,
     "area_kitchen": 12,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -12484,6 +12672,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -12495,7 +12684,7 @@
     "area_living": null,
     "area_kitchen": 15.7,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -12547,6 +12736,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -12557,7 +12747,7 @@
     "area_living": 34.5,
     "area_kitchen": 9.8,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -12608,6 +12798,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -12618,7 +12809,7 @@
     "area_living": null,
     "area_kitchen": 11.7,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -12658,6 +12849,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -12668,7 +12860,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -12714,6 +12906,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -12724,7 +12917,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -12772,6 +12965,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -12782,7 +12976,7 @@
     "area_living": null,
     "area_kitchen": 12,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -12832,6 +13026,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -12842,7 +13037,7 @@
     "area_living": null,
     "area_kitchen": 6.5,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -12890,6 +13085,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -12900,7 +13096,7 @@
     "area_living": null,
     "area_kitchen": 9,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -12949,6 +13145,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -12959,7 +13156,7 @@
     "area_living": null,
     "area_kitchen": 10,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -13025,6 +13222,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -13033,7 +13231,7 @@
     "area_living": 29,
     "area_kitchen": 6,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -13091,6 +13289,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -13101,7 +13300,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -13150,6 +13349,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -13160,7 +13360,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -13224,6 +13424,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -13234,7 +13435,7 @@
     "area_living": 20,
     "area_kitchen": 8.8,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -13294,6 +13495,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -13302,7 +13504,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -13362,6 +13564,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -13372,7 +13575,7 @@
     "area_living": null,
     "area_kitchen": 14,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -13442,6 +13645,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -13452,7 +13656,7 @@
     "area_living": 14,
     "area_kitchen": 9,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -13529,6 +13733,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -13537,7 +13742,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -13600,6 +13805,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/",
       "/apartments.html"
@@ -13609,7 +13815,7 @@
     "area_living": 17,
     "area_kitchen": 20,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -13670,6 +13876,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -13680,7 +13887,7 @@
     "area_living": null,
     "area_kitchen": 10,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -13754,6 +13961,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/",
       "/apartments.html"
@@ -13765,7 +13973,7 @@
     "area_living": null,
     "area_kitchen": 10,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -13816,6 +14024,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/",
       "/apartments.html"
@@ -13825,7 +14034,7 @@
     "area_living": null,
     "area_kitchen": 8,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -13867,6 +14076,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/",
       "/apartments.html"
@@ -13876,7 +14086,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -13918,6 +14128,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -13926,7 +14137,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -13968,6 +14179,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -13976,7 +14188,7 @@
     "area_living": null,
     "area_kitchen": 8,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -14029,6 +14241,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -14039,7 +14252,7 @@
     "area_living": null,
     "area_kitchen": 9,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -14100,6 +14313,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -14110,7 +14324,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -14159,6 +14373,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -14169,7 +14384,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -14225,6 +14440,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -14235,7 +14451,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -14290,6 +14506,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -14300,7 +14517,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -14351,6 +14568,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -14361,7 +14579,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -14410,6 +14628,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -14420,7 +14639,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",
@@ -14470,6 +14689,7 @@
     "verifiedAt": null,
     "verifiedBy": null,
     "agent": null,
+    "availability_status": "unverified",
     "listing_urls": [
       "/apartments.html"
     ],
@@ -14480,7 +14700,7 @@
     "area_living": null,
     "area_kitchen": null,
     "price_currency": "RUB",
-    "status_label": "Актуально",
+    "status_label": "В каталоге",
     "content_updated_at": "2026-11-05",
     "publication_approval": {
       "date": "2026-11-03",

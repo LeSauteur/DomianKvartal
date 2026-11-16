@@ -923,7 +923,7 @@
       var facts = qs('[data-modal-facts]', panel);
       if (!facts) { facts = document.createElement('div'); facts.setAttribute('data-modal-facts', ''); panel.insertBefore(facts, images); }
       var meta = item.meta || {};
-      facts.innerHTML = '<p data-listing-status>Актуально</p><p>' + escapeHtml(formatPrice(meta.price) || 'Цена по запросу') + '</p>' + renderCardChars([
+      facts.innerHTML = '<p data-listing-status>' + escapeHtml(item.statusLabel || 'В каталоге') + '</p><p>' + escapeHtml(formatPrice(meta.price) || 'Цена по запросу') + '</p>' + renderCardChars([
         item.address, hasCardValue(meta.rooms) ? meta.rooms + ' комн.' : '',
         hasCardValue(meta.area) ? meta.area + ' м²' : '',
         hasCardValue(meta.landArea) ? meta.landArea + ' сот.' : '',
@@ -1303,7 +1303,7 @@
       renderPropertyGallery(galleryImages, safeTitle),
       '<div class="card-content property-card__body">',
       '<h2 class="property-card__title">' + safeTitle + '</h2>',
-      /^(object|house|land)_\d+$/.test(item.id || '') ? '<p data-listing-status>Актуально</p>' : '',
+      /^(object|house|land)_\d+$/.test(item.id || '') ? '<p data-listing-status>' + escapeHtml(item.statusLabel || 'В каталоге') + '</p>' : '',
       '<div class="card-meta property-card__price"><span class="property-card__price-value">' + escapeHtml(priceText) + '</span>' + mortgageHtml + '</div>',
       charsHtml,
       detailsHtml,
@@ -1715,7 +1715,7 @@
         var f = r.features || {};
         var localImages = r.images.map(function (image) { return image.replace(/^https:\/\/domian-161\.ru(?=\/)/, ''); });
         return { id:r.id, objectType:type, title:r.title, description:r.fullDescription || '',
-          city:r.city, district:r.district, settlement:r.settlement, address:r.address,
+          city:r.city, district:r.district, settlement:r.settlement, address:r.address, statusLabel:r.statusLabel,
           images:localImages, cover:localImages[0] || '', sectionLink:type+'.html',
           floorPlans:(r.floor_plans || []).map(function (image) { return image.replace(/^https:\/\/domian-161\.ru(?=\/)/, ''); }),
           meta:{price:r.price,rooms:f.rooms,area:f.area,houseArea:type==='houses'?f.area:null,landArea:f.landArea,floor:f.floor,floors:f.totalFloors} };
@@ -1867,7 +1867,7 @@
       '<div class="hot-offer-content property-card__body">',
       '<span class="hot-offer-tag property-card__meta">' + escapeHtml(item.categoryName) + '</span>',
       '<h3 class="property-card__title">' + safeTitle + '</h3>',
-      /^(object|house|land)_\d+$/.test(item.id || '') ? '<p data-listing-status>Актуально</p>' : '',
+      /^(object|house|land)_\d+$/.test(item.id || '') ? '<p data-listing-status>' + escapeHtml(item.statusLabel || 'В каталоге') + '</p>' : '',
       '<div class="hot-offer-price property-card__price">' + escapeHtml(formatPrice(item.meta.price, item.meta.priceType)) + '</div>',
       charsHtml,
       '<div class="property-card__actions">',
@@ -1979,7 +1979,7 @@
       '<div class="new-object-card__content property-card__body">',
       '<span class="new-object-card__type property-card__meta">' + typeLabel + '</span>',
       '<h3 class="property-card__title">' + title + '</h3>',
-      /^(object|house|land)_\d+$/.test(item.id || '') ? '<p data-listing-status>Актуально</p>' : '',
+      /^(object|house|land)_\d+$/.test(item.id || '') ? '<p data-listing-status>' + escapeHtml(item.statusLabel || 'В каталоге') + '</p>' : '',
       '<div class="new-object-card__price property-card__price">' + price + '</div>',
       charsHtml,
       '<div class="property-card__actions">',

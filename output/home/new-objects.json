@@ -28,7 +28,9 @@
     "settlement": "Российский",
     "address": null,
     "status": "active",
-    "statusLabel": "Актуально",
+    "statusLabel": "В каталоге",
+    "availabilityStatus": "unverified",
+    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 125,
@@ -74,7 +76,9 @@
     "settlement": "Янтарный",
     "address": null,
     "status": "active",
-    "statusLabel": "Актуально",
+    "statusLabel": "В каталоге",
+    "availabilityStatus": "unverified",
+    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 3,
       "area": 118,
@@ -125,7 +129,9 @@
     "settlement": null,
     "address": "ул. Ленина, 40У",
     "status": "active",
-    "statusLabel": "Актуально",
+    "statusLabel": "В каталоге",
+    "availabilityStatus": "unverified",
+    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": null,
@@ -183,7 +189,9 @@
     "settlement": "Темерницкий",
     "address": null,
     "status": "active",
-    "statusLabel": "Актуально",
+    "statusLabel": "В каталоге",
+    "availabilityStatus": "unverified",
+    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 5,
       "area": 250,
@@ -225,7 +233,9 @@
     "settlement": null,
     "address": null,
     "status": "active",
-    "statusLabel": "Актуально",
+    "statusLabel": "В каталоге",
+    "availabilityStatus": "unverified",
+    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 36,
@@ -285,7 +295,9 @@
     "settlement": null,
     "address": "Ростов-на-Дону, Пролетарский район, мкр. Александровка, проспект 40-летия Победы, 63/17с8",
     "status": "active",
-    "statusLabel": "Актуально"
+    "statusLabel": "В каталоге",
+    "availabilityStatus": "unverified",
+    "availabilityVerifiedAt": null
   },
   {
     "id": "object_1012",
@@ -333,7 +345,9 @@
     "settlement": null,
     "address": "Ростов-на-Дону, Пролетарский район, мкр. Александровка, улица Берберовская, 28с1",
     "status": "active",
-    "statusLabel": "Актуально"
+    "statusLabel": "В каталоге",
+    "availabilityStatus": "unverified",
+    "availabilityVerifiedAt": null
   },
   {
     "id": "object_910",
@@ -377,7 +391,9 @@
     "settlement": null,
     "address": null,
     "status": "active",
-    "statusLabel": "Актуально"
+    "statusLabel": "В каталоге",
+    "availabilityStatus": "unverified",
+    "availabilityVerifiedAt": null
   },
   {
     "id": "object_909",
@@ -425,7 +441,9 @@
     "settlement": null,
     "address": null,
     "status": "active",
-    "statusLabel": "Актуально"
+    "statusLabel": "В каталоге",
+    "availabilityStatus": "unverified",
+    "availabilityVerifiedAt": null
   },
   {
     "id": "object_913",
@@ -461,7 +479,9 @@
     "settlement": null,
     "address": null,
     "status": "active",
-    "statusLabel": "Актуально"
+    "statusLabel": "В каталоге",
+    "availabilityStatus": "unverified",
+    "availabilityVerifiedAt": null
   },
   {
     "id": "object_914",
@@ -497,7 +517,9 @@
     "settlement": null,
     "address": null,
     "status": "active",
-    "statusLabel": "Актуально"
+    "statusLabel": "В каталоге",
+    "availabilityStatus": "unverified",
+    "availabilityVerifiedAt": null
   },
   {
     "id": "house_911",
@@ -533,7 +555,9 @@
     "settlement": null,
     "address": null,
     "status": "active",
-    "statusLabel": "Актуально"
+    "statusLabel": "В каталоге",
+    "availabilityStatus": "unverified",
+    "availabilityVerifiedAt": null
   },
   {
     "id": "house_913",
@@ -569,6 +593,8 @@
     "settlement": "Старочеркасская",
     "address": null,
     "status": "active",
-    "statusLabel": "Актуально"
+    "statusLabel": "В каталоге",
+    "availabilityStatus": "unverified",
+    "availabilityVerifiedAt": null
   }
 ]
