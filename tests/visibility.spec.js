@@ -142,7 +142,12 @@ test('category retains canonical and old links reach the real canonical object p
 });
 test('direct object form overrides stale object context and uses the shared provider',async({page})=>{
   let payload='';
-  await page.route('https://api.web3forms.com/submit',route=>{payload=route.request().postData();return route.fulfill({status:200,contentType:'application/json',body:'{"success":true}'});});
+  let contentType='';
+  await page.route('https://api.web3forms.com/submit',route=>{
+    payload=route.request().postDataBuffer();
+    contentType=route.request().headers()['content-type'];
+    return route.fulfill({status:200,contentType:'application/json',body:'{"success":true}'});
+  });
   await page.addInitScript(()=>sessionStorage.setItem('domian_lead_context',JSON.stringify({object_id:'other-object',source_cta:'old-cta',lead_type:'sell'})));
   await page.goto('/obekt/object_910.html?qa=1');
   await page.locator('#lead-name').fill('Тест без отправки');
@@ -151,10 +156,10 @@ test('direct object form overrides stale object context and uses the shared prov
   await page.locator('#lead-privacy-consent').check();
   await page.locator('#lead-form').evaluate(form=>form.requestSubmit());
   await expect(page).toHaveURL(/thanks\.html\?qa=1/);
-  expect(payload).toContain('object_910');
-  expect(payload).toContain('object_page');
-  expect(payload).not.toContain('other-object');
-  expect(payload).not.toContain('5950000');
+  const fields=await new Response(payload,{headers:{'content-type':contentType}}).formData();
+  expect(fields.get('object_id')).toBe('object_910');
+  expect(fields.get('source_cta')).toBe('object_page');
+  expect(fields.get('object_price')||'').toBe(byId.object_910.price===null?'':String(byId.object_910.price));
 });
 test('city filters preserve unknown locations and expose Rostov and Azov accurately',async({page})=>{
   const apartments=active.filter(r=>r.type==='apartment').map(r=>r.location);
