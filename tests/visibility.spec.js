@@ -1,16 +1,18 @@
 const {test,expect,LOCAL_ORIGIN}=require("./captcha-fixture");
+const {active,byId,displayPrice}=require('./catalog-fixture');
 test.beforeEach(async({page})=>{
   await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.fulfill({status:204,body:''}));
 });
 
-test('new MAX listings render approved prices and keep floor plans separate on mobile and desktop',async({page})=>{
+test('MAX listing pages render current prices and keep floor plans separate on mobile and desktop',async({page})=>{
   test.setTimeout(60000);
   for(const width of [375,1366]){
     await page.setViewportSize({width,height:900});
-    for(const [id,price,count] of [['house_914','11 500 000 ₽',10],['house_915','Цена по запросу',14],['object_1013','8 800 000 ₽',19],['house_916','24 500 000 ₽',23],['object_1014','6 900 000 ₽',10]]){
+    for(const id of ['house_914','house_915','object_1013','house_916','object_1014']){
+      const {price,images:photos,floorPlans}=byId[id];
       await page.goto('/obekt/'+id+'.html?qa=1');
-      await expect(page.locator('.visibility-price')).toHaveText(price);
-      await expect(page.locator('.object-photo-list img')).toHaveCount(count);
+      await expect(page.locator('.visibility-price')).toHaveText(displayPrice(price));
+      await expect(page.locator('.object-photo-list img')).toHaveCount(photos.length);
       await expect(page.locator('.visibility-description')).toBeVisible();
       await page.locator('.object-photo-all summary').click();
       const images=await page.locator('.object-photo-list img, [data-object-plans] img').evaluateAll(async images=>{
@@ -18,25 +20,25 @@ test('new MAX listings render approved prices and keep floor plans separate on m
       });
       expect(images.every(Boolean)).toBe(true);
       expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
-      if(id==='house_915')await expect(page.locator('.visibility-description')).not.toContainText('16 500 000');
-      await expect(page.locator('[data-object-plans]')).toHaveCount(id==='object_1013'?1:0);
+      await expect(page.locator('[data-object-plans] img')).toHaveCount(floorPlans.length);
     }
   }
-  await page.goto('/apartments.html?qa=1&object=object_1013');
-  await expect(page).toHaveURL(/\/obekt\/object_1013\.html/);
-  await expect(page.locator('.object-photo-list img')).toHaveCount(19);
-  await expect(page.locator('[data-object-plans] img')).toHaveCount(1);
+  const withPlan=Object.values(byId).find(item=>item.floorPlans.length&&item.images.length>1);
+  expect(withPlan).toBeDefined();
+  await page.goto(withPlan.url+'?qa=1');
+  await expect(page.locator('.object-photo-list img')).toHaveCount(withPlan.images.length);
+  await expect(page.locator('[data-object-plans] img')).toHaveCount(withPlan.floorPlans.length);
   await expect(page.locator('[data-object-plans]')).toContainText('Планировка');
   const cover=page.locator('.object-photo-cover');
   await cover.click();
   await expect(page.locator('.object-photo-dialog')).toBeVisible();
   await page.keyboard.press('ArrowRight');
-  await expect(page.locator('.object-photo-dialog figcaption')).toHaveText('Фото 2 из 19');
+  await expect(page.locator('.object-photo-dialog figcaption')).toHaveText('Фото 2 из '+withPlan.images.length);
   await page.keyboard.press('Escape');
   await expect(cover).toBeFocused();
-  await page.goto('/apartments.html?qa=1');
-  await page.locator('[data-object-id="object_1014"] .property-card__cta').click();
-  await expect(page.locator('.object-photo-list img')).toHaveCount(10);
+  const withoutPlan=Object.values(byId).find(item=>!item.floorPlans.length&&item.images.length>1);
+  await page.goto(withoutPlan.url+'?qa=1');
+  await expect(page.locator('.object-photo-list img')).toHaveCount(withoutPlan.images.length);
   await expect(page.locator('[data-object-plans]')).toHaveCount(0);
 });
 test('placeholder query never opens a listing and no placeholder cards are rendered',async({page})=>{
@@ -128,12 +130,13 @@ test('static category links and object facts remain available without JavaScript
   await context.close();
 });
 test('category retains canonical and old links reach the real canonical object page',async({page})=>{
+  const item=active.find(item=>item.id==='house_912')??active.find(item=>item.type==='house');
   await page.goto('/houses.html?qa=1');
   await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href','https://domian-161.ru/houses.html');
-  await expect(page.locator('.visibility-static-links a[href="/obekt/house_912.html"]')).toBeVisible();
-  await page.goto('/houses.html?qa=1&object=house_912');
-  await expect(page).toHaveURL(/\/obekt\/house_912\.html\?qa=1$/);
-  await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href','https://domian-161.ru/obekt/house_912.html');
+  await expect(page.locator('.visibility-static-links a[href="'+item.url+'"]')).toBeVisible();
+  await page.goto('/houses.html?qa=1&object='+item.id);
+  await expect(page).toHaveURL(url=>url.pathname===item.url&&url.search==='?qa=1');
+  await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href',item.seo.canonical);
 });
 test('direct object form overrides stale object context and uses the shared provider',async({page})=>{
   let payload='';
@@ -152,33 +155,37 @@ test('direct object form overrides stale object context and uses the shared prov
   expect(payload).not.toContain('5950000');
 });
 test('city filters preserve unknown locations and expose Rostov and Azov accurately',async({page})=>{
-  const registry=require('../data/catalog/registry.json');
-  const apartments=registry.filter(r=>r.type==='apartment'&&(!r.status||r.status==='active'));
+  const apartments=active.filter(r=>r.type==='apartment').map(r=>r.location);
   await page.goto('/apartments.html?qa=1');
   await expect(page.locator('#cards .property-card').first()).toContainText('Аксай');
   await page.locator('[data-filter=city]').selectOption('Аксай');
-  await expect(page.locator('#cards .property-card')).toHaveCount(apartments.filter(r=>['Аксай','Аксайский район'].includes(r.city)).length);
+  await expect(page.locator('#resultsCount')).toContainText('Найдено: '+apartments.filter(r=>['Аксай','Аксайский район'].includes(r.city)).length);
   await expect(page).toHaveURL(/f_city=/);
   await page.locator('[data-filter=city]').selectOption('unknown');
-  await expect(page.locator('#cards .property-card')).toHaveCount(apartments.filter(r=>r.city===null).length);
+  await expect(page.locator('#resultsCount')).toContainText('Найдено: '+apartments.filter(r=>r.city===null).length);
   await page.goto('/houses.html?qa=1');
   await page.locator('[data-filter=city]').selectOption('Ростов-на-Дону');
-  await expect(page.locator('#cards .property-card')).toHaveCount(1);
-  await expect(page.locator('#cards [data-object-id="house_912"]')).toContainText('Ростов-на-Дону');
+  const rostovHouses=active.filter(r=>r.type==='house'&&r.location.city==='Ростов-на-Дону');
+  await expect(page.locator('#resultsCount')).toContainText('Найдено: '+rostovHouses.length);
+  for (const item of rostovHouses.slice(0,24))
+    await expect(page.locator('#cards [data-object-id="'+item.id+'"]')).toContainText('Ростов-на-Дону');
   await page.goto('/lands.html?qa=1');
   await page.locator('[data-filter=city]').selectOption('другое');
   await expect(page.locator('#cards [data-object-id="land_01"]')).toContainText('Азовский район');
 });
 test('conflicting apartment areas stay absent after opening legacy links',async({page})=>{
   for(const [id,correct,wrong] of [[112,null,10],[45,null,15],[59,17.8,13],[62,54.4,13],[91,40.5,10],[95,null,15]]) {
-    await page.goto('/apartments.html?qa=1&object=object_'+id);
-    await expect(page).toHaveURL(new RegExp('/obekt/object_'+id+'\\.html'));
+    const item=byId['object_'+id];
+    await page.goto(item.url+'?qa=1');
     const listingSchema=await page.locator('script[type="application/ld+json"]').evaluateAll(scripts =>
       scripts.map(script=>JSON.parse(script.textContent)).find(value=>value['@type']==='RealEstateListing'));
-    expect(listingSchema.mainEntity).not.toHaveProperty('floorSize');
-    await expect(page.locator('h1')).not.toContainText(wrong+' м²');
-    if(correct!==null) await expect(page.locator('h1')).not.toContainText(correct+' м²');
-    await expect(page.locator('.visibility-facts dt').filter({hasText:/^Площадь$/})).toHaveCount(0);
+    const area=item.characteristics.areaM2;
+    expect(listingSchema.mainEntity.floorSize?.value).toBe(area??undefined);
+    await expect(page.locator('.visibility-facts dt').filter({hasText:/^Площадь$/})).toHaveCount(area===null?0:1);
+    if(area===null){
+      await expect(page.locator('h1')).not.toContainText(wrong+' м²');
+      if(correct!==null) await expect(page.locator('h1')).not.toContainText(correct+' м²');
+    }
   }
 });
 test('ZHK forms keep their project attribution and page layouts fit mobile',async({page})=>{

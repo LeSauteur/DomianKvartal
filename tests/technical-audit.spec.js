@@ -19,6 +19,7 @@ function field(payload,name) {
   const escaped=name.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
   return payload.match(new RegExp('name="'+escaped+'"\\r?\\n\\r?\\n([^\\r\\n]*)'))?.[1];
 }
+const {active}=require('./catalog-fixture');
 for(const width of [390,1440])test('honest catalog actions and local project cards at '+width,async({page},info)=>{
   await page.setViewportSize({width,height:900});
   await page.goto('/?qa=1');
@@ -26,14 +27,15 @@ for(const width of [390,1440])test('honest catalog actions and local project car
   await expect(catalogLink).toHaveText(/Каталог квартир\s+Открыть/);
   await catalogLink.click();
   await expect(page).toHaveURL(/apartments\.html.*#catalog/);
-  await expect(page.locator('#resultsCount')).toContainText('Найдено: 130');
+  const expected=active.filter(item=>item.type==='apartment').map(item=>item.id);
+  await expect(page.locator('#resultsCount')).toContainText('Найдено: '+expected.length);
   const cards=page.locator('#cards .property-card');
-  await expect(cards).toHaveCount(24);
-  for (const count of [48,72,96,120,130]) {
+  await expect(cards).toHaveCount(Math.min(24,expected.length));
+  for (let shown=24;shown<expected.length;shown+=24) {
     await page.locator('.catalog-load-more').click();
-    await expect(cards).toHaveCount(count);
+    await expect(cards).toHaveCount(Math.min(shown+24,expected.length));
   }
-  expect(new Set(await cards.evaluateAll(items=>items.map(item=>item.dataset.objectId))).size).toBe(130);
+  expect((await cards.evaluateAll(items=>items.map(item=>item.dataset.objectId))).sort()).toEqual(expected.sort());
   await expect(page.locator('.catalog-load-more')).toBeHidden();
   await expect(page.locator('.unified-property-search')).toHaveAttribute('href','#filters');
   await page.goto('/newbuilds.html?qa=1');

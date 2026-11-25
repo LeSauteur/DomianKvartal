@@ -4,7 +4,7 @@
   "scripts": {
     "build:catalog": "npm run build && node scripts/sync-pages.mjs",
     "check:indexation": "node _tools/check-audit-indexation.mjs --live",
-    "test": "node --test tests/*.test.mjs",
+    "test": "node scripts/test-current.mjs",
     "test:browser": "playwright test",
     "seo:audit": "node _tools/seo-audit.mjs",
     "qa": "npm run qa:static && npm run test:browser",

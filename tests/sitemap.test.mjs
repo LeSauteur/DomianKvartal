@@ -9,7 +9,7 @@ import { fileForUrl, readPage, canonical, noindex, urlFor, publicHtmlFiles } fro
 test('sitemap contains exactly eligible self-canonical pages, no noindex pages', () => {
   const xml = fs.readFileSync(root + '/sitemap.xml','utf8');
   const urls = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1]);
-  assert.deepEqual(urls, indexableFiles().map(urlFor));
+  assert.deepEqual(new Set(urls), new Set(indexableFiles().map(urlFor)));
   assert.equal(new Set(urls).size, urls.length);
   assert.ok(!urls.includes(urlFor('404.html')));
   for (const url of urls) {

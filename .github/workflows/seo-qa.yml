@@ -21,6 +21,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run qa:static
+      - run: npm run check:parity
       - uses: actions/jekyll-build-pages@v1
         with:
           source: ./

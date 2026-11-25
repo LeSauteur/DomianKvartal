@@ -151,13 +151,16 @@ test("empty fields and an invalid phone never create a request", async ({ page }
   expect(goals.filter((event) => event.goal === "lead_form_submit_attempt")).toHaveLength(0);
 });
 
+const { byId } = require("./catalog-fixture");
+const objectCases = ["object_1013", "house_914", "land_01"].map(id => {
+  const item = byId[id];
+  return [item.url, "buy", "object_page", [id, item.type, item.title, item.price === null ? "" : String(item.price)]];
+});
 for (const [pathname, leadType, sourceCta, object] of [
   ["/index.html", "buy", "contact_form"],
   ["/sell-apartment.html", "sell", "sell_apartment_form"],
   ["/property-valuation.html", "valuation", "valuation_form"],
-  ["/obekt/object_1013.html", "buy", "object_page", ["object_1013", "apartment", "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У", "8800000"]],
-  ["/obekt/house_914.html", "buy", "object_page", ["house_914", "house", "Дом 125 м² — Аксайский район, Российский", "11500000"]],
-  ["/obekt/land_01.html", "buy", "object_page", ["land_01", "land", "Участок 6 сот. — Азовский район, Городище", ""]]
+  ...objectCases
 ]) {
   test(`release payload and consent on ${pathname}`, async ({ page }) => {
     const network = await mockExternalRequests(page);

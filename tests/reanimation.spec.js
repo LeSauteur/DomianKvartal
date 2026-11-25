@@ -1,4 +1,5 @@
 const { test, expect } = require("./captcha-fixture");
+const { active } = require("./catalog-fixture");
 test.use({ screenshot: 'off', trace: 'off' });
 test.beforeEach(async ({ page }) => {
   await page.route('**/*', route => {
@@ -8,7 +9,7 @@ test.beforeEach(async ({ page }) => {
 });
 test('filter, object, direct link, back and object CTA preserve identity', async ({ page }) => {
   await page.goto('/apartments.html?qa=1');
-  await expect(page.locator('#resultsCount')).toContainText('Найдено: '+require('../data/catalog/registry.json').filter(r => r.type === 'apartment').length);
+  await expect(page.locator('#resultsCount')).toContainText('Найдено: '+active.filter(r => r.type === 'apartment').length);
   await expect(page.locator('#cards')).not.toContainText(/(?:905|901|100) комн/);
   await page.locator('[data-filter="priceMax"]').fill('5000000');
   const card = page.locator('#cards .property-card').first();
