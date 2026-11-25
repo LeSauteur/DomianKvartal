@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 import { objectPage } from '../_tools/build-object-pages.mjs';
+import { lf } from '../src/page-contract.mjs';
 import { objectGalleryAssets, siteThemeLink } from '../src/site-theme.mjs';
 
 const read = file => JSON.parse(fs.readFileSync(file,'utf8'));
@@ -27,13 +28,13 @@ test('MAX listings retain approved prices, unique local media and exclude unconf
       assert.equal(bytes.subarray(8,12).toString(),'WEBP');
       assert.ok(!hashes.has(sha),media.path); hashes.add(sha);
     }
-    const html=fs.readFileSync('obekt/'+record.id+'.html','utf8');
+    const html=lf(fs.readFileSync('obekt/'+record.id+'.html','utf8'));
     assert.match(html,/class="visibility-description"/);
     assert.match(html,/class="h-captcha"/);
     assert.doesNotMatch(html,/oneme\.ru/);
     const enhancement=objectGalleryAssets+siteThemeLink;
     assert.equal(html.split(enhancement).length,2,'Expected one approved theme and gallery inclusion');
-    assert.equal(html.replace(enhancement+'</head>','</head>'),objectPage(r));
+    assert.equal(html.replace(enhancement+'</head>','</head>'),lf(objectPage(r)));
   }
   assert.equal(hashes.size,77);
   const yantar=registry.find(r=>r.id==='house_915');

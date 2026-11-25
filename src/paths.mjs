@@ -10,7 +10,10 @@ export const origin = 'https://domian-161.ru';
 export const hashAlgorithm = 'sha256';
 
 export function inside(parent, relative) {
-  const target = path.resolve(parent, relative);
+  if (path.posix.isAbsolute(relative) || path.win32.isAbsolute(relative) || /^[a-z]:/i.test(relative)) {
+    throw new Error(`Path escapes its directory: ${relative}`);
+  }
+  const target = path.resolve(parent, relative.replaceAll('\\', '/'));
   const rel = path.relative(parent, target);
   if (!rel || rel === '..' || rel.startsWith(`..${path.sep}`) || path.isAbsolute(rel)) {
     throw new Error(`Path escapes its directory: ${relative}`);
