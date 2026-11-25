@@ -1,5 +1,5 @@
 const {test,expect,LOCAL_ORIGIN}=require("./captcha-fixture");
-const {active,byId,displayPrice}=require('./catalog-fixture');
+const {active,byId,displayPrice,chooseActive}=require('./catalog-fixture');
 test.beforeEach(async({page})=>{
   await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.fulfill({status:204,body:''}));
 });
@@ -122,11 +122,13 @@ test('static category links and object facts remain available without JavaScript
   const page=await context.newPage();
   await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.fulfill({status:204,body:''}));
   await page.goto(LOCAL_ORIGIN+'/apartments.html');
-  await expect(page.locator('[data-registry-id="object_910"] a')).toHaveAttribute('href','/obekt/object_910.html');
-  await page.locator('[data-registry-id="object_910"] a').click();
-  await expect(page.locator('h1')).toHaveText(/Квартира.*36 м².*Ростов-на-Дону/);
-  await expect(page.locator('h1')).not.toContainText('object_910');
-  await expect(page.locator('.visibility-price')).toHaveText('Цена по запросу');
+  const item=chooseActive('object_910',item=>item.type==='apartment');
+  const link=page.locator('.visibility-static-links [data-registry-id="'+item.id+'"] a');
+  await expect(link).toHaveAttribute('href',item.url);
+  await link.click();
+  await expect(page.locator('h1')).toHaveText(item.title);
+  await expect(page.locator('h1')).not.toContainText(item.id);
+  await expect(page.locator('.visibility-price')).toHaveText(displayPrice(item.price));
   await context.close();
 });
 test('category retains canonical and old links reach the real canonical object page',async({page})=>{
@@ -171,7 +173,10 @@ test('city filters preserve unknown locations and expose Rostov and Azov accurat
     await expect(page.locator('#cards [data-object-id="'+item.id+'"]')).toContainText('Ростов-на-Дону');
   await page.goto('/lands.html?qa=1');
   await page.locator('[data-filter=city]').selectOption('другое');
-  await expect(page.locator('#cards [data-object-id="land_01"]')).toContainText('Азовский район');
+  const lands=active.filter(r=>r.type==='land'&&r.location.city&&!['Аксай','Аксайский район','Ростов-на-Дону'].includes(r.location.city));
+  await expect(page.locator('#resultsCount')).toContainText('Найдено: '+lands.length);
+  const azov=lands.find(r=>r.location.city==='Азовский район');
+  if(azov&&lands.length<=24) await expect(page.locator('#cards [data-object-id="'+azov.id+'"]')).toContainText('Азовский район');
 });
 test('conflicting apartment areas stay absent after opening legacy links',async({page})=>{
   for(const [id,correct,wrong] of [[112,null,10],[45,null,15],[59,17.8,13],[62,54.4,13],[91,40.5,10],[95,null,15]]) {

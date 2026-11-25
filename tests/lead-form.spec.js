@@ -151,7 +151,7 @@ test("empty fields and an invalid phone never create a request", async ({ page }
   expect(goals.filter((event) => event.goal === "lead_form_submit_attempt")).toHaveLength(0);
 });
 
-const { byId } = require("./catalog-fixture");
+const { byId, aksaySelection } = require("./catalog-fixture");
 const objectCases = ["object_1013", "house_914", "land_01"].map(id => {
   const item = byId[id];
   return [item.url, "buy", "object_page", [id, item.type, item.title, item.price === null ? "" : String(item.price)]];
@@ -221,8 +221,9 @@ test("valid submission sends once, includes attribution, and redirects only on c
   const network = await mockExternalRequests(page, { delay: 80 });
   const sourceUrl = "/seo/kvartiry-loc-aksay.html?utm_source=audit&utm_medium=test&utm_campaign=lead&utm_content=card&utm_term=aksay";
   await openPage(page, sourceUrl);
-  await page.getByRole("link", { name: /Связаться по объекту object_01/ }).click();
-  await page.waitForURL(/\/obekt\/object_01\.html#lead-form-section$/);
+  const item = aksaySelection('apartment','object_01');
+  await page.getByRole("link", { name: "Связаться по объекту " + item.id, exact: true }).click();
+  await page.waitForURL(url=>url.pathname===item.url&&url.hash==='#lead-form-section');
   await expect(page.locator("#lead-name")).toBeFocused();
 
   await fillValidForm(page, { phone: "89991234567" });
@@ -248,7 +249,7 @@ test("valid submission sends once, includes attribution, and redirects only on c
   expect(payload).toContain('name="utm_content"');
   expect(payload).toContain('name="utm_term"');
   expect(payload).toContain('name="object_id"');
-  expect(payload).toContain("object_01");
+  expect(payload).toContain(item.id);
   expect(payload).toContain('name="object_title"');
   expect(payload).toContain('name="lead_type"');
   expect(payload).toContain('name="source_cta"');

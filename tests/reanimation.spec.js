@@ -1,5 +1,5 @@
 const { test, expect } = require("./captcha-fixture");
-const { active } = require("./catalog-fixture");
+const { active, chooseActive } = require("./catalog-fixture");
 test.use({ screenshot: 'off', trace: 'off' });
 test.beforeEach(async ({ page }) => {
   await page.route('**/*', route => {
@@ -45,8 +45,9 @@ test('first source survives internal navigation and is included with an anonymou
     payload = route.request().postData();
     await route.fulfill({status:200,contentType:'application/json',body:'{"success":true}'});
   });
-  await page.goto('/apartments.html?qa=1&utm_source=audit&utm_medium=test&utm_campaign=route&object=object_905', {referer:'https://yandex.ru/search/?text=not-stored'});
-  await expect(page).toHaveURL(/\/obekt\/object_905\.html\?/);
+  const item=chooseActive('object_905',item=>item.type==='apartment');
+  await page.goto('/apartments.html?qa=1&utm_source=audit&utm_medium=test&utm_campaign=route&object='+item.id, {referer:'https://yandex.ru/search/?text=not-stored'});
+  await expect(page).toHaveURL(url=>url.pathname===item.url);
   await page.waitForFunction(() => Boolean(window.domianAttribution));
   const initial = await page.evaluate(() => window.domianAttribution.get());
   expect(new URL(initial.first_landing).pathname).toBe('/apartments.html');
@@ -66,7 +67,7 @@ test('first source survives internal navigation and is included with an anonymou
   await expect(page).toHaveURL(/thanks\.html\?qa=1/, { timeout: 10000 });
   for (const field of ['first_landing','initial_referrer','session_id','lead_id','utm_source','source_cta','object_id','object_url','is_test']) expect(payload).toContain('name="' + field + '"');
   expect(payload).toContain(initial.session_id);
-  expect(payload).toContain('object_905');
+  expect(payload).toContain(item.id);
   expect(payload).not.toContain('not-stored');
   expect(counters).toEqual([]);
 });
@@ -120,10 +121,12 @@ test('lazy catalog photos load on scroll and gallery still changes the photo', a
 
 test('a recent listing outside the old index still opens its own details', async ({ page }) => {
   await page.setViewportSize({width:390,height:844});
-  await page.goto('/apartments.html?qa=1&object=object_914');
-  await expect(page).toHaveURL(/\/obekt\/object_914\.html/);
-  await expect(page.locator('form[data-lead-form]')).toHaveAttribute('data-object-id','object_914');
-  await expect(page.locator('[data-listing-description]')).toContainText('66 м²');
-  await expect(page.locator('.visibility-facts div').filter({hasText:'Комнаты'}).locator('dd')).toHaveText('3');
+  const oldIndex=new Set(require('../objects/index.json'));
+  const item=chooseActive('object_914',item=>item.type==='apartment'&&!oldIndex.has(item.id)&&item.characteristics.rooms!==null);
+  await page.goto('/apartments.html?qa=1&object='+item.id);
+  await expect(page).toHaveURL(url=>url.pathname===item.url);
+  await expect(page.locator('form[data-lead-form]')).toHaveAttribute('data-object-id',item.id);
+  await expect(page.locator('[data-listing-description]')).toHaveText(item.description.replace(/\s+/g,' '),{useInnerText:true});
+  await expect(page.locator('.visibility-facts div').filter({hasText:'Комнаты'}).locator('dd')).toHaveText(String(item.characteristics.rooms));
   expect(new URL(page.url()).searchParams.has('object')).toBe(false);
 });

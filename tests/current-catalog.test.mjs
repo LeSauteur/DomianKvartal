@@ -27,7 +27,7 @@ test('every published record has exactly one page with current metadata, facts, 
     assert.deepEqual([...page.plansHtml.matchAll(/<img\b[^>]*src="([^"]+)"/g)].map(match => decodeHtml(match[1])), item.floorPlans);
     assert.ok(item.floorPlans.every(plan => !page.gallery.some(photo => photo.src === plan)), item.id);
     assert.equal(decodeHtml(page.descriptionHtml.replaceAll('<br>', '\n').replaceAll('</p><p>', '\n\n').replace(/<[^>]+>/g,'')),
-      'Описание' + item.description.replace(/\n\s*\n/g, '\n\n'), item.id);
+      item.description ? 'Описание' + item.description.replace(/\n\s*\n/g, '\n\n') : '', item.id);
     const listing = page.structuredData.find(node => node['@type'] === 'RealEstateListing');
     const breadcrumb = page.structuredData.find(node => node['@type'] === 'BreadcrumbList').itemListElement.at(-1);
     assert.deepEqual([breadcrumb.name,breadcrumb.item], [item.title,item.seo.canonical]);
@@ -40,6 +40,12 @@ test('every published record has exactly one page with current metadata, facts, 
       assert.equal(actual, value === null ? undefined : value+(label==='Участок'?' сот.':' м²'), item.id+': '+label);
     }
     assert.equal(listing.mainEntity.floorSize?.value,item.type === 'land' ? undefined : facts.areaM2 ?? undefined);
+    assert.equal(listing.mainEntity.numberOfRooms,item.type === 'land' ? undefined : facts.rooms ?? undefined);
+    assert.deepEqual(listing.mainEntity.image,item.images.map(photo=>new URL(photo.src,item.seo.canonical).href));
+    for (const [label,value] of [['Комнаты',facts.rooms],['Этаж',facts.floor],['Этажей в доме',facts.floors]]) {
+      assert.equal(page.introHtml.match(new RegExp('<dt>'+label+'</dt><dd>([^<]+)</dd>'))?.[1],
+        value===null ? undefined : String(value),item.id+': '+label);
+    }
     assert.equal(listing.offers?.price, active(item) ? item.price ?? undefined : undefined);
     if (listing.offers) assert.equal(listing.offers.priceCurrency, item.currency);
     assert.equal(listing.offers?.availability, listing.offers && item.availability.confirmation === 'confirmed' ? 'https://schema.org/InStock' : undefined);
@@ -68,6 +74,8 @@ test('current feeds publish active listings only, with matching values and no du
       assert.ok(['catalog','home',categories[item.type]].includes(section),row.id);
       assert.deepEqual([row.url,row.type,row.title,row.price,row.priceCurrency,row.fullDescription,row.statusLabel,row.images,row.floor_plans??[]],
         [item.url,item.type,item.title,item.price,item.currency,item.description,item.availability.label,item.images.map(photo=>photo.src),item.floorPlans],row.id);
+      assert.deepEqual([row.city,row.district,row.settlement,row.address,row.availabilityStatus],
+        [item.location.city,item.location.district,item.location.settlement,item.location.address,item.availability.confirmation],row.id);
       assert.deepEqual(row.features, {
         rooms:item.characteristics.rooms, area:item.characteristics.areaM2, livingArea:item.characteristics.livingAreaM2,
         kitchenArea:item.characteristics.kitchenAreaM2, floor:item.characteristics.floor,
