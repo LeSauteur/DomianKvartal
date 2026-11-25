@@ -6,3 +6,13 @@ test-results/
 tmp/
 **/__pycache__/
 *.pyc
+
+/dist/
+/dist-*/
+/_site/
+/.jekyll-cache/
+/output/listing-test-*/
+/output/drafts/
+/output/build-report.json
+/output/site-validation.json
+/output/pages-artifact-files.json

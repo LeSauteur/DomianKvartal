@@ -6,10 +6,12 @@ import { writeGenerated } from './write-generated.mjs';
 import { normalizeRecord, finalizeDescriptions, publicFacts, heading, metaDescription } from './catalog-presentation.mjs';
 export const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = p => JSON.parse(fs.readFileSync(path.join(root, p), "utf8").replace(/^\uFEFF/, ""));
-const write = (p, value) => writeGenerated(path.join(root,p), typeof value === "string" ? value : JSON.stringify(value, null, 2) + "\n");
 export const csv = value => '"' + String(value ?? "").replace(/[ \t]+$/gm,'').replaceAll('"','""') + '"';
 const feeds = ["output/apartments/new-objects.json", "output/houses/new-objects.json", "output/lands/new-objects.json", "output/home/new-objects.json"];
-export function buildRegistry() {
+export function buildRegistry({ writeFiles = true } = {}) {
+  const write = (p, value) => {
+    if (writeFiles) writeGenerated(path.join(root,p), typeof value === "string" ? value : JSON.stringify(value, null, 2) + "\n");
+  };
   // Immutable migration evidence; generated feeds must never erase conflicts.
   const snapshotPath = "data/catalog/source-feeds.json";
   if (!fs.existsSync(path.join(root,snapshotPath))) write(snapshotPath, Object.fromEntries(feeds.map(p=>[p,read(p)])));

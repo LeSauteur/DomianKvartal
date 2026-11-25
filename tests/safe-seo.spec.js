@@ -99,6 +99,10 @@ test("homepage and team photos preserve their intended rendered proportions", as
     await page.setViewportSize({ width, height: 900 });
     await page.goto("/?qa=1", { waitUntil: "networkidle" });
 
+    await page.locator(".leadership img").evaluate(image => {
+      image.loading = "eager";
+      return image.decode();
+    });
     const homepageRatios = await page.evaluate((mobile) => {
       const ratio = (selector) => {
         const rect = document.querySelector(selector).getBoundingClientRect();
@@ -109,6 +113,8 @@ test("homepage and team photos preserve their intended rendered proportions", as
         story: ratio(".photo-block img"),
         team: ratio(".about img"),
         leadership: ratio(".leadership img"),
+        leadershipNatural: document.querySelector(".leadership img").naturalWidth / document.querySelector(".leadership img").naturalHeight,
+        leadershipFit: getComputedStyle(document.querySelector(".leadership img")).objectFit,
         expectedStory: mobile ? 16 / 10 : 4 / 3,
         expectedPortrait: mobile ? 16 / 10 : 3 / 4
       };
@@ -117,7 +123,8 @@ test("homepage and team photos preserve their intended rendered proportions", as
     expect(homepageRatios.construction).toBeCloseTo(16 / 10, 1);
     expect(homepageRatios.story).toBeCloseTo(homepageRatios.expectedStory, 1);
     expect(homepageRatios.team).toBeCloseTo(homepageRatios.expectedPortrait, 1);
-    expect(homepageRatios.leadership).toBeCloseTo(homepageRatios.expectedPortrait, 1);
+    expect(homepageRatios.leadership).toBeCloseTo(homepageRatios.leadershipNatural, 1);
+    expect(homepageRatios.leadershipFit).toBe("contain");
 
     await page.goto("/team/zukhra-alieva.html?qa=1", { waitUntil: "networkidle" });
     const teamLayout = await page.evaluate(() => {

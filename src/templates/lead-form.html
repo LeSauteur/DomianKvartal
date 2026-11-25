@@ -1,0 +1,32 @@
+<section class="form-section" id="lead-form-section" aria-labelledby="lead-form-title"><div class="container form-container"><h2 id="lead-form-title">Оставьте заявку</h2><p>Мы свяжемся с вами и уточним детали.</p><form id="lead-form" method="POST" data-lead-form data-source-cta="object_page" data-lead-type="buy" data-object-id="{{ID}}" data-object-type="{{TYPE}}" data-object-title="{{H1}}"{{PRICE_ATTRIBUTE}} data-object-url="{{CANONICAL}}">
+            <input type="checkbox" name="botcheck" style="display:none" aria-hidden="true">
+            <div class="form-group ">
+                <label class="form-label" for="lead-name">Ваше имя</label>
+                <input id="lead-name" type="text" name="name" placeholder="Иван" class="form-control" autocomplete="name" minlength="2" maxlength="80" required>
+            </div>
+            <div class="form-group ">
+                <label class="form-label" for="lead-phone">Телефон</label>
+                <input id="lead-phone" type="tel" name="phone" placeholder="+7 999 123-45-67" class="form-control" autocomplete="tel" inputmode="tel" maxlength="24" required>
+            </div>
+            <div class="form-group ">
+                <label class="form-label" for="lead-email">Email <span>(по желанию)</span></label>
+                <input id="lead-email" type="email" name="email" placeholder="name@example.ru" class="form-control" autocomplete="email" maxlength="120">
+            </div>
+            <div class="form-group ">
+                <label class="form-label" for="lead-service">Чем помочь</label>
+                <select id="lead-service" name="service" class="form-control" required>
+                    <option value="" disabled>Выберите услугу</option>
+                    <option value="buy" selected>Покупка недвижимости</option>
+                    <option value="sell">Продажа недвижимости</option>
+                    <option value="rent">Аренда недвижимости</option>
+                    <option value="mortgage">Оформление ипотеки</option>
+                    <option value="consultation">Консультация</option>
+                </select>
+            </div>
+            <div class="h-captcha" data-captcha="true" data-size="compact"></div><div class="form-consent ">
+                <input id="lead-privacy-consent" type="checkbox" name="privacy_consent" value="accepted" required>
+                <label for="lead-privacy-consent">Я даю <a href="/personal-data-consent.html" target="_blank" rel="noopener noreferrer">согласие на обработку персональных данных</a></label>
+            </div><p class="form-consent-note">Перед отправкой формы ознакомьтесь с <a href="/privacy.html" target="_blank" rel="noopener noreferrer">Политикой обработки персональных данных</a>.</p>
+            <p class="form-status" data-form-status role="status" aria-live="polite" hidden></p>
+            <button type="submit" class="submit-btn ">Получить консультацию</button>
+        </form></div></section>

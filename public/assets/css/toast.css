@@ -1,0 +1,41 @@
+/* Toast Notifications */
+.toast {
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%) translateY(20px);
+    background: rgba(17, 24, 39, 0.95);
+    color: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms ease, transform 200ms ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.toast.is-on {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+    .toast {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        transform: translateY(20px);
+        border-radius: 12px;
+        font-size: 13px;
+        padding: 10px 16px;
+    }
+
+    .toast.is-on {
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Иллюстративное фото для витринной карточки">
+  <rect width="1200" height="900" fill="#eef1ec"/>
+  <rect x="90" y="90" width="1020" height="720" rx="28" fill="#ffffff" stroke="#cbd7cc" stroke-width="4"/>
+  <text x="120" y="180" font-family="Arial, sans-serif" font-size="44" fill="#263126">Витринная подборка</text>
+  <text x="120" y="250" font-family="Arial, sans-serif" font-size="34" fill="#526052">Готовый семейный дом</text>
+  <text x="120" y="310" font-family="Arial, sans-serif" font-size="30" fill="#6c796c">Аксай, микрорайон Алексеево</text>
+  <text x="120" y="700" font-family="Arial, sans-serif" font-size="24" fill="#7b887b">Фото-заглушка. Заменить на иллюстративную визуализацию.</text>
+</svg>

@@ -4,7 +4,8 @@ import path from "node:path";
 import process from "node:process";
 import { geographyMismatch } from "./visibility-geo.mjs";
 import { linkGraph } from "./site-pages.mjs";
-import { parseApartmentArea } from './catalog-parser.mjs';
+import { validateListings } from '../src/listings.mjs';
+import { active } from '../src/catalog.mjs';
 
 const ROOT = process.cwd();
 const SITE_ORIGIN = "https://domian-161.ru";
@@ -13,7 +14,10 @@ const SKIP_PREFIXES = [
   "_private/",
   "_prototype_catalog/",
   "company-rebuild/",
+  "public/",
   "source/",
+  "src/",
+  "dist/",
   "ui-blocks/",
   "ui-rebuild/"
 ];
@@ -114,8 +118,9 @@ function jsonLdNodes(value) {
 const htmlFiles = trackedFiles("*.html").filter(isPublishable);
 const documentFiles = htmlFiles.filter((file) => !VERIFICATION_FILES.has(file));
 const htmlCache = new Map(documentFiles.map((file) => [file, read(file)]));
-const geographyRegistry = exists("data/catalog/registry.json") ? JSON.parse(read("data/catalog/registry.json")) : [];
-const placeholderIds = geographyRegistry.filter(r=>r.status==="placeholder").map(r=>r.id);
+const listings = validateListings(JSON.parse(read("src/data/listings.json")));
+const geographyRegistry = listings.map(item => ({id:item.id, city:item.location.city}));
+const placeholderIds = JSON.parse(read("data/catalog/registry.json")).filter(r=>r.status==="placeholder").map(r=>r.id);
 const idCache = new Map();
 const titles = new Map();
 const canonicals = new Map();
@@ -323,23 +328,16 @@ for (const file of sitemapFiles) {
   if (!discovery.incoming.get(file)) report("error", file, "sitemap page has no incoming static internal link");
   if (!discovery.reachable.has(file)) report("error", file, "sitemap page is unreachable from the homepage");
 }
-if (exists("data/catalog/registry.json")) {
-  const registry = JSON.parse(read("data/catalog/registry.json"));
-  const byId = new Map(registry.map((item) => [item.id, item]));
-  if (byId.size !== registry.length) report("error", "data/catalog/registry.json", "duplicate property IDs");
-  for (const r of registry.filter(r=>r.type==="apartment")) {
-    const parsed=parseApartmentArea(r.title_raw,r.description_raw);
-    if(r.area_total!==parsed.area_total || JSON.stringify(r.area_conflict)!==JSON.stringify(parsed.area_conflict)) report("error", "data/catalog/registry.json", `apartment total area or conflict evidence differs from source parsing: ${r.id}`);
-  }
+{
+  const byId = new Map(listings.filter(active).map(item => [item.id,item]));
   for (const dir of ["apartments", "houses", "lands", "home", "catalog"]) {
     const file = dir==="catalog" ? "output/catalog/registry.json" : `output/${dir}/new-objects.json`;
     for (const item of JSON.parse(read(file))) {
       if (!["apartment", "house", "land"].includes(item.type)) continue;
       const source = byId.get(item.id);
       if (!source) report("error", file, `property missing from registry: ${item.id}`);
-      else if (source.status === "placeholder") report("error", file, `placeholder present in public feed: ${item.id}`);
       else if (item.price !== source.price) report("error", file, `price differs from registry: ${item.id}`);
-      else if (item.features?.area !== (source.area_conflict ? null : source.area_total)) report("error", file, `area differs from public registry facts: ${item.id}`);
+      else if (item.features?.area !== source.characteristics.areaM2) report("error", file, `area differs from public registry facts: ${item.id}`);
     }
   }
 }

@@ -1,4 +1,17 @@
 exclude:
+  - public/
+  - src/
+  - scripts/
+  - dist/
+  - dist-next-*/
+  - node_modules/
+  - playwright-report/
+  - test-results/
+  - output/drafts/
+  - output/listing-test-*/
+  - output/build-report.json
+  - output/site-validation.json
+  - output/pages-artifact-files.json
   - VISIBILITY_PROGRESS.md
   - START.md
   - START_NEWBUILDS_CHAT.md

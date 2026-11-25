@@ -1,0 +1,680 @@
+[
+  {
+    "schemaVersion": 1,
+    "id": "object_1013",
+    "type": "apartment",
+    "url": "/obekt/object_1013.html",
+    "published": true,
+    "title": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У",
+    "description": "Продаётся 2-комнатная квартира с дизайнерским ремонтом в ЖК «Вишнёвый сад», г. Аксай, ул. Ленина, 40У.\n\nКвартира полностью готова к жизни.\n\nВыполнен качественный дизайнерский ремонт.\n\nВся мебель и техника остаются.\n\nПосудомоечная машина.\n\nСтиральная машина.\n\nМикроволновая печь.\n\nЭтаж: 7 из 9.\n\nДизайнерский ремонт.\n\nИндивидуальное отопление.\n\nТёплый пол.\n\nДва балкона (один остеклён).\n\nГрузовой лифт в доме.\n\nИнтернет уже подключён и проведён.\n\nО жилом комплексе.\n\n«Вишнёвый сад» — стильный современный комплекс, где всё под рукой.\n\nМагазины и супермаркеты.\n\nСпортивные клубы и секции для детей и взрослых.\n\nБлагоустроенная территория.\n\nВсё, что нужно для комфортной жизни, — в пешей доступности.\n\nРасположение и транспорт.\n\nУдобная транспортная развязка — быстрый выезд в сторону Ростова-на-Дону и в любую точку Аксая.\n\nПарковочные места рядом с домом, не нужно крутить круги в поисках места.\n\nМолодой семье, паре или тем, кто хочет сразу заехать в готовое жильё без вложений в ремонт, мебель и технику.\n\nКвартира полностью укомплектована и не требует никаких дополнительных расходов.",
+    "price": 8800000,
+    "currency": "RUB",
+    "location": {
+      "city": "Аксай",
+      "settlement": null,
+      "district": null,
+      "address": "ул. Ленина, 40У",
+      "precision": "city"
+    },
+    "characteristics": {
+      "areaM2": null,
+      "livingAreaM2": null,
+      "kitchenAreaM2": null,
+      "rooms": 2,
+      "floor": 7,
+      "floors": 9,
+      "landAreaSot": null
+    },
+    "availability": {
+      "status": "active",
+      "label": "В каталоге",
+      "confirmation": "unverified",
+      "verifiedAt": null,
+      "verifiedBy": null
+    },
+    "images": [
+      {
+        "src": "/assets/images/listings/object_1013/01.webp",
+        "alt": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У — фото 1",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/object_1013/02.webp",
+        "alt": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У — фото 2",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/object_1013/03.webp",
+        "alt": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У — фото 3",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/object_1013/04.webp",
+        "alt": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У — фото 4",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/object_1013/05.webp",
+        "alt": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У — фото 5",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/object_1013/06.webp",
+        "alt": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У — фото 6",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/object_1013/07.webp",
+        "alt": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У — фото 7",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/object_1013/08.webp",
+        "alt": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У — фото 8",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/object_1013/09.webp",
+        "alt": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У — фото 9",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/object_1013/10.webp",
+        "alt": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У — фото 10",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/object_1013/11.webp",
+        "alt": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У — фото 11",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/object_1013/12.webp",
+        "alt": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У — фото 12",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/object_1013/13.webp",
+        "alt": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У — фото 13",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/object_1013/14.webp",
+        "alt": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У — фото 14",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/object_1013/15.webp",
+        "alt": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У — фото 15",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/object_1013/16.webp",
+        "alt": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У — фото 16",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/object_1013/17.webp",
+        "alt": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У — фото 17",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/object_1013/18.webp",
+        "alt": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У — фото 18",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/object_1013/19.webp",
+        "alt": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У — фото 19",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "floorPlans": [
+      "/assets/images/listings/object_1013/plan.webp"
+    ],
+    "seo": {
+      "title": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У — 8 800 000 ₽ | Домиан Квартал",
+      "description": "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У. 8 800 000 ₽. Продаётся 2-комнатная квартира с дизайнерским ремонтом в ЖК «Вишнёвый сад», г. Аксай, ул. Ленина, 40У… · № 1013.",
+      "canonical": "https://domian-161.ru/obekt/object_1013.html",
+      "robots": null
+    },
+    "contentUpdatedAt": "2026-11-05",
+    "migration": {
+      "sourceId": "object_1013",
+      "sourcePath": "objects/object_1013/data.json",
+      "publicationApproval": {
+        "date": "2026-11-03",
+        "basis": "owner-decision",
+        "scope": "continued-publication",
+        "note": "Решение владельца от 03.11.2026 о сохранении всех опубликованных объявлений; не индивидуальный осмотр или независимая проверка."
+      },
+      "issues": [],
+      "photoFolderMismatch": false
+    }
+  },
+  {
+    "schemaVersion": 1,
+    "id": "house_914",
+    "type": "house",
+    "url": "/obekt/house_914.html",
+    "published": true,
+    "title": "Дом 125 м² — Аксайский район, Российский",
+    "description": "Предлагаем готовый кирпичный дом 125 кв. м на участке 5,5 соток — в центре посёлка, рядом школы, детсады, магазины.\n\n3 спальни + просторная кухня-гостиная с выходом на террасу и во двор — удобно жить и принимать гостей.\n\n2 санузла — без утренней суеты и очередей.\n\nОтдельная котельная — надёжно, тихо, безопасно.\n\nТерраса — место для семейных чаепитий и закатов.\n\nПодвал, где можно хранить весь необходимый инвентарь.\n\nПредчистовая отделка — можно быстро переходить к финишу.\n\nШтукатурка стен.\n\nСтяжка и тёплые полы (кроме спален).\n\nРазведены электрика и сантехника.\n\nУстановлен двухконтурный котёл — тепло и горячая вода круглый год.\n\nУчасток 5,5 соток: хватит на детскую площадку, грядки и зону отдыха.\n\nВсе коммуникации подключены.\n\nПродажа от застройщика.",
+    "price": 11500000,
+    "currency": "RUB",
+    "location": {
+      "city": "Аксайский район",
+      "settlement": "Российский",
+      "district": "Аксайский район",
+      "address": null,
+      "precision": "district"
+    },
+    "characteristics": {
+      "areaM2": 125,
+      "livingAreaM2": null,
+      "kitchenAreaM2": null,
+      "rooms": null,
+      "floor": null,
+      "floors": null,
+      "landAreaSot": 5.5
+    },
+    "availability": {
+      "status": "active",
+      "label": "В каталоге",
+      "confirmation": "unverified",
+      "verifiedAt": null,
+      "verifiedBy": null
+    },
+    "images": [
+      {
+        "src": "/assets/images/listings/house_914/01.webp",
+        "alt": "Дом 125 м² — Аксайский район, Российский — фото 1",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_914/02.webp",
+        "alt": "Дом 125 м² — Аксайский район, Российский — фото 2",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_914/03.webp",
+        "alt": "Дом 125 м² — Аксайский район, Российский — фото 3",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_914/04.webp",
+        "alt": "Дом 125 м² — Аксайский район, Российский — фото 4",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_914/05.webp",
+        "alt": "Дом 125 м² — Аксайский район, Российский — фото 5",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_914/06.webp",
+        "alt": "Дом 125 м² — Аксайский район, Российский — фото 6",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_914/07.webp",
+        "alt": "Дом 125 м² — Аксайский район, Российский — фото 7",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_914/08.webp",
+        "alt": "Дом 125 м² — Аксайский район, Российский — фото 8",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_914/09.webp",
+        "alt": "Дом 125 м² — Аксайский район, Российский — фото 9",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_914/10.webp",
+        "alt": "Дом 125 м² — Аксайский район, Российский — фото 10",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "floorPlans": [],
+    "seo": {
+      "title": "Дом 125 м² — Аксайский район, Российский — 11 500 000 ₽ | Домиан Квартал",
+      "description": "Дом 125 м² — Аксайский район, Российский. 11 500 000 ₽. Предлагаем готовый кирпичный дом 125 кв. м на участке 5,5 соток — в центре посёлка, рядом школы, детсады… · № 914.",
+      "canonical": "https://domian-161.ru/obekt/house_914.html",
+      "robots": null
+    },
+    "contentUpdatedAt": "2026-11-05",
+    "migration": {
+      "sourceId": "house_914",
+      "sourcePath": "output/houses/house_914/data.json",
+      "publicationApproval": {
+        "date": "2026-11-03",
+        "basis": "owner-decision",
+        "scope": "continued-publication",
+        "note": "Решение владельца от 03.11.2026 о сохранении всех опубликованных объявлений; не индивидуальный осмотр или независимая проверка."
+      },
+      "issues": [],
+      "photoFolderMismatch": false
+    }
+  },
+  {
+    "schemaVersion": 1,
+    "id": "land_01",
+    "type": "land",
+    "url": "/obekt/land_01.html",
+    "published": true,
+    "title": "Участок 6 сот. — Азовский район, Городище",
+    "description": "Продается два участка в живописном по 6 соток в хуторе Городище, ул. Солнечная 33 и 35, ИЖС, соседи живут, улица заселена, коммуникации по меже.",
+    "price": null,
+    "currency": "RUB",
+    "location": {
+      "city": "Азовский район",
+      "settlement": "Городище",
+      "district": "Азовский район",
+      "address": null,
+      "precision": "district"
+    },
+    "characteristics": {
+      "areaM2": null,
+      "livingAreaM2": null,
+      "kitchenAreaM2": null,
+      "rooms": null,
+      "floor": null,
+      "floors": null,
+      "landAreaSot": 6
+    },
+    "availability": {
+      "status": "active",
+      "label": "В каталоге",
+      "confirmation": "unverified",
+      "verifiedAt": null,
+      "verifiedBy": null
+    },
+    "images": [
+      {
+        "src": "https://domian-161.ru/lands/land_01/img_01.jpg",
+        "alt": "Участок 6 сот. — Азовский район, Городище — фото 1",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "https://domian-161.ru/lands/land_01/img_02.jpg",
+        "alt": "Участок 6 сот. — Азовский район, Городище — фото 2",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "https://domian-161.ru/lands/land_01/img_03.jpg",
+        "alt": "Участок 6 сот. — Азовский район, Городище — фото 3",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "https://domian-161.ru/lands/land_01/img_04.jpg",
+        "alt": "Участок 6 сот. — Азовский район, Городище — фото 4",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "https://domian-161.ru/lands/land_01/img_05.jpg",
+        "alt": "Участок 6 сот. — Азовский район, Городище — фото 5",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "https://domian-161.ru/lands/land_01/img_06.jpg",
+        "alt": "Участок 6 сот. — Азовский район, Городище — фото 6",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "https://domian-161.ru/lands/land_01/img_07.jpg",
+        "alt": "Участок 6 сот. — Азовский район, Городище — фото 7",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "https://domian-161.ru/lands/land_01/img_08.jpg",
+        "alt": "Участок 6 сот. — Азовский район, Городище — фото 8",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "https://domian-161.ru/lands/land_01/img_09.jpg",
+        "alt": "Участок 6 сот. — Азовский район, Городище — фото 9",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "floorPlans": [],
+    "seo": {
+      "title": "Участок 6 сот. — Азовский район, Городище — Цена по запросу | Домиан Квартал",
+      "description": "Участок 6 сот. — Азовский район, Городище. Цена по запросу. Продается два участка в живописном по 6 соток в хуторе Городище, ул. Солнечная 33 и 35, ИЖС, соседи живут… · № 1.",
+      "canonical": "https://domian-161.ru/obekt/land_01.html",
+      "robots": null
+    },
+    "contentUpdatedAt": "2026-11-05",
+    "migration": {
+      "sourceId": "land_01",
+      "sourcePath": "lands/land_01/data.json",
+      "publicationApproval": {
+        "date": "2026-11-03",
+        "basis": "owner-decision",
+        "scope": "continued-publication",
+        "note": "Решение владельца от 03.11.2026 о сохранении всех опубликованных объявлений; не индивидуальный осмотр или независимая проверка."
+      },
+      "issues": [
+        {
+          "field": "price",
+          "reason": "conflicting_values",
+          "values": [
+            1700000,
+            950000
+          ]
+        }
+      ],
+      "photoFolderMismatch": false
+    }
+  },
+  {
+    "schemaVersion": 1,
+    "id": "object_904",
+    "type": "apartment",
+    "url": "/obekt/object_904.html",
+    "published": true,
+    "title": "Квартира 1 комн., этаж 9 — Ростов-на-Дону",
+    "description": "Квартира находится на 9 этаже 10-этажного монолитного дома 2005 года постройки.\n\nВысокие потолки 2,7 м создают ощущение простора и лёгкости.\n\nСовмещённый санузел, есть просторная лоджия.\n\nХороший ремонт и продаётся с мебелью.\n\nОкна выходят на улицу — много света и отличный вид.\n\nДля комфорта — пассажирский лифт и наземная парковка.\n\nРасположение в районе с развитой инфраструктурой.\n\nБыстрая продажа без обременений.\n\nОб объекте Тип объекта Квартира Количество комнат 1 ком.",
+    "price": 4700000,
+    "currency": "RUB",
+    "location": {
+      "city": "Ростов-на-Дону",
+      "settlement": null,
+      "district": null,
+      "address": null,
+      "precision": "city"
+    },
+    "characteristics": {
+      "areaM2": null,
+      "livingAreaM2": 20,
+      "kitchenAreaM2": 8.8,
+      "rooms": 1,
+      "floor": 9,
+      "floors": 10,
+      "landAreaSot": null
+    },
+    "availability": {
+      "status": "active",
+      "label": "В каталоге",
+      "confirmation": "unverified",
+      "verifiedAt": null,
+      "verifiedBy": null
+    },
+    "images": [
+      {
+        "src": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/main.jpg",
+        "alt": "Квартира 1 комн., этаж 9 — Ростов-на-Дону — фото 1",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/01.jpg",
+        "alt": "Квартира 1 комн., этаж 9 — Ростов-на-Дону — фото 2",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/02.jpg",
+        "alt": "Квартира 1 комн., этаж 9 — Ростов-на-Дону — фото 3",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/03.jpg",
+        "alt": "Квартира 1 комн., этаж 9 — Ростов-на-Дону — фото 4",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/04.jpg",
+        "alt": "Квартира 1 комн., этаж 9 — Ростов-на-Дону — фото 5",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/05.jpg",
+        "alt": "Квартира 1 комн., этаж 9 — Ростов-на-Дону — фото 6",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/06.jpg",
+        "alt": "Квартира 1 комн., этаж 9 — Ростов-на-Дону — фото 7",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/07.jpg",
+        "alt": "Квартира 1 комн., этаж 9 — Ростов-на-Дону — фото 8",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/08.jpg",
+        "alt": "Квартира 1 комн., этаж 9 — Ростов-на-Дону — фото 9",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/09.jpg",
+        "alt": "Квартира 1 комн., этаж 9 — Ростов-на-Дону — фото 10",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/10.jpg",
+        "alt": "Квартира 1 комн., этаж 9 — Ростов-на-Дону — фото 11",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "floorPlans": [],
+    "seo": {
+      "title": "Квартира 1 комн., этаж 9 — Ростов-на-Дону — 4 700 000 ₽ | Домиан Квартал",
+      "description": "Квартира 1 комн., этаж 9 — Ростов-на-Дону. 4 700 000 ₽. Квартира находится на 9 этаже 10-этажного монолитного дома 2005 года постройки. Высокие потолки 2,7 м создают… · № 904.",
+      "canonical": "https://domian-161.ru/obekt/object_904.html",
+      "robots": null
+    },
+    "contentUpdatedAt": "2026-11-05",
+    "migration": {
+      "sourceId": "object_904",
+      "sourcePath": "objects/object_904/data.json",
+      "publicationApproval": {
+        "date": "2026-11-03",
+        "basis": "owner-decision",
+        "scope": "continued-publication",
+        "note": "Решение владельца от 03.11.2026 о сохранении всех опубликованных объявлений; не индивидуальный осмотр или независимая проверка."
+      },
+      "issues": [
+        {
+          "field": "area_total",
+          "reason": "ambiguous_description",
+          "values": [
+            40,
+            39.8
+          ]
+        }
+      ],
+      "photoFolderMismatch": true
+    }
+  },
+  {
+    "schemaVersion": 1,
+    "id": "house_915",
+    "type": "house",
+    "url": "/obekt/house_915.html",
+    "published": true,
+    "title": "Дом 3 комн., 118 м² — Аксайский район, Янтарный",
+    "description": "Новый одноэтажный кирпичный дом 2025 года в посёлке Янтарный (Аксайский район) — построен, готов к отделке под ваш стиль.\n\nОбщая площадь с террасой — 118 м², участок — 5 соток под ИЖС.\n\nВнешний вид — строгий и современный, таких в Янтарном единицы.\n\nСтены из клинкерного кирпича — надёжность на десятилетия.\n\nГрафитовая мягкая кровля — тихо и без забот.\n\nОкна в профиле 70 мм с двойным стеклопакетом — тепло зимой, прохладно летом.\n\nПросторная кухня-гостиная.\n\nХозяйская спальня с гардеробной.\n\nТерраса с выходом во двор.\n\nНа участке и рядом.\n\nВъезд и парковка на 3 автомобиля.\n\nАсфальтированная дорога прямо к дому.\n\nДо остановки общественного транспорта — 600 м пешком.\n\nРядом магазин, аптека, детский сад и школа.\n\nДо города — 4 км.\n\nПодберу и другие варианты домов, коттеджей и участков в Аксайском районе, если этот не подойдёт.",
+    "price": null,
+    "currency": "RUB",
+    "location": {
+      "city": "Аксайский район",
+      "settlement": "Янтарный",
+      "district": "Аксайский район",
+      "address": null,
+      "precision": "district"
+    },
+    "characteristics": {
+      "areaM2": 118,
+      "livingAreaM2": null,
+      "kitchenAreaM2": null,
+      "rooms": 3,
+      "floor": null,
+      "floors": null,
+      "landAreaSot": 5
+    },
+    "availability": {
+      "status": "active",
+      "label": "В каталоге",
+      "confirmation": "unverified",
+      "verifiedAt": null,
+      "verifiedBy": null
+    },
+    "images": [
+      {
+        "src": "/assets/images/listings/house_915/01.webp",
+        "alt": "Дом 3 комн., 118 м² — Аксайский район, Янтарный — фото 1",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_915/02.webp",
+        "alt": "Дом 3 комн., 118 м² — Аксайский район, Янтарный — фото 2",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_915/03.webp",
+        "alt": "Дом 3 комн., 118 м² — Аксайский район, Янтарный — фото 3",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_915/04.webp",
+        "alt": "Дом 3 комн., 118 м² — Аксайский район, Янтарный — фото 4",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_915/05.webp",
+        "alt": "Дом 3 комн., 118 м² — Аксайский район, Янтарный — фото 5",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_915/06.webp",
+        "alt": "Дом 3 комн., 118 м² — Аксайский район, Янтарный — фото 6",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_915/07.webp",
+        "alt": "Дом 3 комн., 118 м² — Аксайский район, Янтарный — фото 7",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_915/08.webp",
+        "alt": "Дом 3 комн., 118 м² — Аксайский район, Янтарный — фото 8",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_915/09.webp",
+        "alt": "Дом 3 комн., 118 м² — Аксайский район, Янтарный — фото 9",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_915/10.webp",
+        "alt": "Дом 3 комн., 118 м² — Аксайский район, Янтарный — фото 10",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_915/11.webp",
+        "alt": "Дом 3 комн., 118 м² — Аксайский район, Янтарный — фото 11",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_915/12.webp",
+        "alt": "Дом 3 комн., 118 м² — Аксайский район, Янтарный — фото 12",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_915/13.webp",
+        "alt": "Дом 3 комн., 118 м² — Аксайский район, Янтарный — фото 13",
+        "width": 800,
+        "height": 600
+      },
+      {
+        "src": "/assets/images/listings/house_915/14.webp",
+        "alt": "Дом 3 комн., 118 м² — Аксайский район, Янтарный — фото 14",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "floorPlans": [],
+    "seo": {
+      "title": "Дом 3 комн., 118 м² — Аксайский район, Янтарный — Цена по запросу | Домиан Квартал",
+      "description": "Дом 3 комн., 118 м² — Аксайский район, Янтарный. Цена по запросу. Новый одноэтажный кирпичный дом 2025 года в посёлке Янтарный (Аксайский район) — построен, готов к… · № 915.",
+      "canonical": "https://domian-161.ru/obekt/house_915.html",
+      "robots": null
+    },
+    "contentUpdatedAt": "2026-11-05",
+    "migration": {
+      "sourceId": "house_915",
+      "sourcePath": "output/houses/house_915/data.json",
+      "publicationApproval": {
+        "date": "2026-11-03",
+        "basis": "owner-decision",
+        "scope": "continued-publication",
+        "note": "Решение владельца от 03.11.2026 о сохранении всех опубликованных объявлений; не индивидуальный осмотр или независимая проверка."
+      },
+      "issues": [],
+      "photoFolderMismatch": false
+    }
+  }
+]

@@ -93,8 +93,10 @@ test('reviewed apartment areas and every area conflict appear in the owner CSV a
   }
 });
 test("registry is deterministic, retains conflicting evidence and covers feed IDs",()=>{
-  const first=buildRegistry(), bytes=fs.readFileSync(root+"/data/catalog/registry.json","utf8");
-  assert.deepEqual(buildRegistry(),first);
+  const bytes=fs.readFileSync(root+"/data/catalog/registry.json","utf8");
+  const first=buildRegistry({writeFiles:false});
+  assert.deepEqual(buildRegistry({writeFiles:false}),first);
+  assert.deepEqual(first,JSON.parse(bytes));
   assert.equal(fs.readFileSync(root+"/data/catalog/registry.json","utf8"),bytes);
   const r=first.find(x=>x.id==="object_910");
   assert.equal(r.price,null); assert.equal(r.photo_folder_mismatch,true);

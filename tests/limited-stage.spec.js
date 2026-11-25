@@ -1,5 +1,6 @@
 const newbuildCount=require('../output/newbuilds/catalog-v3.json').item_count;
 const { test, expect, LOCAL_ORIGIN } = require("./captcha-fixture");
+const { aksaySelection } = require("./catalog-fixture");
 
 const THANKS_KEY = "domian_thanks_category";
 const THANKS_WRITE_LOG = "__test_thanks_category_writes";
@@ -16,19 +17,19 @@ const CATEGORY_CASES = [
   {
     category: "apartment",
     source: "/seo/kvartiry-loc-aksay.html",
-    cta: 'a[aria-label="Связаться по объекту object_01"]',
+    cta: 'a[aria-label="Связаться по объекту '+aksaySelection('apartment','object_01').id+'"]',
     guides: [GUIDE_URLS.apartment, GUIDE_URLS.newbuild, GUIDE_URLS.land]
   },
   {
     category: "house",
     source: "/seo/doma-loc-aksay.html",
-    cta: 'a[aria-label="Связаться по объекту house_14"]',
+    cta: 'a[aria-label="Связаться по объекту '+aksaySelection('house','house_14').id+'"]',
     guides: [GUIDE_URLS.house, GUIDE_URLS.houseArea, GUIDE_URLS.land]
   },
   {
     category: "land",
     source: "/seo/uchastki-loc-aksay.html",
-    cta: 'a[aria-label="Связаться по объекту land_03"]',
+    cta: 'a[aria-label="Связаться по объекту '+aksaySelection('land','land_03').id+'"]',
     guides: [GUIDE_URLS.land, GUIDE_URLS.house, GUIDE_URLS.houseArea]
   },
   {

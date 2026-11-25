@@ -16,10 +16,13 @@ const excludedDirectories = new Set([
   "_private",
   "_prototype_catalog",
   "company-rebuild",
+  "dist",
   "node_modules",
   "output",
   "playwright-report",
+  "public",
   "source",
+  "src",
   "test-results",
   "ui-blocks",
   "ui-rebuild"
@@ -93,7 +96,7 @@ test("every production lead form uses a separate required unchecked consent", ()
     }
   }
 
-  assert.equal(count, 43 + JSON.parse(fs.readFileSync(path.join(root, 'data/catalog/registry.json'), 'utf8')).filter(r=>r.status!=='placeholder').length + (fs.existsSync(path.join(root, 'data/zhk/aksay.json')) ? JSON.parse(fs.readFileSync(path.join(root, 'data/zhk/aksay.json'), 'utf8')).filter(r => r.publish).length : 0));
+  assert.equal(count, 43 + JSON.parse(fs.readFileSync(path.join(root, 'src/data/listings.json'), 'utf8')).filter(r=>r.published).length + (fs.existsSync(path.join(root, 'data/zhk/aksay.json')) ? JSON.parse(fs.readFileSync(path.join(root, 'data/zhk/aksay.json'), 'utf8')).filter(r => r.publish).length : 0));
   assert.deepEqual(failures, []);
 });
 

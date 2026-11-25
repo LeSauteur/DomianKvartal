@@ -1,7 +1,7 @@
 const newbuildCount=require('../output/newbuilds/catalog-v3.json').item_count;
 const {test,expect}=require('./captcha-fixture');
 const fs=require('node:fs'),path=require('node:path');
-const records=require('../output/catalog/registry.json');
+const {active,byId}=require('./catalog-fixture');
 test.beforeEach(async({page,baseURL})=>{
   await page.route('**/*',route=>{
     const url=new URL(route.request().url());
@@ -23,8 +23,8 @@ for(const width of [390,1440])test(`updated apartment, house and land remain rea
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   for(const id of ['object_1013','house_914','land_10']){
     await page.goto(baseURL+'/obekt/'+id+'.html?qa=1');
-    await expect(page.locator('[data-listing-status]')).toHaveText('В каталоге');
-    await expect(page.locator('[data-listing-description]')).toContainText(records.find(r=>r.id===id).fullDescription.replace(/\s+/g,' '),{useInnerText:true});
+    await expect(page.locator('[data-listing-status]')).toHaveText(byId[id].availability.label);
+    await expect(page.locator('[data-listing-description]')).toContainText(byId[id].description.replace(/\s+/g,' '),{useInnerText:true});
     await expect(page.locator('h1')).toBeVisible();
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
     const image=page.locator('.visibility-gallery img').first();await image.scrollIntoViewIfNeeded();
@@ -35,17 +35,19 @@ for(const width of [390,1440])test(`updated apartment, house and land remain rea
   }
   expect(errors).toEqual([]);await context.close();
 });
-test('geography filters retain named regions and the modal uses the public description and status',async({page})=>{
+test('geography filters retain named regions and listing details preserve the public description and status',async({page})=>{
   await page.goto('/apartments.html?qa=1');
-  const expected=records.filter(r=>r.type==='apartment'&&r.city&&!['Аксай','Аксайский район','Ростов-на-Дону'].includes(r.city));
+  const expected=active.filter(r=>r.type==='apartment'&&r.location.city&&!['Аксай','Аксайский район','Ростов-на-Дону'].includes(r.location.city));
   await page.locator('[data-filter="city"]').selectOption('другое');
-  await expect(page.locator('#cards .property-card')).toHaveCount(expected.length);
+  await expect(page.locator('#resultsCount')).toContainText('Найдено: '+expected.length);
   expect(expected.length).toBeGreaterThan(0);
-  await page.locator('#cards .property-card').first().locator('.property-card__cta').click();
-  await expect(page.locator('#modal')).toBeVisible();
-  await expect(page.locator('#modal [data-listing-status]')).toHaveText('В каталоге');
-  const id=new URL(page.url()).searchParams.get('object');
-  await expect(page.locator('#modalDesc')).toHaveText(records.find(r=>r.id===id).fullDescription);
+  const card=page.locator('#cards .property-card').first();
+  const id=await card.getAttribute('data-object-id');
+  expect(expected.some(r=>r.id===id)).toBe(true);
+  await card.locator('.property-card__cta').click();
+  await expect(page.locator('form[data-lead-form]')).toHaveAttribute('data-object-id',id);
+  await expect(page.locator('[data-listing-status]')).toHaveText('В каталоге');
+  await expect(page.locator('[data-listing-description]')).toContainText(byId[id].description.replace(/\s+/g,' '),{useInnerText:true});
 });
 
 test('marketing copy stays clean in desktop and mobile rendered pages',async({page},info)=>{

@@ -231,19 +231,28 @@
    * Инициализация chips/filter
    */
   function initChips() {
-    var chipContainers = document.querySelectorAll('.ub-pills[role="tablist"]');
+    var chipContainers = document.querySelectorAll('.ub-pills');
     
     chipContainers.forEach(function(container) {
-      container.addEventListener('click', function(e) {
-        var chip = e.target.closest('.ub-chip');
-        if (!chip) return;
-
-        var chips = container.querySelectorAll('.ub-chip');
-        chips.forEach(function(c) {
-          c.classList.remove('is-active');
+      var track = container.parentElement.querySelector('.ub-cards--offers');
+      var chips = Array.from(container.querySelectorAll('button[data-chip]'));
+      if (!track || !chips.length) return;
+      function apply(selected) {
+        chips.forEach(function(chip) {
+          chip.classList.toggle('is-active',chip===selected);
+          chip.setAttribute('aria-pressed',String(chip===selected));
         });
-        chip.classList.add('is-active');
+        Array.from(track.querySelectorAll('[data-cat]')).forEach(function(card) {
+          card.hidden=card.dataset.cat!==selected.dataset.chip;
+          card.style.display=card.hidden?'none':'';
+        });
+        track.scrollLeft=0;
+      }
+      container.addEventListener('click', function(e) {
+        var chip = e.target.closest('button[data-chip]');
+        if (chip) apply(chip);
       });
+      apply(chips.find(function(chip) {return chip.classList.contains('is-active');})||chips[0]);
     });
   }
 

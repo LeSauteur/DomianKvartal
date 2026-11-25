@@ -65,12 +65,13 @@ test('published descriptions and underlying listing evidence survive the technic
   }
 });
 test('local selection cards link directly to every matching published registry property',()=>{
+  const current=JSON.parse(read('src/data/listings.json'));
   for(const [file,type,cities] of [
     ['kvartiry','apartment',['Аксай']],['doma','house',['Аксай','Аксайский район']],['uchastki','land',['Аксай']]
   ]) {
     const html=read('seo/'+file+'-loc-aksay.html');
     const ids=[...html.matchAll(/<article\b[^>]*data-registry-id="([^"]+)"/g)].map(m=>m[1]);
-    assert.deepEqual(ids,records.filter(r=>r.type===type&&r.status==='active'&&cities.includes(r.city)).map(r=>r.id));
+    assert.deepEqual(ids,current.filter(r=>r.type===type&&r.published&&r.availability.status==='active'&&cities.includes(r.location.city)).map(r=>r.id));
     assert.ok(html.includes('В подборке объектов: '+ids.length+'.'));
     for(const id of ids) assert.ok(html.includes('/obekt/'+id+'.html#lead-form-section'));
   }
