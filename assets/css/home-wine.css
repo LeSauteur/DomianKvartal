@@ -1,0 +1,340 @@
+@import url("./photo-thumbnails.css");
+
+/* Homepage theme. The original sections retain their order and content. */
+.wine-home .ui-blocks-wrapper {
+  --ub-bg: var(--bg-main);
+  --ub-surface: var(--bg-surface);
+  --ub-surface-2: var(--bg-soft);
+  --ub-text: var(--text-main);
+  --ub-muted: var(--text-muted);
+  --ub-border: var(--border-soft);
+  --ub-shadow: var(--shadow-card);
+  --ub-accent: var(--accent);
+  --ub-accent-2: var(--accent-soft);
+  --ub-blue: var(--accent);
+}
+
+.wine-home:not(.catalog-page):not(.static-page) .hero.hero-stage12,
+html[data-theme="dark"] .wine-home:not(.catalog-page):not(.static-page) .hero.hero-stage12,
+.wine-home main :is(.stage12-workspace, .unified-property-nav, .family-mortgage, .buyer-paths, .home-construction, .home-flow-services, .home-flow-trust, .home-flow-office, .home-flow-team, .home-flow-personal, .contact) {
+  background: var(--bg-main) !important;
+}
+
+.wine-home main :is(.home-flow-object-zone, .home-flow-principle, .home-flow-social, .home-seller, #mortgage, .form-section) {
+  background: var(--bg-soft) !important;
+}
+
+.wine-home .footer-cta {
+  background:
+    linear-gradient(90deg, #47152b40, #47152b1a),
+    url("../hero/footer.jpg") center / cover no-repeat !important;
+}
+
+.wine-home .footer-cta::before {
+  background: none;
+}
+
+.wine-home .footer-cta :is(h2, p) {
+  color: var(--text-main);
+  text-shadow: none;
+}
+
+.wine-home .footer-cta-badge {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.wine-home .hero-stage12 .stage12-hero__left,
+html[data-theme="dark"] .wine-home .hero-stage12 .stage12-hero__left {
+  background:
+    linear-gradient(90deg, #47152b 0%, #47152b 32%, #47152bee 44%, #47152b80 65%, #47152b17 100%),
+    url("../images/home-stage12/hero-interior.webp") center / cover no-repeat;
+  border-color: var(--wine-deep);
+  border-radius: var(--wine-radius);
+  box-shadow: none;
+}
+
+.wine-home .hero-stage12 .stage12-hero__copy h1,
+html[data-theme="dark"] .wine-home .hero-stage12 .stage12-hero__copy h1 {
+  color: var(--wine-cream) !important;
+  font-family: var(--wine-serif);
+  font-weight: 400;
+  font-size: clamp(2.15rem, 5vw, 4.65rem) !important;
+  letter-spacing: -.038em !important;
+  overflow-wrap: break-word;
+}
+
+.wine-home .hero-stage12 .stage12-hero__copy h1 span,
+html[data-theme="dark"] .wine-home .hero-stage12 .stage12-hero__copy h1 span {
+  color: var(--wine-rose) !important;
+  font-family: inherit;
+}
+
+.wine-home .hero-stage12 .stage12-hero__copy p,
+html[data-theme="dark"] .wine-home .hero-stage12 .stage12-hero__copy p {
+  color: var(--wine-cream) !important;
+}
+
+.wine-home main h2,
+.wine-home main .ub-h2 {
+  color: var(--text-main);
+  font-family: var(--wine-serif);
+  font-weight: 400;
+  letter-spacing: -.034em;
+}
+
+.wine-home main .section-title::after { background: var(--accent); }
+.wine-home main :is(.showcase-section__eyebrow, .buyer-paths__eyebrow, .home-construction__head span, .family-mortgage__eyebrow, .family-mortgage__rate, .home-trust__eyebrow, .home-trust__number, .home-construction__all, .property-card__price, .ub-price strong) {
+  color: var(--accent);
+}
+
+.wine-home main :is(.showcase-section__head p, .home-construction__head p, .family-mortgage__copy, .family-mortgage__offer > span, .family-mortgage__terms, .stage12-owner-card p, .stage12-search__text) {
+  color: var(--text-muted) !important;
+}
+
+.wine-home main :is(.stage12-search, .stage12-catalog-preview, .stage12-owner-card, .stage12-post-row strong, .stage12-owner-switch span, .stage12-show-more, .unified-property-nav__item, .family-mortgage__panel, .home-construction__card, .buyer-path, .ub-card, .ub-story, .ub-tile, .ub-chip, .ub-scroller__btn, .ub-qcard, .new-object-card, .hot-offer-card, .showcase-card, .home-trust__process, .partners-card, .benefit, .guarantee-item, .review, .faq-item, .certificate-card, .brand-principle__sides li, .trust-yandex-place__metrics li, .calc, .form-container form, .footer-cta-content) {
+  color: var(--text-main) !important;
+  background: var(--bg-surface) !important;
+  border-color: var(--border-soft) !important;
+  border-radius: var(--wine-radius) !important;
+  box-shadow: var(--shadow-card) !important;
+}
+
+.wine-home main :is(.stage12-safe-row, .brand-principle__panel, .brand-principle__stage, .property-card__price, .property-card__char, .property-card__meta, .calc__result, .trust-yandex-place__badge) {
+  color: var(--text-main);
+  background: var(--bg-soft);
+  border-color: var(--border-soft);
+  box-shadow: none;
+}
+
+.wine-home main :is(.home-seller__card, .trust-yandex-place__card) {
+  background: var(--wine-deep) !important;
+  color: var(--wine-cream) !important;
+  border-color: var(--wine-deep) !important;
+  border-radius: var(--wine-radius) !important;
+  box-shadow: none !important;
+}
+
+.wine-home main :is(.home-seller__card, .trust-yandex-place__content) :is(h2, p) {
+  color: var(--wine-cream) !important;
+}
+
+.wine-home .home-seller__eyebrow { color: var(--wine-rose); }
+.wine-home .trust-yandex-place__badge { border-radius: var(--wine-radius); }
+.wine-home .trust-yandex-place__metrics :is(strong, a),
+.wine-home .trust-yandex-place__badge strong,
+.wine-home .trust-yandex-place__year { color: var(--accent); }
+.wine-home .trust-yandex-place__metrics li:first-child strong { font-size: clamp(1.5rem, 3vw, 2rem); }
+.wine-home .trust-yandex-place__metrics span,
+.wine-home .trust-yandex-place__badge-title { color: var(--text-muted); }
+.wine-home .trust-yandex-place__metrics a { text-decoration: underline; text-underline-offset: .2em; }
+
+.wine-home .unified-property-nav__item { --property-accent: var(--accent); }
+.wine-home .unified-property-nav__item .unified-property-nav__copy em { color: var(--text-muted); }
+.wine-home .featured-photo-link { display: block; position: absolute; inset: 0; }
+.wine-home .ub-card__body { display: block; }
+.wine-home .property-card__gallery-btn { color: var(--wine-deep); }
+
+.wine-home main :is(.btn, .submit-btn, .stage12-search__button, .trust-yandex-place__btn, .buyer-path__primary, .ub-tile__new, .stage12-post-row span, .stage12-owner-switch span.is-active),
+.wine-home main .ui-blocks-wrapper .ub-chip.is-active {
+  color: #fff !important;
+  background: var(--wine-button) !important;
+  border: 1px solid transparent !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+}
+
+.wine-home main :is(.btn, .submit-btn, .stage12-search__button, .trust-yandex-place__btn, .buyer-path__primary):hover,
+.wine-home main .stage12-search:hover .stage12-search__button {
+  background: var(--wine-button-hover) !important;
+  color: #fff !important;
+}
+
+.wine-home main :is(.btn.secondary, .property-card__phone) {
+  color: var(--accent) !important;
+  background: var(--bg-surface) !important;
+  border-color: var(--border-strong) !important;
+}
+
+.wine-home main :is(.stage12-actions, .home-seller__card) .btn,
+.wine-home main .trust-yandex-place__btn {
+  color: #47152b !important;
+  background: var(--wine-cream) !important;
+  border-color: var(--wine-cream) !important;
+}
+
+.wine-home main .stage12-actions .btn.secondary {
+  color: var(--wine-cream) !important;
+  background: var(--wine-deep) !important;
+  border-color: var(--wine-rose) !important;
+}
+
+.wine-home main .stage12-actions .btn:hover,
+.wine-home main .home-seller__card .btn:hover,
+.wine-home main .trust-yandex-place__btn:hover {
+  background: var(--wine-rose) !important;
+  color: #47152b !important;
+}
+
+.wine-home main :is(.form-control, .calc__field input) {
+  color: var(--text-main);
+  background: var(--bg-surface);
+  border-color: var(--border-strong);
+  border-radius: 6px;
+}
+
+.wine-home main :is(.form-control, .calc__field input):focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+.wine-home .calc__result--main {
+  color: #fff !important;
+  background: var(--wine-button) !important;
+}
+
+.wine-home .calc__result--main :is(.calc__result-label, .calc__result-value) { color: #fff !important; }
+.wine-home .family-mortgage__terms { border-color: var(--border-soft); }
+.wine-home .home-construction__card span { color: var(--accent); }
+.wine-home .home-construction__card h3 a { color: var(--text-main); }
+.wine-home .home-construction__card h3 a:hover,
+.wine-home .home-construction__card h3 a:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+.wine-home .home-construction__card p { color: var(--text-muted); }
+
+.wine-home .home-flow-quick-search .ub-qcard__img {
+  height: auto;
+  aspect-ratio: 2 / 1;
+  background: var(--bg-soft);
+}
+.wine-home .home-flow-quick-search .ub-qimg { object-position: center; }
+
+.wine-home .home-flow-services--end .ub-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  padding: clamp(14px, 2vw, 22px);
+}
+.wine-home .home-flow-services--end .ub-tile h3 { padding-right: 60px; }
+.wine-home .home-flow-services--end .ub-tile p {
+  flex: 1;
+  max-width: none;
+  margin: 0;
+}
+.wine-home .home-flow-services--end .ub-tileimg {
+  position: static;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin: 2px 0 0;
+  border: 0;
+  border-radius: 6px;
+  box-shadow: none;
+  object-position: center;
+}
+.wine-home .home-flow-services--end .ub-tile__art { display: none; }
+
+.wine-home :is(#certificates, #lead-form-section) .section-title::after {
+  margin-inline: auto;
+}
+html[data-theme="dark"] .wine-home #certificates .certificate-card {
+  background: var(--bg-surface) !important;
+  border-color: var(--border-soft);
+}
+
+.wine-home #certificates .certificate-card img {
+  height: clamp(230px, 28vw, 310px);
+  padding: 14px;
+  object-fit: contain;
+  object-position: center;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.wine-home #lead-form-section > .form-container {
+  width: min(840px, calc(100% - 32px));
+  max-width: none;
+  margin-inline: auto;
+  padding-inline: 0;
+}
+.wine-home #lead-form-section .form-note {
+  margin: 0 auto clamp(18px, 3vw, 28px);
+  padding-inline: 8px;
+}
+.wine-home #lead-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px 20px;
+  margin: 0;
+  padding: clamp(18px, 4vw, 36px);
+  border: 1px solid var(--border-soft);
+  text-align: left;
+}
+.wine-home #lead-form > :not(.form-group) { grid-column: 1 / -1; }
+.wine-home #lead-form .fade-in {
+  opacity: 1;
+  transform: none;
+}
+.wine-home #lead-form .form-group {
+  min-width: 0;
+  margin: 0;
+}
+.wine-home #lead-form .form-label { margin-bottom: 5px; }
+.wine-home #lead-form .form-control { min-height: 48px; }
+.wine-home #lead-form .h-captcha { margin: 0; }
+.wine-home #lead-form .form-consent {
+  align-items: start;
+  margin: 0;
+}
+.wine-home #lead-form .form-consent input { accent-color: var(--wine-button); }
+.wine-home #lead-form .form-consent-note {
+  margin: 0 0 3px 30px;
+  color: var(--text-muted);
+}
+.wine-home #lead-form .submit-btn { width: auto; justify-self: start; }
+
+.wine-home #team .leadership > img {
+  justify-self: center;
+  width: min(100%, 450px);
+  height: auto;
+  aspect-ratio: auto 3 / 4;
+  object-fit: contain;
+}
+
+html[data-theme="dark"] .wine-home #team .leadership {
+  background: var(--bg-surface) !important;
+  border-color: var(--border-soft);
+}
+
+html[data-theme="dark"] .wine-home #team .leadership-quote {
+  background: var(--bg-soft);
+  color: var(--text-muted);
+}
+
+html[data-theme="dark"] .wine-home :is(#team .leadership-badge, .ui-blocks-wrapper .buyer-path__badge) {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.wine-home .go-top { background: var(--wine-button) !important; }
+
+@media (max-width: 820px) {
+  .wine-home .hero-stage12 .stage12-hero__left,
+  html[data-theme="dark"] .wine-home .hero-stage12 .stage12-hero__left {
+    background:
+      linear-gradient(90deg, #47152bf5, #47152bc9),
+      url("../images/home-stage12/hero-interior.webp") 58% center / cover no-repeat;
+  }
+}
+
+@media (max-width: 620px) {
+  .wine-home #lead-form { grid-template-columns: minmax(0, 1fr); gap: 13px; }
+  .wine-home #lead-form .submit-btn { width: 100%; }
+  .wine-home.wine-lead-in-view :is(.fixed-max, .go-top) { visibility: hidden; }
+}

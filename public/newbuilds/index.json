@@ -1,0 +1,158 @@
+[
+    {
+        "id":  "nb_01",
+        "title":  "ЖК Центральный квартал",
+        "cover":  "img_01.png",
+        "path":  "newbuilds/nb_01"
+    },
+    {
+        "id":  "nb_02",
+        "title":  "ЖК Солнечный",
+        "cover":  "img_01.jpeg",
+        "path":  "newbuilds/nb_02"
+    },
+    {
+        "id":  "nb_03",
+        "title":  "ЖК Южный парк",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_03"
+    },
+    {
+        "id":  "nb_04",
+        "title":  "ЖК Город у реки",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_04"
+    },
+    {
+        "id":  "nb_05",
+        "title":  "ЖК Семейный",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_05"
+    },
+    {
+        "id":  "nb_06",
+        "title":  "ЖК Левобережье",
+        "cover":  "img_01.png",
+        "path":  "newbuilds/nb_06"
+    },
+    {
+        "id":  "nb_07",
+        "title":  "ЖК Вересаево",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_07"
+    },
+    {
+        "id":  "nb_08",
+        "title":  "ЖК Сокол Град",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_08"
+    },
+    {
+        "id":  "nb_09",
+        "title":  "ЖК Персона",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_09"
+    },
+    {
+        "id":  "nb_10",
+        "title":  "ЖК Вишневый сад",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_10"
+    },
+    {
+        "id":  "nb_11",
+        "title":  "ЖК на ул. Ленина",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_11"
+    },
+    {
+        "id":  "nb_12",
+        "title":  "ЖК на ул. Береговой",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_12"
+    },
+    {
+        "id":  "nb_13",
+        "title":  "ЖК Центральный квартал 2",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_13"
+    },
+    {
+        "id":  "nb_14",
+        "title":  "ЖК Солнечный 2",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_14"
+    },
+    {
+        "id":  "nb_15",
+        "title":  "ЖК Южный парк 2",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_15"
+    },
+    {
+        "id":  "nb_16",
+        "title":  "ЖК Город у реки 2",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_16"
+    },
+    {
+        "id":  "nb_17",
+        "title":  "ЖК Семейный 2",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_17"
+    },
+    {
+        "id":  "nb_18",
+        "title":  "ЖК Левобережье 2",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_18"
+    },
+    {
+        "id":  "nb_19",
+        "title":  "ЖК Вересаево 2",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_19"
+    },
+    {
+        "id":  "nb_20",
+        "title":  "ЖК Сокол Град 2",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_20"
+    },
+    {
+        "id":  "nb_21",
+        "title":  "ЖК Персона 2",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_21"
+    },
+    {
+        "id":  "nb_22",
+        "title":  "ЖК Вишневый сад 2",
+        "cover":  "img_01.jpeg",
+        "path":  "newbuilds/nb_22"
+    },
+    {
+        "id":  "nb_23",
+        "title":  "ЖК на ул. Ленина 2",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_23"
+    },
+    {
+        "id":  "nb_24",
+        "title":  "ЖК на ул. Береговой 2",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_24"
+    },
+    {
+        "id":  "nb_25",
+        "title":  "ЖК Центральный квартал 3",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_25"
+    },
+    {
+        "id":  "nb_26",
+        "title":  "ЖК Солнечный 3",
+        "cover":  "img_01.jpg",
+        "path":  "newbuilds/nb_26"
+    }
+]

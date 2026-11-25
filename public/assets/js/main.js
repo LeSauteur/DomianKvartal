@@ -1,0 +1,2263 @@
+(function () {
+  "use strict";
+
+  var CATALOG_TYPES = ["apartments", "houses", "lands", "newbuilds"];
+  var METRIKA_ID = 109303205;
+  var THEME_STORAGE_KEY = "domian-color-theme";
+  var LEAD_CONTEXT_KEY = "domian_lead_context";
+  var UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+  var UTM_STORAGE_PREFIX = "domian_utm_";
+  var ANALYTICS_PARAM_KEYS = [
+    "session_id",
+    "lead_id",
+    "error_category",
+    "page_type",
+    "object_type",
+    "object_id",
+    "source_section",
+    "source_cta",
+    "catalog_type",
+    "filter_name",
+    "card_type",
+    "destination_type",
+    "profile",
+    "interaction",
+    "project_id",
+    "project_name",
+    "builder"
+  ];
+  var MAIN_SCRIPT_URL = document.currentScript && document.currentScript.src ? document.currentScript.src : "";
+  var leadConfigLoading = false;
+  var leadConfigCallbacks = [];
+
+  window.DOMIAN_METRIKA_ID = window.DOMIAN_METRIKA_ID || METRIKA_ID;
+
+  function isAnalyticsDisabled() {
+    var hostname = (window.location.hostname || "").toLowerCase();
+    var qaMode = new URLSearchParams(window.location.search || "").get("qa") === "1";
+    return hostname === "localhost" || hostname === "::1" || /^127(?:\.\d+){3}$/.test(hostname) || qaMode;
+  }
+
+  window.DOMIAN_ANALYTICS_DISABLED = window.DOMIAN_ANALYTICS_DISABLED === true || isAnalyticsDisabled();
+
+  // Owner-controlled rollout: the production default preserves existing behavior.
+  window.DOMIAN_CONSENT_MODE = window.DOMIAN_CONSENT_MODE || "off";
+  var consentMode = window.DOMIAN_CONSENT_MODE === "on";
+  var consentStorageKey = "domian-cookie-choice-v1";
+  var consentChoice = null;
+  try {
+    var savedConsent = window.localStorage.getItem(consentStorageKey);
+    if (savedConsent === "accepted" || savedConsent === "necessary") consentChoice = savedConsent;
+  } catch (_error) { /* The current-page choice still works when storage is unavailable. */ }
+
+  function analyticsConsentGranted() {
+    return !consentMode || consentChoice === "accepted";
+  }
+
+  function initCookieConsent() {
+    if (!consentMode || consentChoice || document.getElementById("domian-cookie-banner")) return;
+    var banner = document.createElement("section");
+    banner.id = "domian-cookie-banner";
+    banner.className = "domian-cookie-banner";
+    banner.setAttribute("aria-label", "Настройки cookie");
+    banner.innerHTML = '<p>Мы используем необходимые хранилища для работы сайта. С вашего согласия подключим Яндекс Метрику для анализа посещений. <a href="/cookies.html">Политика cookie</a></p>'
+      + '<div class="domian-cookie-actions"><button type="button" data-cookie-choice="accepted">Принять</button><button type="button" data-cookie-choice="necessary">Только необходимые</button></div>';
+    banner.addEventListener("click", function (event) {
+      var button = event.target.closest("[data-cookie-choice]");
+      if (!button) return;
+      consentChoice = button.getAttribute("data-cookie-choice");
+      try { window.localStorage.setItem(consentStorageKey, consentChoice); } catch (_error) {}
+      banner.remove();
+      if (consentChoice === "accepted") ensureMetrika();
+    });
+    document.body.appendChild(banner);
+  }
+
+  function ensureMetrika() {
+    var script;
+
+    if (window.DOMIAN_ANALYTICS_DISABLED || !analyticsConsentGranted()) return;
+    if (typeof window.ym === "function") return;
+
+    window.ym = function () {
+      (window.ym.a = window.ym.a || []).push(arguments);
+    };
+    window.ym.l = Date.now();
+
+    script = document.createElement("script");
+    script.async = true;
+    script.src = "https://mc.yandex.ru/metrika/tag.js?id=" + METRIKA_ID;
+    document.head.appendChild(script);
+
+    window.ym(METRIKA_ID, "init", {
+      ssr: true,
+      webvisor: true,
+      clickmap: true,
+      ecommerce: "dataLayer",
+      referrer: document.referrer,
+      url: window.location.href,
+      accurateTrackBounce: true,
+      trackLinks: true
+    });
+    if (attribution) captureMetrikaClientId();
+  }
+
+  ensureMetrika();
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initCookieConsent);
+  else initCookieConsent();
+
+  function persistUtmAttribution() {
+    var params = new URLSearchParams(window.location.search || "");
+
+    UTM_KEYS.forEach(function (key) {
+      var value = params.get(key);
+      if (!value) return;
+
+      try {
+        window.sessionStorage.setItem(UTM_STORAGE_PREFIX + key, value);
+      } catch (error) {
+        // UTM attribution must not block the page.
+      }
+    });
+  }
+
+  persistUtmAttribution();
+
+  function createAnonymousId() {
+    return window.crypto && window.crypto.randomUUID ? window.crypto.randomUUID() : Date.now().toString(36) + '-' + Math.random().toString(36).slice(2);
+  }
+  function cleanAttributionUrl(raw, keepCampaign) {
+    try {
+      var url = new URL(raw, location.href), clean = new URL(url.origin + url.pathname);
+      if (!/^https?:$/.test(url.protocol)) return '';
+      (keepCampaign ? UTM_KEYS.concat(['object', 'qa']) : []).forEach(function (key) {
+        var value = url.searchParams.get(key);
+        if (value) clean.searchParams.set(key, value.slice(0, 256));
+      });
+      return clean.href;
+    } catch (_) { return ''; }
+  }
+  var attributionKey = 'domian_attribution_v1';
+  var attribution;
+  try { attribution = JSON.parse(sessionStorage.getItem(attributionKey) || 'null'); } catch (_) {}
+  var attributionNow = Date.now();
+  var qaSession = new URLSearchParams(location.search).get('qa') === '1';
+  if (!attribution || !attribution.session_id || !attribution.last_seen || attributionNow - attribution.last_seen > 30 * 60 * 1000 || Boolean(attribution.is_test) !== Boolean(window.DOMIAN_ANALYTICS_DISABLED)) {
+    attribution = {session_id:createAnonymousId(), first_landing:cleanAttributionUrl(location.href, true), initial_referrer:document.referrer ? cleanAttributionUrl(document.referrer, false) : '', is_test:Boolean(window.DOMIAN_ANALYTICS_DISABLED)};
+    UTM_KEYS.forEach(function (key) { attribution[key] = (new URLSearchParams(location.search).get(key) || '').slice(0,256); });
+  }
+  attribution.last_seen = attributionNow;
+  function saveAttribution() { try { sessionStorage.setItem(attributionKey, JSON.stringify(attribution)); } catch (_) {} }
+  saveAttribution();
+  window.domianAttribution = { get:function () { return Object.assign({}, attribution); }, createId:createAnonymousId, cleanUrl:cleanAttributionUrl };
+  function captureMetrikaClientId() {
+    if (!window.DOMIAN_ANALYTICS_DISABLED && analyticsConsentGranted() && typeof window.ym === 'function') {
+      window.ym(METRIKA_ID, 'getClientID', function (id) {
+        if (/^\d{1,32}$/.test(String(id))) { attribution.metrika_client_id = String(id); saveAttribution(); }
+      });
+    }
+  }
+  captureMetrikaClientId();
+  // Carry explicit QA mode to internal pages before their analytics initialization.
+  document.addEventListener('click', function (event) {
+    if (!qaSession) return;
+    var link = event.target.closest && event.target.closest('a[href]');
+    if (!link) return;
+    try { var url = new URL(link.href); if (url.origin === location.origin && /\.html$|\/$/.test(url.pathname)) { url.searchParams.set('qa','1'); link.href = url.href; } } catch (_) {}
+  }, true);
+
+
+  function getStoredTheme() {
+    try {
+      return window.localStorage.getItem(THEME_STORAGE_KEY) === "dark" ? "dark" : "light";
+    } catch (_error) {
+      return "light";
+    }
+  }
+
+  function applyTheme(theme) {
+    var isDark = theme === "dark";
+    if (isDark) {
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      document.documentElement.removeAttribute("data-theme");
+    }
+
+    qsa(".theme-toggle").forEach(function (button) {
+      button.setAttribute("aria-pressed", isDark ? "true" : "false");
+      button.setAttribute("aria-label", isDark ? "Включить светлую тему" : "Включить тёмную тему");
+      button.setAttribute("title", isDark ? "Светлая тема" : "Тёмная тема");
+
+      var label = qs(".theme-toggle__label", button);
+      if (label) label.textContent = isDark ? "Светлая тема" : "Тёмная тема";
+    });
+  }
+
+  applyTheme(getStoredTheme());
+
+  function sanitizeAnalyticsParams(params) {
+    var safe = {};
+    if (!params || typeof params !== "object") return safe;
+
+    ANALYTICS_PARAM_KEYS.forEach(function (key) {
+      var value = params[key];
+      if (value == null || value === "") return;
+      safe[key] = String(value).trim().replace(/[^a-zа-яё0-9_-]+/gi, "_").slice(0, 64);
+    });
+    return safe;
+  }
+
+  function safeReachGoal(goal, params, callback) {
+    var safeParams = sanitizeAnalyticsParams(params);
+    try {
+      if (typeof window.DOMIAN_ANALYTICS_TEST_HOOK === "function") {
+        window.DOMIAN_ANALYTICS_TEST_HOOK(goal, safeParams);
+      }
+      if (window.DOMIAN_ANALYTICS_DISABLED || !analyticsConsentGranted()) { if (callback) callback(); return; }
+      if (typeof window.ym === "function") {
+        window.ym(window.DOMIAN_METRIKA_ID || METRIKA_ID, "reachGoal", goal, safeParams, callback);
+      }
+    } catch (error) {
+      // Ignore analytics errors.
+    }
+  }
+
+  window.domianReachGoal = window.domianReachGoal || safeReachGoal;
+
+  function qs(selector, root) {
+    return (root || document).querySelector(selector);
+  }
+
+  function qsa(selector, root) {
+    return Array.prototype.slice.call((root || document).querySelectorAll(selector));
+  }
+
+  function flushLeadConfigCallbacks(config) {
+    var callbacks = leadConfigCallbacks.slice();
+    leadConfigCallbacks = [];
+    callbacks.forEach(function (callback) {
+      callback(config || {});
+    });
+  }
+
+  function withLeadConfig(callback) {
+    var config = window.DOMIAN_LEAD_CONFIG;
+    var script;
+    var configUrl;
+
+    if (config) {
+      callback(config);
+      return;
+    }
+
+    leadConfigCallbacks.push(callback);
+    if (leadConfigLoading) return;
+    leadConfigLoading = true;
+
+    try {
+      configUrl = new URL("lead-config.js", MAIN_SCRIPT_URL || window.location.href).href;
+    } catch (_error) {
+      flushLeadConfigCallbacks({});
+      return;
+    }
+
+    script = document.createElement("script");
+    script.src = configUrl;
+    script.async = true;
+    script.setAttribute("data-domian-lead-config-loader", "");
+    script.addEventListener("load", function () {
+      flushLeadConfigCallbacks(window.DOMIAN_LEAD_CONFIG || {});
+    });
+    script.addEventListener("error", function () {
+      flushLeadConfigCallbacks({});
+    });
+    document.head.appendChild(script);
+  }
+
+  function channelForLink(link) {
+    var explicit = (link.getAttribute("data-channel") || "").toLowerCase();
+    var href = (link.getAttribute("href") || "").toLowerCase();
+
+    if (explicit === "telegram" || explicit === "max") return explicit;
+    if (href.indexOf("t.me") !== -1) return "telegram";
+    if (href.indexOf("max.ru/") !== -1) return "max";
+    return "";
+  }
+
+  function channelLabel(channel) {
+    return {
+      telegram: "Написать Зухре в Telegram",
+      max: "Написать Зухре в MAX"
+    }[channel] || "Открыть мессенджер";
+  }
+
+  function appendChannelGraphic(link, channel, config) {
+    var hiddenLabel = document.createElement("span");
+    var graphic;
+
+    link.textContent = "";
+    hiddenLabel.className = "visually-hidden";
+    hiddenLabel.textContent = channel === "max" ? "MAX" : "Telegram";
+
+    if (channel === "max") {
+      graphic = document.createElement("img");
+      graphic.src = config.maxLogoPath || "/assets/images/max-logo.png";
+      graphic.alt = "";
+      graphic.width = 26;
+      graphic.height = 26;
+      graphic.setAttribute("aria-hidden", "true");
+      graphic.className = "channel-icon__image";
+    } else {
+      graphic = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      graphic.setAttribute("viewBox", "0 0 24 24");
+      graphic.setAttribute("aria-hidden", "true");
+      graphic.setAttribute("focusable", "false");
+      graphic.classList.add("channel-icon__svg");
+
+      if (channel === "telegram") {
+        graphic.innerHTML = '<path fill="currentColor" d="M21.5 3.4 18.4 20c-.2 1.2-.9 1.5-1.9.9l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.8 8.8-8c.4-.3-.1-.5-.6-.2L6.1 14l-4.7-1.5c-1-.3-1-1 .2-1.5L20 3.9c.9-.3 1.7.2 1.5-.5Z"/>';
+      } else {
+        graphic.innerHTML = '<path fill="currentColor" d="M12 2a9.8 9.8 0 0 0-8.4 14.9L2 22l5.2-1.6A9.9 9.9 0 1 0 12 2Zm0 17.9a8 8 0 0 1-4.1-1.1l-.3-.2-3 .9 1-2.9-.2-.3A8 8 0 1 1 12 19.9Zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.1-.3.1-.5 0a6.5 6.5 0 0 1-3.2-2.8c-.2-.3 0-.4.1-.5l.4-.5.2-.5c.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1 0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.8 4.4 3.9.6.2 1.1.4 1.5.5.6.2 1.2.1 1.6.1.5-.1 1.4-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3Z"/>';
+      }
+    }
+
+    link.appendChild(graphic);
+    link.appendChild(hiddenLabel);
+  }
+
+  function enhanceChannelLink(link, channel, config) {
+    var label = channelLabel(channel);
+
+    if (!channel) return;
+
+    link.setAttribute("data-channel", channel);
+    link.setAttribute("aria-label", label);
+    link.setAttribute("title", label);
+    link.classList.add("channel-icon", "channel-icon--" + channel);
+
+    if (channel === "telegram" && config.telegramUrl) {
+      link.href = config.telegramUrl;
+    } else if (channel === "max" && config.maxDirectUrl) {
+      link.href = config.maxDirectUrl;
+      link.setAttribute("data-max-trigger", "");
+    }
+
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+
+    if (link.getAttribute("data-channel-enhanced") !== "1") {
+      appendChannelGraphic(link, channel, config);
+      link.setAttribute("data-channel-enhanced", "1");
+    }
+  }
+
+  function ensureMaxLink(group, config) {
+    var existingChannels = qsa("a[href], a[data-channel]", group);
+    var hasMessenger = existingChannels.some(function (link) {
+      var channel = channelForLink(link);
+      return channel === "telegram";
+    });
+    var hasMax = existingChannels.some(function (link) {
+      return channelForLink(link) === "max";
+    });
+    var link;
+    var vkLink;
+
+    if (!hasMessenger || hasMax || !config.maxDirectUrl) return;
+
+    link = document.createElement("a");
+    link.href = config.maxDirectUrl;
+    link.setAttribute("data-channel", "max");
+    link.setAttribute("data-max-trigger", "");
+    link.textContent = "MAX";
+
+    vkLink = qsa("a[href]", group).find(function (candidate) {
+      return (candidate.getAttribute("href") || "").indexOf("vk.com") !== -1;
+    });
+    group.insertBefore(link, vkLink || null);
+  }
+
+  function enhanceContactChannels(root, config) {
+    var groups = qsa(
+      ".header-contacts, .mobile-drawer__actions, .contact-actions, " +
+      ".agent-contact-channels, .footer-social, .thanks-channels, .form-fallback__channels",
+      root || document
+    );
+
+    groups.forEach(function (group) {
+      group.classList.add("contact-channel-group");
+      ensureMaxLink(group, config);
+      qsa("a[href], a[data-channel]", group).forEach(function (link) {
+        enhanceChannelLink(link, channelForLink(link), config);
+      });
+    });
+  }
+
+  function isMaxDirectMode() {
+    return window.matchMedia &&
+      window.matchMedia("(max-width: 767px), (pointer: coarse)").matches;
+  }
+
+  function createMaxDialog(config) {
+    var dialog = document.createElement("dialog");
+    var panel = document.createElement("div");
+    var close = document.createElement("button");
+    var logo = document.createElement("img");
+    var title = document.createElement("h2");
+    var name = document.createElement("p");
+    var qr = document.createElement("img");
+    var instruction = document.createElement("p");
+    var direct = document.createElement("a");
+
+    dialog.className = "max-dialog";
+    dialog.setAttribute("aria-labelledby", "max-dialog-title");
+    dialog.setAttribute("aria-describedby", "max-dialog-instruction");
+    dialog.setAttribute("data-max-dialog", "");
+
+    panel.className = "max-dialog__panel";
+
+    close.type = "button";
+    close.className = "max-dialog__close";
+    close.setAttribute("aria-label", "Закрыть окно MAX");
+    close.setAttribute("data-max-dialog-close", "");
+    close.textContent = "×";
+
+    logo.className = "max-dialog__logo";
+    logo.src = config.maxLogoPath || "/assets/images/max-logo.png";
+    logo.alt = "MAX";
+    logo.width = 52;
+    logo.height = 52;
+
+    title.id = "max-dialog-title";
+    title.textContent = "Написать Зухре в MAX";
+
+    name.className = "max-dialog__name";
+    name.textContent = "Зухра Алиева";
+
+    qr.className = "max-dialog__qr";
+    qr.src = config.maxQrPath || "/assets/images/max-zukhra-qr.png";
+    qr.alt = "QR-код профиля Зухры Алиевой в MAX";
+    qr.width = 320;
+    qr.height = 320;
+
+    instruction.id = "max-dialog-instruction";
+    instruction.className = "max-dialog__instruction";
+    instruction.textContent = "Отсканируйте QR-код камерой телефона";
+
+    direct.className = "btn max-dialog__direct";
+    direct.href = config.maxDirectUrl;
+    direct.target = "_blank";
+    direct.rel = "noopener noreferrer";
+    direct.setAttribute("data-max-direct", "");
+    direct.textContent = "Открыть MAX";
+
+    panel.appendChild(close);
+    panel.appendChild(logo);
+    panel.appendChild(title);
+    panel.appendChild(name);
+    panel.appendChild(qr);
+    panel.appendChild(instruction);
+    panel.appendChild(direct);
+    dialog.appendChild(panel);
+    document.body.appendChild(dialog);
+    return dialog;
+  }
+
+  function initContactChannels(config) {
+    var dialog;
+    var lastMaxTrigger = null;
+
+    if (!config.maxDirectUrl || !config.telegramUrl) return;
+
+    enhanceContactChannels(document, config);
+    window.domianEnhanceContactChannels = function (root) {
+      enhanceContactChannels(root || document, config);
+    };
+
+    function restorePageAfterDialog() {
+      document.body.classList.remove("max-dialog-open");
+      if (lastMaxTrigger && document.contains(lastMaxTrigger)) {
+        lastMaxTrigger.focus();
+      }
+    }
+
+    function closeDialog() {
+      if (!dialog) return;
+      if (typeof dialog.close === "function" && dialog.open) {
+        dialog.close();
+      } else {
+        dialog.removeAttribute("open");
+        dialog.classList.remove("max-dialog--fallback-open");
+        restorePageAfterDialog();
+      }
+    }
+
+    function openDialog(trigger) {
+      var closeButton;
+
+      dialog = dialog || createMaxDialog(config);
+      lastMaxTrigger = trigger;
+      document.body.classList.add("max-dialog-open");
+
+      if (typeof dialog.showModal === "function") {
+        if (!dialog.open) dialog.showModal();
+      } else {
+        dialog.setAttribute("open", "");
+        dialog.classList.add("max-dialog--fallback-open");
+      }
+
+      closeButton = qs("[data-max-dialog-close]", dialog);
+      window.setTimeout(function () {
+        if (closeButton) closeButton.focus();
+      }, 0);
+    }
+
+    document.addEventListener("click", function (event) {
+      var direct = event.target && event.target.closest ? event.target.closest("[data-max-direct]") : null;
+      var trigger = event.target && event.target.closest ? event.target.closest("[data-max-trigger]") : null;
+
+      if (direct) {
+        safeReachGoal("max_direct_open", analyticsLinkParams(direct));
+        return;
+      }
+
+      if (!trigger) return;
+
+      safeReachGoal("max_click", analyticsLinkParams(trigger));
+      if (isMaxDirectMode()) {
+        safeReachGoal("max_direct_open", analyticsLinkParams(trigger));
+        return;
+      }
+
+      event.preventDefault();
+      safeReachGoal("max_qr_open", analyticsLinkParams(trigger));
+      openDialog(trigger);
+    });
+
+    document.addEventListener("click", function (event) {
+      if (event.target && event.target.closest && event.target.closest("[data-max-dialog-close]")) {
+        closeDialog();
+        return;
+      }
+
+      if (dialog && event.target === dialog) {
+        closeDialog();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      var focusable;
+      var first;
+      var last;
+
+      if (!dialog || !dialog.open) return;
+
+      if (event.key === "Escape" && typeof dialog.close !== "function") {
+        event.preventDefault();
+        closeDialog();
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+      focusable = qsa('button:not([disabled]), a[href], [tabindex]:not([tabindex="-1"])', dialog)
+        .filter(function (element) {
+          return !element.hidden;
+        });
+      if (!focusable.length) return;
+
+      first = focusable[0];
+      last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+
+    document.addEventListener("cancel", function (event) {
+      if (dialog && event.target === dialog) {
+        event.preventDefault();
+        closeDialog();
+      }
+    }, true);
+
+    document.addEventListener("close", function (event) {
+      if (dialog && event.target === dialog) {
+        restorePageAfterDialog();
+      }
+    }, true);
+
+    window.domianMaxDialog = Object.freeze({
+      close: closeDialog,
+      isDirectMode: isMaxDirectMode
+    });
+  }
+
+  function escapeHtml(value) {
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/\"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function normalizeText(value) {
+    return String(value || "").replace(/\u00a0/g, " ").replace(/\s+/g, " ").trim();
+  }
+
+  function truncate(text, maxLength) {
+    var normalized = normalizeText(text);
+    if (normalized.length <= maxLength) {
+      return normalized;
+    }
+    return normalized.slice(0, maxLength).trim() + "...";
+  }
+
+  function toNumber(value) {
+    if (value === null || value === undefined || value === "") {
+      return null;
+    }
+    var normalized = String(value).replace(/\s+/g, "").replace(",", ".");
+    var parsed = Number(normalized);
+    return Number.isFinite(parsed) ? parsed : null;
+  }
+
+  function extractPrice(text) {
+    var source = normalizeText(text).toLowerCase();
+    if (!source) return null;
+
+    var best = null;
+    var unitRegex = /(\d+[\d\s]*(?:[.,]\d+)?)\s*(млн|миллион|тыс|т\.?р|тр|руб|р\.|₽|\u0420\u0458\u0420\u00bb\u0420\u0405|\u0421\u201a\u0421\u2039\u0421\u0455|\u0421\u0402\u0421\u0453\u0420\u00b1)/gi;
+    var unitMatch;
+    while ((unitMatch = unitRegex.exec(source)) !== null) {
+      var base = toNumber(unitMatch[1]);
+      if (base === null) continue;
+      var unit = unitMatch[2];
+      var candidate = base;
+      if (/млн|миллион|рјр»рн/.test(unit)) {
+        candidate = base * 1000000;
+      } else if (/тыс|т\.?р|тр|с‚с‹с/.test(unit)) {
+        candidate = base * 1000;
+      }
+      if (!best || candidate > best) best = candidate;
+    }
+
+    if (best) return Math.round(best);
+
+    var plain = source.match(/цена[^\d]{0,20}(\d[\d\s]{4,}(?:[.,]\d+)?)/i);
+    if (plain) {
+      var direct = toNumber(plain[1]);
+      if (direct && direct > 100000) return Math.round(direct);
+    }
+
+    return null;
+  }
+
+  function extractAreaM2(text) {
+    var source = normalizeText(text).toLowerCase();
+    if (!source) return null;
+    var regex = /(\d+(?:[.,]\d+)?)\s*(?:м2|м²|мв|кв\.?\s*м|квадрат)/gi;
+    var match = regex.exec(source);
+    return match ? toNumber(match[1]) : null;
+  }
+
+  function extractLandArea(text) {
+    var source = normalizeText(text).toLowerCase();
+    if (!source) return null;
+    var regex = /(\d+(?:[.,]\d+)?)\s*(?:сот|соток|сотки)/gi;
+    var match = regex.exec(source);
+    return match ? toNumber(match[1]) : null;
+  }
+
+  function boundedNumber(value, min, max, integer) {
+    var n = toNumber(value);
+    return n !== null && n >= min && n <= max && (!integer || Number.isInteger(n)) ? n : null;
+  }
+
+  function extractRooms(text) {
+    // Technical IDs and square metres are never room counts.
+    var source = normalizeText(text).replace(/\b(?:object|house|land|nb)_\d+\b/gi, '');
+    var match = source.match(/(?:^|[^\d\w])(?:евро\s*[-–]?\s*)?(\d{1,2})\s*(?:[-‐‑‒–—]?\s*[хx])?\s*(?:[-‐‑‒–—]\s*)?(?:комн(?:ат[а-яё]*)?|к)(?=$|[\s.,;:!\/]|[-–])/i);
+    if (!match) match = source.match(/(?:количество\s+комнат|комнат)\s*[:—-]\s*(\d{1,2})(?!\d)/i);
+    return match ? boundedNumber(match[1], 1, 30, true) : null;
+  }
+
+  function extractFloor(text) {
+    var m = normalizeText(text).match(/этаж\s*[:№—-]?\s*(\d+)\s*\/\s*(\d+)|(\d+)\s*\/\s*(\d+)\s*(?:этаж|эт)|(?:этаж\s*[:№—-]?\s*)(\d+)(?!\d)|(\d+)\s*(?:-?й|ом)?\s*этаже?/i);
+    if (!m) return null;
+    var floor = boundedNumber(m[1] || m[3] || m[5] || m[6], 1, 150, true);
+    var floors = boundedNumber(m[2] || m[4], 1, 150, true);
+    return floors && floor > floors ? null : floor;
+  }
+
+  function extractFloors(text) {
+    var m = normalizeText(text).match(/этаж\s*[:№—-]?\s*\d+\s*\/\s*(\d+)|\d+\s*\/\s*(\d+)\s*(?:этаж|эт)|(\d+)\s*[-–]?\s*этажн/i);
+    return m ? boundedNumber(m[1] || m[2] || m[3], 1, 150, true) : null;
+  }
+
+  function formatPrice(price, priceType) {
+    var numeric = Number(price);
+    if (!Number.isFinite(numeric) || numeric < 100000) return "Цена по запросу";
+    var formatted = new Intl.NumberFormat("ru-RU").format(Math.round(numeric));
+    if (priceType === "price_per_m2") return formatted + "\u00a0₽/м²";
+    if (priceType === "minimum_total" || priceType === "advertising_from") return "от " + formatted + "\u00a0₽";
+    return formatted + "\u00a0₽";
+  }
+  function parsePriceValue(value) {
+    var text = normalizeText(value);
+    if (!/^\d[\d\s]*(?:[.,]\d+)?\s*(?:₽|руб(?:лей|ля|ль)?\.?|млн(?:\s*руб\.?|\s*₽)?|тыс(?:\s*руб\.?|\s*₽)?)?$/i.test(text)) return null;
+    var numeric = /[а-я₽]/i.test(text) ? extractPrice(text) : toNumber(text);
+    return boundedNumber(numeric, 100000, 100000000000, false);
+  }
+
+  // Unknown prices remain unknown; no area-based or median price substitution.
+
+  function buildNewbuildTitle(item, data, index) {
+    var currentTitle = normalizeText(item.title || "");
+    if (/^(ЖК|\u0420\u2013\u0420\u0459)/i.test(currentTitle)) {
+      return currentTitle;
+    }
+
+    var text = normalizeText([item.title, data.title, data.description].join(" "));
+    var match = text.match(/(?:ЖК|\u0420\u2013\u0420\u0459)\s*[«\"“]?([^»\"”\n,.!]{2,50})/i);
+    if (match) {
+      return "ЖК " + normalizeText(match[1]);
+    }
+
+    match = text.match(/(?:ул\.?|улица)\s*([А-ЯA-ZЁ0-9][А-ЯA-ZЁа-яa-z0-9\-\s]{2,35})/i);
+    if (match) {
+      return "ЖК на ул. " + normalizeText(match[1]);
+    }
+
+    var fallback = [
+      "ЖК Центральный квартал",
+      "ЖК Солнечный",
+      "ЖК Южный берег",
+      "ЖК Город у реки",
+      "ЖК Семейный парк",
+      "ЖК Городской двор"
+    ];
+
+    return fallback[index % fallback.length];
+  }
+
+  function shuffle(array) {
+    var copy = array.slice();
+    for (var i = copy.length - 1; i > 0; i -= 1) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = copy[i];
+      copy[i] = copy[j];
+      copy[j] = tmp;
+    }
+    return copy;
+  }
+
+  function pickRandom(array, min, max) {
+    if (!array.length) return [];
+    var shuffled = shuffle(array);
+    var count = Math.min(shuffled.length, min + Math.floor(Math.random() * (max - min + 1)));
+    return shuffled.slice(0, count);
+  }
+
+  function fetchJson(path) {
+    return fetch(path).then(function (res) {
+      if (!res.ok) {
+        throw new Error("Failed to load " + path + " (" + res.status + ")");
+      }
+      return res.json();
+    });
+  }
+
+  function initGlobalInteractions() {
+    var homeLeadForm = qs(".wine-home #lead-form");
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.target === homeLeadForm) {
+          document.body.classList.toggle("wine-lead-in-view", entry.isIntersecting);
+        } else if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    });
+
+    qsa(".fade-in").forEach(function (el) {
+      observer.observe(el);
+    });
+    if (homeLeadForm) observer.observe(homeLeadForm);
+
+    qsa('a[href^="#"]').forEach(function (anchor) {
+      anchor.addEventListener("click", function (event) {
+        var targetId;
+        try {
+          targetId = new URL(anchor.href, window.location.href).hash;
+        } catch (_error) {
+          return;
+        }
+        if (!targetId || targetId === "#") return;
+        var targetElement = qs(targetId);
+        if (!targetElement) return;
+        event.preventDefault();
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: "smooth"
+        });
+      });
+    });
+
+    var goTop = qs(".go-top");
+    if (goTop) {
+      goTop.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 600) {
+          goTop.classList.add("show");
+        } else {
+          goTop.classList.remove("show");
+        }
+      });
+    }
+  }
+
+  function initMetrikaClickGoals() {
+    document.addEventListener("click", function (event) {
+      var link = event.target && event.target.closest ? event.target.closest("a[href]") : null;
+      if (!link) return;
+
+      var href = (link.getAttribute("href") || "").toLowerCase();
+      if (!href) return;
+
+      if (link.closest(".property-card") && link.matches(".property-card__cta, .property-card__phone")) {
+        safeReachGoal("card_cta_click", analyticsLinkParams(link));
+      }
+
+      if (href.indexOf("tel:") === 0) {
+        safeReachGoal("phone_click", analyticsLinkParams(link));
+      } else if (href.indexOf("mailto:") === 0) {
+        safeReachGoal("email_click", analyticsLinkParams(link));
+      } else if (href.indexOf("t.me") !== -1) {
+        safeReachGoal("telegram_click", analyticsLinkParams(link));
+      }
+    });
+  }
+
+  function initActiveNav() {
+    var currentPath = (window.location.pathname || "").split("/").pop() || "index.html";
+    qsa("header nav a").forEach(function (link) {
+      var href = link.getAttribute("href");
+      if (!href || href.charAt(0) === "#") return;
+      var linkPath = href.split("?")[0].split("#")[0].split("/").pop();
+      if (linkPath === currentPath) {
+        link.classList.add("is-active");
+        link.setAttribute("aria-current", "page");
+      }
+    });
+  }
+
+  function propertyUrl(item) {
+    var url = new URL(item.sectionLink || ((item.objectType || 'apartments') + '.html'), window.location.href);
+    url.searchParams.set('object', item.id);
+    url.hash = '';
+    return url.href;
+  }
+
+  function listingPageUrl(item) {
+    return /^\/obekt\/[a-z][a-z0-9_-]*\.html$/.test(item.url || '') ? item.url : '';
+  }
+
+  function bindModal() {
+    var modal = qs('#modal');
+    if (!modal) return null;
+    var title = qs('#modalTitle'), description = qs('#modalDesc'), images = qs('#modalImages');
+    var panel = qs('.modal-content', modal), previousFocus, inertNodes = [];
+    panel.setAttribute('role', 'dialog');
+    panel.setAttribute('aria-modal', 'true');
+    panel.setAttribute('aria-labelledby', 'modalTitle');
+    panel.tabIndex = -1;
+    function hide() {
+      modal.style.display = 'none';
+      document.body.classList.remove('modal-open');
+      inertNodes.forEach(function (entry) { entry.node.inert = entry.inert; });
+      inertNodes = [];
+      if (previousFocus && previousFocus.isConnected) previousFocus.focus({ preventScroll: true });
+    }
+    function close() {
+      hide();
+      if (history.state && history.state.domianObject) history.back();
+      else {
+        var url = new URL(location.href);
+        url.searchParams.delete('object');
+        history.replaceState(null, '', url);
+      }
+    }
+    qsa('.close-modal', modal).forEach(function (b) { b.addEventListener('click', close); });
+    modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
+    modal.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { e.preventDefault(); close(); }
+      if (e.key === 'Tab') {
+        var controls = qsa('a[href],button:not([disabled])', panel).filter(function (x) { return x.getBoundingClientRect().width > 0; });
+        var first = controls[0], last = controls[controls.length - 1];
+        if (e.shiftKey && (document.activeElement === first || document.activeElement === panel)) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+    function open(item, fromRoute) {
+      if (!title || !description || !images) return;
+      if (modal.style.display !== 'flex') previousFocus = document.activeElement;
+      title.textContent = item.title || 'Объект';
+      description.textContent = item.description || 'Подробности уточните у специалиста.';
+      images.innerHTML = getCardImages(item).map(function (img) {
+        return '<img src="' + escapeHtml(img) + '" loading="lazy" alt="' + escapeHtml(item.title || 'Объект') + '">';
+      }).join('');
+      var plans = qs('[data-modal-plans]', panel);
+      if (item.floorPlans && item.floorPlans.length && !plans) {
+        plans = document.createElement('section');
+        plans.setAttribute('data-modal-plans', '');
+        images.insertAdjacentElement('afterend', plans);
+      }
+      if (plans) {
+        plans.hidden = !(item.floorPlans && item.floorPlans.length);
+        plans.innerHTML = plans.hidden ? '' : '<h3>Планировка</h3>' + item.floorPlans.map(function (image) {
+          return '<a href="' + escapeHtml(image) + '" target="_blank" rel="noopener noreferrer"><img src="' + escapeHtml(image) + '" loading="lazy" alt="Планировка квартиры"></a>';
+        }).join('');
+      }
+      var facts = qs('[data-modal-facts]', panel);
+      if (!facts) { facts = document.createElement('div'); facts.setAttribute('data-modal-facts', ''); panel.insertBefore(facts, images); }
+      var meta = item.meta || {};
+      facts.innerHTML = '<p data-listing-status>' + escapeHtml(item.statusLabel || 'В каталоге') + '</p><p>' + escapeHtml(formatPrice(meta.price) || 'Цена по запросу') + '</p>' + renderCardChars([
+        item.address, hasCardValue(meta.rooms) ? meta.rooms + ' комн.' : '',
+        hasCardValue(meta.area) ? meta.area + ' м²' : '',
+        hasCardValue(meta.landArea) ? meta.landArea + ' сот.' : '',
+        hasCardValue(meta.floor) ? 'Этаж ' + meta.floor + (meta.floors ? ' из ' + meta.floors : '') : ''
+      ]);
+      var actions = qs('[data-modal-actions]', panel);
+      if (!actions) { actions = document.createElement('div'); actions.className = 'hero-actions'; actions.setAttribute('data-modal-actions', ''); panel.insertBefore(actions, images); }
+      actions.innerHTML = '<a class="btn" href="/#lead-form-section" data-lead-type="buy" data-source-cta="object_detail" data-object-id="' + escapeHtml(item.id) + '" data-object-type="' + escapeHtml(item.objectType) + '" data-object-title="' + escapeHtml(item.title) + '" data-object-price="' + escapeHtml(meta.price) + '" data-object-url="' + escapeHtml(propertyUrl(item)) + '">Заявка по объекту</a><a class="btn secondary" href="tel:+79536091122">Позвонить</a><a class="btn secondary" href="' + escapeHtml(propertyUrl(item)) + '" data-object-permalink>Ссылка на объект</a>';
+      if (listingPageUrl(item)) actions.innerHTML += '<a class="btn secondary" href="' + escapeHtml(listingPageUrl(item)) + '" data-object-page>Открыть страницу объекта</a>';
+      modal.style.display = 'flex';
+      document.body.classList.add('modal-open');
+      if (!inertNodes.length) Array.prototype.forEach.call(document.body.children, function (node) {
+        if (node !== modal && !node.contains(modal) && !/SCRIPT|STYLE/.test(node.tagName)) { inertNodes.push({node:node,inert:node.inert}); node.inert = true; }
+      });
+      panel.focus({ preventScroll: true });
+      if (!fromRoute) {
+        var url = new URL(location.href);
+        url.searchParams.set('object', item.id);
+        history.pushState({domianObject:true}, '', url);
+        safeReachGoal('property_card_open', {object_id:item.id,object_type:item.objectType});
+      }
+    }
+    open.hide = hide;
+    return open;
+  }
+
+  function hasCardValue(value) {
+    if (value === undefined || value === null) return false;
+    var normalized = String(value).trim().toLowerCase();
+    return normalized !== "" && normalized !== "null" && normalized !== "undefined" && normalized !== "nan";
+  }
+
+  function analyticsPageType() {
+    var path = (window.location.pathname || "/").toLowerCase();
+    if (path.indexOf("/guides/") !== -1) return "guide";
+    if (path.indexOf("/newbuilds/") !== -1) return "newbuild_detail";
+    if (path.indexOf("/construction/projects/") !== -1) return "construction_project";
+    if (path.indexOf("/construction/builders/") !== -1) return "construction_builder";
+    if (path.indexOf("/team/") !== -1) return "team";
+    if (path.indexOf("/seo/") !== -1) return "seo_landing";
+    if (path === "/" || path.endsWith("/index.html")) return "home";
+    return "catalog_or_service";
+  }
+
+  function catalogTypeForElement(element) {
+    var listing = document.body && document.body.dataset ? document.body.dataset.listing : "";
+    if (listing) return listing;
+    if (element && element.closest("#newbuildFilters")) return "newbuilds";
+    if (element && element.closest("[data-project-filters]")) return "construction";
+    return "catalog";
+  }
+
+  function analyticsFieldName(element) {
+    var value = element && (element.name || element.id || element.type);
+    return String(value || "unknown").replace(/^(?:nb|mg)-?/i, "").toLowerCase();
+  }
+
+  function externalProfileName(href) {
+    if (href.indexOf("yandex.ru/maps") !== -1) return "yandex_maps";
+    if (href.indexOf("2gis.ru") !== -1) return "2gis";
+    if (href.indexOf("domclick.ru") !== -1) return "domclick";
+    if (href.indexOf("reestr.rgr.ru") !== -1) return "rgr";
+    if (href.indexOf("vk.com") !== -1) return "vk";
+    return "";
+  }
+
+  function analyticsSourceSection(element) {
+    var section = element && element.closest ? element.closest("[data-showcase], [data-project-card], #mortgage, #lead-form-section, header, footer, .mobile-drawer") : null;
+    if (!section) return "page";
+    if (section.hasAttribute("data-showcase")) return section.getAttribute("data-showcase") || "showcase";
+    if (section.hasAttribute("data-project-card")) return "construction_card";
+    if (section.id) return section.id;
+    if (section.matches("header")) return "header";
+    if (section.matches("footer")) return "footer";
+    return "mobile_drawer";
+  }
+
+  function analyticsObjectContext(element) {
+    var card = element && element.closest ? element.closest(".property-card, .nb-card, .construction-card, [data-object-id]") : null;
+    var href = element && element.getAttribute ? element.getAttribute("href") || "" : "";
+    var type = "";
+    var id = "";
+    var match;
+
+    if (card) {
+      type = card.getAttribute("data-object-type") || (card.classList.contains("nb-card") ? "newbuild" : (card.classList.contains("construction-card") ? "construction" : "property"));
+      id = card.getAttribute("data-object-id") || card.getAttribute("data-newbuild-id") || card.getAttribute("data-project-id") || "";
+    }
+    if (!id && href && !/^(?:tel:|mailto:|#)/i.test(href)) {
+      match = href.split(/[?#]/)[0].match(/([^/]+?)(?:\.html)?\/?$/);
+      id = match ? match[1] : "";
+    }
+    return { object_type: type, object_id: id };
+  }
+
+  function analyticsLinkParams(link, overrides) {
+    var object = analyticsObjectContext(link);
+    var params = {
+      page_type: analyticsPageType(),
+      object_type: object.object_type,
+      object_id: object.object_id,
+      source_section: analyticsSourceSection(link),
+      source_cta: link && link.getAttribute ? (link.getAttribute("data-source-cta") || link.getAttribute("data-channel") || "link") : "link"
+    };
+    Object.keys(overrides || {}).forEach(function (key) {
+      params[key] = overrides[key];
+    });
+    return params;
+  }
+
+  function initFunnelAnalytics() {
+    document.addEventListener("change", function (event) {
+      var target = event.target;
+      if (!target || !target.closest) return;
+
+      if (target.closest("#newbuildFilters, [data-project-filters], #filters")) {
+        safeReachGoal("catalog_filter_use", {
+          page_type: analyticsPageType(),
+          object_type: catalogTypeForElement(target),
+          source_section: "filters",
+          source_cta: "change",
+          catalog_type: catalogTypeForElement(target),
+          filter_name: analyticsFieldName(target)
+        });
+      }
+
+      if (target.closest("#mortgage") && !target.closest("#mortgage").getAttribute("data-analytics-fired")) {
+        target.closest("#mortgage").setAttribute("data-analytics-fired", "1");
+        safeReachGoal("mortgage_interaction", {
+          page_type: analyticsPageType(),
+          object_type: "mortgage",
+          source_section: "mortgage",
+          source_cta: analyticsFieldName(target),
+          interaction: analyticsFieldName(target)
+        });
+      }
+    });
+
+    document.addEventListener("click", function (event) {
+      var link = event.target && event.target.closest ? event.target.closest("a[href]") : null;
+      var reset = event.target && event.target.closest ? event.target.closest("#nbReset, [data-project-filters] [type='reset'], #filters [type='reset']") : null;
+      var href;
+      var profile;
+      var destination;
+
+      if (reset) {
+        safeReachGoal("catalog_filter_use", {
+          page_type: analyticsPageType(),
+          object_type: catalogTypeForElement(reset),
+          source_section: "filters",
+          source_cta: "reset",
+          catalog_type: catalogTypeForElement(reset),
+          filter_name: "reset"
+        });
+      }
+      if (!link) return;
+
+      href = (link.getAttribute("href") || "").toLowerCase();
+      profile = externalProfileName(href);
+      if (href.indexOf("yandex.ru/maps") !== -1 || href.indexOf("2gis.ru") !== -1) {
+        safeReachGoal("map_click", analyticsLinkParams(link, { profile: profile }));
+      }
+      if (profile) {
+        safeReachGoal("external_profile_click", analyticsLinkParams(link, { profile: profile }));
+      }
+
+      if (analyticsPageType() === "guide") {
+        if (/\/(?:apartments|houses|lands|newbuilds|construction)\.html/.test(link.href)) {
+          destination = link.href.match(/\/(apartments|houses|lands|newbuilds|construction)\.html/);
+          safeReachGoal("guide_to_catalog", analyticsLinkParams(link, {
+            page_type: "guide",
+            destination_type: destination ? destination[1] : "catalog"
+          }));
+        } else if (link.href.indexOf("#lead-form-section") !== -1) {
+          safeReachGoal("guide_to_lead", analyticsLinkParams(link, { page_type: "guide", destination_type: "lead" }));
+        }
+      }
+
+      if (link.closest("[data-showcase], .showcase-section") && !/^(?:tel:|mailto:|#)/.test(href)) {
+        safeReachGoal("showcase_open", analyticsLinkParams(link, {
+          card_type: "showcase",
+          object_type: (link.closest("[data-showcase]") && link.closest("[data-showcase]").getAttribute("data-type")) || "showcase"
+        }));
+      }
+
+      if (
+        link.closest(".property-card, .nb-card, .construction-card") &&
+        !link.matches("[data-project-quote]") &&
+        !/^(?:tel:|mailto:|#)/.test(href)
+      ) {
+        safeReachGoal("property_card_open", analyticsLinkParams(link, {
+          card_type: link.closest(".nb-card") ? "newbuild" : (link.closest(".construction-card") ? "construction" : "property")
+        }));
+      }
+    });
+  }
+
+  function isSafeHttpUrl(value) {
+    if (!hasCardValue(value)) return false;
+    try {
+      var parsed = new URL(String(value), window.location.href);
+      return parsed.protocol === "http:" || parsed.protocol === "https:";
+    } catch (_error) {
+      return false;
+    }
+  }
+
+  function uniqueImages(list) {
+    var seen = Object.create(null);
+    return (list || []).filter(function (value) {
+      var key = hasCardValue(value) ? String(value).trim() : "";
+      if (!key || seen[key]) return false;
+      seen[key] = true;
+      return true;
+    });
+  }
+
+  function initMobileDrawer() {
+    var toggle = qs(".mobile-menu-toggle");
+    var drawer = qs("#mobile-drawer");
+    if (!toggle || !drawer) return;
+    if (drawer.hasAttribute("data-unified-drawer")) return;
+
+    var panel = qs(".mobile-drawer__panel", drawer);
+    var closeBtn = qs(".mobile-drawer__close", drawer);
+
+    function openDrawer() {
+      drawer.inert = false;
+      drawer.classList.add("is-open");
+      drawer.setAttribute("aria-hidden", "false");
+      toggle.setAttribute("aria-expanded", "true");
+      document.body.classList.add("drawer-open");
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove("is-open");
+      drawer.setAttribute("aria-hidden", "true");
+      drawer.inert = true;
+      toggle.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("drawer-open");
+    }
+
+    toggle.addEventListener("click", function () {
+      if (drawer.classList.contains("is-open")) closeDrawer();
+      else openDrawer();
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener("click", closeDrawer);
+    }
+
+    drawer.addEventListener("click", function (event) {
+      if (panel && panel.contains(event.target)) return;
+      closeDrawer();
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && drawer.classList.contains("is-open")) {
+        closeDrawer();
+      }
+    });
+
+    qsa("a", drawer).forEach(function (link) {
+      link.addEventListener("click", closeDrawer);
+    });
+  }
+
+  function getCardImages(item) {
+    var images = [];
+    if (item && Array.isArray(item.images)) images = images.concat(item.images);
+    if (item && hasCardValue(item.cover)) images.push(item.cover);
+    if (item && hasCardValue(item.image)) images.push(item.image);
+    images = uniqueImages(images);
+    return images.length ? images : ["assets/hero/hero.jpg"];
+  }
+
+  function renderPropertyGallery(images, title) {
+    var safeImages = images && images.length ? images : ["assets/hero/hero.jpg"];
+    var encoded = safeImages.map(function (img) { return encodeURIComponent(String(img)); }).join("|");
+    var first = escapeHtml(safeImages[0]);
+    var many = safeImages.length > 1;
+    return [
+      '<div class="property-card__gallery" data-images="' + encoded + '" data-index="0">',
+      '<img class="property-card__photo" role="img" src="' + first + '" data-src="' + first + '" loading="lazy" decoding="async" width="640" height="480" alt="' + escapeHtml(title || "Фото объекта") + '">',
+      many ? '<button class="property-card__gallery-btn property-card__gallery-btn--prev" type="button" aria-label="Предыдущее фото">‹</button>' : "",
+      many ? '<button class="property-card__gallery-btn property-card__gallery-btn--next" type="button" aria-label="Следующее фото">›</button>' : "",
+      many ? '<div class="property-card__counter">1/' + safeImages.length + '</div>' : "",
+      "</div>"
+    ].join("");
+  }
+
+  function renderCardChars(values) {
+    var chars = (values || []).filter(hasCardValue).slice(0, 6);
+    if (!chars.length) return "";
+    return '<div class="property-card__chars">' + chars.map(function (value) {
+      return '<span class="property-card__char">' + escapeHtml(String(value)) + "</span>";
+    }).join("") + "</div>";
+  }
+
+  var propertyGalleryThumbnails = new WeakMap();
+
+  function getPropertyGalleryImages(gallery) {
+    return String(gallery.getAttribute("data-images") || "").split("|").map(function (part) {
+      try { return decodeURIComponent(part); } catch (_e) { return ""; }
+    }).filter(hasCardValue);
+  }
+
+  function showPropertyGalleryPhoto(gallery, images, index) {
+    var next = (index + images.length) % images.length;
+    gallery.setAttribute("data-index", String(next));
+    var photo = qs(".property-card__photo", gallery);
+    if (photo) {
+      photo.classList.remove("is-fallback");
+      photo.src = images[next].replace(/'/g, "%27");
+      photo.setAttribute("data-src", images[next]);
+    }
+    var counter = qs(".property-card__counter", gallery);
+    if (counter) counter.textContent = String(next + 1) + "/" + String(images.length);
+    var thumbnails = propertyGalleryThumbnails.get(gallery);
+    if (thumbnails) thumbnails.select(next);
+  }
+
+  function bindPropertyGalleryFallback(scope) {
+    qsa(".property-card__photo", scope || document).forEach(function (photo) {
+      if (photo.dataset.fallbackBound) return;
+      photo.dataset.fallbackBound = "1";
+      photo.addEventListener("error", function () {
+        if (photo.classList.contains("is-fallback")) return;
+        photo.classList.add("is-fallback");
+        photo.src = "assets/hero/hero.jpg";
+      });
+      var gallery = photo.closest(".property-card__gallery[data-images]");
+      if (!gallery || !window.domianPhotoThumbnails) return;
+      var images = getPropertyGalleryImages(gallery);
+      var thumbnails = window.domianPhotoThumbnails(images, function (index) {
+        showPropertyGalleryPhoto(gallery, images, index);
+      });
+      if (thumbnails) {
+        propertyGalleryThumbnails.set(gallery, thumbnails);
+        gallery.appendChild(thumbnails.element);
+      }
+    });
+  }
+
+  function bindPropertyGalleryControls() {
+    if (document.body && document.body.dataset && document.body.dataset.galleryBound === "1") return;
+    if (document.body && document.body.dataset) document.body.dataset.galleryBound = "1";
+    document.addEventListener("click", function (event) {
+      var button = event.target && event.target.closest ? event.target.closest(".property-card__gallery-btn") : null;
+      if (!button) return;
+      event.preventDefault();
+      event.stopPropagation();
+      var gallery = button.closest(".property-card__gallery");
+      if (!gallery) return;
+      var images = getPropertyGalleryImages(gallery);
+      if (!images.length) images = ["assets/hero/hero.jpg"];
+      var current = parseInt(gallery.getAttribute("data-index") || "0", 10);
+      var next = button.classList.contains("property-card__gallery-btn--next") ? current + 1 : current - 1;
+      showPropertyGalleryPhoto(gallery, images, next);
+    });
+  }
+
+
+  function buildCard(item, onOpen) {
+    var card = document.createElement("article");
+    card.className = "card property-card";
+    card.setAttribute("data-object-id", item.id || "");
+    card.setAttribute("data-object-type", item.objectType || "property");
+
+    var safeTitle = escapeHtml(item.title || "Объект");
+    var galleryImages = getCardImages(item);
+    var meta = item.meta || {};
+    var priceText = formatPrice(meta.price, meta.priceType) || "Цена по запросу";
+    var pageUrl = listingPageUrl(item);
+    var sectionLink = pageUrl || (item.objectType ? propertyUrl(item) : (isSafeHttpUrl(item.sectionLink) ? item.sectionLink : "index.html#contact"));
+    var isExternalLink = /^https?:\/\//i.test(sectionLink) && new URL(sectionLink).origin !== location.origin;
+    var linkAttrs = isExternalLink ? ' target="_blank" rel="noopener noreferrer"' : "";
+
+    var mortgageHtml = "";
+    if (window.domianCatalogMortgage) {
+      var mortgageText = window.domianCatalogMortgage.format(meta.price);
+      if (mortgageText) {
+        mortgageHtml = ' <span class="card-mortgage">' + escapeHtml(mortgageText) + '</span>';
+      }
+    }
+
+    var charsHtml = renderCardChars([
+      hasCardValue(meta.rooms) ? String(meta.rooms) + " комн." : "",
+      hasCardValue(meta.area) ? String(meta.area) + " м²" : "",
+      hasCardValue(meta.houseArea) ? "дом " + String(meta.houseArea) + " м²" : "",
+      hasCardValue(meta.landArea) ? "участок " + String(meta.landArea) + " сот." : "",
+      hasCardValue(meta.floor) ? String(meta.floor) + " эт." : "",
+      item.city === "другое" ? (item.district || "Другой город или район") : (item.city || "")
+    ]);
+    var detailsHtml = renderCardChars(item.cardDetails || []);
+
+    card.innerHTML = [
+      renderPropertyGallery(galleryImages, safeTitle),
+      '<div class="card-content property-card__body">',
+      '<h2 class="property-card__title">' + safeTitle + '</h2>',
+      pageUrl ? '<p data-listing-status>' + escapeHtml(item.statusLabel || 'В каталоге') + '</p>' : '',
+      '<div class="card-meta property-card__price"><span class="property-card__price-value">' + escapeHtml(priceText) + '</span>' + mortgageHtml + '</div>',
+      charsHtml,
+      detailsHtml,
+      '<div class="property-card__actions">',
+      '<a class="btn property-card__cta" href="' + escapeHtml(sectionLink) + '"' + linkAttrs + '>' + escapeHtml(item.ctaLabel || "Подробнее") + '</a>',
+      '<a class="btn property-card__phone" href="tel:+79536091122">Позвонить</a>',
+      "</div>",
+      '</div>'
+    ].join("");
+
+    if (!pageUrl && item.objectType && onOpen) qs('.property-card__cta', card).addEventListener('click', function (event) {
+      if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault(); onOpen(item);
+    });
+    bindPropertyGalleryFallback(card);
+    return card;
+  }
+
+  function buildFilterTemplate(type) {
+    var templates = {
+      apartments: [
+        '<label>Цена от<input type="number" data-filter="priceMin" placeholder="₽"></label>',
+        '<label>Цена до<input type="number" data-filter="priceMax" placeholder="₽"></label>',
+        '<label>Комнат<input type="number" data-filter="rooms" placeholder="1"></label>',
+        '<label>Площадь от<input type="number" step="0.1" data-filter="areaMin" placeholder="м²"></label>',
+        '<label>Площадь до<input type="number" step="0.1" data-filter="areaMax" placeholder="м²"></label>'
+      ],
+      houses: [
+        '<label>Цена от<input type="number" data-filter="priceMin" placeholder="₽"></label>',
+        '<label>Цена до<input type="number" data-filter="priceMax" placeholder="₽"></label>',
+        '<label>Дом от<input type="number" step="0.1" data-filter="houseAreaMin" placeholder="м²"></label>',
+        '<label>Дом до<input type="number" step="0.1" data-filter="houseAreaMax" placeholder="м²"></label>',
+        '<label>Участок от<input type="number" step="0.1" data-filter="landAreaMin" placeholder="сот."></label>',
+        '<label>Участок до<input type="number" step="0.1" data-filter="landAreaMax" placeholder="сот."></label>'
+      ],
+      lands: [
+        '<label>Цена от<input type="number" data-filter="priceMin" placeholder="₽"></label>',
+        '<label>Цена до<input type="number" data-filter="priceMax" placeholder="₽"></label>',
+        '<label>Площадь от<input type="number" step="0.1" data-filter="landAreaMin" placeholder="сот."></label>',
+        '<label>Площадь до<input type="number" step="0.1" data-filter="landAreaMax" placeholder="сот."></label>'
+      ],
+      newbuilds: [
+        '<label>Поиск<input type="search" data-filter="query" placeholder="Название, город, застройщик"></label>',
+        '<label>Цена от<input type="number" data-filter="priceMin" placeholder="₽"></label>',
+        '<label>Цена до<input type="number" data-filter="priceMax" placeholder="₽"></label>',
+        '<label>Сортировка<select data-filter="sort"><option value="">По умолчанию</option><option value="priceAsc">Сначала дешевле</option><option value="priceDesc">Сначала дороже</option><option value="titleAsc">По названию</option></select></label>'
+      ]
+    };
+
+    var city = '<label>Город<select data-filter="city"><option value="">Все города</option><option value="Аксай">Аксай</option><option value="Аксайский район">Аксайский район</option><option value="Ростов-на-Дону">Ростов-на-Дону</option><option value="другое">Другой город или район</option><option value="unknown">Город не указан</option></select></label>';
+    return (type === 'newbuilds' ? [] : [city]).concat(templates[type] || []);
+  }
+
+  function parseFilters(container) {
+    var values = {};
+    qsa("[data-filter]", container).forEach(function (input) {
+      var key = input.getAttribute("data-filter");
+      values[key] = key === "query" || key === "sort" || key === "city" ? normalizeText(input.value) : toNumber(input.value);
+    });
+    return values;
+  }
+
+  function applyFilters(items, filters, type) {
+    var filtered = items.filter(function (item) {
+      var meta = item.meta;
+      var cityGroup = ["Аксай", "Аксайский район", "Ростов-на-Дону"].indexOf(item.city) >= 0 ? item.city : item.city ? "другое" : "unknown";
+      if (filters.city && cityGroup !== filters.city) return false;
+
+      if (filters.priceMin !== null && (meta.price === null || meta.price < filters.priceMin)) return false;
+      if (filters.priceMax !== null && (meta.price === null || meta.price > filters.priceMax)) return false;
+
+      if (type === "apartments") {
+        if (filters.rooms !== null && (meta.rooms === null || meta.rooms !== filters.rooms)) return false;
+        if (filters.areaMin !== null && (meta.area === null || meta.area < filters.areaMin)) return false;
+        if (filters.areaMax !== null && (meta.area === null || meta.area > filters.areaMax)) return false;
+      }
+
+      if (type === "houses") {
+        if (filters.houseAreaMin !== null && (meta.houseArea === null || meta.houseArea < filters.houseAreaMin)) return false;
+        if (filters.houseAreaMax !== null && (meta.houseArea === null || meta.houseArea > filters.houseAreaMax)) return false;
+        if (filters.landAreaMin !== null && (meta.landArea === null || meta.landArea < filters.landAreaMin)) return false;
+        if (filters.landAreaMax !== null && (meta.landArea === null || meta.landArea > filters.landAreaMax)) return false;
+      }
+
+      if (type === "lands") {
+        if (filters.landAreaMin !== null && (meta.landArea === null || meta.landArea < filters.landAreaMin)) return false;
+        if (filters.landAreaMax !== null && (meta.landArea === null || meta.landArea > filters.landAreaMax)) return false;
+      }
+
+      if (type === "newbuilds") {
+        var query = normalizeText(filters.query).toLowerCase();
+        if (query && normalizeText(item.searchText || item.title).toLowerCase().indexOf(query) === -1) return false;
+      }
+
+      return true;
+    });
+
+    if (filters.sort === "priceAsc") {
+      filtered.sort(function (a, b) {
+        return (a.meta.price === null ? Number.POSITIVE_INFINITY : a.meta.price) - (b.meta.price === null ? Number.POSITIVE_INFINITY : b.meta.price);
+      });
+    } else if (filters.sort === "priceDesc") {
+      filtered.sort(function (a, b) { return (b.meta.price || 0) - (a.meta.price || 0); });
+    } else if (filters.sort === "titleAsc") {
+      filtered.sort(function (a, b) { return String(a.title).localeCompare(String(b.title), "ru"); });
+    }
+
+    return filtered;
+  }
+
+  function resolveAssetPath(basePath, rawPath) {
+    if (!rawPath) return "";
+    var value = String(rawPath).trim();
+    // Keep absolute, root-relative and data URLs untouched.
+    if (/^(?:https?:)?\/\//i.test(value) || value.indexOf("/") === 0 || value.indexOf("data:") === 0) {
+      return value;
+    }
+    return basePath + value;
+  }
+
+  function normalizeItem(type, item, data, idx) {
+    var title = data.title || item.title || "Объект";
+    var description = data.description || "";
+    var images = Array.isArray(data.images) ? data.images : [];
+    var basePath = "";
+
+    if (type === "apartments") {
+      basePath = "objects/" + item.id + "/";
+    } else if (type === "houses") {
+      basePath = "output/" + item.path + "/";
+    } else {
+      basePath = item.path + "/";
+    }
+
+    if (type === "newbuilds") {
+      title = buildNewbuildTitle(item, data, idx);
+    }
+
+    var cover = item.cover ? resolveAssetPath(basePath, item.cover) : (images[0] ? resolveAssetPath(basePath, images[0]) : "assets/hero/hero.jpg");
+    var fullImages = images.map(function (img) { return resolveAssetPath(basePath, img); });
+
+    var sourceText = [title, description].filter(function (value) {
+      return !/^(?:object|house|land|nb)_\d+$/i.test(normalizeText(value));
+    }).join(' ');
+    var fields = Object.assign({}, data.features || {}, data);
+    var total = normalizeText(description).match(/(?:общая\s+площадь|площадь\s+дома)\s*[:—-]?\s*(\d+(?:[.,]\d+)?)\s*(?:м²|м2|кв\.?\s*м)/i);
+    var area = boundedNumber(fields.area || fields.house_area || (total && total[1]) || extractAreaM2(sourceText), 1, 100000, false);
+    var landArea = boundedNumber(fields.land_area || fields.landArea || extractLandArea(sourceText), 0.1, 100000, false);
+    var rooms = boundedNumber(fields.rooms, 1, 30, true);
+    if (rooms === null) rooms = extractRooms(sourceText);
+    if (type === 'lands') rooms = null;
+    var floor = boundedNumber(fields.floor, 1, 150, true);
+    if (floor === null) floor = extractFloor(sourceText);
+    var floors = boundedNumber(fields.floors || fields.totalFloors, 1, 150, true);
+    if (floors === null) floors = extractFloors(sourceText);
+    if (floor !== null && floors !== null && floor > floors) floor = null;
+    var price = parsePriceValue(data.price);
+    // Only an explicit labelled total price is accepted from prose.
+    if (price === null) {
+      var priceMatch = normalizeText(description).match(/(?:цена|стоимость)\s*[:—-]?\s*(?:всего\s*)?(\d[\d\s]*(?:[.,]\d+)?\s*(?:млн|миллион\w*|тыс\w*|руб\w*|₽))/i);
+      if (priceMatch && !/^(?:\s*\/|\s*за\s*)\s*(?:м|сот)/i.test(normalizeText(description).slice(priceMatch.index + priceMatch[0].length))) price = extractPrice(priceMatch[1]);
+    }
+    price = boundedNumber(price, 100000, 100000000000, false);
+
+    return {
+      id: item.id,
+      objectType: type,
+      address: normalizeText(data.address),
+      title: title,
+      description: description,
+      cover: cover,
+      images: fullImages,
+      sectionLink: type + ".html",
+      meta: {
+        price: price,
+        rooms: rooms,
+        area: area,
+        houseArea: type === "houses" ? area : null,
+        landArea: landArea,
+        floor: floor,
+        floors: floors
+      }
+    };
+  }
+
+  function normalizeMergedNewbuild(item, idx) {
+    var title = normalizeText(item.title) || "ЖК " + String(idx + 1);
+    var description = normalizeText(item.description);
+    var image = resolveAssetPath("", item.image);
+    var priceType = normalizeText(item.price_type);
+    var price = priceType === "on_request" || priceType === "requires_verification" ? null : parsePriceValue(item.price);
+    var areaMin = toNumber(item.area_min);
+    var areaMax = toNumber(item.area_max);
+    var areaText = "";
+    if (areaMin !== null && areaMax !== null) {
+      areaText = "Площадь: " + String(areaMin).replace(".", ",") + "–" + String(areaMax).replace(".", ",") + " м²";
+    } else if (areaMin !== null) {
+      areaText = "Площадь: от " + String(areaMin).replace(".", ",") + " м²";
+    }
+    var officialUrl = isSafeHttpUrl(item.official_url) ? String(item.official_url) : "";
+
+    return {
+      id: "newbuild-v2-" + String(idx + 1),
+      title: title,
+      description: description,
+      cover: image || "assets/hero/hero.jpg",
+      images: image ? [image] : [],
+      sectionLink: officialUrl || "newbuilds.html",
+      ctaLabel: officialUrl ? "Официальный сайт" : "Подробнее",
+      searchText: [title, item.city, item.address, item.developer, item.status].filter(hasCardValue).join(" "),
+      cardDetails: [
+        normalizeText(item.city),
+        normalizeText(item.address),
+        normalizeText(item.status) ? "Статус: " + normalizeText(item.status) : "",
+        normalizeText(item.deadline) ? "Срок: " + normalizeText(item.deadline) : "",
+        areaText,
+        normalizeText(item.developer) ? "Застройщик: " + normalizeText(item.developer) : "",
+        normalizeText(item.class) ? "Класс: " + normalizeText(item.class) : ""
+      ],
+      meta: {
+        price: price,
+        priceType: priceType,
+        rooms: null,
+        area: null,
+        houseArea: null,
+        landArea: null,
+        floor: null
+      }
+    };
+  }
+
+  function loadLegacyNewbuildsData() {
+    return fetchJson("newbuilds/index.json").then(function (items) {
+      return Promise.all(items.map(function (item, idx) {
+        return fetchJson(item.path + "/data.json").then(function (data) {
+          return normalizeItem("newbuilds", item, data, idx);
+        });
+      }));
+    });
+  }
+
+  function normalizeLeadText(value) {
+    return value == null ? "" : String(value).replace(/\s+/g, " ").trim();
+  }
+
+  function readLeadData(element, name) {
+    return element && element.getAttribute ? normalizeLeadText(element.getAttribute("data-" + name)) : "";
+  }
+
+  function inferLeadType(link) {
+    var explicit = readLeadData(link, "lead-type");
+    var text = normalizeLeadText(link.textContent).toLowerCase();
+    var path = (window.location.pathname || "").toLowerCase();
+
+    if (explicit) return explicit;
+    if (text.indexOf("ипотек") !== -1) return "mortgage";
+    if (text.indexOf("продаж") !== -1 || text.indexOf("оценить") !== -1) return "sell";
+    if (path.indexOf("construction") !== -1) return "construction";
+    if (path.indexOf("commercial") !== -1) return "commercial";
+    if (path.indexOf("rent") !== -1) return "rent";
+    if (path.indexOf("newbuild") !== -1 || path.indexOf("/zhk-") !== -1) return "newbuild";
+    if (/apartments|houses|lands|kvartiry|doma|uchastki/.test(path)) return "buy";
+    return "contact";
+  }
+
+  function inferSourceCta(link, objectId) {
+    var explicit = readLeadData(link, "source-cta");
+    var text = normalizeLeadText(link.textContent).toLowerCase();
+
+    if (explicit) return explicit;
+    if (objectId) return "object_card";
+    if (text.indexOf("ипотек") !== -1) return "mortgage_consultation";
+    if (text.indexOf("оценить") !== -1) return "property_valuation";
+    if (text.indexOf("продаж") !== -1) return "sell_consultation";
+    if (text.indexOf("налич") !== -1) return "availability_request";
+    if (text.indexOf("подбор") !== -1) return "selection_request";
+    if (text.indexOf("заяв") !== -1) return "leave_application";
+    return "consultation";
+  }
+
+  function findObjectContext(link) {
+    var ariaLabel = normalizeLeadText(link.getAttribute("aria-label"));
+    var idMatch = ariaLabel.match(/\b((?:object|house|land|nb)_\d+)\b/i);
+    var newbuildPathMatch = (window.location.pathname || "").match(/\/newbuilds\/([^/]+)\/(?:index\.html)?$/i);
+    var title = readLeadData(link, "object-title");
+    var price = readLeadData(link, "object-price");
+    var objectId = readLeadData(link, "object-id") || (idMatch ? idMatch[1] : "");
+    var objectType = readLeadData(link, "object-type");
+    var objectContainer = link.closest(".property-card, [data-object-id], [data-object-title]");
+    var container;
+    var titleNode;
+    var priceNode;
+
+    // Generic consultation cards must not inherit a nearby heading or price.
+    // Expand the search area only when the CTA carries an object signal.
+    if (!objectId && !objectType && !title && !price && !objectContainer && !newbuildPathMatch) {
+      return {
+        object_id: "",
+        object_type: "",
+        object_title: "",
+        object_price: "",
+        object_url: "",
+        project_code: "",
+        project_name: "",
+        builder: "",
+        project_area: "",
+        project_url: "",
+        source_transition: "",
+        price_version: ""
+      };
+    }
+
+    container = objectContainer || (idMatch ? link.closest("article, .card") : null) || link;
+
+    if (!objectId && newbuildPathMatch) {
+      objectId = "newbuild_" + newbuildPathMatch[1];
+      objectType = objectType || "newbuild";
+    }
+
+    if (!title && container.querySelector) {
+      titleNode = container.querySelector("h1, h2, h3, .property-card__title, .card-title");
+      title = titleNode ? normalizeLeadText(titleNode.textContent) : "";
+    }
+
+    if (newbuildPathMatch) {
+      titleNode = document.querySelector(".nbd-hero h1");
+      title = titleNode ? normalizeLeadText(titleNode.textContent) : title;
+    }
+
+    if (!price && container.querySelector) {
+      priceNode = container.querySelector(".nbd-price, .property-card__price, .card-price, [class*='price']");
+      price = priceNode ? normalizeLeadText(priceNode.textContent) : "";
+    }
+
+    if (!price && newbuildPathMatch) {
+      priceNode = document.querySelector(".nbd-price");
+      price = priceNode ? normalizeLeadText(priceNode.textContent) : "";
+    }
+
+    if (!objectType && objectId) {
+      objectType = objectId.indexOf("house_") === 0 ? "house" :
+        objectId.indexOf("land_") === 0 ? "land" :
+        objectId.indexOf("nb_") === 0 ? "newbuild" :
+        "apartment";
+    }
+
+    return {
+      object_id: objectId,
+      object_type: objectType,
+      object_title: title,
+      object_price: price,
+      object_url: readLeadData(link, "object-url"),
+      project_code: readLeadData(link, "project-code") || objectId,
+      project_name: readLeadData(link, "project-name") || title,
+      builder: readLeadData(link, "builder"),
+      project_area: readLeadData(link, "project-area"),
+      project_url: readLeadData(link, "project-url") || readLeadData(link, "object-url"),
+      source_transition: readLeadData(link, "source-transition"),
+      price_version: readLeadData(link, "price-version")
+    };
+  }
+
+  function initLeadCtaTracking() {
+    document.addEventListener("click", function (event) {
+      var link = event.target && event.target.closest ? event.target.closest("a[href]") : null;
+      var href;
+      var object;
+      var context;
+
+      if (!link) return;
+
+      href = link.getAttribute("href") || "";
+      if (href.indexOf("#lead-form-section") === -1) return;
+
+      object = findObjectContext(link);
+      context = {
+        lead_type: inferLeadType(link),
+        source_cta: inferSourceCta(link, object.object_id),
+        object_id: object.object_id,
+        object_type: object.object_type,
+        object_title: object.object_title,
+        object_price: object.object_price,
+        object_url: object.object_url || (object.object_id || object.object_title ? window.location.href : ""),
+        project_code: object.project_code,
+        project_name: object.project_name,
+        builder: object.builder,
+        project_area: object.project_area,
+        project_url: object.project_url || (object.project_code ? window.location.href : ""),
+        source_transition: object.source_transition,
+        price_version: object.price_version,
+        captured_at: Date.now()
+      };
+
+      try {
+        window.sessionStorage.setItem(LEAD_CONTEXT_KEY, JSON.stringify(context));
+      } catch (error) {
+        // Attribution is helpful but must not block navigation.
+      }
+    });
+  }
+
+  function aksayFirst(item) { return ['Аксай', 'Аксайский район'].includes(item.city) ? 1 : 0; }
+
+  function loadCategoryData(type) {
+    var registryType = {apartments:'apartment',houses:'house',lands:'land'}[type];
+    if (registryType) return fetchJson('/output/catalog/registry.json').then(function (records) {
+      return records.filter(function (r) { return r.type === registryType && (!r.status || r.status === 'active'); }).map(function (r) {
+        var f = r.features || {};
+        var localImages = r.images.map(function (image) { return image.replace(/^https:\/\/domian-161\.ru(?=\/)/, ''); });
+        return { id:r.id, url:r.url, objectType:type, title:r.title, description:r.fullDescription || '',
+          city:r.city, district:r.district, settlement:r.settlement, address:r.address, statusLabel:r.statusLabel,
+          images:localImages, cover:localImages[0] || '', sectionLink:type+'.html',
+          floorPlans:(r.floor_plans || []).map(function (image) { return image.replace(/^https:\/\/domian-161\.ru(?=\/)/, ''); }),
+          meta:{price:r.price,rooms:f.rooms,area:f.area,houseArea:type==='houses'?f.area:null,landArea:f.landArea,floor:f.floor,floors:f.totalFloors} };
+      }).sort(function (a,b) { return aksayFirst(b) - aksayFirst(a); });
+    });
+
+    return fetchJson("output/newbuilds/newbuilds-v2-merged.json")
+      .then(function (items) {
+        if (!Array.isArray(items) || !items.length) {
+          return loadLegacyNewbuildsData();
+        }
+        return items.map(normalizeMergedNewbuild);
+      })
+      .catch(function () {
+        return loadLegacyNewbuildsData();
+      });
+  }
+
+  function resolveRecentObject(type, items) {
+    var requestedId = new URLSearchParams(location.search).get('object');
+    if (!requestedId || items.some(function (item) { return item.id === requestedId; })) return Promise.resolve(items);
+    var feedType = { apartments:'apartment', houses:'house', lands:'land' }[type];
+    if (!feedType) return Promise.resolve(items);
+    // Recently published cards can precede the main catalog index. Resolve only
+    // the requested ID from existing feeds; never substitute a different object.
+    return Promise.all(['output/' + type + '/new-objects.json', 'output/home/new-objects.json'].map(function (url) {
+      return fetchJson(url).catch(function () { return []; });
+    })).then(function (feeds) {
+      var recent = [].concat.apply([], feeds).find(function (item) { return item.id === requestedId && item.type === feedType && item.status !== 'placeholder' && !item.is_placeholder; });
+      if (!recent) return items;
+      var data = Object.assign({}, recent, {description:recent.description || recent.shortDescription || ''});
+      var normalized = normalizeItem(type, {id:recent.id, path:type + '/' + recent.id}, data, items.length);
+      // Feed images are already site-relative or absolute, unlike folder data.json.
+      normalized.images = getCardImages(recent);
+      normalized.cover = normalized.images[0];
+      if (recent.features && Object.prototype.hasOwnProperty.call(recent.features, 'area')) normalized.meta.area = recent.features.area;
+      return items.concat(normalized);
+    });
+  }
+
+  function initCatalogPage(type) {
+    var cardsContainer = qs("#cards");
+    var filtersContainer = qs("#filters");
+    var resultsCount = qs("#resultsCount");
+    var openModal = bindModal();
+
+    if (!cardsContainer) return;
+
+    cardsContainer.innerHTML = '<p class="loading-state">Загрузка объектов...</p>';
+
+    loadCategoryData(type)
+      .then(function (items) { return resolveRecentObject(type, items); })
+      .then(function (items) {
+        if (!items.length) {
+          cardsContainer.innerHTML = '<p class="loading-state">Объекты не найдены.</p>';
+          return;
+        }
+
+        if (filtersContainer) {
+          var controls = buildFilterTemplate(type);
+          filtersContainer.innerHTML = controls.join("") + '<button type="button" class="btn filter-reset" id="resetFilters">Сбросить</button>';
+        }
+
+        var pageSize = 24;
+        var visibleItems = [];
+        var shown = 0;
+        var more = document.createElement('button');
+        more.type = 'button';
+        more.className = 'btn catalog-load-more';
+        more.hidden = true;
+        cardsContainer.after(more);
+
+        function appendPage(moveFocus) {
+          var firstLink = null;
+          visibleItems.slice(shown, shown + pageSize).forEach(function (item) {
+            var card = buildCard(item, openModal);
+            cardsContainer.appendChild(card);
+            if (!firstLink) firstLink = qs('.property-card__cta', card);
+          });
+          shown = Math.min(shown + pageSize, visibleItems.length);
+          more.hidden = shown >= visibleItems.length;
+          more.textContent = 'Показать ещё ' + Math.min(pageSize, visibleItems.length - shown);
+          if (resultsCount) resultsCount.textContent = 'Найдено: ' + visibleItems.length + (shown < visibleItems.length ? ' · Показано: ' + shown : '');
+          if (moveFocus && firstLink) firstLink.focus();
+        }
+        more.addEventListener('click', function () { appendPage(true); });
+
+        function render(filteredItems) {
+          cardsContainer.innerHTML = "";
+          visibleItems = filteredItems;
+          shown = 0;
+          if (!filteredItems.length) {
+            cardsContainer.innerHTML = '<p class="loading-state">По фильтру ничего не найдено.</p>';
+          }
+          appendPage(false);
+        }
+
+        function runFilter(updateUrl) {
+          if (updateUrl !== false && filtersContainer) {
+            var url = new URL(location.href);
+            qsa('[data-filter]', filtersContainer).forEach(function (input) {
+              var key = 'f_' + input.getAttribute('data-filter');
+              if (input.value) url.searchParams.set(key, input.value); else url.searchParams.delete(key);
+            });
+            history.replaceState(history.state, '', url);
+          }
+          var values = filtersContainer ? parseFilters(filtersContainer) : {};
+          var filtered = applyFilters(items, values, type);
+          render(filtered);
+        }
+
+        function restoreRoute() {
+          var params = new URLSearchParams(location.search);
+          if (filtersContainer) qsa('[data-filter]', filtersContainer).forEach(function (input) { input.value = params.get('f_' + input.getAttribute('data-filter')) || ''; });
+          runFilter(false);
+          var chosen = items.find(function (item) { return item.id === params.get('object'); });
+          if (chosen && listingPageUrl(chosen)) {
+            params.delete('object');
+            var destination = new URL(listingPageUrl(chosen), location.origin);
+            destination.search = params;
+            destination.hash = location.hash;
+            location.replace(destination);
+            return;
+          }
+          if (chosen && openModal) openModal(chosen, true);
+          else if (openModal) {
+            openModal.hide();
+            if (params.has('object') && resultsCount) resultsCount.textContent += ' · Объект по ссылке не найден. Уточните наличие по телефону.';
+          }
+        }
+        restoreRoute();
+        window.addEventListener('popstate', restoreRoute);
+
+        if (filtersContainer) {
+          qsa("[data-filter]", filtersContainer).forEach(function (input) {
+            input.addEventListener("input", runFilter);
+            if (input.tagName === "SELECT") input.addEventListener("change", runFilter);
+          });
+
+          var resetButton = qs("#resetFilters", filtersContainer);
+          if (resetButton) {
+            resetButton.addEventListener("click", function () {
+              qsa("[data-filter]", filtersContainer).forEach(function (input) {
+                input.value = "";
+              });
+              runFilter();
+            });
+          }
+        }
+      })
+      .catch(function (error) {
+        cardsContainer.innerHTML = '<p class="loading-state">Ошибка загрузки. Обновите страницу.</p>';
+        console.error(error);
+      });
+  }
+
+  function renderHotCard(item) {
+    var safeTitle = escapeHtml(item.title || "Объект");
+    var galleryImages = getCardImages(item);
+    var categoryHref = {
+      apartments: "apartments.html",
+      houses: "houses.html",
+      lands: "lands.html",
+      newbuilds: "newbuilds.html"
+    }[item && item.categoryName ? String(item.categoryName).toLowerCase() : ""] || "index.html#contact";
+    if (item.objectType) categoryHref = listingPageUrl(item) || propertyUrl(item);
+    else if (item.categoryName === 'Новостройки') categoryHref = isSafeHttpUrl(item.sectionLink) ? item.sectionLink : '/newbuilds.html';
+    var priceText = formatPrice(item && item.meta ? item.meta.price : null, item && item.meta ? item.meta.priceType : "") || "Цена по запросу";
+    var charsHtml = renderCardChars([
+      item && item.meta && hasCardValue(item.meta.rooms) ? String(item.meta.rooms) + " комн." : "",
+      item && item.meta && hasCardValue(item.meta.area) ? String(item.meta.area) + " м²" : "",
+      item && item.meta && hasCardValue(item.meta.floor) ? String(item.meta.floor) + " эт." : ""
+    ]);
+    return [
+      '<article class="hot-offer-card property-card">',
+      renderPropertyGallery(galleryImages, safeTitle),
+      '<div class="hot-offer-content property-card__body">',
+      '<span class="hot-offer-tag property-card__meta">' + escapeHtml(item.categoryName) + '</span>',
+      '<h3 class="property-card__title">' + safeTitle + '</h3>',
+      /^(object|house|land)_\d+$/.test(item.id || '') ? '<p data-listing-status>' + escapeHtml(item.statusLabel || 'В каталоге') + '</p>' : '',
+      '<div class="hot-offer-price property-card__price">' + escapeHtml(priceText) + '</div>',
+      charsHtml,
+      '<div class="property-card__actions">',
+      '<a class="btn property-card__cta" href="' + categoryHref + '">Подробнее</a>',
+      '<a class="btn property-card__phone" href="tel:+79536091122">Позвонить</a>',
+      '</div>',
+      '</div>',
+      '</article>'
+    ].join("");
+  }
+
+  function getFeaturedSlice(type, count) {
+    return loadCategoryData(type).then(function (items) {
+      return pickRandom(items, Math.min(1, count), count).map(function (item) {
+        item.categoryName = {
+          apartments: "Квартиры",
+          houses: "Дома",
+          lands: "Участки",
+          newbuilds: "Новостройки"
+        }[type];
+        return item;
+      });
+    }).catch(function () {
+      return [];
+    });
+  }
+
+  function initHotOffers() {
+    var container = qs("#hot-offers-cards");
+    if (!container) return;
+
+    container.innerHTML = '<p class="loading-state">Подбираем лучшие варианты...</p>';
+
+    Promise.all([
+      getFeaturedSlice("apartments", 2),
+      getFeaturedSlice("houses", 2),
+      getFeaturedSlice("lands", 2),
+      getFeaturedSlice("newbuilds", 2)
+    ]).then(function (groups) {
+      var allItems = [].concat.apply([], groups);
+      var selected = pickRandom(allItems, 4, 6);
+
+      if (!selected.length) {
+        container.innerHTML = '<p class="loading-state">Пока нет доступных предложений.</p>';
+        return;
+      }
+
+      container.innerHTML = selected.map(renderHotCard).join("");
+      bindPropertyGalleryFallback(container);
+    }).catch(function (error) {
+      container.innerHTML = '<p class="loading-state">Не удалось загрузить предложения.</p>';
+      console.error(error);
+    });
+  }
+
+  function fetchJsonWithFallback(primaryPath, fallbackPath) {
+    return fetchJson(primaryPath).catch(function () {
+      if (!fallbackPath || fallbackPath === primaryPath) {
+        throw new Error("Failed to load " + primaryPath);
+      }
+      return fetchJson(fallbackPath);
+    });
+  }
+
+  function getTypeLabel(type) {
+    return {
+      apartment: "Квартира",
+      house: "Дом",
+      land: "Участок",
+      newbuild: "Новостройка"
+    }[type] || "Объект";
+  }
+
+  function renderNewObjectCard(item) {
+    var title = escapeHtml(item.title || "Объект");
+    var galleryImages = getCardImages(item);
+    var priceText = formatPrice(parsePriceValue(item.price));
+    var price = escapeHtml(priceText);
+    var typeLabel = escapeHtml(getTypeLabel(item.type));
+    var features = Object.assign({}, item && item.features || {});
+    features.rooms = boundedNumber(features.rooms, 1, 30, true);
+    features.floor = boundedNumber(features.floor, 1, 150, true);
+    features.totalFloors = boundedNumber(features.totalFloors, 1, 150, true);
+    if (features.floor && features.totalFloors && features.floor > features.totalFloors) features.floor = null;
+    var sourceText = [item && item.title, item && item.shortDescription, item && item.description].filter(Boolean).join(" ");
+    var areaMatch = sourceText.match(/(\d+(?:[.,]\d+)?)\s*(?:кв\.?\s*м|м²|м2)\b/iu);
+    var area = Object.prototype.hasOwnProperty.call(features, 'area') ? boundedNumber(features.area, 1, 100000, false) : areaMatch ? boundedNumber(areaMatch[1], 1, 100000, false) : null;
+    var landMatch = sourceText.match(/(\d+(?:[.,]\d+)?)\s*сот(?:к[аи])?/iu);
+    var charsHtml = renderCardChars([
+      hasCardValue(features.rooms) ? String(features.rooms) + " комн." : "",
+      hasCardValue(features.floor) && hasCardValue(features.totalFloors) ? String(features.floor) + "/" + String(features.totalFloors) + " эт." : "",
+      hasCardValue(area) ? String(area) + " м²" : "",
+      landMatch && landMatch[1] ? landMatch[1].replace(",", ".") + " сот." : "",
+      hasCardValue(item && item.city) ? (item.city === "другое" ? item.district || "Другой город или район" : String(item.city)) : "",
+      hasCardValue(item && item.district) ? String(item.district) : ""
+    ]);
+    var detailsHref = {
+      apartment: "apartments.html",
+      house: "houses.html",
+      land: "lands.html",
+      newbuild: "newbuilds.html"
+    }[String(item && item.type || "").toLowerCase()] || "index.html#contact";
+
+    detailsHref = listingPageUrl(item) || detailsHref;
+
+    return [
+      '<article class="new-object-card property-card">',
+      renderPropertyGallery(galleryImages, title),
+      '<div class="new-object-card__content property-card__body">',
+      '<span class="new-object-card__type property-card__meta">' + typeLabel + '</span>',
+      '<h3 class="property-card__title">' + title + '</h3>',
+      listingPageUrl(item) ? '<p data-listing-status>' + escapeHtml(item.statusLabel || 'В каталоге') + '</p>' : '',
+      '<div class="new-object-card__price property-card__price">' + price + '</div>',
+      charsHtml,
+      '<div class="property-card__actions">',
+      '<a class="btn property-card__cta" href="' + detailsHref + '">Подробнее</a>',
+      '<a class="btn property-card__phone" href="tel:+79536091122">Позвонить</a>',
+      '</div>',
+      '</div>',
+      '</article>'
+    ].join("");
+  }
+
+  function initNewObjects() {
+    var container = qs("#new-objects-cards");
+    if (!container) return;
+
+    container.innerHTML = '<p class="loading-state">Загрузка новых объектов...</p>';
+
+    fetchJsonWithFallback("/output/home/new-objects.json", "output/home/new-objects.json")
+      .then(function (items) {
+        if (!Array.isArray(items) || !items.length) {
+          container.innerHTML = '<p class="loading-state">Новые объекты пока не добавлены.</p>';
+          return;
+        }
+        items = items.filter(function (item) { return item.status !== 'placeholder' && !item.is_placeholder; });
+        container.innerHTML = items.slice(0, 8).map(renderNewObjectCard).join("");
+        bindPropertyGalleryFallback(container);
+      })
+      .catch(function (error) {
+        container.innerHTML = '<p class="loading-state">Не удалось загрузить новые объекты.</p>';
+        console.error(error);
+      });
+  }
+
+  function getListingNewObjectsPath(listingType) {
+    return {
+      apartments: "apartments",
+      houses: "houses",
+      lands: "lands",
+      newbuilds: "newbuilds"
+    }[listingType] || null;
+  }
+
+  function initListingNewObjects(listingType) {
+    var container = qs("#listing-new-objects-cards");
+    var outputDir = getListingNewObjectsPath(listingType);
+    if (!container || !outputDir) return;
+
+    container.innerHTML = '<p class="loading-state">Загрузка новых объектов...</p>';
+
+    var primaryPath = "/output/" + outputDir + "/new-objects.json";
+    var fallbackPath = "output/" + outputDir + "/new-objects.json";
+
+    fetchJsonWithFallback(primaryPath, fallbackPath)
+      .then(function (items) {
+        if (!Array.isArray(items) || !items.length) {
+          container.innerHTML = '<p class="loading-state">Новые объекты пока не добавлены.</p>';
+          return;
+        }
+        items = items.filter(function (item) { return item.status !== 'placeholder' && !item.is_placeholder; });
+        container.innerHTML = items.slice().sort(function (a,b) { return aksayFirst(b) - aksayFirst(a); }).slice(0, 10).map(renderNewObjectCard).join("");
+        bindPropertyGalleryFallback(container);
+      })
+      .catch(function (error) {
+        container.innerHTML = '<p class="loading-state">Не удалось загрузить новые объекты.</p>';
+        console.error(error);
+      });
+  }
+
+  function createThemeButton(modifier) {
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "theme-toggle theme-toggle--" + modifier;
+    button.innerHTML = '<span class="theme-toggle__icon" aria-hidden="true"></span><span class="theme-toggle__label">Тёмная тема</span>';
+    button.addEventListener("click", function () {
+      var nextTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      try {
+        window.localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+      } catch (_error) {
+        // The theme still works for the current page if storage is unavailable.
+      }
+      applyTheme(nextTheme);
+    });
+    return button;
+  }
+
+  function initThemeToggle() {
+    var hasThemeStyles = qsa('link[rel="stylesheet"]').some(function (link) {
+      return /(?:^|\/)visual-premium\.css(?:\?|$)/.test(link.href);
+    });
+    if (!hasThemeStyles) return;
+
+    var headerInner = qs(".header-inner");
+    if (headerInner && !qs(".theme-toggle--header", headerInner)) {
+      var menuToggle = qs(".mobile-menu-toggle", headerInner);
+      headerInner.insertBefore(createThemeButton("header"), menuToggle || null);
+    }
+
+    var drawerActions = qs(".mobile-drawer__actions");
+    if (drawerActions && !qs(".theme-toggle--drawer", drawerActions)) {
+      drawerActions.insertBefore(createThemeButton("drawer"), drawerActions.firstChild);
+    }
+
+    applyTheme(getStoredTheme());
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    withLeadConfig(initContactChannels);
+    initThemeToggle();
+    initGlobalInteractions();
+    initLeadCtaTracking();
+    initMetrikaClickGoals();
+    initFunnelAnalytics();
+    initActiveNav();
+    initMobileDrawer();
+    bindPropertyGalleryControls();
+    var featuredTrack = qs('.ub-cards--offers');
+    if (featuredTrack) bindPropertyGalleryFallback(featuredTrack);
+    initNewObjects();
+
+    var listingType = document.body && document.body.dataset ? document.body.dataset.listing : null;
+    if (CATALOG_TYPES.indexOf(listingType) !== -1) {
+      if (document.body.dataset.catalogVersion !== "3") {
+        initListingNewObjects(listingType);
+        initCatalogPage(listingType);
+      }
+    }
+
+    initHotOffers();
+
+    // Footer accordions for mobile
+    initFooterAccordions();
+  });
+
+  function initFooterAccordions() {
+    var footerColumns = qsa(".footer-column");
+    if (!footerColumns.length) return;
+
+    // Check if mobile
+    var isMobile = window.innerWidth <= 768;
+
+    footerColumns.forEach(function (column, index) {
+      var header = qs("h3", column);
+      if (!header) return;
+
+      // Make header clickable
+      header.setAttribute("role", "button");
+      header.setAttribute("tabindex", "0");
+      header.setAttribute("aria-expanded", index === 0 ? "true" : "false");
+
+      // Click handler
+      function toggleAccordion() {
+        if (!isMobile && window.innerWidth > 768) {
+          // Desktop - keep all open
+          footerColumns.forEach(function (col) {
+            col.classList.add("active");
+            var h = qs("h3", col);
+            if (h) h.setAttribute("aria-expanded", "true");
+          });
+          return;
+        }
+
+        var isActive = column.classList.contains("active");
+
+        // Close all
+        footerColumns.forEach(function (col) {
+          col.classList.remove("active");
+          var h = qs("h3", col);
+          if (h) h.setAttribute("aria-expanded", "false");
+        });
+
+        // Open clicked if it was closed
+        if (!isActive) {
+          column.classList.add("active");
+          header.setAttribute("aria-expanded", "true");
+        }
+      }
+
+      header.addEventListener("click", toggleAccordion);
+
+      // Keyboard support
+      header.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggleAccordion();
+        }
+      });
+
+      // Open first column by default on mobile
+      if (isMobile && index === 0) {
+        column.classList.add("active");
+        header.setAttribute("aria-expanded", "true");
+      }
+    });
+
+    // Handle resize
+    var resizeTimer;
+    window.addEventListener("resize", function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        isMobile = window.innerWidth <= 768;
+        if (!isMobile) {
+          // Desktop - open all
+          footerColumns.forEach(function (col) {
+            col.classList.add("active");
+            var h = qs("h3", col);
+            if (h) h.setAttribute("aria-expanded", "true");
+          });
+        } else {
+          // Mobile - close all except first
+          footerColumns.forEach(function (col, idx) {
+            if (idx === 0) {
+              col.classList.add("active");
+              var h = qs("h3", col);
+              if (h) h.setAttribute("aria-expanded", "true");
+            } else {
+              col.classList.remove("active");
+              var h2 = qs("h3", col);
+              if (h2) h2.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+      }, 250);
+    });
+  }
+})();

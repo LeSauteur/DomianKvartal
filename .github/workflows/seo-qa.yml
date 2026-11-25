@@ -20,7 +20,16 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm test
-      - run: node _tools/sync-public-header.mjs --check
-      - run: npm run seo:audit
-      - run: npx playwright test tests/technical-audit.spec.js tests/service-pages.spec.js tests/public-header.spec.js tests/lead-form.spec.js tests/reanimation.spec.js tests/visibility.spec.js
+      - run: npm run qa
+        env:
+          VISUAL_TOP_QA: '1'
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - run: npm run check:artifact -- _site
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pages-file-inventory
+          path: output/pages-artifact-files.json
+          if-no-files-found: error

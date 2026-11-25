@@ -10,9 +10,10 @@ test('new MAX listings render approved prices and keep floor plans separate on m
     for(const [id,price,count] of [['house_914','11 500 000 ₽',10],['house_915','Цена по запросу',14],['object_1013','8 800 000 ₽',19],['house_916','24 500 000 ₽',23],['object_1014','6 900 000 ₽',10]]){
       await page.goto('/obekt/'+id+'.html?qa=1');
       await expect(page.locator('.visibility-price')).toHaveText(price);
-      await expect(page.locator('.visibility-gallery img')).toHaveCount(count);
+      await expect(page.locator('.object-photo-list img')).toHaveCount(count);
       await expect(page.locator('.visibility-description')).toBeVisible();
-      const images=await page.locator('.visibility-gallery img, [data-object-plans] img').evaluateAll(async images=>{
+      await page.locator('.object-photo-all summary').click();
+      const images=await page.locator('.object-photo-list img, [data-object-plans] img').evaluateAll(async images=>{
         return Promise.all(images.map(async image=>{image.loading='eager';await image.decode();return image.naturalWidth>0;}));
       });
       expect(images.every(Boolean)).toBe(true);
@@ -22,14 +23,21 @@ test('new MAX listings render approved prices and keep floor plans separate on m
     }
   }
   await page.goto('/apartments.html?qa=1&object=object_1013');
-  await expect(page.locator('#modal')).toBeVisible();
-  await expect(page.locator('#modalImages img')).toHaveCount(19);
-  await expect(page.locator('[data-modal-plans] img')).toHaveCount(1);
-  await expect(page.locator('[data-modal-plans]')).toContainText('Планировка');
+  await expect(page).toHaveURL(/\/obekt\/object_1013\.html/);
+  await expect(page.locator('.object-photo-list img')).toHaveCount(19);
+  await expect(page.locator('[data-object-plans] img')).toHaveCount(1);
+  await expect(page.locator('[data-object-plans]')).toContainText('Планировка');
+  const cover=page.locator('.object-photo-cover');
+  await cover.click();
+  await expect(page.locator('.object-photo-dialog')).toBeVisible();
+  await page.keyboard.press('ArrowRight');
+  await expect(page.locator('.object-photo-dialog figcaption')).toHaveText('Фото 2 из 19');
   await page.keyboard.press('Escape');
+  await expect(cover).toBeFocused();
+  await page.goto('/apartments.html?qa=1');
   await page.locator('[data-object-id="object_1014"] .property-card__cta').click();
-  await expect(page.locator('#modalImages img')).toHaveCount(10);
-  await expect(page.locator('[data-modal-plans]')).toBeHidden();
+  await expect(page.locator('.object-photo-list img')).toHaveCount(10);
+  await expect(page.locator('[data-object-plans]')).toHaveCount(0);
 });
 test('placeholder query never opens a listing and no placeholder cards are rendered',async({page})=>{
   for(const category of ['houses','lands']) {
@@ -119,11 +127,13 @@ test('static category links and object facts remain available without JavaScript
   await expect(page.locator('.visibility-price')).toHaveText('Цена по запросу');
   await context.close();
 });
-test('modal keeps category canonical and links to the real object page',async({page})=>{
-  await page.goto('/houses.html?qa=1&object=house_912');
-  await expect(page.locator('#modal')).toBeVisible();
+test('category retains canonical and old links reach the real canonical object page',async({page})=>{
+  await page.goto('/houses.html?qa=1');
   await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href','https://domian-161.ru/houses.html');
-  await expect(page.locator('#modal [data-object-page]')).toHaveAttribute('href','/obekt/house_912.html');
+  await expect(page.locator('.visibility-static-links a[href="/obekt/house_912.html"]')).toBeVisible();
+  await page.goto('/houses.html?qa=1&object=house_912');
+  await expect(page).toHaveURL(/\/obekt\/house_912\.html\?qa=1$/);
+  await expect(page.locator('link[rel=canonical]')).toHaveAttribute('href','https://domian-161.ru/obekt/house_912.html');
 });
 test('direct object form overrides stale object context and uses the shared provider',async({page})=>{
   let payload='';
@@ -159,15 +169,13 @@ test('city filters preserve unknown locations and expose Rostov and Azov accurat
   await page.locator('[data-filter=city]').selectOption('другое');
   await expect(page.locator('#cards [data-object-id="land_01"]')).toContainText('Азовский район');
 });
-test('conflicting apartment areas stay absent in modal facts and public headings',async({page})=>{
+test('conflicting apartment areas stay absent after opening legacy links',async({page})=>{
   for(const [id,correct,wrong] of [[112,null,10],[45,null,15],[59,17.8,13],[62,54.4,13],[91,40.5,10],[95,null,15]]) {
     await page.goto('/apartments.html?qa=1&object=object_'+id);
-    await expect(page.locator('#modal')).toBeVisible();
-    const facts=page.locator('[data-modal-facts]');
-    if(correct!==null) await expect(facts).not.toContainText(correct+' м²');
-    await expect(facts).not.toContainText(wrong+' м²');
-    await expect(page.locator('#modalTitle')).not.toContainText(wrong+' м²');
-    await page.goto('/obekt/object_'+id+'.html?qa=1');
+    await expect(page).toHaveURL(new RegExp('/obekt/object_'+id+'\\.html'));
+    const listingSchema=await page.locator('script[type="application/ld+json"]').evaluateAll(scripts =>
+      scripts.map(script=>JSON.parse(script.textContent)).find(value=>value['@type']==='RealEstateListing'));
+    expect(listingSchema.mainEntity).not.toHaveProperty('floorSize');
     await expect(page.locator('h1')).not.toContainText(wrong+' м²');
     if(correct!==null) await expect(page.locator('h1')).not.toContainText(correct+' м²');
     await expect(page.locator('.visibility-facts dt').filter({hasText:/^Площадь$/})).toHaveCount(0);

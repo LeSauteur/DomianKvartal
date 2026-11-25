@@ -14,6 +14,9 @@
 .visibility-static-links { padding: 24px; margin: 24px auto; max-width: 1200px; }
 .visibility-static-links ul { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(270px,100%),1fr)); gap: 12px; padding-left: 20px; }
 .visibility-static-links a { overflow-wrap: anywhere; text-decoration: underline; }
+.visibility-static-links summary { cursor: pointer; font-weight: 600; }
+.catalog-load-more.btn { display: block; margin: 24px auto; min-width: 180px; }
+.catalog-load-more[hidden] { display: none; }
 .visibility-notice { border-left: 4px solid #b19045; padding: 16px; margin-block: 24px; }
 .visibility-page .form-container { max-width: 680px; }
 .visibility-page .form-container p { margin-block: 16px; }

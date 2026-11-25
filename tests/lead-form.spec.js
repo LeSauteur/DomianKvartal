@@ -151,6 +151,63 @@ test("empty fields and an invalid phone never create a request", async ({ page }
   expect(goals.filter((event) => event.goal === "lead_form_submit_attempt")).toHaveLength(0);
 });
 
+for (const [pathname, leadType, sourceCta, object] of [
+  ["/index.html", "buy", "contact_form"],
+  ["/sell-apartment.html", "sell", "sell_apartment_form"],
+  ["/property-valuation.html", "valuation", "valuation_form"],
+  ["/obekt/object_1013.html", "buy", "object_page", ["object_1013", "apartment", "Квартира 2 комн., этаж 7 — Аксай, ул. Ленина, 40У", "8800000"]],
+  ["/obekt/house_914.html", "buy", "object_page", ["house_914", "house", "Дом 125 м² — Аксайский район, Российский", "11500000"]],
+  ["/obekt/land_01.html", "buy", "object_page", ["land_01", "land", "Участок 6 сот. — Азовский район, Городище", ""]]
+]) {
+  test(`release payload and consent on ${pathname}`, async ({ page }) => {
+    const network = await mockExternalRequests(page);
+    await page.route("https://api.web3forms.com/submit", async route => {
+      const request = route.request();
+      expect(request.method()).toBe("POST");
+      const multipart = new Response(request.postDataBuffer(), {
+        headers: { "content-type": request.headers()["content-type"] }
+      });
+      network.payloads.push(Object.fromEntries(await multipart.formData()));
+      await route.fulfill({ json: { success: true } });
+    });
+
+    await openPage(page, pathname + "?utm_source=release-qa&utm_medium=test&utm_campaign=release&utm_content=form&utm_term=kvartal");
+    const form = page.locator("#lead-form-section form[data-lead-form]");
+    await form.locator("[name=name]").fill("Тест Клиент");
+    await form.locator("[name=phone]").fill("+7 999 123-45-67");
+    const service = form.locator("select[name=service]");
+    if (await service.count()) await service.selectOption(leadType);
+    await form.evaluate(el => el.requestSubmit());
+    await expect(form.locator("[name=privacy_consent]")).not.toBeChecked();
+    expect(network.payloads).toHaveLength(0);
+
+    await form.locator("[name=privacy_consent]").check();
+    await form.getByRole("checkbox", { name: "Тестовая hCaptcha" }).check();
+    await form.evaluate(el => { el.requestSubmit(); el.requestSubmit(); });
+    await page.waitForURL(/\/thanks\.html$/);
+    expect(network.providerRequests).toBe(0);
+    expect(network.payloads).toHaveLength(1);
+    const [payload] = network.payloads;
+    expect(payload).toMatchObject({
+      lead_type: leadType, source_cta: sourceCta, phone: "+79991234567", privacy_consent: "accepted",
+      utm_source: "release-qa", utm_medium: "test", utm_campaign: "release", utm_content: "form", utm_term: "kvartal",
+      "h-captcha-response": "test-captcha-token"
+    });
+    expect(payload.first_landing).toContain(pathname);
+    expect(payload.lead_id).toBeTruthy();
+    expect(payload.session_id).toBeTruthy();
+    if (object) {
+      const [id, type, title, price] = object;
+      expect(payload).toMatchObject({
+        object_id: id, object_type: type, object_title: title, object_url: "https://domian-161.ru" + pathname
+      });
+      expect(payload.object_price || "").toBe(price);
+    } else {
+      expect(payload.object_id || "").toBe("");
+    }
+  });
+}
+
 test("valid submission sends once, includes attribution, and redirects only on confirmed success", async ({ page }) => {
   const consoleErrors = [];
   page.on("console", (message) => {

@@ -96,6 +96,14 @@
         }, { once: true });
 
         imageWrap.append(img);
+        if (window.domianPhotoThumbnails && Array.isArray(item.images)) {
+            const photos = item.images.slice(0, 3).map((source) => source.replace(/^https:\/\/domian-161\.ru(?=\/)/, ''));
+            const thumbnails = window.domianPhotoThumbnails(photos, (index) => {
+                img.src = photos[index];
+                thumbnails.select(index);
+            });
+            if (thumbnails) imageWrap.append(thumbnails.element);
+        }
 
         const body = document.createElement('div');
         body.className = 'showcase-card__body new-object-card__content property-card__body';

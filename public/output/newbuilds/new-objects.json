@@ -1,0 +1,92 @@
+﻿[
+    {
+        "id":  "newbuild_910",
+        "title":  "Новая новостройка 910",
+        "price":  "Цена договорная",
+        "image":  "assets/hero/hero.jpg",
+        "type":  "newbuild",
+        "created_at":  "2026-03-30",
+        "url":  "/details.html?id=newbuild_910"
+    },
+    {
+        "id":  "newbuild_909",
+        "title":  "Новая новостройка 909",
+        "price":  "Цена договорная",
+        "image":  "assets/hero/hero.jpg",
+        "type":  "newbuild",
+        "created_at":  "2026-03-30",
+        "url":  "/details.html?id=newbuild_909"
+    },
+    {
+        "id":  "newbuild_908",
+        "title":  "Новая новостройка 908",
+        "price":  "Цена договорная",
+        "image":  "assets/hero/hero.jpg",
+        "type":  "newbuild",
+        "created_at":  "2026-03-30",
+        "url":  "/details.html?id=newbuild_908"
+    },
+    {
+        "id":  "newbuild_907",
+        "title":  "Новая новостройка 907",
+        "price":  "Цена договорная",
+        "image":  "assets/hero/hero.jpg",
+        "type":  "newbuild",
+        "created_at":  "2026-03-30",
+        "url":  "/details.html?id=newbuild_907"
+    },
+    {
+        "id":  "newbuild_906",
+        "title":  "Новая новостройка 906",
+        "price":  "Цена договорная",
+        "image":  "assets/hero/hero.jpg",
+        "type":  "newbuild",
+        "created_at":  "2026-03-30",
+        "url":  "/details.html?id=newbuild_906"
+    },
+    {
+        "id":  "newbuild_905",
+        "title":  "Новая новостройка 905",
+        "price":  "Цена договорная",
+        "image":  "assets/hero/hero.jpg",
+        "type":  "newbuild",
+        "created_at":  "2026-03-30",
+        "url":  "/details.html?id=newbuild_905"
+    },
+    {
+        "id":  "newbuild_904",
+        "title":  "Новая новостройка 904",
+        "price":  "Цена договорная",
+        "image":  "assets/hero/hero.jpg",
+        "type":  "newbuild",
+        "created_at":  "2026-03-30",
+        "url":  "/details.html?id=newbuild_904"
+    },
+    {
+        "id":  "newbuild_903",
+        "title":  "Новая новостройка 903",
+        "price":  "Цена договорная",
+        "image":  "assets/hero/hero.jpg",
+        "type":  "newbuild",
+        "created_at":  "2026-03-30",
+        "url":  "/details.html?id=newbuild_903"
+    },
+    {
+        "id":  "newbuild_902",
+        "title":  "Новая новостройка 902",
+        "price":  "Цена договорная",
+        "image":  "assets/hero/hero.jpg",
+        "type":  "newbuild",
+        "created_at":  "2026-03-30",
+        "url":  "/details.html?id=newbuild_902"
+    },
+    {
+        "id":  "newbuild_901",
+        "title":  "Новая новостройка 901",
+        "price":  "Цена договорная",
+        "image":  "assets/hero/hero.jpg",
+        "type":  "newbuild",
+        "created_at":  "2026-03-30",
+        "url":  "/details.html?id=newbuild_901"
+    }
+]

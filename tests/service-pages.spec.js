@@ -80,9 +80,8 @@ test("light theme keeps service backgrounds and text colors independent from glo
     return { background: brief.backgroundColor, heading: heading.color, label: label.color, consent: consent.color };
   });
   const [briefRed, briefGreen, briefBlue] = rgb(briefStyles.background);
-  expect(briefRed).toBeGreaterThan(120);
-  expect(briefGreen).toBeLessThan(110);
-  expect(briefBlue).toBeLessThan(100);
+  expect(briefRed).toBeGreaterThan(Math.max(briefGreen, briefBlue));
+  expect(Math.max(briefRed, briefGreen, briefBlue)).toBeLessThan(100);
   expect(isLight(rgb(briefStyles.heading))).toBe(true);
   expect(isLight(rgb(briefStyles.label))).toBe(true);
   expect(isLight(rgb(briefStyles.consent))).toBe(true);

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 import { objectPage } from '../_tools/build-object-pages.mjs';
+import { objectGalleryAssets, siteThemeLink } from '../src/site-theme.mjs';
 
 const read = file => JSON.parse(fs.readFileSync(file,'utf8'));
 const provenance = read('docs/owner/max-listings-2026-10-26.json');
@@ -30,7 +31,9 @@ test('MAX listings retain approved prices, unique local media and exclude unconf
     assert.match(html,/class="visibility-description"/);
     assert.match(html,/class="h-captcha"/);
     assert.doesNotMatch(html,/oneme\.ru/);
-    assert.equal(html,objectPage(r));
+    const enhancement=objectGalleryAssets+siteThemeLink;
+    assert.equal(html.split(enhancement).length,2,'Expected one approved theme and gallery inclusion');
+    assert.equal(html.replace(enhancement+'</head>','</head>'),objectPage(r));
   }
   assert.equal(hashes.size,77);
   const yantar=registry.find(r=>r.id==='house_915');

@@ -1,0 +1,92 @@
+@import url("./photo-thumbnails.css");
+
+.visibility-gallery.object-gallery { display: block; margin-block-end: 1rem; }
+.object-photo-stage { position: relative; }
+.object-photo-cover,
+.object-photo-tile {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 9px;
+  background: #e8dee3;
+  cursor: zoom-in;
+}
+.object-gallery .object-photo-cover img {
+  display: block;
+  width: 100%;
+  height: clamp(225px, 38vw, 460px);
+  border-radius: inherit;
+  object-fit: cover;
+}
+.object-photo-arrow {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  transform: translateY(-50%);
+  border: 1px solid #fff9;
+  border-radius: 50%;
+  background: #fffdfaeb;
+  color: #47152b;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+.object-photo-arrow--prev { left: 9px; }
+.object-photo-arrow--next { right: 9px; }
+.object-photo-count {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #302129dd;
+  color: #fff;
+  font-size: .8125rem;
+  pointer-events: none;
+}
+.object-photo-all { margin-top: 12px; }
+.object-photo-all summary { padding: 9px 0; font-weight: 650; cursor: pointer; }
+.object-photo-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 8px;
+}
+.object-gallery .object-photo-tile img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: inherit;
+}
+.object-photo-stage button:focus-visible,
+.object-photo-tile:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.object-photo-dialog {
+  margin: auto;
+  width: min(960px, calc(100% - 24px));
+  max-width: none;
+  max-height: calc(100dvh - 24px);
+  padding: 12px;
+  border: 1px solid #ffffff33;
+  border-radius: 16px;
+  background: #1e1918;
+  color: #fff;
+}
+.object-photo-dialog::backdrop { background: #100d0de8; }
+.object-photo-dialog figure { margin: 12px 0; text-align: center; }
+.object-photo-dialog img { display: block; width: 100%; max-height: 64dvh; object-fit: contain; }
+.object-photo-dialog figcaption { padding: .5rem; }
+.object-photo-controls { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; }
+.object-photo-close { display: block; margin-inline-start: auto; }
+@media (max-width: 640px) {
+  .object-photo-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .object-photo-dialog .btn { padding: 10px 14px; }
+}

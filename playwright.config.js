@@ -15,6 +15,7 @@ module.exports = defineConfig({
     baseURL,
     channel: "chrome",
     headless: true,
+    launchOptions: { args: ["--host-resolver-rules=EXCLUDE 127.0.0.1, EXCLUDE localhost, MAP * ~NOTFOUND"] },
     screenshot: "only-on-failure",
     trace: "retain-on-failure"
   },

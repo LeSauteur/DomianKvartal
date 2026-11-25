@@ -1,0 +1,880 @@
+{
+  "commit": "4e415396392d97311399b26681f4d9ff5ab3dbf0",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/01.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1001/01.jpg",
+      "sha256": "da2203e063f07de5c3cb75fc855682c21a010de5699b3aadc6d68eb644df526b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/02.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1001/02.jpg",
+      "sha256": "281b3d7708b39482d13b42a172f7c1759d110215113f5ac4082b5aa3856b2984"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/03.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1001/03.jpg",
+      "sha256": "d38eb5b66171494dbc9df5d74484d69f16bb458e13fce26813d6805e949476be"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/04.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1001/04.jpg",
+      "sha256": "d84361d3950b4d800c98054886647c1875e579891ee1fe326f8417dc265fd469"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/05.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1001/05.jpg",
+      "sha256": "141f4587aa318e05a828543cc1750e42e2cb37fcd450360dfd3a5686de2bf821"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/06.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1001/06.jpg",
+      "sha256": "4ef2a4b2634bb97d92be7efbcf490bf1c34f4c816ac66053d5fcb7f6d21e8489"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/07.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1001/07.jpg",
+      "sha256": "0113f2506fc610098deb8b88ef0ad45f5bab7a6f22e52dff7a2b2a0453b058b9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/08.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1001/08.jpg",
+      "sha256": "6b7a36049bec7afb73e8acc93b5c83b10335538e1cab3f0f43521ad62152f1ad"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/09.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1001/09.jpg",
+      "sha256": "cd387b546df882f8f118bbc9e4cb26254b933e4f585d9b4a2ad519d0e7692191"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/10.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1001/10.jpg",
+      "sha256": "1a6361770dc1e61ee6ace3010ceef0fd300e6b0a49711cfe6fabf42bb0ebf797"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/11.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1001/11.jpg",
+      "sha256": "b0dccf943935a04c92c0b56f09ee45d24c05d81b57868e69faf95e40205d18ee"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/12.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1001/12.jpg",
+      "sha256": "47c6008c65c8b87e51f48f67a383f7d3d17de0a0d87a4eed8fdb670a9940370a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/13.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1001/13.jpg",
+      "sha256": "f55b62ca40b10b6ce07cd5f60e0a0d20601a17c142ca8e45f18521e8b60b244a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/14.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1001/14.jpg",
+      "sha256": "795ec2cd12d40a073b17ee163df4cec1104f1caa44c2f3c348a5a6107a27cc8e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/15.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1001/15.jpg",
+      "sha256": "338a277e07dc38b3eb3d33fb0fd85bea47f51f71deda3855c4de51b3259b37df"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/main.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1001/main.jpg",
+      "sha256": "4f39e956fb2f0bfb1838e1fdbef1a6336cff4af2c115601125b3fac24328a50b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/01.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1002/01.jpg",
+      "sha256": "5d533dd2889b3d12d700cc4649f7714e6b4ee97884d76efd8630f01563efc7ee"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/02.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1002/02.jpg",
+      "sha256": "519d2d909b37535fda1e923e0bd4e83d9f401d3552fc0819ed63ceeded2e02e6"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/03.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1002/03.jpg",
+      "sha256": "b6c29e993797dd28f37205aee0a4903a95d6260c5adbaacf2242b47ad93d953b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/04.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1002/04.jpg",
+      "sha256": "650862f1f63e401067f808b86f3a1f70bdb7925a79a8952be4b45ccd7a79df36"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/05.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1002/05.jpg",
+      "sha256": "7276fb78f677b014dde9153f388672e6e931b363dc398f457c36688659e262ed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/06.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1002/06.jpg",
+      "sha256": "b16c086381ef71c9fbfc684f1723cb69b21c76667baa1286a1e995dfb160660c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/07.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1002/07.jpg",
+      "sha256": "0363814aa9770add77e5a9a959a56315cdc7167150910f9bf8fa30dd5b84b77d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/08.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1002/08.jpg",
+      "sha256": "b4c2570e30d7d0011a8ddfdfe6457ca06df8b96eb023d2cbd389e7007bf8d728"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/09.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1002/09.jpg",
+      "sha256": "7f4bf0bf61eb6b1bfeedea4ccd0833a3c77329a0310db8af3e262cc316587af6"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/main.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1002/main.jpg",
+      "sha256": "467499ece5f45c04851cf5d1ef7ca00b2574b3533b526552429378ef51e0637c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1003/01.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1003/01.jpg",
+      "sha256": "54966c12577c02db67b2b1c3dc6a492e272345fb2ff183a0f14d9231fd99b981"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1003/02.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1003/02.jpg",
+      "sha256": "95d0963f5e167bd3307fae9bc06c39df1510cbc72695d603527093cb5d6995e4"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1003/03.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1003/03.jpg",
+      "sha256": "f12cb584dd3530e133814b4f9bb3f6a3100bd7b34ca1792ec4509904f738736c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1003/04.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1003/04.jpg",
+      "sha256": "e705aa421c17217f294cde518ffbfa5a8bce0acc196be567c4c778312b156ed7"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1003/05.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1003/05.jpg",
+      "sha256": "d8fd2b7167ae090213e59bee151d3cab6600115964926dedd47440fa1bcf9e10"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1003/06.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1003/06.jpg",
+      "sha256": "8946d4d903eed5c13ea703896cdae45a89ad36b83a25e7f49cf067f21d52b1d2"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1003/07.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1003/07.jpg",
+      "sha256": "21eb1c6f299f1b400ab13a854a06001427d8a29e42067c68b7efdb525668c7d9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1003/08.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1003/08.jpg",
+      "sha256": "7bb17e3aa4de0e80b51f5b6e06d34e24c9ba157259ce9364297428faf853eca5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1003/09.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1003/09.jpg",
+      "sha256": "35b8dcfa09d445f9b198660434bb2a93f2c2a06c3c39696f1d98e05a55dc7688"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1003/main.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1003/main.jpg",
+      "sha256": "c658a35366a8b57a6ec3dc3b3a6028e6bac9ad1ad41d35ad1a4a8af25fe4a9b2"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/01.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1004/01.jpg",
+      "sha256": "d23ceb54f8e1c94a394fb065c616ea2b92b989dda268c80a2bde10b3eb572552"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/02.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1004/02.jpg",
+      "sha256": "1ba351d8713af092f16144cdc799c9b20ef1f238f6dd051c9d51696f789f9f40"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/03.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1004/03.jpg",
+      "sha256": "fde2aa914a5e69def0ace48528266b61afc94a6f6f9cd670184cb5a217cbaed5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/04.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1004/04.jpg",
+      "sha256": "994fbb834939bc378e7459d94854359a433ac58a6dcde75bb090b8a91f93c38d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/05.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1004/05.jpg",
+      "sha256": "4005b94005d513134d4bd70e97f95e4034d9793eacd22d9cf0f1dbe8a3bf3fd1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/06.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1004/06.jpg",
+      "sha256": "b7bdf9a2253b5d2a3045375c53ed5ddbd41a4ea28f03833b3f92ba9bfe0b0dd8"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/07.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1004/07.jpg",
+      "sha256": "6a12109aae6bd09603aafb9191f5ad1299693a6dadf9722b4bba7f35160f4d62"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/08.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1004/08.jpg",
+      "sha256": "20320cbeb313e5c83c55097c88d243650ac54bddb50082c8b516f2e6a0e15f08"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/09.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1004/09.jpg",
+      "sha256": "a66ee4f6e17f9936962076ae90bd81a923bd4aafaae36304d42eb3feabbe5703"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/10.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1004/10.jpg",
+      "sha256": "c3cb6f7b42d8a8d78ea9ec26ca928164213ddd25c869a608adbb6493d49370d3"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/main.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1004/main.jpg",
+      "sha256": "698fc5883cfb993ba24accb1ef9a95369cca6e50c6eb4eb1f8420bb383247704"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1005/01.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1005/01.jpg",
+      "sha256": "cad532cade9669f8c194989e5fcf50207ab50506f202b656f6fdac0371ac8b95"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1005/02.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1005/02.jpg",
+      "sha256": "21d24f8bddaea61f68d022422f891a14d108f2c6a4d73e7f579343fa2000b92a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1005/03.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1005/03.jpg",
+      "sha256": "1617f8a6db744739abbc5bae31fad658af3a4721686b2e62f8bde2ad6321ffa9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1005/04.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1005/04.jpg",
+      "sha256": "acc0384c002f30b174d1a271ff5deb1701ea59e778b64407083a083aec79d68c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1005/05.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1005/05.jpg",
+      "sha256": "a430b1901aefeb5b48fd7b23112f8ac7dbd6361ad38ad826d492e7ef53d78862"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1005/06.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1005/06.jpg",
+      "sha256": "054a907a9699a4dc1c9eda164eded0263fa2fe1d79369dabbd38a049ec6811d5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1005/07.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1005/07.jpg",
+      "sha256": "f4a1244904d769a2f327d8113cc370a189861a355edc5371446818f8554544ea"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1005/08.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1005/08.jpg",
+      "sha256": "faf172d5edd7d2ed41eb92be322e82161c354fc0e3ba8b2575e40fc6b39b68ce"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1005/09.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1005/09.jpg",
+      "sha256": "b2907cc483bbadbfd1ac5a5df657f90dda575feaf843d573399b86e000ded371"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1005/10.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1005/10.jpg",
+      "sha256": "3b15924e492e3f63838a06a4ec223abed27d69ce83fd247c8da92b6e3d56a05b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1005/11.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1005/11.jpg",
+      "sha256": "c4ea266723a28f9d68d02859754950c123a079307247683c0616186a0e209865"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1005/main.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1005/main.jpg",
+      "sha256": "5b1ed5d72b4a08f15cdada4e1fa813a4600f67f23dda7bbee35866537cb52d4f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/01.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1006/01.jpg",
+      "sha256": "7674ee15af6c20a0247f7134165209e3198532e79b1f1297df48d8a928e51490"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/02.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1006/02.jpg",
+      "sha256": "af468350a5081dd31d70b6352f19a9ef9b7a5a2780229f5b1c59ae1c3ce1e5bc"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/03.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1006/03.jpg",
+      "sha256": "5e610663e2bd1bb932c773cd5de7de6e69937249f19de53002c68b652adc9e19"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/04.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1006/04.jpg",
+      "sha256": "b3781da8fab76cac50e06871c272e34b1906ab12323e898f71bb936536a12d16"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/05.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1006/05.jpg",
+      "sha256": "cac6670058c0cedad139ec3fff72cd9994fda75a2b0545644406aab83423eb33"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/06.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1006/06.jpg",
+      "sha256": "81ebe5bb03b1f4ceb98e0b33eb6f4148b2653478423eed25058e95ffab1e6924"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/07.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1006/07.jpg",
+      "sha256": "148d6b2ca3a8c0f36d32646695814e8a47a130aee8c0f15a3d8aef7bb01878da"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/08.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1006/08.jpg",
+      "sha256": "4ea24c032719f02ba9763b022086e9df1f6b8a8fecaab75a5b86012c6b98f659"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/09.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1006/09.jpg",
+      "sha256": "93f89e5f940776f2c59bb222c5826a42a3de9a6fa09c7e59ae3d6b8a2a4e1f55"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/10.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1006/10.jpg",
+      "sha256": "0e13d9db033be289f30061ec598bd443447ad6a22cba3175409cd58888c9ab9e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/11.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1006/11.jpg",
+      "sha256": "eed2ac71814d9c701117657282439c2a4eef9d07593e79b2df2f23c0e5dc68ff"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/12.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1006/12.jpg",
+      "sha256": "4e7cad36521706f48e6a3899156c3319846cb32e9117bf862d5179ca7ea21724"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/13.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1006/13.jpg",
+      "sha256": "4dfbaf28ac8f1e34d5f70bba63af6b50f3c69a4ec24c0c9630806f73c86203bb"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/14.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1006/14.jpg",
+      "sha256": "1ec444e60d4a06f5bc9b183d84a1eb7e43754a45f8ae412d832dabb8b63a7e10"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/15.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1006/15.jpg",
+      "sha256": "35597dbe89dbd49ba180e77149b1cf647f6c524dd093fc3a05f19242a4958a69"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/16.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1006/16.jpg",
+      "sha256": "b7ac20d1ce2a290e388aa1cfb6b9105cccd34b10d4be9110037c2d09e5d0abbd"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/17.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1006/17.jpg",
+      "sha256": "cdef8799cdb08fb3d772688618393e4909557f79bd4fe2d4dd13aab7df49b53d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/18.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1006/18.jpg",
+      "sha256": "4e5f767ba819bf0b074d7827ef6472637e984fcd8de070d9a9ff45105b7bf693"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/19.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1006/19.jpg",
+      "sha256": "67cb2e8a3d316172da16206b8e39c7ea5156050ea0cd0aa9a662f9448cdeed05"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/20.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1006/20.jpg",
+      "sha256": "68cfd46d295136f4223e626a2fa60c70e6be987f7cb773e56a6f0f00b43e0882"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/main.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1006/main.jpg",
+      "sha256": "b6f8dbd0198b40914195d44f6ab6f38f6297effa53fab8599449146d7b972fb6"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/01.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1007/01.jpg",
+      "sha256": "b966d7905045a8e64bf28fb67d2fdfb03bfd01fef0c770f433fb568e17f4c34e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/02.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1007/02.jpg",
+      "sha256": "52b41afa8f30d6cae0c4dbc14bdf695836c7d99826e35cac42e88b65a8ec3cb1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/03.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1007/03.jpg",
+      "sha256": "7b7ced128cf07114182d89d59cc5f6382de5676ec4ec9baf6633b3362aca01cd"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/04.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1007/04.jpg",
+      "sha256": "cee29780948a9a69f21335624f319d3f05fa6d06fda2fe780a521eab72684db5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/05.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1007/05.jpg",
+      "sha256": "1494e2f7c11fd17d51886e74cddbed69d2dd89b6d1d05f4ff17ef051cd4d4ba0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/06.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1007/06.jpg",
+      "sha256": "6e45b22bfa4d83a2e1038964d2f91fd926f308338cd9498b958dd4aff2c46a53"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/07.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1007/07.jpg",
+      "sha256": "a8584b3391f0670a289502dcaf1c4a29abde9e44fd7f4fb9746e2bac04085f9f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/08.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1007/08.jpg",
+      "sha256": "40de62f59ba206c61d9aa723d1c665af4ad632db92edb61956728cb9541b8bf8"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/09.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1007/09.jpg",
+      "sha256": "6edefe56782332f08cf5863f78b081f81e60ace5e59732d695dca1427a4884f7"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/10.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1007/10.jpg",
+      "sha256": "d55c9357422339f1e3e7faa3d53887a383ccf4feb599fe693b1e150177434bd6"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/11.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1007/11.jpg",
+      "sha256": "8ece431a7715ee1d712b6ed53a9152b726921f1452f83395cab4f2c3e755d1f1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/12.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1007/12.jpg",
+      "sha256": "0d5fee928fd5fbc55f54e28163e998d57f0bf4903439adb63e92e61f97dfe18f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/13.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1007/13.jpg",
+      "sha256": "688d002272dd52f3a217e6842cf6ba144bdfb84d44d487ac77604a4a479d697c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/14.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1007/14.jpg",
+      "sha256": "56935a7c79b2e473604bdef4b47e03207d6cea2e9e24df27cdeff6c52f41d0cb"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/15.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1007/15.jpg",
+      "sha256": "0dbb8a7b13cffcf5dfa1dc99639fb8f1321d8c8995fdccb562b9ec749cb5ac2f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/16.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1007/16.jpg",
+      "sha256": "a6ca34d3eac13d2233cf498c65ca8fd23f29e604c7f72a7edc6f20ee303b2448"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/17.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1007/17.jpg",
+      "sha256": "91c422f110c68f2cc1ef9530720c83f40cc1b3030c2bd2e5f0349edb70ba7318"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/18.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1007/18.jpg",
+      "sha256": "f9a9fad90102d6350d9c9986b9beccd4a48b473c0067f5cf6a574127d03a15c2"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/19.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1007/19.jpg",
+      "sha256": "baf1c69af020d26e752ad5ca2bba10d1bcece7e6341c11a9ef99e4bd908ddcce"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/main.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1007/main.jpg",
+      "sha256": "13479ac2ecd647c6092cdac533a232cf240290eab90529f2776f899a9f42861a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/01.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1008/01.jpg",
+      "sha256": "9f14902a1d47883a0d702075357122049758e5fd8d690e8e302b40c22781e430"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/02.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1008/02.jpg",
+      "sha256": "30e5a1ade7074eb75ee494883f51a6def64d276a37e37a12b1cd3ecb157dcd14"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/03.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1008/03.jpg",
+      "sha256": "32d6c97f58d85d13630ca5b8e3aacbe337d18511c68bf47319eb79c981b853e1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/04.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1008/04.jpg",
+      "sha256": "628a0512060f97dbcd144ba819dd9a6274a98ec9531ede9e7add2faad39d5eac"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/05.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1008/05.jpg",
+      "sha256": "d92b1718c3f044c1fa861a8cd058f4ee4b84bf6c4365709b628752c2eb5db4ef"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/06.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1008/06.jpg",
+      "sha256": "c8d8df524b703af7512c743ac944144adaef38659854861bebbe208781c4f36c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/07.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1008/07.jpg",
+      "sha256": "f4b1d63c7209ef877d9eb988d28636f6b497aca393061b5a85ddee55970ebafd"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/08.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1008/08.jpg",
+      "sha256": "6c9e0e13ef3a004d4a56bf6e07654667de77a61d8e72f1eee28d0e7154995ae1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/09.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1008/09.jpg",
+      "sha256": "756096ca41fbca190bc22d8dfd62f87a8b5768e62f2c66fffdbcfbd301953d61"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/10.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1008/10.jpg",
+      "sha256": "75699118fc769ffc4f204464f08923b708931774c5277ab8b5b6292557b83c1f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/11.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1008/11.jpg",
+      "sha256": "091abe9e05cda715dfe150ed4346cd0cf3622cf9e079a9b72e8ef399465e6a5b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/12.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1008/12.jpg",
+      "sha256": "561cc764d3226d1d4565fffdaaf9fc062812f2803cc33314f9beaf8167119304"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/13.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1008/13.jpg",
+      "sha256": "5b234e4f32597c7874cdbef6028428862642323955150e34822bd00df36c04f5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/14.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1008/14.jpg",
+      "sha256": "b211371e8d1d7570ef18fa4edc4b5101ce0187c114329401254840c35c9aa842"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/15.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1008/15.jpg",
+      "sha256": "dbb932be6b2eae5ec3c3997f18d34bab52bfeeccbdfb4dff318552dc9efc7f62"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/16.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1008/16.jpg",
+      "sha256": "ed6388087e75afe4f4cd897382dc067893604c6535325b27b71daefbf5c7a62d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/17.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1008/17.jpg",
+      "sha256": "afb42136a09ae993d5738f7fe7e3dec14a6557a5c6f86a9799cb27b551941e48"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/main.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1008/main.jpg",
+      "sha256": "99b6ef6ade5e986b11bc9e7c15f03875310d7d06135f93e97ff0fa67538fdcc1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/01.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1009/01.jpg",
+      "sha256": "443bca5210f9029fb13e3bec677a5ca6075860b95faa758b34b192f48c14a7fb"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/02.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1009/02.jpg",
+      "sha256": "1382b05cdd47cff018350c81e0240c943a92eee502fc0c16230974e5dac71d6a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/03.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1009/03.jpg",
+      "sha256": "7a8c0db39d12de94fc5fd8616b339ede67283878ce3d6e87198da58b8636fecb"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/04.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1009/04.jpg",
+      "sha256": "8d88ccf5494af7f55b19fd2d2c32941c15b9910f28f5be5140325babcbfc6b1c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/05.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1009/05.jpg",
+      "sha256": "be2d4ccea27a360c5b12918bd3a42568b320b226e721375639e93fc6733a7841"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/06.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1009/06.jpg",
+      "sha256": "1df39f72c1dd91b3a75321773e49402dacb8c6b14c421f5ac18bc184e39b365b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/07.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1009/07.jpg",
+      "sha256": "9473337317abca4b3fbf4aad4727b0eed4d2153c7e9e05b33eb4746041524d6a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/08.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1009/08.jpg",
+      "sha256": "5596840e64afe2b20f8dfe9f16f95716923d7df3f06520ca42aeb893f6bf61f8"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/09.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1009/09.jpg",
+      "sha256": "42a8eec2516dc28e23c57af9033c86111c2324b1ffb9cbfa9cc33b6187600571"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/10.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1009/10.jpg",
+      "sha256": "3ac92e8dcc7ee4793bbae3514d39b09ca067812a7e0b56366a6f61adbc581612"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/11.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1009/11.jpg",
+      "sha256": "0b157821eacaa4eb3d97cf28963345daf29d996c28f8a9f8756c83823714d325"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/12.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1009/12.jpg",
+      "sha256": "07f8812a06b0b86dceae182bff7d153efa2241435e7cf311b350d6b35cd53938"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/13.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1009/13.jpg",
+      "sha256": "7133d40187d24bf3ee7c875f27214cacd478f00ded3a1efc280e71b2164e23d2"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/14.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1009/14.jpg",
+      "sha256": "331b4253bc9bf896267da229d29106d7ef96744e4cb461a47a45f4cd2f7d1f3a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/main.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1009/main.jpg",
+      "sha256": "1dcbb99c5096c6a40467fcaa69199b09c1c1eb79914418f28e79d32f6cb18b7f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/01.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1010/01.jpg",
+      "sha256": "486a39c030532c08be4860b66214a3afb2a02b5ec3092b37e989f8f43bac18c9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/02.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1010/02.jpg",
+      "sha256": "d69e12d0d0ebe803e69c71960810731d3e2a96b2d7fe37941686e85c93f09e88"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/03.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1010/03.jpg",
+      "sha256": "afb47e561438a519465c6ef87ca53bdc960621cc9348a1cbcf4cfa8e32d8118c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/04.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1010/04.jpg",
+      "sha256": "4dfafcd67a78f7683eb9e617188ba0a514f671053ff7a672ef19fdde756fd9f4"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/05.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1010/05.jpg",
+      "sha256": "fd193e9d1d73b541b485f03f47e6b11c03e194e7c165b2f9b79de555a568c53c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/06.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1010/06.jpg",
+      "sha256": "c66e43b03d6d647fee7f8720691c1fba80b6483cd6df48c010f0a3bceb854806"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/07.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1010/07.jpg",
+      "sha256": "4e18a8ee030293a1868fe36e7db948f72c3e87de850361036edb7de3358aa14f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/08.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1010/08.jpg",
+      "sha256": "c119df7d2f7c815827690261e8a9c10aaf439d729ebf70fb176b0696bc9c9603"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/09.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1010/09.jpg",
+      "sha256": "b3f69586b49e530d5594994573441c1b7cd100dd03662bf9eb4f7a7f73af377b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/10.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1010/10.jpg",
+      "sha256": "328f8cab4bde35b7bb5a25be900a88754d8d1e33fef0d57eb1b23b89d2f89b52"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/main.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1010/main.jpg",
+      "sha256": "35aa22560d8e44f0a2e31399302c6adc0e48d882a650825fc396e9d69dd76aed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1011/01.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1011/01.jpg",
+      "sha256": "61a55055720e981961da4a7e759aa23e5eda9b84064da0d43b2fb89645c6e7d1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1011/02.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1011/02.jpg",
+      "sha256": "48e2264b6f180834cdee77fd13358f61e1d3eb17ba5744e11571039ae2966b9a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1011/03.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1011/03.jpg",
+      "sha256": "dc9c7db04777e3b693f854a8f639879edf6fa9f988a66d1f9c6fe6609fccf4f3"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1011/04.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1011/04.jpg",
+      "sha256": "4dbcf0343df3dfc374cf21fae2b70e9c885492d8471b6a4ddd216cd4c956e80a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1011/05.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1011/05.jpg",
+      "sha256": "882e84548dbeff3d002fb11183fd26e91dba635fd6b04d646f1e9eb7fde6b3c3"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1011/06.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1011/06.jpg",
+      "sha256": "4ae5cdd5f9e158d9374b8c6b9f43bad06a6b912fcec7e4808cd0396c9c146ec2"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1011/07.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1011/07.jpg",
+      "sha256": "c87935ce10215030cac55fe4cd939bf56381f4ffa52b975d3ba6b71d093b3829"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1011/08.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1011/08.jpg",
+      "sha256": "fad9505e827bc737950f97565abfa9578d0d1e06f3371f9983e5988997862795"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1011/09.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1011/09.jpg",
+      "sha256": "fa005ceeaee4a1fcf6da89042b84e7dc932760e0e173da93d1e85b066aac9805"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1011/10.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1011/10.jpg",
+      "sha256": "fffb3a5d2d36ec72ee1f498691955d55fbc510bc8f44443b496ad49ec51740cb"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1011/11.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1011/11.jpg",
+      "sha256": "6a0ea00d0ba50f33d6db03170f4f52959e43163d03f398be724702507de3c246"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1011/12.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1011/12.jpg",
+      "sha256": "f52458413210320b619f193c9d458a868e5f27fca9297bcf86b20f9abb9a3e54"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1011/13.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1011/13.jpg",
+      "sha256": "3aad97b273a143784e4fb1d88664fcebe9b6f932cc2ac176ef256caed320ba65"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1011/14.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1011/14.jpg",
+      "sha256": "f15a0b90c9895b5a9010aaa71d32fdea511bdf03e8a3244e0068520cb1fb685f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1011/15.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1011/15.jpg",
+      "sha256": "09c7d4c36eacd936792663326d3e038592b2439e436f4d8c4cb804cf8a69fea9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1011/main.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1011/main.jpg",
+      "sha256": "790cddc6adb4ca9d83a536ae4405211d4cb9b9cb87eba491e6af5a7dbef879f0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1012/01.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1012/01.jpg",
+      "sha256": "87b9441f30218a4d125317340ca69915410736fb270f8df37e10be577edd8336"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1012/02.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1012/02.jpg",
+      "sha256": "7a625569f622aee8c5968e41ac42433990ded556f543cfc6c99a77c55b26ddc1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1012/03.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1012/03.jpg",
+      "sha256": "d91e9f45644e984fd79f6ed83d859fce6268ea672aa15f85cceda7e2894bdadb"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1012/04.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1012/04.jpg",
+      "sha256": "d92ed82e34316f48da53d8123e0c1db9a627210aec843de15283c0e43c6e5606"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1012/05.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1012/05.jpg",
+      "sha256": "dda1d33696fd62d411e3518eb24ceab9f9098872ce8b3be590df291d0bc05185"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1012/06.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1012/06.jpg",
+      "sha256": "9ea4bbeb17dfa4c9ed1d55aef8a91c408118f485a765892b197cb7cb2edc2aae"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1012/07.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1012/07.jpg",
+      "sha256": "a8e1090ab5ad623bd69a3dcd2473bada64e73ec00b17e0901819609f51611f0d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1012/08.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1012/08.jpg",
+      "sha256": "2bd290839d12b89c68d38269677a23363b660ddf236264a0ef2a099942a3dd13"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1012/09.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1012/09.jpg",
+      "sha256": "2725fe22e78308cb1b3ca52312aea8edfa206e7f9289f146ac08bd775ec8c8df"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1012/10.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1012/10.jpg",
+      "sha256": "3353a8a2114527de02f7785c0dbab93075c02e865cf695530e3c455ca78fda87"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1012/11.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1012/11.jpg",
+      "sha256": "a6490b875cbb21d3e92de19a99ed45a4f72ed061a54aef412d84614140690a9e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1012/12.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1012/12.jpg",
+      "sha256": "c343afb86242136ef34283d6a834250db029749fc401d2ec191beabae57241aa"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1012/13.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1012/13.jpg",
+      "sha256": "c914c63eeddd17df3166edaee374cfdc478573c19ebabae2022b5b6935b06c49"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1012/14.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1012/14.jpg",
+      "sha256": "acd0b7886e0b423ee8c518150f889862b45f5d5d96ad8166578b8a7555466ee6"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1012/main.jpg",
+      "local": "/assets/images/legacy/NewApartmens/object_1012/main.jpg",
+      "sha256": "1a5213b95d3e61a76a1596a401c6a3ce105a0b95fa17f85b521b9016b2c18dc8"
+    }
+  ]
+}

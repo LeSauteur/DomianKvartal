@@ -26,7 +26,15 @@ for(const width of [390,1440])test('honest catalog actions and local project car
   await expect(catalogLink).toHaveText(/Каталог квартир\s+Открыть/);
   await catalogLink.click();
   await expect(page).toHaveURL(/apartments\.html.*#catalog/);
-  await expect(page.locator('#cards .property-card')).toHaveCount(130);
+  await expect(page.locator('#resultsCount')).toContainText('Найдено: 130');
+  const cards=page.locator('#cards .property-card');
+  await expect(cards).toHaveCount(24);
+  for (const count of [48,72,96,120,130]) {
+    await page.locator('.catalog-load-more').click();
+    await expect(cards).toHaveCount(count);
+  }
+  expect(new Set(await cards.evaluateAll(items=>items.map(item=>item.dataset.objectId))).size).toBe(130);
+  await expect(page.locator('.catalog-load-more')).toBeHidden();
   await expect(page.locator('.unified-property-search')).toHaveAttribute('href','#filters');
   await page.goto('/newbuilds.html?qa=1');
   await expect(page.locator('#cards>.nb-card')).toHaveCount(catalog.item_count);

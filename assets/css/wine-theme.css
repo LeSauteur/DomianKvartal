@@ -1,0 +1,411 @@
+/* Shared palette and site navigation. */
+html body {
+  --bg-main: #f8f6f1;
+  --bg-soft: #f1e7eb;
+  --bg-surface: #fffdfa;
+  --bg-card: var(--bg-surface);
+  --bg-light: var(--bg-soft);
+  --text-main: #302129;
+  --text-muted: #645661;
+  --accent: #751f43;
+  --accent-hover: #47152b;
+  --accent-soft: #eedfe5;
+  --border-soft: #dacecf;
+  --border-strong: #bda9b3;
+  --color-text: var(--text-main);
+  --color-muted: var(--text-muted);
+  --color-border: var(--border-soft);
+  --color-accent: var(--accent);
+  --radius-card: 9px;
+  --shadow-card: 0 5px 16px #2c17240a;
+  --wine-deep: #47152b;
+  --wine-cream: #fff5f0;
+  --wine-rose: #f6cfdd;
+  --wine-button: #751f43;
+  --wine-button-hover: #591633;
+  --wine-radius: 9px;
+  --wine-serif: Georgia, "Times New Roman", serif;
+  color: var(--text-main);
+  background: var(--bg-main);
+  letter-spacing: normal;
+}
+
+html[data-theme="dark"] body {
+  --bg-main: #20181e;
+  --bg-soft: #33232c;
+  --bg-surface: #2a1e26;
+  --text-main: #fff0f5;
+  --text-muted: #d8c1ce;
+  --accent: #f1b3d0;
+  --accent-hover: #ffd2e6;
+  --accent-soft: #4a2d3d;
+  --border-soft: #5e4a55;
+  --border-strong: #896f7e;
+  --shadow-card: 0 5px 16px #130a1033;
+  --wine-button: #873d5e;
+  --wine-button-hover: #9c4a71;
+  color-scheme: dark;
+  background: var(--bg-main) !important;
+}
+
+body > header.unified-header,
+html[data-theme="dark"] body > header.unified-header {
+  color: var(--text-main);
+  background: var(--bg-main) !important;
+  border-bottom-color: var(--border-soft) !important;
+  box-shadow: none !important;
+}
+
+body .unified-header .kvartal-mark,
+body .unified-header .unified-header__brand:hover .kvartal-mark {
+  color: var(--accent);
+}
+
+body .unified-header :is(.unified-header__utility, .unified-header__toggle, .unified-header__desktop-theme, a[href^="tel"]),
+body .unified-header .unified-header__submenu,
+body > .unified-mobile-drawer :is(.mobile-drawer__panel, .mobile-drawer__close, .mobile-drawer__messenger) {
+  color: var(--text-main) !important;
+  background: var(--bg-surface) !important;
+  border-color: var(--border-soft) !important;
+}
+
+body > .unified-mobile-drawer .mobile-drawer__actions .mobile-drawer__call {
+  background: var(--wine-button);
+  color: #fff;
+}
+
+body > footer {
+  background: var(--wine-deep) !important;
+  border-color: var(--wine-deep);
+  color: var(--wine-cream);
+}
+
+body > footer :is(h3, a, p, address, .footer-contact-item, .footer-contact-item svg) {
+  color: var(--wine-cream) !important;
+}
+
+body > footer :is(.footer-column h3, .footer-contacts-title, .footer-contacts-block, .footer-legal-block) {
+  border-color: #b9859e80;
+}
+
+@media (max-width: 768px) {
+  body > footer .footer-nav::after { content: none; }
+  body > footer .footer-columns {
+    display: flex;
+    width: 100%;
+    gap: 0;
+  }
+  body > footer .footer-column { border-color: #b9859e80; }
+  body > footer .footer-column h3::after { color: var(--wine-rose); }
+  body > footer .footer-column:not(:has(h3[aria-expanded])) ul { display: block; }
+}
+
+body a:focus-visible,
+body button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+
+/* Common controls and surfaces on internal pages. */
+body:not(.wine-home) main :where(h1, h2),
+body.catalog-page .catalog-split-hero :is(h1, h2),
+body.newbuilds-v3 .nb-hero h1,
+body.guide-page .guide-hero h1,
+body .team-intro h1 {
+  font-family: var(--wine-serif);
+  font-weight: 400;
+  letter-spacing: -.025em;
+}
+
+body:not(.wine-home) :is(main, .hero) :is(.btn, .submit-btn, .nb-card__primary),
+body .go-top {
+  border-radius: var(--wine-radius);
+}
+
+body:not(.wine-home) :is(main, .hero) :is(.btn, .submit-btn, .nb-card__primary):not(.secondary, .btn-secondary),
+body .go-top {
+  background: var(--wine-button) !important;
+  border-color: var(--wine-button) !important;
+  color: #fff !important;
+}
+
+body:not(.wine-home) :is(main, .hero) :is(.btn, .submit-btn, .nb-card__primary):not(.secondary, .btn-secondary):hover,
+body .go-top:hover {
+  background: var(--wine-button-hover) !important;
+  border-color: var(--wine-button-hover) !important;
+}
+
+body:not(.wine-home) :is(main, .hero) :is(.btn.secondary, .btn-secondary),
+body:not(.wine-home) main :is(.nb-reset, .visibility-actions a[href^="tel"]) {
+  background: var(--bg-surface) !important;
+  border-color: var(--border-strong) !important;
+  color: var(--accent) !important;
+}
+
+body:not(.wine-home) main :is(.form-control, .nb-field input, .nb-field select) {
+  color: var(--text-main);
+  background: var(--bg-surface);
+  border-color: var(--border-strong);
+}
+
+body:not(.wine-home) main :is(input, select, textarea):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+body:not(.wine-home) main :is(.form-section, .footer-cta-content) {
+  border-color: var(--border-soft);
+}
+
+body:not(.wine-home) main :is(.visibility-facts div, .nb-hero__facts div, .nb-filters, .nb-card,
+  .nbd-facts div, .nbd-hero__grid, .nbd-gallery__item, .nbd-floorplans figure, .nbd-source__card,
+  .parameter-grid article, .criteria-grid article, .rent-route, .agent-card) {
+  background: var(--bg-surface);
+  border-color: var(--border-soft);
+  color: var(--text-main);
+}
+
+body:not(.wine-home) main :is(.nb-hero__facts span, .nbd-lead, .nbd-disclaimer, .nbd-facts dt,
+  .nbd-section__head p, .nbd-gallery figcaption, .nbd-floorplans figcaption, .nbd-source p,
+  .nb-results-bar, .nb-catalog__heading > p, .nb-field > span, .nb-meta, .visibility-facts dt) {
+  color: var(--text-muted);
+}
+
+body:not(.wine-home) main :is(.nb-eyebrow, .nb-price, .nb-hero__facts strong, .nbd-price,
+  .nbd-location, .nbd-section__head > span, .nbd-source__content > span, .nbd-cta span, .team-intro__label) {
+  color: var(--accent);
+}
+
+/* Catalogs, listings and development details. */
+body.catalog-page .hero.catalog-split-hero,
+html[data-theme="dark"] body.catalog-page .hero.catalog-split-hero,
+body.newbuilds-v3 .nb-hero {
+  background: var(--bg-main) !important;
+}
+
+body.catalog-page .hero.catalog-split-hero > .container.catalog-split-hero__grid,
+html[data-theme="dark"] body.catalog-page .hero.catalog-split-hero > .container.catalog-split-hero__grid,
+body.newbuilds-v3 .nb-hero .nb-hero__grid {
+  background: var(--wine-deep) !important;
+  color: var(--wine-cream);
+  border-color: var(--wine-deep) !important;
+  border-radius: var(--wine-radius) !important;
+}
+
+body.catalog-page .catalog-split-hero :is(h1, h2),
+html[data-theme="dark"] body.catalog-page .catalog-split-hero :is(h1, h2),
+body.catalog-page .catalog-split-hero p,
+html[data-theme="dark"] body.catalog-page .catalog-split-hero p,
+body.newbuilds-v3 .nb-hero__content :is(h1, p) {
+  color: var(--wine-cream) !important;
+}
+
+body.catalog-page .catalog-split-hero .eyebrow,
+body.newbuilds-v3 .nb-hero :is(.nb-eyebrow, .nb-hero__aksay a) {
+  color: var(--wine-rose);
+}
+
+body.catalog-page .catalog-split-hero .hero-actions .btn:not(.secondary),
+body.newbuilds-v3 .nb-hero .nb-hero__actions .btn:not(.secondary),
+body.service-page .service-form .btn {
+  background: var(--wine-cream) !important;
+  border-color: var(--wine-cream) !important;
+  color: var(--wine-deep) !important;
+}
+
+body.catalog-page .catalog-split-hero .hero-actions .btn:not(.secondary):hover,
+body.newbuilds-v3 .nb-hero .nb-hero__actions .btn:not(.secondary):hover,
+body.service-page .service-form .btn:hover {
+  background: var(--wine-rose) !important;
+  border-color: var(--wine-rose) !important;
+}
+
+body.catalog-page .catalog-split-hero .hero-actions .btn.secondary,
+body.newbuilds-v3 .nb-hero .nb-hero__actions .btn.secondary {
+  color: var(--wine-cream) !important;
+  background: transparent !important;
+  border-color: #b9859e !important;
+}
+
+body.catalog-page .catalog-split-hero__media,
+body.newbuilds-v3 .nb-hero__media,
+body.newbuild-detail-page :is(.nbd-hero__grid, .nbd-facts) {
+  border-radius: var(--wine-radius);
+}
+
+body.catalog-page main :is(.filters, .card, .property-card, .listing-tools, .showcase-card),
+html[data-theme="dark"] body.catalog-page main :is(.filters, .card, .property-card, .listing-tools, .showcase-card),
+body:not(.wine-home) main :is(.seo-content__inner, .seo-content__card, .seo-content__faq-item, .seo-content__link-card) {
+  background: var(--bg-surface) !important;
+  border-color: var(--border-soft) !important;
+}
+
+body.visibility-page .visibility-price {
+  color: var(--accent);
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  font-weight: 800;
+}
+
+body :is(.visibility-breadcrumbs, .nbd-breadcrumbs) {
+  color: var(--text-muted);
+}
+
+body.visibility-page .visibility-actions a.btn:not([data-source-cta="object_page"]),
+body.visibility-page .visibility-actions a.btn:not([data-source-cta="object_page"]):hover {
+  background: var(--bg-surface) !important;
+  border-color: var(--border-strong) !important;
+  color: var(--accent) !important;
+}
+
+body.newbuild-detail-page .nbd-cta {
+  background: var(--bg-soft);
+  border-color: var(--border-soft);
+}
+
+/* Construction, services and guides. */
+body.construction-page {
+  --construction-ink: var(--text-main);
+  --construction-muted: var(--text-muted);
+  --construction-line: var(--border-soft);
+  --construction-paper: var(--bg-surface);
+  --construction-soft: var(--bg-soft);
+  --construction-dark: var(--wine-deep);
+  --construction-accent: var(--accent);
+  --construction-shadow: var(--shadow-card);
+  --construction-radius: var(--wine-radius);
+}
+
+body.construction-page main :is(.construction-hero, .project-hero, .builder-hero) {
+  background: var(--bg-soft);
+}
+
+body.construction-page :is(.construction-hero__title-location, .project-price-note) {
+  color: var(--text-muted);
+}
+
+body.service-page {
+  --service-ink: var(--text-main);
+  --service-muted: var(--text-muted);
+  --service-line: var(--border-soft);
+  --service-paper: var(--bg-surface);
+  --service-accent: var(--accent);
+  --service-accent-dark: var(--accent-hover);
+}
+
+body.service-page.static-page main > :is(.service-hero, .service-showcase, .service-geography, .service-faq) {
+  background: var(--bg-soft) !important;
+}
+
+body.service-page.static-page main > :is(.service-section--compact, .service-criteria, .service-trust, .service-scenarios) {
+  background: var(--bg-main) !important;
+}
+
+body.service-page.static-page main > :is(.service-process, .service-brief),
+body.service-page .process-steps span {
+  background: var(--wine-deep) !important;
+}
+
+body.service-page :is(.service-hero, .section-heading, .service-scenarios, .service-geography) :is(h1, h2) {
+  color: var(--text-main);
+}
+
+body.service-page :is(.service-hero p, .service-points, .service-geography li span) {
+  color: var(--text-muted);
+}
+
+body.service-page .service-form :is(input:not([type="checkbox"]), select, textarea) {
+  color-scheme: light;
+  border-radius: var(--wine-radius);
+}
+
+body.guide-page {
+  --guide-accent: var(--accent);
+  --guide-soft: var(--bg-soft);
+  --guide-line: var(--border-soft);
+}
+
+body.guide-page .hero.guide-hero {
+  background:
+    linear-gradient(90deg, #47152bee 0%, #47152bbf 55%, #47152b54 100%),
+    url("../hero/hero.jpg") center / cover no-repeat !important;
+}
+
+body.guide-page .guide-hero :is(h1, p, .guide-back) {
+  color: var(--wine-cream);
+}
+
+body.guide-page .guide-hero .hero-eyebrow {
+  background: var(--wine-cream);
+  color: var(--wine-deep);
+  border-color: transparent;
+}
+
+@media (max-width: 768px) {
+  body.guide-page .hero.guide-hero {
+    background:
+      linear-gradient(90deg, #47152bef, #47152bbe),
+      url("../hero/hero.jpg") center / cover no-repeat !important;
+  }
+}
+
+body.guide-page :is(.guide-body, .guide-author, .seo-table th) {
+  background: var(--bg-surface);
+  border-color: var(--border-soft);
+  color: var(--text-main);
+}
+
+body.guide-page :is(.guide-callout, .guide-method) {
+  background: var(--bg-soft);
+  border-color: var(--border-soft);
+}
+
+/* Supporting pages. */
+body :is(.legal-page, .legal-content, .requisites-card, .thanks-guide-card) {
+  background: var(--bg-surface);
+  border-color: var(--border-soft);
+  color: var(--text-main);
+}
+
+body :is(.requisites-note, .team-intro) {
+  background: var(--bg-soft);
+  border-color: var(--border-soft);
+  color: var(--text-main);
+}
+
+/* Catalog surfaces and text still styled by the original section stylesheets. */
+html[data-theme="dark"] body.catalog-page main :is(.listing-new-objects, .showcase-section) {
+  background: var(--bg-soft);
+  border-color: var(--border-soft);
+}
+
+html[data-theme="dark"] body.catalog-page main .new-object-card {
+  background: var(--bg-surface);
+  border-color: var(--border-soft);
+}
+
+html[data-theme="dark"] body.catalog-page main :is(.property-card__price, .new-object-card__price,
+  .showcase-card__title, .showcase-card__price strong, .listing-new-objects h2, .showcase-section__head h2) {
+  color: var(--text-main);
+}
+
+html[data-theme="dark"] body.catalog-page main :is(.filters label, .results-count, .showcase-section__head p,
+  .showcase-card__location, .new-object-card__type) {
+  color: var(--text-muted);
+}
+
+html[data-theme="dark"] body.catalog-page main :is(.filters input, .filters select, .listing-tools select) {
+  background: var(--bg-main);
+  color: var(--text-main);
+  border-color: var(--border-strong);
+}
+
+html[data-theme="dark"] body.catalog-page main :is(.showcase-card__category, .showcase-card__summary),
+html[data-theme="dark"] body :is(.visibility-breadcrumbs, .visibility-static-links) a {
+  color: var(--accent);
+}
+
+html[data-theme="dark"] body .visibility-breadcrumbs a:is(:hover, :focus-visible) {
+  color: var(--text-main);
+  background: var(--accent-soft);
+}

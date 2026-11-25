@@ -772,9 +772,12 @@
   }
 
   function initGlobalInteractions() {
+    var homeLeadForm = qs(".wine-home #lead-form");
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
+        if (entry.target === homeLeadForm) {
+          document.body.classList.toggle("wine-lead-in-view", entry.isIntersecting);
+        } else if (entry.isIntersecting) {
           entry.target.classList.add("visible");
         }
       });
@@ -786,6 +789,7 @@
     qsa(".fade-in").forEach(function (el) {
       observer.observe(el);
     });
+    if (homeLeadForm) observer.observe(homeLeadForm);
 
     qsa('a[href^="#"]').forEach(function (anchor) {
       anchor.addEventListener("click", function (event) {
@@ -864,6 +868,10 @@
     return url.href;
   }
 
+  function listingPageUrl(item) {
+    return /^\/obekt\/[a-z][a-z0-9_-]*\.html$/.test(item.url || '') ? item.url : '';
+  }
+
   function bindModal() {
     var modal = qs('#modal');
     if (!modal) return null;
@@ -932,7 +940,7 @@
       var actions = qs('[data-modal-actions]', panel);
       if (!actions) { actions = document.createElement('div'); actions.className = 'hero-actions'; actions.setAttribute('data-modal-actions', ''); panel.insertBefore(actions, images); }
       actions.innerHTML = '<a class="btn" href="/#lead-form-section" data-lead-type="buy" data-source-cta="object_detail" data-object-id="' + escapeHtml(item.id) + '" data-object-type="' + escapeHtml(item.objectType) + '" data-object-title="' + escapeHtml(item.title) + '" data-object-price="' + escapeHtml(meta.price) + '" data-object-url="' + escapeHtml(propertyUrl(item)) + '">Заявка по объекту</a><a class="btn secondary" href="tel:+79536091122">Позвонить</a><a class="btn secondary" href="' + escapeHtml(propertyUrl(item)) + '" data-object-permalink>Ссылка на объект</a>';
-      if (/^(object|house|land)_\d+$/.test(item.id || '')) actions.innerHTML += '<a class="btn secondary" href="/obekt/' + escapeHtml(item.id) + '.html" data-object-page>Открыть страницу объекта</a>';
+      if (listingPageUrl(item)) actions.innerHTML += '<a class="btn secondary" href="' + escapeHtml(listingPageUrl(item)) + '" data-object-page>Открыть страницу объекта</a>';
       modal.style.display = 'flex';
       document.body.classList.add('modal-open');
       if (!inertNodes.length) Array.prototype.forEach.call(document.body.children, function (node) {
@@ -1223,6 +1231,29 @@
     }).join("") + "</div>";
   }
 
+  var propertyGalleryThumbnails = new WeakMap();
+
+  function getPropertyGalleryImages(gallery) {
+    return String(gallery.getAttribute("data-images") || "").split("|").map(function (part) {
+      try { return decodeURIComponent(part); } catch (_e) { return ""; }
+    }).filter(hasCardValue);
+  }
+
+  function showPropertyGalleryPhoto(gallery, images, index) {
+    var next = (index + images.length) % images.length;
+    gallery.setAttribute("data-index", String(next));
+    var photo = qs(".property-card__photo", gallery);
+    if (photo) {
+      photo.classList.remove("is-fallback");
+      photo.src = images[next].replace(/'/g, "%27");
+      photo.setAttribute("data-src", images[next]);
+    }
+    var counter = qs(".property-card__counter", gallery);
+    if (counter) counter.textContent = String(next + 1) + "/" + String(images.length);
+    var thumbnails = propertyGalleryThumbnails.get(gallery);
+    if (thumbnails) thumbnails.select(next);
+  }
+
   function bindPropertyGalleryFallback(scope) {
     qsa(".property-card__photo", scope || document).forEach(function (photo) {
       if (photo.dataset.fallbackBound) return;
@@ -1232,6 +1263,16 @@
         photo.classList.add("is-fallback");
         photo.src = "assets/hero/hero.jpg";
       });
+      var gallery = photo.closest(".property-card__gallery[data-images]");
+      if (!gallery || !window.domianPhotoThumbnails) return;
+      var images = getPropertyGalleryImages(gallery);
+      var thumbnails = window.domianPhotoThumbnails(images, function (index) {
+        showPropertyGalleryPhoto(gallery, images, index);
+      });
+      if (thumbnails) {
+        propertyGalleryThumbnails.set(gallery, thumbnails);
+        gallery.appendChild(thumbnails.element);
+      }
     });
   }
 
@@ -1245,24 +1286,11 @@
       event.stopPropagation();
       var gallery = button.closest(".property-card__gallery");
       if (!gallery) return;
-      var images = String(gallery.getAttribute("data-images") || "").split("|").map(function (part) {
-        try { return decodeURIComponent(part); } catch (_e) { return ""; }
-      }).filter(hasCardValue);
+      var images = getPropertyGalleryImages(gallery);
       if (!images.length) images = ["assets/hero/hero.jpg"];
       var current = parseInt(gallery.getAttribute("data-index") || "0", 10);
       var next = button.classList.contains("property-card__gallery-btn--next") ? current + 1 : current - 1;
-      if (next < 0) next = images.length - 1;
-      if (next >= images.length) next = 0;
-      gallery.setAttribute("data-index", String(next));
-      var photo = qs(".property-card__photo", gallery);
-      if (photo) {
-        var src = images[next].replace(/'/g, "%27");
-        photo.classList.remove("is-fallback");
-        photo.src = src;
-        photo.setAttribute("data-src", images[next]);
-      }
-      var counter = qs(".property-card__counter", gallery);
-      if (counter) counter.textContent = String(next + 1) + "/" + String(images.length);
+      showPropertyGalleryPhoto(gallery, images, next);
     });
   }
 
@@ -1277,7 +1305,8 @@
     var galleryImages = getCardImages(item);
     var meta = item.meta || {};
     var priceText = formatPrice(meta.price, meta.priceType) || "Цена по запросу";
-    var sectionLink = item.objectType ? propertyUrl(item) : (isSafeHttpUrl(item.sectionLink) ? item.sectionLink : "index.html#contact");
+    var pageUrl = listingPageUrl(item);
+    var sectionLink = pageUrl || (item.objectType ? propertyUrl(item) : (isSafeHttpUrl(item.sectionLink) ? item.sectionLink : "index.html#contact"));
     var isExternalLink = /^https?:\/\//i.test(sectionLink) && new URL(sectionLink).origin !== location.origin;
     var linkAttrs = isExternalLink ? ' target="_blank" rel="noopener noreferrer"' : "";
 
@@ -1303,19 +1332,18 @@
       renderPropertyGallery(galleryImages, safeTitle),
       '<div class="card-content property-card__body">',
       '<h2 class="property-card__title">' + safeTitle + '</h2>',
-      /^(object|house|land)_\d+$/.test(item.id || '') ? '<p data-listing-status>' + escapeHtml(item.statusLabel || 'В каталоге') + '</p>' : '',
+      pageUrl ? '<p data-listing-status>' + escapeHtml(item.statusLabel || 'В каталоге') + '</p>' : '',
       '<div class="card-meta property-card__price"><span class="property-card__price-value">' + escapeHtml(priceText) + '</span>' + mortgageHtml + '</div>',
       charsHtml,
       detailsHtml,
       '<div class="property-card__actions">',
       '<a class="btn property-card__cta" href="' + escapeHtml(sectionLink) + '"' + linkAttrs + '>' + escapeHtml(item.ctaLabel || "Подробнее") + '</a>',
       '<a class="btn property-card__phone" href="tel:+79536091122">Позвонить</a>',
-      /^(object|house|land)_\d+$/.test(item.id || '') ? '<a class="btn secondary property-card__page" href="/obekt/' + escapeHtml(item.id) + '.html">Страница объекта</a>' : '',
       "</div>",
       '</div>'
     ].join("");
 
-    if (item.objectType && onOpen) qs('.property-card__cta', card).addEventListener('click', function (event) {
+    if (!pageUrl && item.objectType && onOpen) qs('.property-card__cta', card).addEventListener('click', function (event) {
       if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
       event.preventDefault(); onOpen(item);
     });
@@ -1714,7 +1742,7 @@
       return records.filter(function (r) { return r.type === registryType && (!r.status || r.status === 'active'); }).map(function (r) {
         var f = r.features || {};
         var localImages = r.images.map(function (image) { return image.replace(/^https:\/\/domian-161\.ru(?=\/)/, ''); });
-        return { id:r.id, objectType:type, title:r.title, description:r.fullDescription || '',
+        return { id:r.id, url:r.url, objectType:type, title:r.title, description:r.fullDescription || '',
           city:r.city, district:r.district, settlement:r.settlement, address:r.address, statusLabel:r.statusLabel,
           images:localImages, cover:localImages[0] || '', sectionLink:type+'.html',
           floorPlans:(r.floor_plans || []).map(function (image) { return image.replace(/^https:\/\/domian-161\.ru(?=\/)/, ''); }),
@@ -1779,19 +1807,38 @@
           filtersContainer.innerHTML = controls.join("") + '<button type="button" class="btn filter-reset" id="resetFilters">Сбросить</button>';
         }
 
+        var pageSize = 24;
+        var visibleItems = [];
+        var shown = 0;
+        var more = document.createElement('button');
+        more.type = 'button';
+        more.className = 'btn catalog-load-more';
+        more.hidden = true;
+        cardsContainer.after(more);
+
+        function appendPage(moveFocus) {
+          var firstLink = null;
+          visibleItems.slice(shown, shown + pageSize).forEach(function (item) {
+            var card = buildCard(item, openModal);
+            cardsContainer.appendChild(card);
+            if (!firstLink) firstLink = qs('.property-card__cta', card);
+          });
+          shown = Math.min(shown + pageSize, visibleItems.length);
+          more.hidden = shown >= visibleItems.length;
+          more.textContent = 'Показать ещё ' + Math.min(pageSize, visibleItems.length - shown);
+          if (resultsCount) resultsCount.textContent = 'Найдено: ' + visibleItems.length + (shown < visibleItems.length ? ' · Показано: ' + shown : '');
+          if (moveFocus && firstLink) firstLink.focus();
+        }
+        more.addEventListener('click', function () { appendPage(true); });
+
         function render(filteredItems) {
           cardsContainer.innerHTML = "";
+          visibleItems = filteredItems;
+          shown = 0;
           if (!filteredItems.length) {
             cardsContainer.innerHTML = '<p class="loading-state">По фильтру ничего не найдено.</p>';
-          } else {
-            filteredItems.forEach(function (item) {
-              cardsContainer.appendChild(buildCard(item, openModal || function () {}));
-            });
           }
-
-          if (resultsCount) {
-            resultsCount.textContent = "Найдено: " + filteredItems.length;
-          }
+          appendPage(false);
         }
 
         function runFilter(updateUrl) {
@@ -1813,6 +1860,14 @@
           if (filtersContainer) qsa('[data-filter]', filtersContainer).forEach(function (input) { input.value = params.get('f_' + input.getAttribute('data-filter')) || ''; });
           runFilter(false);
           var chosen = items.find(function (item) { return item.id === params.get('object'); });
+          if (chosen && listingPageUrl(chosen)) {
+            params.delete('object');
+            var destination = new URL(listingPageUrl(chosen), location.origin);
+            destination.search = params;
+            destination.hash = location.hash;
+            location.replace(destination);
+            return;
+          }
           if (chosen && openModal) openModal(chosen, true);
           else if (openModal) {
             openModal.hide();
@@ -1854,7 +1909,8 @@
       lands: "lands.html",
       newbuilds: "newbuilds.html"
     }[item && item.categoryName ? String(item.categoryName).toLowerCase() : ""] || "index.html#contact";
-    if (item.objectType) categoryHref = propertyUrl(item);
+    if (item.objectType) categoryHref = listingPageUrl(item) || propertyUrl(item);
+    else if (item.categoryName === 'Новостройки') categoryHref = isSafeHttpUrl(item.sectionLink) ? item.sectionLink : '/newbuilds.html';
     var priceText = formatPrice(item && item.meta ? item.meta.price : null, item && item.meta ? item.meta.priceType : "") || "Цена по запросу";
     var charsHtml = renderCardChars([
       item && item.meta && hasCardValue(item.meta.rooms) ? String(item.meta.rooms) + " комн." : "",
@@ -1868,7 +1924,7 @@
       '<span class="hot-offer-tag property-card__meta">' + escapeHtml(item.categoryName) + '</span>',
       '<h3 class="property-card__title">' + safeTitle + '</h3>',
       /^(object|house|land)_\d+$/.test(item.id || '') ? '<p data-listing-status>' + escapeHtml(item.statusLabel || 'В каталоге') + '</p>' : '',
-      '<div class="hot-offer-price property-card__price">' + escapeHtml(formatPrice(item.meta.price, item.meta.priceType)) + '</div>',
+      '<div class="hot-offer-price property-card__price">' + escapeHtml(priceText) + '</div>',
       charsHtml,
       '<div class="property-card__actions">',
       '<a class="btn property-card__cta" href="' + categoryHref + '">Подробнее</a>',
@@ -1971,7 +2027,7 @@
       newbuild: "newbuilds.html"
     }[String(item && item.type || "").toLowerCase()] || "index.html#contact";
 
-    if (/^(object|house|land)_\d+$/.test(item.id || '')) detailsHref += '?object=' + encodeURIComponent(item.id);
+    detailsHref = listingPageUrl(item) || detailsHref;
 
     return [
       '<article class="new-object-card property-card">',
@@ -1979,7 +2035,7 @@
       '<div class="new-object-card__content property-card__body">',
       '<span class="new-object-card__type property-card__meta">' + typeLabel + '</span>',
       '<h3 class="property-card__title">' + title + '</h3>',
-      /^(object|house|land)_\d+$/.test(item.id || '') ? '<p data-listing-status>' + escapeHtml(item.statusLabel || 'В каталоге') + '</p>' : '',
+      listingPageUrl(item) ? '<p data-listing-status>' + escapeHtml(item.statusLabel || 'В каталоге') + '</p>' : '',
       '<div class="new-object-card__price property-card__price">' + price + '</div>',
       charsHtml,
       '<div class="property-card__actions">',
@@ -2095,6 +2151,8 @@
     initActiveNav();
     initMobileDrawer();
     bindPropertyGalleryControls();
+    var featuredTrack = qs('.ub-cards--offers');
+    if (featuredTrack) bindPropertyGalleryFallback(featuredTrack);
     initNewObjects();
 
     var listingType = document.body && document.body.dataset ? document.body.dataset.listing : null;

@@ -13,7 +13,10 @@ const SKIP_PREFIXES = [
   "_private/",
   "_prototype_catalog/",
   "company-rebuild/",
+  "public/",
   "source/",
+  "src/",
+  "dist/",
   "ui-blocks/",
   "ui-rebuild/"
 ];

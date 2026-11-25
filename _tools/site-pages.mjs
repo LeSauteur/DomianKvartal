@@ -3,7 +3,7 @@ import path from "node:path";
 import { execFileSync } from "node:child_process";
 import { root } from "./build-registry.mjs";
 export const siteOrigin = "https://domian-161.ru";
-const excluded = ["_private/","_prototype_catalog/","company-rebuild/","source/","ui-blocks/","ui-rebuild/","docs/","tests/","data/","_tools/","output/"];
+const excluded = ["_private/","_prototype_catalog/","company-rebuild/","source/","ui-blocks/","ui-rebuild/","docs/","public/","src/","dist/","tests/","data/","_tools/","output/"];
 export function publicHtmlFiles() {
   return [...new Set(execFileSync("git",["ls-files","--cached","--others","--exclude-standard","--","*.html"],{cwd:root,encoding:"utf8"}).trim().split(/\r?\n/))]
     .filter(file=>file && fs.existsSync(path.join(root,file)) && !excluded.some(p=>file.startsWith(p)) && !["admin.html","index-preview.html","googlea9952ce6911e1672.html","yandex_9a50321c8f91e932.html"].includes(file)).sort();
