@@ -8,7 +8,6 @@
     "shortDescription": "Продаётся просторный дом на участке 5 соток по адресу: ул. Набережная, д. 223, дом 95 кв. м. Общая площадь — 95 кв. м. Участок — 5 соток для сада, огорода или развлечений. Светлый и просторный дом с у",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": true,
     "image": "https://domian-161.ru/output/houses/house_01/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_01/img_01.jpg",
     "images": [
@@ -30,7 +29,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 95,
@@ -51,7 +49,6 @@
     "shortDescription": "Новый кирпичный дом 2024 года постройки в коттеджном посёлке «Жемчужный». Современный дизайн, высокие потолки 3,20 м, 4 просторные комнаты с гардеробными, большая кухня-гостиная, кабинет, 2 санузла, к",
     "price": 3050000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_02/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_02/img_01.jpg",
     "images": [
@@ -81,7 +78,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -102,7 +98,6 @@
     "shortDescription": "Продаётся 2 дачи в х.Мержаново, СНТ Кедр уч. 51 и 64. Всего 12 соток, участки расположены на двух аллеях (по 6 соток), есть забор с замком между участками. Дом 2х этажный, площадь - 94,4 м2. Коммуника",
     "price": 8000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_03/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_03/img_01.jpg",
     "images": [
@@ -129,7 +124,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -150,7 +144,6 @@
     "shortDescription": "Продаётся 4 современных таунхауса. Каждый таунхаус — это уютный двухэтажный дом с ремонтом,. Все коммуникации подведены — никаких забот. Прямой выход на крышу с шикарным видом на Дон. Современная план",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_04/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_04/img_01.jpg",
     "images": [
@@ -181,7 +174,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -202,7 +194,6 @@
     "shortDescription": "Продается 2-этажный дом в хуторе Большой Лог. Просторный и уютный дом общей площадью 180 кв.м. на участке 8 соток с широким фасадом и просторной придомовой территорией. Внутреннее пространство включае",
     "price": 6550000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_05/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_05/img_01.jpg",
     "images": [
@@ -238,7 +229,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 180,
@@ -259,7 +249,6 @@
     "shortDescription": "Коттедж. 7 000 000 ₽. В галерее — 19 фотографий.",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_06/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_06/img_01.jpg",
     "images": [
@@ -290,7 +279,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -311,7 +299,6 @@
     "shortDescription": "Коттедж. 7 000 000 ₽. В галерее — 15 фотографий.",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_07/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_07/img_01.jpg",
     "images": [
@@ -338,7 +325,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -359,7 +345,6 @@
     "shortDescription": "Дом 78 м² — Российский, п. Российский, ул. Парковая, 118. Адрес: п. Российский, ул. Парковая, 118. Площадь: 78 м². Земельный участок: 5 соток. Просторный дом с благоустроенной территорией идеально под",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": true,
     "image": "https://domian-161.ru/output/houses/house_08/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_08/img_01.jpg",
     "images": [
@@ -390,7 +375,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 78,
@@ -411,7 +395,6 @@
     "shortDescription": "Дом 154 м² — Темерницкий. Площадь: 154 кв.м. Земельный участок: 6 соток. Расположен в районе Темерницкий — удобное и перспективное место.",
     "price": 10500000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_09/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_09/img_01.jpg",
     "images": [
@@ -428,7 +411,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 154,
@@ -449,7 +431,6 @@
     "shortDescription": "Продаётся уютный дом площадью 120 кв. м на земельном участке площадью 5 соток. Просторные и светлые комнаты. Ухоженный участок для отдыха и развлечений. Развитая инфраструктура рядом.",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": true,
     "image": "https://domian-161.ru/output/houses/house_10/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_10/img_01.jpg",
     "images": [
@@ -474,7 +455,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 120,
@@ -495,7 +475,6 @@
     "shortDescription": "Продаётся уютный дом в Щепкине. Общая площадь — 100 кв. м, участок — 5 соток. Отличное расположение, тихий район, развитая инфраструктура.",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": true,
     "image": "https://domian-161.ru/output/houses/house_11/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_11/img_01.jpg",
     "images": [
@@ -512,7 +491,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 100,
@@ -533,7 +511,6 @@
     "shortDescription": "Продается дом площадью 160 кв. м с гаражом, расположенный на участке площадью 5 соток.",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": true,
     "image": "https://domian-161.ru/output/houses/house_12/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_12/img_01.jpg",
     "images": [
@@ -559,7 +536,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 160,
@@ -580,7 +556,6 @@
     "shortDescription": "Продаётся уютный дом площадью 154 кв. м на участке 6 соток в живописном посёлке Темерницкий, Ореховая Роща.",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": true,
     "image": "https://domian-161.ru/output/houses/house_13/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_13/img_01.jpg",
     "images": [
@@ -607,7 +582,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 154,
@@ -628,7 +602,6 @@
     "shortDescription": "Одноэтажный дом площадью 100 м² на участке 5 соток в посёлке Октябрьский Аксайского района. Предчистовая отделка, стяжка полов, теплые полы везде, кроме спален, штукатурка под обои, котел, радиаторы. ",
     "price": 4100000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_14/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_14/img_01.jpg",
     "images": [
@@ -649,7 +622,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 100,
@@ -670,7 +642,6 @@
     "shortDescription": "Продается уютный двухэтажный дом в СНТ Речник. Площадь: 80 м². Участок: 5,7 соток — ухоженный, огороженный, с двумя въездами. 2 комнаты — светлые и просторные. Второй этаж. Удобная планировка, комфорт",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_15/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_15/img_01.jpg",
     "images": [
@@ -701,7 +672,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 80,
@@ -722,7 +692,6 @@
     "shortDescription": "Предлагается к продаже перспективный объект недвижимости: дом площадью 75 м² с действующим магазином на участке 15 соток в станице Багаевская. Это отличная возможность для тех, кто ищет готовый бизнес",
     "price": 11000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_16/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_16/img_01.jpg",
     "images": [
@@ -761,7 +730,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 75,
@@ -782,7 +750,6 @@
     "shortDescription": "Продаётся 2-этажный дом площадью 160 м² в СНТ Алмаз, Аксайский район. Участок 6 соток, участок огорожен кирпичным забором со всех сторон. В доме 3 комнаты, уютный и просторный, отличный вариант для ко",
     "price": 11500000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_17/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_17/img_01.jpg",
     "images": [
@@ -815,7 +782,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 3,
       "area": 160,
@@ -836,7 +802,6 @@
     "shortDescription": "Дом 130 м² — Аксайский район, Российский. Построен в два кирпича - залог долговечности и отличной теплоизоляции. Продуманная планировка с просторной гостиной, отдельной кухней с выходом на террасу, 3 ",
     "price": 4900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_18/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_18/img_01.jpg",
     "images": [
@@ -864,7 +829,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 130,
@@ -885,7 +849,6 @@
     "shortDescription": "Дом. 7 000 000 ₽. В галерее — 17 фотографий.",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_19/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_19/img_01.jpg",
     "images": [
@@ -914,7 +877,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -935,7 +897,6 @@
     "shortDescription": "Дом площадью 130 кв. м с качественным ремонтом и удобной планировкой. 3 спальни, кухня-столовая с выходом на террасу, котельная, санузел, подвал. Все центральные коммуникации, новая мебель. На участке",
     "price": 16000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_20/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_20/img_01.jpg",
     "images": [
@@ -959,7 +920,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 130,
@@ -980,7 +940,6 @@
     "shortDescription": "Продается современный таунхаус площадью 100 м² на земельном участке 4 сотки. Расположениеая инфраструктура, удобная транспортная доступность, рядом школы, магазины и парки. Просторные светлые комнаты,",
     "price": 3300000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_21/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_21/img_01.jpg",
     "images": [
@@ -1013,7 +972,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 100,
@@ -1034,7 +992,6 @@
     "shortDescription": "Дом. 7 000 000 ₽. В галерее — 12 фотографий.",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_22/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_22/img_01.jpg",
     "images": [
@@ -1058,7 +1015,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -1079,7 +1035,6 @@
     "shortDescription": "Одноэтажный дом площадью 150 м² на участке 5 соток с широким фасадом и придомовой территорией. Общая площадь дома - 150 кв.м., участок 5 соток с широким фасадом и придомовой территорией. Кухня-столова",
     "price": 4100000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_23/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_23/img_01.jpg",
     "images": [
@@ -1102,7 +1057,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 150,
@@ -1123,7 +1077,6 @@
     "shortDescription": "Дом. 7 000 000 ₽. В галерее — 9 фотографий.",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_24/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_24/img_01.jpg",
     "images": [
@@ -1144,7 +1097,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -1165,7 +1117,6 @@
     "shortDescription": "В продаже дом с ремонтом. С большой территорией.",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_25/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_25/img_01.jpg",
     "images": [
@@ -1184,7 +1135,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -1205,7 +1155,6 @@
     "shortDescription": "Дом с большим участком. Все виды расчетов. П. Российский, Аксайский р-н. Участок 6,5 соток.",
     "price": 5350000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_26/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_26/img_01.jpg",
     "images": [
@@ -1231,7 +1180,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -1252,7 +1200,6 @@
     "shortDescription": "Просторный, тёплый и светлый дом, построенный для себя из качественного кирпича. Отлично подходит для большой семьи и комфортного проживания круглый год. Основные преимущества. Надёжная постройка: кап",
     "price": 1650000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_27/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_27/img_01.jpg",
     "images": [
@@ -1291,7 +1238,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -1312,7 +1258,6 @@
     "shortDescription": "Просторный дом 115 м² на участке 6 соток — Ростовская обл., Мясниковский р-н. Продается уютный и современный дом. В тихом и зелёном районе. Ровный участок. Идеально для сада, зоны барбекю, бассейна ил",
     "price": 4900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_28/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_28/img_01.jpg",
     "images": [
@@ -1331,7 +1276,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 115,
@@ -1352,7 +1296,6 @@
     "shortDescription": "Дом с огромной территорией — ваш личный оазис за городом. Просторный, стильный дом для тех, кто ценит комфорт и пространство. Участок — огромная территория, идеально под ландшафтный дизайн, бассейн, с",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_29/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_29/img_01.jpg",
     "images": [
@@ -1388,7 +1331,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -1409,7 +1351,6 @@
     "shortDescription": "Дом в охраняемом коттеджном поселке площадью 140 квадратных метров расположен на большом участке в 5 соток. Тщательно продуманная планировка обеспечивает комфортное проживание для всей семьи. Большие ",
     "price": 4100000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_30/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_30/img_01.jpg",
     "images": [
@@ -1435,7 +1376,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -1456,7 +1396,6 @@
     "shortDescription": "Продается дом в шикарном месте. Дом расположен на земельном участке 5 соток. В доме 3 изолированные комнаты,просторная кухня 15 кв.м. Во дворе так же находится летняя кухня в которой возможно проживат",
     "price": 4100000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_31/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_31/img_01.jpg",
     "images": [
@@ -1499,7 +1438,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -1520,7 +1458,6 @@
     "shortDescription": "В посёлке Октябрьский Аксайского района продаётся одноэтажный дом с предчистовой отделкой. Предчистовая отделка, стяжка полов, теплые полы везде, кроме спален, штукатурка под обои, котел, радиаторы. В",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_32/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_32/img_01.jpg",
     "images": [
@@ -1544,7 +1481,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -1565,7 +1501,6 @@
     "shortDescription": "Предлагаем дом с комфортом и современными технологиями. Коммуникации: все центральные. Ремонт: выполнен в современном дизайнерском стиле. Просторные светлые комнаты. Удобное расположение. Закрытая тер",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_33/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_33/img_01.jpg",
     "images": [
@@ -1591,7 +1526,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -1612,7 +1546,6 @@
     "shortDescription": "Продаётся дом с дизайнерским ремонтом, в котором каждая деталь продумана до мелочей. Все коммуникации на высшем уровне. Функциональные зоны: уютные спальни, просторное светлое пространство для жизни и",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_34/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_34/img_01.jpg",
     "images": [
@@ -1649,7 +1582,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -1670,7 +1602,6 @@
     "shortDescription": "В продаже современный дом 2015 года постройки. Площадь дома составляет 136 м². Планировка представлена: огромная кухня - гостинная (49 м²), 2 просторные спальни,ванна комната (15 м²), гардеробная, вер",
     "price": 4900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_35/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_35/img_01.jpg",
     "images": [
@@ -1697,7 +1628,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -1718,7 +1648,6 @@
     "shortDescription": "Просторный и уютный дом с продуманной планировкой. Гостиная с камином. Уют и тепло для всей семьи. 3 спальни + кабинет. Комфорт для работы и отдыха. Кухня, котельная. Сауна и спортивный зал. Отдых и з",
     "price": 4900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_36/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_36/img_01.jpg",
     "images": [
@@ -1755,7 +1684,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -1776,7 +1704,6 @@
     "shortDescription": "Просторный дом 500 м² на участке 10 соток — комфорт и всё необходимое для жизни. Продается коттедж с продуманной планировкой и максимальным уровнем удобства. Площадь дома — 500 м². Участок — 10 соток.",
     "price": 8200000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_37/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_37/img_01.jpg",
     "images": [
@@ -1820,7 +1747,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 500,
@@ -1841,7 +1767,6 @@
     "shortDescription": "Мы предлагаем вам уникальную возможность стать владельцем чудесного двухэтажного дома, расположенного в тихом и уютном месте. Этот просторный дом с 5 комнатами идеально подойдет для большой семьи, цен",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_38/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_38/img_01.jpg",
     "images": [
@@ -1869,7 +1794,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 5,
       "area": null,
@@ -1890,7 +1814,6 @@
     "shortDescription": "В продаже дом для большой семьи, расположенный на одной из центральных улиц г. Аксай. Вся необходимая для жизни инфраструктура находятся в шаговой доступности: школа, детский сад, медицинский центр, ц",
     "price": 6300000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_39/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_39/img_01.jpg",
     "images": [
@@ -1917,7 +1840,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -1938,7 +1860,6 @@
     "shortDescription": "Дом построен в 2 кирпича+облицовочный кирпич. Участок 9 соток, огорожен. Широкая улица, удобный подьезд к дому, заезд на несколько машин. Документы готовы к продаже. Быстрый выход на сделку.",
     "price": 7400000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_40/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_40/img_01.jpg",
     "images": [
@@ -1958,7 +1879,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -1979,7 +1899,6 @@
     "shortDescription": "Одноэтажные дома на участке 6 соток. Площадь 120 м². Участок 6 соток. Без ремонта. Удобная парковка на участке. Простая и удобная планировка. Все коммуникации рядом.",
     "price": 4900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_41/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_41/img_01.jpg",
     "images": [
@@ -1997,7 +1916,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 120,
@@ -2018,7 +1936,6 @@
     "shortDescription": "Дом площадью 115 м² на участке 6 соток с кухней-столовой и выходом на террасу. Кухня-столовая с выходом на террасу, 3 изолированные спальни, раздельный санузел, котельная, большой холл. Предчистовая о",
     "price": 4900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_42/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_42/img_01.jpg",
     "images": [
@@ -2045,7 +1962,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 115,
@@ -2066,7 +1982,6 @@
     "shortDescription": "Пространства для отдыха и занятий спортом прямо у дома. Быстрый доступ в любой район города — удобные маршруты и остановки общественного транспорта возле дома. Документы полностью готовы — вы сможете ",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_43/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_43/img_01.jpg",
     "images": [
@@ -2084,7 +1999,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -2105,7 +2019,6 @@
     "shortDescription": "Дом. Новый качественный ремонт, в котором никто не жил. Установлена сплит-система, современный кухонный гарнитур. Полностью меблирована и укомплектована необходимой бытовой техникой. Функциональная пл",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_44/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_44/img_01.jpg",
     "images": [
@@ -2134,7 +2047,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -2155,7 +2067,6 @@
     "shortDescription": "Продается одноэтажный дом в п. Октябрьский. Общая площадь дома - 95 кв.м., участок 4,5 соток с широким фасадом и придомовой территорией. Кухня-столовая с выходом на террасу, 3 изолированные спальни, с",
     "price": 3700000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_45/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_45/img_01.jpg",
     "images": [
@@ -2174,7 +2085,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 95,
@@ -2195,7 +2105,6 @@
     "shortDescription": "Продаётся одноэтажный дом с просторными 3 комнатами. Просторный, тёплый и уютный одноэтажный дом. Идеально подойдёт для семьи, которая ценит комфорт, тишину и удобство загородной жизни. Характеристики",
     "price": 4100000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_46/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_46/img_01.jpg",
     "images": [
@@ -2223,7 +2132,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 3,
       "area": 100,
@@ -2244,7 +2152,6 @@
     "shortDescription": "Общая площадь дома - 130 кв.м., участок 6.5 соток с широким фасадом и придомовой территорией. Кухня-столовая с выходом на террасу, 3 изолированные спальни, с/у совмещенный, котельная, большой холл. Пр",
     "price": 5350000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_47/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_47/img_01.jpg",
     "images": [
@@ -2269,7 +2176,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 130,
@@ -2290,7 +2196,6 @@
     "shortDescription": "Общая площадь дома - 120 кв.м., участок 6,5 соток с широким фасадом и придомовой территорией. Кухня-столовая с выходом на террасу, 3 изолированные спальни, с/у совмещенный, котельная, большой холл. Пр",
     "price": 5350000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_48/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_48/img_01.jpg",
     "images": [
@@ -2308,7 +2213,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 120,
@@ -2329,7 +2233,6 @@
     "shortDescription": "Общая площадь дома - 120кв.м., участок 5 соток с широким фасадом и придомовой территорией. Кухня-столовая с выходом на террасу, 3 изолированные спальни, с/у совмещенный, котельная, большой холл. Предч",
     "price": 4100000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_49/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_49/img_01.jpg",
     "images": [
@@ -2353,7 +2256,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 120,
@@ -2374,7 +2276,6 @@
     "shortDescription": "Дом 115 м² с тремя изолированными спальнями, кухней-столовой и участком 6 соток. Кухня-столовая с выходом на террасу, 3 изолированные спальни, раздельный санузел, котельная, большой холл. Предчистовая",
     "price": 4900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_50/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_50/img_01.jpg",
     "images": [
@@ -2391,7 +2292,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 115,
@@ -2412,7 +2312,6 @@
     "shortDescription": "Общая площадь дома - 115 кв.м., участок 9 соток с широким фасадом и придомовой территорией. Кухня-столовая с выходом на террасу, 3 изолированные спальни, с/у совмещенный, котельная, большой холл, терр",
     "price": 7400000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_51/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_51/img_01.jpg",
     "images": [
@@ -2435,7 +2334,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 115,
@@ -2456,7 +2354,6 @@
     "shortDescription": "Дом 85 м². ПРОДАЖА ОТ Физического лица. Общая площадь дома - 85 кв.м., участок 6 соток с широким фасадом и придомовой территорией. Кухня-столовая с выходом на задний двор, 3 изолированные спальни, с/у",
     "price": 4900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_52/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_52/img_01.jpg",
     "images": [
@@ -2479,7 +2376,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 85,
@@ -2500,7 +2396,6 @@
     "shortDescription": "Общая площадь дома - 130 кв.м., участок 6,0 соток с широким фасадом и придомовой территорией. Кухня-столовая с выходом на террасу, 3 изолированные спальни, с/у раздельный, котельная, большой холл, тер",
     "price": 4900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_53/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_53/img_01.jpg",
     "images": [
@@ -2519,7 +2414,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 130,
@@ -2540,7 +2434,6 @@
     "shortDescription": "Общая площадь дома - 100 кв.м., участок 5 соток с широким фасадом и придомовой территорией. Кухня-столовая с выходом на террасу, 3 изолированные спальни, с/у совмещенный, котельная, большой холл, терр",
     "price": 4100000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_54/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_54/img_01.jpg",
     "images": [
@@ -2561,7 +2454,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 100,
@@ -2582,7 +2474,6 @@
     "shortDescription": "Двухэтажный дом с общей площадью 90 кв. м и хорошо продуманной планировкой. Первый этаж. Просторная кухня-гостиная, где можно проводить время с семьей и друзьями. Санузел для удобства. Гардеробная для",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_55/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_55/img_01.jpg",
     "images": [
@@ -2629,7 +2520,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 90,
@@ -2650,7 +2540,6 @@
     "shortDescription": "Общая площадь дома - 115 кв.м., участок 5 соток с широким фасадом и придомовой территорией. Кухня-столовая с выходом на задний двор 3 изолированные спальни, с/у совмещенный, котельная, большой холл. П",
     "price": 4100000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_56/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_56/img_01.jpg",
     "images": [
@@ -2674,7 +2563,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 115,
@@ -2695,7 +2583,6 @@
     "shortDescription": "Общая площадь дома - 125 кв.м., участок 5 соток с широким фасадом и придомовой территорией. Кухня-столовая с выходом на террасу, 3 изолированные спальни, с/у совмещенный, котельная, большой холл, терр",
     "price": 4100000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_57/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_57/img_01.jpg",
     "images": [
@@ -2722,7 +2609,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 125,
@@ -2743,7 +2629,6 @@
     "shortDescription": "Продается просторный дом 160 м² на участке 6 соток — для комфортной жизни всей семьи. Площадь дома. 6 соток, ровный, ухоженный, правильной формы. Преимущества дома. Современная, функциональная планиро",
     "price": 4900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_58/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_58/img_01.jpg",
     "images": [
@@ -2778,7 +2663,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 160,
@@ -2799,7 +2683,6 @@
     "shortDescription": "В продаже просторный, уютный, теплый дом 2015 г. площадью 170 кв.м. Дом расположен на 5 сотках в тихом, живописном месте, школа, детский сад, кофейни, супермаркет в шаговой доступности. Близко автобус",
     "price": 4100000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_59/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_59/img_01.jpg",
     "images": [
@@ -2826,7 +2709,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -2847,7 +2729,6 @@
     "shortDescription": "Продается одноэтажный дом в п. Октябрьский. Общая площадь дома - 95 кв.м., участок 3 соток с широким фасадом и придомовой территорией. Кухня-столовая с выходом на террасу, 3 изолированные спальни, с/у",
     "price": 2450000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_60/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_60/img_01.jpg",
     "images": [
@@ -2863,7 +2744,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 95,
@@ -2884,7 +2764,6 @@
     "shortDescription": "Общая площадь дома - 80 кв.м., участок 5 соток с широким фасадом и придомовой территорией. Кухня-столовая с выходом на террасу, 3 изолированные спальни, с/у раздельный, котельная, большой холл. Предчи",
     "price": 4100000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_61/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_61/img_01.jpg",
     "images": [
@@ -2903,7 +2782,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 80,
@@ -2924,7 +2802,6 @@
     "shortDescription": "Продается одноэтажный дом в п. Октябрьский. Общая площадь дома - 60 кв.м., участок 5 соток с широким фасадом и придомовой территорией. Кухня-столовая с выходом на террасу, 2 изолированные спальни, с/у",
     "price": 4100000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_62/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_62/img_01.jpg",
     "images": [
@@ -2945,7 +2822,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 60,
@@ -2966,7 +2842,6 @@
     "shortDescription": "Продается просторный кирпичный дом, полностью готовый к заселению, расположенный на 3.5 сотках земли. При ремонте использовались только высококачественные материалы. В доме предусмотрены теплые полы, ",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_63/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_63/img_01.jpg",
     "images": [
@@ -2985,7 +2860,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -3006,7 +2880,6 @@
     "shortDescription": "Одноэтажный дом, где комфорт и элегантность встречаются в каждой детали. Внутри вы найдете четыре комнаты, спроектированные с особым вниманием к деталям. Дизайнерский ремонт, выполненный из качественн",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_64/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_64/img_01.jpg",
     "images": [
@@ -3035,7 +2908,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -3056,7 +2928,6 @@
     "shortDescription": "Продается дом 280кв. в пос. Российский, участок 6 соток, дорога асфальт. Дом двухэтажный с жилым цоколем. На 1 этаже: прихожая, холл, гостиная, кухня столовая, сан. узел с душевой кабиной, постирочная",
     "price": 4900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_65/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_65/img_01.jpg",
     "images": [
@@ -3101,7 +2972,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -3122,7 +2992,6 @@
     "shortDescription": "Дом. Вся необходимая для жизни инфраструктура находятся в шаговой доступности, остановка общественного транспорта до г. Ростова-на-Дону без пересадок. Дом расположен на просторном, ровном участке площ",
     "price": 3850000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_66/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_66/img_01.jpg",
     "images": [
@@ -3151,7 +3020,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -3172,7 +3040,6 @@
     "shortDescription": "Дом. Все наши объекты и цены реальные. НЕ придумываем фейки. Продается Новый Дом 2024 года постройки, 120кв.м., 3 спальни, большая кухня-гостиная с выходом на террасу, прихожая, котельная. Участок 5 с",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_67/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_67/img_01.jpg",
     "images": [
@@ -3198,7 +3065,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -3219,7 +3085,6 @@
     "shortDescription": "Дом 106 м². Продажа от индивидуального предпринимателя. Общая площадь дома - 106 кв.м., участок 5 соток с широким фасадом и придомовой территорией. Кухня-столовая с выходом на террасу, 3 изолированные",
     "price": 4100000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_68/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_68/img_01.jpg",
     "images": [
@@ -3240,7 +3105,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 106,
@@ -3261,7 +3125,6 @@
     "shortDescription": "Общая площадь дома - 150 кв.м., участок 5 соток с широким фасадом и придомовой территорией. Кухня-столовая с выходом на террасу, 3 изолированные спальни, с/у совмещенный, котельная, большой холл. Пред",
     "price": 4100000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_69/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_69/img_01.jpg",
     "images": [
@@ -3286,7 +3149,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 150,
@@ -3307,7 +3169,6 @@
     "shortDescription": "Продаётся одноэтажный дом 150 м² с участком 5 соток и широким фасадом. Общая площадь дома - 150 кв.м., участок 5 соток с широким фасадом и придомовой территорией. Кухня-столовая с выходом на террасу, ",
     "price": 4100000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_70/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_70/img_01.jpg",
     "images": [
@@ -3333,7 +3194,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 150,
@@ -3354,7 +3214,6 @@
     "shortDescription": "Общая площадь дома - 130кв.м., участок 6 соток с широким фасадом и придомовой территорией. Кухня-столовая с выходом на террасу, 3 изолированные спальни, с/у совмещенный, котельная, большой холл. Предч",
     "price": 4900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_71/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_71/img_01.jpg",
     "images": [
@@ -3375,7 +3234,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 130,
@@ -3396,7 +3254,6 @@
     "shortDescription": "Дом от собственника, БЕЗ КОМИССИИ для покупателей. Общая площадь дома - 120 кв.м., участок 6 соток с широким фасадом и придомовой территорией. Кухня-столовая с выходом на террасу, 3 изолированные спал",
     "price": 4900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_72/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_72/img_01.jpg",
     "images": [
@@ -3419,7 +3276,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 120,
@@ -3440,7 +3296,6 @@
     "shortDescription": "Общая площадь дома - 155 кв.м., участок 6,5 соток с широким фасадом и придомовой территорией. Кухня-столовая с выходом на террасу, 3 изолированные спальни, раздельный санузел, котельная, большой холл.",
     "price": 5350000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_73/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_73/img_01.jpg",
     "images": [
@@ -3473,7 +3328,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 155,
@@ -3494,7 +3348,6 @@
     "shortDescription": "Дом 297 кв. м в Аксае, участок 20 соток — премиум-класс с бассейном и выходом на две улицы. Меблированный дом. Всё остаётся: мебель премиум-класса и техника высокого качества. Интерьер в классическом ",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_37/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_37/img_01.jpg",
     "images": [
@@ -3509,7 +3362,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 297,
@@ -3530,7 +3382,6 @@
     "shortDescription": "Дом 67 кв. м в Ростов-на-Дону, участок 3 сотки — кирпичный, коммуникации центральные. Зезжайте и живите. Что внутри: 1-й этаж: просторная прихожая, куня-гостиная, 3 спальни, санузел совмещённый На уча",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_08/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_08/img_01.jpg",
     "images": [
@@ -3545,7 +3396,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 67,
@@ -3566,7 +3416,6 @@
     "shortDescription": "Загородный дом в станице Старочеркасская: гармония природы и комфорта. Просторный двухэтажный дом (125 кв. м) на ухоженном участке 9 соток. Внутри вас ждёт: три уютные комнаты; два санузла; светлая и ",
     "price": 16000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/output/houses/house_18/img_01.jpg",
     "cover": "https://domian-161.ru/output/houses/house_18/img_01.jpg",
     "images": [
@@ -3581,7 +3430,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -3602,7 +3450,6 @@
     "shortDescription": "Предлагаем готовый кирпичный дом 125 кв. м на участке 5,5 соток — в центре посёлка, рядом школы, детсады, магазины. 3 спальни + просторная кухня-гостиная с выходом на террасу и во двор — удобно жить и",
     "price": 11500000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "/assets/images/listings/house_914/01.webp",
     "cover": "/assets/images/listings/house_914/01.webp",
     "images": [
@@ -3624,7 +3471,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 125,
@@ -3646,7 +3492,6 @@
     "shortDescription": "Новый одноэтажный кирпичный дом 2025 года в посёлке Янтарный (Аксайский район) — построен, готов к отделке под ваш стиль. Общая площадь с террасой — 118 м², участок — 5 соток под ИЖС. Внешний вид — ст",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "/assets/images/listings/house_915/01.webp",
     "cover": "/assets/images/listings/house_915/01.webp",
     "images": [
@@ -3672,7 +3517,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 3,
       "area": 118,
@@ -3694,7 +3538,6 @@
     "shortDescription": "Двухэтажный кирпичный дом 250 м² в посёлке Темерницкий (Аксайский район, 14 км до Ростова-на-Дону) на участке 7,5 сотки. Построен в 2011 году, дизайнерский ремонт, газ, центральное водоснабжение, отоп",
     "price": 24500000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "/assets/images/listings/house_916/20.webp",
     "cover": "/assets/images/listings/house_916/20.webp",
     "images": [
@@ -3729,7 +3572,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 5,
       "area": 250,
@@ -3751,7 +3593,6 @@
     "shortDescription": "Продается два участка в живописном по 6 соток в хуторе Городище, ул. Солнечная 33 и 35, ИЖС, соседи живут, улица заселена, коммуникации по меже.",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": true,
     "image": "https://domian-161.ru/lands/land_01/img_01.jpg",
     "cover": "https://domian-161.ru/lands/land_01/img_01.jpg",
     "images": [
@@ -3772,7 +3613,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -3793,7 +3633,6 @@
     "shortDescription": "Продаётся земельный участок под ИЖС. П. Российский, ул. Здоровья, участок №1. Кадастровый номер: 61:02:0600010:28880. Вид разрешённого использования: для индивидуального жилищного строительства (ИЖС).",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/lands/land_02/img_01.jpg",
     "cover": "https://domian-161.ru/lands/land_02/img_01.jpg",
     "images": [
@@ -3811,7 +3650,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -3832,7 +3670,6 @@
     "shortDescription": "Участок. Аксай. Площадь участка — 6 сот. Цена по запросу. В галерее — 4 фотографии.",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/lands/land_03/img_01.jpg",
     "cover": "https://domian-161.ru/lands/land_03/img_01.jpg",
     "images": [
@@ -3848,7 +3685,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -3869,7 +3705,6 @@
     "shortDescription": "Продается земельный участок 6 соток, размеры 20x30 м. Участок идеально подготовлен — полностью отсыпанный, готов к строительству. Отличное расположение, удобный подъезд, все коммуникации рядом.",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/lands/land_04/img_01.jpg",
     "cover": "https://domian-161.ru/lands/land_04/img_01.jpg",
     "images": [
@@ -3887,7 +3722,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -3908,7 +3742,6 @@
     "shortDescription": "Продается участок 6 соток в живописном месте. Размер: 6 соток — оптимальная площадь для строительства. Документы готовы, быстрый выход на сделку. Ровный рельеф, правильная форма — минимум затрат на по",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/lands/land_05/img_01.jpg",
     "cover": "https://domian-161.ru/lands/land_05/img_01.jpg",
     "images": [
@@ -3932,7 +3765,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -3953,7 +3785,6 @@
     "shortDescription": "Участок. Цена по запросу. В галерее — 1 фотография.",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/lands/land_06/img_01.jpg",
     "cover": "https://domian-161.ru/lands/land_06/img_01.jpg",
     "images": [
@@ -3966,7 +3797,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -3987,7 +3817,6 @@
     "shortDescription": "Участок 26 соток в КП Алексеево для строительства загородного дома. Просторная территория под дом, сад, парковку и зону отдыха. Перед покупкой стоит проверить назначение земли, коммуникации и границы ",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/lands/land_07/img_01.jpg",
     "cover": "https://domian-161.ru/lands/land_07/img_01.jpg",
     "images": [
@@ -4002,7 +3831,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -4023,7 +3851,6 @@
     "shortDescription": "Продается просторный участок правильной формы. Прямоугольная, участок ровный. Центральные — по меже (вода, свет, газ при необходимости). Удобный подъезд, асфальт до участка. Тихий, спокойный район. Ря",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/lands/land_08/img_01.jpg",
     "cover": "https://domian-161.ru/lands/land_08/img_01.jpg",
     "images": [
@@ -4039,7 +3866,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -4060,7 +3886,6 @@
     "shortDescription": "Продается участок 6 соток в живописном месте. 6 соток — оптимальная площадь для строительства. Документы готовы. Быстрый выход на сделку. Ровный рельеф. Правильная форма — минимум затрат на подготовку",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/lands/land_09/img_01.jpg",
     "cover": "https://domian-161.ru/lands/land_09/img_01.jpg",
     "images": [
@@ -4074,7 +3899,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -4095,7 +3919,6 @@
     "shortDescription": "Участок 7.5 сот. — Аксайский район, Верхнетемерницкий. Фасад 25 метров, в глубину 30 метров. Коммуникации городские, по меже. Частный сектор, не СНТ. Широкие проезды. Участок ровный, правильной формы.",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/lands/land_10/img_01.jpg",
     "cover": "https://domian-161.ru/lands/land_10/img_01.jpg",
     "images": [
@@ -4111,7 +3934,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -4132,7 +3954,6 @@
     "shortDescription": "Участок ровный, чистый, 20х40 метров. Не подтапливается.",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/lands/land_11/img_01.jpg",
     "cover": "https://domian-161.ru/lands/land_11/img_01.jpg",
     "images": [
@@ -4148,7 +3969,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -4169,7 +3989,6 @@
     "shortDescription": "Двухкомнатная квартира 55,1 м² с дизайнерским ремонтом в ЖК «Новый Аксай», на Объездной улице, 7к5. Продается в связи с переездом. Основные преимущества. Индивидуальное отопление,собственный котел а с",
     "price": 7150000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_01/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_01/img_01.jpg",
     "images": [
@@ -4193,7 +4012,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 55.1,
@@ -4214,7 +4032,6 @@
     "shortDescription": "Продаётся евро-2-комнатная квартира 40,9 м² — готова к заезду. Комнат: 2 (одна изолированная). Жилая: 26,2 м²; кухня 5,3 м² (кухня в комплекте). Этаж: 9/25, балкон, окна во двор и на улицу (солнечная ",
     "price": 6250000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_02/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_02/img_01.jpg",
     "images": [
@@ -4231,7 +4048,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 40.9,
@@ -4252,7 +4068,6 @@
     "shortDescription": "Продаётся евро 2-комнатная квартира в ЖК \"Город у Реки\", 44 м² — готова к сделке. Тип: вторичка, никто не прописан, без обременений. Жилая: 18 м²; кухня 12 м² с техникой (электроплита, духовка, вытяжк",
     "price": 6700000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_03/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_03/img_01.jpg",
     "images": [
@@ -4272,7 +4087,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 44,
@@ -4293,7 +4107,6 @@
     "shortDescription": "Продаётся уютная 1-комнатная квартира в ЖК «Вересаева», 40,9 м² — готова к заезду. Коротко об объекте. Тип: вторичка. Жилая: 17,9 м², кухня 11,4 м². Этаж: 3/25, потолки 3 м. Санузел: совмещённый; лодж",
     "price": 6250000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_04/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_04/img_01.jpg",
     "images": [
@@ -4311,7 +4124,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": null,
@@ -4332,7 +4144,6 @@
     "shortDescription": "Продаётся 1-комнатная квартира в Ростове-на-Дону — готова к проживанию или сдаче. Площадь: 40 м², кухня 12 м² — просторная для кухни-столовой. Потолки 2,8 м, совмещённый санузел, лоджия — светло и удо",
     "price": 6100000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_05/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_05/img_01.jpg",
     "images": [
@@ -4353,7 +4164,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 40,
@@ -4374,7 +4184,6 @@
     "shortDescription": "Продаётся 1-комнатная квартира в ЖК «Сокол Градъ» — современно и удобно. Площадь: 39 м² (жилая 16 м²), кухня 9 м². Этаж: 10/19, балкон, потолки 2,7 м. Санузел: совмещённый, окна на улицу и во двор (со",
     "price": 5950000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_06/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_06/img_01.jpg",
     "images": [
@@ -4397,7 +4206,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 39,
@@ -4418,7 +4226,6 @@
     "shortDescription": "Продаётся 2-комнатная квартира, 60 м² — готова к заезду и быстрой сделке. Кратко об объекте. Комнаты изолированные, кухня 9 м², большая лоджия 10 м². Этаж 7/9, окна во двор — тихо. Гардеробная, совмещ",
     "price": 9150000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_07/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_07/img_01.jpg",
     "images": [
@@ -4438,7 +4245,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 60,
@@ -4459,7 +4265,6 @@
     "shortDescription": "Продаётся стильная евродвухкомнатная квартира на пр. 40-летия Победы, 63/17. Кратко об объекте. Площадь: 47 м² (жилая 27,5 м²) — продуманная планировка. Кухня: 16,5 м² — просторно для готовки и семейн",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_08/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_08/img_01.jpg",
     "images": [
@@ -4477,7 +4282,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 47,
@@ -4498,7 +4302,6 @@
     "shortDescription": "Продаётся тёплая 2-комнатная квартира 35 м² на Детской ул., 45, Ростов-на-Дону. 2 этаж из 6 кирпичного дома 2023 года постройки. Изолированные комнаты, кухня 8 м². Евро-ремонт, совмещённый санузел. Ло",
     "price": 4550000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_09/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_09/img_01.jpg",
     "images": [
@@ -4524,7 +4327,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 35,
@@ -4545,7 +4347,6 @@
     "shortDescription": "Квартира этаж 14 — Ростов-на-Дону. Еврочетырехкомнатная 90кв.м. ЖК «Вересаева». Берберовская 6/1. Кирпичный дом 2022г. Этаж 14/25. Остается всё. Индивидуальное отопление, закрытый двор.",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_10/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_10/img_01.jpg",
     "images": [
@@ -4576,7 +4377,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -4597,7 +4397,6 @@
     "shortDescription": "Преимущества квартиры. Свежий, качественный ремонт. Удобная планировка: светлая комната, просторная кухня. Современный дом с лифтом, благоустроенный двор. В шаговой доступности магазины, аптеки, школы",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_100/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_100/img_01.jpg",
     "images": [
@@ -4623,7 +4422,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -4644,7 +4442,6 @@
     "shortDescription": "Продаётся полноценная 1-комнатная квартира с лучшей планировкой. Молодой семьи. Студента или студентки. Взрослого человека в расцвете сил. Ремонт выполнен для себя, с душой и качественно — не на переп",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_101/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_101/img_01.jpg",
     "images": [
@@ -4678,7 +4475,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -4699,7 +4495,6 @@
     "shortDescription": "1-к. квартира 44 м² в ЖК «Сокол Град». Светлая и уютная квартира на 15-м этаже из 17 кирпичного дома 2021 года постройки. Полностью укомплектована мебелью и техникой — можно въезжать сразу. Основные п",
     "price": 6299000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1011/main.jpg",
     "cover": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1011/main.jpg",
     "images": [
@@ -4727,7 +4522,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 44,
@@ -4748,7 +4542,6 @@
     "shortDescription": "Продаётся современная квартира с дизайнерским ремонтом в новом монолитно-кирпичном доме 2022 года. О квартире: 1 комната, общая площадь 45 м², жилая площадь 30 м², просторная кухня 10 м², 14 этаж из 2",
     "price": 7500000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1012/main.jpg",
     "cover": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1012/main.jpg",
     "images": [
@@ -4775,7 +4568,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 45,
@@ -4796,7 +4588,6 @@
     "shortDescription": "Продаётся 2-комнатная квартира с дизайнерским ремонтом в ЖК «Вишнёвый сад», г. Аксай, ул. Ленина, 40У. Квартира полностью готова к жизни. Выполнен качественный дизайнерский ремонт. Вся мебель и техник",
     "price": 8800000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "/assets/images/listings/object_1013/01.webp",
     "cover": "/assets/images/listings/object_1013/01.webp",
     "images": [
@@ -4827,7 +4618,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": null,
@@ -4839,7 +4629,7 @@
     },
     "created_at": "2026-10-26",
     "floor_plans": [
-      "https://domian-161.ru/assets/images/listings/object_1013/plan.webp"
+      "/assets/images/listings/object_1013/plan.webp"
     ],
     "url": "/obekt/object_1013.html"
   },
@@ -4852,7 +4642,6 @@
     "shortDescription": "1-комнатная квартира 36 кв. м в ЖК «Самоцветы». Предлагаю отличный вариант в современном ЖК «Самоцветы». 1-комнатную квартиру площадью 36 кв. м — достаточно места для комфортной жизни. Полностью мебли",
     "price": 6900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "/assets/images/listings/object_1014/03.webp",
     "cover": "/assets/images/listings/object_1014/03.webp",
     "images": [
@@ -4874,7 +4663,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 36,
@@ -4896,7 +4684,6 @@
     "shortDescription": "Квартира 1 комн., 35 м² — Ростов-на-Дону. Вау-предложение в жк «полёт». 1-комнатная квартира, в которую можно заехать хоть завтра — стильный ремонт, техника, мебель, планировка. Современный дом, разви",
     "price": 5800000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_102/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_102/img_01.jpg",
     "images": [
@@ -4916,7 +4703,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 35,
@@ -4937,7 +4723,6 @@
     "shortDescription": "Продается светлая квартира в новом доме. Выполнен качественный ремонт с использованием дорогостоящих материалов. Остается мебель и техника. Индивидуальное отопление. Парковочные места в свободном дост",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_103/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_103/img_01.jpg",
     "images": [
@@ -4958,7 +4743,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -4979,7 +4763,6 @@
     "shortDescription": "Просторная и стильная квартира для жизни с комфортом. Большая, светлая и современная квартира. Идеально подходящая для семьи, ценящей уют, пространство и продуманный интерьер. Просторная кухня-гостина",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_104/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_104/img_01.jpg",
     "images": [
@@ -5008,7 +4791,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -5029,7 +4811,6 @@
     "shortDescription": "Продаётся полноценная 2-комнатная квартира с лучшей планировкой. Молодой семьи. Студента или студентки. Взрослого человека в расцвете сил. Ремонт выполнен для себя, с душой и качественно — не на переп",
     "price": 4900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_105/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_105/img_01.jpg",
     "images": [
@@ -5054,7 +4835,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -5075,7 +4855,6 @@
     "shortDescription": "Просторная 2 комнатная квартира в центре города Аксая. Квартира с качественным ремонтом; планировка «бабочка» с двумя балконами. Встроенная современная мебель и бытовая техника. В квартире индивидуаль",
     "price": 7550000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_106/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_106/img_01.jpg",
     "images": [
@@ -5100,7 +4879,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -5121,7 +4899,6 @@
     "shortDescription": "Элитный дом с дизайнерским входом и приветливыми соседями. Ваше спокойствие обеспечит закрытая территория и подземная парковка. Пространства для отдыха и занятий спортом прямо у дома. Молодая семья, к",
     "price": 6700000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_107/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_107/img_01.jpg",
     "images": [
@@ -5153,7 +4930,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": null,
@@ -5174,7 +4950,6 @@
     "shortDescription": "В квартире выполнен свежий, качественный ремонт, что позволит вам сразу же наслаждаться комфортом и уютом, не тратя время и средства на дополнительные работы. Одним из главных преимуществ данного пред",
     "price": 4900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_108/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_108/img_01.jpg",
     "images": [
@@ -5209,7 +4984,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -5230,7 +5004,6 @@
     "shortDescription": "В продаже чистая, уютная 1-комнатная квартира 35 м²., в самом сердце города. В квартире выполнен свежий косметический ремонт. Кухня оборудована всем необходимым для приготовления пищи. Санузел совмеще",
     "price": 4800000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_109/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_109/img_01.jpg",
     "images": [
@@ -5250,7 +5023,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 35,
@@ -5271,7 +5043,6 @@
     "shortDescription": "3-к квартира, 75 м², 5/22 этаж — ЖК «Вересаево», 2021 г. постройки. Продаётся просторная светлая трёхкомнатная квартира с изолированными комнатами. Квартира с дизайнерским ремонтом, две утеплённые лод",
     "price": 11450000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_11/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_11/img_01.jpg",
     "images": [
@@ -5301,7 +5072,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 3,
       "area": 75,
@@ -5322,7 +5092,6 @@
     "shortDescription": "В продаже просторная двухкомнатная квартира. Кирпичный дом, широкие подоконники и большая лоджия. Общая площадь — 60 кв.м. Изолированные комнаты: 19 кв.м и 14 кв.м. Просторная кухня — 12 кв.м. Раздель",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_110/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_110/img_01.jpg",
     "images": [
@@ -5350,7 +5119,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -5371,7 +5139,6 @@
     "shortDescription": "1-комнатная квартира с планировкой — для тех, кто ценит комфорт. ПРОСТОР — 33 м² комфорта: уютная кухня 6,7 м² и светлая гостиная 13 м². УДОБСТВА — большой санузел (4 м²) и прихожая. ЛОКАЦИЯ — рядом д",
     "price": 5450000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_111/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_111/img_01.jpg",
     "images": [
@@ -5393,7 +5160,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 33,
@@ -5414,7 +5180,6 @@
     "shortDescription": "Квартира — Аксай. Продается 1ка в центре Аксая ул. Речников. Квартира с частичным ремонтом, чистая, ухоженная. Территория комплекса закрытого типа, находится под видеонаблюдением, ландшафтный дизайн, ",
     "price": 2500000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_112/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_112/img_01.jpg",
     "images": [
@@ -5437,7 +5202,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -5458,7 +5222,6 @@
     "shortDescription": "Продаётся просторная 3-комнатная квартира в ЖК «Александровский», Ростов-на-Дону. Общая площадь — 85 м². Жилая площадь — 44 м². Кухня — 19 м². Этаж 4 из 12. Дом кирпичный, 2015 года, индивидуальный пр",
     "price": 12950000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_12/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_12/img_01.jpg",
     "images": [
@@ -5478,7 +5241,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 3,
       "area": 85,
@@ -5499,7 +5261,6 @@
     "shortDescription": "Продаётся уютная 3-комнатная квартира в Ростове-на-Дону. Общая площадь — 64 м². Кухня — 9 м² с кухонной мебелью. Комнаты изолированные, окна выходят во двор — светло и тихо. Этаж 9 из 9, квартира не у",
     "price": 9750000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_13/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_13/img_01.jpg",
     "images": [
@@ -5520,7 +5281,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 3,
       "area": 64,
@@ -5541,7 +5301,6 @@
     "shortDescription": "Продаётся стильная и просторная 2-комнатная квартира с видом на реку Дон. Общая площадь — 80 м². Кухня — 10 м² с мебелью и уютной зоной гостиной, разделённой декоративной стеной. Комнаты изолированные",
     "price": 10400000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_14/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_14/img_01.jpg",
     "images": [
@@ -5561,7 +5320,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 80,
@@ -5582,7 +5340,6 @@
     "shortDescription": "Продаётся современная 2-комнатная квартира в Ростове-на-Дону. Общая площадь — 55 м². Кухня — 10 м² с встроенной кухней и качественной бытовой техникой (холодильник, посудомоечная машина). Изолированны",
     "price": 2000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_15/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_15/img_01.jpg",
     "images": [
@@ -5603,7 +5360,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 55,
@@ -5624,7 +5380,6 @@
     "shortDescription": "Продаётся стильная и уютная 2-комнатная квартира в Ростове-на-Дону. Общая площадь — 76 м². Просторная кухня 12,4 м² с кухонной мебелью «Дриада» и техникой Ariston — готовьте с удовольствием. Изолирова",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_16/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_16/img_01.jpg",
     "images": [
@@ -5644,7 +5399,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 76,
@@ -5665,7 +5419,6 @@
     "shortDescription": "ЖК \"Вересаево\", ул. Берберовская 4 — ваша новая уютная квартира в Ростове-на-Дону. 1-комнатная квартира, 37,1 м² с удобной планировкой «Бабочка» — продуманное пространство для комфорта и уюта. В кварт",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_17/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_17/img_01.jpg",
     "images": [
@@ -5678,7 +5431,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": null,
@@ -5699,7 +5451,6 @@
     "shortDescription": "Продаётся светлая и уютная 2-комнатная квартира в Ростове-на-Дону. Общая площадь — 48,5 м² (с лоджией 51,5 м²). Кухня — 7,2 м², изолированные комнаты, раздельный санузел. Лоджия утеплена и застеклена,",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_18/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_18/img_01.jpg",
     "images": [
@@ -5728,7 +5479,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 48.5,
@@ -5749,7 +5499,6 @@
     "shortDescription": "Продаётся стильная евро 3-комнатная квартира в ЖК «Вересаево», Ростов-на-Дону. Общая площадь 53,8 м²: 2 изолированные спальни + просторная гостиная с кухней 9,3 м². Застеклённый балкон, совмещённый са",
     "price": 8200000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_19/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_19/img_01.jpg",
     "images": [
@@ -5772,7 +5521,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 3,
       "area": 53.8,
@@ -5793,7 +5541,6 @@
     "shortDescription": "Квартира. Ростовская область. 4 900 000 ₽. В галерее — 19 фотографий.",
     "price": 4900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_20/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_20/img_01.jpg",
     "images": [
@@ -5824,7 +5571,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -5845,7 +5591,6 @@
     "shortDescription": "Продаётся светлая и уютная 1-комнатная квартира в Ростове-на-Дону. Общая площадь 45,2 м², жилая — 16,1 м², кухня — 7,7 м². Лоджия (не застеклена), уложена плитка на полу. Раздельный санузел. Окна выхо",
     "price": 6600000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_21/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_21/img_01.jpg",
     "images": [
@@ -5874,7 +5619,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 45.2,
@@ -5895,7 +5639,6 @@
     "shortDescription": "ЖК «Красный Аксай» — продаётся стильная квартира-студия 33 м², 15/22. Основные преимущества — кратко. Дизайнерский, свежий и качественный ремонт. Полностью укомплектована мебелью и техникой — 2 плазме",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_22/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_22/img_01.jpg",
     "images": [
@@ -5926,7 +5669,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 33,
@@ -5947,7 +5689,6 @@
     "shortDescription": "Квартира — Ростовская область, ул. Орбитальная, д. 17. Адрес: ул. Орбитальная, д. 17, евро-3, 3-й этаж, 53 кв. м. Остаётся всё — мебель, техника, ремонт. Вариант для комфортной жизни или сдачи в аренд",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": true,
     "image": "https://domian-161.ru/objects/object_23/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_23/img_01.jpg",
     "images": [
@@ -5970,7 +5711,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -5991,7 +5731,6 @@
     "shortDescription": "Дом расположен на 15-м этаже, площадь — 30 кв. м, что обеспечивает отличную планировку и потрясающий вид из окна. Остаётся вся мебель и техника — сразу заезжайте и живите. Вариант для тех, кто ищет ко",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": true,
     "image": "https://domian-161.ru/objects/object_24/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_24/img_01.jpg",
     "images": [
@@ -6012,7 +5751,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -6033,7 +5771,6 @@
     "shortDescription": "Квартира — Ростовская область. Современный евроремонт. Комфортная планировка, разделённый санузел. Отличное расположение в самом сердце города.",
     "price": 4900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_25/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_25/img_01.jpg",
     "images": [
@@ -6051,7 +5788,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -6072,7 +5808,6 @@
     "shortDescription": "Квартира 105 м² — Аксай. Общая площадь — 105 м², 2 этаж из 8. Уникальная планировка \"бабочка\" — на две стороны, светлая и уютная. Три балкона — утеплены и оборудованы, наслаждайтесь свежим воздухом и ",
     "price": 12550000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_26/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_26/img_01.jpg",
     "images": [
@@ -6101,7 +5836,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 105,
@@ -6122,7 +5856,6 @@
     "shortDescription": "Продаётся просторная 2-комнатная квартира в центре Аксая. Адрес: Садовая 8 — сердце города. Общая площадь: 72 м² — размер для комфорта и уюта. Просторные и светлые комнаты. Удобная планировка — максим",
     "price": 9350000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_27/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_27/img_01.jpg",
     "images": [
@@ -6142,7 +5875,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 72,
@@ -6163,7 +5895,6 @@
     "shortDescription": "Продажа 3-комнатной квартира в ЖК \"Державинский\". Локация: Центр ул. Береговая. Площадь квартиры 90 м2. С дизайнерским ремонтом и мебелью. Планировка: холл, две изолированные комнаты, одна из них с па",
     "price": 13700000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_28/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_28/img_01.jpg",
     "images": [
@@ -6180,7 +5911,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 90,
@@ -6201,7 +5931,6 @@
     "shortDescription": "Продаётся квартиру 3-x комнатная просторная с двумя лоджиями, мебель и техника остаются, ремонт делали для себя. Хороший жилой район с инфаструктурой в шаговой доступности ( школа, детский сад, поликл",
     "price": 4900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_29/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_29/img_01.jpg",
     "images": [
@@ -6228,7 +5957,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -6249,7 +5977,6 @@
     "shortDescription": "Светлую и просторную 3 ком квартиру. Площадью 74кв.м. Выполнен современный евроремонт, готова к проживанию. Большая кухня, две изолированные спальни, каждая с выходом на балкон, огромная прихожая. Сан",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_30/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_30/img_01.jpg",
     "images": [
@@ -6273,7 +6000,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -6294,7 +6020,6 @@
     "shortDescription": "Продаётся светлая и уютная 2-комнатная квартира в Ростове-на-Дону. Общая площадь 54 м², кухня 9 м². Этаж 4 из 9. Изолированные комнаты — комфорт и приватность. Балкон для отдыха и свежего воздуха. Сан",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_31/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_31/img_01.jpg",
     "images": [
@@ -6314,7 +6039,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 54,
@@ -6335,7 +6059,6 @@
     "shortDescription": "Квартира 62 м² — Ростовская область, ул. Институтская, 14. Адрес: ул. Институтская, 14. Общая площадь — 62 кв. м, расположена на 4 этаже 9-этажного дома. Квартира с новым ремонтом, готова к уютной жиз",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_32/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_32/img_01.jpg",
     "images": [
@@ -6358,7 +6081,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 62,
@@ -6379,7 +6101,6 @@
     "shortDescription": "2-комнатная квартира в современном жилом комплексе в Ростове-на-Дону. Кухня просторная — 13 м². Этаж 4 из 18. Изолированные комнаты для комфортной жизни. Потолки 2,7 м — светло и просторно. Санузел ра",
     "price": 5200000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_33/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_33/img_01.jpg",
     "images": [
@@ -6396,7 +6117,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": null,
@@ -6417,7 +6137,6 @@
     "shortDescription": "Продаётся светлая и просторная 2-комнатная квартира в районе Александровка, Ростов-на-Дону. Основные характеристики. Общая площадь 52 м², жилая — 31 м², кухня 8 м². Расположение: 1-й этаж из 9, удобны",
     "price": 6750000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_34/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_34/img_01.jpg",
     "images": [
@@ -6442,7 +6161,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 52,
@@ -6463,7 +6181,6 @@
     "shortDescription": "Продаётся уютная 1-комнатная квартира в кирпичном доме р-н Алесандровка. Параметры квартиры. Этаж 3 из 9, общая площадь 40 м². Кухня просторная — 12 м², жилое пространство 15 м². Санузел совмещённый. ",
     "price": 6600000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_35/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_35/img_01.jpg",
     "images": [
@@ -6482,7 +6199,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 40,
@@ -6503,7 +6219,6 @@
     "shortDescription": "Продаётся уютная 2-комнатная квартира в Ростове-на-Дону, район Пролетарский — Александровка. Основные характеристики. Панельный дом 1981 года, 9 этажей. Квартира на комфортном 2-м этаже из 9. Общая пл",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_36/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_36/img_01.jpg",
     "images": [
@@ -6523,7 +6238,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 48.1,
@@ -6544,7 +6258,6 @@
     "shortDescription": "Продаётся стильная 2-комнатная квартира в Ростове-на-Дону. Общая площадь 51 м², кухня 10 м² — комфортное пространство для жизни. Изолированные комнаты для уюта и приватности. Евроремонт — готова к про",
     "price": 6650000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_37/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_37/img_01.jpg",
     "images": [
@@ -6572,7 +6285,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 51,
@@ -6593,7 +6305,6 @@
     "shortDescription": "Продаётся уютная евро2-комнатная квартира в Ростове-на-Дону. Общая площадь 35 м², жилая 25 м² — компактно и комфортно. Кухня 8 м² — удобное пространство для приготовления пищи. Расположена на 10 этаже",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_38/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_38/img_01.jpg",
     "images": [
@@ -6619,7 +6330,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 35,
@@ -6640,7 +6350,6 @@
     "shortDescription": "Продаётся светлая и уютная 1-комнатная квартира на 2 этаже из 21. Общая площадь 32 м², кухня 7.9 м² — компактно и удобно. В 2022 году выполнен качественный евро-ремонт. Плитка в ванной от Gracia Ceram",
     "price": 6820000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_39/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_39/img_01.jpg",
     "images": [
@@ -6659,7 +6368,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 32,
@@ -6680,7 +6388,6 @@
     "shortDescription": "Двухкомнатная квартира 76 м² на 11-м этаже 19-этажного дома: Ростов-на-Дону, улица 40-летия Победы, 85. Ростов-на-Дону, отличный район с развитой инфраструктурой — много магазинов и остановок обществе",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": true,
     "image": "https://domian-161.ru/objects/object_40/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_40/img_01.jpg",
     "images": [
@@ -6704,7 +6411,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 76,
@@ -6725,7 +6431,6 @@
     "shortDescription": "Пространства для отдыха и занятий спортом прямо у дома. В квартире. Светло и тепло — уют создают тёплые полы и качественный ремонт. Мебель и техника. Просторный санузел и удобная гардеробная. Всё для ",
     "price": 6700000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_41/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_41/img_01.jpg",
     "images": [
@@ -6749,7 +6454,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": null,
@@ -6770,7 +6474,6 @@
     "shortDescription": "Продаётся уютная и комфортабельная 1-комнатная квартира в Ростове-на-Дону. Квартира на 5 этаже из 10, окна выходят во двор — тихо и спокойно. Дизайнерский ремонт с качественной электрикой (схема в эле",
     "price": 2500000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_42/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_42/img_01.jpg",
     "images": [
@@ -6795,7 +6498,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": null,
@@ -6816,7 +6518,6 @@
     "shortDescription": "Продаётся уютная 1-комнатная квартира в Ростове-на-Дону. Квартира на 1 этаже из 10, с балконом и окнами во двор — тихо и спокойно. Есть удобная гардеробная для хранения одежды и вещей. Качественный ев",
     "price": 2950000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_43/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_43/img_01.jpg",
     "images": [
@@ -6835,7 +6536,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": null,
@@ -6856,7 +6556,6 @@
     "shortDescription": "Продаётся стильная и уютная 2-комнатная квартира в новом современном ЖК «Сокол Град» в Ростове-на-Дону. Квартира расположена на комфортном 5 этаже из 18, дом монолитно-кирпичный, 2022 года постройки —",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_44/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_44/img_01.jpg",
     "images": [
@@ -6886,7 +6585,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 67,
@@ -6907,7 +6605,6 @@
     "shortDescription": "Квартира — Ростовская область. Новый качественный ремонт, в котором никто не жил. Установлена сплит-система, современный кухонный гарнитур. Полностью меблирована и укомплектована необходимой бытовой т",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_45/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_45/img_01.jpg",
     "images": [
@@ -6940,7 +6637,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -6961,7 +6657,6 @@
     "shortDescription": "Двухкомнатная квартира с дизайнерским ремонтом в доме 2021 года в Ростове-на-Дону. Свежий дизайнерский ремонт, вся мебель и техника. Тёплый пол с разными контурами (кухня, коридор, санузел) для максим",
     "price": 2500000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_46/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_46/img_01.jpg",
     "images": [
@@ -6988,7 +6683,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": null,
@@ -7009,7 +6703,6 @@
     "shortDescription": "Продаётся светлая и уютная 1-комнатная квартира в г. Ростов-на-Дону. Этаж 23 из 23 — квартира находится на самом верхнем этаже с панорамными окнами и великолепным видом. Общая площадь — 40 м², простор",
     "price": 6600000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_47/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_47/img_01.jpg",
     "images": [
@@ -7027,7 +6720,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 40,
@@ -7048,7 +6740,6 @@
     "shortDescription": "Продаётся просторная 2-комнатная квартира в современном жилом комплексе Ростова-на-Дону. Все комнаты изолированные — комфорт и личное пространство для всей семьи. Квартира с качественным свежим ремонт",
     "price": 9100000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_48/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_48/img_01.jpg",
     "images": [
@@ -7069,7 +6760,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 70,
@@ -7090,7 +6780,6 @@
     "shortDescription": "Продаётся светлая и уютная 1-комнатная квартира в современном ЖК «Экоквартал Вересаево». Квартира находится на 18 этаже из 21 с потрясающим видом на весь город. Общая площадь — 36,7 м², жилая — 16,5 м",
     "price": 6050000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_49/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_49/img_01.jpg",
     "images": [
@@ -7112,7 +6801,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 36.7,
@@ -7133,7 +6821,6 @@
     "shortDescription": "Продается квартира-студия 26,7 м². Отличный вариант для тех, кто ищет недорогой и удобный вариант для самостоятельного оформления. Квартира без ремонта, готова к вашим дизайнерским решениям и обновлен",
     "price": 3200000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_50/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_50/img_01.jpg",
     "images": [
@@ -7153,7 +6840,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 26.7,
@@ -7174,7 +6860,6 @@
     "shortDescription": "1-комнатная квартира с планировкой — для тех, кто ценит комфорт и качество. РЕМОНТ «ДЛЯ СЕБЯ» — качественный и современный, без экономии на материалах. ПРОСТОР — 32,3м² комфорта: уютная кухня 8 м² и с",
     "price": 4900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_51/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_51/img_01.jpg",
     "images": [
@@ -7195,7 +6880,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -7216,7 +6900,6 @@
     "shortDescription": "Продаётся уютная 2-комнатная квартира в Ростове-на-Дону. Общая площадь — 40 м², жилая — 24 м², кухня — 5 м². Комнаты изолированные, санузел совмещённый. Окна выходят во двор — тихо и спокойно. Космети",
     "price": 5200000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_52/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_52/img_01.jpg",
     "images": [
@@ -7236,7 +6919,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 40,
@@ -7257,7 +6939,6 @@
     "shortDescription": "Продаётся светлая и тёплая 2-комнатная квартира в тихом ЖК «Александровский». Изолированные комнаты, общая площадь 62 м², жилая — 46 м². Кухня 12 м², большая лоджия 6 м². Окна во двор и на солнечную с",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_53/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_53/img_01.jpg",
     "images": [
@@ -7281,7 +6962,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 62,
@@ -7302,7 +6982,6 @@
     "shortDescription": "Квартира с двумя изолированными комнатами, мебелью и техникой в Ростове-на-Дону, в доме 2021 года. Свежий дизайнерский ремонт, вся мебель и техника. Тёплый пол с разными контурами (кухня, коридор, сан",
     "price": 2500000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_54/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_54/img_01.jpg",
     "images": [
@@ -7331,7 +7010,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": null,
@@ -7352,7 +7030,6 @@
     "shortDescription": "В Ростове-на-Дону продаётся двухкомнатная квартира 76 м² на улице 40-летия Победы, 85; комнаты изолированы. Ростов-на-Дону, отличный район с развитой инфраструктурой — много магазинов и остановок обще",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": true,
     "image": "https://domian-161.ru/objects/object_55/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_55/img_01.jpg",
     "images": [
@@ -7365,7 +7042,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 76,
@@ -7386,7 +7062,6 @@
     "shortDescription": "Уникальная квартира в ЖК на первой линии реки Дон. Ростов-на-Дону, исторический район, с развитой инфраструктурой: рядом магазины, остановки транспорта, всего в 2,5 км от Театральной площади. 1 комнат",
     "price": 6950000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_56/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_56/img_01.jpg",
     "images": [
@@ -7409,7 +7084,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 42,
@@ -7430,7 +7104,6 @@
     "shortDescription": "Продается стильная студия в новом монолитно-кирпичном доме 2023 года. Ростов-на-Дону, удобное расположение с развитой инфраструктурой: рядом множество магазинов и остановки общественного транспорта. 2",
     "price": 3150000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_57/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_57/img_01.jpg",
     "images": [
@@ -7451,7 +7124,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -7472,7 +7144,6 @@
     "shortDescription": "Продаётся тёплая 2-комнатная квартира в районе Александровка, Ростов-на-Дону. Общая площадь — 46 м², жилая — 32 м², кухня — 8 м². Изолированные комнаты, совмещённый санузел. Окна выходят во двор — тих",
     "price": 6000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_58/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_58/img_01.jpg",
     "images": [
@@ -7492,7 +7163,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 46,
@@ -7513,7 +7183,6 @@
     "shortDescription": "Продаётся уютная 1-комнатная квартира в районе Александровка, Ростов-на-Дону. Современный евро-ремонт. В квартире есть кондиционер, холодильник и стиральная машина. Мебель: кухня, удобное хранение оде",
     "price": 2500000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_59/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_59/img_01.jpg",
     "images": [
@@ -7543,7 +7212,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": null,
@@ -7564,7 +7232,6 @@
     "shortDescription": "Продаётся стильная и уютная 2-комнатная квартира в ЖК с закрытой охраняемой территорией в районе Нихичевань, Ростов-на-Дону. Общая площадь — 53 м². Комнаты изолированные: жилая — 13.4 м², кухня — 21.7",
     "price": 2000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_60/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_60/img_01.jpg",
     "images": [
@@ -7588,7 +7255,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 53,
@@ -7609,7 +7275,6 @@
     "shortDescription": "Продаётся уютная 1-комнатная квартира. Площадь: 20.2 м². Этаж 1 из 5, высота потолков 2.6 м. Окна во двор — тихо и спокойно. Санузел совмещённый, косметический ремонт. Водопроводные трубы пластиковые,",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_61/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_61/img_01.jpg",
     "images": [
@@ -7628,7 +7293,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 20.2,
@@ -7649,7 +7313,6 @@
     "shortDescription": "Продаётся светлая 2х комнатная квартира с отличным ремонтом. Без вложений, в идеальном состоянии. Большая кладовка для вещей. Отличное расположение: школа №106, садик №315, рынок, остановка. Дом панел",
     "price": 2500000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_62/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_62/img_01.jpg",
     "images": [
@@ -7672,7 +7335,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": null,
@@ -7693,7 +7355,6 @@
     "shortDescription": "Продаётся 1-комнатная квартира в доме 2007 года. 35,5 м², 6 этаж из 9. Окна выходят на улицу — светло и просторно. Собственность более 5 лет, без обременений — готовы к быстрой сделке. Комфорт и удобс",
     "price": 5850000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_63/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_63/img_01.jpg",
     "images": [
@@ -7718,7 +7379,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": null,
@@ -7739,7 +7399,6 @@
     "shortDescription": "Продается уютная 1-комнатная квартира по адресу: пр. 40 лет Победы, д. 63/16. Площадь: 33 м². В квартире остаётся шкаф и сплит-система. Расположена на 4 этаже — удобная планировка и хорошая инфраструк",
     "price": 3300000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_64/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_64/img_01.jpg",
     "images": [
@@ -7762,7 +7421,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 33,
@@ -7783,7 +7441,6 @@
     "shortDescription": "Квартира 40.1 м² — Аксай. Вариант для тех, кто ценит комфорт и удобство. Светлая и просторная квартира ждёт своего нового владельца. Аксай, Платова, 83г — развитый район с отличной инфраструктурой. Пр",
     "price": 7000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_65/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_65/img_01.jpg",
     "images": [
@@ -7807,7 +7464,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 40.1,
@@ -7828,7 +7484,6 @@
     "shortDescription": "Продаётся светлая 1-комнатная квартира 42 м² в районе Александровка. Основные преимущества. Кирпичный дом 2007 года, 4 этаж из 10, своя котельная на крыше. Просторная кухня 13 м² с зоной для техники и",
     "price": 6950000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_66/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_66/img_01.jpg",
     "images": [
@@ -7847,7 +7502,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 42,
@@ -7868,7 +7522,6 @@
     "shortDescription": "3-комнатная квартира в сердце Александровки. Главные достоинства квартиры. Евро-ремонт с качественными материалами, паркетная доска на полу. 2 санузла, теплый пол для дополнительного комфорта. Лоджия ",
     "price": 2500000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_67/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_67/img_01.jpg",
     "images": [
@@ -7889,7 +7542,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 3,
       "area": null,
@@ -7910,7 +7562,6 @@
     "shortDescription": "Просторная 2-комнатная квартира в Пролетарском районе. Общая площадь 56 м², изолированные комнаты, этаж 6 из 9. Кухня 9 м², лоджия, евро-ремонт. Практически вся мебель остаётся — можно заехать и жить.",
     "price": 7300000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_68/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_68/img_01.jpg",
     "images": [
@@ -7932,7 +7583,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 56,
@@ -7953,7 +7603,6 @@
     "shortDescription": "Евро-3 квартира в Пролетарском районе. 62 м², 2 изолированные комнаты, кухня-гостиная 14 м², лоджия 8 м². Личное парковочное место на охраняемой стоянке. Своя котельная — низкие коммунальные платежи. ",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_69/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_69/img_01.jpg",
     "images": [
@@ -7980,7 +7629,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 62,
@@ -8001,7 +7649,6 @@
     "shortDescription": "Просторная 3-комнатная квартира в кирпичном доме 2007 года. Общая площадь — 105 м² (без учёта лоджии). Кухня-гостиная 19 м² с кухонным гарнитуром из натурального дерева. Три изолированные комнаты: зал",
     "price": 16000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_70/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_70/img_01.jpg",
     "images": [
@@ -8028,7 +7675,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 3,
       "area": 105,
@@ -8049,7 +7695,6 @@
     "shortDescription": "Продаётся светлая и уютная 3-комнатная квартира. Общая площадь — 70 м². Просторная кухня 14 м² с гарнитуром из натурального дерева. Жилая площадь — 44 м², все комнаты изолированные. Этаж 6 из 10. Окна",
     "price": 8400000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_71/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_71/img_01.jpg",
     "images": [
@@ -8076,7 +7721,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 3,
       "area": 70,
@@ -8097,7 +7741,6 @@
     "shortDescription": "ЖК «Персона» — отличная 2-комнатная квартира. Площадь 48 м² — удобная и функциональная планировка для комфортной жизни.",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_72/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_72/img_01.jpg",
     "images": [
@@ -8110,7 +7753,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 48,
@@ -8131,7 +7773,6 @@
     "shortDescription": "Продаётся светлая 1-комнатная квартира в ЖК «61 квартал», Александровка. 8 этаж из 9, кирпичный дом. Площадь 32 м² + лоджия 5 м² — дополнительное пространство для комфорта. Квартира полностью меблиров",
     "price": 5300000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_73/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_73/img_01.jpg",
     "images": [
@@ -8144,7 +7785,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 32,
@@ -8165,7 +7805,6 @@
     "shortDescription": "Продаётся 1-комнатная квартира в ЖК «Сокол Град», Александровка. Адрес: улица 40 лет Победы 63/17с8. Этаж 2 из 18, площадь 40 м² — комфорт и уют в сердце города. Дизайнерский ремонт, современная мебел",
     "price": 7200000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_74/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_74/img_01.jpg",
     "images": [
@@ -8178,7 +7817,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 40,
@@ -8199,7 +7837,6 @@
     "shortDescription": "ЖК «Сокол Градъ» — 1-комнатная видовая квартира. Площадь 44 м², 17 этаж с потрясающим видом на город. Без обременений — чистая сделка. Вся мебель и техника остаются — без лишних вложений.",
     "price": 6600000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_75/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_75/img_01.jpg",
     "images": [
@@ -8212,7 +7849,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 44,
@@ -8233,7 +7869,6 @@
     "shortDescription": "В продаже уютная однокомнатная квартира гостиничного типа. Дом кирпичный — надёжность и тепло на долгие годы. Сделан свежий косметический ремонт: новые батареи, полы и стояки. Во дворе детская и спорт",
     "price": 2750000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_76/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_76/img_01.jpg",
     "images": [
@@ -8250,7 +7885,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 18,
@@ -8271,7 +7905,6 @@
     "shortDescription": "Квартира 3 комн. — Ростовская область. Замечательный вариант для всей семьи. В продаже 3-комнатная квартира общей площадью - 65 кв.м. В квартире сделан качественный ремонт, установлена сплит-система. ",
     "price": 4900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_77/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_77/img_01.jpg",
     "images": [
@@ -8294,7 +7927,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 3,
       "area": null,
@@ -8315,7 +7947,6 @@
     "shortDescription": "Продается трёхкомнатная квартира. остановка молочный,развитая инфраструктура,садики,школы,рынок,квартира теплая,коммунальные платежи не высокие. Количество комнат: 3. Общая площадь: 63 м². Площадь кух",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_78/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_78/img_01.jpg",
     "images": [
@@ -8338,7 +7969,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 3,
       "area": 63,
@@ -8359,7 +7989,6 @@
     "shortDescription": "1-комнатная квартира с планировкой — для тех, кто ценит комфорт и качество. Молодая семья, которая ищет уютное и функциональное жильё. Студент (или студентка), желающий жить комфортно и автономно. Взр",
     "price": 6700000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_79/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_79/img_01.jpg",
     "images": [
@@ -8383,7 +8012,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": null,
@@ -8404,7 +8032,6 @@
     "shortDescription": "Продаётся полноценная 1-комнатная квартира с лучшей планировкой. Молодой семьи. Студента или студентки. Взрослого человека в расцвете сил. Ремонт выполнен для себя, с душой и качественно — не на переп",
     "price": 4750000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_80/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_80/img_01.jpg",
     "images": [
@@ -8436,7 +8063,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 28.8,
@@ -8457,7 +8083,6 @@
     "shortDescription": "Новый уютный дом, в дали от суетливого и шумного соседнего комплекса на вересаево. В то же время, все необходимое в шаговой доступности. Школа, сад, магазины, спортзал и тд. В квартире котел колонка. ",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_81/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_81/img_01.jpg",
     "images": [
@@ -8477,7 +8102,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 3,
       "area": 72,
@@ -8498,7 +8122,6 @@
     "shortDescription": "ЖК Вересаево, отличная квартира, с частичным ремонтом, тихо, вся инфраструктура в шаговой доступности, школа, садик, магазины, парк. Ремонт частичный потому что нет плинтусов на потолке и на полу. Кол",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_82/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_82/img_01.jpg",
     "images": [
@@ -8526,7 +8149,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 3,
       "area": 80.2,
@@ -8547,7 +8169,6 @@
     "shortDescription": "Квартира 2 комн., 58 м², этаж 4 — Ростовская область. Количество комнат: 2. Общая площадь: 58 м². Площадь кухни: 9.8 м². Жилая площадь: 34.5 м². Этаж: 4 из 9. Балкон или лоджия: балкон. Тип комнат: из",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_83/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_83/img_01.jpg",
     "images": [
@@ -8572,7 +8193,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 58,
@@ -8593,7 +8213,6 @@
     "shortDescription": "Продаётся двух комнатную квартиру, ЖК Персона, новый дом. Рядом магазины, остановка транспорта, школа, детский сад. Закрытая территория дизайнерская отделка холла, индивидуальное отопление. В квартире",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_84/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_84/img_01.jpg",
     "images": [
@@ -8617,7 +8236,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 50,
@@ -8638,7 +8256,6 @@
     "shortDescription": "Просторная 1-комнатная квартира 38,8 м². Продается светлая и уютная квартира с удачной планировкой. Просторная комната. Кухня, где удобно готовить и обедать. Раздельный санузел. Большой коридор — мест",
     "price": 6400000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_85/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_85/img_01.jpg",
     "images": [
@@ -8651,7 +8268,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 38.8,
@@ -8672,7 +8288,6 @@
     "shortDescription": "Продается 1-комнатная квартира 26 м² на 1 этаже 3-этажного дома. Уютная и светлая квартира с удобной планировкой. Низкие коммунальные платежи, спокойные соседи, зелёный двор. Развитая инфраструктура: ",
     "price": 4300000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_86/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_86/img_01.jpg",
     "images": [
@@ -8691,7 +8306,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 26,
@@ -8712,7 +8326,6 @@
     "shortDescription": "Квартира 110 м² — Ростовская область. Площадь 110 м², удобная планировка: три спальни, просторная гостиная-столовая, кухня 12 м², два санузла (в т.ч. при мастер-спальне с гардеробной), балкон, лоджия,",
     "price": 16750000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_87/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_87/img_01.jpg",
     "images": [
@@ -8733,7 +8346,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 110,
@@ -8754,7 +8366,6 @@
     "shortDescription": "Квартира 58 м² — Ростовская область. Площадь — 58 м², комнаты изолированные, кухня 6.5 м², санузел совмещённый, балкон. Качественный евро ремонт. Окна на две стороны. Вся мебель и техника остаются: ку",
     "price": 8850000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_88/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_88/img_01.jpg",
     "images": [
@@ -8777,7 +8388,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 58,
@@ -8798,7 +8408,6 @@
     "shortDescription": "Квартира 48 м² — Ростовская область. Площадь — 48 м², изолированные комнаты, кухня 9 м², раздельный санузел, балкон. Евро ремонт — делали для себя, продуман каждый элемент. Заменена электропроводка, с",
     "price": 5750000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_89/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_89/img_01.jpg",
     "images": [
@@ -8819,7 +8428,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 48,
@@ -8840,7 +8448,6 @@
     "shortDescription": "Квартира 53 м² — Ростовская область. Площадь — 53 м², комнаты изолированные, кухня 10 м², санузел раздельный, балкон. Качественный дизайнерский ремонт. В квартире остаётся мебель и техника: кухня, спа",
     "price": 8100000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_90/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_90/img_01.jpg",
     "images": [
@@ -8862,7 +8469,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 53,
@@ -8883,7 +8489,6 @@
     "shortDescription": "Описание объекта Продается 2-комнатная квартира 44 м². Тёплая, светлая и уютная квартира на 3-м этаже (из 5) - не угловая, комфортный этаж. Основные параметры. Общая площадь: 44 м2. Жилая площадь: 29 ",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": true,
     "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/main.jpg",
     "cover": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1001/main.jpg",
     "images": [
@@ -8911,7 +8516,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 44,
@@ -8932,7 +8536,6 @@
     "shortDescription": "Продается 2-комнатная квартира 63 м² в Аксае Адрес: г. Аксай, ул. Строителей, 9к4. Основные параметры. Тип объекта: Квартира. Количество комнат: 2. Общая площадь: 63 м². Район: Аксай. Инфраструктура: ",
     "price": 9600000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/main.jpg",
     "cover": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/main.jpg",
     "images": [
@@ -8954,7 +8557,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 63,
@@ -8975,7 +8577,6 @@
     "shortDescription": "Продается 2-комнатная квартира 56,6 м² в Аксае Адрес: г. Аксай, ул. Речников, 31к3. Основные параметры. Тип объекта: Квартира. Количество комнат: 2. Общая площадь: 56,6 м². Этаж: 1 из 4. Район: Аксай.",
     "price": 6100000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1003/main.jpg",
     "cover": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1003/main.jpg",
     "images": [
@@ -8997,7 +8598,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 56.6,
@@ -9018,7 +8618,6 @@
     "shortDescription": "Квартира находится на 9 этаже 10-этажного монолитного дома 2005 года постройки. Высокие потолки 2,7 м создают ощущение простора и лёгкости. Совмещённый санузел, есть просторная лоджия. Хороший ремонт ",
     "price": 4700000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/main.jpg",
     "cover": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1004/main.jpg",
     "images": [
@@ -9041,7 +8640,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": null,
@@ -9062,7 +8660,6 @@
     "shortDescription": "Квартира. 4 900 000 ₽. В галерее — 12 фотографий.",
     "price": 4900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1005/main.jpg",
     "cover": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1005/main.jpg",
     "images": [
@@ -9086,7 +8683,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -9107,7 +8703,6 @@
     "shortDescription": "Уютная 2-комнатная квартира с дизайнерским ремонтом | Кирпичный дом 2012 г. | Закрытая территория Продаётся светлая и просторная двухкомнатная квартира для комфортной жизни семьи. Вариант для тех, кто",
     "price": 9000000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/main.jpg",
     "cover": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1006/main.jpg",
     "images": [
@@ -9140,7 +8735,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": null,
@@ -9161,7 +8755,6 @@
     "shortDescription": "Общая площадь — 36 м² Жилая площадь — 14 м² Кухня — 9 м² Дом кирпично-монолитный, построен в 2020 году — новый современный дом. Этаж 15 из 21 — отличные виды во двор, тишина и спокойствие Изолированна",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": true,
     "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/main.jpg",
     "cover": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/main.jpg",
     "images": [
@@ -9193,7 +8786,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 36,
@@ -9214,7 +8806,6 @@
     "shortDescription": "Продаётся уютная евродвушка 41,6 м² в ЖК «Сокол Град» - новый дом 2023 года. Ваш вариант уже ждёт вас. Светлая евродвушка на 6-м этаже монолитно-кирпичного дома. Общая площадь: 41,6 м2 Площадь кухни-г",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": true,
     "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/main.jpg",
     "cover": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1008/main.jpg",
     "images": [
@@ -9244,7 +8835,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": 41.6,
@@ -9265,7 +8855,6 @@
     "shortDescription": "Продаётся уютная евро 2х-комнатная квартира в престижном ЖК 61 Квартал. Общая площадь — 47 м² Жилая площадь — 17 м² Просторная кухня — 20 м², идеальна для семейных ужинов и кулинарных экспериментов Эт",
     "price": 6100000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/main.jpg",
     "cover": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/main.jpg",
     "images": [
@@ -9292,7 +8881,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 47,
@@ -9313,7 +8901,6 @@
     "shortDescription": "Квартира — Ростовская область. Жилая — 17 м². Евро ремонт, окна на улицу, балкон, совмещённый санузел. В квартире остаётся вся мебель и техника: кухня, спальные места, системы хранения, сплит-система,",
     "price": 2500000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_91/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_91/img_01.jpg",
     "images": [
@@ -9336,7 +8923,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -9357,7 +8943,6 @@
     "shortDescription": "Продаётся уютная 1-комнатная квартира с новым дизайнерским ремонтом в современном ЖК \"61 Квартал\" — готова к вашему комфортному проживанию. Общая площадь — 36 м² Кухня — 10 м² Жилая комната — 26 м² Эт",
     "price": null,
     "priceCurrency": "RUB",
-    "price_conflict": true,
     "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/main.jpg",
     "cover": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1010/main.jpg",
     "images": [
@@ -9380,7 +8965,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 36,
@@ -9401,7 +8985,6 @@
     "shortDescription": "Продаётся просторная 3х-комнатная квартира 62 м² на 6 этаже из 9. Об объекте: 3 изолированных комнаты, общей площадью 44 м² — максимум уюта и приватности Кухня 8 м² — достаточно пространства для удобн",
     "price": 6500000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1003/main.jpg",
     "cover": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1003/main.jpg",
     "images": [
@@ -9416,7 +8999,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 3,
       "area": 62,
@@ -9437,7 +9019,6 @@
     "shortDescription": "Продаётся просторная 3х-комнатная квартира 66 м² на 11 этаже из 16. Об объекте: 3 просторные комнаты, общей площадью 45 м² — максимум уюта и простора Кухня гостиная 26 м² — достаточно пространства для",
     "price": 7200000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/main.jpg",
     "cover": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1002/main.jpg",
     "images": [
@@ -9452,7 +9033,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 3,
       "area": 66,
@@ -9473,7 +9053,6 @@
     "shortDescription": "Продаётся 2х-комнатная квартира с евроремонтом 66 м² на 14 этаже из 18. Об объекте: 2 просторные комнаты, общей площадью 38 м² — максимум уюта и простора Кухня гостиная 13м² — достаточно пространства ",
     "price": 7900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/main.jpg",
     "cover": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1009/main.jpg",
     "images": [
@@ -9488,7 +9067,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": 66,
@@ -9509,7 +9087,6 @@
     "shortDescription": "Продаётся уютная 1-комнатная квартира 29 м² на 2 этаже из 18. Об объекте: Комната 13 м² с изолированной планировкой — максимум уюта и приватности Кухня 8м² — достаточно пространства для удобного приго",
     "price": 3600000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/main.jpg",
     "cover": "https://raw.githubusercontent.com/LeSauteur/DomianKvartal-images/main/NewApartmens/object_1007/main.jpg",
     "images": [
@@ -9524,7 +9101,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": 29,
@@ -9545,7 +9121,6 @@
     "shortDescription": "Квартира в отличном состоянии, выполнен качественный ремонт, использованы современные материалы. Лоджия остеклена и благоустроена. Остаются: встроенная кухня, шкаф-купе. Есть кондиционер. Дом панельны",
     "price": 2900000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_92/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_92/img_01.jpg",
     "images": [
@@ -9564,7 +9139,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -9585,7 +9159,6 @@
     "shortDescription": "1-комнатная квартира с планировкой — для тех, кто ценит комфорт и качество. ЛОКАЦИЯ — рядом детский сад, школа, магазины, кафе, спортивные и детские площадки. Молодая семья, которая ищет уютное и функ",
     "price": 6700000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_93/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_93/img_01.jpg",
     "images": [
@@ -9611,7 +9184,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": null,
@@ -9632,7 +9204,6 @@
     "shortDescription": "Элитный дом с дизайнерским входом и приветливыми соседями. Ваше спокойствие обеспечит закрытая территория. Пространства для отдыха и занятий спортом прямо у дома. В квартире. Светло и тепло — уют созд",
     "price": 6700000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_94/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_94/img_01.jpg",
     "images": [
@@ -9654,7 +9225,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": null,
@@ -9675,7 +9245,6 @@
     "shortDescription": "Продаётся уютная 2-к квартира. Установлена сплит-система, современный кухонный гарнитур. Полностью меблирована и укомплектована необходимой бытовой техникой. Функциональная планировка. Спальня с гарде",
     "price": 2500000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_95/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_95/img_01.jpg",
     "images": [
@@ -9697,7 +9266,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 2,
       "area": null,
@@ -9718,7 +9286,6 @@
     "shortDescription": "Квартира — Ростовская область. Современный стиль, планировка и атмосфера уюта с первого взгляда. Простор, свет, место для всей семьи. Современный дизайнерский ремонт. В идеальном состоянии, делали «дл",
     "price": 5200000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_96/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_96/img_01.jpg",
     "images": [
@@ -9738,7 +9305,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -9759,7 +9325,6 @@
     "shortDescription": "Квартира — Ростовская область. Современный стиль, планировка и атмосфера уюта с первого взгляда. Полноценные, изолированные комнаты. Максимум личного пространства. Простор, свет, место для всей семьи.",
     "price": 5200000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_97/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_97/img_01.jpg",
     "images": [
@@ -9783,7 +9348,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,
@@ -9804,7 +9368,6 @@
     "shortDescription": "Квартира 1 комн. — Ростовская область. Вау-предложение в жк «полёт». 1-комнатная квартира, в которую. Можно заехать хоть завтра. Стильный ремонт, техника, мебель, планировка. Современный дом, развитая",
     "price": 6700000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_98/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_98/img_01.jpg",
     "images": [
@@ -9826,7 +9389,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": 1,
       "area": null,
@@ -9847,7 +9409,6 @@
     "shortDescription": "Квартира с дизайнерским ремонтом, индивидуальным отоплением и тёплыми полами на кухне и в санузле. Продается в связи с переездом. Основные преимущества. Индивидуальное отопление,собственный котел а со",
     "price": 2500000,
     "priceCurrency": "RUB",
-    "price_conflict": null,
     "image": "https://domian-161.ru/objects/object_99/img_01.jpg",
     "cover": "https://domian-161.ru/objects/object_99/img_01.jpg",
     "images": [
@@ -9870,7 +9431,6 @@
     "status": "active",
     "statusLabel": "В каталоге",
     "availabilityStatus": "unverified",
-    "availabilityVerifiedAt": null,
     "features": {
       "rooms": null,
       "area": null,

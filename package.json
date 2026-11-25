@@ -7,7 +7,7 @@
     "test": "node --test tests/*.test.mjs",
     "test:browser": "playwright test",
     "seo:audit": "node _tools/seo-audit.mjs",
-    "qa": "npm run build && npm run check:pages && npm test && npm run check:site && node _tools/sync-public-header.mjs --check && npm run seo:audit && npm run test:browser",
+    "qa": "npm run build && npm run check:pages && npm test && npm run check:pages && npm run check:site && node _tools/sync-public-header.mjs --check && npm run seo:audit && npm run test:browser",
     "build": "node scripts/build.mjs",
     "check:pages": "node scripts/sync-pages.mjs --check",
     "dev": "node scripts/preview.mjs",
