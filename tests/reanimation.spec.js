@@ -126,7 +126,8 @@ test('a recent listing outside the old index still opens its own details', async
   await page.goto('/apartments.html?qa=1&object='+item.id);
   await expect(page).toHaveURL(url=>url.pathname===item.url);
   await expect(page.locator('form[data-lead-form]')).toHaveAttribute('data-object-id',item.id);
-  await expect(page.locator('[data-listing-description]')).toHaveText(item.description.replace(/\s+/g,' '),{useInnerText:true});
+  await expect(page.locator('[data-listing-description] p')).toHaveText(
+    item.description.split(/\n\s*\n/).map(paragraph=>paragraph.replace(/\s+/g,' ')),{useInnerText:true});
   await expect(page.locator('.visibility-facts div').filter({hasText:'Комнаты'}).locator('dd')).toHaveText(String(item.characteristics.rooms));
   expect(new URL(page.url()).searchParams.has('object')).toBe(false);
 });
