@@ -86,7 +86,8 @@ test("property discovery is photographic internally, active by section, and uses
   await expect(page.locator(".unified-property-search")).toHaveAttribute("href", "#filters");
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(page.locator(".unified-property-discovery")).toBeHidden();
-  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBeTruthy();
+  await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth),
+    { message: "Apartments must fit the resized mobile viewport" }).toBeLessThanOrEqual(0);
 
   await page.goto("/?qa=1");
   await expect(page.locator("[data-unified-property-nav]")).toHaveClass(/unified-property-nav--cards/);

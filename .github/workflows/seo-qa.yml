@@ -20,9 +20,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm run qa
-        env:
-          VISUAL_TOP_QA: '1'
+      - run: npm run qa:static
       - uses: actions/jekyll-build-pages@v1
         with:
           source: ./
@@ -33,3 +31,6 @@ jobs:
           name: pages-file-inventory
           path: output/pages-artifact-files.json
           if-no-files-found: error
+      - run: npm run test:browser
+        env:
+          VISUAL_TOP_QA: '1'
