@@ -789,11 +789,8 @@
       window.clearTimeout(maxTimer);
       window.removeEventListener("wheel", stopWatching);
       window.removeEventListener("touchstart", stopWatching);
-      document.removeEventListener("pointerdown", stopOnOutsidePointer);
-    }
-
-    function stopOnOutsidePointer(event) {
-      if (!form.contains(event.target)) stopWatching();
+      document.removeEventListener("pointerdown", stopWatching, true);
+      document.removeEventListener("keydown", stopWatching, true);
     }
 
     function keepAnchorStable() {
@@ -807,12 +804,18 @@
       observer = new ResizeObserver(keepAnchorStable);
       observer.observe(document.body);
       maxTimer = window.setTimeout(stopWatching, 15000);
-      window.addEventListener("wheel", stopWatching, { passive: true });
-      window.addEventListener("touchstart", stopWatching, { passive: true });
-      document.addEventListener("pointerdown", stopOnOutsidePointer);
     } else {
-      window.setTimeout(focusAndScroll, 1200);
+      maxTimer = window.setTimeout(function () {
+        focusAndScroll();
+        stopWatching();
+      }, 1200);
     }
+
+    // Keep the anchor stable only until the user starts interacting with the page.
+    window.addEventListener("wheel", stopWatching, { passive: true });
+    window.addEventListener("touchstart", stopWatching, { passive: true });
+    document.addEventListener("pointerdown", stopWatching, true);
+    document.addEventListener("keydown", stopWatching, true);
   }
 
   function initForm(form) {

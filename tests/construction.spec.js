@@ -172,11 +172,24 @@ test("completed-object form attributes the request to the selected house", async
   await expect.poll(() => page.locator(".project-hero__media img").evaluate((image) => image.complete && image.naturalWidth > 0)).toBe(true);
   await page.locator(".project-hero [data-project-quote]").click();
   await expect(page.locator("[data-selected-project]")).toContainText("Выбран объект:");
+  await expect(page).toHaveURL(/#lead-form-section$/);
   await page.locator("#lead-name").fill("Тест Построим Дом");
-  await page.locator("#lead-phone").fill("8 999 111-22-33");
+  const phone = page.locator("#lead-phone");
+  await phone.click();
+  await phone.fill("8 999 111-22-33");
+  await page.evaluate(async () => {
+    // Simulate content arriving after the CTA has scrolled to the form.
+    const lateContent = document.createElement("div");
+    lateContent.style.height = "150px";
+    document.body.append(lateContent);
+    await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+  });
+  await expect(phone).toBeFocused();
   await page.locator("#lead-privacy-consent").check();
-  await page.locator("#lead-form button[type='submit']").click();
-  await page.waitForURL(/thanks\.html$/);
+  await Promise.all([
+    page.waitForURL(/thanks\.html$/),
+    page.locator("#lead-form button[type='submit']").click()
+  ]);
   expect(network.providerRequests).toBe(1);
   expect(network.payloads[0]).toContain("Построим Дом");
   expect(network.payloads[0]).toContain("postroim-dom-rostov-brick-100-90");

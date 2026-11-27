@@ -1875,7 +1875,7 @@ body.guide-page {
   min-height: 205px;
   padding: 24px 76px 22px 24px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.9) !important;
+  background: var(--premium-card-background, rgba(255, 255, 255, 0.9)) !important;
 }
 
 .guide-page .seo-content__links .seo-content__link-card::after {
@@ -2348,7 +2348,7 @@ header:not(.unified-header) nav a[aria-current="page"] {
 .contact-actions .btn,
 .hero-actions .btn {
   border-radius: var(--radius-pill) !important;
-  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark)) !important;
+  background: var(--premium-primary-background, linear-gradient(135deg, var(--color-accent), var(--color-accent-dark))) !important;
   color: #fff !important;
   box-shadow: 0 14px 32px rgba(180, 77, 66, 0.22);
   font-weight: 750 !important;
@@ -2366,9 +2366,9 @@ header:not(.unified-header) nav a[aria-current="page"] {
 .btn-outline,
 .agent-info .btn-outline,
 .hero-actions .btn.secondary {
-  background: rgba(255, 255, 255, 0.72) !important;
-  color: var(--color-accent-dark) !important;
-  border: 1px solid rgba(180, 77, 66, 0.32) !important;
+  background: var(--premium-outline-background, rgba(255, 255, 255, 0.72)) !important;
+  color: var(--premium-outline-color, var(--color-accent-dark)) !important;
+  border: 1px solid var(--premium-outline-border, rgba(180, 77, 66, 0.32)) !important;
   box-shadow: none;
 }
 
@@ -2554,7 +2554,7 @@ body.catalog-page .card,
 .agent-card {
   border: 1px solid var(--color-border) !important;
   border-radius: var(--radius-card) !important;
-  background: rgba(255, 255, 255, 0.84) !important;
+  background: var(--premium-card-background, rgba(255, 255, 255, 0.84)) !important;
   box-shadow: var(--shadow-card) !important;
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
@@ -2663,8 +2663,8 @@ body.catalog-page .card h2,
 .seo-content__link-badge,
 .new-object-card__type {
   border-radius: var(--radius-pill) !important;
-  background: rgba(180, 77, 66, 0.09) !important;
-  color: var(--color-accent-dark) !important;
+  background: var(--premium-badge-background, rgba(180, 77, 66, 0.09)) !important;
+  color: var(--premium-badge-color, var(--color-accent-dark)) !important;
 }
 
 .seo-content {
