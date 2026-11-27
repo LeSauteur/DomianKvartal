@@ -349,6 +349,47 @@ body.guide-page .guide-hero .hero-eyebrow {
   }
 }
 
+html[data-theme="dark"] body.guide-page :is(.seo-content__links, .guide-local-note, .guide-callout) {
+  --guide-ink: var(--text-main);
+  --guide-muted: var(--text-muted);
+  background: var(--bg-soft);
+  border-color: var(--border-soft);
+}
+
+html[data-theme="dark"] body:not(.wine-home) .seo-content__link-card {
+  --premium-card-background: var(--bg-surface);
+  --premium-badge-background: var(--accent-soft);
+  --premium-badge-color: var(--accent);
+}
+
+html[data-theme="dark"] body .seo-content__link-card .seo-content__card-title {
+  color: var(--text-main);
+}
+
+html[data-theme="dark"] body .seo-content__link-card p {
+  color: var(--text-muted);
+}
+
+html[data-theme="dark"] body .seo-content__link-card a {
+  color: var(--accent);
+  border-bottom-color: var(--border-strong);
+}
+
+html[data-theme="dark"] body .seo-content__link-card a:is(:hover, :focus-visible) {
+  color: var(--accent-hover);
+}
+
+html[data-theme="dark"] body.guide-page .seo-content__link-card::after,
+html[data-theme="dark"] body.guide-page .guide-callout__icon {
+  background: var(--accent-soft);
+  border-color: var(--border-soft);
+  color: var(--accent);
+}
+
+html[data-theme="dark"] body.guide-page .guide-local-note__label {
+  color: var(--accent);
+}
+
 body.guide-page :is(.guide-body, .guide-author, .seo-table th) {
   background: var(--bg-surface);
   border-color: var(--border-soft);
@@ -371,6 +412,32 @@ body :is(.requisites-note, .team-intro) {
   background: var(--bg-soft);
   border-color: var(--border-soft);
   color: var(--text-main);
+}
+
+html[data-theme="dark"] body .agent-profile {
+  background: var(--bg-main);
+}
+
+html[data-theme="dark"] body :is(.agent-card, .team-profile-card) {
+  --premium-card-background: var(--bg-surface);
+  --premium-primary-background: var(--wine-button);
+  --premium-outline-background: var(--bg-soft);
+  --premium-outline-color: var(--accent);
+  --premium-outline-border: var(--accent);
+}
+
+html[data-theme="dark"] body:is([data-agent], .guide-page) .footer-cta {
+  --premium-primary-background: var(--wine-button);
+}
+
+html[data-theme="dark"] body .agent-info .btn-primary:hover,
+html[data-theme="dark"] body:is([data-agent], .guide-page) .footer-cta :is(.btn, .btn-primary):hover {
+  --premium-primary-background: var(--wine-button-hover);
+}
+
+html[data-theme="dark"] body .agent-info .btn-outline:not(:disabled):is(:hover, :focus-visible) {
+  --premium-outline-background: var(--accent-soft);
+  --premium-outline-color: var(--accent-hover);
 }
 
 /* Catalog surfaces and text still styled by the original section stylesheets. */

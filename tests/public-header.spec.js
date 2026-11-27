@@ -129,6 +129,145 @@ test("saved dark theme restores matching accessible toggle state", async ({ page
   }
 });
 
+const themeCardRoutes = [
+  "/team/zukhra-alieva.html",
+  "/guides/",
+  "/guides/chto-proverit-pered-pokupkoy-doma-v-aksaye.html",
+  "/guides/chto-proverit-pered-pokupkoy-kvartiry-v-aksaye.html",
+  "/guides/chto-proverit-pered-pokupkoy-uchastka-v-aksaye.html",
+  "/guides/gde-kupit-dom-v-aksaye-ryadom-s-rostovom.html",
+  "/guides/novostroyka-ili-vtorichka-v-aksaye.html",
+  "/apartments.html",
+  "/houses.html",
+  "/lands.html",
+  "/newbuilds.html"
+];
+
+for (const route of themeCardRoutes) {
+  test(`profile and link card contrast on ${route}`, async ({ page }, testInfo) => {
+    test.setTimeout(60000);
+    await page.goto(`${route}?qa=1`);
+    for (const theme of ["light", "dark"]) {
+      await page.evaluate((theme) => localStorage.setItem("domian-color-theme", theme), theme);
+
+      for (const [width, height] of [[1366, 900], [390, 844], [360, 844]]) {
+        await page.setViewportSize({ width, height });
+        await page.reload();
+        if (theme === "dark") {
+          await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+        } else {
+          await expect(page.locator("html")).not.toHaveAttribute("data-theme", "dark");
+        }
+        const label = `${route} ${theme} ${width}×${height}`;
+        await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth), { message: label }).toBeLessThanOrEqual(width);
+        const cards = page.locator(".agent-card, .team-profile-card, .seo-content__link-card");
+        expect(await cards.count(), label).toBeGreaterThan(0);
+        const results = await cards.evaluateAll((cards) => {
+          const rgb = (color) => color.match(/[\d.]+/g).map(Number);
+          const composite = ([r, g, b, alpha = 1], under) =>
+            [r, g, b].map((channel, index) => channel * alpha + under[index] * (1 - alpha));
+          const luminance = (color) => color.reduce((sum, channel, index) => {
+            const value = channel / 255;
+            const linear = value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4;
+            return sum + linear * [0.2126, 0.7152, 0.0722][index];
+          }, 0);
+          const contrast = (foreground, background) => {
+            const values = [luminance(foreground), luminance(background)];
+            return (Math.max(...values) + 0.05) / (Math.min(...values) + 0.05);
+          };
+          // Card surfaces are flat colors or simple gradients. Compare both ends of each gradient.
+          const paint = (style, under) => {
+            const colors = under.map((color) => composite(rgb(style.backgroundColor), color));
+            const stops = style.backgroundImage.match(/rgba?\([^)]+\)/g);
+            return stops ? colors.flatMap((color) => stops.map((stop) => composite(rgb(stop), color))) : colors;
+          };
+          const backdrops = (node) => node
+            ? paint(getComputedStyle(node), backdrops(node.parentElement))
+            : [[255, 255, 255]];
+          const measure = (node, pseudo = null, icon = false) => {
+            const style = getComputedStyle(node, pseudo);
+            const fontSize = parseFloat(style.fontSize);
+            const large = fontSize >= 24 || (fontSize >= 56 / 3 && Number(style.fontWeight) >= 700);
+            const under = backdrops(pseudo ? node : node.parentElement);
+            const backgrounds = paint(style, under);
+            return {
+              name: pseudo ?? ((node.textContent.trim() || node.parentElement.getAttribute("aria-label") || node.tagName).slice(0, 65)),
+              ratio: Math.min(...backgrounds.map((background) => contrast(composite(rgb(style.color), background), background))),
+              minimum: icon || large ? 3 : 4.5,
+              icon
+            };
+          };
+
+          const adjacent = document.querySelectorAll(
+            "body.guide-page .seo-content__links > h3, .guide-local-note > :is(h3, p, span), " +
+            ".guide-callout :is(h3, p, .guide-callout__icon), " +
+            "body:is([data-agent], .guide-page) .footer-cta-content > :is(h2, p, a)"
+          );
+          const components = cards.map((card) => {
+            const style = getComputedStyle(card);
+            const surface = style.getPropertyValue("--bg-surface").trim();
+            const paletteColor = document.createElement("span");
+            paletteColor.style.backgroundColor = surface;
+            card.append(paletteColor);
+            const darkBackground = getComputedStyle(paletteColor).backgroundColor;
+            paletteColor.remove();
+
+            const box = card.getBoundingClientRect();
+            const content = [...card.querySelectorAll("h2, h3, h4, p, a:not(.channel-icon), .contacts > div, .seo-content__link-badge, .agent-photo, .channel-icon")];
+            const visible = content.filter((node) => node.getClientRects().length);
+            const text = visible.filter((node) => !node.matches(".agent-photo, .channel-icon") && node.textContent.trim());
+            const measurements = text.map((node) => measure(node));
+            const arrow = getComputedStyle(card, "::after");
+            if (arrow.content !== "none") measurements.push(measure(card, "::after", true));
+            const telegram = card.querySelector(".channel-icon--telegram svg");
+            if (telegram) measurements.push(measure(telegram, null, true));
+
+            return {
+              background: style.backgroundColor,
+              image: style.backgroundImage,
+              darkBackground,
+              lightBackground: card.closest(".guide-card-grid") ? "rgb(255, 253, 250)"
+                : card.closest(".guide-page .seo-content__links") ? "rgba(255, 255, 255, 0.9)"
+                : "rgba(255, 255, 255, 0.84)",
+              fits: box.width > 0 && box.left >= -1 && box.right <= innerWidth + 1
+                && cards.every((other) => {
+                  if (other === card) return true;
+                  const rect = other.getBoundingClientRect();
+                  return rect.right <= box.left + 1 || rect.left >= box.right - 1
+                    || rect.bottom <= box.top + 1 || rect.top >= box.bottom - 1;
+                })
+                && visible.every((node) => [...node.getClientRects()].every((rect) =>
+                  rect.left >= box.left - 1 && rect.right <= box.right + 1
+                  && rect.top >= box.top - 1 && rect.bottom <= box.bottom + 1)),
+              measurements
+            };
+          });
+          return {
+            components,
+            adjacent: [...adjacent].map((node) => measure(node, null, node.matches(".guide-callout__icon")))
+          };
+        });
+        for (const [index, result] of results.components.entries()) {
+          const card = `${label}, card ${index + 1}`;
+          expect(result.fits, card).toBe(true);
+          expect(result.image, card).toBe("none");
+          expect(result.background, card).toBe(theme === "dark" ? result.darkBackground : result.lightBackground);
+          for (const { name, ratio, minimum } of result.measurements) {
+            expect(ratio, `${card}, ${name}`).toBeGreaterThanOrEqual(minimum);
+          }
+        }
+        for (const { name, ratio, minimum } of results.adjacent) {
+          expect(ratio, `${label}, ${name}`).toBeGreaterThanOrEqual(minimum);
+        }
+        await testInfo.attach(`contrast-${theme}-${width}`, {
+          body: JSON.stringify([...results.adjacent, ...results.components.flatMap(({ measurements }) => measurements)]),
+          contentType: "application/json"
+        });
+      }
+    }
+  });
+}
+
 test("brand animation runs once per session and reduced motion is immediately static", async ({ page }) => {
   await page.goto("/?qa=1");
   await page.evaluate(() => sessionStorage.removeItem("domian-kvartal-logo-seen-v1"));
