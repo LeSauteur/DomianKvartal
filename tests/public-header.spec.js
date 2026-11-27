@@ -129,6 +129,43 @@ test("saved dark theme restores matching accessible toggle state", async ({ page
   }
 });
 
+test("team objects button applies both theme colors on the first frame", async ({ page }) => {
+  await page.setViewportSize({ width: 1366, height: 900 });
+  await page.goto("/team/zukhra-alieva.html?qa=1");
+  const objects = page.locator("#zukhra-alieva .btn-outline");
+  await expect(objects).toHaveText("Объекты");
+
+  const colors = await objects.evaluate(async (button) => {
+    const root = document.documentElement;
+    const toggle = document.querySelector(".unified-header__desktop-theme");
+    const read = (element) => {
+      const style = getComputedStyle(element);
+      return { color: style.color, background: style.backgroundColor };
+    };
+    const firstFrame = () => new Promise(requestAnimationFrame);
+    const light = read(button);
+
+    toggle.click();
+    await firstFrame();
+    const darkTheme = root.dataset.theme;
+    const dark = read(button);
+    const palette = document.createElement("span");
+    palette.style.color = "var(--accent)";
+    palette.style.backgroundColor = "var(--bg-soft)";
+    document.body.append(palette);
+    const darkPalette = read(palette);
+    palette.remove();
+
+    toggle.click();
+    await firstFrame();
+    return { light, darkTheme, dark, darkPalette, lightAgain: read(button) };
+  });
+
+  expect(colors.darkTheme).toBe("dark");
+  expect(colors.dark).toEqual(colors.darkPalette);
+  expect(colors.lightAgain).toEqual(colors.light);
+});
+
 const themeCardRoutes = [
   "/team/zukhra-alieva.html",
   "/guides/",

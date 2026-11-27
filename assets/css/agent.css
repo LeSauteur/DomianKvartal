@@ -121,6 +121,8 @@
 }
 
 .agent-info .btn-outline {
+    /* Apply foreground and background together when the theme changes. */
+    transition-property: transform, box-shadow;
     border: 2px solid var(--accent);
     background: transparent;
     color: var(--accent);
